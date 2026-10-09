@@ -241,7 +241,23 @@ def icon_handshake(color="ink", rng=None):
     return S, []
 
 
+def icon_house(color="ink", rng=None):
+    S = [Stroke([(-110, -10), (0, -110), (110, -10)], color, 9),
+         Stroke([(-80, -30), (-80, 100), (80, 100), (80, -30)], color, 9),
+         Stroke(rect_pts(-25, 35, 50, 65), color, 7),
+         Stroke(rect_pts(30, -5, 32, 30), color, 6)]
+    return S, [Fill([(-80, -30), (0, -100), (80, -30), (80, 100), (-80, 100)], "white"),
+               Fill(rect_pts(-25, 35, 50, 65)[:4], "yellow")]
+
+
+def icon_euro(color="ink", rng=None):
+    S = [Stroke(arc_pts(10, 0, 70, 45, 315, 40), color, 10),
+         Stroke([(-80, -18), (20, -18)], color, 9), Stroke([(-80, 18), (20, 18)], color, 9)]
+    return S, []
+
+
 ICONS = {
+    "house": icon_house, "euro": icon_euro,
     "person": icon_person, "ballot_box": icon_ballot_box, "ballot": icon_ballot,
     "crown": icon_crown, "bubble": icon_bubble, "lectern": icon_lectern,
     "document": icon_document, "clock": icon_clock, "calendar": icon_calendar,
@@ -389,6 +405,9 @@ class Element:
         paint = skia.Paint(Color=rgb(s.get("color", "ink"), int(255 * am)), AntiAlias=True)
         tip = None
         y = s["y"]
+        rot = s.get("rotate", 0)
+        if rot:
+            c.save(); c.rotate(rot, s["x"], s["y"])
         for line in lines:
             k = min(len(line), max(0, shown))
             shown -= len(line)
@@ -400,6 +419,9 @@ class Element:
                 if k < len(line):
                     tip = np.array([x + f.measureText(line[:k]), y - s.get("size", 80) * 0.25])
             y += lh
+        if rot:
+            c.restore()
+            tip = None
         return tip if p < 1 else None
 
     def _draw_hemi(self, c, p, am):

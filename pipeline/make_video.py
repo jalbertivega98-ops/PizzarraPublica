@@ -350,6 +350,8 @@ def main():
     print("5/5 Textos…")
     with open(os.path.join(outdir, f"{slug}_publicacion.txt"), "w", encoding="utf-8") as f:
         f.write(story.get("caption", "").strip() + "\n\n" + " ".join(story.get("hashtags", [])) + "\n")
+        if story.get("pinned_comment"):
+            f.write("\n--- Comentario fijado ---\n" + story["pinned_comment"].strip() + "\n")
     timing = [{"escena": s.get("id"), "inicio": round(tl["start"], 2), "fin": round(tl["end"], 2),
                "frases": [{"t0": round(l["t0"], 2), "t1": round(l["t1"], 2), "texto": l["text"]} for l in tl["lines"]]}
               for s, tl in zip(story["scenes"], scenes)]

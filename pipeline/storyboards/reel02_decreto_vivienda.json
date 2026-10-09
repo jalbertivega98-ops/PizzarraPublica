@@ -1,0 +1,586 @@
+{
+ "slug": "reel02_decreto_vivienda",
+ "title": "Una ley que no llegó a durar dos días",
+ "series_tag": "ESPECIAL 29N",
+ "handle": "@pizarrapublica",
+ "voice": {
+  "model": "voices/es_ES-davefx-medium.onnx",
+  "length_scale": 0.86
+ },
+ "line_gap": 0.1,
+ "music_volume": 0.14,
+ "scribble_volume": 0.05,
+ "end_hold": 0.8,
+ "sources": [
+  "Constitución Española, art. 86 (decretos-leyes). BOE-A-1978-31229. Consultado el 09/10/2026.",
+  "Infobae/EFE, 02/10/2026: «El Congreso rechaza el decreto de medidas de vivienda con los votos de PP, Vox, Junts y UPN» (172 sí, 178 no).",
+  "Infobae, 02/10/2026: medidas que decaen con el decreto (BOE 30/09/2026).",
+  "Diario de Avisos, 10/2026: argumentos de PP (Juan Bravo), Vox (Carlos Hernández Quero) y Junts (Míriam Nogueras).",
+  "ESdiario, 02/10/2026: argumentos de la ministra de Vivienda, Isabel Rodríguez.",
+  "RTVC/EFE, 06/10/2026: el BOE publica la disolución de las Cortes y la convocatoria de elecciones para el 29/11/2026."
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "lines": [
+    "Esta ley de vivienda no llegó a durar ni dos días."
+   ],
+   "tail": 0.3,
+   "elements": [
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 360,
+     "y": 760,
+     "scale": 1.5,
+     "at": 0,
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "LEY DE\nVIVIENDA",
+     "x": 360,
+     "y": 1010,
+     "size": 62,
+     "at": 0.1,
+     "dur": 0.5
+    },
+    {
+     "type": "icon",
+     "name": "clock",
+     "x": 790,
+     "y": 700,
+     "scale": 1.3,
+     "at": 0.4,
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "< 2 DÍAS",
+     "x": 790,
+     "y": 900,
+     "size": 90,
+     "color": "red",
+     "at": "L0@0.5",
+     "dur": 0.4
+    },
+    {
+     "type": "text",
+     "text": "DEROGADA",
+     "x": 540,
+     "y": 1250,
+     "size": 150,
+     "color": "red",
+     "rotate": -8,
+     "at": "L0@0.75",
+     "dur": 0.35
+    }
+   ]
+  },
+  {
+   "id": "decreto_ley",
+   "footnote": "Art. 86 de la Constitución",
+   "lines": [
+    "A finales de septiembre, el Gobierno aprobó un decreto ley de vivienda.",
+    "Un decreto ley se aplica al momento, pero el Congreso tiene treinta días para validarlo o tumbarlo."
+   ],
+   "elements": [
+    {
+     "type": "text",
+     "text": "DECRETO LEY",
+     "x": 540,
+     "y": 450,
+     "size": 110,
+     "color": "blue",
+     "at": "L0@0.3",
+     "dur": 0.5
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "tie": true,
+     "accent": "light",
+     "x": 230,
+     "y": 700,
+     "scale": 0.9,
+     "at": "L0@0.1",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "Gobierno",
+     "font": "body",
+     "x": 230,
+     "y": 860,
+     "size": 56,
+     "at": "+0",
+     "dur": 0.3
+    },
+    {
+     "type": "arrow",
+     "from": [
+      340,
+      690
+     ],
+     "to": [
+      560,
+      690
+     ],
+     "at": "L0@0.6",
+     "dur": 0.3
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 690,
+     "y": 690,
+     "scale": 0.9,
+     "at": "+0",
+     "dur": 0.4
+    },
+    {
+     "type": "check",
+     "x": 860,
+     "y": 650,
+     "r": 50,
+     "color": "green",
+     "at": "L1@0.15",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "en vigor ya",
+     "font": "body",
+     "x": 860,
+     "y": 760,
+     "size": 50,
+     "color": "green",
+     "at": "+0",
+     "dur": 0.3
+    },
+    {
+     "type": "hemicycle",
+     "x": 540,
+     "y": 1240,
+     "r_in": 90,
+     "r_out": 250,
+     "rows": 6,
+     "dot": 7,
+     "count": 350,
+     "at": "L1@0.4",
+     "dur": 0.9
+    },
+    {
+     "type": "text",
+     "text": "Congreso: 30 días",
+     "x": 540,
+     "y": 1330,
+     "size": 70,
+     "at": "L1@0.55",
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "medidas",
+   "lines": [
+    "Incluía, entre otras medidas:",
+    "frenar desahucios de familias vulnerables,",
+    "prorrogar alquileres hasta dos años",
+    {
+     "tts": "y limitar las subidas del alquiler al dos por ciento.",
+     "text": "y limitar las subidas del alquiler al 2%."
+    }
+   ],
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿QUÉ INCLUÍA?",
+     "x": 540,
+     "y": 440,
+     "size": 96,
+     "at": "L0",
+     "dur": 0.5
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "x": 200,
+     "y": 640,
+     "scale": 0.9,
+     "at": "L1",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "Frenar desahucios\nde familias vulnerables",
+     "font": "body",
+     "x": 360,
+     "y": 620,
+     "size": 60,
+     "align": "left",
+     "at": "L1@0.2",
+     "dur": 0.6
+    },
+    {
+     "type": "icon",
+     "name": "calendar",
+     "x": 200,
+     "y": 900,
+     "scale": 0.65,
+     "at": "L2",
+     "dur": 0.4
+    },
+    {
+     "type": "text",
+     "text": "+2",
+     "x": 200,
+     "y": 950,
+     "size": 64,
+     "color": "red",
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "text",
+     "text": "Prorrogar alquileres\nhasta 2 años",
+     "font": "body",
+     "x": 360,
+     "y": 880,
+     "size": 60,
+     "align": "left",
+     "at": "L2@0.2",
+     "dur": 0.6
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 200,
+     "y": 1160,
+     "scale": 0.9,
+     "at": "L3",
+     "dur": 0.4
+    },
+    {
+     "type": "text",
+     "text": "Subidas de alquiler\ncomo máximo del 2%",
+     "font": "body",
+     "x": 360,
+     "y": 1140,
+     "size": 60,
+     "align": "left",
+     "at": "L3@0.2",
+     "dur": 0.6,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "id": "votacion",
+   "footnote": "Votación del 2 de octubre de 2026 · decreto principal",
+   "lines": [
+    {
+     "tts": "El dos de octubre, el Congreso votó: ciento setenta y dos a favor, ciento setenta y ocho en contra.",
+     "text": "El 2 de octubre, el Congreso votó: 172 a favor, 178 en contra."
+    },
+    "Decreto derogado."
+   ],
+   "elements": [
+    {
+     "type": "text",
+     "text": "2 DE OCTUBRE",
+     "x": 540,
+     "y": 440,
+     "size": 90,
+     "at": "L0",
+     "dur": 0.4
+    },
+    {
+     "type": "bars",
+     "x": 260,
+     "y": 1080,
+     "h": 420,
+     "bar_w": 200,
+     "gap": 160,
+     "max": 178,
+     "bars": [
+      {
+       "label": "SÍ",
+       "value": 172,
+       "color": "green"
+      },
+      {
+       "label": "NO",
+       "value": 178,
+       "color": "red"
+      }
+     ],
+     "at": "L0@0.35",
+     "dur": 1.6
+    },
+    {
+     "type": "text",
+     "text": "DEROGADO",
+     "x": 540,
+     "y": 1290,
+     "size": 140,
+     "color": "red",
+     "rotate": -7,
+     "at": "L1",
+     "dur": 0.35
+    }
+   ]
+  },
+  {
+   "id": "razones",
+   "lines": [
+    "¿Por qué?",
+    "El Gobierno y sus socios defendían que era urgente frenar desahucios y especulación.",
+    "El PP dice que el problema de fondo es que falta vivienda.",
+    "Vox, que reduciría la oferta y subirían los precios.",
+    "Y Junts, que no frenaba a los fondos ni la especulación."
+   ],
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿POR QUÉ?",
+     "x": 540,
+     "y": 430,
+     "size": 110,
+     "at": "L0",
+     "dur": 0.3
+    },
+    {
+     "type": "rect",
+     "box": [
+      90,
+      490,
+      900,
+      200
+     ],
+     "color": "green",
+     "width": 6,
+     "at": "L1",
+     "dur": 0.4
+    },
+    {
+     "type": "text",
+     "text": "A FAVOR · Gobierno y socios",
+     "x": 540,
+     "y": 555,
+     "size": 52,
+     "color": "green",
+     "at": "L1@0.1",
+     "dur": 0.4
+    },
+    {
+     "type": "text",
+     "text": "Urge frenar desahucios\ny especulación",
+     "font": "body",
+     "x": 540,
+     "y": 625,
+     "size": 50,
+     "at": "L1@0.4",
+     "dur": 0.6
+    },
+    {
+     "type": "rect",
+     "box": [
+      90,
+      730,
+      900,
+      600
+     ],
+     "color": "red",
+     "width": 6,
+     "at": "L2",
+     "dur": 0.4
+    },
+    {
+     "type": "text",
+     "text": "EN CONTRA",
+     "x": 540,
+     "y": 800,
+     "size": 56,
+     "color": "red",
+     "at": "L2@0.05",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "PP",
+     "x": 170,
+     "y": 900,
+     "size": 60,
+     "align": "left",
+     "at": "L2@0.15",
+     "dur": 0.1
+    },
+    {
+     "type": "text",
+     "text": "Falta vivienda: es el\nproblema de fondo",
+     "font": "body",
+     "x": 330,
+     "y": 885,
+     "size": 48,
+     "align": "left",
+     "at": "L2@0.3",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "Vox",
+     "x": 170,
+     "y": 1060,
+     "size": 60,
+     "align": "left",
+     "at": "L3",
+     "dur": 0.1
+    },
+    {
+     "type": "text",
+     "text": "Bajará la oferta y\nsubirán los precios",
+     "font": "body",
+     "x": 330,
+     "y": 1045,
+     "size": 48,
+     "align": "left",
+     "at": "L3@0.2",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "Junts",
+     "x": 170,
+     "y": 1220,
+     "size": 60,
+     "align": "left",
+     "at": "L4",
+     "dur": 0.1
+    },
+    {
+     "type": "text",
+     "text": "No frena a los fondos\nni la especulación",
+     "font": "body",
+     "x": 330,
+     "y": 1205,
+     "size": 48,
+     "align": "left",
+     "at": "L4@0.2",
+     "dur": 0.6
+    }
+   ]
+  },
+  {
+   "id": "elecciones",
+   "footnote": "BOE del 6 de octubre de 2026",
+   "lines": [
+    {
+     "tts": "El cinco de octubre, el presidente disolvió las Cortes.",
+     "text": "El 5 de octubre, el presidente disolvió las Cortes."
+    },
+    {
+     "tts": "Elecciones generales: veintinueve de noviembre.",
+     "text": "Elecciones generales: 29 de noviembre."
+    }
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "calendar",
+     "x": 540,
+     "y": 640,
+     "scale": 1.5,
+     "at": "L0",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "29 N",
+     "x": 540,
+     "y": 745,
+     "size": 110,
+     "color": "red",
+     "at": "L1",
+     "dur": 0.4
+    },
+    {
+     "type": "icon",
+     "name": "ballot_box",
+     "x": 540,
+     "y": 1130,
+     "scale": 1.1,
+     "at": "L1@0.3",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "ELECCIONES GENERALES",
+     "x": 540,
+     "y": 1330,
+     "size": 76,
+     "color": "blue",
+     "at": "L1@0.5",
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "pregunta",
+   "lines": [
+    "La vivienda será uno de los grandes temas de la campaña.",
+    "¿Qué medida te parece más urgente? Te leo en comentarios."
+   ],
+   "footnote": "Fuentes: Constitución (art. 86), BOE y prensa del 2-6/10/2026.\nDetalle en el comentario fijado.",
+   "elements": [
+    {
+     "type": "icon",
+     "name": "house",
+     "x": 540,
+     "y": 650,
+     "scale": 1.6,
+     "at": "L0",
+     "dur": 0.7
+    },
+    {
+     "type": "icon",
+     "name": "question",
+     "x": 820,
+     "y": 560,
+     "scale": 0.9,
+     "at": "L1",
+     "dur": 0.5
+    },
+    {
+     "type": "icon",
+     "name": "bubble",
+     "x": 540,
+     "y": 1060,
+     "scale": 1.4,
+     "at": "L1@0.3",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "¿Qué es lo más urgente?",
+     "x": 540,
+     "y": 1280,
+     "size": 72,
+     "at": "L1@0.5",
+     "dur": 0.5
+    }
+   ]
+  }
+ ],
+ "caption": "🤯 Esta ley de vivienda no llegó a durar ni dos días.\n\n👀 El Gobierno aprobó por decreto ley medidas de vivienda y el Congreso la tumbó al día siguiente de entrar en vigor.\n👇 Te lo explico en 60 segundos:\n\n📜 Un decreto ley se aplica al momento, pero el Congreso tiene 30 días para validarlo o tumbarlo (art. 86 de la Constitución).\n🏠 Incluía frenar desahucios de familias vulnerables, prorrogar alquileres hasta 2 años y limitar las subidas al 2 %.\n🗳️ 2 de octubre: 172 votos a favor (PSOE, Sumar, ERC, Bildu, PNV, Podemos, BNG, CC, Compromís) y 178 en contra (PP, Vox, Junts y UPN).\n⚖️ A favor, el Gobierno y sus socios: urge frenar desahucios y especulación. En contra: el PP dice que falta vivienda, Vox que bajará la oferta y Junts que no frena a los fondos.\n📅 El 5 de octubre se disolvieron las Cortes: elecciones generales el 29 de noviembre.\n\n⚡ Dato extra: eran dos decretos y cayeron los dos. Además de la vivienda, en el adelanto electoral también influyeron otros factores según la prensa, como los casos de corrupción.\n\n💬 ¿Qué medida de vivienda te parece más urgente? Te leo 👇\n\n📌 Guárdalo para cuando alguien te pregunte\n🔁 Compártelo con quien lo necesite\n\n📚 Fuentes en el comentario fijado",
+ "pinned_comment": "📚 Fuentes: Constitución Española, art. 86 (BOE). Votación del Congreso del 02/10/2026 (Infobae/EFE). Medidas del decreto publicado en el BOE el 30/09/2026 (Infobae). Argumentos de los grupos: Diario de Avisos y ESdiario, 02/10/2026. Convocatoria electoral: BOE del 06/10/2026 (RTVC/EFE). Consultado el 09/10/2026. ¿Ves un error? Dínoslo y lo corregimos.",
+ "hashtags": [
+  "#PizarraPública",
+  "#PolíticaParaPrincipiantes",
+  "#PolíticaEspañola",
+  "#Elecciones29N",
+  "#Vivienda",
+  "#Alquiler",
+  "#Congreso"
+ ]
+}

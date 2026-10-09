@@ -33,6 +33,7 @@ Borrador para revisar. Fecha de la investigación: **9 de octubre de 2026**.
 
 **Identidad visual de la serie:**
 
+- Misma estética que el reel 1 (petición de joel, 09/10/2026): papel claro, rotulador a mano, mismas tipografías, subtítulos con la palabra activa en amarillo, barra de progreso y @ abajo. El color del partido solo se suma encima de ese patrón.
 - Etiqueta arriba: «VIVIENDA · Ep. X/4».
 - Casa dibujada a mano como icono de la serie. En cada episodio se rellena con el color del partido.
 - El color del partido aparece en el nombre del partido, en la franja superior y en la casa. Todo lo demás va en tinta negra y gris, igual en los cuatro.

@@ -1,0 +1,872 @@
+{
+ "slug": "reel01_como_se_elige_presidente",
+ "title": "¿Cómo se elige al presidente del Gobierno?",
+ "series_tag": "POLÍTICA PARA PRINCIPIANTES",
+ "handle": "@pizarrapublica",
+ "voice": {
+  "model": "voices/es_ES-davefx-medium.onnx",
+  "length_scale": 0.86
+ },
+ "music_volume": 0.14,
+ "scribble_volume": 0.05,
+ "end_hold": 0.8,
+ "sources": [
+  "Constitución Española, arts. 68, 99 y 113. BOE-A-1978-31229 (texto consolidado), https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229. Consultado el 09/10/2026.",
+  "Ley Orgánica 5/1985 del Régimen Electoral General (LOREG), arts. 161-163. BOE-A-1985-11672, última actualización 02/07/2026. Consultado el 09/10/2026.",
+  "Diccionario panhispánico del español jurídico (RAE), «Congreso de los Diputados»: 350 diputados. https://dpej.rae.es/lema/congreso-de-los-diputados. Consultado el 09/10/2026."
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "lines": [
+    "¿Sabías que en España no votas al presidente del Gobierno?"
+   ],
+   "tail": 0.35,
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿VOTAS AL",
+     "x": 540,
+     "y": 470,
+     "size": 120,
+     "at": 0,
+     "dur": 0.45
+    },
+    {
+     "type": "text",
+     "text": "PRESIDENTE?",
+     "x": 540,
+     "y": 610,
+     "size": 135,
+     "color": "blue",
+     "at": 0.35,
+     "dur": 0.6
+    },
+    {
+     "type": "icon",
+     "name": "ballot_box",
+     "x": 330,
+     "y": 1020,
+     "scale": 1.25,
+     "at": 0.4,
+     "dur": 0.9
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "tie": true,
+     "accent": "light",
+     "x": 780,
+     "y": 980,
+     "scale": 1.5,
+     "at": 0.6,
+     "dur": 0.9
+    },
+    {
+     "type": "text",
+     "text": "presidente/a",
+     "font": "body",
+     "x": 780,
+     "y": 1210,
+     "size": 58,
+     "at": "+0.0",
+     "dur": 0.4
+    },
+    {
+     "type": "cross",
+     "x": 780,
+     "y": 990,
+     "r": 150,
+     "color": "red",
+     "at": "L0@0.72",
+     "dur": 0.45
+    }
+   ]
+  },
+  {
+   "id": "contexto",
+   "lines": [
+    "En las elecciones generales votas una lista de tu provincia al Congreso.",
+    {
+     "tts": "Con esos votos se reparten los trescientos cincuenta escaños.",
+     "text": "Con esos votos se reparten los 350 escaños."
+    },
+    "Y son esos diputados quienes eligen al presidente."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "person",
+     "accent": "blue",
+     "x": 220,
+     "y": 520,
+     "scale": 0.95,
+     "at": "L0",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "TÚ",
+     "x": 220,
+     "y": 690,
+     "size": 74,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "arrow",
+     "from": [
+      340,
+      520
+     ],
+     "to": [
+      540,
+      520
+     ],
+     "at": "L0@0.35",
+     "dur": 0.4
+    },
+    {
+     "type": "icon",
+     "name": "ballot",
+     "x": 700,
+     "y": 510,
+     "scale": 0.85,
+     "at": "+0",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "lista de tu provincia",
+     "font": "body",
+     "x": 700,
+     "y": 690,
+     "size": 54,
+     "at": "+0",
+     "dur": 0.5
+    },
+    {
+     "type": "hemicycle",
+     "x": 540,
+     "y": 1180,
+     "r_in": 160,
+     "r_out": 400,
+     "rows": 9,
+     "dot": 10,
+     "count": 350,
+     "at": "L1",
+     "dur": 2.2
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 350,
+     "x": 540,
+     "y": 1160,
+     "size": 120,
+     "at": "L1",
+     "dur": 2.2
+    },
+    {
+     "type": "text",
+     "text": "escaños",
+     "font": "body",
+     "x": 540,
+     "y": 1240,
+     "size": 50,
+     "color": "gray",
+     "at": "L1@0.8",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "eligen al presidente/a",
+     "x": 540,
+     "y": 1330,
+     "size": 72,
+     "color": "blue",
+     "at": "L2@0.4",
+     "dur": 0.7
+    }
+   ]
+  },
+  {
+   "id": "paso1",
+   "lines": [
+    "Paso uno: el Rey consulta a los grupos políticos.",
+    "Y propone un candidato a través de la Presidencia del Congreso."
+   ],
+   "elements": [
+    {
+     "type": "text",
+     "text": "PASO 1",
+     "x": 540,
+     "y": 440,
+     "size": 100,
+     "color": "red",
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "icon",
+     "name": "crown",
+     "x": 540,
+     "y": 600,
+     "scale": 0.85,
+     "at": "L0@0.35",
+     "dur": 0.6
+    },
+    {
+     "type": "arrow",
+     "from": [
+      470,
+      690
+     ],
+     "to": [
+      230,
+      790
+     ],
+     "curve": -0.1,
+     "head": 26,
+     "at": "L0@0.6",
+     "dur": 0.25
+    },
+    {
+     "type": "arrow",
+     "from": [
+      540,
+      700
+     ],
+     "to": [
+      540,
+      785
+     ],
+     "curve": 0,
+     "head": 26,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "arrow",
+     "from": [
+      610,
+      690
+     ],
+     "to": [
+      850,
+      790
+     ],
+     "curve": 0.1,
+     "head": 26,
+     "at": "+0",
+     "dur": 0.25
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "accent": "light",
+     "x": 210,
+     "y": 900,
+     "scale": 0.6,
+     "at": "L0@0.7",
+     "dur": 0.35
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "accent": "light",
+     "x": 540,
+     "y": 900,
+     "scale": 0.6,
+     "at": "+0",
+     "dur": 0.35
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "accent": "light",
+     "x": 870,
+     "y": 900,
+     "scale": 0.6,
+     "at": "+0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "grupos políticos",
+     "font": "body",
+     "x": 540,
+     "y": 1030,
+     "size": 58,
+     "at": "+0",
+     "dur": 0.4
+    },
+    {
+     "type": "arrow",
+     "from": [
+      540,
+      1060
+     ],
+     "to": [
+      540,
+      1135
+     ],
+     "curve": 0,
+     "head": 26,
+     "at": "L1@0.2",
+     "dur": 0.25
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "tie": true,
+     "accent": "light",
+     "x": 450,
+     "y": 1230,
+     "scale": 0.75,
+     "at": "+0",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "CANDIDATO/A",
+     "x": 530,
+     "y": 1260,
+     "size": 64,
+     "color": "blue",
+     "align": "left",
+     "at": "+0",
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "paso2",
+   "lines": [
+    "Paso dos: el candidato presenta su programa en el Congreso,",
+    "y pide su confianza.",
+    "A esto se le llama investidura."
+   ],
+   "elements": [
+    {
+     "type": "text",
+     "text": "PASO 2",
+     "x": 540,
+     "y": 440,
+     "size": 100,
+     "color": "red",
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "tie": true,
+     "accent": "light",
+     "x": 430,
+     "y": 640,
+     "scale": 1.0,
+     "at": "L0@0.3",
+     "dur": 0.5
+    },
+    {
+     "type": "icon",
+     "name": "lectern",
+     "x": 430,
+     "y": 760,
+     "scale": 1.0,
+     "at": "+0",
+     "dur": 0.5
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 800,
+     "y": 660,
+     "scale": 0.8,
+     "at": "L0@0.6",
+     "dur": 0.4
+    },
+    {
+     "type": "text",
+     "text": "PROGRAMA",
+     "font": "body",
+     "x": 800,
+     "y": 800,
+     "size": 52,
+     "at": "+0",
+     "dur": 0.3
+    },
+    {
+     "type": "highlight",
+     "x0": 170,
+     "x1": 910,
+     "y": 1050,
+     "width": 70,
+     "at": "L2@0.6",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "INVESTIDURA",
+     "x": 540,
+     "y": 1085,
+     "size": 128,
+     "color": "blue",
+     "at": "L2@0.2",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "= pedir la confianza del Congreso",
+     "font": "body",
+     "x": 540,
+     "y": 1200,
+     "size": 54,
+     "at": "L1@0.1",
+     "dur": 0.6
+    }
+   ]
+  },
+  {
+   "id": "votaciones",
+   "footnote": "Art. 99.3 de la Constitución",
+   "lines": [
+    "En la primera votación necesita mayoría absoluta:",
+    {
+     "tts": "ciento setenta y seis votos de trescientos cincuenta.",
+     "text": "176 votos de 350."
+    },
+    {
+     "tts": "Si no la consigue, cuarenta y ocho horas después,",
+     "text": "Si no la consigue, 48 horas después,"
+    },
+    "le basta con mayoría simple: más votos a favor que en contra."
+   ],
+   "elements": [
+    {
+     "type": "text",
+     "text": "1.ª VOTACIÓN",
+     "x": 540,
+     "y": 430,
+     "size": 84,
+     "at": "L0",
+     "dur": 0.4
+    },
+    {
+     "type": "gauge",
+     "box": [
+      140,
+      480,
+      800,
+      80
+     ],
+     "value": 176,
+     "max": 350,
+     "mark": 175,
+     "color": "blue",
+     "at": "L0@0.5",
+     "dur": 1.4
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 176,
+     "x": 440,
+     "y": 660,
+     "size": 96,
+     "color": "blue",
+     "at": "L1",
+     "dur": 1.0
+    },
+    {
+     "type": "text",
+     "text": "de 350",
+     "x": 560,
+     "y": 660,
+     "size": 70,
+     "align": "left",
+     "at": "L1@0.5",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "más de la mitad",
+     "font": "body",
+     "x": 540,
+     "y": 735,
+     "size": 52,
+     "color": "gray",
+     "at": "+0.1",
+     "dur": 0.4
+    },
+    {
+     "type": "line",
+     "pts": [
+      [
+       140,
+       790
+      ],
+      [
+       940,
+       790
+      ]
+     ],
+     "color": "light",
+     "width": 5,
+     "at": "L2",
+     "dur": 0.3
+    },
+    {
+     "type": "icon",
+     "name": "clock",
+     "x": 220,
+     "y": 910,
+     "scale": 0.65,
+     "at": "L2@0.2",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "2.ª VOTACIÓN",
+     "x": 640,
+     "y": 900,
+     "size": 76,
+     "at": "L2@0.3",
+     "dur": 0.4
+    },
+    {
+     "type": "text",
+     "text": "48 horas después",
+     "font": "body",
+     "x": 640,
+     "y": 970,
+     "size": 54,
+     "at": "L2@0.6",
+     "dur": 0.4
+    },
+    {
+     "type": "bars",
+     "x": 200,
+     "y": 1265,
+     "h": 190,
+     "bar_w": 150,
+     "gap": 90,
+     "max": 10,
+     "bars": [
+      {
+       "label": "SÍ",
+       "value": 10,
+       "color": "green",
+       "show_value": false
+      },
+      {
+       "label": "NO",
+       "value": 8,
+       "color": "red",
+       "show_value": false
+      }
+     ],
+     "at": "L3",
+     "dur": 1.0
+    },
+    {
+     "type": "text",
+     "text": "más SÍ que NO",
+     "x": 820,
+     "y": 1170,
+     "size": 64,
+     "color": "green",
+     "at": "L3@0.6",
+     "dur": 0.4
+    },
+    {
+     "type": "text",
+     "text": "(ejemplo)",
+     "font": "body",
+     "x": 820,
+     "y": 1240,
+     "size": 44,
+     "color": "gray",
+     "at": "+0",
+     "dur": 0.2
+    }
+   ]
+  },
+  {
+   "id": "sin_acuerdo",
+   "footnote": "Art. 99.5 de la Constitución",
+   "lines": [
+    "¿Y si en dos meses nadie consigue la confianza?",
+    "El Rey disuelve las Cortes y se repiten las elecciones."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "calendar",
+     "x": 540,
+     "y": 610,
+     "scale": 1.5,
+     "at": "L0",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "2 MESES",
+     "x": 540,
+     "y": 715,
+     "size": 72,
+     "color": "red",
+     "at": "L0@0.35",
+     "dur": 0.4
+    },
+    {
+     "type": "icon",
+     "name": "loop",
+     "x": 540,
+     "y": 1050,
+     "scale": 1.9,
+     "at": "L1@0.3",
+     "dur": 0.7
+    },
+    {
+     "type": "icon",
+     "name": "ballot_box",
+     "x": 540,
+     "y": 1080,
+     "scale": 0.6,
+     "at": "L1@0.4",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "NUEVAS ELECCIONES",
+     "x": 540,
+     "y": 1330,
+     "size": 82,
+     "color": "red",
+     "at": "L1@0.65",
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "id": "conclusion",
+   "lines": [
+    "En resumen: tú eliges a los diputados,",
+    "y los diputados eligen al presidente.",
+    "Por eso, tras unas elecciones, los pactos entre partidos son clave."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "person",
+     "accent": "blue",
+     "x": 170,
+     "y": 560,
+     "scale": 0.75,
+     "at": "L0@0.3",
+     "dur": 0.45
+    },
+    {
+     "type": "text",
+     "text": "TÚ",
+     "x": 170,
+     "y": 710,
+     "size": 64,
+     "at": "+0",
+     "dur": 0.15
+    },
+    {
+     "type": "arrow",
+     "from": [
+      260,
+      560
+     ],
+     "to": [
+      380,
+      560
+     ],
+     "head": 26,
+     "curve": 0,
+     "at": "L0@0.6",
+     "dur": 0.25
+    },
+    {
+     "type": "hemicycle",
+     "x": 540,
+     "y": 620,
+     "r_in": 60,
+     "r_out": 140,
+     "rows": 5,
+     "dot": 6.5,
+     "count": 350,
+     "at": "+0",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "diputados",
+     "x": 540,
+     "y": 710,
+     "size": 56,
+     "at": "+0",
+     "dur": 0.3
+    },
+    {
+     "type": "arrow",
+     "from": [
+      700,
+      560
+     ],
+     "to": [
+      820,
+      560
+     ],
+     "head": 26,
+     "curve": 0,
+     "at": "L1@0.3",
+     "dur": 0.25
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "tie": true,
+     "accent": "light",
+     "x": 910,
+     "y": 560,
+     "scale": 0.75,
+     "at": "+0",
+     "dur": 0.45
+    },
+    {
+     "type": "text",
+     "text": "presidente/a",
+     "font": "body",
+     "x": 910,
+     "y": 710,
+     "size": 50,
+     "at": "+0",
+     "dur": 0.3
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "accent": "light",
+     "x": 290,
+     "y": 990,
+     "scale": 0.6,
+     "at": "L2@0.15",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "+",
+     "x": 415,
+     "y": 1010,
+     "size": 90,
+     "color": "gray",
+     "at": "+0",
+     "dur": 0.1
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "accent": "light",
+     "x": 540,
+     "y": 990,
+     "scale": 0.6,
+     "at": "+0",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "+",
+     "x": 665,
+     "y": 1010,
+     "size": 90,
+     "color": "gray",
+     "at": "+0",
+     "dur": 0.1
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "accent": "light",
+     "x": 790,
+     "y": 990,
+     "scale": 0.6,
+     "at": "+0",
+     "dur": 0.3
+    },
+    {
+     "type": "highlight",
+     "x0": 330,
+     "x1": 750,
+     "y": 1200,
+     "width": 70,
+     "at": "L2@0.75",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "PACTOS",
+     "x": 540,
+     "y": 1235,
+     "size": 120,
+     "color": "blue",
+     "at": "L2@0.6",
+     "dur": 0.35
+    }
+   ]
+  },
+  {
+   "id": "interaccion",
+   "footnote": "Fuente: Constitución Española, arts. 68 y 99 (BOE) y LOREG.\nConsultado el 09/10/2026.",
+   "lines": [
+    "¿Preferirías votar directamente al presidente? Te leo en comentarios."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "question",
+     "x": 540,
+     "y": 640,
+     "scale": 1.5,
+     "at": "L0",
+     "dur": 0.7
+    },
+    {
+     "type": "icon",
+     "name": "bubble",
+     "x": 540,
+     "y": 1050,
+     "scale": 1.6,
+     "at": "L0@0.5",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "¿Y tú qué opinas?",
+     "x": 540,
+     "y": 1290,
+     "size": 76,
+     "at": "L0@0.7",
+     "dur": 0.5
+    }
+   ]
+  }
+ ],
+ "caption": "¿Votas al presidente del Gobierno? En España, no directamente. 🗳️\n\nEn las generales eliges diputados (350 en el Congreso). Después:\n1️⃣ El Rey consulta a los grupos y propone un candidato.\n2️⃣ El candidato presenta su programa y pide la confianza: es la investidura.\n3️⃣ 1.ª votación: mayoría absoluta (176). 2.ª votación, 48 h después: mayoría simple.\n4️⃣ Si dos meses después de la primera votación nadie la ha conseguido: nuevas elecciones.\n\nExtra: el Congreso también puede cambiar de presidente con una moción de censura, que exige mayoría absoluta y un candidato alternativo (art. 113).\n\n¿Preferirías votarlo directamente? Te leo 👇\n\nFuentes: Constitución Española, arts. 68, 99 y 113 (BOE); LOREG, arts. 161-163. Consultado el 09/10/2026.",
+ "hashtags": [
+  "#PolíticaParaPrincipiantes",
+  "#PolíticaEspañola",
+  "#Congreso",
+  "#Investidura",
+  "#Constitución",
+  "#AprendeEnInstagram",
+  "#Explicado",
+  "#Elecciones"
+ ],
+ "line_gap": 0.1
+}

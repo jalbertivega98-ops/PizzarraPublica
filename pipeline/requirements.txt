@@ -1,0 +1,5 @@
+piper-tts==1.8.0
+onnxruntime==1.29.0
+skia-python==144.0.post2
+numpy>=2.0
+# Sistema: ffmpeg; en Linux, skia necesita libegl1 y libgl1 (apt-get install libegl1 libgl1)

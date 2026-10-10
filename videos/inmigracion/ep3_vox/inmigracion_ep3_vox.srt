@@ -183,10 +183,14 @@ Su programa para el
 no está publicado.
 
 47
-00:00:52,157 --> 00:00:53,449
-En el próximo episodio:
+00:00:52,157 --> 00:00:53,065
+En el próximo:
 
 48
-00:00:53,449 --> 00:00:54,469
-qué propone Sumar.
+00:00:53,065 --> 00:00:53,671
+los tres,
+
+49
+00:00:53,671 --> 00:00:54,469
+cara a cara.
 

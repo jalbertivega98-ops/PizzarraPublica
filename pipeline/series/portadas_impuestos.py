@@ -19,7 +19,7 @@ def cover(ep, key, name, out_dir):
     c.clear(wb.rgb("paper"))
     c.drawImage(wb.paper_texture(), 0, 0)
     c.drawRect(skia.Rect(0, 0, 1080, 24), skia.Paint(Color=wb.rgb(key)))
-    tag = f"IMPUESTOS · EP. {ep}/4"
+    tag = f"IMPUESTOS · EP. {ep}/3"
     f = wb.font("ui", 44)
     tw = f.measureText(tag)
     r = skia.Rect(540 - tw / 2 - 34, 400, 540 + tw / 2 + 34, 472)

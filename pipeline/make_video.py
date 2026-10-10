@@ -188,7 +188,7 @@ def draw_subtitle(c, chunks, t, y=1520):
 # ------------------------------------------------------------------ render
 def draw_chrome(c, story, scene_spec, t, total):
     # barra de progreso
-    c.drawRect(skia.Rect(0, 0, W * t / total, 12), skia.Paint(Color=wb.rgb("blue"), AntiAlias=True))
+    c.drawRect(skia.Rect(0, 0, W * t / total, 12), skia.Paint(Color=wb.rgb(story.get("accent", "blue")), AntiAlias=True))
     # etiqueta de serie
     tag = story.get("series_tag")
     if tag:
@@ -324,6 +324,7 @@ def main():
     ap.add_argument("--keep-work", action="store_true", help="conserva audios y vídeo intermedios")
     args = ap.parse_args()
     story = json.load(open(args.storyboard, encoding="utf-8"))
+    wb.ICON_ACCENT.update(story.get("icon_accent", {}))
     slug = story["slug"]
     outdir = os.path.abspath(os.path.join(args.out, slug))
     work = os.path.join(outdir, "_work")

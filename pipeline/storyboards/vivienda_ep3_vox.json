@@ -1,0 +1,649 @@
+{
+ "slug": "vivienda_ep3_vox",
+ "title": "Vivienda · Ep. 3/4 · ¿Qué propone Vox?",
+ "series_tag": "VIVIENDA · EP. 3/4",
+ "accent": "vox",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "model": "voices/es_ES-davefx-medium.onnx",
+  "length_scale": 0.86
+ },
+ "music_volume": 0.14,
+ "scribble_volume": 0.05,
+ "end_hold": 0.8,
+ "line_gap": 0.1,
+ "sources": [
+  "Vox, «Programa económico y de vivienda» (en su web; la ruta del archivo indica octubre de 2025), págs. 44-47: https://www.voxespana.es/wp-content/uploads/2025/10/Programa-WEB-021025.pdf",
+  "Las Voces del Pueblo 04/10/2026, sobre la alternativa de vivienda de Vox: https://www.lasvocesdelpueblo.com/vox-activa-su-alternativa-residencial-tras-el-derribo-de-los-decretos-de-sanchez/",
+  "Votación del 02/10/2026, Infobae/EFE: https://www.infobae.com/america/agencias/2026/10/02/el-congreso-rechaza-el-decreto-de-medidas-de-vivienda-con-los-votos-de-pp-vox-junts-y-upn/"
+ ],
+ "caption": "🤯 ¿Qué propone Vox para la vivienda?\n\n👀 Está en la oposición en el Congreso: todo lo que verás son propuestas de su programa, no leyes.\n👇 Te lo explico en 60 segundos:\n\n🏗️ Construir: más suelo, menos trámites e «inundar España de bloques de vivienda protegida». 📝\n🧾 Impuestos: fin del IVA en la compra de la primera vivienda y donaciones familiares para comprar casa bonificadas al 100 %. 📝\n⚖️ Acceso: el arraigo de la familia en España como criterio para la vivienda protegida y prohibir alquilar a inmigrantes en situación irregular. 📝\n🚫 Derogar todas las medidas que intervienen el mercado del alquiler. 📝\n\n⚡ Dato extra: su programa también plantea una fiscalidad distinta para los compradores de fuera de la Unión Europea.\n\n💬 ¿Qué medida de vivienda te afecta más a ti? Te leo 👇\n\n➡️ VIVIENDA · Ep. 3/4. Próximo episodio: qué propone Sumar.\n\n📌 Guárdalo para cuando alguien te pregunte\n🔁 Compártelo con quien lo necesite\n\n📚 Fuentes en el comentario fijado\n\n✅ Aprobado · ⏳ Pendiente · 📝 Propuesta · ❌ Rechazada · 🔢 Estimación del partido",
+ "pinned_comment": "📚 Fuentes (consultado el 10/10/2026):\n• Vox, «Programa económico y de vivienda» (en su web; la ruta del archivo indica octubre de 2025), págs. 44-47: https://www.voxespana.es/wp-content/uploads/2025/10/Programa-WEB-021025.pdf\n• Las Voces del Pueblo 04/10/2026, sobre la alternativa de vivienda de Vox: https://www.lasvocesdelpueblo.com/vox-activa-su-alternativa-residencial-tras-el-derribo-de-los-decretos-de-sanchez/\n• Votación del 02/10/2026, Infobae/EFE: https://www.infobae.com/america/agencias/2026/10/02/el-congreso-rechaza-el-decreto-de-medidas-de-vivienda-con-los-votos-de-pp-vox-junts-y-upn/\n\n¿Ves un error? Dínoslo y lo corregimos con fecha.",
+ "hashtags": [
+  "#PizarraPública",
+  "#PolíticaParaPrincipiantes",
+  "#PolíticaEspañola",
+  "#Vivienda",
+  "#Elecciones29N",
+  "#Alquiler",
+  "#Vox"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "lines": [
+    "¿Qué propone Vox para la vivienda? Te lo explico en un minuto."
+   ],
+   "tail": 0.3,
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿QUÉ PROPONE",
+     "x": 540,
+     "y": 440,
+     "size": 92,
+     "color": "ink",
+     "at": 0,
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.08
+    },
+    {
+     "type": "text",
+     "text": "VOX",
+     "x": 540,
+     "y": 615,
+     "size": 160,
+     "color": "vox",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "PARA LA VIVIENDA?",
+     "x": 540,
+     "y": 720,
+     "size": 80,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "fill": "vox",
+     "x": 540,
+     "y": 1010,
+     "scale": 1.5,
+     "at": "+0.05",
+     "dur": 0.8
+    }
+   ]
+  },
+  {
+   "id": "situacion",
+   "lines": [
+    "Vox está en la oposición en el Congreso.",
+    "Sus propuestas salen de su programa económico y de vivienda, que tiene publicado en su web."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "person",
+     "tie": true,
+     "accent": "light",
+     "x": 270,
+     "y": 600,
+     "scale": 0.95,
+     "at": "L0",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "EN LA\nOPOSICIÓN",
+     "x": 270,
+     "y": 830,
+     "size": 62,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 800,
+     "y": 600,
+     "scale": 1.0,
+     "at": "L1",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "programa económico\ny de vivienda",
+     "x": 800,
+     "y": 830,
+     "size": 50,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.1
+    },
+    {
+     "type": "highlight",
+     "x0": 200,
+     "x1": 880,
+     "y": 1130,
+     "width": 72,
+     "at": "L1@0.5",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "propuestas, no leyes",
+     "x": 540,
+     "y": 1150,
+     "size": 74,
+     "color": "vox",
+     "at": "+0",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "medida1",
+   "lines": [
+    "Uno: construir. Más suelo disponible, menos trámites y, en sus palabras, «inundar España de bloques de vivienda protegida», con colaboración pública y privada."
+   ],
+   "footnote": "Vox, Programa económico y de vivienda, págs. 44-45",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "vox",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "1",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "vox",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Construir",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "x": 540,
+     "y": 760,
+     "scale": 0.9,
+     "at": "L0@0.3",
+     "dur": 0.7,
+     "fill": "vox"
+    },
+    {
+     "type": "text",
+     "text": "más suelo y menos trámites",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "«inundar España de bloques de vivienda protegida»",
+     "x": 540,
+     "y": 1098,
+     "size": 52,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "programa de Vox",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida2",
+   "lines": [
+    "Dos: impuestos. Quitar el IVA en la compra de la primera vivienda y bonificar al cien por cien las donaciones familiares para comprar casa."
+   ],
+   "footnote": "Vox, Programa económico y de vivienda, págs. 46-47",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "vox",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "2",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "vox",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Impuestos",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "IVA 0",
+     "x": 540,
+     "y": 810,
+     "size": 150,
+     "color": "vox",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "en la compra de la primera vivienda",
+     "x": 540,
+     "y": 1010,
+     "size": 60,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "donaciones familiares: 100 % bonificadas",
+     "x": 540,
+     "y": 1092,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "programa de Vox",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida3",
+   "lines": [
+    "Tres: quién accede. Quiere que el arraigo de la familia en España sea el criterio para la vivienda protegida, y prohibir alquilar a inmigrantes en situación irregular."
+   ],
+   "footnote": "Vox, Programa económico y de vivienda, pág. 46",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "vox",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "3",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "vox",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Quién accede",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "x": 540,
+     "y": 760,
+     "scale": 0.9,
+     "at": "L0@0.3",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "arraigo en España: prioridad en vivienda protegida",
+     "x": 540,
+     "y": 1010,
+     "size": 43,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "no alquilar a inmigrantes en situación irregular",
+     "x": 540,
+     "y": 1075,
+     "size": 55,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "programa de Vox",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "ojo",
+   "lines": [
+    "Ojo: también propone derogar todas las medidas que intervienen el alquiler."
+   ],
+   "footnote": "Vox, Programa económico y de vivienda, pág. 45",
+   "elements": [
+    {
+     "type": "highlight",
+     "x0": 390,
+     "x1": 690,
+     "y": 500,
+     "width": 90,
+     "at": "L0",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "¡OJO!",
+     "x": 540,
+     "y": 540,
+     "size": 140,
+     "color": "ink",
+     "at": "+0",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 540,
+     "y": 770,
+     "scale": 1.0,
+     "at": "+0.05",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "derogar todas las medidas",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.35",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "que intervienen el mercado del alquiler",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "voto",
+   "lines": [
+    {
+     "tts": "El dos de octubre votó no a los decretos de vivienda del Gobierno.",
+     "text": "El 2 de octubre votó no a los decretos de vivienda del Gobierno."
+    }
+   ],
+   "footnote": "Congreso, votación del 02/10/2026 (Infobae/EFE)",
+   "elements": [
+    {
+     "type": "text",
+     "text": "2 de octubre",
+     "x": 540,
+     "y": 470,
+     "size": 70,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "decretos de vivienda del Gobierno",
+     "x": 540,
+     "y": 545,
+     "size": 52,
+     "color": "gray",
+     "at": "+0",
+     "dur": 0.4,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "ballot_box",
+     "x": 260,
+     "y": 800,
+     "scale": 1.0,
+     "at": "L0@0.3",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "NO",
+     "x": 610,
+     "y": 880,
+     "size": 210,
+     "color": "vox",
+     "at": "L0@0.55",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "cross",
+     "x": 880,
+     "y": 810,
+     "r": 65,
+     "color": "ink",
+     "width": 14,
+     "at": "+0.05",
+     "dur": 0.3
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "lines": [
+    {
+     "tts": "Su programa para el veintinueve de noviembre aún no está publicado.",
+     "text": "Su programa para el 29 de noviembre aún no está publicado."
+    },
+    "En el próximo episodio: qué propone Sumar."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "calendar",
+     "x": 200,
+     "y": 540,
+     "scale": 0.8,
+     "at": "L0",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "Programa 29N:",
+     "x": 360,
+     "y": 520,
+     "size": 70,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "aún sin publicar",
+     "x": 360,
+     "y": 600,
+     "size": 60,
+     "color": "gray",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "body",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "PRÓXIMO EPISODIO",
+     "x": 540,
+     "y": 820,
+     "size": 74,
+     "color": "ink",
+     "at": "L1",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "fill": "sumar",
+     "x": 540,
+     "y": 1060,
+     "scale": 1.25,
+     "at": "+0.05",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "SUMAR",
+     "x": 540,
+     "y": 1330,
+     "size": 110,
+     "color": "sumar",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  }
+ ]
+}

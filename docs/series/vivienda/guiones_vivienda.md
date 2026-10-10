@@ -1,6 +1,6 @@
 # Serie 1 · VIVIENDA: qué propone cada partido
 
-Borrador para revisar. Fecha de la investigación: **9 de octubre de 2026**.
+Versión producida el 10/10/2026 (investigación del 9 de octubre de 2026). Los vídeos están en `videos/vivienda/` del repositorio.
 
 ## Antes de leer: tres avisos
 
@@ -57,7 +57,7 @@ Borrador para revisar. Fecha de la investigación: **9 de octubre de 2026**.
 | 5 | Medida 3 | Tres: el decreto del 6 de octubre. Frena desahucios de personas vulnerables, limita compras de grandes propietarios y crea préstamos sin intereses de hasta 50.000 euros para la primera vivienda. | Escudo sobre una puerta; «-70 %» tachado; hucha «0 % · 50.000 €» | ⏳ PENDIENTE | [Real Decreto-ley 29/2026, BOE 07/10/2026](https://www.boe.es/buscar/doc.php?id=BOE-A-2026-20823); [La Moncloa 08/10/2026](https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/vivienda-agenda-urbana/Paginas/2026/decreto-vivienda-medidas.aspx) |
 | 6 | Ojo | Ojo: ese decreto ya está en vigor, pero decae si el Congreso no lo convalida. | Reloj de arena sobre el decreto | | Constitución, art. 86; [idealista 07/10/2026](https://www.idealista.com/news/inmobiliario/vivienda/2026/10/07/917871-la-diputacion-permanente-votara-unos-decretos-de-vivienda-con-cambios-minimos-el-16) |
 | 7 | Su voto y promesa | El 2 de octubre votó sí a los decretos de vivienda. Y Sánchez promete alquileres indefinidos en su programa. | Mano levantada «SÍ»; bocadillo «alquiler indefinido» | 📝 PROPUESTA (9/10/2026) | [Infobae/EFE 02/10/2026](https://www.infobae.com/america/agencias/2026/10/02/el-congreso-rechaza-el-decreto-de-medidas-de-vivienda-con-los-votos-de-pp-vox-junts-y-upn/); [Qué! 09/10/2026](https://www.que.es/2026/10/09/sanchez-intervencion-vivienda-29n/) |
-| 8 | Cierre | Su programa para el 29N aún no está publicado. En el próximo episodio: qué propone el PP. | Casa azul asomando por la derecha; «Ep. 2/4 · PP» | | |
+| 8 | Cierre | Su programa para el 29 de noviembre aún no está publicado. En el próximo episodio: qué propone el PP. | Casa azul asomando por la derecha; «Ep. 2/4 · PP» | | |
 
 **Notas para revisar:**
 
@@ -76,12 +76,12 @@ Borrador para revisar. Fecha de la investigación: **9 de octubre de 2026**.
 |---|---|---|---|---|---|
 | 1 | Gancho | ¿Qué propone el PP para la vivienda? Te lo explico en un minuto. | Casa azul dibujándose; «PP» en azul | | |
 | 2 | Situación | El PP está en la oposición en el Congreso. Sus propuestas salen de su decálogo económico de septiembre y de su plan de vivienda para jóvenes. | Figura en el escaño; dos documentos con fecha | | [idealista 28/09/2026](https://www.idealista.com/news/inmobiliario/vivienda/2026/09/28/916106-el-pp-propone-acabar-con-las-zonas-tensionadas-y-avales-de-hasta-el-100-para-la) |
-| 3 | Medida 1 | Uno: construir. Dice que creará las condiciones para levantar un millón de viviendas en cuatro años, con una nueva Ley del Suelo y menos trámites. | Grúa; contador «1.000.000»; reloj «4 años» | 📝 PROPUESTA (27/09/2026) | [El Debate 27/09/2026](https://www.eldebate.com/economia/20260927/pp-propone-avales-publicos-100-exenciones-fiscales-jovenes-compren-vivienda_463308.html); [El Confidencial Digital 07/10/2026](https://www.elconfidencialdigital.com/articulo/legal/partidos-proponen-recetas-deficit-1000-000-casas/202610071634061491496.html) |
+| 3 | Medida 1 | Uno: construir. Dice que creará las condiciones para levantar un millón de viviendas en cuatro años, con más suelo y menos trámites. | Grúa; contador «1.000.000»; reloj «4 años» | 📝 PROPUESTA (27/09/2026) | [El Debate 27/09/2026](https://www.eldebate.com/economia/20260927/pp-propone-avales-publicos-100-exenciones-fiscales-jovenes-compren-vivienda_463308.html); [El Confidencial Digital 07/10/2026](https://www.elconfidencialdigital.com/articulo/legal/partidos-proponen-recetas-deficit-1000-000-casas/202610071634061491496.html) |
 | 4 | Medida 2 | Dos: comprar. Avales públicos de hasta el cien por cien de la hipoteca para jóvenes, y una hucha para ahorrar con desgravación si tienes menos de 40 años. | Llave con «100 %»; hucha «-40 años» | 📝 PROPUESTA | [El Debate 27/09/2026](https://www.eldebate.com/economia/20260927/pp-propone-avales-publicos-100-exenciones-fiscales-jovenes-compren-vivienda_463308.html); [documento del PP](https://www.pp.es/sites/default/files/documentos/una_revolucion_fiscal_para_la_generacion_perdida_de_la_vivienda.pdf) |
 | 5 | Medida 3 | Tres: alquiler y okupación. Quiere acabar con las zonas tensionadas y aprobar una ley antiokupación. | Mapa con zona rayada que se borra; puerta con candado | 📝 PROPUESTA (27/09/2026) | [idealista 28/09/2026](https://www.idealista.com/news/inmobiliario/vivienda/2026/09/28/916106-el-pp-propone-acabar-con-las-zonas-tensionadas-y-avales-de-hasta-el-100-para-la) |
 | 6 | Ojo | Ojo: calcula que un joven se ahorraría entre 21.000 y 26.000 euros en impuestos. Es una estimación del propio partido. | «21.000–26.000 €» con asterisco | 🔢 ESTIMACIÓN DEL PARTIDO | [idealista 28/09/2026](https://www.idealista.com/news/inmobiliario/vivienda/2026/09/28/916106-el-pp-propone-acabar-con-las-zonas-tensionadas-y-avales-de-hasta-el-100-para-la) |
 | 7 | Su voto | El 2 de octubre votó no a los decretos de vivienda del Gobierno. | Mano levantada «NO» | | [Infobae/EFE 02/10/2026](https://www.infobae.com/america/agencias/2026/10/02/el-congreso-rechaza-el-decreto-de-medidas-de-vivienda-con-los-votos-de-pp-vox-junts-y-upn/) |
-| 8 | Cierre | Su programa para el 29N aún no está publicado. En el próximo episodio: qué propone Vox. | Casa verde asomando; «Ep. 3/4 · Vox» | | |
+| 8 | Cierre | Su programa para el 29 de noviembre aún no está publicado. En el próximo episodio: qué propone Vox. | Casa verde asomando; «Ep. 3/4 · Vox» | | |
 
 **Notas para revisar:**
 
@@ -102,9 +102,9 @@ Borrador para revisar. Fecha de la investigación: **9 de octubre de 2026**.
 | 3 | Medida 1 | Uno: construir. Más suelo disponible, menos trámites y, en sus palabras, «inundar España de bloques de vivienda protegida», con colaboración pública y privada. | Grúa; bloques que se multiplican; frase entre comillas | 📝 PROPUESTA | PDF de Vox, págs. 44–45 |
 | 4 | Medida 2 | Dos: impuestos. Quitar el IVA en la compra de la primera vivienda y bonificar al cien por cien las donaciones familiares para comprar casa. | «IVA» tachado; familia pasando una hucha | 📝 PROPUESTA | PDF de Vox, págs. 46–47 |
 | 5 | Medida 3 | Tres: quién accede. Quiere que el arraigo de la familia en España sea el criterio para la vivienda protegida, y prohibir alquilar a inmigrantes en situación irregular. | Balanza con «años en España»; puerta con cartel | 📝 PROPUESTA | PDF de Vox, pág. 46 |
-| 6 | Ojo | Ojo: también propone derogar todas las medidas que intervienen el alquiler, como las zonas tensionadas. | Ley tachada con rotulador | 📝 PROPUESTA | PDF de Vox, pág. 45 |
+| 6 | Ojo | Ojo: también propone derogar todas las medidas que intervienen el alquiler. | Ley tachada con rotulador | 📝 PROPUESTA | PDF de Vox, pág. 45 |
 | 7 | Su voto | El 2 de octubre votó no a los decretos de vivienda del Gobierno. | Mano levantada «NO» | | [Infobae/EFE 02/10/2026](https://www.infobae.com/america/agencias/2026/10/02/el-congreso-rechaza-el-decreto-de-medidas-de-vivienda-con-los-votos-de-pp-vox-junts-y-upn/) |
-| 8 | Cierre | Su programa para el 29N aún no está publicado. En el próximo episodio: qué propone Sumar. | Casa magenta asomando; «Ep. 4/4 · Sumar» | | |
+| 8 | Cierre | Su programa para el 29 de noviembre aún no está publicado. En el próximo episodio: qué propone Sumar. | Casa magenta asomando; «Ep. 4/4 · Sumar» | | |
 
 **Notas para revisar:**
 
@@ -127,7 +127,7 @@ Borrador para revisar. Fecha de la investigación: **9 de octubre de 2026**.
 | 5 | Medida 3 | Tres: en la negociación del decreto pidió congelar los alquileres. Entró una versión parcial: subidas de como máximo un dos por ciento hasta 2027. | Termómetro de precio con tope «2 %» | ✅ en vigor, ⏳ pendiente de convalidar | [idealista 28/09/2026](https://www.idealista.com/news/inmobiliario/vivienda/2026/09/28/916123-el-gobierno-negocia-un-nuevo-decreto-de-vivienda-con-los-precios-en-maximos); [La Moncloa 08/10/2026](https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/vivienda-agenda-urbana/Paginas/2026/decreto-vivienda-medidas.aspx) |
 | 6 | Ojo | Ojo: la renovación automática solo entraría en vigor si la convalida el Congreso, y el PNV ya ha dicho que no la apoya. | Reloj de arena; balanza inclinada | | [idealista 06/10/2026](https://www.idealista.com/news/inmobiliario/vivienda/2026/10/06/917683-el-gobierno-vuelve-a-aprobar-los-dos-decretos-de-vivienda-con-matices-y-anuncia-10); [moncloa.com 08/10/2026](https://www.moncloa.com/2026/10/08/decreto-vivienda-pnv-diputacion-permanente-3444289) |
 | 7 | Su voto | El 2 de octubre votó sí a los decretos de vivienda. | Mano levantada «SÍ» | | [Infobae/EFE 02/10/2026](https://www.infobae.com/america/agencias/2026/10/02/el-congreso-rechaza-el-decreto-de-medidas-de-vivienda-con-los-votos-de-pp-vox-junts-y-upn/) |
-| 8 | Cierre | Su programa para el 29N aún no está publicado. Aquí acaba la serie de vivienda. En la próxima: impuestos. | Las cuatro casas en fila; «Serie 2 · Impuestos» | | |
+| 8 | Cierre | Su programa para el 29 de noviembre aún no está publicado. Aquí acaba la serie de vivienda. En la próxima: impuestos. | Las cuatro casas en fila; «Serie 2 · Impuestos» | | |
 
 **Notas para revisar:**
 

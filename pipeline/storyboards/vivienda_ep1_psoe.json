@@ -1,0 +1,705 @@
+{
+ "slug": "vivienda_ep1_psoe",
+ "title": "Vivienda · Ep. 1/4 · ¿Qué propone el PSOE?",
+ "series_tag": "VIVIENDA · EP. 1/4",
+ "accent": "psoe",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "model": "voices/es_ES-davefx-medium.onnx",
+  "length_scale": 0.86
+ },
+ "music_volume": 0.14,
+ "scribble_volume": 0.05,
+ "end_hold": 0.8,
+ "line_gap": 0.1,
+ "sources": [
+  "Ley 12/2023, de 24 de mayo, por el derecho a la vivienda. BOE 25/05/2023. https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203",
+  "Plan Estatal de Vivienda 2026-2030 (Real Decreto 326/2026, BOE 23/04/2026). RTVC/EFE 21/04/2026: https://rtvc.es/el-plan-estatal-de-vivienda-movilizara-7-000-millones-de-euros-21-abril-2026/",
+  "Real Decreto-ley 29/2026, de 6 de octubre. BOE 07/10/2026. https://www.boe.es/buscar/doc.php?id=BOE-A-2026-20823",
+  "La Moncloa, nota del 08/10/2026 sobre los decretos de vivienda: https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/vivienda-agenda-urbana/Paginas/2026/decreto-vivienda-medidas.aspx",
+  "Votación del 02/10/2026, Infobae/EFE: https://www.infobae.com/america/agencias/2026/10/02/el-congreso-rechaza-el-decreto-de-medidas-de-vivienda-con-los-votos-de-pp-vox-junts-y-upn/",
+  "Entrevista a Pedro Sánchez, Qué! 09/10/2026: https://www.que.es/2026/10/09/sanchez-intervencion-vivienda-29n/"
+ ],
+ "caption": "🤯 ¿Qué ha hecho el PSOE con la vivienda y qué promete para el 29N?\n\n👀 Gobierna con Sumar y lleva el Ministerio de Vivienda: aquí hay leyes aprobadas y también promesas.\n👇 Te lo explico en 60 segundos:\n\n🏠 Ley de Vivienda (2023): las comunidades pueden declarar zonas tensionadas y contener el alquiler. ✅\n💶 Plan Estatal de Vivienda 2026-2030: 7.000 millones entre el Estado y las comunidades. ✅\n🔑 Decreto del 6 de octubre: freno a desahucios de personas vulnerables, límites a compras de grandes propietarios y préstamos al 0 % de hasta 50.000 € para la primera vivienda. ⏳ En vigor, pero pendiente de convalidar\n📜 Promesa: alquileres indefinidos en su programa. 📝\n\n⚡ Dato extra: los préstamos TU CASA cubren hasta el 20 % del valor de la vivienda, con un máximo de 50.000 €, y se suman a la hipoteca del banco.\n\n💬 ¿Qué medida de vivienda te afecta más a ti? Te leo 👇\n\n➡️ VIVIENDA · Ep. 1/4. Próximo episodio: qué propone el PP.\n\n📌 Guárdalo para cuando alguien te pregunte\n🔁 Compártelo con quien lo necesite\n\n📚 Fuentes en el comentario fijado\n\n✅ Aprobado · ⏳ Pendiente · 📝 Propuesta · ❌ Rechazada · 🔢 Estimación del partido",
+ "pinned_comment": "📚 Fuentes (consultado el 10/10/2026):\n• Ley 12/2023, de 24 de mayo, por el derecho a la vivienda. BOE 25/05/2023. https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203\n• Plan Estatal de Vivienda 2026-2030 (Real Decreto 326/2026, BOE 23/04/2026). RTVC/EFE 21/04/2026: https://rtvc.es/el-plan-estatal-de-vivienda-movilizara-7-000-millones-de-euros-21-abril-2026/\n• Real Decreto-ley 29/2026, de 6 de octubre. BOE 07/10/2026. https://www.boe.es/buscar/doc.php?id=BOE-A-2026-20823\n• La Moncloa, nota del 08/10/2026 sobre los decretos de vivienda: https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/vivienda-agenda-urbana/Paginas/2026/decreto-vivienda-medidas.aspx\n• Votación del 02/10/2026, Infobae/EFE: https://www.infobae.com/america/agencias/2026/10/02/el-congreso-rechaza-el-decreto-de-medidas-de-vivienda-con-los-votos-de-pp-vox-junts-y-upn/\n• Entrevista a Pedro Sánchez, Qué! 09/10/2026: https://www.que.es/2026/10/09/sanchez-intervencion-vivienda-29n/\n\n¿Ves un error? Dínoslo y lo corregimos con fecha.",
+ "hashtags": [
+  "#PizarraPública",
+  "#PolíticaParaPrincipiantes",
+  "#PolíticaEspañola",
+  "#Vivienda",
+  "#Elecciones29N",
+  "#Alquiler",
+  "#PSOE"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "lines": [
+    {
+     "tts": "¿Qué ha hecho y qué promete el Pesoe con la vivienda? Te lo explico en un minuto.",
+     "text": "¿Qué ha hecho y qué promete el PSOE con la vivienda? Te lo explico en un minuto."
+    }
+   ],
+   "tail": 0.3,
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿QUÉ HA HECHO\nY QUÉ PROMETE",
+     "x": 540,
+     "y": 440,
+     "size": 92,
+     "color": "ink",
+     "at": 0,
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.08
+    },
+    {
+     "type": "text",
+     "text": "EL PSOE",
+     "x": 540,
+     "y": 715,
+     "size": 160,
+     "color": "psoe",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "CON LA VIVIENDA?",
+     "x": 540,
+     "y": 820,
+     "size": 80,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "fill": "psoe",
+     "x": 540,
+     "y": 1110,
+     "scale": 1.5,
+     "at": "+0.05",
+     "dur": 0.8
+    }
+   ]
+  },
+  {
+   "id": "situacion",
+   "lines": [
+    {
+     "tts": "El Pesoe gobierna con Sumar y lleva el Ministerio de Vivienda.",
+     "text": "El PSOE gobierna con Sumar y lleva el Ministerio de Vivienda."
+    },
+    "Por eso aquí hay medidas aprobadas, no solo promesas."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "person",
+     "tie": true,
+     "accent": "light",
+     "x": 270,
+     "y": 600,
+     "scale": 0.95,
+     "at": "L0",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "EN EL\nGOBIERNO",
+     "x": 270,
+     "y": 830,
+     "size": 62,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 800,
+     "y": 600,
+     "scale": 1.0,
+     "at": "L1",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "con Sumar\nMinisterio de Vivienda",
+     "x": 800,
+     "y": 830,
+     "size": 50,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.1
+    },
+    {
+     "type": "highlight",
+     "x0": 200,
+     "x1": 880,
+     "y": 1130,
+     "width": 72,
+     "at": "L1@0.5",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "aprobado + promesas",
+     "x": 540,
+     "y": 1150,
+     "size": 74,
+     "color": "psoe",
+     "at": "+0",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "medida1",
+   "lines": [
+    {
+     "tts": "Uno: la Ley de Vivienda de dos mil veintitrés. Permite a las comunidades declarar zonas tensionadas y contener allí el precio del alquiler.",
+     "text": "Uno: la Ley de Vivienda de 2023. Permite a las comunidades declarar zonas tensionadas y contener allí el precio del alquiler."
+    }
+   ],
+   "footnote": "Ley 12/2023, de 24 de mayo (BOE 25/05/2023)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "psoe",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "1",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "psoe",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Ley de Vivienda",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 540,
+     "y": 760,
+     "scale": 1.1,
+     "at": "L0@0.3",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "zonas tensionadas",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "las comunidades pueden contener el alquiler",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "APROBADO",
+     "sub": "Ley 12/2023 · BOE",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida2",
+   "lines": [
+    {
+     "tts": "Dos: el Plan Estatal de Vivienda dos mil veintiséis, dos mil treinta. Son siete mil millones entre el Estado y las comunidades para construir, rehabilitar y ayudar al alquiler.",
+     "text": "Dos: el Plan Estatal de Vivienda 2026-2030. Son 7.000 millones entre el Estado y las comunidades para construir, rehabilitar y ayudar al alquiler."
+    }
+   ],
+   "footnote": "Real Decreto 326/2026 (BOE 23/04/2026)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "psoe",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "2",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "psoe",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Plan Estatal 2026-2030",
+     "x": 240,
+     "y": 512,
+     "size": 74,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "7.000 M€",
+     "x": 540,
+     "y": 810,
+     "size": 150,
+     "color": "psoe",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Estado + comunidades",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "construir · rehabilitar · ayudas al alquiler",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "APROBADO",
+     "sub": "Real Decreto 326/2026 · BOE",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida3",
+   "lines": [
+    {
+     "tts": "Tres: el decreto del seis de octubre. Frena desahucios de personas vulnerables, limita compras de grandes propietarios y crea préstamos sin intereses de hasta cincuenta mil euros para la primera vivienda.",
+     "text": "Tres: el decreto del 6 de octubre. Frena desahucios de personas vulnerables, limita compras de grandes propietarios y crea préstamos sin intereses de hasta 50.000 euros para la primera vivienda."
+    }
+   ],
+   "footnote": "Real Decreto-ley 29/2026 (BOE 07/10/2026)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "psoe",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "3",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "psoe",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Decreto del 6 de octubre",
+     "x": 240,
+     "y": 512,
+     "size": 72,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "x": 540,
+     "y": 760,
+     "scale": 0.9,
+     "at": "L0@0.3",
+     "dur": 0.7,
+     "fill": "psoe"
+    },
+    {
+     "type": "text",
+     "text": "freno a desahucios de vulnerables",
+     "x": 540,
+     "y": 1010,
+     "size": 64,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "préstamos al 0 % de hasta 50.000 €",
+     "x": 540,
+     "y": 1096,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PENDIENTE",
+     "sub": "RDL 29/2026 · en vigor",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "ojo",
+   "lines": [
+    "Ojo: ese decreto ya está en vigor, pero decae si el Congreso no lo convalida."
+   ],
+   "footnote": "Constitución, art. 86",
+   "elements": [
+    {
+     "type": "highlight",
+     "x0": 390,
+     "x1": 690,
+     "y": 500,
+     "width": 90,
+     "at": "L0",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "¡OJO!",
+     "x": 540,
+     "y": 540,
+     "size": 140,
+     "color": "ink",
+     "at": "+0",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "clock",
+     "x": 540,
+     "y": 770,
+     "scale": 1.0,
+     "at": "+0.05",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "ya está en vigor…",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.35",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "pero decae si el Congreso no lo convalida",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "voto",
+   "lines": [
+    {
+     "tts": "El dos de octubre votó sí a los decretos de vivienda.",
+     "text": "El 2 de octubre votó sí a los decretos de vivienda."
+    },
+    "Y Sánchez promete alquileres indefinidos en su programa."
+   ],
+   "footnote": "Congreso 02/10/2026 · Sánchez en Qué! 09/10/2026",
+   "elements": [
+    {
+     "type": "text",
+     "text": "2 de octubre",
+     "x": 540,
+     "y": 470,
+     "size": 70,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "decretos de vivienda del Gobierno",
+     "x": 540,
+     "y": 545,
+     "size": 52,
+     "color": "gray",
+     "at": "+0",
+     "dur": 0.4,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "ballot_box",
+     "x": 260,
+     "y": 800,
+     "scale": 1.0,
+     "at": "L0@0.3",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "SÍ",
+     "x": 610,
+     "y": 880,
+     "size": 210,
+     "color": "psoe",
+     "at": "L0@0.55",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "check",
+     "x": 880,
+     "y": 810,
+     "r": 75,
+     "color": "ink",
+     "width": 14,
+     "at": "+0.05",
+     "dur": 0.3
+    },
+    {
+     "type": "icon",
+     "name": "bubble",
+     "x": 230,
+     "y": 1120,
+     "scale": 0.75,
+     "at": "L1",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "alquiler indefinido",
+     "x": 640,
+     "y": 1110,
+     "size": 66,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "09/10/2026",
+     "x": 540,
+     "y": 1235,
+     "w": 420,
+     "h": 115,
+     "size": 46,
+     "rotate": -5,
+     "at": "L1@0.5",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "lines": [
+    {
+     "tts": "Su programa para el veintinueve de noviembre aún no está publicado.",
+     "text": "Su programa para el 29 de noviembre aún no está publicado."
+    },
+    {
+     "tts": "En el próximo episodio: qué propone el pepé.",
+     "text": "En el próximo episodio: qué propone el PP."
+    }
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "calendar",
+     "x": 200,
+     "y": 540,
+     "scale": 0.8,
+     "at": "L0",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "Programa 29N:",
+     "x": 360,
+     "y": 520,
+     "size": 70,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "aún sin publicar",
+     "x": 360,
+     "y": 600,
+     "size": 60,
+     "color": "gray",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "body",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "PRÓXIMO EPISODIO",
+     "x": 540,
+     "y": 820,
+     "size": 74,
+     "color": "ink",
+     "at": "L1",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "fill": "pp",
+     "x": 540,
+     "y": 1060,
+     "scale": 1.25,
+     "at": "+0.05",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "PP",
+     "x": 540,
+     "y": 1330,
+     "size": 110,
+     "color": "pp",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  }
+ ]
+}

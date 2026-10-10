@@ -1,0 +1,678 @@
+{
+ "slug": "vivienda_ep2_pp",
+ "title": "Vivienda · Ep. 2/4 · ¿Qué propone el PP?",
+ "series_tag": "VIVIENDA · EP. 2/4",
+ "accent": "pp",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "model": "voices/es_ES-davefx-medium.onnx",
+  "length_scale": 0.86
+ },
+ "music_volume": 0.14,
+ "scribble_volume": 0.05,
+ "end_hold": 0.8,
+ "line_gap": 0.1,
+ "sources": [
+  "PP, decálogo económico. idealista 28/09/2026: https://www.idealista.com/news/inmobiliario/vivienda/2026/09/28/916106-el-pp-propone-acabar-con-las-zonas-tensionadas-y-avales-de-hasta-el-100-para-la",
+  "El Debate 27/09/2026: https://www.eldebate.com/economia/20260927/pp-propone-avales-publicos-100-exenciones-fiscales-jovenes-compren-vivienda_463308.html",
+  "PP, «Propuestas para una revolución fiscal para menores de 40 años» (Hucha Hogar Joven): https://www.pp.es/sites/default/files/documentos/una_revolucion_fiscal_para_la_generacion_perdida_de_la_vivienda.pdf",
+  "Votación del 02/10/2026, Infobae/EFE: https://www.infobae.com/america/agencias/2026/10/02/el-congreso-rechaza-el-decreto-de-medidas-de-vivienda-con-los-votos-de-pp-vox-junts-y-upn/"
+ ],
+ "caption": "🤯 ¿Qué propone el PP para la vivienda?\n\n👀 Está en la oposición en el Congreso: todo lo que verás son propuestas, no leyes.\n👇 Te lo explico en 60 segundos:\n\n🏗️ Construir: crear las condiciones para levantar un millón de viviendas en 4 años, con más suelo y menos trámites. 📝\n🔑 Comprar: avales públicos de hasta el 100 % de la hipoteca para jóvenes y una «Hucha Hogar» con desgravación para menores de 40. 📝\n🏠 Alquiler: acabar con las zonas tensionadas y aprobar una ley antiokupación. 📝\n🧾 Calcula que un joven se ahorraría entre 21.000 y 26.000 € en impuestos. 🔢 Estimación del propio partido\n\n⚡ Dato extra: con la Hucha Hogar Joven, los menores de 40 podrían ahorrar hasta 2.000 € al año con una deducción del 20 % en el IRPF, y el Estado avalaría la misma cantidad al comprar.\n\n💬 ¿Qué medida de vivienda te afecta más a ti? Te leo 👇\n\n➡️ VIVIENDA · Ep. 2/4. Próximo episodio: qué propone Vox.\n\n📌 Guárdalo para cuando alguien te pregunte\n🔁 Compártelo con quien lo necesite\n\n📚 Fuentes en el comentario fijado\n\n✅ Aprobado · ⏳ Pendiente · 📝 Propuesta · ❌ Rechazada · 🔢 Estimación del partido",
+ "pinned_comment": "📚 Fuentes (consultado el 10/10/2026):\n• PP, decálogo económico. idealista 28/09/2026: https://www.idealista.com/news/inmobiliario/vivienda/2026/09/28/916106-el-pp-propone-acabar-con-las-zonas-tensionadas-y-avales-de-hasta-el-100-para-la\n• El Debate 27/09/2026: https://www.eldebate.com/economia/20260927/pp-propone-avales-publicos-100-exenciones-fiscales-jovenes-compren-vivienda_463308.html\n• PP, «Propuestas para una revolución fiscal para menores de 40 años» (Hucha Hogar Joven): https://www.pp.es/sites/default/files/documentos/una_revolucion_fiscal_para_la_generacion_perdida_de_la_vivienda.pdf\n• Votación del 02/10/2026, Infobae/EFE: https://www.infobae.com/america/agencias/2026/10/02/el-congreso-rechaza-el-decreto-de-medidas-de-vivienda-con-los-votos-de-pp-vox-junts-y-upn/\n\n¿Ves un error? Dínoslo y lo corregimos con fecha.",
+ "hashtags": [
+  "#PizarraPública",
+  "#PolíticaParaPrincipiantes",
+  "#PolíticaEspañola",
+  "#Vivienda",
+  "#Elecciones29N",
+  "#Alquiler",
+  "#PP"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "lines": [
+    {
+     "tts": "¿Qué propone el pepé para la vivienda? Te lo explico en un minuto.",
+     "text": "¿Qué propone el PP para la vivienda? Te lo explico en un minuto."
+    }
+   ],
+   "tail": 0.3,
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿QUÉ PROPONE",
+     "x": 540,
+     "y": 440,
+     "size": 92,
+     "color": "ink",
+     "at": 0,
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.08
+    },
+    {
+     "type": "text",
+     "text": "EL PP",
+     "x": 540,
+     "y": 615,
+     "size": 160,
+     "color": "pp",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "PARA LA VIVIENDA?",
+     "x": 540,
+     "y": 720,
+     "size": 80,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "fill": "pp",
+     "x": 540,
+     "y": 1010,
+     "scale": 1.5,
+     "at": "+0.05",
+     "dur": 0.8
+    }
+   ]
+  },
+  {
+   "id": "situacion",
+   "lines": [
+    {
+     "tts": "El pepé está en la oposición en el Congreso.",
+     "text": "El PP está en la oposición en el Congreso."
+    },
+    "Sus propuestas salen de su decálogo económico de septiembre y de su plan de vivienda para jóvenes."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "person",
+     "tie": true,
+     "accent": "light",
+     "x": 270,
+     "y": 600,
+     "scale": 0.95,
+     "at": "L0",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "EN LA\nOPOSICIÓN",
+     "x": 270,
+     "y": 830,
+     "size": 62,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 800,
+     "y": 600,
+     "scale": 1.0,
+     "at": "L1",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "decálogo 27/09/2026\nplan para jóvenes",
+     "x": 800,
+     "y": 830,
+     "size": 50,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.1
+    },
+    {
+     "type": "highlight",
+     "x0": 200,
+     "x1": 880,
+     "y": 1130,
+     "width": 72,
+     "at": "L1@0.5",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "propuestas, no leyes",
+     "x": 540,
+     "y": 1150,
+     "size": 74,
+     "color": "pp",
+     "at": "+0",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "medida1",
+   "lines": [
+    "Uno: construir. Dice que creará las condiciones para levantar un millón de viviendas en cuatro años, con más suelo y menos trámites."
+   ],
+   "footnote": "PP, decálogo económico (prensa, 27/09/2026)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "pp",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "1",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "pp",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Construir",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "x": 540,
+     "y": 760,
+     "scale": 0.9,
+     "at": "L0@0.3",
+     "dur": 0.7,
+     "fill": "pp"
+    },
+    {
+     "type": "text",
+     "text": "1.000.000 de viviendas en 4 años",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "más suelo y menos trámites",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "decálogo · 27/09/2026",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida2",
+   "lines": [
+    {
+     "tts": "Dos: comprar. Avales públicos de hasta el cien por cien de la hipoteca para jóvenes, y una hucha para ahorrar con desgravación si tienes menos de cuarenta años.",
+     "text": "Dos: comprar. Avales públicos de hasta el cien por cien de la hipoteca para jóvenes, y una hucha para ahorrar con desgravación si tienes menos de 40 años."
+    }
+   ],
+   "footnote": "PP, decálogo (27/09/2026) y Hucha Hogar Joven (07/02/2025)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "pp",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "2",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "pp",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Comprar",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "100 %",
+     "x": 540,
+     "y": 810,
+     "size": 150,
+     "color": "pp",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "avales públicos para jóvenes",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "hucha con desgravación para menores de 40",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "decálogo + plan jóvenes",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida3",
+   "lines": [
+    {
+     "tts": "Tres: alquiler y ocupación. Quiere acabar con las zonas tensionadas y aprobar una ley anti ocupación.",
+     "text": "Tres: alquiler y okupación. Quiere acabar con las zonas tensionadas y aprobar una ley antiokupación."
+    }
+   ],
+   "footnote": "PP, decálogo económico (prensa, 27/09/2026)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "pp",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "3",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "pp",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Alquiler y okupación",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 540,
+     "y": 760,
+     "scale": 1.1,
+     "at": "L0@0.3",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "fin de las zonas tensionadas",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "ley antiokupación",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "decálogo · 27/09/2026",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "ojo",
+   "lines": [
+    {
+     "tts": "Ojo: calcula que un joven se ahorraría entre veintiún mil y veintiséis mil euros en impuestos. Es una estimación del propio partido.",
+     "text": "Ojo: calcula que un joven se ahorraría entre 21.000 y 26.000 euros en impuestos. Es una estimación del propio partido."
+    }
+   ],
+   "footnote": "Cálculo del PP (idealista, 28/09/2026)",
+   "elements": [
+    {
+     "type": "highlight",
+     "x0": 390,
+     "x1": 690,
+     "y": 500,
+     "width": 90,
+     "at": "L0",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "¡OJO!",
+     "x": 540,
+     "y": 540,
+     "size": 140,
+     "color": "ink",
+     "at": "+0",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 540,
+     "y": 770,
+     "scale": 1.0,
+     "at": "+0.05",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "21.000-26.000 € *",
+     "x": 540,
+     "y": 1010,
+     "size": 76,
+     "color": "ink",
+     "at": "L0@0.35",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "* ahorro en impuestos para un joven",
+     "x": 540,
+     "y": 1108,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "ESTIMACIÓN",
+     "sub": "del propio partido",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.75",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "voto",
+   "lines": [
+    {
+     "tts": "El dos de octubre votó no a los decretos de vivienda del Gobierno.",
+     "text": "El 2 de octubre votó no a los decretos de vivienda del Gobierno."
+    }
+   ],
+   "footnote": "Congreso, votación del 02/10/2026 (Infobae/EFE)",
+   "elements": [
+    {
+     "type": "text",
+     "text": "2 de octubre",
+     "x": 540,
+     "y": 470,
+     "size": 70,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "decretos de vivienda del Gobierno",
+     "x": 540,
+     "y": 545,
+     "size": 52,
+     "color": "gray",
+     "at": "+0",
+     "dur": 0.4,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "ballot_box",
+     "x": 260,
+     "y": 800,
+     "scale": 1.0,
+     "at": "L0@0.3",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "NO",
+     "x": 610,
+     "y": 880,
+     "size": 210,
+     "color": "pp",
+     "at": "L0@0.55",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "cross",
+     "x": 880,
+     "y": 810,
+     "r": 65,
+     "color": "ink",
+     "width": 14,
+     "at": "+0.05",
+     "dur": 0.3
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "lines": [
+    {
+     "tts": "Su programa para el veintinueve de noviembre aún no está publicado.",
+     "text": "Su programa para el 29 de noviembre aún no está publicado."
+    },
+    "En el próximo episodio: qué propone Vox."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "calendar",
+     "x": 200,
+     "y": 540,
+     "scale": 0.8,
+     "at": "L0",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "Programa 29N:",
+     "x": 360,
+     "y": 520,
+     "size": 70,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "aún sin publicar",
+     "x": 360,
+     "y": 600,
+     "size": 60,
+     "color": "gray",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "body",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "PRÓXIMO EPISODIO",
+     "x": 540,
+     "y": 820,
+     "size": 74,
+     "color": "ink",
+     "at": "L1",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "fill": "vox",
+     "x": 540,
+     "y": 1060,
+     "scale": 1.25,
+     "at": "+0.05",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "VOX",
+     "x": 540,
+     "y": 1330,
+     "size": 110,
+     "color": "vox",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  }
+ ]
+}

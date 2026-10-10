@@ -1,0 +1,711 @@
+{
+ "slug": "vivienda_ep4_sumar",
+ "title": "Vivienda · Ep. 4/4 · ¿Qué propone Sumar?",
+ "series_tag": "VIVIENDA · EP. 4/4",
+ "accent": "sumar",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "model": "voices/es_ES-davefx-medium.onnx",
+  "length_scale": 0.86
+ },
+ "music_volume": 0.14,
+ "scribble_volume": 0.05,
+ "end_hold": 0.8,
+ "line_gap": 0.1,
+ "sources": [
+  "Votación del 15/09/2026 sobre la ley de Sumar, idealista 16/09/2026: https://www.idealista.com/news/inmobiliario/vivienda/2026/09/16/914312-el-congreso-con-la-abstencion-del-psoe-tumba-la-ley-de-sumar-para-prohibir-que-los",
+  "Real Decreto-ley 28/2026, de 6 de octubre. BOE 07/10/2026: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20822",
+  "Real Decreto-ley 29/2026 y nota de La Moncloa 08/10/2026: https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/vivienda-agenda-urbana/Paginas/2026/decreto-vivienda-medidas.aspx",
+  "Lo que pidió Sumar en la negociación, idealista 28/09/2026: https://www.idealista.com/news/inmobiliario/vivienda/2026/09/28/916123-el-gobierno-negocia-un-nuevo-decreto-de-vivienda-con-los-precios-en-maximos",
+  "Postura del PNV, moncloa.com 08/10/2026: https://www.moncloa.com/2026/10/08/decreto-vivienda-pnv-diputacion-permanente-3444289",
+  "Frente Amplio, El Español 04/10/2026: https://www.elespanol.com/espana/politica/20261004/frente-amplio-nueva-marca-sumar-presentara-octubre-hoja-ruta/1003744408063_0.html",
+  "Votación del 02/10/2026, Infobae/EFE: https://www.infobae.com/america/agencias/2026/10/02/el-congreso-rechaza-el-decreto-de-medidas-de-vivienda-con-los-votos-de-pp-vox-junts-y-upn/"
+ ],
+ "caption": "🤯 ¿Qué propone Sumar para la vivienda?\n\n👀 Gobierna con el PSOE, pero el Ministerio de Vivienda no es suyo. Para el 29N se presenta como Frente Amplio.\n👇 Te lo explico en 60 segundos:\n\n🚫 Prohibir que empresas y fondos compren viviendas. ❌ Rechazada en el Congreso el 15/09/2026 (en contra PP, Vox y Junts; abstención de PSOE y PNV)\n🔁 Renovación automática del alquiler a partir de 5 años (7 si el casero es una empresa); si no se renueva, indemnización. ⏳ Pendiente de convalidar\n📈 Pidió congelar los alquileres; entró un tope del 2 % hasta 2027 (0 % si ya supera el índice de referencia). ⏳ En vigor, pero pendiente de convalidar\n🗳️ Frente Amplio (Sumar, IU, Más Madrid y Comuns) presenta su hoja de ruta el 17 de octubre.\n\n⚡ Dato extra: si el casero no renueva, la indemnización sería de al menos 12 meses de renta, con cuatro excepciones.\n\n💬 ¿Qué medida de vivienda te afecta más a ti? Te leo 👇\n\n➡️ VIVIENDA · Ep. 4/4. Fin de la serie. Próxima serie: impuestos.\n\n📌 Guárdalo para cuando alguien te pregunte\n🔁 Compártelo con quien lo necesite\n\n📚 Fuentes en el comentario fijado\n\n✅ Aprobado · ⏳ Pendiente · 📝 Propuesta · ❌ Rechazada · 🔢 Estimación del partido",
+ "pinned_comment": "📚 Fuentes (consultado el 10/10/2026):\n• Votación del 15/09/2026 sobre la ley de Sumar, idealista 16/09/2026: https://www.idealista.com/news/inmobiliario/vivienda/2026/09/16/914312-el-congreso-con-la-abstencion-del-psoe-tumba-la-ley-de-sumar-para-prohibir-que-los\n• Real Decreto-ley 28/2026, de 6 de octubre. BOE 07/10/2026: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20822\n• Real Decreto-ley 29/2026 y nota de La Moncloa 08/10/2026: https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/vivienda-agenda-urbana/Paginas/2026/decreto-vivienda-medidas.aspx\n• Lo que pidió Sumar en la negociación, idealista 28/09/2026: https://www.idealista.com/news/inmobiliario/vivienda/2026/09/28/916123-el-gobierno-negocia-un-nuevo-decreto-de-vivienda-con-los-precios-en-maximos\n• Postura del PNV, moncloa.com 08/10/2026: https://www.moncloa.com/2026/10/08/decreto-vivienda-pnv-diputacion-permanente-3444289\n• Frente Amplio, El Español 04/10/2026: https://www.elespanol.com/espana/politica/20261004/frente-amplio-nueva-marca-sumar-presentara-octubre-hoja-ruta/1003744408063_0.html\n• Votación del 02/10/2026, Infobae/EFE: https://www.infobae.com/america/agencias/2026/10/02/el-congreso-rechaza-el-decreto-de-medidas-de-vivienda-con-los-votos-de-pp-vox-junts-y-upn/\n\n¿Ves un error? Dínoslo y lo corregimos con fecha.",
+ "hashtags": [
+  "#PizarraPública",
+  "#PolíticaParaPrincipiantes",
+  "#PolíticaEspañola",
+  "#Vivienda",
+  "#Elecciones29N",
+  "#Alquiler",
+  "#Sumar"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "lines": [
+    "¿Qué propone Sumar para la vivienda? Te lo explico en un minuto."
+   ],
+   "tail": 0.3,
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿QUÉ PROPONE",
+     "x": 540,
+     "y": 440,
+     "size": 92,
+     "color": "ink",
+     "at": 0,
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.08
+    },
+    {
+     "type": "text",
+     "text": "SUMAR",
+     "x": 540,
+     "y": 615,
+     "size": 160,
+     "color": "sumar",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "PARA LA VIVIENDA?",
+     "x": 540,
+     "y": 720,
+     "size": 80,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "fill": "sumar",
+     "x": 540,
+     "y": 1010,
+     "scale": 1.5,
+     "at": "+0.05",
+     "dur": 0.8
+    }
+   ]
+  },
+  {
+   "id": "situacion",
+   "lines": [
+    {
+     "tts": "Sumar gobierna con el Pesoe, pero no lleva Vivienda.",
+     "text": "Sumar gobierna con el PSOE, pero no lleva Vivienda."
+    },
+    {
+     "tts": "Para el veintinueve de noviembre se presenta como Frente Amplio, con Izquierda Unida, Más Madrid y los Comúns.",
+     "text": "Para el 29 de noviembre se presenta como Frente Amplio, con IU, Más Madrid y los Comuns."
+    }
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "person",
+     "tie": true,
+     "accent": "light",
+     "x": 270,
+     "y": 600,
+     "scale": 0.95,
+     "at": "L0",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "EN EL\nGOBIERNO",
+     "x": 270,
+     "y": 830,
+     "size": 62,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 800,
+     "y": 600,
+     "scale": 1.0,
+     "at": "L1",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "con el PSOE\nsin el Ministerio de Vivienda",
+     "x": 800,
+     "y": 830,
+     "size": 50,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.1
+    },
+    {
+     "type": "highlight",
+     "x0": 200,
+     "x1": 880,
+     "y": 1130,
+     "width": 72,
+     "at": "L1@0.5",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "29N: Frente Amplio",
+     "x": 540,
+     "y": 1150,
+     "size": 74,
+     "color": "sumar",
+     "at": "+0",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "medida1",
+   "lines": [
+    {
+     "tts": "Uno: prohibir que las empresas y los fondos compren viviendas. Lo llevó al Congreso y fue rechazado por segunda vez el quince de septiembre.",
+     "text": "Uno: prohibir que las empresas y los fondos compren viviendas. Lo llevó al Congreso y fue rechazado por segunda vez el 15 de septiembre."
+    }
+   ],
+   "footnote": "Votación en el Congreso del 15/09/2026 (idealista)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "sumar",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "1",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "sumar",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Fondos y empresas",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "x": 540,
+     "y": 760,
+     "scale": 0.9,
+     "at": "L0@0.3",
+     "dur": 0.7,
+     "fill": "sumar"
+    },
+    {
+     "type": "text",
+     "text": "prohibir que compren viviendas",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "rechazada por segunda vez",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "RECHAZADA",
+     "sub": "Congreso · 15/09/2026",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida2",
+   "lines": [
+    "Dos: que los contratos de alquiler se renueven solos. A partir de los cinco años, el casero que no renueve tendría que indemnizar al inquilino."
+   ],
+   "footnote": "Real Decreto-ley 28/2026 (BOE 07/10/2026)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "sumar",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "2",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "sumar",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Renovación automática",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "icon",
+     "name": "loop",
+     "x": 540,
+     "y": 760,
+     "scale": 0.9,
+     "at": "L0@0.3",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "a partir de 5 años, el contrato se renueva",
+     "x": 540,
+     "y": 1010,
+     "size": 51,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "si el casero no renueva: indemnización",
+     "x": 540,
+     "y": 1083,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PENDIENTE",
+     "sub": "RDL 28/2026",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida3",
+   "lines": [
+    {
+     "tts": "Tres: en la negociación del decreto pidió congelar los alquileres. Entró una versión parcial: subidas de como máximo un dos por ciento hasta dos mil veintisiete.",
+     "text": "Tres: en la negociación del decreto pidió congelar los alquileres. Entró una versión parcial: subidas de como máximo un dos por ciento hasta 2027."
+    }
+   ],
+   "footnote": "Real Decreto-ley 29/2026 (BOE 07/10/2026)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "sumar",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "3",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "sumar",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Congelar alquileres",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "2 %",
+     "x": 540,
+     "y": 810,
+     "size": 150,
+     "color": "sumar",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "pidió congelarlos",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "entró un tope de subida hasta 2027",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PENDIENTE",
+     "sub": "RDL 29/2026 · en vigor",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "ojo",
+   "lines": [
+    {
+     "tts": "Ojo: la renovación automática solo entraría en vigor si la convalida el Congreso, y el pe ene uve ya ha dicho que no la apoya.",
+     "text": "Ojo: la renovación automática solo entraría en vigor si la convalida el Congreso, y el PNV ya ha dicho que no la apoya."
+    }
+   ],
+   "footnote": "idealista 06/10/2026 · moncloa.com 08/10/2026",
+   "elements": [
+    {
+     "type": "highlight",
+     "x0": 390,
+     "x1": 690,
+     "y": 500,
+     "width": 90,
+     "at": "L0",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "¡OJO!",
+     "x": 540,
+     "y": 540,
+     "size": 140,
+     "color": "ink",
+     "at": "+0",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "clock",
+     "x": 540,
+     "y": 770,
+     "scale": 1.0,
+     "at": "+0.05",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "solo si la convalida el Congreso",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.35",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "el PNV ya ha dicho que no la apoya",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "voto",
+   "lines": [
+    {
+     "tts": "El dos de octubre votó sí a los decretos de vivienda.",
+     "text": "El 2 de octubre votó sí a los decretos de vivienda."
+    }
+   ],
+   "footnote": "Congreso, votación del 02/10/2026 (Infobae/EFE)",
+   "elements": [
+    {
+     "type": "text",
+     "text": "2 de octubre",
+     "x": 540,
+     "y": 470,
+     "size": 70,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "decretos de vivienda del Gobierno",
+     "x": 540,
+     "y": 545,
+     "size": 52,
+     "color": "gray",
+     "at": "+0",
+     "dur": 0.4,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "ballot_box",
+     "x": 260,
+     "y": 800,
+     "scale": 1.0,
+     "at": "L0@0.3",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "SÍ",
+     "x": 610,
+     "y": 880,
+     "size": 210,
+     "color": "sumar",
+     "at": "L0@0.55",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "check",
+     "x": 880,
+     "y": 810,
+     "r": 75,
+     "color": "ink",
+     "width": 14,
+     "at": "+0.05",
+     "dur": 0.3
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "lines": [
+    {
+     "tts": "Su programa para el veintinueve de noviembre aún no está publicado.",
+     "text": "Su programa para el 29 de noviembre aún no está publicado."
+    },
+    "Aquí acaba la serie de vivienda.",
+    "En la próxima: impuestos."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "calendar",
+     "x": 200,
+     "y": 540,
+     "scale": 0.8,
+     "at": "L0",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "Programa 29N:",
+     "x": 360,
+     "y": 520,
+     "size": 70,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "aún sin publicar",
+     "x": 360,
+     "y": 600,
+     "size": 60,
+     "color": "gray",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "body",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "FIN DE LA SERIE",
+     "x": 540,
+     "y": 820,
+     "size": 74,
+     "color": "ink",
+     "at": "L1",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "fill": "psoe",
+     "x": 210,
+     "y": 1010,
+     "scale": 0.7,
+     "at": "+0.02",
+     "dur": 0.3
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "fill": "pp",
+     "x": 430,
+     "y": 1010,
+     "scale": 0.7,
+     "at": "+0.02",
+     "dur": 0.3
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "fill": "vox",
+     "x": 650,
+     "y": 1010,
+     "scale": 0.7,
+     "at": "+0.02",
+     "dur": 0.3
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "fill": "sumar",
+     "x": 870,
+     "y": 1010,
+     "scale": 0.7,
+     "at": "+0.02",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "Serie 2:",
+     "x": 540,
+     "y": 1230,
+     "size": 64,
+     "color": "gray",
+     "at": "L2",
+     "dur": 0.3,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "IMPUESTOS",
+     "x": 540,
+     "y": 1330,
+     "size": 110,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  }
+ ]
+}

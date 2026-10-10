@@ -25,6 +25,11 @@ PALETTE = {
     "gray": (150, 154, 162),
     "light": (215, 218, 224),
     "white": (255, 255, 255),
+    # colores de identificación de partido (solo para nombrarlos)
+    "psoe": (225, 30, 40),
+    "pp": (0, 104, 180),
+    "vox": (90, 175, 40),
+    "sumar": (214, 32, 112),
 }
 FONTS = {
     "hand": "Kalam-Bold.ttf",
@@ -53,6 +58,15 @@ def rgb(c, a=255):
     if isinstance(c, str):
         c = PALETTE[c]
     return skia.Color(c[0], c[1], c[2], a)
+
+
+# Colores de detalle dentro de los iconos (papeleta, aguja del reloj, calendario…).
+# Las series por partido los neutralizan para que solo el partido lleve color.
+ICON_ACCENT = {}
+
+
+def acc(c):
+    return ICON_ACCENT.get(c, c)
 
 
 def ease(t):
@@ -153,9 +167,9 @@ def icon_ballot_box(color="ink", rng=None):
     S = [Stroke(rect_pts(-110, -40, 220, 150), color, 8),
          Stroke([(-110, -40), (-70, -80), (110, -80), (110, -40)], color, 8),
          Stroke([(-40, -60), (60, -60)], color, 10),
-         Stroke(rect_pts(-30, -150, 70, 80), "blue", 6),
-         Stroke([(-14, -125), (24, -125)], "blue", 5),
-         Stroke([(-14, -105), (24, -105)], "blue", 5)]
+         Stroke(rect_pts(-30, -150, 70, 80), acc("blue"), 6),
+         Stroke([(-14, -125), (24, -125)], acc("blue"), 5),
+         Stroke([(-14, -105), (24, -105)], acc("blue"), 5)]
     F = [Fill(rect_pts(-110, -40, 220, 150)[:4], "light")]
     return S, F
 
@@ -174,7 +188,7 @@ def icon_crown(color="ink", rng=None):
     pts = [(-80, 40), (-90, -40), (-45, 0), (0, -60), (45, 0), (90, -40), (80, 40), (-80, 40)]
     S = [Stroke(pts, color, 7), Stroke([(-82, 60), (82, 60)], color, 7)]
     for x, y in [(-90, -40), (0, -60), (90, -40)]:
-        S.append(Stroke(ellipse_pts(x, y - 12, 9, 9), "red", 5))
+        S.append(Stroke(ellipse_pts(x, y - 12, 9, 9), acc("red"), 5))
     return S, [Fill(pts[:-1], "yellow")]
 
 
@@ -192,7 +206,7 @@ def icon_lectern(color="ink", rng=None):
          Stroke([(-100, -20), (100, -20)], color, 10),
          Stroke([(0, -20), (-20, -70)], "gray", 6),
          Stroke(ellipse_pts(-24, -78, 10, 10, n=20), "gray", 6)]
-    return S, [Fill([(-90, -20), (90, -20), (60, 140), (-60, 140)], "blue", 200)]
+    return S, [Fill([(-90, -20), (90, -20), (60, 140), (-60, 140)], acc("blue"), 200)]
 
 
 def icon_document(color="ink", rng=None):
@@ -205,7 +219,7 @@ def icon_document(color="ink", rng=None):
 
 def icon_clock(color="ink", rng=None):
     S = [Stroke(ellipse_pts(0, 0, 80, 80), color, 8),
-         Stroke([(0, 0), (0, -50)], color, 8), Stroke([(0, 0), (38, 18)], "red", 8)]
+         Stroke([(0, 0), (0, -50)], color, 8), Stroke([(0, 0), (38, 18)], acc("red"), 8)]
     return S, [Fill(ellipse_pts(0, 0, 78, 78), "white")]
 
 
@@ -213,7 +227,7 @@ def icon_calendar(color="ink", rng=None):
     S = [Stroke(rect_pts(-110, -90, 220, 190), color, 8),
          Stroke([(-110, -40), (110, -40)], color, 7),
          Stroke([(-60, -110), (-60, -70)], color, 9), Stroke([(60, -110), (60, -70)], color, 9)]
-    F = [Fill(rect_pts(-110, -90, 220, 50)[:4], "red", 230), Fill(rect_pts(-110, -40, 220, 140)[:4], "white")]
+    F = [Fill(rect_pts(-110, -90, 220, 50)[:4], acc("red"), 230), Fill(rect_pts(-110, -40, 220, 140)[:4], "white")]
     return S, F
 
 
@@ -291,6 +305,8 @@ class Element:
             for o in st:
                 pts = o.pts * [sc * flip, sc] + [x, y]
                 self.strokes.append(Stroke(wobble(pts, rng, 1.3), o.color, o.width * max(0.7, sc ** 0.5), o.alpha))
+            if "fill" in s and fi:
+                fi[0] = Fill(fi[0].pts, s["fill"], fi[0].alpha)
             for f in fi:
                 self.fills.append(Fill(f.pts * [sc * flip, sc] + [x, y], f.color, f.alpha))
         elif k == "arrow":
@@ -319,6 +335,13 @@ class Element:
             self.strokes.append(Stroke(wobble([(x0, y), (x1, y - 3)], rng, 1.5), s.get("color", "yellow"), s.get("width", 60), 150))
         elif k == "hemicycle":
             self.dots = self._hemi_dots(s)
+        elif k == "stamp":
+            # sello de goma: doble marco girado; el texto aparece al cerrar el marco
+            x, y, w, h = s["x"], s["y"], s.get("w", 520), s.get("h", 130)
+            a = math.radians(s.get("rotate", -6))
+            rot = lambda pts: [(x + px * math.cos(a) - py * math.sin(a), y + px * math.sin(a) + py * math.cos(a)) for px, py in pts]
+            self.strokes.append(Stroke(wobble(rot(rect_pts(-w / 2, -h / 2, w, h)), rng, 1.2), col, 8))
+            self.strokes.append(Stroke(wobble(rot(rect_pts(-w / 2 + 12, -h / 2 + 12, w - 24, h - 24)), rng, 1.0), col, 3))
         # text / bars / counter se dibujan con su propia rutina
 
     @staticmethod
@@ -393,7 +416,27 @@ class Element:
             acc += s.length
         if p < 1 and tip is None and self.strokes:
             tip = self.strokes[-1].pts[-1]
+        if k == "stamp":
+            self._draw_stamp_text(c, p, am)
         return tip if p < 1 else None
+
+    def _draw_stamp_text(self, c, p, am):
+        s = self.spec
+        ta = ease(min(1.0, max(0.0, (p - 0.6) / 0.4)))
+        if ta <= 0:
+            return
+        c.save()
+        c.rotate(s.get("rotate", -6), s["x"], s["y"])
+        f = font("ui", s.get("size", 58))
+        paint = skia.Paint(Color=rgb(s.get("color", "ink"), int(255 * am * ta)), AntiAlias=True)
+        txt = s["text"]
+        sub = s.get("sub")
+        y = s["y"] + s.get("size", 58) * 0.35 - (18 if sub else 0)
+        c.drawString(txt, s["x"] - f.measureText(txt) / 2, y, f, paint)
+        if sub:
+            fs = font("ui", 30)
+            c.drawString(sub, s["x"] - fs.measureText(sub) / 2, y + 42, fs, paint)
+        c.restore()
 
     def _draw_text(self, c, p, am):
         s = self.spec

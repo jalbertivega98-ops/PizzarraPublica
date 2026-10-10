@@ -7,6 +7,10 @@ on:
         description: "Texto para probar varias voces (vacío = generar las frases de los storyboards)"
         required: false
         default: ""
+      biblioteca:
+        description: "Con muestras: cuántas voces de España probar de la biblioteca (0 = voces básicas)"
+        required: false
+        default: "0"
       storyboards:
         description: "Storyboards a locutar"
         required: false
@@ -36,9 +40,10 @@ jobs:
           MUESTRAS: ${{ inputs.muestras }}
           STORYBOARDS: ${{ inputs.storyboards }}
           VOICE: ${{ inputs.voice }}
+          BIBLIOTECA: ${{ inputs.biblioteca }}
         run: |
           if [ -n "$MUESTRAS" ]; then
-            python3 tts_elevenlabs.py --muestras "$MUESTRAS"
+            python3 tts_elevenlabs.py --muestras "$MUESTRAS" --biblioteca "${BIBLIOTECA:-0}"
           else
             python3 tts_elevenlabs.py $STORYBOARDS ${VOICE:+--voice "$VOICE"}
           fi

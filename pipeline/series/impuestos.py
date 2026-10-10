@@ -70,7 +70,7 @@ def build(p):
     return dict(
         slug=p["slug"], title=p["title"], series_tag=f"IMPUESTOS · EP. {p['ep']}/4", accent=p["color"],
         icon_accent={"blue": "gray", "red": "yellow"},
-        handle="@pizarrapublica", voice={"model": "voices/es_ES-davefx-medium.onnx", "length_scale": 0.86},
+        handle="@pizarrapublica", voice={"engine": "edge", "voice_id": "es-ES-AlvaroNeural"},
         music_volume=0.14, scribble_volume=0.05, end_hold=0.8, line_gap=0.1,
         sources=p["sources"], caption=p["caption"], pinned_comment=p["pinned"], hashtags=p["hashtags"],
         scenes=scenes,

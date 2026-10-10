@@ -14,6 +14,7 @@ import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -40,15 +41,22 @@ def synth(text, voice, model, api_key):
         f"{API}/text-to-speech/{voice}?output_format=mp3_44100_128",
         data=json.dumps({"text": text, "model_id": model, "language_code": "es", "voice_settings": SETTINGS}).encode(),
         headers={"xi-api-key": api_key, "Content-Type": "application/json", "Accept": "audio/mpeg"}, method="POST")
-    with urllib.request.urlopen(req, timeout=120) as r:
-        return r.read()
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            return r.read()
+    except urllib.error.HTTPError as e:
+        sys.exit(f"ElevenLabs respondió HTTP {e.code}: {e.read().decode()[:500]}")
 
 
 def voces_espanol(api_key):
     """Voces de la cuenta con acento de España (añadidas desde la biblioteca de voces)."""
     req = urllib.request.Request(f"{API}/voices", headers={"xi-api-key": api_key})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        data = json.loads(r.read())
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            data = json.loads(r.read())
+    except urllib.error.HTTPError as e:  # la clave puede no tener permiso de lectura de voces
+        print(f"No se pudieron listar las voces de la cuenta (HTTP {e.code}): {e.read().decode()[:300]}")
+        return {}
     out = {}
     for v in data.get("voices", []):
         labels = " ".join(str(x) for x in (v.get("labels") or {}).values()).lower()

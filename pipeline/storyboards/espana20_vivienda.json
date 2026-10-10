@@ -447,7 +447,7 @@
   {
    "id": "poblacion",
    "lines": [
-    "Somos cinco millones más que en 2006: de 44,7 a 49,8 millones."
+    "Somos cinco millones más que en 2006."
    ],
    "footnote": "INE: Padrón a 1/1/2006 y población residente a 1/7/2026",
    "elements": [
@@ -509,8 +509,8 @@
      "y": 1060,
      "size": 190,
      "color": "ink",
-     "at": "L0@0.35",
-     "dur": 1.8,
+     "at": "L0@0.2",
+     "dur": 1.6,
      "decimals": 1,
      "sep": false,
      "prefix": "",
@@ -705,7 +705,7 @@
   {
    "id": "alquiler",
    "lines": [
-    "¿Las consecuencias? El alquiler ha pasado de 10 a 14 euros el metro cuadrado."
+    "¿Consecuencias? El alquiler ha pasado de 10 a 14 euros el metro."
    ],
    "footnote": "Fotocasa: máximo de mayo de 2007 y julio de 2026 (€/m² al mes)",
    "elements": [
@@ -933,7 +933,7 @@
   {
    "id": "emancipacion",
    "lines": [
-    "Y nos vamos de casa de los padres a los 30 años. En 2006, a los 28 y medio."
+    "Y nos vamos de casa de los padres a los 30. En 2006, a los 28 y medio."
    ],
    "footnote": "Eurostat: edad media al dejar el hogar familiar, 2006 y 2025",
    "elements": [
@@ -990,7 +990,7 @@
   {
    "id": "futuro",
    "lines": [
-    "¿Y si seguimos así? Cada año se crean más hogares que casas.",
+    "¿Y si seguimos así? Cada año, más hogares que casas.",
     "Al ritmo de 2025, en 2030 faltaría más de un millón de viviendas."
    ],
    "footnote": "Cálculo propio con datos del Banco de España:\n750.000 + 148.000 al año durante 5 años",
@@ -1125,8 +1125,8 @@
   {
    "id": "cierre",
    "lines": [
-    "¿Y tú, cuándo crees que podrás tener casa?",
-    "Síguenos: ahora toca hablar de impuestos."
+    "¿Y tú, cuándo podrás tener casa?",
+    "Síguenos: ahora, los impuestos."
    ],
    "elements": [
     {

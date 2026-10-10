@@ -81,12 +81,12 @@ SCENES = [
              T("FALTAN CASAS", 540, 1130, 150, color="red", at="L1", dur=0.45),
              dict(type="underline", x0=150, x1=930, y=1175, color="red", width=10, at="+0.02", dur=0.3),
          ]),
-    dict(id="poblacion", lines=["Somos cinco millones más que en 2006: de 44,7 a 49,8 millones."],
+    dict(id="poblacion", lines=["Somos cinco millones más que en 2006."],
          footnote="INE: Padrón a 1/1/2006 y población residente a 1/7/2026",
          elements=[
              *[dict(type="icon", name="person", accent="light", x=140 + i * 200, y=650, scale=0.8, at=f"L0@{0.05 + i * 0.08:.2f}", dur=0.4)
                for i in range(5)],
-             counter(44.7, 49.8, 1060, 190, at="L0@0.35", dur=1.8, decimals=1, sep=False, suffix=" M"),
+             counter(44.7, 49.8, 1060, 190, at="L0@0.2", dur=1.6, decimals=1, sep=False, suffix=" M"),
              T("habitantes en España", 540, 1160, 60, font="body", color="gray", at="L0@0.4", dur=0.4),
              T("+5,1 millones", 540, 1290, 96, color="blue", at="L0@0.8", dur=0.4),
          ]),
@@ -107,7 +107,7 @@ SCENES = [
              counter(0, 750000, 1110, 200, color="red", at="L0@0.25", dur=1.6),
              T("viviendas que faltan", 540, 1215, 64, font="body", color="gray", at="L0@0.3", dur=0.4),
          ]),
-    dict(id="alquiler", lines=["¿Las consecuencias? El alquiler ha pasado de 10 a 14 euros el metro cuadrado."],
+    dict(id="alquiler", lines=["¿Consecuencias? El alquiler ha pasado de 10 a 14 euros el metro."],
          footnote="Fotocasa: máximo de mayo de 2007 y julio de 2026 (€/m² al mes)",
          elements=[
              T("CONSECUENCIAS", 540, 450, 90, color="red", at="L0", dur=0.4),
@@ -132,7 +132,7 @@ SCENES = [
              dict(type="gauge", box=[140, 1000, 800, 110], value=22, max=100, color="red", at="+0.02", dur=0.9),
              T("casi la mitad que antes", 540, 1270, 64, font="body", color="gray", at="L0@0.85", dur=0.4),
          ]),
-    dict(id="emancipacion", lines=["Y nos vamos de casa de los padres a los 30 años. En 2006, a los 28 y medio."],
+    dict(id="emancipacion", lines=["Y nos vamos de casa de los padres a los 30. En 2006, a los 28 y medio."],
          footnote="Eurostat: edad media al dejar el hogar familiar, 2006 y 2025",
          elements=[
              T("EDAD PARA IRSE DE CASA", 540, 460, 76, at="L0", dur=0.45),
@@ -140,7 +140,7 @@ SCENES = [
              counter(28.7, 30.2, 1110, 200, at="L0@0.45", dur=1.6, decimals=1, sep=False, suffix=" años"),
              T("en 2006: 28,7", 540, 1230, 56, font="body", color="gray", at="L0@0.3", dur=0.4),
          ]),
-    dict(id="futuro", lines=["¿Y si seguimos así? Cada año se crean más hogares que casas.",
+    dict(id="futuro", lines=["¿Y si seguimos así? Cada año, más hogares que casas.",
                              "Al ritmo de 2025, en 2030 faltaría más de un millón de viviendas."],
          footnote="Cálculo propio con datos del Banco de España:\n750.000 + 148.000 al año durante 5 años",
          elements=[
@@ -154,7 +154,7 @@ SCENES = [
              T("viviendas que faltarían", 540, 1050, 60, font="body", color="gray", at="L1@0.35", dur=0.4),
              stamp("ESTIMACIÓN", "cálculo propio · datos BdE", "L1@0.8", y=1250, w=560, h=140, size=56),
          ]),
-    dict(id="cierre", lines=["¿Y tú, cuándo crees que podrás tener casa?", "Síguenos: ahora toca hablar de impuestos."],
+    dict(id="cierre", lines=["¿Y tú, cuándo podrás tener casa?", "Síguenos: ahora, los impuestos."],
          elements=[
              T("¿Y TÚ?", 540, 560, 170, at="L0", dur=0.4),
              dict(type="icon", name="house", x=540, y=820, scale=1.0, fill="yellow", at="+0.05", dur=0.55),

@@ -142,6 +142,8 @@ def build_elements(story, scenes):
             t0 = resolve_at(spec.get("at", "+0.05"), tl, prev_end)
             if "out" in spec:
                 spec = dict(spec, out_t=resolve_at(spec["out"], tl, prev_end))
+            if "reveal_at" in spec:  # gráfica de línea: un instante por punto
+                spec = dict(spec, reveal_t=[resolve_at(a, tl, prev_end) for a in spec["reveal_at"]])
             e = wb.Element(spec, t0, rng)
             els.append(e)
             prev_end = t0 + e.dur

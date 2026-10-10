@@ -1,0 +1,1181 @@
+{
+ "slug": "espana20_vivienda",
+ "title": "España en 20 años · La vivienda",
+ "series_tag": "ESPAÑA EN 20 AÑOS · VIVIENDA",
+ "accent": "red",
+ "icon_accent": {},
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "edge",
+  "voice_id": "es-ES-AlvaroNeural"
+ },
+ "music_volume": 0.15,
+ "music_bpm": 96,
+ "scribble_volume": 0.05,
+ "end_hold": 0.9,
+ "line_gap": 0.1,
+ "sources": [
+  "Ministerio de Vivienda, valor tasado 2.º trim. 2026 (2.355 €/m²): https://www.pressdigital.es/articulo/economia/2026-09-17/6018677-vivienda-sube-125-segundo-trimestre-alcanza-nuevo-record-2355-euros-metro-cuadrado",
+  "Máximo 1.er trim. 2008 (2.101,4 €/m²): https://www.eldiario.es/economia/precio-medio-vivienda-libre-sube-10-4-segundo-trimestre-acerca-maximo-2008_1_12616074.amp.html",
+  "Mínimo 3.er trim. 2014 (1.455,8 €/m²): https://www.idealista.com/news/node/743555",
+  "Finales de 2006 (1.990,50 €/m²): https://www.consumer.es/vivienda/el-precio-de-la-vivienda-aumento-un-91-en-2006-segun-datos-oficiales.html",
+  "INE, salario medio 2006 (19.680,88 €): https://ine.es/daco/daco42/salarial/prinre06.pdf",
+  "INE, salario medio 2024 (29.540,26 €): https://ine.es/dyngs/Prensa/EAES2024.htm",
+  "Padrón 1/1/2006 (44.708.964), RD 1627/2006: https://www.boe.es/eli/es/rd/2006/12/29/1627",
+  "INE, población 1/7/2026 (49.801.559): https://ine.es/dyngs/Prensa/ECP2T26.htm",
+  "Banco de España, Informe Anual 2025 (déficit 750.000; 240.000 hogares; 92.000 viviendas; jóvenes propietarios 41 % a 22 %): https://www.eldiario.es/economia/banco-espana-eleva-750-000-viviendas-faltan-anticipa-deficit-agravara-proximos-anos_1_13313634.amp.html",
+  "Fomento, 641.419 viviendas terminadas en 2007: https://www.consumer.es/?p=209953",
+  "Fotocasa, alquiler: máximo de mayo de 2007 (10,12 €/m²): https://prensa.fotocasa.es/wp-content/uploads/2018/01/NdP-Indice-Anual-Alquiler-2017.pdf",
+  "Fotocasa, julio de 2026 (14,14 €/m²): https://www.bolsamania.com/noticias_print/empresas/economiavivienda--el-precio-del-alquiler-rompe-en-julio-con-52-meses-de-alzas-tras-bajar-un-16-segun-fotocasa--23202603.html",
+  "Eurostat yth_demo_030 (28,7 en 2006; 30,2 en 2025): https://ec.europa.eu/eurostat/databrowser/view/yth_demo_030/default/table"
+ ],
+ "caption": "🏠 La vivienda en España: 2006 → 2026\n📈 Precio récord: 2.355 €/m² (en 2008 eran 2.101)\n💶 Pero el sueldo medio ha subido más que el precio\n🏗️ En 2007 se terminaron 641.000 casas; en 2025, 92.000\n❗ Faltan 750.000 viviendas y los jóvenes propietarios bajan del 41 al 22 %\n💬 ¿A qué edad te independizaste (o cuándo crees que podrás)?\n➡️ España en 20 años · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Ministerio de Vivienda (valor tasado 2006-2026), INE (salarios 2006 y 2024; población), Banco de España (Informe Anual 2025), Fotocasa, Eurostat. La cifra de 2030 es un cálculo nuestro con datos del Banco de España. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PizarraPública",
+  "#PolíticaEspañola",
+  "#Elecciones29N",
+  "#Vivienda",
+  "#Alquiler",
+  "#España20Años"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "lines": [
+    "En 2007 se terminaron más de 640.000 casas en España.",
+    "En 2025, solo 92.000."
+   ],
+   "tail": 0.35,
+   "zoom": 0.05,
+   "elements": [
+    {
+     "type": "icon",
+     "name": "crane",
+     "x": 540,
+     "y": 660,
+     "scale": 1.4,
+     "at": 0,
+     "dur": 0.9
+    },
+    {
+     "type": "text",
+     "text": "2007",
+     "x": 540,
+     "y": 1015,
+     "size": 90,
+     "color": "gray",
+     "at": 0.1,
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center",
+     "out": "L1"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 641419,
+     "x": 540,
+     "y": 1205,
+     "size": 180,
+     "color": "ink",
+     "at": 0.2,
+     "dur": 1.4,
+     "decimals": 0,
+     "sep": true,
+     "prefix": "",
+     "suffix": "",
+     "out": "L1"
+    },
+    {
+     "type": "text",
+     "text": "2025",
+     "x": 540,
+     "y": 1015,
+     "size": 90,
+     "color": "red",
+     "at": "L1",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "counter",
+     "from": 641419,
+     "to": 92000,
+     "x": 540,
+     "y": 1205,
+     "size": 180,
+     "color": "red",
+     "at": "L1",
+     "dur": 1.1,
+     "decimals": 0,
+     "sep": true,
+     "prefix": "",
+     "suffix": ""
+    },
+    {
+     "type": "text",
+     "text": "viviendas terminadas al año",
+     "x": 540,
+     "y": 1295,
+     "size": 58,
+     "color": "gray",
+     "at": 0.3,
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "lines": [
+    "Así ha cambiado la vivienda en veinte años."
+   ],
+   "tail": 0.3,
+   "elements": [
+    {
+     "type": "text",
+     "text": "ESPAÑA EN 20 AÑOS",
+     "x": 540,
+     "y": 480,
+     "size": 76,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "2006",
+     "x": 290,
+     "y": 720,
+     "size": 170,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "arrow",
+     "from": [
+      440,
+      660
+     ],
+     "to": [
+      620,
+      660
+     ],
+     "width": 10,
+     "curve": 0.1,
+     "at": "+0.05",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "2026",
+     "x": 800,
+     "y": 720,
+     "size": 170,
+     "color": "red",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "x": 540,
+     "y": 1010,
+     "scale": 1.25,
+     "fill": "light",
+     "at": "+0.05",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "LA VIVIENDA",
+     "x": 540,
+     "y": 1290,
+     "size": 120,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "precio",
+   "lines": [
+    "En 2006, el metro cuadrado costaba 1.990 euros.",
+    "En 2008 tocó techo: 2.101. Y la burbuja estalló.",
+    "En 2014 se hundió hasta 1.456.",
+    "Hoy está en 2.355 euros: récord histórico."
+   ],
+   "footnote": "Ministerio de Vivienda, valor tasado: 4.º trim. 2006, 1.er trim. 2008,\n3.er trim. 2014 y 2.º trim. 2026",
+   "zoom": 0.02,
+   "elements": [
+    {
+     "type": "text",
+     "text": "PRECIO DE LA VIVIENDA (€/m²)",
+     "x": 540,
+     "y": 440,
+     "size": 66,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "linechart",
+     "box": [
+      150,
+      560,
+      800,
+      600
+     ],
+     "min": 1200,
+     "max": 2500,
+     "x_from": 2006,
+     "x_to": 2026,
+     "color": "ink",
+     "width": 13,
+     "area": "blue",
+     "at": "L0",
+     "dur": 0.5,
+     "seg_dur": 0.9,
+     "reveal_at": [
+      "L0@0.6",
+      "L1@0.25",
+      "L2@0.4",
+      "L3@0.35"
+     ],
+     "points": [
+      {
+       "x": 2006,
+       "value": 1990.5,
+       "value_label": "1.990",
+       "label_dx": 60,
+       "label_dy": 80
+      },
+      {
+       "x": 2008,
+       "value": 2101.4,
+       "value_label": "2.101",
+       "label_dx": 40,
+       "label": ""
+      },
+      {
+       "x": 2014,
+       "value": 1455.8,
+       "value_label": "1.456",
+       "label_dy": 80
+      },
+      {
+       "x": 2026,
+       "value": 2355,
+       "value_label": "2.355",
+       "color": "red",
+       "label_dx": -30
+      }
+     ]
+    },
+    {
+     "type": "stamp",
+     "text": "BURBUJA",
+     "sub": null,
+     "x": 520,
+     "y": 640,
+     "w": 360,
+     "h": 110,
+     "size": 56,
+     "color": "ink",
+     "rotate": -8,
+     "at": "L1@0.75",
+     "dur": 0.55,
+     "out": "L2@0.7"
+    },
+    {
+     "type": "stamp",
+     "text": "RÉCORD",
+     "sub": null,
+     "x": 720,
+     "y": 690,
+     "w": 320,
+     "h": 110,
+     "size": 58,
+     "color": "red",
+     "rotate": -6,
+     "at": "L3@0.6",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "ojo",
+   "lines": [
+    "Pero ojo: desde 2006, el precio ha subido un 18 %.",
+    "Y el sueldo medio, un 50 %."
+   ],
+   "footnote": "Ministerio de Vivienda (precio) · INE, Estructura Salarial 2006 y 2024",
+   "elements": [
+    {
+     "type": "text",
+     "text": "¡OJO!",
+     "x": 540,
+     "y": 470,
+     "size": 120,
+     "color": "red",
+     "at": "L0",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "bars",
+     "x": 180,
+     "y": 1100,
+     "h": 520,
+     "bar_w": 230,
+     "gap": 60,
+     "max": 50,
+     "at": "L0@0.5",
+     "dur": 0.9,
+     "bars": [
+      {
+       "label": "precio",
+       "value": 18,
+       "color": "red",
+       "value_label": "+18 %"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "de 1.990 a 2.355 €/m²",
+     "x": 295,
+     "y": 1250,
+     "size": 44,
+     "color": "gray",
+     "at": "+0.1",
+     "dur": 0.4,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "bars",
+     "x": 670,
+     "y": 1100,
+     "h": 520,
+     "bar_w": 230,
+     "gap": 60,
+     "max": 50,
+     "at": "L1@0.2",
+     "dur": 0.9,
+     "bars": [
+      {
+       "label": "sueldo",
+       "value": 50,
+       "color": "green",
+       "value_label": "+50 %"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "de 19.681 a 29.540 €/año",
+     "x": 785,
+     "y": 1250,
+     "size": 44,
+     "color": "gray",
+     "at": "+0.1",
+     "dur": 0.4,
+     "font": "body",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "problema",
+   "lines": [
+    "Entonces, ¿cuál es el problema?",
+    "Que faltan casas."
+   ],
+   "tail": 0.35,
+   "elements": [
+    {
+     "type": "icon",
+     "name": "question",
+     "color": "red",
+     "x": 540,
+     "y": 720,
+     "scale": 1.6,
+     "at": "L0",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "FALTAN CASAS",
+     "x": 540,
+     "y": 1130,
+     "size": 150,
+     "color": "red",
+     "at": "L1",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "underline",
+     "x0": 150,
+     "x1": 930,
+     "y": 1175,
+     "color": "red",
+     "width": 10,
+     "at": "+0.02",
+     "dur": 0.3
+    }
+   ]
+  },
+  {
+   "id": "poblacion",
+   "lines": [
+    "Somos cinco millones más que en 2006: de 44,7 a 49,8 millones."
+   ],
+   "footnote": "INE: Padrón a 1/1/2006 y población residente a 1/7/2026",
+   "elements": [
+    {
+     "type": "icon",
+     "name": "person",
+     "accent": "light",
+     "x": 140,
+     "y": 650,
+     "scale": 0.8,
+     "at": "L0@0.05",
+     "dur": 0.4
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "accent": "light",
+     "x": 340,
+     "y": 650,
+     "scale": 0.8,
+     "at": "L0@0.13",
+     "dur": 0.4
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "accent": "light",
+     "x": 540,
+     "y": 650,
+     "scale": 0.8,
+     "at": "L0@0.21",
+     "dur": 0.4
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "accent": "light",
+     "x": 740,
+     "y": 650,
+     "scale": 0.8,
+     "at": "L0@0.29",
+     "dur": 0.4
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "accent": "light",
+     "x": 940,
+     "y": 650,
+     "scale": 0.8,
+     "at": "L0@0.37",
+     "dur": 0.4
+    },
+    {
+     "type": "counter",
+     "from": 44.7,
+     "to": 49.8,
+     "x": 540,
+     "y": 1060,
+     "size": 190,
+     "color": "ink",
+     "at": "L0@0.35",
+     "dur": 1.8,
+     "decimals": 1,
+     "sep": false,
+     "prefix": "",
+     "suffix": " M"
+    },
+    {
+     "type": "text",
+     "text": "habitantes en España",
+     "x": 540,
+     "y": 1160,
+     "size": 60,
+     "color": "gray",
+     "at": "L0@0.4",
+     "dur": 0.4,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "+5,1 millones",
+     "x": 540,
+     "y": 1290,
+     "size": 96,
+     "color": "blue",
+     "at": "L0@0.8",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "hogares",
+   "lines": [
+    "En 2025 se crearon 240.000 hogares nuevos.",
+    "Y se terminaron 92.000 viviendas."
+   ],
+   "footnote": "Banco de España, Informe Anual 2025",
+   "elements": [
+    {
+     "type": "text",
+     "text": "SOLO EN 2025",
+     "x": 540,
+     "y": 450,
+     "size": 80,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "bars",
+     "x": 180,
+     "y": 1100,
+     "h": 520,
+     "bar_w": 230,
+     "gap": 60,
+     "max": 240000,
+     "at": "L0@0.3",
+     "dur": 0.9,
+     "bars": [
+      {
+       "label": "hogares",
+       "value": 240000,
+       "color": "blue",
+       "value_label": "240.000"
+      }
+     ]
+    },
+    {
+     "type": "bars",
+     "x": 670,
+     "y": 1100,
+     "h": 520,
+     "bar_w": 230,
+     "gap": 60,
+     "max": 240000,
+     "at": "L1@0.2",
+     "dur": 0.9,
+     "bars": [
+      {
+       "label": "viviendas",
+       "value": 92000,
+       "color": "gray",
+       "value_label": "92.000"
+      }
+     ]
+    },
+    {
+     "type": "line",
+     "pts": [
+      [
+       420,
+       580
+      ],
+      [
+       900,
+       580
+      ]
+     ],
+     "color": "red",
+     "width": 6,
+     "at": "L1@0.7",
+     "dur": 0.25
+    },
+    {
+     "type": "text",
+     "text": "faltan\n148.000",
+     "x": 785,
+     "y": 700,
+     "size": 64,
+     "color": "red",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.0
+    }
+   ]
+  },
+  {
+   "id": "deficit",
+   "lines": [
+    "Resultado: ya faltan 750.000 viviendas."
+   ],
+   "tail": 0.5,
+   "footnote": "Banco de España, Informe Anual 2025 (déficit acumulado 2021-2025)",
+   "elements": [
+    {
+     "type": "icon",
+     "name": "house",
+     "color": "gray",
+     "fill": "paper",
+     "x": 220,
+     "y": 660,
+     "scale": 0.95,
+     "at": "L0@0.00",
+     "dur": 0.45
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "color": "gray",
+     "fill": "paper",
+     "x": 540,
+     "y": 660,
+     "scale": 0.95,
+     "at": "L0@0.12",
+     "dur": 0.45
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "color": "gray",
+     "fill": "paper",
+     "x": 860,
+     "y": 660,
+     "scale": 0.95,
+     "at": "L0@0.24",
+     "dur": 0.45
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 750000,
+     "x": 540,
+     "y": 1110,
+     "size": 200,
+     "color": "red",
+     "at": "L0@0.25",
+     "dur": 1.6,
+     "decimals": 0,
+     "sep": true,
+     "prefix": "",
+     "suffix": ""
+    },
+    {
+     "type": "text",
+     "text": "viviendas que faltan",
+     "x": 540,
+     "y": 1215,
+     "size": 64,
+     "color": "gray",
+     "at": "L0@0.3",
+     "dur": 0.4,
+     "font": "body",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "alquiler",
+   "lines": [
+    "¿Las consecuencias? El alquiler ha pasado de 10 a 14 euros el metro cuadrado."
+   ],
+   "footnote": "Fotocasa: máximo de mayo de 2007 y julio de 2026 (€/m² al mes)",
+   "elements": [
+    {
+     "type": "text",
+     "text": "CONSECUENCIAS",
+     "x": 540,
+     "y": 450,
+     "size": 90,
+     "color": "red",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 540,
+     "y": 680,
+     "scale": 1.0,
+     "at": "+0.05",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "ALQUILER",
+     "x": 540,
+     "y": 860,
+     "size": 72,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "10,12 €",
+     "x": 280,
+     "y": 1040,
+     "size": 110,
+     "color": "gray",
+     "at": "L0@0.45",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "arrow",
+     "from": [
+      440,
+      1000
+     ],
+     "to": [
+      600,
+      1000
+     ],
+     "width": 9,
+     "curve": 0.1,
+     "at": "+0.02",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "14,14 €",
+     "x": 800,
+     "y": 1040,
+     "size": 120,
+     "color": "red",
+     "at": "+0.02",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "2007",
+     "x": 280,
+     "y": 1110,
+     "size": 46,
+     "color": "gray",
+     "at": "L0@0.45",
+     "dur": 0.3,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "2026",
+     "x": 800,
+     "y": 1110,
+     "size": 46,
+     "color": "gray",
+     "at": "+0.3",
+     "dur": 0.3,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "+40 %",
+     "sub": "por metro cuadrado",
+     "x": 540,
+     "y": 1260,
+     "w": 380,
+     "h": 130,
+     "size": 60,
+     "color": "red",
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "jovenes",
+   "lines": [
+    "Los jóvenes con casa propia han bajado del 41 al 22 %."
+   ],
+   "footnote": "Banco de España, Informe Anual 2025",
+   "elements": [
+    {
+     "type": "text",
+     "text": "JÓVENES CON CASA PROPIA",
+     "x": 540,
+     "y": 460,
+     "size": 74,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "2007",
+     "x": 140,
+     "y": 650,
+     "size": 64,
+     "color": "ink",
+     "at": "L0@0.2",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "41 %",
+     "x": 940,
+     "y": 650,
+     "size": 76,
+     "color": "blue",
+     "at": "+0.02",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "right"
+    },
+    {
+     "type": "gauge",
+     "box": [
+      140,
+      690,
+      800,
+      110
+     ],
+     "value": 41,
+     "max": 100,
+     "color": "blue",
+     "at": "+0.02",
+     "dur": 0.9
+    },
+    {
+     "type": "text",
+     "text": "2025",
+     "x": 140,
+     "y": 960,
+     "size": 64,
+     "color": "ink",
+     "at": "L0@0.6",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "22 %",
+     "x": 940,
+     "y": 960,
+     "size": 76,
+     "color": "red",
+     "at": "+0.02",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "right"
+    },
+    {
+     "type": "gauge",
+     "box": [
+      140,
+      1000,
+      800,
+      110
+     ],
+     "value": 22,
+     "max": 100,
+     "color": "red",
+     "at": "+0.02",
+     "dur": 0.9
+    },
+    {
+     "type": "text",
+     "text": "casi la mitad que antes",
+     "x": 540,
+     "y": 1270,
+     "size": 64,
+     "color": "gray",
+     "at": "L0@0.85",
+     "dur": 0.4,
+     "font": "body",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "emancipacion",
+   "lines": [
+    "Y nos vamos de casa de los padres a los 30 años. En 2006, a los 28 y medio."
+   ],
+   "footnote": "Eurostat: edad media al dejar el hogar familiar, 2006 y 2025",
+   "elements": [
+    {
+     "type": "text",
+     "text": "EDAD PARA IRSE DE CASA",
+     "x": 540,
+     "y": 460,
+     "size": 76,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "calendar",
+     "x": 540,
+     "y": 720,
+     "scale": 1.1,
+     "at": "+0.05",
+     "dur": 0.55
+    },
+    {
+     "type": "counter",
+     "from": 28.7,
+     "to": 30.2,
+     "x": 540,
+     "y": 1110,
+     "size": 200,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 1.6,
+     "decimals": 1,
+     "sep": false,
+     "prefix": "",
+     "suffix": " años"
+    },
+    {
+     "type": "text",
+     "text": "en 2006: 28,7",
+     "x": 540,
+     "y": 1230,
+     "size": 56,
+     "color": "gray",
+     "at": "L0@0.3",
+     "dur": 0.4,
+     "font": "body",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "futuro",
+   "lines": [
+    "¿Y si seguimos así? Cada año se crean más hogares que casas.",
+    "Al ritmo de 2025, en 2030 faltaría más de un millón de viviendas."
+   ],
+   "footnote": "Cálculo propio con datos del Banco de España:\n750.000 + 148.000 al año durante 5 años",
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿Y SI SEGUIMOS ASÍ?",
+     "x": 540,
+     "y": 460,
+     "size": 90,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "arrow",
+     "from": [
+      170,
+      1020
+     ],
+     "to": [
+      880,
+      600
+     ],
+     "color": "blue",
+     "width": 10,
+     "curve": -0.08,
+     "at": "L0@0.45",
+     "dur": 0.6,
+     "out": "L1"
+    },
+    {
+     "type": "text",
+     "text": "hogares",
+     "x": 880,
+     "y": 560,
+     "size": 58,
+     "color": "blue",
+     "at": "+0",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center",
+     "out": "L1"
+    },
+    {
+     "type": "arrow",
+     "from": [
+      170,
+      1020
+     ],
+     "to": [
+      880,
+      900
+     ],
+     "color": "gray",
+     "width": 10,
+     "curve": -0.05,
+     "at": "L0@0.6",
+     "dur": 0.6,
+     "out": "L1"
+    },
+    {
+     "type": "text",
+     "text": "casas",
+     "x": 880,
+     "y": 980,
+     "size": 58,
+     "color": "gray",
+     "at": "+0",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center",
+     "out": "L1"
+    },
+    {
+     "type": "text",
+     "text": "2030",
+     "x": 540,
+     "y": 720,
+     "size": 140,
+     "color": "ink",
+     "at": "L1@0.15",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "counter",
+     "from": 750000,
+     "to": 1000000,
+     "x": 540,
+     "y": 950,
+     "size": 190,
+     "color": "red",
+     "at": "L1@0.3",
+     "dur": 1.6,
+     "decimals": 0,
+     "sep": true,
+     "prefix": "+",
+     "suffix": ""
+    },
+    {
+     "type": "text",
+     "text": "viviendas que faltarían",
+     "x": 540,
+     "y": 1050,
+     "size": 60,
+     "color": "gray",
+     "at": "L1@0.35",
+     "dur": 0.4,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "ESTIMACIÓN",
+     "sub": "cálculo propio · datos BdE",
+     "x": 540,
+     "y": 1250,
+     "w": 560,
+     "h": 140,
+     "size": 56,
+     "color": "ink",
+     "rotate": -5,
+     "at": "L1@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "lines": [
+    "¿Y tú, cuándo crees que podrás tener casa?",
+    "Síguenos: ahora toca hablar de impuestos."
+   ],
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿Y TÚ?",
+     "x": 540,
+     "y": 560,
+     "size": 170,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "fill": "yellow",
+     "at": "+0.05",
+     "dur": 0.55
+    },
+    {
+     "type": "text",
+     "text": "PRÓXIMO",
+     "x": 540,
+     "y": 1060,
+     "size": 70,
+     "color": "gray",
+     "at": "L1",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "IMPUESTOS",
+     "x": 540,
+     "y": 1200,
+     "size": 130,
+     "color": "blue",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  }
+ ]
+}

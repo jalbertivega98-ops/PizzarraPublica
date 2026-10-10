@@ -270,8 +270,23 @@ def icon_euro(color="ink", rng=None):
     return S, []
 
 
+def icon_crane(color="ink", rng=None):
+    """Grúa de obra: mástil en celosía, pluma, contrapeso y gancho con una carga."""
+    S = [Stroke([(-30, 160), (-30, -140)], color, 8), Stroke([(10, 160), (10, -140)], color, 8)]
+    for i in range(6):
+        y = 160 - i * 50
+        S.append(Stroke([(-30, y), (10, y - 50)], color, 5))
+    S += [Stroke([(-120, -140), (190, -140)], color, 9),
+          Stroke([(-10, -190), (-120, -140)], color, 6), Stroke([(-10, -190), (190, -140)], color, 6),
+          Stroke([(-10, -190), (-10, -140)], color, 7),
+          Stroke([(150, -140), (150, -20)], color, 4),
+          Stroke(rect_pts(120, -20, 60, 40), color, 6),
+          Stroke([(-60, 160), (40, 160)], color, 10)]
+    return S, [Fill(rect_pts(-120, -150, 50, 40)[:4], "gray"), Fill(rect_pts(120, -20, 60, 40)[:4], acc("yellow"))]
+
+
 ICONS = {
-    "house": icon_house, "euro": icon_euro,
+    "house": icon_house, "crane": icon_crane, "euro": icon_euro,
     "person": icon_person, "ballot_box": icon_ballot_box, "ballot": icon_ballot,
     "crown": icon_crown, "bubble": icon_bubble, "lectern": icon_lectern,
     "document": icon_document, "clock": icon_clock, "calendar": icon_calendar,
@@ -389,6 +404,8 @@ class Element:
             return self._draw_counter(c, p, am)
         if k == "gauge":
             return self._draw_gauge(c, p, am)
+        if k == "linechart":
+            return self._draw_linechart(c, t, am)
         # rellenos (aparecen al final del contorno)
         fp = ease(min(1.0, (p - 0.75) / 0.25)) if self.fills else 0
         for f in self.fills:
@@ -522,13 +539,83 @@ class Element:
             draw_poly(c, wobble([(mx, y - 30), (mx, y + h + 30)], rng, 1), "red", 7, int(255 * am))
         return np.array([x + w * s["value"] / s["max"] * pf, y + h / 2]) if 0.3 < p < 1 else None
 
+    def _chart_xy(self):
+        s = self.spec
+        x, y, w, h = s["box"]
+        lo, hi = s.get("min", 0), s["max"]
+        xs = [p["x"] for p in s["points"]]
+        x0, x1 = s.get("x_from", min(xs)), s.get("x_to", max(xs))
+        return [(x + w * (p["x"] - x0) / (x1 - x0), y + h - h * (p["value"] - lo) / (hi - lo)) for p in s["points"]]
+
+    def _draw_linechart(self, c, t, am):
+        """Gráfica de línea: los ejes se dibujan primero y la línea avanza punto a punto
+        según 'reveal_t' (un instante por punto, resuelto en make_video) o, si no hay, en 'dur'."""
+        s = self.spec
+        x, y, w, h = s["box"]
+        rng = np.random.default_rng(11)
+        a = int(255 * am)
+        pa = ease_out((t - self.t0) / 0.4)
+        axes = wobble([(x - 20, y - 30), (x - 20, y + h), (x + w + 30, y + h)], rng, 1.0)
+        draw_poly(c, axes[: max(2, int(pa * len(axes)))], "ink", 6, a)
+        pts = self._chart_xy()
+        rt = s.get("reveal_t") or [self.t0 + 0.4 + i * (self.dur - 0.4) / max(1, len(pts) - 1) for i in range(len(pts))]
+        seg_dur = s.get("seg_dur", 0.7)
+        # cuánto se ha dibujado: el tramo i→i+1 empieza en reveal_t[i+1] - seg_dur
+        drawn, tip = [pts[0]], None
+        if t < rt[0]:
+            return np.array(axes[-1]) if pa < 1 else None
+        for i in range(len(pts) - 1):
+            st = max(rt[i], rt[i + 1] - seg_dur)
+            f = ease((t - st) / max(0.05, rt[i + 1] - st))
+            if f <= 0:
+                break
+            p0, p1 = np.array(pts[i]), np.array(pts[i + 1])
+            end = p0 + (p1 - p0) * f
+            drawn.append(tuple(end))
+            if f < 1:
+                tip = end
+                break
+        fill_col = s.get("area")
+        if fill_col and len(drawn) > 1:
+            path = skia.Path()
+            path.moveTo(drawn[0][0], y + h)
+            for q in drawn:
+                path.lineTo(*q)
+            path.lineTo(drawn[-1][0], y + h)
+            path.close()
+            c.drawPath(path, skia.Paint(Color=rgb(fill_col, int(60 * am)), AntiAlias=True))
+        line = wobble(drawn, np.random.default_rng(2), 1.0, step=8) if len(drawn) > 1 else np.array(drawn)
+        draw_poly(c, line, s.get("color", "ink"), s.get("width", 12), a)
+        fv = font("hand", s.get("value_size", 58))
+        fl = font("ui", s.get("label_size", 34))
+        for i, (q, pt) in enumerate(zip(pts, s["points"])):
+            if t < rt[i] - 0.05:
+                break
+            k = ease_out((t - rt[i] + 0.05) / 0.3)
+            col = pt.get("color", s.get("color", "ink"))
+            c.drawCircle(q[0], q[1], 16 * k, skia.Paint(Color=rgb(col, a), AntiAlias=True))
+            c.drawCircle(q[0], q[1], 7 * k, skia.Paint(Color=rgb("paper", a), AntiAlias=True))
+            v = pt.get("value_label", fmt_num(pt["value"], 0, True))
+            dy = pt.get("label_dy", -40)
+            vx = q[0] - fv.measureText(v) / 2 + pt.get("label_dx", 0)
+            c.drawString(v, vx, q[1] + dy, fv, skia.Paint(Color=rgb(col, int(255 * am * k)), AntiAlias=True))
+            lab = str(pt.get("label", pt["x"]))
+            c.drawString(lab, q[0] - fl.measureText(lab) / 2, y + h + 52, fl, skia.Paint(Color=rgb("gray", int(255 * am * k)), AntiAlias=True))
+        return tip
+
     def _draw_counter(self, c, p, am):
         s = self.spec
-        v = int(round(s.get("from", 0) + (s["to"] - s.get("from", 0)) * ease_out(p)))
-        txt = s.get("prefix", "") + f"{v}" + s.get("suffix", "")
+        v = s.get("from", 0) + (s["to"] - s.get("from", 0)) * ease_out(p)
+        txt = s.get("prefix", "") + fmt_num(v, s.get("decimals", 0), s.get("sep", False)) + s.get("suffix", "")
         f = font(s.get("font", "hand"), s.get("size", 120))
         c.drawString(txt, s["x"] - f.measureText(txt) / 2, s["y"], f, skia.Paint(Color=rgb(s.get("color", "ink"), int(255 * am)), AntiAlias=True))
         return None
+
+
+def fmt_num(v, decimals=0, sep=False):
+    """Número a la española: 641.419 o 44,7."""
+    txt = f"{v:,.{decimals}f}" if sep else f"{v:.{decimals}f}"
+    return txt.replace(",", "§").replace(".", ",").replace("§", ".")
 
 
 def draw_poly(c, pts, color, width, alpha=255):

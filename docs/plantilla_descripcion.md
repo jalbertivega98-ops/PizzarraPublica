@@ -1,5 +1,23 @@
 # Plantilla de descripción (para todos los reels)
 
+## Formato corto (en uso desde el 10/10/2026, a petición de joel)
+
+```
+🤯 [GANCHO]
+[EMOJI] [Idea 1, una línea]
+[EMOJI] [Idea 2]
+[EMOJI] [Idea 3]
+[EMOJI] [Idea 4]
+💬 [PREGUNTA corta]
+➡️ [Serie · Ep. X/N · Próximo: …] · 📚 Fuentes en comentarios
+
+[hashtags]
+```
+
+Comentario fijado en una sola línea: `📚 Fuentes: [documentos y fechas]. ¿Ves un error? Dínoslo y lo corregimos.` Los enlaces completos van en `docs/`.
+
+## Formato largo (el del reel 1, ya no se usa)
+
 Estructura fija. Los emojis cambian según el tema, pero cada bloque mantiene su función.
 
 ```

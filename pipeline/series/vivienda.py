@@ -159,16 +159,14 @@ def build(p):
     )
 
 
-def pinned(sources):
-    return "📚 Fuentes (" + CONSULTA.lower().replace(".", "") + "):\n" + "\n".join("• " + s for s in sources) + \
-        "\n\n¿Ves un error? Dínoslo y lo corregimos con fecha."
+def pinned(short):
+    """Comentario fijado corto; los enlaces completos están en `sources` y en docs/series/vivienda."""
+    return f"📚 Fuentes: {short}. ¿Ves un error? Dínoslo y lo corregimos."
 
 
-def caption(hook, context, steps, extra, nxt, legend):
-    return (f"🤯 {hook}\n\n👀 {context}\n👇 Te lo explico en 60 segundos:\n\n" + "\n".join(steps) +
-            f"\n\n⚡ Dato extra: {extra}\n\n💬 ¿Qué medida te afecta más? Te leo 👇\n\n➡️ {nxt}\n\n"
-            "📌 Guárdalo para cuando alguien te pregunte\n🔁 Compártelo con quien lo necesite\n\n"
-            f"📚 Fuentes en el comentario fijado\n{legend}")
+def caption(hook, steps, nxt):
+    """Formato corto (joel, 10/10/2026): gancho, 4 medidas, pregunta y siguiente episodio."""
+    return f"🤯 {hook}\n" + "\n".join(steps) + f"\n💬 ¿Qué medida te afecta más?\n➡️ {nxt} · 📚 Fuentes en comentarios"
 
 
 TAGS = ["#PizarraPública", "#PolíticaParaPrincipiantes", "#PolíticaEspañola", "#Vivienda", "#Elecciones29N", "#Alquiler"]
@@ -213,17 +211,12 @@ PSOE = dict(
               line=L("El 2 de octubre votó sí a los decretos de vivienda.", "El dos de octubre votó sí a los decretos de vivienda."),
               promise=dict(text="alquiler indefinido", sub="09/10/2026", line="Y Sánchez promete alquileres indefinidos en su programa.")),
     l_cierre=[CIERRE_29N, L("En el próximo episodio: qué propone el PP.", "En el próximo episodio: qué propone el pepé.")],
-    sources=PSOE_SRC, pinned=pinned(PSOE_SRC), hashtags=TAGS + ["#PSOE"],
+    sources=PSOE_SRC, pinned=pinned("Ley 12/2023, RD 326/2026 y RDL 29/2026 (BOE), La Moncloa 08/10, EFE 02/10, Qué! 09/10"), hashtags=TAGS + ["#PSOE"],
     caption=caption(
         "¿Qué ha hecho el PSOE con la vivienda?",
-        "Gobierna y lleva Vivienda: hay leyes aprobadas y promesas.",
-        ["🏠 Ley de Vivienda 2023: zonas tensionadas ✅",
-         "💶 Plan Estatal 2026-2030: 7.000 M€ ✅",
-         "🔑 Decreto del 6/10: freno a desahucios y préstamos al 0 % ⏳",
-         "📜 Promete alquileres indefinidos 📝"],
-        "los préstamos al 0 % cubren hasta el 20 % del piso (máx. 50.000 €).",
-        "Ep. 1/4 · Próximo: PP",
-        "✅ aprobado · ⏳ pendiente · 📝 propuesta"),
+        ["🏠 Ley de Vivienda 2023 ✅", "💶 Plan Estatal: 7.000 M€ ✅",
+         "🔑 Decreto del 6/10: freno a desahucios y préstamos al 0 % ⏳", "📜 Promete alquileres indefinidos 📝"],
+        "Ep. 1/4 · Próximo: PP"),
 )
 
 PP_SRC = [
@@ -260,17 +253,12 @@ PP = dict(
     voto=dict(vote="NO", foot=VOTO_SRC,
               line=L("El 2 de octubre votó no a los decretos de vivienda del Gobierno.", "El dos de octubre votó no a los decretos de vivienda del Gobierno.")),
     l_cierre=[CIERRE_29N, "En el próximo episodio: qué propone Vox."],
-    sources=PP_SRC, pinned=pinned(PP_SRC), hashtags=TAGS + ["#PP"],
+    sources=PP_SRC, pinned=pinned("decálogo económico del PP (27/09/2026), plan Hucha Hogar Joven (pp.es), EFE 02/10"), hashtags=TAGS + ["#PP"],
     caption=caption(
         "¿Qué propone el PP para la vivienda?",
-        "Está en la oposición: son propuestas, no leyes.",
-        ["🏗️ Un millón de viviendas en 4 años 📝",
-         "🔑 Avales de hasta el 100 % para jóvenes 📝",
-         "🏠 Fin de las zonas tensionadas y ley antiokupación 📝",
-         "🧾 Ahorro de 21.000-26.000 € en impuestos 🔢"],
-        "su «Hucha Hogar» permitiría a menores de 40 ahorrar 2.000 €/año con un 20 % de desgravación.",
-        "Ep. 2/4 · Próximo: Vox",
-        "📝 propuesta · 🔢 cálculo del propio partido"),
+        ["🏗️ Un millón de viviendas en 4 años 📝", "🔑 Avales de hasta el 100 % para jóvenes 📝",
+         "🏠 Fin de las zonas tensionadas y ley antiokupación 📝", "🧾 Ahorro fiscal de 21.000-26.000 € (cálculo del PP) 🔢"],
+        "Ep. 2/4 · Próximo: Vox"),
 )
 
 VOX_PDF = "https://www.voxespana.es/wp-content/uploads/2025/10/Programa-WEB-021025.pdf"
@@ -303,17 +291,12 @@ VOX = dict(
     voto=dict(vote="NO", foot=VOTO_SRC,
               line=L("El 2 de octubre votó no a los decretos de vivienda del Gobierno.", "El dos de octubre votó no a los decretos de vivienda del Gobierno.")),
     l_cierre=[CIERRE_29N, "En el próximo episodio: qué propone Sumar."],
-    sources=VOX_SRC, pinned=pinned(VOX_SRC), hashtags=TAGS + ["#Vox"],
+    sources=VOX_SRC, pinned=pinned("Programa económico y de vivienda de Vox, págs. 44-47 (voxespana.es), EFE 02/10"), hashtags=TAGS + ["#Vox"],
     caption=caption(
         "¿Qué propone Vox para la vivienda?",
-        "Está en la oposición: son propuestas, no leyes.",
-        ["🏗️ Más suelo y «bloques de vivienda protegida» 📝",
-         "🧾 IVA 0 en la primera vivienda 📝",
-         "⚖️ Arraigo en España como criterio para la vivienda protegida 📝",
-         "🚫 Derogar las medidas que intervienen el alquiler 📝"],
-        "también plantea un trato fiscal distinto para compradores de fuera de la UE.",
-        "Ep. 3/4 · Próximo: Sumar",
-        "📝 propuesta"),
+        ["🏗️ Más suelo y vivienda protegida 📝", "🧾 IVA 0 en la primera vivienda 📝",
+         "⚖️ Arraigo en España para acceder a vivienda protegida 📝", "🚫 Derogar las medidas que intervienen el alquiler 📝"],
+        "Ep. 3/4 · Próximo: Sumar"),
 )
 
 SUMAR_SRC = [
@@ -353,17 +336,12 @@ SUMAR = dict(
     voto=dict(vote="SÍ", foot=VOTO_SRC,
               line=L("El 2 de octubre votó sí a los decretos de vivienda.", "El dos de octubre votó sí a los decretos de vivienda.")),
     l_cierre=[CIERRE_29N, "Aquí acaba la serie de vivienda.", "En la próxima: impuestos."],
-    sources=SUMAR_SRC, pinned=pinned(SUMAR_SRC), hashtags=TAGS + ["#Sumar"],
+    sources=SUMAR_SRC, pinned=pinned("votación del Congreso 15/09, RDL 28/2026 y 29/2026 (BOE 07/10), idealista 28/09, moncloa.com 08/10, El Español 04/10, EFE 02/10"), hashtags=TAGS + ["#Sumar"],
     caption=caption(
         "¿Qué propone Sumar para la vivienda?",
-        "Gobierna con el PSOE, pero no lleva Vivienda. En el 29N va como Frente Amplio.",
-        ["🚫 Prohibir que fondos y empresas compren pisos ❌",
-         "🔁 Renovación automática del alquiler tras 5 años ⏳",
-         "📈 Tope del 2 % a las subidas hasta 2027 ⏳",
-         "🗳️ Frente Amplio presenta su hoja de ruta el 17/10"],
-        "si el casero no renueva, indemnización mínima de 12 meses de renta.",
-        "Ep. 4/4 · Próxima serie: impuestos",
-        "⏳ pendiente · ❌ rechazada en el Congreso"),
+        ["🚫 Prohibir que fondos y empresas compren pisos ❌", "🔁 Renovación automática del alquiler tras 5 años ⏳",
+         "📈 Tope del 2 % a las subidas hasta 2027 ⏳", "🗳️ En el 29N va como Frente Amplio"],
+        "Ep. 4/4 · Próxima serie: impuestos"),
 )
 
 if __name__ == "__main__":

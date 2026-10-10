@@ -15,10 +15,10 @@ Consultado el 10/10/2026. Un episodio por partido, misma estructura que Vivienda
 1. ¿Qué ha hecho y qué promete el PSOE con la inmigración? Te lo explico en un minuto.
 2. El PSOE gobierna con Sumar y lleva el Ministerio de Migraciones.
 3. Por eso aquí hay medidas aprobadas, no solo promesas.
-4. Uno: la regularización extraordinaria. Papeles para un año a quien llegó antes de 2026, lleva al menos cinco meses aquí y no tiene antecedentes penales. Se aprobó por real decreto en abril, pactada con Podemos.
-5. Dos: el reparto de menores que llegan solos. Desde 2025, cuando Canarias, Ceuta o Melilla se saturan, el resto de comunidades tiene que acogerlos. Once comunidades lo han recurrido ante el Constitucional.
+4. Uno: la regularización extraordinaria. Papeles por un año para quien llegó antes de 2026 y no tiene antecedentes. Se aprobó en abril, pactada con Podemos.
+5. Dos: los menores que llegan solos. Si Canarias, Ceuta o Melilla se saturan, las demás comunidades tienen que acogerlos. Once lo han recurrido.
 6. Tres: el nuevo reglamento de extranjería, en vigor desde mayo de 2025. Para pedir papeles por arraigo bastan dos años en España, en lugar de tres.
-7. Ojo: el Gobierno calculaba unas 500.000 personas y llegaron 1.174.978 solicitudes. Pedirlo no es lo mismo que conseguirlo.
+7. Ojo: el Gobierno esperaba unas 500.000 personas y llegaron más de un millón de solicitudes. Pedirlo no es lo mismo que conseguirlo.
 8. En resumen: regularizar a quien ya vive y trabaja aquí.
 9. Su programa para el 29 de noviembre aún no está publicado.
 10. En el próximo episodio: qué propone el PP.

@@ -140,7 +140,7 @@
     },
     {
      "type": "text",
-     "text": "con el PSOE\nsin el Ministerio de Migraciones",
+     "text": "con el PSOE\nsin Migraciones",
      "x": 800,
      "y": 830,
      "size": 50,
@@ -394,14 +394,16 @@
      "align": "left"
     },
     {
-     "type": "icon",
-     "name": "house",
+     "type": "text",
+     "text": "CIE",
      "x": 540,
-     "y": 760,
-     "scale": 1.1,
+     "y": 810,
+     "size": 150,
+     "color": "sumar",
      "at": "L0@0.3",
-     "dur": 0.7,
-     "fill": "sumar"
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
     },
     {
      "type": "text",

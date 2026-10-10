@@ -53,8 +53,14 @@ def sc_cierre(p):
     ]
     if p["next"]:
         name, color = p["next"]
-        els += [T("PRÓXIMO EPISODIO", 540, 820, 74, at="L1", dur=0.45), *badge(color, 540, 1050, 1.15),
-                T(name, 540, 1330, 110, color=color, at="+0.05", dur=0.4)]
+        if color is None:  # cierre de los partidos: los tres, cara a cara
+            els.append(T("PRÓXIMO", 540, 820, 74, at="L1", dur=0.45))
+            for x, c in zip((240, 540, 840), ("psoe", "pp", "vox")):
+                els += badge(c, x, 1040, 0.8, at="+0.02", dur=0.4)
+            els.append(T(name, 540, 1330, 110, at="+0.05", dur=0.4))
+        else:
+            els += [T("PRÓXIMO EPISODIO", 540, 820, 74, at="L1", dur=0.45), *badge(color, 540, 1050, 1.15),
+                    T(name, 540, 1330, 110, color=color, at="+0.05", dur=0.4)]
     else:
         els.append(T("FIN DE LA SERIE", 540, 820, 74, at="L1", dur=0.45))
         for x, c in zip((210, 430, 650, 870), ("psoe", "pp", "vox", "sumar")):
@@ -69,7 +75,7 @@ def build(p):
     scenes += [sc_medida(p, i + 1, m) for i, m in enumerate(p["medidas"])]
     scenes += [sc_ojo(p), sc_resumen(p), sc_cierre(p)]
     return dict(
-        slug=p["slug"], title=p["title"], series_tag=f"INMIGRACIÓN · EP. {p['ep']}/4", accent=p["color"],
+        slug=p["slug"], title=p["title"], series_tag=f"INMIGRACIÓN · EP. {p['ep']}/3", accent=p["color"],
         icon_accent={"blue": "gray", "red": "yellow"},
         handle="@pizarrapublica", voice={"engine": "edge", "voice_id": "es-ES-AlvaroNeural"},
         music_volume=0.14, scribble_volume=0.05, end_hold=0.8, line_gap=0.1,
@@ -88,7 +94,7 @@ RD316 = "Real Decreto 316/2026, de 14 de abril (BOE-A-2026-8284), resumen de Not
 # ------------------------------------------------------------------ episodios
 PSOE = dict(
     ep=1, slug="inmigracion_ep1_psoe", name="PSOE", color="psoe", next=("PP", "pp"), programa="aún sin publicar",
-    title="Inmigración · Ep. 1/4 · ¿Qué ha hecho el PSOE?",
+    title="Inmigración · Ep. 1/3 · ¿Qué ha hecho el PSOE?",
     hook=("¿QUÉ HACE", "EL PSOE", "CON LA INMIGRACIÓN?"),
     l_hook="¿Qué ha hecho y qué promete el PSOE con la inmigración? Te lo explico en un minuto.",
     situ=("EN EL\nGOBIERNO", "con Sumar\nMinisterio de Migraciones", "aprobado + promesas"),
@@ -123,12 +129,12 @@ PSOE = dict(
         "¿Qué ha hecho el PSOE con la inmigración?",
         ["🪪 Regularización extraordinaria: papeles para 1 año ✅", "🧒 Reparto obligatorio de menores que llegan solos ✅",
          "⏳ Arraigo: de 3 a 2 años en España ✅", "📈 1,17 millones de solicitudes; se esperaban 500.000"],
-        "¿Qué opinas de la regularización?", "Ep. 1/4 · Próximo: PP"),
+        "¿Qué opinas de la regularización?", "Ep. 1/3 · Próximo: PP"),
 )
 
 PP = dict(
     ep=2, slug="inmigracion_ep2_pp", name="PP", color="pp", next=("VOX", "vox"), programa="aún sin publicar",
-    title="Inmigración · Ep. 2/4 · ¿Qué propone el PP?",
+    title="Inmigración · Ep. 2/3 · ¿Qué propone el PP?",
     hook=("¿QUÉ HARÍA", "EL PP", "CON LA INMIGRACIÓN?"),
     l_hook="¿Qué propone el PP con la inmigración? Te lo explico en un minuto.",
     situ=("EN LA\nOPOSICIÓN", "plan de inmigración\noctubre de 2025", "propuestas, no leyes"),
@@ -160,12 +166,12 @@ PP = dict(
         "¿Qué propone el PP con la inmigración?",
         ["💼 Visado por puntos y cupos por países y sectores 📝", "⚖️ Perder la residencia por delitos graves 📝",
          "🪪 Arraigo como excepción y nacionalidad más exigente 📝", "❓ No dice cuántas personas entrarían 📝"],
-        "¿Qué opinas del visado por puntos?", "Ep. 2/4 · Próximo: Vox"),
+        "¿Qué opinas del visado por puntos?", "Ep. 2/3 · Próximo: Vox"),
 )
 
 VOX = dict(
-    ep=3, slug="inmigracion_ep3_vox", name="VOX", color="vox", next=("SUMAR", "sumar"), programa="aún sin publicar",
-    title="Inmigración · Ep. 3/4 · ¿Qué propone Vox?",
+    ep=3, slug="inmigracion_ep3_vox", name="VOX", color="vox", next=("CARA A CARA", None), programa="aún sin publicar",
+    title="Inmigración · Ep. 3/3 · ¿Qué propone Vox?",
     hook=("¿QUÉ HARÍA", "VOX", "CON LA INMIGRACIÓN?"),
     l_hook="¿Qué propone Vox con la inmigración? Te lo explico en un minuto.",
     situ=("EN LA\nOPOSICIÓN", "iniciativas en el\nCongreso · 2026", "propuestas, no leyes"),
@@ -186,7 +192,7 @@ VOX = dict(
              line="Ojo: Vox recurrió la regularización ante el Supremo, que en mayo rechazó frenarla mientras decide."),
     resumen=dict(big="menos inmigración", key="y preferencia para los españoles", sub="iniciativas · 2026", foot="Moción de feb. 2026 · PNL del 05/05/2026",
                  line="En resumen: menos inmigración y preferencia para los españoles."),
-    l_cierre=["Su programa para el 29 de noviembre aún no está publicado.", "En el próximo episodio: qué propone Sumar."],
+    l_cierre=["Su programa para el 29 de noviembre aún no está publicado.", "En el próximo: los tres, cara a cara."],
     sources=[
         "Moción de Vox sobre deportaciones, repatriación, arraigo y nacionalidades (El Diario de Madrid, 22/02/2026): https://www.eldiariodemadrid.es/articulo/politica/vox-mocion-congreso-deportaciones-inmigrantes-repatriaciones-politica-migratoria-espana/20260222170439122058.html",
         "Proposición no de ley de «prioridad nacional», 10 y 5 años de empadronamiento (The Objective, 06/05/2026): https://theobjective.com/espana/politica/2026-05-06/vox-prioridad-nacional-inmigrantes-empadronamiento/",
@@ -198,12 +204,12 @@ VOX = dict(
         "¿Qué propone Vox con la inmigración?",
         ["✈️ Repatriar a irregulares y deportar por delitos graves 📝", "🏠 «Prioridad nacional»: 10 años empadronado para comprar vivienda protegida 📝",
          "🪪 Eliminar el arraigo y revisar nacionalidades 📝", "⚖️ Recurrió la regularización; el Supremo no la frenó"],
-        "¿Qué opinas de la «prioridad nacional»?", "Ep. 3/4 · Próximo: Sumar"),
+        "¿Qué opinas de la «prioridad nacional»?", "Ep. 3/3 · Próximo: los 3, cara a cara"),
 )
 
 SUMAR = dict(
     ep=4, slug="inmigracion_ep4_sumar", name="SUMAR", color="sumar", next=None, programa="se presenta el 17/10",
-    title="Inmigración · Ep. 4/4 · ¿Qué propone Sumar?",
+    title="Inmigración · Ep. 4/3 · ¿Qué propone Sumar?",
     hook=("¿QUÉ HARÍA", "SUMAR", "CON LA INMIGRACIÓN?"),
     l_hook="¿Qué propone Sumar con la inmigración? Te lo explico en un minuto.",
     situ=("EN EL\nGOBIERNO", "con el PSOE\nsin Migraciones", "29N: Frente Amplio"),
@@ -237,12 +243,12 @@ SUMAR = dict(
         "¿Qué propone Sumar con la inmigración?",
         ["🪪 Regularización extraordinaria, aprobada con el PSOE ✅", "📜 Una vía permanente para tener papeles 📝",
          "🚪 Cerrar los centros de internamiento (CIE) 📝", "🗳️ En el 29N va como Frente Amplio"],
-        "¿Qué opinas de la regularización permanente?", "Ep. 4/4 · Próxima serie: empleo y salarios"),
+        "¿Qué opinas de la regularización permanente?", "Ep. 4/3 · Próxima serie: empleo y salarios"),
 )
 
 if __name__ == "__main__":
     textos = sys.argv[sys.argv.index("--textos") + 1] if "--textos" in sys.argv else None
-    for p in (PSOE, PP, VOX, SUMAR):
+    for p in (PSOE, PP, VOX):  # Sumar sale de las series (joel, 10/10/2026)
         story = build(p)
         path = os.path.join(OUT, f"{p['slug']}.json")
         with open(path, "w", encoding="utf-8") as f:

@@ -52,8 +52,14 @@ def sc_cierre(p):
     ]
     if p["next"]:
         name, color = p["next"]
-        els += [T("PRÓXIMO EPISODIO", 540, 820, 74, at="L1", dur=0.45), *coin(color, 540, 1050, 1.15),
-                T(name, 540, 1330, 110, color=color, at="+0.05", dur=0.4)]
+        if color is None:  # cierre de los partidos: los tres, cara a cara
+            els.append(T("PRÓXIMO", 540, 820, 74, at="L1", dur=0.45))
+            for x, c in zip((240, 540, 840), ("psoe", "pp", "vox")):
+                els += coin(c, x, 1040, 0.8, at="+0.02", dur=0.4)
+            els.append(T(name, 540, 1330, 110, at="+0.05", dur=0.4))
+        else:
+            els += [T("PRÓXIMO EPISODIO", 540, 820, 74, at="L1", dur=0.45), *coin(color, 540, 1050, 1.15),
+                    T(name, 540, 1330, 110, color=color, at="+0.05", dur=0.4)]
     else:
         els.append(T("FIN DE LA SERIE", 540, 820, 74, at="L1", dur=0.45))
         for x, c in zip((210, 430, 650, 870), ("psoe", "pp", "vox", "sumar")):
@@ -68,7 +74,7 @@ def build(p):
     scenes += [sc_medida(p, i + 1, m) for i, m in enumerate(p["medidas"])]
     scenes += [sc_ojo(p), sc_resumen(p), sc_cierre(p)]
     return dict(
-        slug=p["slug"], title=p["title"], series_tag=f"IMPUESTOS · EP. {p['ep']}/4", accent=p["color"],
+        slug=p["slug"], title=p["title"], series_tag=f"IMPUESTOS · EP. {p['ep']}/3", accent=p["color"],
         icon_accent={"blue": "gray", "red": "yellow"},
         handle="@pizarrapublica", voice={"engine": "edge", "voice_id": "es-ES-AlvaroNeural"},
         music_volume=0.14, scribble_volume=0.05, end_hold=0.8, line_gap=0.1,
@@ -93,7 +99,7 @@ PSOE_SRC = [
 ]
 PSOE = dict(
     ep=1, slug="impuestos_ep1_psoe", name="PSOE", color="psoe", next=("PP", "pp"), programa="aún sin publicar",
-    title="Impuestos · Ep. 1/4 · ¿Qué propone el PSOE?",
+    title="Impuestos · Ep. 1/3 · ¿Qué propone el PSOE?",
     hook=("¿QUÉ HACE", "EL PSOE", "CON TUS IMPUESTOS?"),
     l_hook=L("¿Qué ha hecho y qué promete el PSOE con tus impuestos? Te lo explico en un minuto.",
              "¿Qué ha hecho y qué promete el Pesoe con tus impuestos? Te lo explico en un minuto."),
@@ -125,7 +131,7 @@ PSOE = dict(
         "¿Qué ha hecho el PSOE con tus impuestos?",
         ["💶 0 € de IRPF si cobras el salario mínimo ✅", "🏠 IVA del 10 % a pisos turísticos desde el 1/12 ⏳",
          "🔑 Rebaja del IRPF a caseros que bajen el alquiler ⏳", "📜 Promete impuestos más progresivos, sin cifras 📝"],
-        "Ep. 1/4 · Próximo: PP"),
+        "Ep. 1/3 · Próximo: PP"),
 )
 
 PP_SRC = [
@@ -135,7 +141,7 @@ PP_SRC = [
 ]
 PP = dict(
     ep=2, slug="impuestos_ep2_pp", name="PP", color="pp", next=("VOX", "vox"), programa="aún sin publicar",
-    title="Impuestos · Ep. 2/4 · ¿Qué propone el PP?",
+    title="Impuestos · Ep. 2/3 · ¿Qué propone el PP?",
     hook=("¿QUÉ HARÍA", "EL PP", "CON TUS IMPUESTOS?"),
     l_hook=L("¿Qué propone el PP con tus impuestos? Te lo explico en un minuto.", "¿Qué propone el pepé con tus impuestos? Te lo explico en un minuto."),
     situ=("EN LA\nOPOSICIÓN", "decálogo económico\nseptiembre de 2026", "propuestas, no leyes"),
@@ -165,7 +171,7 @@ PP = dict(
         "¿Qué propone el PP con tus impuestos?",
         ["📊 IRPF actualizado con la inflación y el doble de mínimo por hijo 📝", "🛒 IVA 0 % en alimentos básicos y 10 % en energía 📝",
          "🧑‍💼 Autónomos sin IVA si facturan menos de 85.000 € 📝", "❓ No dice cuánto costaría 📝"],
-        "Ep. 2/4 · Próximo: Vox"),
+        "Ep. 2/3 · Próximo: Vox"),
 )
 
 VOX_PDF = "https://www.voxespana.es/wp-content/uploads/2025/10/Programa-WEB-021025.pdf"
@@ -175,8 +181,8 @@ VOX_SRC = [
     "Las posiciones económicas para el 29N (Forbes, 05/10/2026): https://forbes.es/actualidad/1036705/elecciones-2026-batallas-economicas-29-n/",
 ]
 VOX = dict(
-    ep=3, slug="impuestos_ep3_vox", name="VOX", color="vox", next=("SUMAR", "sumar"), programa="aún sin publicar",
-    title="Impuestos · Ep. 3/4 · ¿Qué propone Vox?",
+    ep=3, slug="impuestos_ep3_vox", name="VOX", color="vox", next=("CARA A CARA", None), programa="aún sin publicar",
+    title="Impuestos · Ep. 3/3 · ¿Qué propone Vox?",
     hook=("¿QUÉ HARÍA", "VOX", "CON TUS IMPUESTOS?"),
     l_hook="¿Qué propone Vox con tus impuestos? Te lo explico en un minuto.",
     situ=("EN LA\nOPOSICIÓN", "programa económico\ny de vivienda", "propuestas, no leyes"),
@@ -203,13 +209,13 @@ VOX = dict(
     resumen=dict(big="bajar impuestos", key="y recortar el gasto público", sub="programa de Vox", foot="Vox, programa · Forbes 05/10/2026",
                  line="En resumen: bajar casi todos los impuestos y recortar el gasto público."),
     l_cierre=[L("Su programa para el 29 de noviembre aún no está publicado.", "Su programa para el veintinueve de noviembre aún no está publicado."),
-              "En el próximo episodio: qué propone Sumar."],
+              "En el próximo: los tres, cara a cara."],
     sources=VOX_SRC, pinned=pinned("Programa económico y de vivienda de Vox, págs. 36-37 (voxespana.es), moncloa.com 12/09, Forbes 05/10"), hashtags=TAGS + ["#Vox"],
     caption=caption(
         "¿Qué propone Vox con tus impuestos?",
         ["💶 IRPF: 0 € hasta 22.000 €, luego 15 % y 25 % 📝", "🛒 IVA general del 21 % al 18 % 📝",
          "🏢 Sociedades al 15 % y sin cuota para autónomos bajo el SMI 📝", "🔢 Coste del IRPF: 40.000 M€ (cálculo de Vox)"],
-        "Ep. 3/4 · Próximo: Sumar"),
+        "Ep. 3/3 · Próximo: los 3, cara a cara"),
 )
 
 SUMAR_SRC = [
@@ -221,7 +227,7 @@ SUMAR_SRC = [
 ]
 SUMAR = dict(
     ep=4, slug="impuestos_ep4_sumar", name="SUMAR", color="sumar", next=None, programa="se presenta el 17/10",
-    title="Impuestos · Ep. 4/4 · ¿Qué propone Sumar?",
+    title="Impuestos · Ep. 4/3 · ¿Qué propone Sumar?",
     hook=("¿QUÉ HARÍA", "SUMAR", "CON TUS IMPUESTOS?"),
     l_hook="¿Qué propone Sumar con tus impuestos? Te lo explico en un minuto.",
     situ=("EN EL\nGOBIERNO", "con el PSOE\nsin el Ministerio de Hacienda", "29N: Frente Amplio"),
@@ -252,12 +258,12 @@ SUMAR = dict(
         "¿Qué propone Sumar con tus impuestos?",
         ["🏛️ Impuesto a herencias de más de 1 millón 📝", "🧑‍💼 Autónomos sin IVA si facturan menos de 85.000 € 📝",
          "🏦 Más impuestos a grandes fortunas y banca, sin cifras 📝", "🗳️ En el 29N va como Frente Amplio"],
-        "Ep. 4/4 · Próxima serie: inmigración"),
+        "Ep. 4/3 · Próxima serie: inmigración"),
 )
 
 if __name__ == "__main__":
     textos = sys.argv[sys.argv.index("--textos") + 1] if "--textos" in sys.argv else None
-    for p in (PSOE, PP, VOX, SUMAR):
+    for p in (PSOE, PP, VOX):  # Sumar sale de las series (joel, 10/10/2026)
         story = build(p)
         path = os.path.join(OUT, f"{p['slug']}.json")
         with open(path, "w", encoding="utf-8") as f:

@@ -1,7 +1,7 @@
 {
  "slug": "inmigracion_ep3_vox",
- "title": "Inmigración · Ep. 3/4 · ¿Qué propone Vox?",
- "series_tag": "INMIGRACIÓN · EP. 3/4",
+ "title": "Inmigración · Ep. 3/3 · ¿Qué propone Vox?",
+ "series_tag": "INMIGRACIÓN · EP. 3/3",
  "accent": "vox",
  "icon_accent": {
   "blue": "gray",
@@ -22,7 +22,7 @@
   "El Supremo no suspende la regularización recurrida por Vox y la Comunidad de Madrid (La Voz de Lanzarote, 23/05/2026): https://www.lavozdelanzarote.com/en/news/politics/spain-applauds-that-the-supreme-court-does-not-stop-the-regularization-clears-the-present-of-thousands-of-people_243581_102.html",
   "Vox arranca la campaña con inmigración (moncloa.com, 05/10/2026): https://www.moncloa.com/2026/10/05/elecciones-generales-29n-vox-campana-3443022/"
  ],
- "caption": "🤯 ¿Qué propone Vox con la inmigración?\n✈️ Repatriar a irregulares y deportar por delitos graves 📝\n🏠 «Prioridad nacional»: 10 años empadronado para comprar vivienda protegida 📝\n🪪 Eliminar el arraigo y revisar nacionalidades 📝\n⚖️ Recurrió la regularización; el Supremo no la frenó\n💬 ¿Qué opinas de la «prioridad nacional»?\n➡️ Ep. 3/4 · Próximo: Sumar · 📚 Fuentes en comentarios",
+ "caption": "🤯 ¿Qué propone Vox con la inmigración?\n✈️ Repatriar a irregulares y deportar por delitos graves 📝\n🏠 «Prioridad nacional»: 10 años empadronado para comprar vivienda protegida 📝\n🪪 Eliminar el arraigo y revisar nacionalidades 📝\n⚖️ Recurrió la regularización; el Supremo no la frenó\n💬 ¿Qué opinas de la «prioridad nacional»?\n➡️ Ep. 3/3 · Próximo: los 3, cara a cara · 📚 Fuentes en comentarios",
  "pinned_comment": "📚 Fuentes: moción de Vox (febrero de 2026), PNL de «prioridad nacional» (05/05/2026), auto del Supremo (22/05/2026). ¿Ves un error? Dínoslo y lo corregimos.",
  "hashtags": [
   "#PizarraPública",
@@ -579,7 +579,7 @@
    "id": "cierre",
    "lines": [
     "Su programa para el 29 de noviembre aún no está publicado.",
-    "En el próximo episodio: qué propone Sumar."
+    "En el próximo: los tres, cara a cara."
    ],
    "elements": [
     {
@@ -617,7 +617,7 @@
     },
     {
      "type": "text",
-     "text": "PRÓXIMO EPISODIO",
+     "text": "PRÓXIMO",
      "x": 540,
      "y": 820,
      "size": 74,
@@ -629,30 +629,68 @@
     },
     {
      "type": "circle",
+     "x": 240,
+     "y": 1040,
+     "rx": 96,
+     "color": "psoe",
+     "width": 9,
+     "at": "+0.02",
+     "dur": 0.24
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 240,
+     "y": 1040,
+     "scale": 0.68,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "circle",
      "x": 540,
-     "y": 1050,
-     "rx": 138,
-     "color": "sumar",
-     "width": 13,
-     "at": "+0.05",
-     "dur": 0.36
+     "y": 1040,
+     "rx": 96,
+     "color": "pp",
+     "width": 9,
+     "at": "+0.02",
+     "dur": 0.24
     },
     {
      "type": "icon",
      "name": "document",
      "x": 540,
-     "y": 1050,
-     "scale": 0.9774999999999999,
+     "y": 1040,
+     "scale": 0.68,
      "at": "+0",
-     "dur": 0.3
+     "dur": 0.2
+    },
+    {
+     "type": "circle",
+     "x": 840,
+     "y": 1040,
+     "rx": 96,
+     "color": "vox",
+     "width": 9,
+     "at": "+0.02",
+     "dur": 0.24
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 840,
+     "y": 1040,
+     "scale": 0.68,
+     "at": "+0",
+     "dur": 0.2
     },
     {
      "type": "text",
-     "text": "SUMAR",
+     "text": "CARA A CARA",
      "x": 540,
      "y": 1330,
      "size": 110,
-     "color": "sumar",
+     "color": "ink",
      "at": "+0.05",
      "dur": 0.4,
      "font": "hand",

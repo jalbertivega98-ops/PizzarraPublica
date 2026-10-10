@@ -1,7 +1,7 @@
 {
  "slug": "impuestos_ep3_vox",
- "title": "Impuestos · Ep. 3/4 · ¿Qué propone Vox?",
- "series_tag": "IMPUESTOS · EP. 3/4",
+ "title": "Impuestos · Ep. 3/3 · ¿Qué propone Vox?",
+ "series_tag": "IMPUESTOS · EP. 3/3",
  "accent": "vox",
  "icon_accent": {
   "blue": "gray",
@@ -21,7 +21,7 @@
   "Presentación del programa con Arthur Laffer (moncloa.com, 12/09/2026): https://www.moncloa.com/2026/09/12/abascal-laffer-giro-economico-vox-3430041",
   "Las posiciones económicas para el 29N (Forbes, 05/10/2026): https://forbes.es/actualidad/1036705/elecciones-2026-batallas-economicas-29-n/"
  ],
- "caption": "🤯 ¿Qué propone Vox con tus impuestos?\n💶 IRPF: 0 € hasta 22.000 €, luego 15 % y 25 % 📝\n🛒 IVA general del 21 % al 18 % 📝\n🏢 Sociedades al 15 % y sin cuota para autónomos bajo el SMI 📝\n🔢 Coste del IRPF: 40.000 M€ (cálculo de Vox)\n💬 ¿Qué medida te afecta más?\n➡️ Ep. 3/4 · Próximo: Sumar · 📚 Fuentes en comentarios",
+ "caption": "🤯 ¿Qué propone Vox con tus impuestos?\n💶 IRPF: 0 € hasta 22.000 €, luego 15 % y 25 % 📝\n🛒 IVA general del 21 % al 18 % 📝\n🏢 Sociedades al 15 % y sin cuota para autónomos bajo el SMI 📝\n🔢 Coste del IRPF: 40.000 M€ (cálculo de Vox)\n💬 ¿Qué medida te afecta más?\n➡️ Ep. 3/3 · Próximo: los 3, cara a cara · 📚 Fuentes en comentarios",
  "pinned_comment": "📚 Fuentes: Programa económico y de vivienda de Vox, págs. 36-37 (voxespana.es), moncloa.com 12/09, Forbes 05/10. ¿Ves un error? Dínoslo y lo corregimos.",
  "hashtags": [
   "#PizarraPública",
@@ -612,7 +612,7 @@
      "tts": "Su programa para el veintinueve de noviembre aún no está publicado.",
      "text": "Su programa para el 29 de noviembre aún no está publicado."
     },
-    "En el próximo episodio: qué propone Sumar."
+    "En el próximo: los tres, cara a cara."
    ],
    "elements": [
     {
@@ -650,7 +650,7 @@
     },
     {
      "type": "text",
-     "text": "PRÓXIMO EPISODIO",
+     "text": "PRÓXIMO",
      "x": 540,
      "y": 820,
      "size": 74,
@@ -662,30 +662,68 @@
     },
     {
      "type": "circle",
-     "x": 540,
-     "y": 1050,
-     "rx": 138,
-     "color": "sumar",
-     "width": 13,
-     "at": "+0.05",
-     "dur": 0.36
+     "x": 240,
+     "y": 1040,
+     "rx": 96,
+     "color": "psoe",
+     "width": 9,
+     "at": "+0.02",
+     "dur": 0.24
     },
     {
      "type": "icon",
      "name": "euro",
-     "x": 530.8,
-     "y": 1050,
-     "scale": 1.15,
+     "x": 233.6,
+     "y": 1040,
+     "scale": 0.8,
      "at": "+0",
-     "dur": 0.3
+     "dur": 0.2
+    },
+    {
+     "type": "circle",
+     "x": 540,
+     "y": 1040,
+     "rx": 96,
+     "color": "pp",
+     "width": 9,
+     "at": "+0.02",
+     "dur": 0.24
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 533.6,
+     "y": 1040,
+     "scale": 0.8,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "circle",
+     "x": 840,
+     "y": 1040,
+     "rx": 96,
+     "color": "vox",
+     "width": 9,
+     "at": "+0.02",
+     "dur": 0.24
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 833.6,
+     "y": 1040,
+     "scale": 0.8,
+     "at": "+0",
+     "dur": 0.2
     },
     {
      "type": "text",
-     "text": "SUMAR",
+     "text": "CARA A CARA",
      "x": 540,
      "y": 1330,
      "size": 110,
-     "color": "sumar",
+     "color": "ink",
      "at": "+0.05",
      "dur": 0.4,
      "font": "hand",

@@ -6,28 +6,28 @@
       "titulo": "Vivienda · Ep. 1 · PSOE",
       "carpeta": "videos/vivienda/ep1_psoe",
       "fecha": "2026-10-10 20:00",
-      "estado": "programado"
+      "estado": "pausado"
     },
     {
       "id": "vivienda_ep2_pp",
       "titulo": "Vivienda · Ep. 2 · PP",
       "carpeta": "videos/vivienda/ep2_pp",
       "fecha": "2026-10-11 20:00",
-      "estado": "programado"
+      "estado": "pausado"
     },
     {
       "id": "vivienda_ep3_vox",
       "titulo": "Vivienda · Ep. 3 · Vox",
       "carpeta": "videos/vivienda/ep3_vox",
       "fecha": "2026-10-12 20:00",
-      "estado": "programado"
+      "estado": "pausado"
     },
     {
       "id": "vivienda_ep4_sumar",
       "titulo": "Vivienda · Ep. 4 · Sumar",
       "carpeta": "videos/vivienda/ep4_sumar",
       "fecha": "2026-10-13 20:00",
-      "estado": "programado"
+      "estado": "pausado"
     }
   ],
   "conexion": {

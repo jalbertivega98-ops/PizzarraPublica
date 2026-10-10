@@ -1,0 +1,52 @@
+name: Publicar en Instagram
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+    inputs:
+      forzar_id:
+        description: "id de publicar/calendario.json para publicarlo ya (vacío = solo lo que toque)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: publicar-instagram
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Publicar lo que toque
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RAMA: ${{ github.ref_name }}
+          FORZAR_ID: ${{ inputs.forzar_id }}
+        run: python3 publicar/publicar.py
+
+      - name: Guardar el estado
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain publicar/calendario.json ESTADO.md)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add publicar/calendario.json ESTADO.md
+            git commit -m "Estado de publicaciones actualizado"
+            for i in 1 2 3; do
+              git pull --rebase origin "${{ github.ref_name }}" && git push && break
+              sleep 5
+            done
+          fi

@@ -2,11 +2,14 @@
 
 La política española, explicada con dibujos en 60 segundos.
 
+📅 **[Ver calendario y estado de las publicaciones](ESTADO.md)** · [Conectar Instagram](docs/conectar_instagram.md)
+
 | Carpeta | Contenido |
 |---|---|
 | `videos/` | Reels listos para subir: MP4, portada, subtítulos y texto de publicación |
 | `perfil/` | Foto de perfil, portadas de destacados y textos del perfil |
 | `pipeline/` | Código que genera los vídeos whiteboard (ver `pipeline/README.md`) |
+| `publicar/` | Publicación automática en Instagram: calendario y script (lo ejecuta una GitHub Action cada 10 min) |
 | `docs/` | Entrega 1 (plan completo) y temas para el 29N |
 
 **Descargar un vídeo en el móvil:** entra en `videos/`, abre la carpeta del reel, toca el `.mp4` y pulsa el botón de descarga (⋯ → *Download*, o *View raw*).

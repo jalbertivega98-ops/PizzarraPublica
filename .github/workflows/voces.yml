@@ -1,0 +1,53 @@
+name: Voces ElevenLabs
+
+on:
+  workflow_dispatch:
+    inputs:
+      muestras:
+        description: "Texto para probar varias voces (vacío = generar las frases de los storyboards)"
+        required: false
+        default: ""
+      storyboards:
+        description: "Storyboards a locutar"
+        required: false
+        default: "storyboards/impuestos_*.json"
+      voice:
+        description: "voice_id de ElevenLabs (vacío = el del storyboard)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: voces-elevenlabs
+  cancel-in-progress: false
+
+jobs:
+  voces:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generar voces
+        working-directory: pipeline
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          MUESTRAS: ${{ inputs.muestras }}
+          STORYBOARDS: ${{ inputs.storyboards }}
+          VOICE: ${{ inputs.voice }}
+        run: |
+          if [ -n "$MUESTRAS" ]; then
+            python3 tts_elevenlabs.py --muestras "$MUESTRAS"
+          else
+            python3 tts_elevenlabs.py $STORYBOARDS ${VOICE:+--voice "$VOICE"}
+          fi
+      - name: Guardar las voces en el repositorio
+        run: |
+          git add pipeline/voces_elevenlabs
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Voces de ElevenLabs"
+            git push
+          fi

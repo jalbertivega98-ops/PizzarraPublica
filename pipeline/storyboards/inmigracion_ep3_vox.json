@@ -1,0 +1,664 @@
+{
+ "slug": "inmigracion_ep3_vox",
+ "title": "Inmigración · Ep. 3/4 · ¿Qué propone Vox?",
+ "series_tag": "INMIGRACIÓN · EP. 3/4",
+ "accent": "vox",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "edge",
+  "voice_id": "es-ES-AlvaroNeural"
+ },
+ "music_volume": 0.14,
+ "scribble_volume": 0.05,
+ "end_hold": 0.8,
+ "line_gap": 0.1,
+ "sources": [
+  "Moción de Vox sobre deportaciones, repatriación, arraigo y nacionalidades (El Diario de Madrid, 22/02/2026): https://www.eldiariodemadrid.es/articulo/politica/vox-mocion-congreso-deportaciones-inmigrantes-repatriaciones-politica-migratoria-espana/20260222170439122058.html",
+  "Proposición no de ley de «prioridad nacional», 10 y 5 años de empadronamiento (The Objective, 06/05/2026): https://theobjective.com/espana/politica/2026-05-06/vox-prioridad-nacional-inmigrantes-empadronamiento/",
+  "El Supremo no suspende la regularización recurrida por Vox y la Comunidad de Madrid (La Voz de Lanzarote, 23/05/2026): https://www.lavozdelanzarote.com/en/news/politics/spain-applauds-that-the-supreme-court-does-not-stop-the-regularization-clears-the-present-of-thousands-of-people_243581_102.html",
+  "Vox arranca la campaña con inmigración (moncloa.com, 05/10/2026): https://www.moncloa.com/2026/10/05/elecciones-generales-29n-vox-campana-3443022/"
+ ],
+ "caption": "🤯 ¿Qué propone Vox con la inmigración?\n✈️ Repatriar a irregulares y deportar por delitos graves 📝\n🏠 «Prioridad nacional»: 10 años empadronado para comprar vivienda protegida 📝\n🪪 Eliminar el arraigo y revisar nacionalidades 📝\n⚖️ Recurrió la regularización; el Supremo no la frenó\n💬 ¿Qué opinas de la «prioridad nacional»?\n➡️ Ep. 3/4 · Próximo: Sumar · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: moción de Vox (febrero de 2026), PNL de «prioridad nacional» (05/05/2026), auto del Supremo (22/05/2026). ¿Ves un error? Dínoslo y lo corregimos.",
+ "hashtags": [
+  "#PizarraPública",
+  "#PolíticaParaPrincipiantes",
+  "#PolíticaEspañola",
+  "#Inmigración",
+  "#Elecciones29N",
+  "#Regularización",
+  "#Vox"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "lines": [
+    "¿Qué propone Vox con la inmigración? Te lo explico en un minuto."
+   ],
+   "tail": 0.3,
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿QUÉ HARÍA",
+     "x": 540,
+     "y": 440,
+     "size": 92,
+     "color": "ink",
+     "at": 0,
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "VOX",
+     "x": 540,
+     "y": 615,
+     "size": 160,
+     "color": "vox",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "CON LA INMIGRACIÓN?",
+     "x": 540,
+     "y": 720,
+     "size": 80,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "circle",
+     "x": 540,
+     "y": 1010,
+     "rx": 180,
+     "color": "vox",
+     "width": 18,
+     "at": "+0.05",
+     "dur": 0.36
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 540,
+     "y": 1010,
+     "scale": 1.275,
+     "at": "+0",
+     "dur": 0.3
+    }
+   ]
+  },
+  {
+   "id": "situacion",
+   "lines": [
+    "Vox está en la oposición en el Congreso.",
+    "Sus propuestas salen de las iniciativas que ha llevado al Congreso este año."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "person",
+     "tie": true,
+     "accent": "light",
+     "x": 270,
+     "y": 600,
+     "scale": 0.95,
+     "at": "L0",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "EN LA\nOPOSICIÓN",
+     "x": 270,
+     "y": 830,
+     "size": 62,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 800,
+     "y": 600,
+     "scale": 1.0,
+     "at": "L1",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "iniciativas en el\nCongreso · 2026",
+     "x": 800,
+     "y": 830,
+     "size": 50,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.1
+    },
+    {
+     "type": "highlight",
+     "x0": 200,
+     "x1": 880,
+     "y": 1130,
+     "width": 72,
+     "at": "L1@0.5",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "propuestas, no leyes",
+     "x": 540,
+     "y": 1150,
+     "size": 74,
+     "color": "vox",
+     "at": "+0",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "medida1",
+   "lines": [
+    "Uno: expulsiones. Repatriar a quien entre de forma irregular y deportar a los extranjeros, con papeles o sin ellos, que cometan delitos graves o reincidan."
+   ],
+   "footnote": "Moción de Vox en el Congreso (febrero de 2026)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "vox",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "1",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "vox",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Expulsiones",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 540,
+     "y": 760,
+     "scale": 1.1,
+     "at": "L0@0.3",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "repatriar a quien entre de forma irregular",
+     "x": 540,
+     "y": 1010,
+     "size": 51,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "deportar por delitos graves o reincidencia",
+     "x": 540,
+     "y": 1083,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "moción · febrero de 2026",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida2",
+   "lines": [
+    "Dos: lo que Vox llama «prioridad nacional» en las ayudas. Por ejemplo, para comprar vivienda protegida, diez años empadronado en España, y cinco para alquilarla."
+   ],
+   "footnote": "The Objective, 06/05/2026",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "vox",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "2",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "vox",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "«Prioridad nacional»",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "10 años",
+     "x": 540,
+     "y": 810,
+     "size": 150,
+     "color": "vox",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "empadronado para comprar vivienda protegida",
+     "x": 540,
+     "y": 1010,
+     "size": 47,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "ya en pactos PP-Vox en Extremadura y Aragón",
+     "x": 540,
+     "y": 1079,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "Congreso · 05/05/2026",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida3",
+   "lines": [
+    "Tres: papeles. Eliminar el arraigo como vía para regularizarse y revisar las nacionalidades concedidas en los últimos años."
+   ],
+   "footnote": "Moción de Vox en el Congreso (febrero de 2026)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "vox",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "3",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "vox",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Arraigo y nacionalidades",
+     "x": 240,
+     "y": 512,
+     "size": 74,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 540,
+     "y": 760,
+     "scale": 1.1,
+     "at": "L0@0.3",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "eliminar el arraigo como vía",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "revisar las nacionalidades concedidas",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "moción · febrero de 2026",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "ojo",
+   "lines": [
+    "Ojo: Vox recurrió la regularización ante el Supremo, que en mayo rechazó frenarla mientras decide."
+   ],
+   "footnote": "Tribunal Supremo, 22/05/2026",
+   "elements": [
+    {
+     "type": "highlight",
+     "x0": 390,
+     "x1": 690,
+     "y": 500,
+     "width": 90,
+     "at": "L0",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "¡OJO!",
+     "x": 540,
+     "y": 540,
+     "size": 140,
+     "color": "ink",
+     "at": "+0",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "question",
+     "x": 540,
+     "y": 770,
+     "scale": 1.0,
+     "at": "+0.05",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "recurrió la regularización",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.35",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "el Supremo no la frenó en mayo",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "resumen",
+   "lines": [
+    "En resumen: menos inmigración y preferencia para los españoles."
+   ],
+   "footnote": "Moción de feb. 2026 · PNL del 05/05/2026",
+   "elements": [
+    {
+     "type": "text",
+     "text": "EN UNA FRASE",
+     "x": 540,
+     "y": 500,
+     "size": 70,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "bubble",
+     "x": 540,
+     "y": 700,
+     "scale": 0.9,
+     "at": "+0.05",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "menos inmigración",
+     "x": 540,
+     "y": 960,
+     "size": 110,
+     "color": "vox",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "text",
+     "text": "y preferencia para los españoles",
+     "x": 540,
+     "y": 1120,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.6",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "iniciativas · 2026",
+     "x": 540,
+     "y": 1260,
+     "w": 440,
+     "h": 120,
+     "size": 48,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "lines": [
+    "Su programa para el 29 de noviembre aún no está publicado.",
+    "En el próximo episodio: qué propone Sumar."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "calendar",
+     "x": 200,
+     "y": 540,
+     "scale": 0.8,
+     "at": "L0",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "Programa 29N:",
+     "x": 360,
+     "y": 520,
+     "size": 70,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "aún sin publicar",
+     "x": 360,
+     "y": 600,
+     "size": 60,
+     "color": "gray",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "body",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "PRÓXIMO EPISODIO",
+     "x": 540,
+     "y": 820,
+     "size": 74,
+     "color": "ink",
+     "at": "L1",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "circle",
+     "x": 540,
+     "y": 1050,
+     "rx": 138,
+     "color": "sumar",
+     "width": 13,
+     "at": "+0.05",
+     "dur": 0.36
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 540,
+     "y": 1050,
+     "scale": 0.9774999999999999,
+     "at": "+0",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "SUMAR",
+     "x": 540,
+     "y": 1330,
+     "size": 110,
+     "color": "sumar",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  }
+ ]
+}

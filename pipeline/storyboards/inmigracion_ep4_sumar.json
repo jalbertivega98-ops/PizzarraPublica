@@ -1,0 +1,732 @@
+{
+ "slug": "inmigracion_ep4_sumar",
+ "title": "Inmigración · Ep. 4/4 · ¿Qué propone Sumar?",
+ "series_tag": "INMIGRACIÓN · EP. 4/4",
+ "accent": "sumar",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "edge",
+  "voice_id": "es-ES-AlvaroNeural"
+ },
+ "music_volume": 0.14,
+ "scribble_volume": 0.05,
+ "end_hold": 0.8,
+ "line_gap": 0.1,
+ "sources": [
+  "Sumar pide acelerar la regularización (elDiario.es, 2025): https://www.eldiario.es/politica/sumar-quiere-acelerar-regularizacion-extraordinaria-enfrentar-relato-extrema-derecha-inmigracion_1_12654878.html",
+  "Real Decreto 316/2026, de 14 de abril (BOE-A-2026-8284), resumen de Noticias Obreras (15/04/2026): https://noticiasobreras.es/2026/04/el-boe-publica-el-real-decreto-que-articula-la-regularizacion-extraordinaria-de-personas-migrantes-aprobada-por-el-gobierno/",
+  "Programa de Sumar para el 23J de 2023, pág. 104, regularización permanente y cierre de los CIE (resumen de Politicheck, 08/10/2026): https://politicheck.es/29n-programas",
+  "Posiciones de Sumar/Frente Amplio para el 29N (Política Electoral): https://www.politicaelectoral.com/es/espana/generales-2026/nacional/sumar"
+ ],
+ "caption": "🤯 ¿Qué propone Sumar con la inmigración?\n🪪 Regularización extraordinaria, aprobada con el PSOE ✅\n📜 Una vía permanente para tener papeles 📝\n🚪 Cerrar los centros de internamiento (CIE) 📝\n🗳️ En el 29N va como Frente Amplio\n💬 ¿Qué opinas de la regularización permanente?\n➡️ Ep. 4/4 · Próxima serie: empleo y salarios · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: elDiario.es 2025, RD 316/2026 (BOE 15/04), programa de Sumar 2023 (pág. 104). ¿Ves un error? Dínoslo y lo corregimos.",
+ "hashtags": [
+  "#PizarraPública",
+  "#PolíticaParaPrincipiantes",
+  "#PolíticaEspañola",
+  "#Inmigración",
+  "#Elecciones29N",
+  "#Regularización",
+  "#Sumar"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "lines": [
+    "¿Qué propone Sumar con la inmigración? Te lo explico en un minuto."
+   ],
+   "tail": 0.3,
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿QUÉ HARÍA",
+     "x": 540,
+     "y": 440,
+     "size": 92,
+     "color": "ink",
+     "at": 0,
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "SUMAR",
+     "x": 540,
+     "y": 615,
+     "size": 160,
+     "color": "sumar",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "CON LA INMIGRACIÓN?",
+     "x": 540,
+     "y": 720,
+     "size": 80,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "circle",
+     "x": 540,
+     "y": 1010,
+     "rx": 180,
+     "color": "sumar",
+     "width": 18,
+     "at": "+0.05",
+     "dur": 0.36
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 540,
+     "y": 1010,
+     "scale": 1.275,
+     "at": "+0",
+     "dur": 0.3
+    }
+   ]
+  },
+  {
+   "id": "situacion",
+   "lines": [
+    "Sumar gobierna con el PSOE, pero no lleva Migraciones.",
+    "Para el 29 de noviembre se presenta como Frente Amplio."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "person",
+     "tie": true,
+     "accent": "light",
+     "x": 270,
+     "y": 600,
+     "scale": 0.95,
+     "at": "L0",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "EN EL\nGOBIERNO",
+     "x": 270,
+     "y": 830,
+     "size": 62,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 800,
+     "y": 600,
+     "scale": 1.0,
+     "at": "L1",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "con el PSOE\nsin el Ministerio de Migraciones",
+     "x": 800,
+     "y": 830,
+     "size": 50,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.1
+    },
+    {
+     "type": "highlight",
+     "x0": 200,
+     "x1": 880,
+     "y": 1130,
+     "width": 72,
+     "at": "L1@0.5",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "29N: Frente Amplio",
+     "x": 540,
+     "y": 1150,
+     "size": 74,
+     "color": "sumar",
+     "at": "+0",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "medida1",
+   "lines": [
+    "Uno: la regularización. Sumar la pedía desde 2025 y la aprobó en el Consejo de Ministros con el PSOE."
+   ],
+   "footnote": "Real Decreto 316/2026 (BOE 15/04/2026)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "sumar",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "1",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "sumar",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Regularización",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 540,
+     "y": 760,
+     "scale": 1.1,
+     "at": "L0@0.3",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "la pedía desde 2025",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "aprobada en el Gobierno con el PSOE",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "APROBADO",
+     "sub": "RD 316/2026 · con el PSOE",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida2",
+   "lines": [
+    "Dos: una «regularización permanente». Cambiar la Ley de Extranjería para que haya una vía estable de conseguir papeles, sin esperar a procesos extraordinarios."
+   ],
+   "footnote": "Programa de Sumar 2023, pág. 104",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "sumar",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "2",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "sumar",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "«Regularización permanente»",
+     "x": 240,
+     "y": 512,
+     "size": 61,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 540,
+     "y": 760,
+     "scale": 1.1,
+     "at": "L0@0.3",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "una vía estable para tener papeles",
+     "x": 540,
+     "y": 1010,
+     "size": 61,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "cambiando la Ley de Extranjería",
+     "x": 540,
+     "y": 1093,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "programa de 2023",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida3",
+   "lines": [
+    "Tres: cerrar los centros de internamiento de extranjeros, los CIE, donde se retiene a personas pendientes de expulsión."
+   ],
+   "footnote": "Programa de Sumar 2023",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "sumar",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "3",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "sumar",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Cerrar los CIE",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "x": 540,
+     "y": 760,
+     "scale": 1.1,
+     "at": "L0@0.3",
+     "dur": 0.7,
+     "fill": "sumar"
+    },
+    {
+     "type": "text",
+     "text": "centros de internamiento de extranjeros",
+     "x": 540,
+     "y": 1010,
+     "size": 53,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "retienen a personas pendientes de expulsión",
+     "x": 540,
+     "y": 1085,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "programa de 2023",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "ojo",
+   "lines": [
+    "Ojo: las medidas dos y tres son de su programa de 2023. El del Frente Amplio se presenta el 17 de octubre."
+   ],
+   "footnote": "Politicheck, 08/10/2026",
+   "elements": [
+    {
+     "type": "highlight",
+     "x0": 390,
+     "x1": 690,
+     "y": 500,
+     "width": 90,
+     "at": "L0",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "¡OJO!",
+     "x": 540,
+     "y": 540,
+     "size": 140,
+     "color": "ink",
+     "at": "+0",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "calendar",
+     "x": 540,
+     "y": 770,
+     "scale": 1.0,
+     "at": "+0.05",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "las medidas 2 y 3 son de 2023",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.35",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "el Frente Amplio presenta programa el 17/10",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "resumen",
+   "lines": [
+    "En resumen: más vías para tener papeles y más derechos."
+   ],
+   "footnote": "Programa de Sumar 2023 · RD 316/2026",
+   "elements": [
+    {
+     "type": "text",
+     "text": "EN UNA FRASE",
+     "x": 540,
+     "y": 500,
+     "size": 70,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "bubble",
+     "x": 540,
+     "y": 700,
+     "scale": 0.9,
+     "at": "+0.05",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "más vías para tener papeles",
+     "x": 540,
+     "y": 960,
+     "size": 76,
+     "color": "sumar",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "text",
+     "text": "y más derechos",
+     "x": 540,
+     "y": 1120,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.6",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "programa de 2023",
+     "x": 540,
+     "y": 1260,
+     "w": 440,
+     "h": 120,
+     "size": 48,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "lines": [
+    "Su programa para el 29 de noviembre se presenta el 17 de octubre.",
+    "Aquí acaba la serie de inmigración.",
+    "En la próxima: empleo y salarios."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "calendar",
+     "x": 200,
+     "y": 540,
+     "scale": 0.8,
+     "at": "L0",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "Programa 29N:",
+     "x": 360,
+     "y": 520,
+     "size": 70,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "se presenta el 17/10",
+     "x": 360,
+     "y": 600,
+     "size": 60,
+     "color": "gray",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "body",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "FIN DE LA SERIE",
+     "x": 540,
+     "y": 820,
+     "size": 74,
+     "color": "ink",
+     "at": "L1",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "circle",
+     "x": 210,
+     "y": 1010,
+     "rx": 72,
+     "color": "psoe",
+     "width": 7,
+     "at": "+0.02",
+     "dur": 0.24
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 210,
+     "y": 1010,
+     "scale": 0.51,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "circle",
+     "x": 430,
+     "y": 1010,
+     "rx": 72,
+     "color": "pp",
+     "width": 7,
+     "at": "+0.02",
+     "dur": 0.24
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 430,
+     "y": 1010,
+     "scale": 0.51,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "circle",
+     "x": 650,
+     "y": 1010,
+     "rx": 72,
+     "color": "vox",
+     "width": 7,
+     "at": "+0.02",
+     "dur": 0.24
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 650,
+     "y": 1010,
+     "scale": 0.51,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "circle",
+     "x": 870,
+     "y": 1010,
+     "rx": 72,
+     "color": "sumar",
+     "width": 7,
+     "at": "+0.02",
+     "dur": 0.24
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 870,
+     "y": 1010,
+     "scale": 0.51,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "text",
+     "text": "Serie 4:",
+     "x": 540,
+     "y": 1230,
+     "size": 64,
+     "color": "gray",
+     "at": "L2",
+     "dur": 0.3,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "EMPLEO Y SALARIOS",
+     "x": 540,
+     "y": 1330,
+     "size": 102,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  }
+ ]
+}

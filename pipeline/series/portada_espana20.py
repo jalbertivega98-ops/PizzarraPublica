@@ -16,6 +16,10 @@ TEMAS = {
                      foot="datos oficiales, con fuente",
                      points=[(2006, 1990.5, "1.990"), (2008, 2101.4, "2.101"), (2014, 1455.8, "1.456"), (2026, 2355, "2.355")],
                      lo=1100, hi=2450),
+    "impuestos": dict(top="¿CÓMO HAN CAMBIADO", big="TUS IMPUESTOS", big_size=138, bottom="DE 2006 A 2026?",
+                      foot="datos oficiales, con fuente",
+                      points=[(2006, 179380, "179"), (2007, 200676, "201"), (2009, 144023, "144"), (2025, 325356, "325 mil M€")],
+                      lo=100000, hi=360000),
 }
 
 
@@ -35,7 +39,7 @@ def cover(tema, out_dir):
     rng = np.random.default_rng(3)
     for sp in [
         {"type": "text", "text": d["top"], "x": 540, "y": 640, "size": 98},
-        {"type": "text", "text": d["big"], "x": 540, "y": 830, "size": 170, "color": "red"},
+        {"type": "text", "text": d["big"], "x": 540, "y": 830, "size": d.get("big_size", 170), "color": "red"},
         {"type": "text", "text": d["bottom"], "x": 540, "y": 960, "size": 96},
         {"type": "text", "text": d["foot"], "font": "body", "x": 540, "y": 1560, "size": 62, "color": "gray"},
     ]:

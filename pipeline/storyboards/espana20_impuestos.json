@@ -443,7 +443,7 @@
     "En total, España recauda el 37,8 % de su PIB. La media del euro, el 40,3.",
     "Pero sobre el trabajo pagamos más: el 41 % del coste de un sueldo, frente al 35 de la OCDE."
    ],
-   "footnote": "Comisión Europea, informe de fiscalidad 2026 (dato 2025)\n· OCDE, Taxing Wages 2026",
+   "footnote": "Comisión Europea, fiscalidad 2026 (dato 2025) · OCDE, Taxing Wages 2026",
    "elements": [
     {
      "type": "text",
@@ -461,7 +461,7 @@
      "type": "text",
      "text": "TODO (sobre el PIB)",
      "x": 540,
-     "y": 600,
+     "y": 570,
      "size": 60,
      "color": "gray",
      "at": "L1",
@@ -473,7 +473,7 @@
      "type": "text",
      "text": "España",
      "x": 140,
-     "y": 700,
+     "y": 660,
      "size": 58,
      "color": "ink",
      "at": "L1@0.2",
@@ -485,7 +485,7 @@
      "type": "text",
      "text": "37,8 %",
      "x": 940,
-     "y": 700,
+     "y": 660,
      "size": 68,
      "color": "blue",
      "at": "+0.02",
@@ -497,7 +497,7 @@
      "type": "gauge",
      "box": [
       140,
-      730,
+      690,
       800,
       80
      ],
@@ -511,7 +511,7 @@
      "type": "text",
      "text": "zona euro",
      "x": 140,
-     "y": 870,
+     "y": 810,
      "size": 58,
      "color": "ink",
      "at": "L1@0.55",
@@ -523,7 +523,7 @@
      "type": "text",
      "text": "40,3 %",
      "x": 940,
-     "y": 870,
+     "y": 810,
      "size": 68,
      "color": "gray",
      "at": "+0.02",
@@ -535,7 +535,7 @@
      "type": "gauge",
      "box": [
       140,
-      900,
+      840,
       800,
       80
      ],
@@ -549,7 +549,7 @@
      "type": "text",
      "text": "TRABAJO (sobre un sueldo)",
      "x": 540,
-     "y": 1050,
+     "y": 980,
      "size": 60,
      "color": "gray",
      "at": "L2",
@@ -561,7 +561,7 @@
      "type": "text",
      "text": "España",
      "x": 140,
-     "y": 1140,
+     "y": 1070,
      "size": 58,
      "color": "ink",
      "at": "L2@0.25",
@@ -573,7 +573,7 @@
      "type": "text",
      "text": "41,4 %",
      "x": 940,
-     "y": 1140,
+     "y": 1070,
      "size": 68,
      "color": "red",
      "at": "+0.02",
@@ -585,7 +585,7 @@
      "type": "gauge",
      "box": [
       140,
-      1170,
+      1100,
       800,
       80
      ],
@@ -599,7 +599,7 @@
      "type": "text",
      "text": "OCDE",
      "x": 140,
-     "y": 1300,
+     "y": 1220,
      "size": 58,
      "color": "ink",
      "at": "L2@0.6",
@@ -611,7 +611,7 @@
      "type": "text",
      "text": "35,1 %",
      "x": 940,
-     "y": 1300,
+     "y": 1220,
      "size": 68,
      "color": "gray",
      "at": "+0.02",
@@ -623,9 +623,9 @@
      "type": "gauge",
      "box": [
       140,
-      1320,
+      1250,
       800,
-      70
+      80
      ],
      "value": 35.1,
      "max": 50,

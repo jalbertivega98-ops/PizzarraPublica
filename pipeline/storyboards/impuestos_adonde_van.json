@@ -131,7 +131,7 @@
      "dur": 0.9,
      "bars": [
       {
-       "label": "protección\nsocial",
+       "label": "social",
        "value": 41,
        "color": "blue",
        "value_label": "41 €"
@@ -184,24 +184,24 @@
     "Y 5 euros, solo a pagar los intereses de la deuda.",
     "Más que defensa, vivienda y medio ambiente juntos."
    ],
-   "footnote": "IGAE 2024: intereses 38.793 M€ · defensa 14.233 + vivienda 7.613\n+ medio ambiente 15.539 = 37.385 M€",
+   "footnote": "IGAE 2024: defensa 14.233 + vivienda 7.613 + medio ambiente 15.539 M€",
    "elements": [
     {
      "type": "circle",
      "x": 540,
-     "y": 640,
-     "rx": 132,
+     "y": 560,
+     "rx": 120,
      "color": "red",
-     "width": 13,
+     "width": 12,
      "at": "L0",
      "dur": 0.3
     },
     {
      "type": "icon",
      "name": "euro",
-     "x": 531.2,
-     "y": 640,
-     "scale": 1.1,
+     "x": 532.0,
+     "y": 560,
+     "scale": 1.0,
      "at": "+0",
      "dur": 0.25
     },
@@ -210,7 +210,7 @@
      "text": "INTERESES",
      "sub": "de la deuda · 5 €",
      "x": 540,
-     "y": 870,
+     "y": 770,
      "w": 520,
      "h": 140,
      "size": 60,
@@ -222,8 +222,8 @@
     {
      "type": "bars",
      "x": 180,
-     "y": 1340,
-     "h": 260,
+     "y": 1240,
+     "h": 240,
      "bar_w": 230,
      "gap": 60,
      "max": 38793,
@@ -241,8 +241,8 @@
     {
      "type": "bars",
      "x": 670,
-     "y": 1340,
-     "h": 260,
+     "y": 1240,
+     "h": 240,
      "bar_w": 230,
      "gap": 60,
      "max": 38793,
@@ -250,7 +250,7 @@
      "dur": 0.9,
      "bars": [
       {
-       "label": "defensa +\nvivienda +\nmedio amb.",
+       "label": "los 3 juntos",
        "value": 37385,
        "color": "gray",
        "value_label": "37.385 M€"
@@ -414,7 +414,7 @@
      "type": "bars",
      "x": 180,
      "y": 1100,
-     "h": 560,
+     "h": 440,
      "bar_w": 230,
      "gap": 60,
      "max": 48.1,
@@ -433,7 +433,7 @@
      "type": "bars",
      "x": 670,
      "y": 1100,
-     "h": 560,
+     "h": 440,
      "bar_w": 230,
      "gap": 60,
      "max": 48.1,

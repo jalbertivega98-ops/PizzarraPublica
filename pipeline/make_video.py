@@ -33,14 +33,15 @@ TRANSITION = 0.3
 def tts_elevenlabs(story, workdir):
     """Frases ya generadas con ElevenLabs (tts_elevenlabs.py, en GitHub Actions) y guardadas en voces_elevenlabs/."""
     import subprocess
-    from tts_elevenlabs import CACHE, MODEL, key, line_text
+    from tts_elevenlabs import CACHE, MODEL, edge_model, key, line_text
 
     vcfg = story["voice"]
     sr, out, missing = 44100, [], []
     for si, sc in enumerate(story["scenes"]):
         for li, line in enumerate(sc["lines"]):
             text = line_text(line)
-            path = os.path.join(CACHE, key(vcfg["voice_id"], vcfg.get("model", MODEL), text) + ".mp3")
+            model = vcfg.get("model") or (edge_model() if vcfg["engine"] == "edge" else MODEL)
+            path = os.path.join(CACHE, key(vcfg["voice_id"], model, text) + ".mp3")
             if not os.path.exists(path):
                 missing.append(text)
                 continue
@@ -52,12 +53,12 @@ def tts_elevenlabs(story, workdir):
                 pcm = pcm[max(0, nz[0] - int(0.03 * sr)): nz[-1] + int(0.08 * sr)]
             out.append((si, li, pcm))
     if missing:
-        sys.exit(f"Faltan {len(missing)} frases de ElevenLabs; ejecuta la acción «Voces ElevenLabs». Primera: {missing[0]}")
+        sys.exit(f"Faltan {len(missing)} frases ({vcfg['engine']}); ejecuta la acción «Voces ElevenLabs». Primera: {missing[0]}")
     return out, sr
 
 
 def tts_lines(story, workdir):
-    if story.get("voice", {}).get("engine") == "elevenlabs":
+    if story.get("voice", {}).get("engine") in ("elevenlabs", "edge"):
         return tts_elevenlabs(story, workdir)
     from piper import PiperVoice, SynthesisConfig
 

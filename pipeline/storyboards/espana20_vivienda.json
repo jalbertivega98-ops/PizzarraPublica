@@ -69,7 +69,7 @@
      "dur": 0.3,
      "font": "hand",
      "align": "center",
-     "out": "L1"
+     "out": "L1-0.3"
     },
     {
      "type": "counter",
@@ -85,7 +85,7 @@
      "sep": true,
      "prefix": "",
      "suffix": "",
-     "out": "L1"
+     "out": "L1-0.3"
     },
     {
      "type": "text",
@@ -291,8 +291,8 @@
      "type": "stamp",
      "text": "BURBUJA",
      "sub": null,
-     "x": 520,
-     "y": 640,
+     "x": 600,
+     "y": 610,
      "w": 360,
      "h": 110,
      "size": 56,

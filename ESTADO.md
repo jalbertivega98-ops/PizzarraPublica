@@ -11,6 +11,6 @@
 
 Se comprueba cada 10 minutos, así que cada reel sale entre la hora programada y unos 15 minutos después.
 
-🔔 Cada publicación o fallo deja un aviso en el issue [📣 Avisos de publicación](https://github.com/jalbertivega98-ops/pizzarrapublica/issues) y GitHub te lo notifica en el móvil.
+🔔 Cada publicación o fallo deja un aviso en el issue [📣 Avisos de publicación](https://github.com/jalbertivega98-ops/PizzarraPublica/issues) y GitHub te lo notifica en el móvil.
 
 Para cambiar fechas, añadir reels o pausar uno, edita [publicar/calendario.json](publicar/calendario.json) o pídeselo a Claude.

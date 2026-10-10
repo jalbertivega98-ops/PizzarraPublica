@@ -36,13 +36,51 @@
   {
    "id": "gancho",
    "lines": [
+    "IVA cero en la carne, el pescado y la leche.",
     {
-     "tts": "¿Qué propone el pepé con tus impuestos? Te lo explico en un minuto.",
-     "text": "¿Qué propone el PP con tus impuestos? Te lo explico en un minuto."
+     "tts": "Es lo que propone el pepé. Y hay más.",
+     "text": "Es lo que propone el PP. Y hay más."
     }
    ],
    "tail": 0.3,
    "elements": [
+    {
+     "type": "text",
+     "text": "IVA 0 %",
+     "x": 540,
+     "y": 700,
+     "size": 230,
+     "color": "pp",
+     "at": 0,
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center",
+     "out": "L1-0.15"
+    },
+    {
+     "type": "text",
+     "text": "en carne, pescado y leche",
+     "x": 540,
+     "y": 860,
+     "size": 76,
+     "color": "ink",
+     "at": 0.15,
+     "dur": 0.4,
+     "font": "body",
+     "align": "center",
+     "out": "L1-0.15"
+    },
+    {
+     "type": "underline",
+     "x0": 160,
+     "x1": 920,
+     "y": 905,
+     "color": "pp",
+     "width": 10,
+     "at": 0.4,
+     "dur": 0.3,
+     "out": "L1-0.15"
+    },
     {
      "type": "text",
      "text": "¿QUÉ HARÍA",
@@ -50,8 +88,8 @@
      "y": 440,
      "size": 92,
      "color": "ink",
-     "at": 0,
-     "dur": 0.6,
+     "at": "L1",
+     "dur": 0.4,
      "font": "hand",
      "align": "center"
     },
@@ -62,8 +100,8 @@
      "y": 615,
      "size": 160,
      "color": "pp",
-     "at": "+0.05",
-     "dur": 0.5,
+     "at": "+0.03",
+     "dur": 0.35,
      "font": "hand",
      "align": "center"
     },
@@ -74,8 +112,8 @@
      "y": 720,
      "size": 80,
      "color": "ink",
-     "at": "+0.05",
-     "dur": 0.45,
+     "at": "+0.03",
+     "dur": 0.35,
      "font": "hand",
      "align": "center"
     },
@@ -86,8 +124,8 @@
      "rx": 180,
      "color": "pp",
      "width": 18,
-     "at": "+0.05",
-     "dur": 0.36
+     "at": "+0.03",
+     "dur": 0.27
     },
     {
      "type": "icon",
@@ -96,7 +134,7 @@
      "y": 1010,
      "scale": 1.5,
      "at": "+0",
-     "dur": 0.3
+     "dur": 0.225
     }
    ]
   },

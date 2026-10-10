@@ -24,6 +24,18 @@ def coin(color, x, y, scale=1.0, at="+0.05", dur=0.6):
 
 def sc_gancho(p):
     top, big, bottom = p["hook"]
+    if "hook_data" in p:
+        # Arranca con el dato más fuerte en grande y luego pasa a la pregunta de siempre (la de la portada).
+        dbig, dsub, l_data, l_bridge = p["hook_data"]
+        return dict(id="gancho", lines=[l_data, l_bridge], tail=0.3, elements=[
+            T(dbig, 540, 700, fit(dbig, 230, 960), color=p["color"], at=0, dur=0.4, out="L1-0.15"),
+            T(dsub, 540, 860, fit(dsub, 76, 960), font="body", at=0.15, dur=0.4, out="L1-0.15"),
+            dict(type="underline", x0=160, x1=920, y=905, color=p["color"], width=10, at=0.4, dur=0.3, out="L1-0.15"),
+            T(top, 540, 440, 92, at="L1", dur=0.4),
+            T(big, 540, 615, fit(big, 160, 900), color=p["color"], at="+0.03", dur=0.35),
+            T(bottom, 540, 720, 80, at="+0.03", dur=0.35),
+            *coin(p["color"], 540, 1010, 1.5, at="+0.03", dur=0.45),
+        ])
     return dict(id="gancho", lines=[p["l_hook"]], tail=0.3, elements=[
         T(top, 540, 440, 92, at=0, dur=0.6),
         T(big, 540, 615, fit(big, 160, 900), color=p["color"], at="+0.05", dur=0.5),
@@ -101,6 +113,8 @@ PSOE = dict(
     ep=1, slug="impuestos_ep1_psoe", name="PSOE", color="psoe", next=("PP", "pp"), programa="aún sin publicar",
     title="Impuestos · Ep. 1/3 · ¿Qué propone el PSOE?",
     hook=("¿QUÉ HACE", "EL PSOE", "CON TUS IMPUESTOS?"),
+    hook_data=("0 € DE IRPF", "si cobras 17.094 € al año", "Si cobras 17.094 euros al año, en 2026 no pagas ni un euro de IRPF.",
+               L("Esto es lo que ha hecho el PSOE con tus impuestos.", "Esto es lo que ha hecho el Pesoe con tus impuestos.")),
     l_hook=L("¿Qué ha hecho y qué promete el PSOE con tus impuestos? Te lo explico en un minuto.",
              "¿Qué ha hecho y qué promete el Pesoe con tus impuestos? Te lo explico en un minuto."),
     situ=("EN EL\nGOBIERNO", "con Sumar\nMinisterio de Hacienda", "aprobado + promesas"),
@@ -143,6 +157,8 @@ PP = dict(
     ep=2, slug="impuestos_ep2_pp", name="PP", color="pp", next=("VOX", "vox"), programa="aún sin publicar",
     title="Impuestos · Ep. 2/3 · ¿Qué propone el PP?",
     hook=("¿QUÉ HARÍA", "EL PP", "CON TUS IMPUESTOS?"),
+    hook_data=("IVA 0 %", "en carne, pescado y leche", "IVA cero en la carne, el pescado y la leche.",
+               L("Es lo que propone el PP. Y hay más.", "Es lo que propone el pepé. Y hay más.")),
     l_hook=L("¿Qué propone el PP con tus impuestos? Te lo explico en un minuto.", "¿Qué propone el pepé con tus impuestos? Te lo explico en un minuto."),
     situ=("EN LA\nOPOSICIÓN", "decálogo económico\nseptiembre de 2026", "propuestas, no leyes"),
     l_situ=[L("El PP está en la oposición en el Congreso.", "El pepé está en la oposición en el Congreso."),
@@ -184,6 +200,8 @@ VOX = dict(
     ep=3, slug="impuestos_ep3_vox", name="VOX", color="vox", next=("CARA A CARA", None), programa="aún sin publicar",
     title="Impuestos · Ep. 3/3 · ¿Qué propone Vox?",
     hook=("¿QUÉ HARÍA", "VOX", "CON TUS IMPUESTOS?"),
+    hook_data=("0 € DE IRPF", "si ganas menos de 22.000 €", "No pagar IRPF si ganas menos de 22.000 euros.",
+               "Es lo que propone Vox. Según sus propias cuentas, costaría 40.000 millones."),
     l_hook="¿Qué propone Vox con tus impuestos? Te lo explico en un minuto.",
     situ=("EN LA\nOPOSICIÓN", "programa económico\ny de vivienda", "propuestas, no leyes"),
     l_situ=["Vox está en la oposición en el Congreso.",

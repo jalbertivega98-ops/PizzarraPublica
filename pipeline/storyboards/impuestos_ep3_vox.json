@@ -36,10 +36,48 @@
   {
    "id": "gancho",
    "lines": [
-    "¿Qué propone Vox con tus impuestos? Te lo explico en un minuto."
+    "No pagar IRPF si ganas menos de 22.000 euros.",
+    "Es lo que propone Vox. Según sus propias cuentas, costaría 40.000 millones."
    ],
    "tail": 0.3,
    "elements": [
+    {
+     "type": "text",
+     "text": "0 € DE IRPF",
+     "x": 540,
+     "y": 700,
+     "size": 173,
+     "color": "vox",
+     "at": 0,
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center",
+     "out": "L1-0.15"
+    },
+    {
+     "type": "text",
+     "text": "si ganas menos de 22.000 €",
+     "x": 540,
+     "y": 860,
+     "size": 76,
+     "color": "ink",
+     "at": 0.15,
+     "dur": 0.4,
+     "font": "body",
+     "align": "center",
+     "out": "L1-0.15"
+    },
+    {
+     "type": "underline",
+     "x0": 160,
+     "x1": 920,
+     "y": 905,
+     "color": "vox",
+     "width": 10,
+     "at": 0.4,
+     "dur": 0.3,
+     "out": "L1-0.15"
+    },
     {
      "type": "text",
      "text": "¿QUÉ HARÍA",
@@ -47,8 +85,8 @@
      "y": 440,
      "size": 92,
      "color": "ink",
-     "at": 0,
-     "dur": 0.6,
+     "at": "L1",
+     "dur": 0.4,
      "font": "hand",
      "align": "center"
     },
@@ -59,8 +97,8 @@
      "y": 615,
      "size": 160,
      "color": "vox",
-     "at": "+0.05",
-     "dur": 0.5,
+     "at": "+0.03",
+     "dur": 0.35,
      "font": "hand",
      "align": "center"
     },
@@ -71,8 +109,8 @@
      "y": 720,
      "size": 80,
      "color": "ink",
-     "at": "+0.05",
-     "dur": 0.45,
+     "at": "+0.03",
+     "dur": 0.35,
      "font": "hand",
      "align": "center"
     },
@@ -83,8 +121,8 @@
      "rx": 180,
      "color": "vox",
      "width": 18,
-     "at": "+0.05",
-     "dur": 0.36
+     "at": "+0.03",
+     "dur": 0.27
     },
     {
      "type": "icon",
@@ -93,7 +131,7 @@
      "y": 1010,
      "scale": 1.5,
      "at": "+0",
-     "dur": 0.3
+     "dur": 0.225
     }
    ]
   },

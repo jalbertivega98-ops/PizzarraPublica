@@ -1,0 +1,713 @@
+{
+ "slug": "impuestos_comparativa",
+ "title": "Impuestos · Los tres, cara a cara",
+ "series_tag": "IMPUESTOS · CARA A CARA",
+ "accent": "ink",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "edge",
+  "voice_id": "es-ES-AlvaroNeural"
+ },
+ "music_volume": 0.15,
+ "music_bpm": 96,
+ "scribble_volume": 0.05,
+ "end_hold": 0.9,
+ "line_gap": 0.1,
+ "sources": [],
+ "caption": "⚖️ Impuestos: PSOE, PP y Vox, cara a cara\n💶 IRPF: 0 € con el SMI ✅ · tramos con la inflación 📝 · 0 € hasta 22.000 📝\n🛒 IVA: 10 % pisos turísticos ⏳ · 0 % alimentos básicos 📝 · general al 18 % 📝\n🔢 ¿Coste? PSOE y PP no dan cifras; Vox calcula 40.000 M€\n💬 ¿Con cuál te quedas?\n➡️ Próximo: ¿adónde van tus impuestos? · Síguenos para no perderte el siguiente\n📚 Fuentes: Hacienda 17/02, RDL 29/2026 (BOE 07/10), decálogo del PP, programa de Vox (págs. 36-37), Forbes 05/10.",
+ "pinned_comment": "📚 Fuentes: Hacienda 17/02, RDL 29/2026 (BOE 07/10), decálogo del PP, programa de Vox (págs. 36-37), Forbes 05/10.",
+ "hashtags": [
+  "#PizarraPública",
+  "#PolíticaEspañola",
+  "#Elecciones29N",
+  "#Impuestos",
+  "#AprendeEnTikTok",
+  "#PSOE",
+  "#PP",
+  "#Vox"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "lines": [
+    "PSOE, PP y Vox: qué harían con tus impuestos, cara a cara."
+   ],
+   "tail": 0.3,
+   "elements": [
+    {
+     "type": "text",
+     "text": "IMPUESTOS",
+     "x": 540,
+     "y": 470,
+     "size": 100,
+     "color": "ink",
+     "at": 0,
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "circle",
+     "x": 200,
+     "y": 760,
+     "rx": 102,
+     "color": "psoe",
+     "width": 10,
+     "at": "+0.02",
+     "dur": 0.27
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 193.2,
+     "y": 760,
+     "scale": 0.85,
+     "at": "+0",
+     "dur": 0.225
+    },
+    {
+     "type": "circle",
+     "x": 540,
+     "y": 760,
+     "rx": 102,
+     "color": "pp",
+     "width": 10,
+     "at": "+0.02",
+     "dur": 0.27
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 533.2,
+     "y": 760,
+     "scale": 0.85,
+     "at": "+0",
+     "dur": 0.225
+    },
+    {
+     "type": "circle",
+     "x": 880,
+     "y": 760,
+     "rx": 102,
+     "color": "vox",
+     "width": 10,
+     "at": "+0.02",
+     "dur": 0.27
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 873.2,
+     "y": 760,
+     "scale": 0.85,
+     "at": "+0",
+     "dur": 0.225
+    },
+    {
+     "type": "text",
+     "text": "CARA A CARA",
+     "x": 540,
+     "y": 1120,
+     "size": 140,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "irpf",
+   "lines": [
+    "Primero, el IRPF.",
+    "El PSOE ya ha quitado el IRPF a quien cobra el salario mínimo.",
+    "El PP lo actualizaría con la inflación y duplicaría la rebaja por hijo.",
+    "Vox: 0 euros hasta 22.000, y luego un 15 o un 25 %."
+   ],
+   "footnote": "Hacienda 17/02/2026 · decálogo económico del PP · programa de Vox, págs. 36-37",
+   "elements": [
+    {
+     "type": "text",
+     "text": "IRPF",
+     "x": 540,
+     "y": 450,
+     "size": 120,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "PSOE",
+     "x": 200,
+     "y": 610,
+     "size": 74,
+     "color": "psoe",
+     "at": "L1",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "underline",
+     "x0": 80,
+     "x1": 320,
+     "y": 635,
+     "color": "psoe",
+     "width": 8,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "text",
+     "text": "0 € si cobras\nel salario mínimo",
+     "x": 200,
+     "y": 730,
+     "size": 46,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.6,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.15
+    },
+    {
+     "type": "stamp",
+     "text": "APROBADO",
+     "sub": "Congreso · 03/2026",
+     "x": 200,
+     "y": 1080,
+     "w": 300,
+     "h": 100,
+     "size": 38,
+     "color": "ink",
+     "rotate": -6,
+     "at": "L1@0.6",
+     "dur": 0.55
+    },
+    {
+     "type": "text",
+     "text": "PP",
+     "x": 540,
+     "y": 610,
+     "size": 74,
+     "color": "pp",
+     "at": "L2",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "underline",
+     "x0": 420,
+     "x1": 660,
+     "y": 635,
+     "color": "pp",
+     "width": 8,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "text",
+     "text": "tramos con\nla inflación\ny el doble\npor hijo",
+     "x": 540,
+     "y": 730,
+     "size": 46,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.6,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.15
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "decálogo PP",
+     "x": 540,
+     "y": 1080,
+     "w": 300,
+     "h": 100,
+     "size": 38,
+     "color": "ink",
+     "rotate": -6,
+     "at": "L2@0.6",
+     "dur": 0.55
+    },
+    {
+     "type": "text",
+     "text": "VOX",
+     "x": 880,
+     "y": 610,
+     "size": 74,
+     "color": "vox",
+     "at": "L3",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "underline",
+     "x0": 760,
+     "x1": 1000,
+     "y": 635,
+     "color": "vox",
+     "width": 8,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "text",
+     "text": "0 € hasta\n22.000 €;\nluego 15 % y 25 %",
+     "x": 880,
+     "y": 730,
+     "size": 46,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.6,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.15
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "programa Vox",
+     "x": 880,
+     "y": 1080,
+     "w": 300,
+     "h": 100,
+     "size": 38,
+     "color": "ink",
+     "rotate": -6,
+     "at": "L3@0.6",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "iva",
+   "lines": [
+    "Segundo, el IVA.",
+    "El PSOE sube al 10 % el de los pisos turísticos.",
+    "El PP lo bajaría a cero en alimentos básicos.",
+    "Vox bajaría el general del 21 al 18 %."
+   ],
+   "footnote": "RDL 29/2026 (BOE 07/10/2026) · decálogo económico del PP · programa de Vox, pág. 37",
+   "elements": [
+    {
+     "type": "text",
+     "text": "IVA",
+     "x": 540,
+     "y": 450,
+     "size": 120,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "PSOE",
+     "x": 200,
+     "y": 610,
+     "size": 74,
+     "color": "psoe",
+     "at": "L1",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "underline",
+     "x0": 80,
+     "x1": 320,
+     "y": 635,
+     "color": "psoe",
+     "width": 8,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "text",
+     "text": "10 % a los\npisos turísticos",
+     "x": 200,
+     "y": 730,
+     "size": 46,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.6,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.15
+    },
+    {
+     "type": "stamp",
+     "text": "PENDIENTE",
+     "sub": "RDL 29/2026",
+     "x": 200,
+     "y": 1080,
+     "w": 300,
+     "h": 100,
+     "size": 38,
+     "color": "ink",
+     "rotate": -6,
+     "at": "L1@0.6",
+     "dur": 0.55
+    },
+    {
+     "type": "text",
+     "text": "PP",
+     "x": 540,
+     "y": 610,
+     "size": 74,
+     "color": "pp",
+     "at": "L2",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "underline",
+     "x0": 420,
+     "x1": 660,
+     "y": 635,
+     "color": "pp",
+     "width": 8,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "text",
+     "text": "0 % en\nalimentos\nbásicos",
+     "x": 540,
+     "y": 730,
+     "size": 46,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.6,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.15
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "decálogo PP",
+     "x": 540,
+     "y": 1080,
+     "w": 300,
+     "h": 100,
+     "size": 38,
+     "color": "ink",
+     "rotate": -6,
+     "at": "L2@0.6",
+     "dur": 0.55
+    },
+    {
+     "type": "text",
+     "text": "VOX",
+     "x": 880,
+     "y": 610,
+     "size": 74,
+     "color": "vox",
+     "at": "L3",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "underline",
+     "x0": 760,
+     "x1": 1000,
+     "y": 635,
+     "color": "vox",
+     "width": 8,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "text",
+     "text": "general:\ndel 21 % al 18 %",
+     "x": 880,
+     "y": 730,
+     "size": 46,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.6,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.15
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "programa Vox",
+     "x": 880,
+     "y": 1080,
+     "w": 300,
+     "h": 100,
+     "size": 38,
+     "color": "ink",
+     "rotate": -6,
+     "at": "L3@0.6",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "¿coste?",
+   "lines": [
+    "Y la gran pregunta: ¿cuánto cuesta?",
+    "El PSOE no da cifras de sus promesas.",
+    "El PP, tampoco.",
+    "Vox calcula 40.000 millones, solo en el IRPF."
+   ],
+   "footnote": "Forbes 05/10/2026 · programa de Vox, pág. 37",
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿COSTE?",
+     "x": 540,
+     "y": 450,
+     "size": 120,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "PSOE",
+     "x": 200,
+     "y": 610,
+     "size": 74,
+     "color": "psoe",
+     "at": "L1",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "underline",
+     "x0": 80,
+     "x1": 320,
+     "y": 635,
+     "color": "psoe",
+     "width": 8,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "text",
+     "text": "sin cifras",
+     "x": 200,
+     "y": 730,
+     "size": 46,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.6,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.15
+    },
+    {
+     "type": "text",
+     "text": "PP",
+     "x": 540,
+     "y": 610,
+     "size": 74,
+     "color": "pp",
+     "at": "L2",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "underline",
+     "x0": 420,
+     "x1": 660,
+     "y": 635,
+     "color": "pp",
+     "width": 8,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "text",
+     "text": "sin cifras",
+     "x": 540,
+     "y": 730,
+     "size": 46,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.6,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.15
+    },
+    {
+     "type": "text",
+     "text": "VOX",
+     "x": 880,
+     "y": 610,
+     "size": 74,
+     "color": "vox",
+     "at": "L3",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "underline",
+     "x0": 760,
+     "x1": 1000,
+     "y": 635,
+     "color": "vox",
+     "width": 8,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "text",
+     "text": "40.000 M€\nsolo el IRPF\n(cálculo de Vox)",
+     "x": 880,
+     "y": 730,
+     "size": 46,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.6,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.15
+    },
+    {
+     "type": "stamp",
+     "text": "ESTIMACIÓN",
+     "sub": "del propio partido",
+     "x": 880,
+     "y": 1080,
+     "w": 300,
+     "h": 100,
+     "size": 38,
+     "color": "ink",
+     "rotate": -6,
+     "at": "L3@0.6",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "lines": [
+    "¿Con cuál te quedas? Comenta.",
+    "Mañana: adónde van tus impuestos."
+   ],
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿CON CUÁL\nTE QUEDAS?",
+     "x": 540,
+     "y": 520,
+     "size": 120,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "circle",
+     "x": 200,
+     "y": 860,
+     "rx": 84,
+     "color": "psoe",
+     "width": 8,
+     "at": "+0.02",
+     "dur": 0.21
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 194.4,
+     "y": 860,
+     "scale": 0.7,
+     "at": "+0",
+     "dur": 0.175
+    },
+    {
+     "type": "circle",
+     "x": 540,
+     "y": 860,
+     "rx": 84,
+     "color": "pp",
+     "width": 8,
+     "at": "+0.02",
+     "dur": 0.21
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 534.4,
+     "y": 860,
+     "scale": 0.7,
+     "at": "+0",
+     "dur": 0.175
+    },
+    {
+     "type": "circle",
+     "x": 880,
+     "y": 860,
+     "rx": 84,
+     "color": "vox",
+     "width": 8,
+     "at": "+0.02",
+     "dur": 0.21
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 874.4,
+     "y": 860,
+     "scale": 0.7,
+     "at": "+0",
+     "dur": 0.175
+    },
+    {
+     "type": "text",
+     "text": "PRÓXIMO",
+     "x": 540,
+     "y": 1130,
+     "size": 66,
+     "color": "gray",
+     "at": "L1",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "¿ADÓNDE VAN?",
+     "x": 540,
+     "y": 1260,
+     "size": 120,
+     "color": "blue",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  }
+ ]
+}

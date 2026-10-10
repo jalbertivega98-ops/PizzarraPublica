@@ -16,8 +16,8 @@ sys.path.insert(0, os.path.join(HERE, ".."))
 from vivienda import T  # noqa: E402
 
 
-def counter(frm, to, y, size=170, color="ink", at="+0.05", dur=1.2, decimals=0, sep=True, prefix="", suffix="", **kw):
-    return dict(type="counter", **{"from": frm}, to=to, x=540, y=y, size=size, color=color, at=at, dur=dur,
+def counter(frm, to, y, size=170, color="ink", at="+0.05", dur=1.2, decimals=0, sep=True, prefix="", suffix="", x=540, **kw):
+    return dict(type="counter", **{"from": frm}, to=to, x=x, y=y, size=size, color=color, at=at, dur=dur,
                 decimals=decimals, sep=sep, prefix=prefix, suffix=suffix, **kw)
 
 

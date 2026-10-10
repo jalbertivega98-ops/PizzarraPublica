@@ -185,6 +185,14 @@ def draw_subtitle(c, chunks, t, y=1520):
     c.restore()
 
 
+def publicacion_text(story):
+    """Descripción para Instagram + hashtags + comentario fijado con las fuentes."""
+    txt = story.get("caption", "").strip() + "\n\n" + " ".join(story.get("hashtags", [])) + "\n"
+    if story.get("pinned_comment"):
+        txt += "\n--- Comentario fijado ---\n" + story["pinned_comment"].strip() + "\n"
+    return txt
+
+
 # ------------------------------------------------------------------ render
 def draw_chrome(c, story, scene_spec, t, total):
     # barra de progreso
@@ -350,9 +358,7 @@ def main():
     mux(noaudio, vpath, mpath, spath, final, story)
     print("5/5 Textos…")
     with open(os.path.join(outdir, f"{slug}_publicacion.txt"), "w", encoding="utf-8") as f:
-        f.write(story.get("caption", "").strip() + "\n\n" + " ".join(story.get("hashtags", [])) + "\n")
-        if story.get("pinned_comment"):
-            f.write("\n--- Comentario fijado ---\n" + story["pinned_comment"].strip() + "\n")
+        f.write(publicacion_text(story))
     timing = [{"escena": s.get("id"), "inicio": round(tl["start"], 2), "fin": round(tl["end"], 2),
                "frases": [{"t0": round(l["t0"], 2), "t1": round(l["t1"], 2), "texto": l["text"]} for l in tl["lines"]]}
               for s, tl in zip(story["scenes"], scenes)]

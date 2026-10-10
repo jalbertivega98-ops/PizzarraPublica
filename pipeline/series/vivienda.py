@@ -164,11 +164,11 @@ def pinned(sources):
         "\n\n¿Ves un error? Dínoslo y lo corregimos con fecha."
 
 
-def caption(hook, context, steps, extra, nxt):
+def caption(hook, context, steps, extra, nxt, legend):
     return (f"🤯 {hook}\n\n👀 {context}\n👇 Te lo explico en 60 segundos:\n\n" + "\n".join(steps) +
-            f"\n\n⚡ Dato extra: {extra}\n\n💬 ¿Qué medida de vivienda te afecta más a ti? Te leo 👇\n\n"
-            f"➡️ {nxt}\n\n📌 Guárdalo para cuando alguien te pregunte\n🔁 Compártelo con quien lo necesite\n\n"
-            "📚 Fuentes en el comentario fijado\n\n✅ Aprobado · ⏳ Pendiente · 📝 Propuesta · ❌ Rechazada · 🔢 Estimación del partido")
+            f"\n\n⚡ Dato extra: {extra}\n\n💬 ¿Qué medida te afecta más? Te leo 👇\n\n➡️ {nxt}\n\n"
+            "📌 Guárdalo para cuando alguien te pregunte\n🔁 Compártelo con quien lo necesite\n\n"
+            f"📚 Fuentes en el comentario fijado\n{legend}")
 
 
 TAGS = ["#PizarraPública", "#PolíticaParaPrincipiantes", "#PolíticaEspañola", "#Vivienda", "#Elecciones29N", "#Alquiler"]
@@ -215,14 +215,15 @@ PSOE = dict(
     l_cierre=[CIERRE_29N, L("En el próximo episodio: qué propone el PP.", "En el próximo episodio: qué propone el pepé.")],
     sources=PSOE_SRC, pinned=pinned(PSOE_SRC), hashtags=TAGS + ["#PSOE"],
     caption=caption(
-        "¿Qué ha hecho el PSOE con la vivienda y qué promete para el 29N?",
-        "Gobierna con Sumar y lleva el Ministerio de Vivienda: aquí hay leyes aprobadas y también promesas.",
-        ["🏠 Ley de Vivienda (2023): las comunidades pueden declarar zonas tensionadas y contener el alquiler. ✅",
-         "💶 Plan Estatal de Vivienda 2026-2030: 7.000 millones entre el Estado y las comunidades. ✅",
-         "🔑 Decreto del 6 de octubre: freno a desahucios de personas vulnerables, límites a compras de grandes propietarios y préstamos al 0 % de hasta 50.000 € para la primera vivienda. ⏳ En vigor, pero pendiente de convalidar",
-         "📜 Promesa: alquileres indefinidos en su programa. 📝"],
-        "los préstamos TU CASA cubren hasta el 20 % del valor de la vivienda, con un máximo de 50.000 €, y se suman a la hipoteca del banco.",
-        "VIVIENDA · Ep. 1/4. Próximo episodio: qué propone el PP."),
+        "¿Qué ha hecho el PSOE con la vivienda?",
+        "Gobierna y lleva Vivienda: hay leyes aprobadas y promesas.",
+        ["🏠 Ley de Vivienda 2023: zonas tensionadas ✅",
+         "💶 Plan Estatal 2026-2030: 7.000 M€ ✅",
+         "🔑 Decreto del 6/10: freno a desahucios y préstamos al 0 % ⏳",
+         "📜 Promete alquileres indefinidos 📝"],
+        "los préstamos al 0 % cubren hasta el 20 % del piso (máx. 50.000 €).",
+        "Ep. 1/4 · Próximo: PP",
+        "✅ aprobado · ⏳ pendiente · 📝 propuesta"),
 )
 
 PP_SRC = [
@@ -262,13 +263,14 @@ PP = dict(
     sources=PP_SRC, pinned=pinned(PP_SRC), hashtags=TAGS + ["#PP"],
     caption=caption(
         "¿Qué propone el PP para la vivienda?",
-        "Está en la oposición en el Congreso: todo lo que verás son propuestas, no leyes.",
-        ["🏗️ Construir: crear las condiciones para levantar un millón de viviendas en 4 años, con más suelo y menos trámites. 📝",
-         "🔑 Comprar: avales públicos de hasta el 100 % de la hipoteca para jóvenes y una «Hucha Hogar» con desgravación para menores de 40. 📝",
-         "🏠 Alquiler: acabar con las zonas tensionadas y aprobar una ley antiokupación. 📝",
-         "🧾 Calcula que un joven se ahorraría entre 21.000 y 26.000 € en impuestos. 🔢 Estimación del propio partido"],
-        "con la Hucha Hogar Joven, los menores de 40 podrían ahorrar hasta 2.000 € al año con una deducción del 20 % en el IRPF, y el Estado avalaría la misma cantidad al comprar.",
-        "VIVIENDA · Ep. 2/4. Próximo episodio: qué propone Vox."),
+        "Está en la oposición: son propuestas, no leyes.",
+        ["🏗️ Un millón de viviendas en 4 años 📝",
+         "🔑 Avales de hasta el 100 % para jóvenes 📝",
+         "🏠 Fin de las zonas tensionadas y ley antiokupación 📝",
+         "🧾 Ahorro de 21.000-26.000 € en impuestos 🔢"],
+        "su «Hucha Hogar» permitiría a menores de 40 ahorrar 2.000 €/año con un 20 % de desgravación.",
+        "Ep. 2/4 · Próximo: Vox",
+        "📝 propuesta · 🔢 cálculo del propio partido"),
 )
 
 VOX_PDF = "https://www.voxespana.es/wp-content/uploads/2025/10/Programa-WEB-021025.pdf"
@@ -304,13 +306,14 @@ VOX = dict(
     sources=VOX_SRC, pinned=pinned(VOX_SRC), hashtags=TAGS + ["#Vox"],
     caption=caption(
         "¿Qué propone Vox para la vivienda?",
-        "Está en la oposición en el Congreso: todo lo que verás son propuestas de su programa, no leyes.",
-        ["🏗️ Construir: más suelo, menos trámites e «inundar España de bloques de vivienda protegida». 📝",
-         "🧾 Impuestos: fin del IVA en la compra de la primera vivienda y donaciones familiares para comprar casa bonificadas al 100 %. 📝",
-         "⚖️ Acceso: el arraigo de la familia en España como criterio para la vivienda protegida y prohibir alquilar a inmigrantes en situación irregular. 📝",
-         "🚫 Derogar todas las medidas que intervienen el mercado del alquiler. 📝"],
-        "su programa también plantea una fiscalidad distinta para los compradores de fuera de la Unión Europea.",
-        "VIVIENDA · Ep. 3/4. Próximo episodio: qué propone Sumar."),
+        "Está en la oposición: son propuestas, no leyes.",
+        ["🏗️ Más suelo y «bloques de vivienda protegida» 📝",
+         "🧾 IVA 0 en la primera vivienda 📝",
+         "⚖️ Arraigo en España como criterio para la vivienda protegida 📝",
+         "🚫 Derogar las medidas que intervienen el alquiler 📝"],
+        "también plantea un trato fiscal distinto para compradores de fuera de la UE.",
+        "Ep. 3/4 · Próximo: Sumar",
+        "📝 propuesta"),
 )
 
 SUMAR_SRC = [
@@ -353,18 +356,28 @@ SUMAR = dict(
     sources=SUMAR_SRC, pinned=pinned(SUMAR_SRC), hashtags=TAGS + ["#Sumar"],
     caption=caption(
         "¿Qué propone Sumar para la vivienda?",
-        "Gobierna con el PSOE, pero el Ministerio de Vivienda no es suyo. Para el 29N se presenta como Frente Amplio.",
-        ["🚫 Prohibir que empresas y fondos compren viviendas. ❌ Rechazada en el Congreso el 15/09/2026 (en contra PP, Vox y Junts; abstención de PSOE y PNV)",
-         "🔁 Renovación automática del alquiler a partir de 5 años (7 si el casero es una empresa); si no se renueva, indemnización. ⏳ Pendiente de convalidar",
-         "📈 Pidió congelar los alquileres; entró un tope del 2 % hasta 2027 (0 % si ya supera el índice de referencia). ⏳ En vigor, pero pendiente de convalidar",
-         "🗳️ Frente Amplio (Sumar, IU, Más Madrid y Comuns) presenta su hoja de ruta el 17 de octubre."],
-        "si el casero no renueva, la indemnización sería de al menos 12 meses de renta, con cuatro excepciones.",
-        "VIVIENDA · Ep. 4/4. Fin de la serie. Próxima serie: impuestos."),
+        "Gobierna con el PSOE, pero no lleva Vivienda. En el 29N va como Frente Amplio.",
+        ["🚫 Prohibir que fondos y empresas compren pisos ❌",
+         "🔁 Renovación automática del alquiler tras 5 años ⏳",
+         "📈 Tope del 2 % a las subidas hasta 2027 ⏳",
+         "🗳️ Frente Amplio presenta su hoja de ruta el 17/10"],
+        "si el casero no renueva, indemnización mínima de 12 meses de renta.",
+        "Ep. 4/4 · Próxima serie: impuestos",
+        "⏳ pendiente · ❌ rechazada en el Congreso"),
 )
 
 if __name__ == "__main__":
+    # con --textos DIR también reescribe DIR/<epN_partido>/<slug>_publicacion.txt sin volver a renderizar
+    textos = sys.argv[sys.argv.index("--textos") + 1] if "--textos" in sys.argv else None
     for p in (PSOE, PP, VOX, SUMAR):
+        story = build(p)
         path = os.path.join(OUT, f"{p['slug']}.json")
         with open(path, "w", encoding="utf-8") as f:
-            json.dump(build(p), f, ensure_ascii=False, indent=1)
+            json.dump(story, f, ensure_ascii=False, indent=1)
         print("→", os.path.relpath(path))
+        if textos:
+            from make_video import publicacion_text
+            out = os.path.join(textos, p["slug"].replace("vivienda_", ""), f"{p['slug']}_publicacion.txt")
+            with open(out, "w", encoding="utf-8") as f:
+                f.write(publicacion_text(story))
+            print("→", out)

@@ -6,6 +6,7 @@ y el texto. make_video.py usa esos archivos cuando el storyboard tiene "voice": 
 
   python3 tts_elevenlabs.py storyboards/impuestos_*.json --voice <voice_id>   # vídeos completos
   python3 tts_elevenlabs.py --muestras "texto de prueba"                      # una muestra por voz en voces_elevenlabs/muestras/
+  python3 tts_elevenlabs.py --muestras "texto" --motor edge                   # voces gratis de Microsoft (es-ES) en muestras_microsoft/
   python3 tts_elevenlabs.py --muestras "texto" --biblioteca 8                 # voces de España de la biblioteca en muestras_es/
 """
 import argparse
@@ -90,7 +91,43 @@ def biblioteca(texto, n, model, api_key):
               ensure_ascii=False, indent=1)
 
 
+EDGE_RATE = "+8%"
+
+
+def edge_model(rate=EDGE_RATE):
+    return f"edge{rate}"
+
+
+def synth_edge(text, voice, model):
+    """Voces neuronales gratis de Microsoft (paquete edge-tts). model = "edge+8%" lleva la velocidad."""
+    import asyncio
+    import edge_tts
+
+    async def run():
+        audio = b""
+        async for chunk in edge_tts.Communicate(text, voice, rate=model[4:] or "+0%").stream():
+            if chunk["type"] == "audio":
+                audio += chunk["data"]
+        return audio
+    return asyncio.run(run())
+
+
+def muestras_edge(texto):
+    import asyncio
+    import edge_tts
+
+    out_dir = os.path.join(CACHE, "muestras_microsoft")
+    os.makedirs(out_dir, exist_ok=True)
+    voces = [v["ShortName"] for v in asyncio.run(edge_tts.list_voices()) if v["Locale"] == "es-ES"]
+    for v in voces:
+        path = os.path.join(out_dir, v.replace("es-ES-", "").replace("Neural", "") + ".mp3")
+        open(path, "wb").write(synth_edge(texto, v, edge_model()))
+        print("→", os.path.relpath(path, HERE), v)
+
+
 def synth(text, voice, model, api_key, salir=True):
+    if model.startswith("edge"):
+        return synth_edge(text, voice, model)
     req = urllib.request.Request(
         f"{API}/text-to-speech/{voice}?output_format=mp3_44100_128",
         data=json.dumps({"text": text, "model_id": model, "language_code": "es", "voice_settings": SETTINGS}).encode(),
@@ -127,10 +164,13 @@ def main():
     ap.add_argument("--voice")
     ap.add_argument("--model", default=MODEL)
     ap.add_argument("--muestras")
+    ap.add_argument("--motor", default="elevenlabs", choices=["elevenlabs", "edge"])
     ap.add_argument("--biblioteca", type=int, default=0, help="con --muestras: probar N voces de España de la biblioteca")
     a = ap.parse_args()
+    if a.motor == "edge" and a.muestras:
+        return muestras_edge(a.muestras)
     api_key = os.environ.get("ELEVENLABS_API_KEY", "").strip()
-    if not api_key:
+    if not api_key and a.motor != "edge":
         sys.exit("Falta el secreto ELEVENLABS_API_KEY")
 
     if a.muestras and a.biblioteca:
@@ -148,14 +188,16 @@ def main():
     n = 0
     for f in files:
         story = json.load(open(f, encoding="utf-8"))
-        voice = a.voice or story.get("voice", {}).get("voice_id")
+        vcfg = story.get("voice", {})
+        voice = a.voice or vcfg.get("voice_id")
+        model = vcfg.get("model") or (edge_model() if vcfg.get("engine") == "edge" else a.model)
         os.makedirs(CACHE, exist_ok=True)
         for sc in story["scenes"]:
             for line in sc["lines"]:
                 text = line_text(line)
-                path = os.path.join(CACHE, key(voice, a.model, text) + ".mp3")
+                path = os.path.join(CACHE, key(voice, model, text) + ".mp3")
                 if not os.path.exists(path):
-                    open(path, "wb").write(synth(text, voice, a.model, api_key))
+                    open(path, "wb").write(synth(text, voice, model, api_key))
                     n += len(text)
         print("✓", os.path.relpath(f, HERE))
     print(f"{n} caracteres enviados a ElevenLabs")

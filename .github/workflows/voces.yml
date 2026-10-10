@@ -7,6 +7,10 @@ on:
         description: "Texto para probar varias voces (vacío = generar las frases de los storyboards)"
         required: false
         default: ""
+      motor:
+        description: "elevenlabs o edge (voces gratis de Microsoft)"
+        required: false
+        default: "elevenlabs"
       biblioteca:
         description: "Con muestras: cuántas voces de España probar de la biblioteca (0 = voces básicas)"
         required: false
@@ -33,6 +37,8 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+      - name: Instalar edge-tts
+        run: pip install edge-tts==7.2.8
       - name: Generar voces
         working-directory: pipeline
         env:
@@ -41,11 +47,12 @@ jobs:
           STORYBOARDS: ${{ inputs.storyboards }}
           VOICE: ${{ inputs.voice }}
           BIBLIOTECA: ${{ inputs.biblioteca }}
+          MOTOR: ${{ inputs.motor }}
         run: |
           if [ -n "$MUESTRAS" ]; then
-            python3 tts_elevenlabs.py --muestras "$MUESTRAS" --biblioteca "${BIBLIOTECA:-0}"
+            python3 tts_elevenlabs.py --muestras "$MUESTRAS" --biblioteca "${BIBLIOTECA:-0}" --motor "${MOTOR:-elevenlabs}"
           else
-            python3 tts_elevenlabs.py $STORYBOARDS ${VOICE:+--voice "$VOICE"}
+            python3 tts_elevenlabs.py $STORYBOARDS ${VOICE:+--voice "$VOICE"} --motor "${MOTOR:-elevenlabs}"
           fi
       - name: Guardar las voces en el repositorio
         run: |

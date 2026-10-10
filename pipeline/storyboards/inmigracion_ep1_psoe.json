@@ -1,0 +1,669 @@
+{
+ "slug": "inmigracion_ep1_psoe",
+ "title": "Inmigración · Ep. 1/4 · ¿Qué ha hecho el PSOE?",
+ "series_tag": "INMIGRACIÓN · EP. 1/4",
+ "accent": "psoe",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "edge",
+  "voice_id": "es-ES-AlvaroNeural"
+ },
+ "music_volume": 0.14,
+ "scribble_volume": 0.05,
+ "end_hold": 0.8,
+ "line_gap": 0.1,
+ "sources": [
+  "Real Decreto 316/2026, de 14 de abril (BOE-A-2026-8284), resumen de Noticias Obreras (15/04/2026): https://noticiasobreras.es/2026/04/el-boe-publica-el-real-decreto-que-articula-la-regularizacion-extraordinaria-de-personas-migrantes-aprobada-por-el-gobierno/",
+  "Requisitos (llegada antes del 31/12/2025, 5 meses, sin antecedentes, permiso de 1 año), Accem: https://www.accem.es/blog/regularizacion-2026-informacion-practica-para-personas-migrantes-en-espana",
+  "Pacto PSOE-Podemos y estimación de 500.000 (Rolling Stone, 27/01/2026): https://es.rollingstone.com/que-sabemos-sobre-la-nueva-regularizacion-masiva-de-inmigrantes-que-residen-en-espana/",
+  "Balance: 1.174.978 solicitudes del 16/04 al 30/06/2026, Ministerio de Inclusión (Nuevatribuna, 05/07/2026): https://www.nuevatribuna.es/articulo/actualidad/plazo-presentacion-solicitud-regularizacion-extraordinaria-concluye-1174-978-solicitudes-recibidas/20260705120449252072.html",
+  "Reparto de menores y recursos de 11 comunidades (Vozpópuli, 26/08/2025): https://www.vozpopuli.com/espana/politica/el-gobierno-activa-el-reparto-de-menores-inmigrantes-con-11-comunidades-recurriendo-la-norma-ante-el-constitucional.html",
+  "Reglamento de extranjería, RD 1155/2024 (Iberley): https://www.iberley.es/noticias/publicado-nuevo-reglamento-extranjeria-34156"
+ ],
+ "caption": "🤯 ¿Qué ha hecho el PSOE con la inmigración?\n🪪 Regularización extraordinaria: papeles para 1 año ✅\n🧒 Reparto obligatorio de menores que llegan solos ✅\n⏳ Arraigo: de 3 a 2 años en España ✅\n📈 1,17 millones de solicitudes; se esperaban 500.000\n💬 ¿Qué opinas de la regularización?\n➡️ Ep. 1/4 · Próximo: PP · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: RD 316/2026 (BOE 15/04), Ministerio de Inclusión 05/07, RD 1155/2024, Vozpópuli 26/08/2025. ¿Ves un error? Dínoslo y lo corregimos.",
+ "hashtags": [
+  "#PizarraPública",
+  "#PolíticaParaPrincipiantes",
+  "#PolíticaEspañola",
+  "#Inmigración",
+  "#Elecciones29N",
+  "#Regularización",
+  "#PSOE"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "lines": [
+    "¿Qué ha hecho y qué promete el PSOE con la inmigración? Te lo explico en un minuto."
+   ],
+   "tail": 0.3,
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿QUÉ HACE",
+     "x": 540,
+     "y": 440,
+     "size": 92,
+     "color": "ink",
+     "at": 0,
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "EL PSOE",
+     "x": 540,
+     "y": 615,
+     "size": 160,
+     "color": "psoe",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "CON LA INMIGRACIÓN?",
+     "x": 540,
+     "y": 720,
+     "size": 80,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "circle",
+     "x": 540,
+     "y": 1010,
+     "rx": 180,
+     "color": "psoe",
+     "width": 18,
+     "at": "+0.05",
+     "dur": 0.36
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 540,
+     "y": 1010,
+     "scale": 1.275,
+     "at": "+0",
+     "dur": 0.3
+    }
+   ]
+  },
+  {
+   "id": "situacion",
+   "lines": [
+    "El PSOE gobierna con Sumar y lleva el Ministerio de Migraciones.",
+    "Por eso aquí hay medidas aprobadas, no solo promesas."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "person",
+     "tie": true,
+     "accent": "light",
+     "x": 270,
+     "y": 600,
+     "scale": 0.95,
+     "at": "L0",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "EN EL\nGOBIERNO",
+     "x": 270,
+     "y": 830,
+     "size": 62,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 800,
+     "y": 600,
+     "scale": 1.0,
+     "at": "L1",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "con Sumar\nMinisterio de Migraciones",
+     "x": 800,
+     "y": 830,
+     "size": 50,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.1
+    },
+    {
+     "type": "highlight",
+     "x0": 200,
+     "x1": 880,
+     "y": 1130,
+     "width": 72,
+     "at": "L1@0.5",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "aprobado + promesas",
+     "x": 540,
+     "y": 1150,
+     "size": 74,
+     "color": "psoe",
+     "at": "+0",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "medida1",
+   "lines": [
+    "Uno: la regularización extraordinaria. Papeles por un año para quien llegó antes de 2026 y no tiene antecedentes. Se aprobó en abril, pactada con Podemos."
+   ],
+   "footnote": "Real Decreto 316/2026 (BOE 15/04/2026)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "psoe",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "1",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "psoe",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Regularización extraordinaria",
+     "x": 240,
+     "y": 512,
+     "size": 63,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "1 año",
+     "x": 540,
+     "y": 810,
+     "size": 150,
+     "color": "psoe",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "de papeles si llegaste antes de 2026",
+     "x": 540,
+     "y": 1010,
+     "size": 58,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "5 meses aquí y sin antecedentes",
+     "x": 540,
+     "y": 1090,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "APROBADO",
+     "sub": "RD 316/2026 · 14/04/2026",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida2",
+   "lines": [
+    "Dos: los menores que llegan solos. Si Canarias, Ceuta o Melilla se saturan, las demás comunidades tienen que acogerlos. Once lo han recurrido."
+   ],
+   "footnote": "Vozpópuli, 26/08/2025",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "psoe",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "2",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "psoe",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Menores que llegan solos",
+     "x": 240,
+     "y": 512,
+     "size": 73,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "x": 540,
+     "y": 760,
+     "scale": 0.9,
+     "at": "L0@0.3",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "reparto obligatorio entre comunidades",
+     "x": 540,
+     "y": 1010,
+     "size": 57,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "11 comunidades lo recurren",
+     "x": 540,
+     "y": 1089,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "APROBADO",
+     "sub": "Congreso · abril de 2025",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida3",
+   "lines": [
+    "Tres: el nuevo reglamento de extranjería, en vigor desde mayo de 2025. Para pedir papeles por arraigo bastan dos años en España, en lugar de tres."
+   ],
+   "footnote": "Reglamento de extranjería, en vigor desde el 20/05/2025",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "psoe",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "3",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "psoe",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Arraigo",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "2 años",
+     "x": 540,
+     "y": 810,
+     "size": 150,
+     "color": "psoe",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "en España para pedir papeles",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "antes eran 3",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "APROBADO",
+     "sub": "RD 1155/2024 · en vigor",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "ojo",
+   "lines": [
+    "Ojo: el Gobierno esperaba unas 500.000 personas y llegaron más de un millón de solicitudes. Pedirlo no es lo mismo que conseguirlo."
+   ],
+   "footnote": "Ministerio de Inclusión, balance del 30/06/2026",
+   "elements": [
+    {
+     "type": "highlight",
+     "x0": 390,
+     "x1": 690,
+     "y": 500,
+     "width": 90,
+     "at": "L0",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "¡OJO!",
+     "x": 540,
+     "y": 540,
+     "size": 140,
+     "color": "ink",
+     "at": "+0",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 540,
+     "y": 770,
+     "scale": 1.0,
+     "at": "+0.05",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "1.174.978 solicitudes",
+     "x": 540,
+     "y": 1010,
+     "size": 80,
+     "color": "ink",
+     "at": "L0@0.35",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "el Gobierno calculaba unas 500.000",
+     "x": 540,
+     "y": 1112,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "resumen",
+   "lines": [
+    "En resumen: regularizar a quien ya vive y trabaja aquí."
+   ],
+   "footnote": "RD 316/2026 · RD 1155/2024",
+   "elements": [
+    {
+     "type": "text",
+     "text": "EN UNA FRASE",
+     "x": 540,
+     "y": 500,
+     "size": 70,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "bubble",
+     "x": 540,
+     "y": 700,
+     "scale": 0.9,
+     "at": "+0.05",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "regularizar",
+     "x": 540,
+     "y": 960,
+     "size": 110,
+     "color": "psoe",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "text",
+     "text": "a quien ya vive y trabaja aquí",
+     "x": 540,
+     "y": 1120,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.6",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "APROBADO",
+     "sub": "2025-2026",
+     "x": 540,
+     "y": 1260,
+     "w": 440,
+     "h": 120,
+     "size": 48,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "lines": [
+    "Su programa para el 29 de noviembre aún no está publicado.",
+    "En el próximo episodio: qué propone el PP."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "calendar",
+     "x": 200,
+     "y": 540,
+     "scale": 0.8,
+     "at": "L0",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "Programa 29N:",
+     "x": 360,
+     "y": 520,
+     "size": 70,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "aún sin publicar",
+     "x": 360,
+     "y": 600,
+     "size": 60,
+     "color": "gray",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "body",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "PRÓXIMO EPISODIO",
+     "x": 540,
+     "y": 820,
+     "size": 74,
+     "color": "ink",
+     "at": "L1",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "circle",
+     "x": 540,
+     "y": 1050,
+     "rx": 138,
+     "color": "pp",
+     "width": 13,
+     "at": "+0.05",
+     "dur": 0.36
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 540,
+     "y": 1050,
+     "scale": 0.9774999999999999,
+     "at": "+0",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "PP",
+     "x": 540,
+     "y": 1330,
+     "size": 110,
+     "color": "pp",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  }
+ ]
+}

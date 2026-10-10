@@ -243,7 +243,7 @@ SUMAR = dict(
     ojo=dict(icon="calendar", key=["el programa del Frente Amplio", "se presenta el 17 de octubre"], foot="The Objective, 04/10/2026",
              line=L("Ojo: el programa del Frente Amplio se presenta el 17 de octubre, así que estas medidas pueden cambiar.",
                     "Ojo: el programa del Frente Amplio se presenta el diecisiete de octubre, así que estas medidas pueden cambiar.")),
-    resumen=dict(big="más a quien\nmás tiene", key="herencias, fortunas y banca", sub="sin cifras aún", foot="Forbes, 05/10/2026",
+    resumen=dict(big="más a quien más tiene", key="herencias, fortunas y banca", sub="sin cifras aún", foot="Forbes, 05/10/2026",
                  line="En resumen: que paguen más quienes más tienen."),
     l_cierre=[L("Su programa para el 29 de noviembre se presenta el 17 de octubre.", "Su programa para el veintinueve de noviembre se presenta el diecisiete de octubre."),
               "Aquí acaba la serie de impuestos.", "En la próxima: inmigración."],

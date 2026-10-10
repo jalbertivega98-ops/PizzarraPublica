@@ -556,10 +556,10 @@
     },
     {
      "type": "text",
-     "text": "más a quien\nmás tiene",
+     "text": "más a quien más tiene",
      "x": 540,
      "y": 960,
-     "size": 110,
+     "size": 94,
      "color": "sumar",
      "at": "L0@0.3",
      "dur": 0.6,

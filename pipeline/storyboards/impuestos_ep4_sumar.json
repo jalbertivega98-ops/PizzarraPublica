@@ -1,0 +1,756 @@
+{
+ "slug": "impuestos_ep4_sumar",
+ "title": "Impuestos · Ep. 4/4 · ¿Qué propone Sumar?",
+ "series_tag": "IMPUESTOS · EP. 4/4",
+ "accent": "sumar",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "model": "voices/es_ES-davefx-medium.onnx",
+  "length_scale": 0.86
+ },
+ "music_volume": 0.14,
+ "scribble_volume": 0.05,
+ "end_hold": 0.8,
+ "line_gap": 0.1,
+ "sources": [
+  "Impuesto a las grandes herencias registrado el 22/05/2026 (idealista): https://www.idealista.com/news/finanzas/economia/2026/05/22/898769-sumar-lleva-al-congreso-un-nuevo-impuesto-a-herencias-y-donaciones-de-mas-de-un-millon",
+  "IU y Movimiento Sumar registran la ley (Mundo Obrero, 23/05/2026): https://mundoobrero.es/2026/05/23/izquierda-unida-y-mov-sumar-registran-una-ley-para-crear-un-impuesto-estatal-a-las-grandes-herencias-y-donaciones/",
+  "Las posiciones económicas para el 29N (Forbes, 05/10/2026): https://forbes.es/actualidad/1036705/elecciones-2026-batallas-economicas-29-n/",
+  "Programa de Sumar/Frente Amplio para el 29N (Política Electoral): https://www.politicaelectoral.com/es/espana/generales-2026/nacional/sumar",
+  "Presentación del Frente Amplio el 17/10 (The Objective, 04/10/2026): https://theobjective.com/espana/politica/2026-10-04/sumar-frente-amplio-octubre-posible-adelanto-electoral/"
+ ],
+ "caption": "🤯 ¿Qué propone Sumar con tus impuestos?\n🏛️ Impuesto a herencias de más de 1 millón 📝\n🧑‍💼 Autónomos sin IVA si facturan menos de 85.000 € 📝\n🏦 Más impuestos a grandes fortunas y banca, sin cifras 📝\n🗳️ En el 29N va como Frente Amplio\n💬 ¿Qué medida te afecta más?\n➡️ Ep. 4/4 · Próxima serie: inmigración · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: proposición de ley del 22/05 (idealista, Mundo Obrero), Forbes 05/10, The Objective 04/10. ¿Ves un error? Dínoslo y lo corregimos.",
+ "hashtags": [
+  "#PizarraPública",
+  "#PolíticaParaPrincipiantes",
+  "#PolíticaEspañola",
+  "#Impuestos",
+  "#Elecciones29N",
+  "#IRPF",
+  "#Sumar"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "lines": [
+    "¿Qué propone Sumar con tus impuestos? Te lo explico en un minuto."
+   ],
+   "tail": 0.3,
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿QUÉ HARÍA",
+     "x": 540,
+     "y": 440,
+     "size": 92,
+     "color": "ink",
+     "at": 0,
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "SUMAR",
+     "x": 540,
+     "y": 615,
+     "size": 160,
+     "color": "sumar",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "CON TUS IMPUESTOS?",
+     "x": 540,
+     "y": 720,
+     "size": 80,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "circle",
+     "x": 540,
+     "y": 1010,
+     "rx": 180,
+     "color": "sumar",
+     "width": 18,
+     "at": "+0.05",
+     "dur": 0.36
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 528.0,
+     "y": 1010,
+     "scale": 1.5,
+     "at": "+0",
+     "dur": 0.3
+    }
+   ]
+  },
+  {
+   "id": "situacion",
+   "lines": [
+    {
+     "tts": "Sumar gobierna con el Pesoe, pero no lleva Hacienda.",
+     "text": "Sumar gobierna con el PSOE, pero no lleva Hacienda."
+    },
+    {
+     "tts": "Para el veintinueve de noviembre se presenta como Frente Amplio.",
+     "text": "Para el 29 de noviembre se presenta como Frente Amplio."
+    }
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "person",
+     "tie": true,
+     "accent": "light",
+     "x": 270,
+     "y": 600,
+     "scale": 0.95,
+     "at": "L0",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "EN EL\nGOBIERNO",
+     "x": 270,
+     "y": 830,
+     "size": 62,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 800,
+     "y": 600,
+     "scale": 1.0,
+     "at": "L1",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "con el PSOE\nsin el Ministerio de Hacienda",
+     "x": 800,
+     "y": 830,
+     "size": 50,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.1
+    },
+    {
+     "type": "highlight",
+     "x0": 200,
+     "x1": 880,
+     "y": 1130,
+     "width": 72,
+     "at": "L1@0.5",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "29N: Frente Amplio",
+     "x": 540,
+     "y": 1150,
+     "size": 74,
+     "color": "sumar",
+     "at": "+0",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "medida1",
+   "lines": [
+    {
+     "tts": "Uno: un impuesto estatal a las herencias y donaciones de más de un millón de euros. Lo registró en el Congreso en mayo, con Izquierda Unida.",
+     "text": "Uno: un impuesto estatal a las herencias y donaciones de más de un millón de euros. Lo registró en el Congreso en mayo, con Izquierda Unida."
+    }
+   ],
+   "footnote": "Proposición de ley registrada el 22/05/2026 (idealista)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "sumar",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "1",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "sumar",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Grandes herencias",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "+1 M€",
+     "x": 540,
+     "y": 810,
+     "size": 150,
+     "color": "sumar",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "impuesto estatal a herencias y donaciones",
+     "x": 540,
+     "y": 1010,
+     "size": 50,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "de más de un millón de euros",
+     "x": 540,
+     "y": 1082,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "Congreso · 22/05/2026",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida2",
+   "lines": [
+    {
+     "tts": "Dos: autónomos. Que quien facture menos de ochenta y cinco mil euros al año no tenga que cobrar IVA. En esto coincide con el pepé.",
+     "text": "Dos: autónomos. Que quien facture menos de 85.000 euros al año no tenga que cobrar IVA. En esto coincide con el PP."
+    }
+   ],
+   "footnote": "Forbes, 05/10/2026",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "sumar",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "2",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "sumar",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Autónomos",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "85.000 €",
+     "x": 540,
+     "y": 810,
+     "size": 150,
+     "color": "sumar",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "sin IVA si facturas menos al año",
+     "x": 540,
+     "y": 1010,
+     "size": 65,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "en esto coincide con el PP",
+     "x": 540,
+     "y": 1097,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "Forbes · 05/10/2026",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida3",
+   "lines": [
+    "Tres: que paguen más las grandes fortunas y la banca. Es uno de sus pilares, aunque aún sin cifras."
+   ],
+   "footnote": "Forbes 05/10/2026 · Política Electoral",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "sumar",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "3",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "sumar",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Fortunas y banca",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 540,
+     "y": 760,
+     "scale": 1.1,
+     "at": "L0@0.3",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "más impuestos a las grandes fortunas",
+     "x": 540,
+     "y": 1010,
+     "size": 56,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "y a la banca",
+     "x": 540,
+     "y": 1088,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "sin cifras aún",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "ojo",
+   "lines": [
+    {
+     "tts": "Ojo: el programa del Frente Amplio se presenta el diecisiete de octubre, así que estas medidas pueden cambiar.",
+     "text": "Ojo: el programa del Frente Amplio se presenta el 17 de octubre, así que estas medidas pueden cambiar."
+    }
+   ],
+   "footnote": "The Objective, 04/10/2026",
+   "elements": [
+    {
+     "type": "highlight",
+     "x0": 390,
+     "x1": 690,
+     "y": 500,
+     "width": 90,
+     "at": "L0",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "¡OJO!",
+     "x": 540,
+     "y": 540,
+     "size": 140,
+     "color": "ink",
+     "at": "+0",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "calendar",
+     "x": 540,
+     "y": 770,
+     "scale": 1.0,
+     "at": "+0.05",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "el programa del Frente Amplio",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.35",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "se presenta el 17 de octubre",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "resumen",
+   "lines": [
+    "En resumen: que paguen más quienes más tienen."
+   ],
+   "footnote": "Forbes, 05/10/2026",
+   "elements": [
+    {
+     "type": "text",
+     "text": "EN UNA FRASE",
+     "x": 540,
+     "y": 500,
+     "size": 70,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "bubble",
+     "x": 540,
+     "y": 700,
+     "scale": 0.9,
+     "at": "+0.05",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "más a quien\nmás tiene",
+     "x": 540,
+     "y": 960,
+     "size": 110,
+     "color": "sumar",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "text",
+     "text": "herencias, fortunas y banca",
+     "x": 540,
+     "y": 1120,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.6",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "sin cifras aún",
+     "x": 540,
+     "y": 1260,
+     "w": 440,
+     "h": 120,
+     "size": 48,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "lines": [
+    {
+     "tts": "Su programa para el veintinueve de noviembre se presenta el diecisiete de octubre.",
+     "text": "Su programa para el 29 de noviembre se presenta el 17 de octubre."
+    },
+    "Aquí acaba la serie de impuestos.",
+    "En la próxima: inmigración."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "calendar",
+     "x": 200,
+     "y": 540,
+     "scale": 0.8,
+     "at": "L0",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "Programa 29N:",
+     "x": 360,
+     "y": 520,
+     "size": 70,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "se presenta el 17/10",
+     "x": 360,
+     "y": 600,
+     "size": 60,
+     "color": "gray",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "body",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "FIN DE LA SERIE",
+     "x": 540,
+     "y": 820,
+     "size": 74,
+     "color": "ink",
+     "at": "L1",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "circle",
+     "x": 210,
+     "y": 1010,
+     "rx": 72,
+     "color": "psoe",
+     "width": 7,
+     "at": "+0.02",
+     "dur": 0.24
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 205.2,
+     "y": 1010,
+     "scale": 0.6,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "circle",
+     "x": 430,
+     "y": 1010,
+     "rx": 72,
+     "color": "pp",
+     "width": 7,
+     "at": "+0.02",
+     "dur": 0.24
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 425.2,
+     "y": 1010,
+     "scale": 0.6,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "circle",
+     "x": 650,
+     "y": 1010,
+     "rx": 72,
+     "color": "vox",
+     "width": 7,
+     "at": "+0.02",
+     "dur": 0.24
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 645.2,
+     "y": 1010,
+     "scale": 0.6,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "circle",
+     "x": 870,
+     "y": 1010,
+     "rx": 72,
+     "color": "sumar",
+     "width": 7,
+     "at": "+0.02",
+     "dur": 0.24
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 865.2,
+     "y": 1010,
+     "scale": 0.6,
+     "at": "+0",
+     "dur": 0.2
+    },
+    {
+     "type": "text",
+     "text": "Serie 3:",
+     "x": 540,
+     "y": 1230,
+     "size": 64,
+     "color": "gray",
+     "at": "L2",
+     "dur": 0.3,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "INMIGRACIÓN",
+     "x": 540,
+     "y": 1330,
+     "size": 110,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  }
+ ]
+}

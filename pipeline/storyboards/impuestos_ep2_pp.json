@@ -1,0 +1,681 @@
+{
+ "slug": "impuestos_ep2_pp",
+ "title": "Impuestos · Ep. 2/4 · ¿Qué propone el PP?",
+ "series_tag": "IMPUESTOS · EP. 2/4",
+ "accent": "pp",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "model": "voices/es_ES-davefx-medium.onnx",
+  "length_scale": 0.86
+ },
+ "music_volume": 0.14,
+ "scribble_volume": 0.05,
+ "end_hold": 0.8,
+ "line_gap": 0.1,
+ "sources": [
+  "PP, decálogo de reformas económicas (septiembre de 2026): https://www.pp.es/actualidad/articulos/el-pp-plantea-un-decalogo-de-reformas-economicas-para-recuperar-el-poder-adquisitivo-y-modernizar-la-economia/",
+  "Las posiciones económicas para el 29N (Forbes, 05/10/2026): https://forbes.es/actualidad/1036705/elecciones-2026-batallas-economicas-29-n/",
+  "Feijóo propone una rebaja general de impuestos (Vozpópuli, 08/04/2026): https://www.vozpopuli.com/espana/politica/feijoo-propone-una-rebaja-general-de-impuestos-desde-el-iva-para-autonomos-hasta-el-irpf.html"
+ ],
+ "caption": "🤯 ¿Qué propone el PP con tus impuestos?\n📊 IRPF actualizado con la inflación y el doble de mínimo por hijo 📝\n🛒 IVA 0 % en alimentos básicos y 10 % en energía 📝\n🧑‍💼 Autónomos sin IVA si facturan menos de 85.000 € 📝\n❓ No dice cuánto costaría 📝\n💬 ¿Qué medida te afecta más?\n➡️ Ep. 2/4 · Próximo: Vox · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: decálogo económico del PP (pp.es, septiembre de 2026), Forbes 05/10, Vozpópuli 08/04. ¿Ves un error? Dínoslo y lo corregimos.",
+ "hashtags": [
+  "#PizarraPública",
+  "#PolíticaParaPrincipiantes",
+  "#PolíticaEspañola",
+  "#Impuestos",
+  "#Elecciones29N",
+  "#IRPF",
+  "#PP"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "lines": [
+    {
+     "tts": "¿Qué propone el pepé con tus impuestos? Te lo explico en un minuto.",
+     "text": "¿Qué propone el PP con tus impuestos? Te lo explico en un minuto."
+    }
+   ],
+   "tail": 0.3,
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿QUÉ HARÍA",
+     "x": 540,
+     "y": 440,
+     "size": 92,
+     "color": "ink",
+     "at": 0,
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "EL PP",
+     "x": 540,
+     "y": 615,
+     "size": 160,
+     "color": "pp",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "CON TUS IMPUESTOS?",
+     "x": 540,
+     "y": 720,
+     "size": 80,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "circle",
+     "x": 540,
+     "y": 1010,
+     "rx": 180,
+     "color": "pp",
+     "width": 18,
+     "at": "+0.05",
+     "dur": 0.36
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 528.0,
+     "y": 1010,
+     "scale": 1.5,
+     "at": "+0",
+     "dur": 0.3
+    }
+   ]
+  },
+  {
+   "id": "situacion",
+   "lines": [
+    {
+     "tts": "El pepé está en la oposición en el Congreso.",
+     "text": "El PP está en la oposición en el Congreso."
+    },
+    "Sus propuestas salen de su decálogo económico de septiembre."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "person",
+     "tie": true,
+     "accent": "light",
+     "x": 270,
+     "y": 600,
+     "scale": 0.95,
+     "at": "L0",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "EN LA\nOPOSICIÓN",
+     "x": 270,
+     "y": 830,
+     "size": 62,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 800,
+     "y": 600,
+     "scale": 1.0,
+     "at": "L1",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "decálogo económico\nseptiembre de 2026",
+     "x": 800,
+     "y": 830,
+     "size": 50,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.1
+    },
+    {
+     "type": "highlight",
+     "x0": 200,
+     "x1": 880,
+     "y": 1130,
+     "width": 72,
+     "at": "L1@0.5",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "propuestas, no leyes",
+     "x": 540,
+     "y": 1150,
+     "size": 74,
+     "color": "pp",
+     "at": "+0",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "medida1",
+   "lines": [
+    "Uno: el IRPF. Actualizar los tramos con la inflación, para que una subida de sueldo no te haga pagar más, y duplicar la parte de la renta que no tributa por tener hijos."
+   ],
+   "footnote": "PP, decálogo económico (septiembre de 2026)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "pp",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "1",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "pp",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "IRPF",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 540,
+     "y": 760,
+     "scale": 1.1,
+     "at": "L0@0.3",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "tramos actualizados con la inflación",
+     "x": 540,
+     "y": 1010,
+     "size": 59,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "el doble de mínimo por cada hijo",
+     "x": 540,
+     "y": 1091,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "decálogo · 2026",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida2",
+   "lines": [
+    {
+     "tts": "Dos: el IVA. Cero por ciento en alimentos básicos como carne, pescado, leche o fruta, y bajar el de la energía del veintiuno al diez por ciento.",
+     "text": "Dos: el IVA. Cero por ciento en alimentos básicos como carne, pescado, leche o fruta, y bajar el de la energía del 21 al 10 %."
+    }
+   ],
+   "footnote": "PP, decálogo económico (septiembre de 2026)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "pp",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "2",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "pp",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "IVA",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "IVA 0 %",
+     "x": 540,
+     "y": 810,
+     "size": 150,
+     "color": "pp",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "en alimentos básicos",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "energía: del 21 % al 10 %",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "decálogo · 2026",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida3",
+   "lines": [
+    {
+     "tts": "Tres: autónomos. Que no tengan que cobrar IVA si facturan menos de ochenta y cinco mil euros al año, y pasar de cuatro declaraciones a una o dos.",
+     "text": "Tres: autónomos. Que no tengan que cobrar IVA si facturan menos de 85.000 euros al año, y pasar de cuatro declaraciones a una o dos."
+    }
+   ],
+   "footnote": "PP, decálogo económico (septiembre de 2026)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "pp",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "3",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "pp",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Autónomos",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "85.000 €",
+     "x": 540,
+     "y": 810,
+     "size": 150,
+     "color": "pp",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "sin IVA si facturas menos al año",
+     "x": 540,
+     "y": 1010,
+     "size": 65,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "de 4 declaraciones a 1 o 2",
+     "x": 540,
+     "y": 1097,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "decálogo · 2026",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "ojo",
+   "lines": [
+    "Ojo: el decálogo no dice cuánto bajaría el IRPF ni cuánto costarían estas rebajas."
+   ],
+   "footnote": "PP, decálogo económico (septiembre de 2026)",
+   "elements": [
+    {
+     "type": "highlight",
+     "x0": 390,
+     "x1": 690,
+     "y": 500,
+     "width": 90,
+     "at": "L0",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "¡OJO!",
+     "x": 540,
+     "y": 540,
+     "size": 140,
+     "color": "ink",
+     "at": "+0",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "question",
+     "x": 540,
+     "y": 770,
+     "scale": 1.0,
+     "at": "+0.05",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "no dice cuánto bajaría el IRPF",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.35",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "ni cuánto costaría",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "resumen",
+   "lines": [
+    "En resumen: bajar impuestos, sobre todo el IRPF y el IVA."
+   ],
+   "footnote": "PP, decálogo · Vozpópuli 08/04/2026",
+   "elements": [
+    {
+     "type": "text",
+     "text": "EN UNA FRASE",
+     "x": 540,
+     "y": 500,
+     "size": 70,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "bubble",
+     "x": 540,
+     "y": 700,
+     "scale": 0.9,
+     "at": "+0.05",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "bajar impuestos",
+     "x": 540,
+     "y": 960,
+     "size": 110,
+     "color": "pp",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "text",
+     "text": "sobre todo IRPF e IVA",
+     "x": 540,
+     "y": 1120,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.6",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "decálogo · 2026",
+     "x": 540,
+     "y": 1260,
+     "w": 440,
+     "h": 120,
+     "size": 48,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "lines": [
+    {
+     "tts": "Su programa para el veintinueve de noviembre aún no está publicado.",
+     "text": "Su programa para el 29 de noviembre aún no está publicado."
+    },
+    "En el próximo episodio: qué propone Vox."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "calendar",
+     "x": 200,
+     "y": 540,
+     "scale": 0.8,
+     "at": "L0",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "Programa 29N:",
+     "x": 360,
+     "y": 520,
+     "size": 70,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "aún sin publicar",
+     "x": 360,
+     "y": 600,
+     "size": 60,
+     "color": "gray",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "body",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "PRÓXIMO EPISODIO",
+     "x": 540,
+     "y": 820,
+     "size": 74,
+     "color": "ink",
+     "at": "L1",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "circle",
+     "x": 540,
+     "y": 1050,
+     "rx": 138,
+     "color": "vox",
+     "width": 13,
+     "at": "+0.05",
+     "dur": 0.36
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 530.8,
+     "y": 1050,
+     "scale": 1.15,
+     "at": "+0",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "VOX",
+     "x": 540,
+     "y": 1330,
+     "size": 110,
+     "color": "vox",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  }
+ ]
+}

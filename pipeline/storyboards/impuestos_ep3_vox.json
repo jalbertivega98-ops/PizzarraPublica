@@ -1,0 +1,697 @@
+{
+ "slug": "impuestos_ep3_vox",
+ "title": "Impuestos · Ep. 3/4 · ¿Qué propone Vox?",
+ "series_tag": "IMPUESTOS · EP. 3/4",
+ "accent": "vox",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "model": "voices/es_ES-davefx-medium.onnx",
+  "length_scale": 0.86
+ },
+ "music_volume": 0.14,
+ "scribble_volume": 0.05,
+ "end_hold": 0.8,
+ "line_gap": 0.1,
+ "sources": [
+  "Vox, «Programa económico y de vivienda» (en su web; la ruta del archivo indica octubre de 2025), págs. 36-37: https://www.voxespana.es/wp-content/uploads/2025/10/Programa-WEB-021025.pdf",
+  "Presentación del programa con Arthur Laffer (moncloa.com, 12/09/2026): https://www.moncloa.com/2026/09/12/abascal-laffer-giro-economico-vox-3430041",
+  "Las posiciones económicas para el 29N (Forbes, 05/10/2026): https://forbes.es/actualidad/1036705/elecciones-2026-batallas-economicas-29-n/"
+ ],
+ "caption": "🤯 ¿Qué propone Vox con tus impuestos?\n💶 IRPF: 0 € hasta 22.000 €, luego 15 % y 25 % 📝\n🛒 IVA general del 21 % al 18 % 📝\n🏢 Sociedades al 15 % y sin cuota para autónomos bajo el SMI 📝\n🔢 Coste del IRPF: 40.000 M€ (cálculo de Vox)\n💬 ¿Qué medida te afecta más?\n➡️ Ep. 3/4 · Próximo: Sumar · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Programa económico y de vivienda de Vox, págs. 36-37 (voxespana.es), moncloa.com 12/09, Forbes 05/10. ¿Ves un error? Dínoslo y lo corregimos.",
+ "hashtags": [
+  "#PizarraPública",
+  "#PolíticaParaPrincipiantes",
+  "#PolíticaEspañola",
+  "#Impuestos",
+  "#Elecciones29N",
+  "#IRPF",
+  "#Vox"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "lines": [
+    "¿Qué propone Vox con tus impuestos? Te lo explico en un minuto."
+   ],
+   "tail": 0.3,
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿QUÉ HARÍA",
+     "x": 540,
+     "y": 440,
+     "size": 92,
+     "color": "ink",
+     "at": 0,
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "VOX",
+     "x": 540,
+     "y": 615,
+     "size": 160,
+     "color": "vox",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "CON TUS IMPUESTOS?",
+     "x": 540,
+     "y": 720,
+     "size": 80,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "circle",
+     "x": 540,
+     "y": 1010,
+     "rx": 180,
+     "color": "vox",
+     "width": 18,
+     "at": "+0.05",
+     "dur": 0.36
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 528.0,
+     "y": 1010,
+     "scale": 1.5,
+     "at": "+0",
+     "dur": 0.3
+    }
+   ]
+  },
+  {
+   "id": "situacion",
+   "lines": [
+    "Vox está en la oposición en el Congreso.",
+    "Sus propuestas salen de su programa económico, que presentó de nuevo en septiembre."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "person",
+     "tie": true,
+     "accent": "light",
+     "x": 270,
+     "y": 600,
+     "scale": 0.95,
+     "at": "L0",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "EN LA\nOPOSICIÓN",
+     "x": 270,
+     "y": 830,
+     "size": 62,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 800,
+     "y": 600,
+     "scale": 1.0,
+     "at": "L1",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "programa económico\ny de vivienda",
+     "x": 800,
+     "y": 830,
+     "size": 50,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.1
+    },
+    {
+     "type": "highlight",
+     "x0": 200,
+     "x1": 880,
+     "y": 1130,
+     "width": 72,
+     "at": "L1@0.5",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "propuestas, no leyes",
+     "x": 540,
+     "y": 1150,
+     "size": 74,
+     "color": "vox",
+     "at": "+0",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "medida1",
+   "lines": [
+    {
+     "tts": "Uno: el IRPF. Quien gane menos de veintidós mil euros no pagaría. Por encima, un quince por ciento hasta setenta mil y un veinticinco por ciento a partir de ahí, con cuatro puntos menos por cada hijo.",
+     "text": "Uno: el IRPF. Quien gane menos de 22.000 euros no pagaría. Por encima, un 15 % hasta 70.000 y un 25 % a partir de ahí, con cuatro puntos menos por cada hijo."
+    }
+   ],
+   "footnote": "Vox, Programa económico y de vivienda, págs. 36-37",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "vox",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "1",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "vox",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "IRPF",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "15 % · 25 %",
+     "x": 540,
+     "y": 810,
+     "size": 150,
+     "color": "vox",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "0 € si ganas menos de 22.000 € al año",
+     "x": 540,
+     "y": 1010,
+     "size": 54,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "y 4 puntos menos por cada hijo",
+     "x": 540,
+     "y": 1086,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "programa de Vox",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida2",
+   "lines": [
+    {
+     "tts": "Dos: el IVA. Volver a los tipos de antes de dos mil doce: el general, del veintiuno al dieciocho por ciento, y el reducido, del diez al ocho.",
+     "text": "Dos: el IVA. Volver a los tipos de antes de 2012: el general, del 21 al 18 %, y el reducido, del 10 al 8 %."
+    }
+   ],
+   "footnote": "Vox, Programa económico y de vivienda, pág. 37",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "vox",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "2",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "vox",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "IVA",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "18 %",
+     "x": 540,
+     "y": 810,
+     "size": 150,
+     "color": "vox",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "IVA general: del 21 % al 18 %",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "reducido: del 10 % al 8 %",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "programa de Vox",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida3",
+   "lines": [
+    {
+     "tts": "Tres: empresas y autónomos. Bajar el impuesto de sociedades del veinticinco al quince por ciento, y quitar la cuota a los autónomos que ganen menos del salario mínimo.",
+     "text": "Tres: empresas y autónomos. Bajar el impuesto de sociedades del 25 al 15 %, y quitar la cuota a los autónomos que ganen menos del salario mínimo."
+    }
+   ],
+   "footnote": "Vox, Programa económico y de vivienda, pág. 37",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "vox",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "3",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "vox",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Empresas y autónomos",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "15 %",
+     "x": 540,
+     "y": 810,
+     "size": 150,
+     "color": "vox",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Sociedades: del 25 % al 15 %",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "sin cuota si ganas menos del SMI",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "programa de Vox",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "ojo",
+   "lines": [
+    {
+     "tts": "Ojo: el propio Vox calcula que su rebaja del IRPF costaría unos cuarenta mil millones de euros. Propone compensarlo recortando gasto.",
+     "text": "Ojo: el propio Vox calcula que su rebaja del IRPF costaría unos 40.000 millones de euros. Propone compensarlo recortando gasto."
+    }
+   ],
+   "footnote": "Vox, Programa económico y de vivienda, pág. 37",
+   "elements": [
+    {
+     "type": "highlight",
+     "x0": 390,
+     "x1": 690,
+     "y": 500,
+     "width": 90,
+     "at": "L0",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "¡OJO!",
+     "x": 540,
+     "y": 540,
+     "size": 140,
+     "color": "ink",
+     "at": "+0",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 540,
+     "y": 770,
+     "scale": 1.0,
+     "at": "+0.05",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "40.000 M€ *",
+     "x": 540,
+     "y": 1010,
+     "size": 80,
+     "color": "ink",
+     "at": "L0@0.35",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "* coste de su rebaja del IRPF",
+     "x": 540,
+     "y": 1112,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "ESTIMACIÓN",
+     "sub": "del propio partido",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.75",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "resumen",
+   "lines": [
+    "En resumen: bajar casi todos los impuestos y recortar el gasto público."
+   ],
+   "footnote": "Vox, programa · Forbes 05/10/2026",
+   "elements": [
+    {
+     "type": "text",
+     "text": "EN UNA FRASE",
+     "x": 540,
+     "y": 500,
+     "size": 70,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "bubble",
+     "x": 540,
+     "y": 700,
+     "scale": 0.9,
+     "at": "+0.05",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "bajar impuestos",
+     "x": 540,
+     "y": 960,
+     "size": 110,
+     "color": "vox",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "text",
+     "text": "y recortar el gasto público",
+     "x": 540,
+     "y": 1120,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.6",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "programa de Vox",
+     "x": 540,
+     "y": 1260,
+     "w": 440,
+     "h": 120,
+     "size": 48,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "lines": [
+    {
+     "tts": "Su programa para el veintinueve de noviembre aún no está publicado.",
+     "text": "Su programa para el 29 de noviembre aún no está publicado."
+    },
+    "En el próximo episodio: qué propone Sumar."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "calendar",
+     "x": 200,
+     "y": 540,
+     "scale": 0.8,
+     "at": "L0",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "Programa 29N:",
+     "x": 360,
+     "y": 520,
+     "size": 70,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "aún sin publicar",
+     "x": 360,
+     "y": 600,
+     "size": 60,
+     "color": "gray",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "body",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "PRÓXIMO EPISODIO",
+     "x": 540,
+     "y": 820,
+     "size": 74,
+     "color": "ink",
+     "at": "L1",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "circle",
+     "x": 540,
+     "y": 1050,
+     "rx": 138,
+     "color": "sumar",
+     "width": 13,
+     "at": "+0.05",
+     "dur": 0.36
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 530.8,
+     "y": 1050,
+     "scale": 1.15,
+     "at": "+0",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "SUMAR",
+     "x": 540,
+     "y": 1330,
+     "size": 110,
+     "color": "sumar",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,692 @@
+{
+ "slug": "impuestos_ep1_psoe",
+ "title": "Impuestos · Ep. 1/4 · ¿Qué propone el PSOE?",
+ "series_tag": "IMPUESTOS · EP. 1/4",
+ "accent": "psoe",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "model": "voices/es_ES-davefx-medium.onnx",
+  "length_scale": 0.86
+ },
+ "music_volume": 0.14,
+ "scribble_volume": 0.05,
+ "end_hold": 0.8,
+ "line_gap": 0.1,
+ "sources": [
+  "Ministerio de Hacienda, nota del 17/02/2026 (deducción para que el SMI no pague IRPF): https://www.hacienda.gob.es/es-ES/Prensa/Noticias/Paginas/2026/20260217-NP-CM-SMI-DEDUCCION-2026.aspx",
+  "Convalidación en el Congreso, 18/03/2026 (Forbes): https://forbes.es/economia/892542/el-congreso-avala-la-exencion-fiscal-del-smi-al-convalidar-el-decreto-de-ayudas-por-temporales/",
+  "Real Decreto-ley 29/2026, de 6 de octubre. BOE 07/10/2026: https://www.boe.es/buscar/doc.php?id=BOE-A-2026-20823",
+  "Resumen de sus medidas fiscales (Iberley): https://www.iberley.es/noticias/nuevas-medidas-fiscales-vivienda-rd-ley-29-2026-37071",
+  "Las posiciones económicas para el 29N (Forbes, 05/10/2026): https://forbes.es/actualidad/1036705/elecciones-2026-batallas-economicas-29-n/"
+ ],
+ "caption": "🤯 ¿Qué ha hecho el PSOE con tus impuestos?\n💶 0 € de IRPF si cobras el salario mínimo ✅\n🏠 IVA del 10 % a pisos turísticos desde el 1/12 ⏳\n🔑 Rebaja del IRPF a caseros que bajen el alquiler ⏳\n📜 Promete impuestos más progresivos, sin cifras 📝\n💬 ¿Qué medida te afecta más?\n➡️ Ep. 1/4 · Próximo: PP · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Hacienda 17/02, Congreso 18/03, RDL 29/2026 (BOE 07/10), Forbes 05/10. ¿Ves un error? Dínoslo y lo corregimos.",
+ "hashtags": [
+  "#PizarraPública",
+  "#PolíticaParaPrincipiantes",
+  "#PolíticaEspañola",
+  "#Impuestos",
+  "#Elecciones29N",
+  "#IRPF",
+  "#PSOE"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "lines": [
+    {
+     "tts": "¿Qué ha hecho y qué promete el Pesoe con tus impuestos? Te lo explico en un minuto.",
+     "text": "¿Qué ha hecho y qué promete el PSOE con tus impuestos? Te lo explico en un minuto."
+    }
+   ],
+   "tail": 0.3,
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿QUÉ HACE",
+     "x": 540,
+     "y": 440,
+     "size": 92,
+     "color": "ink",
+     "at": 0,
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "EL PSOE",
+     "x": 540,
+     "y": 615,
+     "size": 160,
+     "color": "psoe",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "CON TUS IMPUESTOS?",
+     "x": 540,
+     "y": 720,
+     "size": 80,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "circle",
+     "x": 540,
+     "y": 1010,
+     "rx": 180,
+     "color": "psoe",
+     "width": 18,
+     "at": "+0.05",
+     "dur": 0.36
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 528.0,
+     "y": 1010,
+     "scale": 1.5,
+     "at": "+0",
+     "dur": 0.3
+    }
+   ]
+  },
+  {
+   "id": "situacion",
+   "lines": [
+    {
+     "tts": "El Pesoe gobierna con Sumar y lleva el Ministerio de Hacienda.",
+     "text": "El PSOE gobierna con Sumar y lleva el Ministerio de Hacienda."
+    },
+    "Por eso aquí hay medidas aprobadas, no solo promesas."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "person",
+     "tie": true,
+     "accent": "light",
+     "x": 270,
+     "y": 600,
+     "scale": 0.95,
+     "at": "L0",
+     "dur": 0.7
+    },
+    {
+     "type": "text",
+     "text": "EN EL\nGOBIERNO",
+     "x": 270,
+     "y": 830,
+     "size": 62,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 800,
+     "y": 600,
+     "scale": 1.0,
+     "at": "L1",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "con Sumar\nMinisterio de Hacienda",
+     "x": 800,
+     "y": 830,
+     "size": 50,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.1
+    },
+    {
+     "type": "highlight",
+     "x0": 200,
+     "x1": 880,
+     "y": 1130,
+     "width": 72,
+     "at": "L1@0.5",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "aprobado + promesas",
+     "x": 540,
+     "y": 1150,
+     "size": 74,
+     "color": "psoe",
+     "at": "+0",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "medida1",
+   "lines": [
+    {
+     "tts": "Uno: quien cobra el salario mínimo, diecisiete mil noventa y cuatro euros al año, no paga IRPF en dos mil veintiséis. El Congreso lo convalidó en marzo.",
+     "text": "Uno: quien cobra el salario mínimo, 17.094 euros al año, no paga IRPF en 2026. El Congreso lo convalidó en marzo."
+    }
+   ],
+   "footnote": "Hacienda 17/02/2026 · convalidado el 18/03/2026",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "psoe",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "1",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "psoe",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "IRPF y salario mínimo",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "0 €",
+     "x": 540,
+     "y": 810,
+     "size": 150,
+     "color": "psoe",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "de IRPF si cobras el SMI",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "17.094 € al año en 2026",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "APROBADO",
+     "sub": "Congreso · 18/03/2026",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida2",
+   "lines": [
+    {
+     "tts": "Dos: el decreto del seis de octubre pone un IVA del diez por ciento a los alquileres de treinta noches o menos, como los pisos turísticos, desde el uno de diciembre.",
+     "text": "Dos: el decreto del 6 de octubre pone un IVA del 10 % a los alquileres de 30 noches o menos, como los pisos turísticos, desde el 1 de diciembre."
+    }
+   ],
+   "footnote": "Real Decreto-ley 29/2026 (BOE 07/10/2026)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "psoe",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "2",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "psoe",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Pisos turísticos",
+     "x": 240,
+     "y": 512,
+     "size": 78,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "IVA 10 %",
+     "x": 540,
+     "y": 810,
+     "size": 150,
+     "color": "psoe",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "alquileres de 30 noches o menos",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "desde el 1 de diciembre",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PENDIENTE",
+     "sub": "RDL 29/2026 · en vigor",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "medida3",
+   "lines": [
+    {
+     "tts": "Tres: el mismo decreto rebaja el IRPF a los caseros que bajen el alquiler, hasta el cien por cien de lo que ganan con él.",
+     "text": "Tres: el mismo decreto rebaja el IRPF a los caseros que bajen el alquiler, hasta el 100 % de lo que ganan con él."
+    }
+   ],
+   "footnote": "Real Decreto-ley 29/2026 (BOE 07/10/2026)",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 480,
+     "rx": 62,
+     "color": "psoe",
+     "width": 9,
+     "at": "L0",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "3",
+     "x": 150,
+     "y": 512,
+     "size": 96,
+     "color": "psoe",
+     "at": "+0",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Caseros que bajan el alquiler",
+     "x": 240,
+     "y": 512,
+     "size": 63,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "hasta 100 %",
+     "x": 540,
+     "y": 810,
+     "size": 150,
+     "color": "psoe",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "de reducción en el IRPF",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "si bajan el precio del alquiler",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PENDIENTE",
+     "sub": "RDL 29/2026 · en vigor",
+     "x": 540,
+     "y": 1250,
+     "w": 600,
+     "h": 150,
+     "size": 60,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "ojo",
+   "lines": [
+    "Ojo: ese decreto ya está en vigor, pero decae si el Congreso no lo convalida."
+   ],
+   "footnote": "Constitución, art. 86",
+   "elements": [
+    {
+     "type": "highlight",
+     "x0": 390,
+     "x1": 690,
+     "y": 500,
+     "width": 90,
+     "at": "L0",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "¡OJO!",
+     "x": 540,
+     "y": 540,
+     "size": 140,
+     "color": "ink",
+     "at": "+0",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "clock",
+     "x": 540,
+     "y": 770,
+     "scale": 1.0,
+     "at": "+0.05",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "ese decreto ya está en vigor…",
+     "x": 540,
+     "y": 1010,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.35",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "pero decae si el Congreso no lo convalida",
+     "x": 540,
+     "y": 1098,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "resumen",
+   "lines": [
+    "Para el 29 de noviembre promete impuestos más progresivos y más lucha contra el fraude, todavía sin cifras."
+   ],
+   "footnote": "Forbes, 05/10/2026",
+   "elements": [
+    {
+     "type": "text",
+     "text": "EN UNA FRASE",
+     "x": 540,
+     "y": 500,
+     "size": 70,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "bubble",
+     "x": 540,
+     "y": 700,
+     "scale": 0.9,
+     "at": "+0.05",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "más progresivo",
+     "x": 540,
+     "y": 960,
+     "size": 110,
+     "color": "psoe",
+     "at": "L0@0.3",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "text",
+     "text": "y más lucha contra el fraude",
+     "x": 540,
+     "y": 1120,
+     "size": 66,
+     "color": "ink",
+     "at": "L0@0.6",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "PROPUESTA",
+     "sub": "sin cifras aún",
+     "x": 540,
+     "y": 1260,
+     "w": 440,
+     "h": 120,
+     "size": 48,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "lines": [
+    {
+     "tts": "Su programa para el veintinueve de noviembre aún no está publicado.",
+     "text": "Su programa para el 29 de noviembre aún no está publicado."
+    },
+    {
+     "tts": "En el próximo episodio: qué propone el pepé.",
+     "text": "En el próximo episodio: qué propone el PP."
+    }
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "calendar",
+     "x": 200,
+     "y": 540,
+     "scale": 0.8,
+     "at": "L0",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "Programa 29N:",
+     "x": 360,
+     "y": 520,
+     "size": 70,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "aún sin publicar",
+     "x": 360,
+     "y": 600,
+     "size": 60,
+     "color": "gray",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "body",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "PRÓXIMO EPISODIO",
+     "x": 540,
+     "y": 820,
+     "size": 74,
+     "color": "ink",
+     "at": "L1",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "circle",
+     "x": 540,
+     "y": 1050,
+     "rx": 138,
+     "color": "pp",
+     "width": 13,
+     "at": "+0.05",
+     "dur": 0.36
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 530.8,
+     "y": 1050,
+     "scale": 1.15,
+     "at": "+0",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "PP",
+     "x": 540,
+     "y": 1330,
+     "size": 110,
+     "color": "pp",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  }
+ ]
+}

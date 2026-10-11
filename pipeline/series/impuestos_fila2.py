@@ -243,8 +243,116 @@ def espana20_impuestos():
                 [], TT_TAGS + ["#España20Años"])
 
 
+# ------------------------------------------------------------------ 4 · lo que nadie te cuenta (TikTok 11/10 20:00)
+def lo_que_pagas():
+    scenes = [
+        dict(id="gancho", lines=["Cada día, España paga más de 100 millones de euros solo en intereses de la deuda.", "Ni hospitales ni colegios: intereses."],
+             tail=0.35, footnote="IGAE 2024: 38.793 M€ al año entre 366 días (cálculo propio)", elements=[
+                 T("CADA DÍA", 540, 460, 120, at=0, dur=0.4),
+                 counter(0, 106, 760, 250, color="red", at=0.2, dur=1.6, sep=False, suffix=" M€"),
+                 T("solo en intereses de la deuda", 540, 880, 62, font="body", color="gray", at=0.4, dur=0.4),
+                 stamp("SOLO INTERESES", None, "L1", y=1130, w=620, h=140, size=66, color="red"),
+             ]),
+        dict(id="titulo", lines=["Esto es lo que pasa con tus impuestos."], tail=0.3, elements=[
+            T("TUS IMPUESTOS", 540, 560, 130, at="L0", dur=0.45),
+            *coin("yellow", 540, 830, 1.3, at="+0.05", dur=0.5),
+            T("lo que nadie te cuenta", 540, 1100, 72, color="red", at="+0.05", dur=0.4),
+        ]),
+        dict(id="historia", lines=["En 1978 nació el IRPF, con el lema «Hacienda somos todos».", "En 1986, al entrar en Europa, llegó el IVA: un 12 %. Hoy, el 21."],
+             footnote="Ley 44/1978 del IRPF · Ley 30/1985 del IVA · RDL 20/2012", elements=[
+                 T("1978", 280, 540, 150, at="L0", dur=0.35),
+                 T("IRPF", 280, 670, 96, color="blue", at="+0.05", dur=0.3),
+                 T("«Hacienda\nsomos todos»", 280, 820, 56, font="body", at="+0.1", dur=0.4, line_height=1.1),
+                 T("1986", 800, 540, 150, at="L1", dur=0.35),
+                 T("IVA", 800, 670, 96, color="red", at="+0.05", dur=0.3),
+                 counter(12, 21, 880, 150, color="red", at="L1@0.55", dur=1.2, sep=False, suffix=" %", x=800),
+                 T("de 1986 a hoy", 800, 980, 50, font="body", color="gray", at="L1@0.6", dur=0.3),
+             ]),
+        dict(id="record", lines=["En 2025, Hacienda recaudó 325.000 millones.", "Récord histórico."],
+             footnote="AEAT, Informe anual de recaudación 2025", elements=[
+                 T("RECAUDADO EN 2025", 540, 460, 96, at="L0", dur=0.4),
+                 counter(0, 325356, 760, 170, at="L0@0.2", dur=1.5, suffix=" M€"),
+                 stamp("RÉCORD", "histórico", "L1", y=1060, w=440, h=140, size=70, color="red"),
+             ]),
+        dict(id="reparto", lines=["De cada 100 euros que gastan las administraciones, 28 van a pensiones, 14 a sanidad y 9 a educación."],
+             footnote="IGAE, gasto por funciones 2024", elements=[
+                 T("DE CADA 100 €", 540, 450, 100, at="L0", dur=0.4),
+                 bar("pensiones", 28, 28, 80, "blue", "28 €", "L0@0.45", bw=220, h=480),
+                 bar("sanidad", 14, 28, 400, "green", "14 €", "L0@0.65", bw=220, h=480),
+                 bar("educación", 9, 28, 720, "yellow", "9 €", "L0@0.8", bw=220, h=480),
+             ]),
+        dict(id="intereses", lines=["Y 5, a pagar intereses.", "Más que defensa, vivienda y medio ambiente juntos."],
+             footnote="IGAE 2024: defensa 14.233 + vivienda 7.613 + medio ambiente 15.539 M€", elements=[
+                 *coin("red", 540, 560, 1.0, at="L0", dur=0.5),
+                 stamp("5 € A INTERESES", None, "L0@0.4", y=770, w=560, h=130, size=60, color="red"),
+                 bar("intereses", 38793, 38793, 180, "red", "38.793 M€", "L1", h=240, y=1240),
+                 bar("los 3 juntos", 37385, 38793, 670, "gray", "37.385 M€", "L1@0.4", h=240, y=1240),
+             ]),
+        dict(id="deuda", lines=["¿Por qué tantos intereses? Porque debemos 1,76 billones de euros.", "Tocamos a unos 35.000 euros por habitante, bebés incluidos."],
+             footnote="Banco de España (junio de 2026) · INE · por habitante: cálculo propio", elements=[
+                 T("DEUDA PÚBLICA", 540, 450, 100, at="L0", dur=0.4),
+                 counter(0, 1.76, 680, 230, at="L0@0.5", dur=1.4, decimals=2, sep=False),
+                 T("billones de euros", 540, 790, 66, font="body", color="gray", at="L0@0.55", dur=0.4),
+                 *[dict(type="icon", name="person", accent="light", x=180 + i * 180, y=960, scale=0.6, at=f"L1@{i * 0.06:.2f}", dur=0.35)
+                   for i in range(5)],
+                 counter(0, 35000, 1180, 190, color="red", at="L1@0.3", dur=1.3, suffix=" €"),
+                 T("por habitante", 540, 1280, 62, font="body", color="gray", at="L1@0.35", dur=0.4),
+             ]),
+        dict(id="airef", lines=["¿Y alguien comprueba si el gasto funciona?", "La AIReF revisó 81.000 millones e hizo propuestas para mejorarlo.", "Hacienda solo aplicó el 36 %."],
+             footnote="AIReF, observatorio de recomendaciones (marzo de 2023)", elements=[
+                 T("¿QUIÉN LO VIGILA?", 540, 450, 100, at="L0", dur=0.4),
+                 T("AIReF", 540, 620, 110, color="blue", at="L1", dur=0.35),
+                 T("revisó 81.000 M€ de gasto", 540, 720, 58, font="body", color="gray", at="L1@0.2", dur=0.4),
+                 T("propuestas aplicadas", 140, 860, 56, align="left", at="L2", dur=0.3),
+                 T("36 %", 940, 860, 76, align="right", color="red", at="+0.02", dur=0.3),
+                 dict(type="gauge", box=[140, 890, 800, 110], value=36, max=100, color="red", at="+0.02", dur=0.9),
+                 stamp("SOLO EL 36 %", None, "L2@0.6", y=1180, w=560, h=140, size=64, color="red"),
+             ]),
+        dict(id="presupuestos", lines=["Y las cuentas del Estado de 2026 son las de 2023: tercer año seguido con presupuestos prorrogados."],
+             footnote="Consejo de Ministros, 23/12/2025", elements=[
+                 T("PRESUPUESTOS", 540, 450, 110, at="L0", dur=0.4),
+                 dict(type="icon", name="calendar", x=540, y=650, scale=0.9, at="+0.05", dur=0.5),
+                 T("2024", 240, 880, 96, color="gray", at="L0@0.3", dur=0.3),
+                 T("2025", 540, 880, 96, color="gray", at="+0.05", dur=0.3),
+                 T("2026", 840, 880, 96, color="gray", at="+0.05", dur=0.3),
+                 dict(type="line", pts=[[140, 860], [940, 860]], color="red", width=9, at="L0@0.6", dur=0.3),
+                 T("= los de 2023", 540, 1060, 120, color="red", at="L0@0.7", dur=0.4),
+             ]),
+        dict(id="nomina", lines=["Mientras, de cada 100 euros que cuesta tu sueldo, 41 se van en impuestos y cotizaciones.", "La media de la OCDE es 35."],
+             footnote="OCDE, Taxing Wages 2026: soltero sin hijos, sueldo medio, 2025", elements=[
+                 T("TU NÓMINA", 540, 460, 110, at="L0", dur=0.4),
+                 dict(type="icon", name="document", x=540, y=680, scale=0.9, at="+0.05", dur=0.5),
+                 T("España", 140, 920, 60, align="left", at="L0@0.5", dur=0.3),
+                 T("41,4 %", 940, 920, 72, align="right", color="red", at="+0.02", dur=0.3),
+                 dict(type="gauge", box=[140, 955, 800, 100], value=41.4, max=100, color="red", at="+0.02", dur=0.9),
+                 T("OCDE", 140, 1150, 60, align="left", at="L1", dur=0.3),
+                 T("35,1 %", 940, 1150, 72, align="right", color="gray", at="+0.02", dur=0.3),
+                 dict(type="gauge", box=[140, 1185, 800, 100], value=35.1, max=100, color="gray", at="+0.02", dur=0.9),
+             ]),
+        dict(id="cierre", lines=["Tú pagas. ¿Sabes en qué se gasta?", "Dime qué te indigna más. Y síguenos."], elements=[
+            T("TÚ PAGAS.", 540, 520, 160, at="L0", dur=0.4),
+            T("¿SABES EN QUÉ\nSE GASTA?", 540, 760, 100, color="red", at="L0@0.45", dur=0.5, line_height=1.05),
+            T("COMENTA", 540, 1080, 110, color="blue", at="L1", dur=0.35),
+            dict(type="underline", x0=330, x1=750, y=1120, color="blue", width=10, at="+0.02", dur=0.3),
+        ]),
+    ]
+    src = ("📚 Fuentes: IGAE (gasto por funciones 2024), AEAT (recaudación 2025), Banco de España (deuda, junio de 2026), INE, "
+           "AIReF (observatorio de recomendaciones, 2023), Consejo de Ministros 23/12/2025, OCDE Taxing Wages 2026, Ley 44/1978, Ley 30/1985. "
+           "Los «al día» y «por habitante» son cálculos nuestros con esas cifras.")
+    caption = ("😡 Cada día pagamos más de 100 millones solo en intereses de la deuda\n"
+               "📜 1978: nace el IRPF · 1986: llega el IVA al 12 % (hoy, 21 %)\n"
+               "💶 Récord: 325.356 M€ recaudados en 2025\n"
+               "🏦 5 de cada 100 € de gasto van a intereses: más que defensa, vivienda y medio ambiente juntos\n"
+               "📉 Deuda de 1,76 billones: unos 35.000 € por habitante\n"
+               "🔍 La AIReF revisó 81.000 M€ de gasto; Hacienda aplicó solo el 36 % de sus propuestas\n"
+               "📅 2026 funciona con los presupuestos de 2023\n"
+               "💬 ¿Qué te indigna más?\n➡️ Síguenos para no perderte el siguiente\n" + src)
+    return base("impuestos_lo_que_pagas", "Tus impuestos: lo que nadie te cuenta", "IMPUESTOS · LO QUE NADIE TE CUENTA", "red",
+                scenes, caption, src, [], TT_TAGS + ["#GastoPúblico", "#DeudaPública"])
+
+
 if __name__ == "__main__":
-    for story in (comparativa(), adonde_van(), espana20_impuestos()):
+    for story in (comparativa(), adonde_van(), espana20_impuestos(), lo_que_pagas()):
         path = os.path.join(OUT, f"{story['slug']}.json")
         json.dump(story, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         print(path)

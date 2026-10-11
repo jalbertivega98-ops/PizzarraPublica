@@ -1,0 +1,941 @@
+{
+ "slug": "impuestos_lo_que_pagas",
+ "title": "Tus impuestos: lo que nadie te cuenta",
+ "series_tag": "IMPUESTOS · LO QUE NADIE TE CUENTA",
+ "accent": "red",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "edge",
+  "voice_id": "es-ES-AlvaroNeural"
+ },
+ "music_volume": 0.15,
+ "music_bpm": 96,
+ "scribble_volume": 0.05,
+ "end_hold": 0.9,
+ "line_gap": 0.1,
+ "sources": [],
+ "caption": "😡 Cada día pagamos más de 100 millones solo en intereses de la deuda\n📜 1978: nace el IRPF · 1986: llega el IVA al 12 % (hoy, 21 %)\n💶 Récord: 325.356 M€ recaudados en 2025\n🏦 5 de cada 100 € de gasto van a intereses: más que defensa, vivienda y medio ambiente juntos\n📉 Deuda de 1,76 billones: unos 35.000 € por habitante\n🔍 La AIReF revisó 81.000 M€ de gasto; Hacienda aplicó solo el 36 % de sus propuestas\n📅 2026 funciona con los presupuestos de 2023\n💬 ¿Qué te indigna más?\n➡️ Síguenos para no perderte el siguiente\n📚 Fuentes: IGAE (gasto por funciones 2024), AEAT (recaudación 2025), Banco de España (deuda, junio de 2026), INE, AIReF (observatorio de recomendaciones, 2023), Consejo de Ministros 23/12/2025, OCDE Taxing Wages 2026, Ley 44/1978, Ley 30/1985. Los «al día» y «por habitante» son cálculos nuestros con esas cifras.",
+ "pinned_comment": "📚 Fuentes: IGAE (gasto por funciones 2024), AEAT (recaudación 2025), Banco de España (deuda, junio de 2026), INE, AIReF (observatorio de recomendaciones, 2023), Consejo de Ministros 23/12/2025, OCDE Taxing Wages 2026, Ley 44/1978, Ley 30/1985. Los «al día» y «por habitante» son cálculos nuestros con esas cifras.",
+ "hashtags": [
+  "#PizarraPública",
+  "#PolíticaEspañola",
+  "#Elecciones29N",
+  "#Impuestos",
+  "#AprendeEnTikTok",
+  "#GastoPúblico",
+  "#DeudaPública"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "lines": [
+    "Cada día, España paga más de 100 millones de euros solo en intereses de la deuda.",
+    "Ni hospitales ni colegios: intereses."
+   ],
+   "tail": 0.35,
+   "footnote": "IGAE 2024: 38.793 M€ al año entre 366 días (cálculo propio)",
+   "elements": [
+    {
+     "type": "text",
+     "text": "CADA DÍA",
+     "x": 540,
+     "y": 460,
+     "size": 120,
+     "color": "ink",
+     "at": 0,
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 106,
+     "x": 540,
+     "y": 760,
+     "size": 250,
+     "color": "red",
+     "at": 0.2,
+     "dur": 1.6,
+     "decimals": 0,
+     "sep": false,
+     "prefix": "",
+     "suffix": " M€"
+    },
+    {
+     "type": "text",
+     "text": "solo en intereses de la deuda",
+     "x": 540,
+     "y": 880,
+     "size": 62,
+     "color": "gray",
+     "at": 0.4,
+     "dur": 0.4,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "SOLO INTERESES",
+     "sub": null,
+     "x": 540,
+     "y": 1130,
+     "w": 620,
+     "h": 140,
+     "size": 66,
+     "color": "red",
+     "rotate": -5,
+     "at": "L1",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "lines": [
+    "Esto es lo que pasa con tus impuestos."
+   ],
+   "tail": 0.3,
+   "elements": [
+    {
+     "type": "text",
+     "text": "TUS IMPUESTOS",
+     "x": 540,
+     "y": 560,
+     "size": 130,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "circle",
+     "x": 540,
+     "y": 830,
+     "rx": 156,
+     "color": "yellow",
+     "width": 15,
+     "at": "+0.05",
+     "dur": 0.3
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 529.6,
+     "y": 830,
+     "scale": 1.3,
+     "at": "+0",
+     "dur": 0.25
+    },
+    {
+     "type": "text",
+     "text": "lo que nadie te cuenta",
+     "x": 540,
+     "y": 1100,
+     "size": 72,
+     "color": "red",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "historia",
+   "lines": [
+    "En 1978 nació el IRPF, con el lema «Hacienda somos todos».",
+    "En 1986, al entrar en Europa, llegó el IVA: un 12 %. Hoy, el 21."
+   ],
+   "footnote": "Ley 44/1978 del IRPF · Ley 30/1985 del IVA · RDL 20/2012",
+   "elements": [
+    {
+     "type": "text",
+     "text": "1978",
+     "x": 280,
+     "y": 540,
+     "size": 150,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "IRPF",
+     "x": 280,
+     "y": 670,
+     "size": 96,
+     "color": "blue",
+     "at": "+0.05",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "«Hacienda\nsomos todos»",
+     "x": 280,
+     "y": 820,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.4,
+     "font": "body",
+     "align": "center",
+     "line_height": 1.1
+    },
+    {
+     "type": "text",
+     "text": "1986",
+     "x": 800,
+     "y": 540,
+     "size": 150,
+     "color": "ink",
+     "at": "L1",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "IVA",
+     "x": 800,
+     "y": 670,
+     "size": 96,
+     "color": "red",
+     "at": "+0.05",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "counter",
+     "from": 12,
+     "to": 21,
+     "x": 800,
+     "y": 880,
+     "size": 150,
+     "color": "red",
+     "at": "L1@0.55",
+     "dur": 1.2,
+     "decimals": 0,
+     "sep": false,
+     "prefix": "",
+     "suffix": " %"
+    },
+    {
+     "type": "text",
+     "text": "de 1986 a hoy",
+     "x": 800,
+     "y": 980,
+     "size": 50,
+     "color": "gray",
+     "at": "L1@0.6",
+     "dur": 0.3,
+     "font": "body",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "record",
+   "lines": [
+    "En 2025, Hacienda recaudó 325.000 millones.",
+    "Récord histórico."
+   ],
+   "footnote": "AEAT, Informe anual de recaudación 2025",
+   "elements": [
+    {
+     "type": "text",
+     "text": "RECAUDADO EN 2025",
+     "x": 540,
+     "y": 460,
+     "size": 96,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 325356,
+     "x": 540,
+     "y": 760,
+     "size": 170,
+     "color": "ink",
+     "at": "L0@0.2",
+     "dur": 1.5,
+     "decimals": 0,
+     "sep": true,
+     "prefix": "",
+     "suffix": " M€"
+    },
+    {
+     "type": "stamp",
+     "text": "RÉCORD",
+     "sub": "histórico",
+     "x": 540,
+     "y": 1060,
+     "w": 440,
+     "h": 140,
+     "size": 70,
+     "color": "red",
+     "rotate": -5,
+     "at": "L1",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "reparto",
+   "lines": [
+    "De cada 100 euros que gastan las administraciones, 28 van a pensiones, 14 a sanidad y 9 a educación."
+   ],
+   "footnote": "IGAE, gasto por funciones 2024",
+   "elements": [
+    {
+     "type": "text",
+     "text": "DE CADA 100 €",
+     "x": 540,
+     "y": 450,
+     "size": 100,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "bars",
+     "x": 80,
+     "y": 1100,
+     "h": 480,
+     "bar_w": 220,
+     "gap": 60,
+     "max": 28,
+     "at": "L0@0.45",
+     "dur": 0.9,
+     "bars": [
+      {
+       "label": "pensiones",
+       "value": 28,
+       "color": "blue",
+       "value_label": "28 €"
+      }
+     ]
+    },
+    {
+     "type": "bars",
+     "x": 400,
+     "y": 1100,
+     "h": 480,
+     "bar_w": 220,
+     "gap": 60,
+     "max": 28,
+     "at": "L0@0.65",
+     "dur": 0.9,
+     "bars": [
+      {
+       "label": "sanidad",
+       "value": 14,
+       "color": "green",
+       "value_label": "14 €"
+      }
+     ]
+    },
+    {
+     "type": "bars",
+     "x": 720,
+     "y": 1100,
+     "h": 480,
+     "bar_w": 220,
+     "gap": 60,
+     "max": 28,
+     "at": "L0@0.8",
+     "dur": 0.9,
+     "bars": [
+      {
+       "label": "educación",
+       "value": 9,
+       "color": "yellow",
+       "value_label": "9 €"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "intereses",
+   "lines": [
+    "Y 5, a pagar intereses.",
+    "Más que defensa, vivienda y medio ambiente juntos."
+   ],
+   "footnote": "IGAE 2024: defensa 14.233 + vivienda 7.613 + medio ambiente 15.539 M€",
+   "elements": [
+    {
+     "type": "circle",
+     "x": 540,
+     "y": 560,
+     "rx": 120,
+     "color": "red",
+     "width": 12,
+     "at": "L0",
+     "dur": 0.3
+    },
+    {
+     "type": "icon",
+     "name": "euro",
+     "x": 532.0,
+     "y": 560,
+     "scale": 1.0,
+     "at": "+0",
+     "dur": 0.25
+    },
+    {
+     "type": "stamp",
+     "text": "5 € A INTERESES",
+     "sub": null,
+     "x": 540,
+     "y": 770,
+     "w": 560,
+     "h": 130,
+     "size": 60,
+     "color": "red",
+     "rotate": -5,
+     "at": "L0@0.4",
+     "dur": 0.55
+    },
+    {
+     "type": "bars",
+     "x": 180,
+     "y": 1240,
+     "h": 240,
+     "bar_w": 230,
+     "gap": 60,
+     "max": 38793,
+     "at": "L1",
+     "dur": 0.9,
+     "bars": [
+      {
+       "label": "intereses",
+       "value": 38793,
+       "color": "red",
+       "value_label": "38.793 M€"
+      }
+     ]
+    },
+    {
+     "type": "bars",
+     "x": 670,
+     "y": 1240,
+     "h": 240,
+     "bar_w": 230,
+     "gap": 60,
+     "max": 38793,
+     "at": "L1@0.4",
+     "dur": 0.9,
+     "bars": [
+      {
+       "label": "los 3 juntos",
+       "value": 37385,
+       "color": "gray",
+       "value_label": "37.385 M€"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "deuda",
+   "lines": [
+    "¿Por qué tantos intereses? Porque debemos 1,76 billones de euros.",
+    "Tocamos a unos 35.000 euros por habitante, bebés incluidos."
+   ],
+   "footnote": "Banco de España (junio de 2026) · INE · por habitante: cálculo propio",
+   "elements": [
+    {
+     "type": "text",
+     "text": "DEUDA PÚBLICA",
+     "x": 540,
+     "y": 450,
+     "size": 100,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 1.76,
+     "x": 540,
+     "y": 680,
+     "size": 230,
+     "color": "ink",
+     "at": "L0@0.5",
+     "dur": 1.4,
+     "decimals": 2,
+     "sep": false,
+     "prefix": "",
+     "suffix": ""
+    },
+    {
+     "type": "text",
+     "text": "billones de euros",
+     "x": 540,
+     "y": 790,
+     "size": 66,
+     "color": "gray",
+     "at": "L0@0.55",
+     "dur": 0.4,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "accent": "light",
+     "x": 180,
+     "y": 960,
+     "scale": 0.6,
+     "at": "L1@0.00",
+     "dur": 0.35
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "accent": "light",
+     "x": 360,
+     "y": 960,
+     "scale": 0.6,
+     "at": "L1@0.06",
+     "dur": 0.35
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "accent": "light",
+     "x": 540,
+     "y": 960,
+     "scale": 0.6,
+     "at": "L1@0.12",
+     "dur": 0.35
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "accent": "light",
+     "x": 720,
+     "y": 960,
+     "scale": 0.6,
+     "at": "L1@0.18",
+     "dur": 0.35
+    },
+    {
+     "type": "icon",
+     "name": "person",
+     "accent": "light",
+     "x": 900,
+     "y": 960,
+     "scale": 0.6,
+     "at": "L1@0.24",
+     "dur": 0.35
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 35000,
+     "x": 540,
+     "y": 1180,
+     "size": 190,
+     "color": "red",
+     "at": "L1@0.3",
+     "dur": 1.3,
+     "decimals": 0,
+     "sep": true,
+     "prefix": "",
+     "suffix": " €"
+    },
+    {
+     "type": "text",
+     "text": "por habitante",
+     "x": 540,
+     "y": 1280,
+     "size": 62,
+     "color": "gray",
+     "at": "L1@0.35",
+     "dur": 0.4,
+     "font": "body",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "airef",
+   "lines": [
+    "¿Y alguien comprueba si el gasto funciona?",
+    "La AIReF revisó 81.000 millones e hizo propuestas para mejorarlo.",
+    "Hacienda solo aplicó el 36 %."
+   ],
+   "footnote": "AIReF, observatorio de recomendaciones (marzo de 2023)",
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿QUIÉN LO VIGILA?",
+     "x": 540,
+     "y": 450,
+     "size": 100,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "AIReF",
+     "x": 540,
+     "y": 620,
+     "size": 110,
+     "color": "blue",
+     "at": "L1",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "revisó 81.000 M€ de gasto",
+     "x": 540,
+     "y": 720,
+     "size": 58,
+     "color": "gray",
+     "at": "L1@0.2",
+     "dur": 0.4,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "propuestas aplicadas",
+     "x": 140,
+     "y": 860,
+     "size": 56,
+     "color": "ink",
+     "at": "L2",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "36 %",
+     "x": 940,
+     "y": 860,
+     "size": 76,
+     "color": "red",
+     "at": "+0.02",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "right"
+    },
+    {
+     "type": "gauge",
+     "box": [
+      140,
+      890,
+      800,
+      110
+     ],
+     "value": 36,
+     "max": 100,
+     "color": "red",
+     "at": "+0.02",
+     "dur": 0.9
+    },
+    {
+     "type": "stamp",
+     "text": "SOLO EL 36 %",
+     "sub": null,
+     "x": 540,
+     "y": 1180,
+     "w": 560,
+     "h": 140,
+     "size": 64,
+     "color": "red",
+     "rotate": -5,
+     "at": "L2@0.6",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "presupuestos",
+   "lines": [
+    "Y las cuentas del Estado de 2026 son las de 2023: tercer año seguido con presupuestos prorrogados."
+   ],
+   "footnote": "Consejo de Ministros, 23/12/2025",
+   "elements": [
+    {
+     "type": "text",
+     "text": "PRESUPUESTOS",
+     "x": 540,
+     "y": 450,
+     "size": 110,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "calendar",
+     "x": 540,
+     "y": 650,
+     "scale": 0.9,
+     "at": "+0.05",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "2024",
+     "x": 240,
+     "y": 880,
+     "size": 96,
+     "color": "gray",
+     "at": "L0@0.3",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "2025",
+     "x": 540,
+     "y": 880,
+     "size": 96,
+     "color": "gray",
+     "at": "+0.05",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "2026",
+     "x": 840,
+     "y": 880,
+     "size": 96,
+     "color": "gray",
+     "at": "+0.05",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "line",
+     "pts": [
+      [
+       140,
+       860
+      ],
+      [
+       940,
+       860
+      ]
+     ],
+     "color": "red",
+     "width": 9,
+     "at": "L0@0.6",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "= los de 2023",
+     "x": 540,
+     "y": 1060,
+     "size": 120,
+     "color": "red",
+     "at": "L0@0.7",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "nomina",
+   "lines": [
+    "Mientras, de cada 100 euros que cuesta tu sueldo, 41 se van en impuestos y cotizaciones.",
+    "La media de la OCDE es 35."
+   ],
+   "footnote": "OCDE, Taxing Wages 2026: soltero sin hijos, sueldo medio, 2025",
+   "elements": [
+    {
+     "type": "text",
+     "text": "TU NÓMINA",
+     "x": 540,
+     "y": 460,
+     "size": 110,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "document",
+     "x": 540,
+     "y": 680,
+     "scale": 0.9,
+     "at": "+0.05",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "España",
+     "x": 140,
+     "y": 920,
+     "size": 60,
+     "color": "ink",
+     "at": "L0@0.5",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "41,4 %",
+     "x": 940,
+     "y": 920,
+     "size": 72,
+     "color": "red",
+     "at": "+0.02",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "right"
+    },
+    {
+     "type": "gauge",
+     "box": [
+      140,
+      955,
+      800,
+      100
+     ],
+     "value": 41.4,
+     "max": 100,
+     "color": "red",
+     "at": "+0.02",
+     "dur": 0.9
+    },
+    {
+     "type": "text",
+     "text": "OCDE",
+     "x": 140,
+     "y": 1150,
+     "size": 60,
+     "color": "ink",
+     "at": "L1",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "35,1 %",
+     "x": 940,
+     "y": 1150,
+     "size": 72,
+     "color": "gray",
+     "at": "+0.02",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "right"
+    },
+    {
+     "type": "gauge",
+     "box": [
+      140,
+      1185,
+      800,
+      100
+     ],
+     "value": 35.1,
+     "max": 100,
+     "color": "gray",
+     "at": "+0.02",
+     "dur": 0.9
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "lines": [
+    "Tú pagas. ¿Sabes en qué se gasta?",
+    "Dime qué te indigna más. Y síguenos."
+   ],
+   "elements": [
+    {
+     "type": "text",
+     "text": "TÚ PAGAS.",
+     "x": 540,
+     "y": 520,
+     "size": 160,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "¿SABES EN QUÉ\nSE GASTA?",
+     "x": 540,
+     "y": 760,
+     "size": 100,
+     "color": "red",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.05
+    },
+    {
+     "type": "text",
+     "text": "COMENTA",
+     "x": 540,
+     "y": 1080,
+     "size": 110,
+     "color": "blue",
+     "at": "L1",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "underline",
+     "x0": 330,
+     "x1": 750,
+     "y": 1120,
+     "color": "blue",
+     "width": 10,
+     "at": "+0.02",
+     "dur": 0.3
+    }
+   ]
+  }
+ ]
+}

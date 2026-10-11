@@ -1,0 +1,123 @@
+"""Los datos que incomodan #1 · Expulsiones: se ordenan, no se cumplen.
+
+Cifras: Eurostat, migr_eiord (órdenes de salida) y migr_eirtn (retornos tras orden), consultado el 11/10/2026.
+España 2025: 53.700 órdenes y 5.705 retornos (10,6 %). UE-27 2025: 486.705 y 156.000 (32,1 %).
+Retornos de España: 2011 = 23.350; 2017 = 10.785; 2018 = 12.560; 2025 = 5.705.
+Regularización: 1.174.978 solicitudes al cierre (30/06/2026), Ministerio de Inclusión.
+"""
+VIDEO = {
+    "slug": "di01_expulsiones",
+    "titulo": "Se ordena. No se cumple.",
+    "serie": "LOS DATOS QUE INCOMODAN · #1",
+    "acento": "red",
+    "claves": ["diez", "uno", "nunca", "fracaso", "delito", "aceptarlo"],
+    "musica": {"bpm": 108, "tono": 0, "seed": 11},
+    "planos": [
+        {"voz": [{"tts": "Cincuenta y tres mil setecientas órdenes de salir de España.", "text": "53.700 órdenes de salir de España."}],
+         "cam": "golpe", "fuente": "Eurostat, 2025",
+         "el": [
+             {"k": "icono", "n": "documento", "x": 250, "y": 930, "tam": 0.9, "rot": -12, "at": 0.05},
+             {"k": "icono", "n": "documento", "x": 830, "y": 950, "tam": 0.9, "rot": 10, "at": 0.15},
+             {"k": "icono", "n": "documento", "x": 540, "y": 1000, "tam": 1.0, "rot": -3, "at": 0.25},
+             {"k": "num", "val": 53700, "desde": 0, "dur": 0.8, "golpe": True, "px": 240, "y": 620, "fondo": "yellow", "at": 0},
+             {"k": "txt", "t": "ÓRDENES DE SALIDA", "px": 64, "y": 400, "at": "@órdenes", "fuente": "num"},
+         ]},
+        {"voz": ["¿Sabes cuántas se cumplieron?"], "trans": "zoom", "cam": "empuja",
+         "el": [
+             {"k": "pers", "tipo": "funcionario", "x": 330, "y": 820, "tam": 1.5, "cara": "duda", "pose": "encoge", "anim": "pop"},
+             {"k": "icono", "n": "interrogacion", "x": 790, "y": 620, "tam": 2.2, "at": "@cuántas", "flota": True},
+         ]},
+        {"voz": [{"tts": "Cinco mil setecientas cinco.", "text": "5.705."}], "trans": "corte", "cam": "golpe",
+         "el": [
+             {"k": "num", "val": 5705, "desde": 53700, "dur": 0.7, "golpe": True, "px": 260, "y": 700, "color": "red", "fondo": "estallido",
+              "at": 0},
+         ]},
+        {"voz": ["Una de cada diez."], "trans": "barrido", "cam": "empuja",
+         "el": [
+             {"k": "gente", "n": 10, "cols": 5, "sep": 170, "y": 700, "destacar": [0], "apagar": "@diez", "color": "blue", "color_dest": "red"},
+             {"k": "txt", "t": "1 DE CADA 10", "px": 96, "y": 1050, "at": "@diez", "marca": "yellow"},
+         ]},
+        {"voz": ["Son extranjeros de fuera de la Unión Europea a los que el Estado ordena irse."], "trans": "sube", "cam": "deriva",
+         "el": [
+             {"k": "pers", "tipo": "viajero", "x": 300, "y": 840, "tam": 1.45, "cara": "neutral", "sostiene": "maleta"},
+             {"k": "icono", "n": "bandera_ue", "x": 780, "y": 470, "tam": 1.1, "at": "@Unión"},
+             {"k": "icono", "n": "documento", "x": 780, "y": 860, "tam": 1.3, "at": "@ordena", "rot": 6},
+             {"k": "sello", "t": "SALIDA", "x": 780, "y": 900, "px": 60, "at": "@irse", "rot": -14},
+         ]},
+        {"voz": ["Casi siempre, por estar sin papeles: una falta administrativa, no un delito."], "trans": "barrido", "cam": "empuja",
+         "el": [
+             {"k": "txt", "t": "SIN PAPELES", "px": 90, "y": 420, "at": 0.1},
+             {"k": "flecha", "de": [540, 480], "a": [540, 600], "at": "@falta-0.2", "color": "ink"},
+             {"k": "txt", "t": "FALTA\nADMINISTRATIVA", "px": 92, "y": 730, "at": "@falta", "marca": "yellow"},
+             {"k": "txt", "t": "DELITO", "px": 110, "y": 1000, "at": "@no", "color": "gray"},
+             {"k": "tacha", "x": 540, "y": 965, "w": 420, "h": 70, "at": "@delito", "color": "red"},
+         ]},
+        {"voz": ["La orden se firma…", "y la persona sigue aquí."], "trans": "tinta", "cam": "empuja",
+         "el": [
+             {"k": "pers", "tipo": "funcionario", "x": 270, "y": 850, "tam": 1.3, "cara": "listo", "pose": "señala", "sostiene": "sello"},
+             {"k": "sello", "t": "ORDEN", "x": 300, "y": 450, "px": 80, "at": "@firma"},
+             {"k": "pers", "tipo": "viajero", "x": 790, "y": 850, "tam": 1.3, "cara": "neutral", "sostiene": "maleta", "mira": -1,
+              "at": "@persona", "cambios": [["@sigue", {"pose": "encoge", "cara": "duda"}]]},
+         ]},
+        {"voz": [{"tts": "España ejecuta el diez coma seis por ciento.", "text": "España ejecuta el 10,6 %."},
+                 {"tts": "La media europea: el treinta y dos.", "text": "La media europea: el 32 %."}],
+         "trans": "zoom", "cam": "aleja", "fuente": "Eurostat, 2025",
+         "el": [
+             {"k": "barras", "y": 1000, "w": 700, "h": 520, "max": 35, "escalon": 1.6,
+              "items": [{"label": "ESPAÑA", "val": 10.6, "color": "red", "txt": "{v} %", "dec": 1},
+                        {"label": "MEDIA UE", "val": 32.1, "color": "blue", "txt": "{v} %", "dec": 1}]},
+         ]},
+        {"voz": [{"tts": "Y antes no era así: en dos mil once se devolvió a veintitrés mil personas.",
+                  "text": "Y antes no era así: en 2011 se devolvió a 23.350 personas."},
+                 {"tts": "En dos mil veinticinco, a menos de seis mil.", "text": "En 2025, a menos de 6.000."}],
+         "trans": "barrido", "cam": "deriva", "fuente": "Eurostat: retornos tras orden de salida",
+         "el": [
+             {"k": "linea", "y": 950, "w": 800, "h": 500, "ymax": 26000, "at": "@2011", "dur": 3.2, "color": "red",
+              "datos": [[2011, 23350], [2012, 18865], [2013, 17285], [2014, 15150], [2015, 13315], [2016, 10185], [2017, 10785],
+                        [2018, 12560], [2019, 12370], [2020, 5265], [2021, 4755], [2022, 3790], [2023, 5995], [2024, 6105], [2025, 5705]],
+              "etiquetas": {"2011": "23.350", "2025": "5.705"}},
+         ]},
+        {"voz": ["La caída empezó con el PP… y siguió con el PSOE."], "trans": "sube", "cam": "empuja",
+         "sfx": [["fin-0.9", "subida"]],
+         "el": [
+             {"k": "pers", "tipo": "politico", "x": 300, "y": 830, "tam": 1.3, "cara": "duda", "pose": "encoge", "rotulo": "PP",
+              "color_rotulo": "pp", "px_rotulo": 70, "at": "@PP-0.3"},
+             {"k": "pers", "tipo": "politico", "x": 780, "y": 830, "tam": 1.3, "cara": "duda", "pose": "encoge", "rotulo": "PSOE",
+              "color_rotulo": "psoe", "px_rotulo": 70, "mira": -1, "at": "@PSOE-0.3"},
+             {"k": "icono", "n": "grafica", "x": 540, "y": 420, "tam": 0.9, "color": "red", "at": 0.1, "rot": 90},
+         ]},
+        {"voz": ["¿Por qué? Para devolver a alguien, su país tiene que aceptarlo.", "Y muchos no colaboran."],
+         "pausa": 0.55, "trans": "flash", "cam": "golpe",
+         "el": [
+             {"k": "icono", "n": "avion", "x": 300, "y": 520, "tam": 1.4, "anim": "entra_izq", "at": "@devolver"},
+             {"k": "icono", "n": "edificio", "x": 760, "y": 900, "tam": 1.2, "at": "@país"},
+             {"k": "bocadillo", "t": "¿Readmitirlo?\nNo.", "x": 760, "y": 560, "px": 62, "cola": [-60, 170], "at": "@aceptarlo"},
+             {"k": "tacha", "x": 300, "y": 520, "w": 300, "h": 160, "at": "@colaboran"},
+         ]},
+        {"voz": [{"tts": "Mientras, en 2026, se abrió una regularización: casi un millón doscientas mil solicitudes.",
+                  "text": "Mientras, en 2026, se abrió una regularización: 1.174.978 solicitudes."}],
+         "trans": "barrido", "cam": "empuja", "fuente": "Ministerio de Inclusión, 30/06/2026",
+         "el": [
+             {"k": "txt", "t": "REGULARIZACIÓN 2026", "px": 70, "y": 450, "at": "@regularización", "marca": "yellow"},
+             {"k": "num", "val": 1174978, "desde": 0, "dur": 1.0, "golpe": True, "px": 170, "y": 720, "at": "@1.174-0.3",
+              "sub": "solicitudes"},
+             {"k": "icono", "n": "documento", "x": 220, "y": 1010, "tam": 0.7, "rot": -14, "at": "@solicitudes"},
+             {"k": "icono", "n": "documento", "x": 860, "y": 1010, "tam": 0.7, "rot": 12, "at": "@solicitudes+0.1"},
+         ]},
+        {"voz": ["Para unos, es sentido común. Para otros, premiar saltarse la ley."], "trans": "tinta", "cam": "deriva",
+         "el": [
+             {"k": "pers", "tipo": "ciudadana", "x": 280, "y": 900, "tam": 1.15, "cara": "feliz", "pose": "señala"},
+             {"k": "bocadillo", "t": "Sentido\ncomún", "x": 300, "y": 520, "px": 64, "cola": [-20, 170], "at": "@sentido"},
+             {"k": "pers", "tipo": "ciudadano", "x": 800, "y": 900, "tam": 1.15, "cara": "enfado", "pose": "jarras", "mira": -1, "at": "@otros"},
+             {"k": "bocadillo", "t": "Premiar\nsaltarse\nla ley", "x": 790, "y": 500, "px": 58, "cola": [20, 200], "at": "@premiar"},
+         ]},
+        {"voz": ["Una ley que casi nunca se cumple…", "¿hay que cumplirla, o hay que cambiarla?"], "trans": "zoom", "cam": "empuja",
+         "min": 0,
+         "el": [
+             {"k": "estallido", "r": 330, "y": 700, "color": "yellow", "at": "L1"},
+             {"k": "txt", "t": "¿CUMPLIRLA", "px": 110, "y": 620, "at": "@cumplirla", "color": "blue"},
+             {"k": "txt", "t": "O CAMBIARLA?", "px": 110, "y": 780, "at": "@cambiarla", "color": "red"},
+             {"k": "txt", "t": "TE LEO EN COMENTARIOS ↓", "px": 50, "y": 1080, "at": "fin-1.2", "fuente": "num"},
+         ]},
+    ],
+}

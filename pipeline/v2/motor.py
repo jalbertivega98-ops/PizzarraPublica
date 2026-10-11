@@ -33,7 +33,8 @@ from dibujo import H, W, clamp, e_back, e_inout, e_out  # noqa: E402
 FPS = 30
 TRANS = 0.32          # duración de las transiciones
 GAP = 0.10            # silencio entre frases
-CAP_Y = 1330          # línea base de los subtítulos (fuera de la zona de botones de TikTok)
+CAP_Y = 1400          # línea base de los subtítulos (por encima del texto y botones de TikTok/Reels)
+ESC = 1.16            # zoom global de la escena: todo grande, que llene la pantalla
 ZONA = (230, 1230)    # zona útil de dibujo (y)
 
 
@@ -274,6 +275,10 @@ class Num(El):
         txt = s.sp.get("pre", "") + D.fmt_num(v, s.sp.get("dec", 0)) + s.sp.get("suf", "")
         w = s.f.measureText(txt)
         px = s.f.getSize()
+        wfin = s.f.measureText(s.sp.get("pre", "") + D.fmt_num(s.val, s.sp.get("dec", 0)) + s.sp.get("suf", ""))
+        if wfin > 900:
+            k = 900 / wfin
+            cv.scale(k, k)
         fondo = s.sp.get("fondo")
         if fondo == "estallido":
             _estallido(cv, 0, -px * 0.35, max(w, px) * 0.72, s.sp.get("fondo_color", "yellow"), t, al)
@@ -320,7 +325,13 @@ class Txt(El):
     def pinta(s, cv, t, al):
         px = s.f.getSize()
         lh = px * 1.08
+        wmax = max(s.f.measureText(x) for x in s.lineas) + (44 if s.sp.get("marca") else 0)
+        lim = s.sp.get("ancho", 740 if abs(s.x - 540) < 120 else 2 * min(s.x, 1080 - s.x) / 1.16 - 30)
+        if wmax > lim:
+            cv.scale(lim / wmax, lim / wmax)
         y0 = -lh * (len(s.lineas) - 1) / 2 + px * 0.35
+        resp = 1 + 0.018 * math.sin((t - s.t0) * 4 + s.y)
+        cv.scale(resp, resp)
         for i, ln in enumerate(s.lineas):
             y = y0 + i * lh
             if s.anim == "escribe":
@@ -493,9 +504,10 @@ class Icono(El):
         return super().sonidos()
 
     def pinta(s, cv, t, al):
-        if s.sp.get("flota"):
-            cv.translate(0, 10 * math.sin((t - s.t0) * 3 + s.x))
-            cv.rotate(4 * math.sin((t - s.t0) * 2.3 + s.y))
+        if s.sp.get("flota", True):
+            amp = 1.0 if s.sp.get("flota") else 0.45
+            cv.translate(0, amp * 10 * math.sin((t - s.t0) * 3 + s.x))
+            cv.rotate(amp * 4 * math.sin((t - s.t0) * 2.3 + s.y))
         frac = clamp((t - s.t0) / s.sp.get("dur", 0.5)) if s.anim == "traza" else 1
         D.dibuja_trazos(cv, s.trazos, frac, al)
 
@@ -707,7 +719,8 @@ class Burbujas(El):
         s.anim = "none"
         s.f = D.fuente("num", s.sp.get("px", 60))
         r = s.rng
-        s.pos = [(r.uniform(-300, 300), r.uniform(-380, 380), r.uniform(-14, 14)) for _ in s.sp["items"]]
+        n = len(s.sp["items"])
+        s.pos = [((-1) ** i * r.uniform(60, 250), -430 + 860 * i / max(1, n - 1) + r.uniform(-25, 25), r.uniform(-12, 12)) for i in range(n)]
 
     def sonidos(s):
         return [(s.t0 + i * s.sp.get("escalon", 0.18), "pop", {"pitch": 1 + 0.06 * i}) for i in range(len(s.sp["items"]))]
@@ -783,9 +796,14 @@ class Render:
             for sp in pl.sp.get("el", []):
                 pl.els.append(TIPOS_EL[sp["k"]](sp, pl, video, np.random.default_rng(rng.integers(1 << 30))))
             pl.els.sort(key=lambda e: e.z)
+            if pl.els:
+                ini = pl.ini + (0.04 if pl.i else 0)
+                primero = min(pl.els, key=lambda e: e.t0)
+                if primero.t0 > ini + 0.3:
+                    primero.t0 = ini
             pl.golpes = [g for e in pl.els for g in e.golpes()]
         s.fondo = s._fondo()
-        s.fcap = D.fuente("num", 72)
+        s.fcap = D.fuente("num", 80)
         s.flogo = D.fuente("num", 30)
         s.ffuente = D.fuente("ui", 28)
         s.acento = video.get("acento", "red")
@@ -811,14 +829,40 @@ class Render:
         for y in range(0, H, 90):
             cv.drawLine(0, y, W, y, p)
         sc, dx, dy, rot = camara(pl, t, pl.golpes)
+        s.fondo_plano(cv, pl, t)
         cv.save()
-        cv.translate(W / 2 + dx, 800 + dy)
+        cv.translate(W / 2 + dx, 790 + dy)
         cv.rotate(rot)
-        cv.scale(sc, sc)
-        cv.translate(-W / 2, -800)
+        cv.scale(sc * ESC, sc * ESC)
+        cv.translate(-W / 2, -760)
         for e in pl.els:
             e.dibuja(cv, t)
         cv.restore()
+
+    def fondo_plano(s, cv, pl, t):
+        """Fondo de color del plano: rayos, mancha o liso (por defecto alterna)."""
+        tipo = pl.sp.get("fondo")
+        if tipo is None:
+            tipo = "rayos" if pl.sp.get("cam") == "golpe" else ("mancha" if pl.i % 2 else "liso")
+        col = pl.sp.get("fondo_color", s.acento)
+        u = t - pl.ini
+        if tipo == "rayos":
+            cx, cy = W / 2, 760
+            p = skia.Path()
+            for k in range(18):
+                a0 = math.radians(u * 12 + k * 20)
+                a1 = a0 + math.radians(10)
+                p.moveTo(cx, cy)
+                p.lineTo(cx + 2000 * math.cos(a0), cy + 2000 * math.sin(a0))
+                p.lineTo(cx + 2000 * math.cos(a1), cy + 2000 * math.sin(a1))
+                p.close()
+            cv.drawPath(p, D.p_fill(col, 34))
+        elif tipo == "mancha":
+            r = 470 + 12 * math.sin(u * 2)
+            cv.drawCircle(W / 2 + 10, 770, r, D.p_fill(col, 40))
+            cv.drawCircle(W / 2, 760, r, D.p_stroke(col, 5, 90))
+        elif tipo == "color":
+            cv.drawRect(skia.Rect(0, 0, W, H), D.p_fill(col, 60))
 
     def plano_en(s, t):
         for i, pl in enumerate(s.planos):
@@ -915,15 +959,16 @@ class Render:
             f = D.fuente("ui", 26)
             cv.drawString(serie, 52, 238, f, D.p_fill("ink"))
         # fuente del dato
-        fu = pl.sp.get("fuente")
+        fu = None if getattr(s, "sin_subs", False) else pl.sp.get("fuente")
         if fu:
             txt = "Fuente: " + fu
             w = s.ffuente.measureText(txt)
-            r = skia.Rect(W / 2 - w / 2 - 22, 1180, W / 2 + w / 2 + 22, 1226)
+            r = skia.Rect(W / 2 - w / 2 - 22, 1262, W / 2 + w / 2 + 22, 1308)
             cv.drawRoundRect(r, 23, 23, D.p_fill("white", 235))
             cv.drawRoundRect(r, 23, 23, D.p_stroke("gray", 3))
-            cv.drawString(txt, W / 2 - w / 2, 1213, s.ffuente, D.p_fill("gray"))
-        s.subtitulos(cv, t)
+            cv.drawString(txt, W / 2 - w / 2, 1295, s.ffuente, D.p_fill("gray"))
+        if not getattr(s, "sin_subs", False):
+            s.subtitulos(cv, t)
 
     def trozos(s):
         if hasattr(s, "_tr"):
@@ -1079,6 +1124,7 @@ def render(path, out_dir, preview=False, procesos=4):
                "planos": [{"i": pl.i, "ini": round(pl.ini, 2), "fin": round(pl.fin, 2), "dur": round(pl.fin - pl.ini, 2),
                            "voz": [ln_text(x) for x in pl.sp.get("voz", [])]} for pl in r.planos]},
               open(os.path.join(out_dir, slug + "_tiempos.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    portada(path, os.path.join(out_dir, "portada_" + slug + ".png"))
     print(f"✓ {mp4}  ({r.dur:.1f} s)")
     return mp4, r
 
@@ -1126,6 +1172,33 @@ def hoja(path, out_png, cada=1.0):
     return out_png
 
 
+def portada(path, out_png):
+    """Portada 1080×1920 (la parte central 1080×1440 es la que se ve en la cuadrícula de Instagram)."""
+    video = cargar_video(path)
+    r = Render(video)
+    r.sin_subs = True
+    cfg = video.get("portada", {})
+    surf = skia.Surface(W, H)
+    cv = surf.getCanvas()
+    r.frame(cv, cfg.get("t", 1.4))
+    lineas = cfg.get("titulo", video["titulo"]).split("\n")
+    f = D.fuente("num", cfg.get("px", 92))
+    y = cfg.get("y", 1250)
+    for i, ln in enumerate(lineas):
+        w = f.measureText(ln)
+        k = min(1.0, 960 / w)
+        cv.save()
+        cv.translate(W / 2, y + i * f.getSize() * 1.12)
+        cv.rotate(-2)
+        cv.scale(k, k)
+        rr = skia.Rect(-w / 2 - 26, -f.getSize() * 0.82, w / 2 + 26, f.getSize() * 0.2)
+        cv.drawRoundRect(rr, 16, 16, D.p_fill("ink"))
+        cv.drawString(ln, -w / 2, 0, f, D.p_fill("yellow" if i == 0 else "white"))
+        cv.restore()
+    surf.makeImageSnapshot().save(out_png, skia.kPNG)
+    return out_png
+
+
 def fotograma(path, t, out_png):
     r = Render(cargar_video(path))
     surf = skia.Surface(W, H)
@@ -1140,12 +1213,16 @@ if __name__ == "__main__":
     ap.add_argument("--preview", action="store_true")
     ap.add_argument("--hoja", action="store_true")
     ap.add_argument("--t", type=float)
+    ap.add_argument("--portada", action="store_true")
     a = ap.parse_args()
     v = cargar_video(a.video)
     out = os.path.join(a.out, v["slug"])
     if a.hoja:
         os.makedirs(out, exist_ok=True)
         print(hoja(a.video, os.path.join(out, "_hoja.png")))
+    elif a.portada:
+        os.makedirs(out, exist_ok=True)
+        print(portada(a.video, os.path.join(out, "portada_" + v["slug"] + ".png")))
     elif a.t is not None:
         os.makedirs(out, exist_ok=True)
         fotograma(a.video, a.t, os.path.join(out, f"_t{a.t:.1f}.png"))

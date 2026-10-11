@@ -12,6 +12,7 @@ VIDEO = {
     "acento": "red",
     "claves": ["diez", "uno", "nunca", "fracaso", "delito", "aceptarlo"],
     "musica": {"bpm": 108, "tono": 0, "seed": 11},
+    "portada": {"t": 1.3, "titulo": "SE ORDENA.\nNO SE CUMPLE."},
     "planos": [
         {"voz": [{"tts": "Cincuenta y tres mil setecientas órdenes de salir de España.", "text": "53.700 órdenes de salir de España."}],
          "cam": "golpe", "fuente": "Eurostat, 2025",
@@ -32,7 +33,7 @@ VIDEO = {
              {"k": "num", "val": 5705, "desde": 53700, "dur": 0.7, "golpe": True, "px": 260, "y": 700, "color": "red", "fondo": "estallido",
               "at": 0},
          ]},
-        {"voz": ["Una de cada diez."], "trans": "barrido", "cam": "empuja",
+        {"voz": ["Una de cada diez."], "trans": "barrido", "cam": "empuja", "min": 2.0,
          "el": [
              {"k": "gente", "n": 10, "cols": 5, "sep": 170, "y": 700, "destacar": [0], "apagar": "@diez", "color": "blue", "color_dest": "red"},
              {"k": "txt", "t": "1 DE CADA 10", "px": 96, "y": 1050, "at": "@diez", "marca": "yellow"},
@@ -47,6 +48,7 @@ VIDEO = {
         {"voz": ["Casi siempre, por estar sin papeles: una falta administrativa, no un delito."], "trans": "barrido", "cam": "empuja",
          "el": [
              {"k": "txt", "t": "SIN PAPELES", "px": 90, "y": 420, "at": 0.1},
+             {"k": "icono", "n": "pasaporte", "x": 850, "y": 430, "tam": 0.6, "rot": 12, "at": "@papeles"},
              {"k": "flecha", "de": [540, 480], "a": [540, 600], "at": "@falta-0.2", "color": "ink"},
              {"k": "txt", "t": "FALTA\nADMINISTRATIVA", "px": 92, "y": 730, "at": "@falta", "marca": "yellow"},
              {"k": "txt", "t": "DELITO", "px": 110, "y": 1000, "at": "@no", "color": "gray"},
@@ -70,9 +72,9 @@ VIDEO = {
         {"voz": [{"tts": "Y antes no era así: en dos mil once se devolvió a veintitrés mil personas.",
                   "text": "Y antes no era así: en 2011 se devolvió a 23.350 personas."},
                  {"tts": "En dos mil veinticinco, a menos de seis mil.", "text": "En 2025, a menos de 6.000."}],
-         "trans": "barrido", "cam": "deriva", "fuente": "Eurostat: retornos tras orden de salida",
+         "trans": "barrido", "cam": "empuja", "fuente": "Eurostat: retornos tras orden de salida",
          "el": [
-             {"k": "linea", "y": 950, "w": 800, "h": 500, "ymax": 26000, "at": "@2011", "dur": 3.2, "color": "red",
+             {"k": "linea", "y": 960, "w": 660, "h": 460, "ymax": 26000, "at": "@2011", "dur": 3.2, "color": "red",
               "datos": [[2011, 23350], [2012, 18865], [2013, 17285], [2014, 15150], [2015, 13315], [2016, 10185], [2017, 10785],
                         [2018, 12560], [2019, 12370], [2020, 5265], [2021, 4755], [2022, 3790], [2023, 5995], [2024, 6105], [2025, 5705]],
               "etiquetas": {"2011": "23.350", "2025": "5.705"}},
@@ -84,7 +86,7 @@ VIDEO = {
               "color_rotulo": "pp", "px_rotulo": 70, "at": "@PP-0.3"},
              {"k": "pers", "tipo": "politico", "x": 780, "y": 830, "tam": 1.3, "cara": "duda", "pose": "encoge", "rotulo": "PSOE",
               "color_rotulo": "psoe", "px_rotulo": 70, "mira": -1, "at": "@PSOE-0.3"},
-             {"k": "icono", "n": "grafica", "x": 540, "y": 420, "tam": 0.9, "color": "red", "at": 0.1, "rot": 90},
+             {"k": "icono", "n": "grafica", "x": 540, "y": 430, "tam": 0.9, "color": "red", "at": 0.05},
          ]},
         {"voz": ["¿Por qué? Para devolver a alguien, su país tiene que aceptarlo.", "Y muchos no colaboran."],
          "pausa": 0.55, "trans": "flash", "cam": "golpe",
@@ -99,7 +101,7 @@ VIDEO = {
          "trans": "barrido", "cam": "empuja", "fuente": "Ministerio de Inclusión, 30/06/2026",
          "el": [
              {"k": "txt", "t": "REGULARIZACIÓN 2026", "px": 70, "y": 450, "at": "@regularización", "marca": "yellow"},
-             {"k": "num", "val": 1174978, "desde": 0, "dur": 1.0, "golpe": True, "px": 170, "y": 720, "at": "@1.174-0.3",
+             {"k": "num", "val": 1174978, "desde": 0, "golpe": True, "px": 170, "y": 720, "at": 0.2, "dur": 2.2,
               "sub": "solicitudes"},
              {"k": "icono", "n": "documento", "x": 220, "y": 1010, "tam": 0.7, "rot": -14, "at": "@solicitudes"},
              {"k": "icono", "n": "documento", "x": 860, "y": 1010, "tam": 0.7, "rot": 12, "at": "@solicitudes+0.1"},
@@ -115,9 +117,10 @@ VIDEO = {
          "min": 0,
          "el": [
              {"k": "estallido", "r": 330, "y": 700, "color": "yellow", "at": "L1"},
-             {"k": "txt", "t": "¿CUMPLIRLA", "px": 110, "y": 620, "at": "@cumplirla", "color": "blue"},
-             {"k": "txt", "t": "O CAMBIARLA?", "px": 110, "y": 780, "at": "@cambiarla", "color": "red"},
-             {"k": "txt", "t": "TE LEO EN COMENTARIOS ↓", "px": 50, "y": 1080, "at": "fin-1.2", "fuente": "num"},
+             {"k": "txt", "t": "CASI NUNCA\nSE CUMPLE", "px": 100, "y": 700, "at": 0.05, "hasta": "@cumplirla-0.2", "color": "red"},
+             {"k": "txt", "t": "¿CUMPLIRLA", "px": 100, "y": 620, "at": "@cumplirla", "color": "blue"},
+             {"k": "txt", "t": "O CAMBIARLA?", "px": 100, "y": 780, "at": "@cambiarla", "color": "red"},
+             {"k": "txt", "t": "TE LEO EN COMENTARIOS", "px": 50, "y": 1080, "at": "fin-1.2", "fuente": "num"},
          ]},
     ],
 }

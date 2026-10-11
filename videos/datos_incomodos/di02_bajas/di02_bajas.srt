@@ -1,0 +1,63 @@
+1
+00:00:00,000 --> 00:00:02,688
+Las bajas médicas ya cuestan el triple que hace diez años.
+
+2
+00:00:02,948 --> 00:00:04,506
+Y quien las firma… no las paga.
+
+3
+00:00:04,766 --> 00:00:08,835
+La Seguridad Social pagó 16.500 millones de euros en 2024.
+
+4
+00:00:09,095 --> 00:00:13,632
+El segundo mayor gasto de la Seguridad Social. Solo le ganan las pensiones.
+
+5
+00:00:13,892 --> 00:00:20,516
+En 2017 hubo 4,7 millones de bajas. En 2024, casi 8,6 millones.
+
+6
+00:00:20,776 --> 00:00:24,426
+Y duran más: las de salud mental, de 67 días a casi 100.
+
+7
+00:00:25,036 --> 00:00:29,350
+Ahora, lo raro: la baja la firma tu médico, que depende de tu comunidad autónoma.
+
+8
+00:00:29,610 --> 00:00:31,955
+Pero la pagan la Seguridad Social… y tu empresa.
+
+9
+00:00:32,215 --> 00:00:33,187
+Quien decide no paga.
+
+10
+00:00:33,287 --> 00:00:34,695
+Y quien paga, no decide.
+
+11
+00:00:34,955 --> 00:00:38,843
+Más: un cuarto de quienes se dan de baja acumula más de la mitad de todas las bajas.
+
+12
+00:00:39,103 --> 00:00:43,501
+Y al pasar de temporal a fijo, la probabilidad de coger una baja sube un 30 %.
+
+13
+00:00:44,311 --> 00:00:48,380
+Pero ojo: esto no demuestra fraude. La AIReF no lo calcula.
+
+14
+00:00:48,640 --> 00:00:51,533
+Habla de falta de control… y de más problemas de salud mental.
+
+15
+00:00:51,793 --> 00:00:53,144
+¿Quién debería revisar tu baja?
+
+16
+00:00:53,244 --> 00:00:55,794
+¿Tu médico, tu empresa… o la Seguridad Social?

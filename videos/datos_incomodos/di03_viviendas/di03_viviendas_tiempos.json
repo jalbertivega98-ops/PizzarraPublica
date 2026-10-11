@@ -1,0 +1,118 @@
+{
+ "duracion": 51.35,
+ "voz_real": true,
+ "planos": [
+  {
+   "i": 0,
+   "ini": 0.0,
+   "fin": 2.4,
+   "dur": 2.4,
+   "voz": [
+    "184.000 viviendas prometidas."
+   ]
+  },
+  {
+   "i": 1,
+   "ini": 2.4,
+   "fin": 4.41,
+   "dur": 2.01,
+   "voz": [
+    "¿Cuántas tienen ya a alguien viviendo dentro?"
+   ]
+  },
+  {
+   "i": 2,
+   "ini": 4.41,
+   "fin": 7.19,
+   "dur": 2.78,
+   "voz": [
+    "Nadie lo sabe.",
+    "El Gobierno no publica esa cifra."
+   ]
+  },
+  {
+   "i": 3,
+   "ini": 7.19,
+   "fin": 12.66,
+   "dur": 5.46,
+   "voz": [
+    "Desde 2018, el Gobierno de Pedro Sánchez ha anunciado planes de vivienda al menos catorce veces."
+   ]
+  },
+  {
+   "i": 4,
+   "ini": 12.66,
+   "fin": 16.98,
+   "dur": 4.32,
+   "voz": [
+    "En abril de 2026, Vivienda habló de 120.479 viviendas «movilizadas»."
+   ]
+  },
+  {
+   "i": 5,
+   "ini": 16.98,
+   "fin": 22.33,
+   "dur": 5.35,
+   "voz": [
+    "Suena bien. Pero movilizada significa que se ha enviado el dinero.",
+    "No que la casa exista."
+   ]
+  },
+  {
+   "i": 6,
+   "ini": 22.33,
+   "fin": 28.56,
+   "dur": 6.23,
+   "voz": [
+    "Maldita.es pidió cuántas se han entregado. También por Transparencia.",
+    "El Ministerio no ha dado la cifra."
+   ]
+  },
+  {
+   "i": 7,
+   "ini": 28.56,
+   "fin": 34.06,
+   "dur": 5.5,
+   "voz": [
+    "En 2024, un recuento de prensa llegó a 10.206: el 5,5 %."
+   ]
+  },
+  {
+   "i": 8,
+   "ini": 34.06,
+   "fin": 39.34,
+   "dur": 5.28,
+   "voz": [
+    "Y en toda España, en un año, se terminaron 14.317 viviendas protegidas."
+   ]
+  },
+  {
+   "i": 9,
+   "ini": 39.34,
+   "fin": 44.66,
+   "dur": 5.31,
+   "voz": [
+    "Pero ojo: construir y adjudicar vivienda depende sobre todo de comunidades y ayuntamientos."
+   ]
+  },
+  {
+   "i": 10,
+   "ini": 44.66,
+   "fin": 47.12,
+   "dur": 2.47,
+   "voz": [
+    "Y ahí gobiernan partidos de todos los colores."
+   ]
+  },
+  {
+   "i": 11,
+   "ini": 47.12,
+   "fin": 51.35,
+   "dur": 4.23,
+   "voz": [
+    "Si un Gobierno promete viviendas…",
+    "¿debería estar obligado a publicar cuántas entrega?"
+   ]
+  }
+ ]
+}

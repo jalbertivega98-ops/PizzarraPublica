@@ -14,15 +14,17 @@ VIDEO = {
     "acento": "blue",
     "voz": "elevenlabs:Pizarra Pública",
     "claves": ["35.000", "segundo", "2.000", "dos", "verdad", "honesto"],
-    "musica": {"bpm": 114, "tono": 1, "seed": 77},
+    "musica": {"bpm": 122, "tono": 1, "seed": 77},
     "portada": {"t": 1.3, "titulo": "DEBES 35.000 €\nY NO LO SABÍAS"},
+    "duro": True,
     "planos": [
         # GANCHO
-        {"voz": [{"tts": "Debes treinta y cinco mil euros.", "text": "Debes 35.000 €."}],
-         "cam": "golpe", "min": 1.6, "fuente": "Banco de España e INE, 2026",
+        {"voz": [{"tts": "Debes treinta y cinco mil euros. Y nadie te pidió permiso.", "text": "Debes 35.000 €. Y nadie te pidió permiso."}],
+         "cam": "golpe", "fuente": "Banco de España e INE, 2026",
          "el": [
              {"k": "num", "val": 35000, "desde": 0, "dur": 0.8, "golpe": True, "px": 180, "y": 640, "suf": " €", "color": "red", "fondo": "yellow", "at": 0},
              {"k": "pers", "tipo": "ciudadana", "x": 540, "y": 1080, "tam": 1.1, "cara": "shock", "pose": "cabeza", "at": 0.2},
+             {"k": "txt", "t": "NADIE TE PIDIÓ PERMISO", "px": 60, "y": 400, "at": "@nadie", "marca": "yellow"},
          ]},
         {"voz": ["Tú, tu madre, y el bebé que nació ayer."], "trans": "zoom", "cam": "empuja",
          "el": [
@@ -43,6 +45,11 @@ VIDEO = {
              {"k": "txt", "t": "1.744.000.000.000 €", "px": 92, "y": 640, "at": 0.1, "color": "red"},
              {"k": "dinero", "modo": "lluvia", "n": 30, "at": 0.3, "dur": 2.2, "z": -1},
              {"k": "txt", "t": "BILLONES CON B", "px": 64, "y": 840, "at": "@billones", "marca": "yellow"},
+         ]},
+        {"voz": ["Y se paga con tus impuestos."], "trans": "corte", "cam": "golpe", "min": 1.3,
+         "el": [
+             {"k": "icono", "n": "documento", "x": 540, "y": 720, "tam": 1.8, "at": 0.05, "rot": -6},
+             {"k": "sello", "t": "TUS IMPUESTOS", "x": 540, "y": 760, "px": 90, "at": "@impuestos", "rot": -10},
          ]},
         {"voz": [{"tts": "Y sigue subiendo: unos dos mil euros cada segundo.", "text": "Y sigue subiendo: unos 2.000 € cada segundo."}],
          "trans": "zoom", "cam": "empuja", "fuente": "Cálculo propio: +3,8 % en el último año",

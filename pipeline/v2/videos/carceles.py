@@ -24,21 +24,24 @@ VIDEO = {
     "acento": "orange",
     "voz": "elevenlabs:Pizarra Pública",  # Álvaro (edge-tts) da 403 desde el 12/10/2026
     "claves": ["veinte", "nueve", "multa", "cárcel", "homicidios", "incómodo", "mitad", "igual", "siempre", "vuelvan"],
-    "musica": {"bpm": 112, "tono": -2, "seed": 44},
+    "musica": {"bpm": 120, "tono": -2, "seed": 44},
     "portada": {"t": 1.2, "titulo": "20 MESES DE CÁRCEL.\n¿Y LOS DE SIEMPRE?"},
+    "duro": True,
     "planos": [
         # GANCHO
-        {"voz": [{"tts": "Veinte meses.", "text": "20 meses."}],
-         "cam": "golpe", "fuente": "Consejo de Europa, SPACE I 2025", "min": 1.4,
+        {"voz": ["Te roban el móvil. ¿Castigo? Una multa."],
+         "cam": "golpe", "min": 1.6, "fuente": "Código Penal, art. 234",
          "el": [
-             {"k": "icono", "n": "rejas", "x": 540, "y": 980, "tam": 1.8, "at": 0},
-             {"k": "num", "val": 20, "desde": 0, "dur": 0.5, "golpe": True, "px": 170, "y": 560, "fondo": "yellow", "at": 0, "suf": " meses"},
+             {"k": "icono", "n": "movil", "x": 540, "y": 520, "tam": 1.5, "rot": -10, "at": 0},
+             {"k": "pers", "tipo": "joven", "x": 300, "y": 1010, "tam": 1.15, "cara": "listo", "pose": "saluda", "at": "@roban"},
+             {"k": "sello", "t": "MULTA", "x": 740, "y": 930, "px": 110, "at": "@multa", "rot": -12},
          ]},
-        {"voz": ["Lo que pasa de media un preso en una cárcel española."], "trans": "zoom", "cam": "empuja",
+        {"voz": [{"tts": "Pero quien entra en prisión, pasa veinte meses.", "text": "Pero quien entra en prisión, pasa 20 meses."}],
+         "trans": "flash", "cam": "golpe", "fuente": "Consejo de Europa, SPACE I 2025",
          "el": [
-             {"k": "pers", "tipo": "preso", "x": 330, "y": 860, "tam": 1.5, "cara": "triste", "pose": "cabeza"},
-             {"k": "icono", "n": "calendario", "x": 790, "y": 560, "tam": 1.3, "at": "@media", "rot": 8},
-             {"k": "icono", "n": "rejas", "x": 790, "y": 950, "tam": 1.1, "at": "@cárcel"},
+             {"k": "icono", "n": "rejas", "x": 760, "y": 980, "tam": 1.4, "at": 0.05},
+             {"k": "pers", "tipo": "preso", "x": 300, "y": 980, "tam": 1.2, "cara": "triste", "pose": "cabeza", "at": "@prisión"},
+             {"k": "num", "val": 20, "desde": 0, "dur": 0.5, "golpe": True, "px": 170, "y": 560, "fondo": "yellow", "at": "@20-0.3", "suf": " meses"},
          ]},
         {"voz": [{"tts": "En Europa, menos de nueve.", "text": "En Europa, menos de 9."}], "trans": "barrido", "cam": "aleja",
          "fuente": "Consejo de Europa, SPACE I 2025",
@@ -47,7 +50,7 @@ VIDEO = {
               "items": [{"label": "ESPAÑA", "val": 20, "color": "orange", "txt": "{v} meses"},
                         {"label": "EUROPA", "val": 8.8, "color": "blue", "txt": "{v} meses", "dec": 1}]},
          ]},
-        {"voz": ["Y aun así, en la calle, siempre los mismos."], "trans": "tinta", "cam": "deriva",
+        {"voz": ["Y aun así, en tu calle roban siempre los mismos."], "trans": "tinta", "cam": "deriva",
          "el": [
              {"k": "pers", "tipo": "ciudadana", "x": 290, "y": 880, "tam": 1.3, "cara": "enfado", "pose": "jarras"},
              {"k": "pers", "tipo": "joven", "x": 790, "y": 880, "tam": 1.3, "cara": "listo", "pose": "normal", "mira": -1, "at": "@calle",
@@ -128,7 +131,7 @@ VIDEO = {
              {"k": "icono", "n": "grafica", "x": 540, "y": 1030, "tam": 1.0, "color": "red", "at": "@suben"},
          ]},
         # LO INCÓMODO
-        {"voz": ["Ahora, lo incómodo."], "trans": "tinta", "cam": "golpe", "pausa": 0.5, "min": 1.3,
+        {"voz": ["Ahora, lo que casi nadie se atreve a decir."], "trans": "tinta", "cam": "golpe", "pausa": 0.5, "min": 1.3,
          "el": [
              {"k": "txt", "t": "LO\nINCÓMODO", "px": 150, "y": 700, "at": 0.05, "color": "red"},
          ]},

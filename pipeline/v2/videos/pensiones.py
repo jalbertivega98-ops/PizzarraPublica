@@ -17,8 +17,9 @@ VIDEO = {
     "acento": "purple",
     "voz": "elevenlabs:Pizarra Pública",
     "claves": ["1.576", "más", "61.342", "2,1", "impuestos", "padres"],
-    "musica": {"bpm": 110, "tono": -1, "seed": 66},
+    "musica": {"bpm": 118, "tono": -1, "seed": 66},
     "portada": {"t": 2.6, "titulo": "LA PENSIÓN MEDIA\nGANA AL SUELDO MÁS COMÚN"},
+    "duro": True,
     "planos": [
         # GANCHO
         {"voz": [{"tts": "Pensión media de jubilación: mil quinientos setenta y seis euros.", "text": "Pensión media de jubilación: 1.576 €."}],
@@ -41,6 +42,11 @@ VIDEO = {
              {"k": "barras", "y": 1060, "w": 700, "h": 560, "max": 24000, "escalon": 0.5, "px_val": 62,
               "items": [{"label": "PENSIÓN/AÑO", "val": 22065, "color": "purple", "txt": "{v} €"},
                         {"label": "SUELDO/AÑO", "val": 16520, "color": "red", "txt": "{v} €"}]},
+         ]},
+        {"voz": ["Y lo pagas tú."], "trans": "corte", "cam": "golpe", "min": 1.3,
+         "el": [
+             {"k": "pers", "tipo": "joven", "x": 540, "y": 960, "tam": 1.4, "cara": "shock", "pose": "cabeza", "at": 0.05},
+             {"k": "sello", "t": "LO PAGAS TÚ", "x": 540, "y": 470, "px": 100, "at": "@pagas", "rot": -8},
          ]},
         # PROBLEMA
         {"voz": [{"tts": "Cada mes, España paga catorce mil quinientos millones en pensiones.", "text": "Cada mes, España paga 14.498 millones en pensiones."}],
@@ -80,7 +86,7 @@ VIDEO = {
              {"k": "txt", "t": "DE DEUDA", "px": 80, "y": 860, "at": "@Estado", "marca": "yellow"},
          ]},
         # GIRO
-        {"voz": ["Mientras, los jóvenes tienen cada vez menos."], "trans": "tinta", "cam": "golpe", "pausa": 0.5,
+        {"voz": ["Mientras, los jóvenes se están quedando casi sin nada."], "trans": "tinta", "cam": "golpe", "pausa": 0.5,
          "el": [
              {"k": "pers", "tipo": "joven", "x": 540, "y": 880, "tam": 1.5, "cara": "triste", "pose": "cabeza", "at": 0.05},
          ]},

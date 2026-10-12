@@ -898,6 +898,8 @@ class Render:
                 if primero.t0 > ini + 0.3:
                     primero.t0 = ini
             pl.golpes = [g for e in pl.els for g in e.golpes()]
+            if video.get("duro"):   # modo duro: sacudidas más fuertes
+                pl.golpes = [(tg, f * 2.2) for tg, f in pl.golpes]
         s.fondo = s._fondo()
         s.fcap = D.fuente("num", 80)
         s.flogo = D.fuente("num", 30)
@@ -977,7 +979,22 @@ class Render:
             s.transicion(cv, s.planos[i - 1], pl, t, (t - (pl.ini - TRANS / 2)) / TRANS)
         else:
             s.pinta_plano(cv, pl, t)
+        if s.video.get("duro"):
+            s.flash_duro(cv, pl, t)
         s.hud(cv, t, pl)
+
+    def flash_duro(s, cv, pl, t):
+        """Modo duro: destello rojo y marco en cada golpe."""
+        k = 0.0
+        for tg, f in pl.golpes:
+            if tg <= t < tg + 0.3:
+                k = max(k, 1 - (t - tg) / 0.3)
+        if pl.sp.get("cam") == "golpe" and t < pl.ini + 0.3:
+            k = max(k, 1 - (t - pl.ini) / 0.3)
+        if k <= 0:
+            return
+        cv.drawRect(skia.Rect(0, 0, W, H), D.p_fill("red", int(70 * k)))
+        cv.drawRect(skia.Rect(0, 0, W, H), D.p_stroke("red", 60 * k + 1, int(230 * k)))
 
     def _snap(s, pl, t):
         surf = skia.Surface(W, H)

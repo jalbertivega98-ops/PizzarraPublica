@@ -31,7 +31,7 @@ VIDEO = {
          "cam": "golpe", "fuente": "Consejo de Europa, SPACE I 2025", "min": 1.4,
          "el": [
              {"k": "icono", "n": "rejas", "x": 540, "y": 980, "tam": 1.8, "at": 0},
-             {"k": "num", "val": 20, "desde": 0, "dur": 0.5, "golpe": True, "px": 230, "y": 560, "fondo": "yellow", "at": 0, "suf": " meses"},
+             {"k": "num", "val": 20, "desde": 0, "dur": 0.5, "golpe": True, "px": 170, "y": 560, "fondo": "yellow", "at": 0, "suf": " meses"},
          ]},
         {"voz": ["Lo que pasa de media un preso en una cárcel española."], "trans": "zoom", "cam": "empuja",
          "el": [
@@ -107,7 +107,7 @@ VIDEO = {
         {"voz": ["Pero algunos delitos graves sí suben."], "trans": "corte", "cam": "golpe",
          "el": [
              {"k": "estallido", "r": 330, "y": 700, "color": "red", "at": "@graves-0.2"},
-             {"k": "txt", "t": "LOS GRAVES\nSUBEN", "px": 92, "y": 700, "at": "@graves-0.1", "color": "white"},
+             {"k": "txt", "t": "LOS GRAVES\nSUBEN", "px": 78, "y": 700, "at": "@graves-0.1", "color": "white"},
          ]},
         {"voz": [{"tts": "En Madrid, los delitos bajan… pero los homicidios pasan de diez a diecisiete.",
                   "text": "En Madrid, los delitos bajan… pero los homicidios pasan de 10 a 17."}],
@@ -117,8 +117,7 @@ VIDEO = {
              {"k": "icono", "n": "edificio", "x": 540, "y": 1060, "tam": 1.0, "at": 0.1, "hasta": "@homicidios"},
              {"k": "txt", "t": "DELITOS −2,4 %", "px": 70, "y": 540, "at": "@bajan", "color": "green"},
              {"k": "txt", "t": "HOMICIDIOS", "px": 80, "y": 760, "at": "@homicidios", "color": "red"},
-             {"k": "num", "val": 17, "desde": 10, "dur": 0.8, "golpe": True, "px": 220, "y": 1060, "at": "@17-0.3", "color": "red",
-              "fondo": "estallido", "fondo_color": "yellow"},
+             {"k": "num", "val": 17, "desde": 10, "dur": 0.8, "golpe": True, "px": 230, "y": 1080, "at": "@17-0.3", "color": "red"},
          ]},
         {"voz": [{"tts": "Y los delitos sexuales suben en las dos ciudades.", "text": "Y los delitos sexuales suben en las dos ciudades."}],
          "trans": "sube", "cam": "deriva", "fuente": "Interior y Delegación del Gobierno, 2025",

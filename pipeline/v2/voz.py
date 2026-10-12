@@ -42,6 +42,29 @@ def clave(texto, voz=VOZ, vel=VELOCIDAD):
     return hashlib.sha1(f"{voz}|{vel}|{texto}".encode()).hexdigest()[:16]
 
 
+# Microsoft rechaza a veces la versión de navegador que declara edge-tts (403). Se prueban otras.
+VERSIONES = [None, "150.0.3480.0", "149.0.3440.0", "148.0.3390.0", "147.0.3340.0", "146.0.3300.0", "145.0.3250.0", "144.0.3200.0"]
+
+
+def usa_version(v):
+    import edge_tts.communicate as C
+    import edge_tts.constants as K
+    if not hasattr(K, "_ORIG"):
+        K._ORIG = K.CHROMIUM_FULL_VERSION
+    v = v or K._ORIG
+    m = v.split(".")[0]
+    gec = f"1-{v}"
+    for mod in (K, C):
+        for nombre, val in (("CHROMIUM_FULL_VERSION", v), ("CHROMIUM_MAJOR_VERSION", m), ("SEC_MS_GEC_VERSION", gec)):
+            if hasattr(mod, nombre):
+                setattr(mod, nombre, val)
+        for hd in ("WSS_HEADERS", "BASE_HEADERS"):
+            h = getattr(mod, hd, None)
+            if isinstance(h, dict) and "User-Agent" in h:
+                h["User-Agent"] = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+                                   f"Chrome/{m}.0.0.0 Safari/537.36 Edg/{m}.0.0.0")
+
+
 async def sintetizar(texto, voz=VOZ, vel=VELOCIDAD):
     import edge_tts
 
@@ -68,12 +91,18 @@ def main(paths):
             mp3, js = os.path.join(CACHE, k + ".mp3"), os.path.join(CACHE, k + ".json")
             if os.path.exists(mp3) and os.path.exists(js):
                 continue
-            for intento in range(4):
+            audio = None
+            for intento in range(len(VERSIONES) + 3):
                 try:
                     audio, palabras = asyncio.run(sintetizar(txt, voz, vel))
                     break
-                except Exception as e:  # el servicio a veces corta la conexión
+                except Exception as e:  # el servicio a veces corta la conexión o rechaza la versión
                     print("reintento", intento, e)
+                    if "403" in str(e) and intento + 1 < len(VERSIONES):
+                        usa_version(VERSIONES[intento + 1])
+                        print("  probando versión", VERSIONES[intento + 1])
+            if audio is None:
+                sys.exit("No se pudo generar la voz")
             open(mp3, "wb").write(audio)
             json.dump(palabras, open(js, "w", encoding="utf-8"), ensure_ascii=False)
             nuevas += 1

@@ -371,4 +371,32 @@ def ico_edificio(rng, c="light"):
     return S
 
 
+def ico_rejas(rng, c="gray"):
+    S = [_t(rect(-95, -100, 190, 200, 8), rng, relleno="light", cerrado=True, ancho=9)]
+    for x in (-55, -18, 18, 55):
+        S.append(_t([(x, -100), (x, 100)], rng, tinta="ink", ancho=12))
+    S.append(_t([(-95, -30), (95, -30)], rng, tinta=c, ancho=9))
+    return S
+
+
+def ico_movil(rng, c="ink"):
+    return [_t(rect(-50, -95, 100, 190, 18), rng, relleno=c, cerrado=True), _t(rect(-38, -75, 76, 135, 6), rng, relleno="blue", cerrado=True, ancho=5),
+            _t(elipse(0, 78, 7, 7, n=12), rng, tinta="light", ancho=5)]
+
+
+def ico_esposas(rng, c="gray"):
+    return [_t(elipse(-50, 10, 42, 42), rng, tinta=c, ancho=16), _t(elipse(50, 10, 42, 42), rng, tinta=c, ancho=16),
+            _t([(-12, -20), (0, -35), (12, -20)], rng, tinta="ink", ancho=9)]
+
+
+def ico_mazo(rng, c="brown"):
+    return [_t(rect(-75, -85, 110, 55, 10), rng, relleno=c, cerrado=True), _t([(-20, -30), (60, 50)], rng, ancho=16),
+            _t(rect(-90, 70, 180, 30, 6), rng, relleno=c, cerrado=True)]
+
+
+def ico_cartera(rng, c="brown"):
+    return [_t(rect(-90, -55, 180, 115, 14), rng, relleno=c, cerrado=True), _t(rect(30, -20, 60, 40, 8), rng, relleno="yellow", cerrado=True, ancho=5),
+            _t(rect(-70, -80, 110, 30, 4), rng, relleno="green", cerrado=True, ancho=5)]
+
+
 ICONOS = {k[4:]: v for k, v in globals().items() if k.startswith("ico_")}

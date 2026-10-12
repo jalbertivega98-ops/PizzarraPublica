@@ -21,6 +21,9 @@ TIPOS = {
     "trabajador": ("orange", "brown", "skin3", "casco"),
     "viajero": ("blue", "ink", "skin3", "mochila"),
     "jefa": ("red", "brown", "skin", "moño"),
+    "policia": ("blue", "ink", "skin", "gorra_poli"),
+    "preso": ("orange", "gray", "skin2", "rapado"),
+    "juez": ("ink", "gray", "skin", "toga"),
 }
 
 
@@ -180,6 +183,13 @@ def dibuja_personaje(cv, tipo, t, expr="neutral", pose="normal", sostiene=None, 
         _circ(cv, 0, 34, 8, "light", "gray", 4, desplaza=False)
     if extra == "mochila":
         _linea(cv, [(-40, -10), (-30, 60)], "brown", 7)
+    if extra == "toga":
+        cv.drawRect(skia.Rect(-20, -12, 20, 10), p_fill("white"))
+        _linea(cv, [(-14, -10), (-14, 98)], "gray", 4)
+        _linea(cv, [(14, -10), (14, 98)], "gray", 4)
+    if extra == "rapado":
+        for i in range(3):
+            _linea(cv, [(-50, 20 + i * 26), (50, 20 + i * 26)], "ink", 5)
     # brazos
     _brazo(cv, (-48, 8), li, camisa)
     _brazo(cv, (48, 8), ld, camisa)
@@ -189,6 +199,12 @@ def dibuja_personaje(cv, tipo, t, expr="neutral", pose="normal", sostiene=None, 
     if extra == "casco":
         _arco(cv, 0, -88, 64, 50, 180, 180, "ink", 7, relleno="yellow")
         _linea(cv, [(-72, -88), (72, -88)], "ink", 9)
+    elif extra == "gorra_poli":
+        _arco(cv, 0, -98, 60, 42, 180, 180, "ink", 7, relleno="blue")
+        _linea(cv, [(-66, -98), (66, -98)], "ink", 12)
+        _circ(cv, 0, -118, 11, "yellow", "ink", 4, desplaza=False)
+    elif extra == "rapado":
+        _arco(cv, 0, -78, 60, 58, 200, 140, "gray", 10)
     elif extra == "gorra":
         _arco(cv, 0, -96, 58, 40, 180, 180, "ink", 7, relleno="purple")
         _linea(cv, [(0, -96), (80, -96)], "ink", 11)

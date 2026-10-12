@@ -748,9 +748,105 @@ class Burbujas(El):
             cv.restore()
 
 
+class Encuesta(El):
+    """Encuesta para comentar: pregunta, dos tarjetas A/B y cartel «COMENTA A o B». Coordenadas absolutas.
+    sp: pregunta, a, b, color_a, color_b, at (pregunta), at_a, at_b, at_c (cartel)."""
+
+    def prep(s):
+        s.anim, s.x, s.y = "none", 0, 0
+        sp, pl = s.sp, s.pl
+        s.ta = resuelve(sp["at_a"], pl) if "at_a" in sp else s.t0 + 0.4
+        s.tb = resuelve(sp["at_b"], pl) if "at_b" in sp else s.ta + 0.4
+        s.tc = resuelve(sp["at_c"], pl) if "at_c" in sp else s.tb + 0.6
+        s.fq = D.fuente("num", sp.get("px", 74))
+        s.fl = D.fuente("num", 66)
+        s.fb = D.fuente("num", 96)
+        s.fc = D.fuente("num", 72)
+
+    def golpes(s):
+        return [(s.tc + 0.1, 0.8)]
+
+    def sonidos(s):
+        return [(s.t0, "pop", {"pitch": 0.9}), (s.ta, "pop", {"pitch": 1.1}), (s.tb, "pop", {"pitch": 1.3}),
+                (s.tc + 0.05, "sello", {})]
+
+    def _tarjeta(s, cv, t, t0, y, letra, txt, col):
+        k = e_back((t - t0) / 0.3)
+        if k <= 0:
+            return
+        w, h = 820, 180
+        # tras el cartel, las tarjetas laten por turnos
+        lat = 1 + 0.035 * max(0, math.sin((t - s.tc) * 5 - (0 if letra == "A" else math.pi))) if t > s.tc + 0.3 else 1
+        cv.save()
+        cv.translate(540, y)
+        cv.scale(k * lat, k * lat)
+        r = skia.Rect(-w / 2, -h / 2, w / 2, h / 2)
+        cv.save()
+        cv.translate(14, 14)
+        cv.drawRoundRect(r, 34, 34, D.p_fill(col))
+        cv.restore()
+        cv.drawRoundRect(r, 34, 34, D.p_fill("white"))
+        cv.drawRoundRect(r, 34, 34, D.p_stroke("ink", 8))
+        cx = -w / 2 + 110
+        cv.drawCircle(cx, 0, 72, D.p_fill(col))
+        cv.drawCircle(cx, 0, 72, D.p_stroke("ink", 7))
+        D.texto(cv, letra, cx, s.fb.getSize() * 0.36, s.fb, "white", "ink", 10)
+        lim = w - 260
+        tw = s.fl.measureText(txt)
+        cv.save()
+        x0 = cx + 110
+        if tw > lim:
+            cv.translate(x0, 0)
+            cv.scale(lim / tw, lim / tw)
+            x0 = 0
+        D.texto(cv, txt, x0, s.fl.getSize() * 0.36, s.fl, "ink", None, 0, alinea="i")
+        cv.restore()
+        cv.restore()
+
+    def pinta(s, cv, t, al):
+        # pregunta
+        k = e_back((t - s.t0) / 0.3)
+        if k > 0:
+            lineas = s.sp["pregunta"].split("\n")
+            px = s.fq.getSize()
+            cv.save()
+            cv.translate(540, 420)
+            cv.scale(k, k)
+            for i, ln in enumerate(lineas):
+                D.texto(cv, ln, 0, (i - (len(lineas) - 1) / 2) * px * 1.1 + px * 0.35, s.fq, "ink", "white", 14)
+            cv.restore()
+        s._tarjeta(cv, t, s.ta, 640, "A", s.sp["a"], s.sp.get("color_a", "red"))
+        s._tarjeta(cv, t, s.tb, 870, "B", s.sp["b"], s.sp.get("color_b", "blue"))
+        # cartel
+        u = (t - s.tc) / 0.25
+        if u > 0:
+            k = 1 + 1.2 * (1 - e_out(min(1, u * 1.4)))
+            k *= 1 + 0.05 * math.sin((t - s.tc) * 7) if u > 1.5 else 1
+            cv.save()
+            cv.translate(540, 1100)
+            cv.rotate(-3)
+            cv.scale(k, k)
+            txt = "COMENTA  A  o  B"
+            w = s.fc.measureText(txt) + 90
+            r = skia.Rect(-w / 2, -66, w / 2, 66)
+            a = int(255 * clamp(u * 3))
+            cv.drawRoundRect(r, 66, 66, D.p_fill("ink", a))
+            cv.drawRoundRect(r, 66, 66, D.p_stroke("yellow", 8, a))
+            D.texto(cv, txt, 0, s.fc.getSize() * 0.36, s.fc, "yellow", None, 0, alpha=a)
+            cv.restore()
+            # flecha que rebota hacia los comentarios
+            dy = 18 * abs(math.sin((t - s.tc) * 6))
+            y = 1195 + dy
+            pa = D.p_stroke("ink", 12, a)
+            cv.drawLine(540, y, 540, y + 60, pa)
+            cv.drawLine(510, y + 32, 540, y + 62, pa)
+            cv.drawLine(570, y + 32, 540, y + 62, pa)
+
+
 TIPOS_EL = {"num": Num, "txt": Txt, "sello": Sello, "gente": Gente, "barras": Barras, "linea": Linea, "icono": Icono,
             "pers": Pers, "dinero": Dinero, "circulo": Marca, "tacha": Marca, "subraya": Marca, "flecha": Marca,
-            "estallido": Estallido, "bocadillo": Bocadillo, "medidor": Medidor, "panel": Panel, "burbujas": Burbujas}
+            "estallido": Estallido, "bocadillo": Bocadillo, "medidor": Medidor, "panel": Panel, "burbujas": Burbujas,
+            "encuesta": Encuesta}
 
 
 # ================================================================== cámara

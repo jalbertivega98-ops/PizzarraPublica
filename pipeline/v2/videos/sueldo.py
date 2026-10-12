@@ -112,12 +112,10 @@ VIDEO = {
              {"k": "txt", "t": "INVISIBLE", "px": 110, "y": 430, "at": "@incómodo", "color": "red"},
          ]},
         # PREGUNTA
-        {"voz": ["¿Quieres ver en tu nómina lo que cuesta de verdad tu trabajo?"],
-         "trans": "zoom", "cam": "empuja", "min": 0,
+        {"voz": ["¿Quieres ver en tu nómina lo que cuesta de verdad tu trabajo?", "Comenta A o B."], "trans": "zoom", "cam": "quieta", "min": 0, "cola": 1.8,
          "el": [
-             {"k": "estallido", "r": 330, "y": 700, "color": "yellow", "at": 0},
-             {"k": "txt", "t": "¿LO QUIERES\nVER?", "px": 100, "y": 700, "at": "@nómina", "color": "ink"},
-             {"k": "txt", "t": "TE LEO EN COMENTARIOS", "px": 50, "y": 1080, "at": "fin-1.2", "fuente": "num"},
+             {"k": "encuesta", "pregunta": "¿LO QUIERES VER\nEN TU NÓMINA?", "a": "SÍ, QUIERO VERLO", "b": "ME DA IGUAL", "color_a": "green", "color_b": "gray",
+              "at": 0.05, "at_a": "@cuesta", "at_b": "@trabajo", "at_c": "L1"},
          ]},
     ],
 }

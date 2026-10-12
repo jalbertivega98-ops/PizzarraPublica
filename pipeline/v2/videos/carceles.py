@@ -219,13 +219,10 @@ VIDEO = {
               "sub": "alto riesgo"},
          ]},
         # PREGUNTA FINAL
-        {"voz": ["¿Más cárcel para los de siempre… o más medios para que no vuelvan?"],
-         "trans": "zoom", "cam": "empuja", "min": 0,
+        {"voz": ["¿Más cárcel para los de siempre… o más medios para que no vuelvan?", "Comenta A o B."], "trans": "zoom", "cam": "quieta", "min": 0, "cola": 1.8,
          "el": [
-             {"k": "estallido", "r": 330, "y": 700, "color": "yellow", "at": 0},
-                          {"k": "txt", "t": "¿MÁS CÁRCEL", "px": 100, "y": 620, "at": "@cárcel", "color": "red"},
-             {"k": "txt", "t": "O MÁS MEDIOS?", "px": 100, "y": 780, "at": "@medios", "color": "blue"},
-             {"k": "txt", "t": "TE LEO EN COMENTARIOS", "px": 50, "y": 1080, "at": "fin-1.2", "fuente": "num"},
+             {"k": "encuesta", "pregunta": "¿QUÉ HARÍAS TÚ?", "a": "MÁS CÁRCEL", "b": "MÁS MEDIOS", "color_a": "red", "color_b": "blue",
+              "at": 0.05, "at_a": "@cárcel", "at_b": "@medios", "at_c": "L1"},
          ]},
     ],
 }

@@ -104,12 +104,10 @@ VIDEO = {
              {"k": "txt", "t": "DEUDA", "px": 70, "y": 1000, "x": 780, "at": "@deuda", "color": "red"},
          ]},
         # PREGUNTA
-        {"voz": ["¿Qué número te parece más honesto: el de los euros o el del porcentaje?"], "trans": "zoom", "cam": "empuja", "min": 0,
+        {"voz": ["¿Qué número te parece más honesto: el de los euros o el del porcentaje?", "Comenta A o B."], "trans": "zoom", "cam": "quieta", "min": 0, "cola": 1.8,
          "el": [
-             {"k": "estallido", "r": 330, "y": 700, "color": "yellow", "at": 0},
-             {"k": "txt", "t": "¿EUROS", "px": 100, "y": 620, "at": "@euros", "color": "red"},
-             {"k": "txt", "t": "O PORCENTAJE?", "px": 100, "y": 780, "at": "@porcentaje", "color": "blue"},
-             {"k": "txt", "t": "TE LEO EN COMENTARIOS", "px": 50, "y": 1080, "at": "fin-1.2", "fuente": "num"},
+             {"k": "encuesta", "pregunta": "¿QUÉ NÚMERO ES\nMÁS HONESTO?", "a": "LOS EUROS", "b": "EL PORCENTAJE", "color_a": "red", "color_b": "blue",
+              "at": 0.05, "at_a": "@euros", "at_b": "@porcentaje", "at_c": "L1"},
          ]},
     ],
 }

@@ -23,6 +23,10 @@ on:
         description: "voice_id de ElevenLabs (vacío = el del storyboard)"
         required: false
         default: ""
+      sistema:
+        description: "Máquina de GitHub: ubuntu-latest, macos-latest o windows-latest (otra IP si Microsoft bloquea una)"
+        required: false
+        default: "ubuntu-latest"
 
 permissions:
   contents: write
@@ -33,13 +37,14 @@ concurrency:
 
 jobs:
   voces:
-    runs-on: ubuntu-latest
+    runs-on: ${{ inputs.sistema || 'ubuntu-latest' }}
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - name: Instalar edge-tts
         run: pip install edge-tts==7.2.8
       - name: Generar voces
+        shell: bash
         working-directory: pipeline
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
@@ -57,6 +62,7 @@ jobs:
             python3 tts_elevenlabs.py $STORYBOARDS ${VOICE:+--voice "$VOICE"} --motor "${MOTOR:-elevenlabs}"
           fi
       - name: Guardar las voces en el repositorio
+        shell: bash
         run: |
           git add pipeline/voces_elevenlabs pipeline/v2/voces 2>/dev/null || git add pipeline/voces_elevenlabs
           if ! git diff --cached --quiet; then

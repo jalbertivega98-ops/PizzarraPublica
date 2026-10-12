@@ -62,7 +62,7 @@ VIDEO = {
              {"k": "icono", "n": "edificio", "x": 260, "y": 620, "tam": 1.0, "at": "@Estado"},
              {"k": "dinero", "modo": "fuga", "desde": [260, 640], "hacia": [800, 900], "n": 14, "at": "@meter", "dur": 1.4},
              {"k": "pers", "tipo": "hucha", "x": 800, "y": 940, "tam": 0.9, "cara": "nervioso", "at": "@meter"},
-             {"k": "num", "val": 61342, "desde": 0, "dur": 1.0, "golpe": True, "px": 130, "y": 400, "suf": " M€", "color": "red", "at": "@61.342-0.3"},
+             {"k": "num", "val": 61342, "desde": 0, "dur": 1.0, "golpe": True, "px": 110, "y": 470, "x": 660, "suf": " M€", "color": "red", "at": "@61.342-0.3"},
          ]},
         {"voz": ["Hasta 2011, las cotizaciones bastaban. Desde entonces, no."], "trans": "zoom", "cam": "deriva",
          "el": [

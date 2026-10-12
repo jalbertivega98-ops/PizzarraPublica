@@ -1,0 +1,123 @@
+{
+ "duracion": 44.55,
+ "voz_real": true,
+ "planos": [
+  {
+   "i": 0,
+   "ini": 0.0,
+   "fin": 3.12,
+   "dur": 3.12,
+   "voz": [
+    "Pensión media de jubilación: 1.576 €."
+   ]
+  },
+  {
+   "i": 1,
+   "ini": 3.12,
+   "fin": 7.26,
+   "dur": 4.14,
+   "voz": [
+    "El sueldo más común en España: 16.520 € al año. 1.180 al mes."
+   ]
+  },
+  {
+   "i": 2,
+   "ini": 7.26,
+   "fin": 10.53,
+   "dur": 3.27,
+   "voz": [
+    "Sí: la pensión media ya supera al sueldo más frecuente."
+   ]
+  },
+  {
+   "i": 3,
+   "ini": 10.53,
+   "fin": 13.91,
+   "dur": 3.37,
+   "voz": [
+    "Cada mes, España paga 14.498 millones en pensiones."
+   ]
+  },
+  {
+   "i": 4,
+   "ini": 13.91,
+   "fin": 15.67,
+   "dur": 1.76,
+   "voz": [
+    "Y las cotizaciones ya no llegan."
+   ]
+  },
+  {
+   "i": 5,
+   "ini": 15.67,
+   "fin": 19.83,
+   "dur": 4.17,
+   "voz": [
+    "En 2025, el Estado tuvo que meter 61.342 millones de impuestos."
+   ]
+  },
+  {
+   "i": 6,
+   "ini": 19.83,
+   "fin": 23.18,
+   "dur": 3.35,
+   "voz": [
+    "Hasta 2011, las cotizaciones bastaban. Desde entonces, no."
+   ]
+  },
+  {
+   "i": 7,
+   "ini": 23.18,
+   "fin": 26.73,
+   "dur": 3.55,
+   "voz": [
+    "Y la Seguridad Social ya le debe al Estado 136.176 millones."
+   ]
+  },
+  {
+   "i": 8,
+   "ini": 26.73,
+   "fin": 29.46,
+   "dur": 2.72,
+   "voz": [
+    "Mientras, los jóvenes tienen cada vez menos."
+   ]
+  },
+  {
+   "i": 9,
+   "ini": 29.46,
+   "fin": 34.61,
+   "dur": 5.15,
+   "voz": [
+    "En 2002, los menores de 35 tenían el 8,2 % de la riqueza. En 2022, el 2,1 %."
+   ]
+  },
+  {
+   "i": 10,
+   "ini": 34.61,
+   "fin": 37.51,
+   "dur": 2.9,
+   "voz": [
+    "Los mayores de 75 pasaron del 8,3 % al 18,3 %."
+   ]
+  },
+  {
+   "i": 11,
+   "ini": 37.51,
+   "fin": 42.05,
+   "dur": 4.53,
+   "voz": [
+    "Ojo: los jubilados cotizaron toda su vida. El problema no es su pensión, es quién la va a pagar."
+   ]
+  },
+  {
+   "i": 12,
+   "ini": 42.05,
+   "fin": 44.55,
+   "dur": 2.5,
+   "voz": [
+    "¿Crees que cobrarás una pensión como la de tus padres?"
+   ]
+  }
+ ]
+}

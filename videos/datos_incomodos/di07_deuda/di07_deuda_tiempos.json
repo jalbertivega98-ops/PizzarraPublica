@@ -1,0 +1,123 @@
+{
+ "duracion": 39.95,
+ "voz_real": true,
+ "planos": [
+  {
+   "i": 0,
+   "ini": 0.0,
+   "fin": 1.69,
+   "dur": 1.69,
+   "voz": [
+    "Debes 35.000 €."
+   ]
+  },
+  {
+   "i": 1,
+   "ini": 1.69,
+   "fin": 3.86,
+   "dur": 2.17,
+   "voz": [
+    "Tú, tu madre, y el bebé que nació ayer."
+   ]
+  },
+  {
+   "i": 2,
+   "ini": 3.86,
+   "fin": 6.18,
+   "dur": 2.32,
+   "voz": [
+    "Es lo que toca por cabeza de la deuda pública."
+   ]
+  },
+  {
+   "i": 3,
+   "ini": 6.18,
+   "fin": 9.18,
+   "dur": 3.0,
+   "voz": [
+    "1,744 billones de euros."
+   ]
+  },
+  {
+   "i": 4,
+   "ini": 9.18,
+   "fin": 11.76,
+   "dur": 2.58,
+   "voz": [
+    "Y sigue subiendo: unos 2.000 € cada segundo."
+   ]
+  },
+  {
+   "i": 5,
+   "ini": 11.76,
+   "fin": 14.43,
+   "dur": 2.67,
+   "voz": [
+    "Mientras ves este vídeo, unos 80.000 € más."
+   ]
+  },
+  {
+   "i": 6,
+   "ini": 14.43,
+   "fin": 18.05,
+   "dur": 3.62,
+   "voz": [
+    "En 2007 era el 36 % del PIB. Hoy, casi el 100 %."
+   ]
+  },
+  {
+   "i": 7,
+   "ini": 18.05,
+   "fin": 20.94,
+   "dur": 2.89,
+   "voz": [
+    "Es como deber un año entero de todo lo que produce el país."
+   ]
+  },
+  {
+   "i": 8,
+   "ini": 20.94,
+   "fin": 25.43,
+   "dur": 4.49,
+   "voz": [
+    "Y aquí viene el truco: el Gobierno dice que baja… y la oposición, que sube."
+   ]
+  },
+  {
+   "i": 9,
+   "ini": 25.43,
+   "fin": 26.73,
+   "dur": 1.3,
+   "voz": [
+    "Los dos dicen la verdad."
+   ]
+  },
+  {
+   "i": 10,
+   "ini": 26.73,
+   "fin": 33.12,
+   "dur": 6.4,
+   "voz": [
+    "Sobre el PIB baja: ha caído del 100 % por primera vez desde 2020. En euros sube: un 3,8 % en un año."
+   ]
+  },
+  {
+   "i": 11,
+   "ini": 33.12,
+   "fin": 36.56,
+   "dur": 3.44,
+   "voz": [
+    "El país crece más rápido que su deuda… pero la deuda no deja de crecer."
+   ]
+  },
+  {
+   "i": 12,
+   "ini": 36.56,
+   "fin": 39.95,
+   "dur": 3.39,
+   "voz": [
+    "¿Qué número te parece más honesto: el de los euros o el del porcentaje?"
+   ]
+  }
+ ]
+}

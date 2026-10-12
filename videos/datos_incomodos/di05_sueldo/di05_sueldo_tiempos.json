@@ -1,0 +1,123 @@
+{
+ "duracion": 46.25,
+ "voz_real": true,
+ "planos": [
+  {
+   "i": 0,
+   "ini": 0.0,
+   "fin": 1.84,
+   "dur": 1.84,
+   "voz": [
+    "Cobras 1.500 € al mes."
+   ]
+  },
+  {
+   "i": 1,
+   "ini": 1.84,
+   "fin": 4.78,
+   "dur": 2.94,
+   "voz": [
+    "Tu empresa paga por ti 2.456."
+   ]
+  },
+  {
+   "i": 2,
+   "ini": 4.78,
+   "fin": 7.75,
+   "dur": 2.97,
+   "voz": [
+    "¿Dónde están los 955 que faltan?"
+   ]
+  },
+  {
+   "i": 3,
+   "ini": 7.75,
+   "fin": 12.12,
+   "dur": 4.36,
+   "voz": [
+    "Antes de que lo veas, la empresa ingresa un tercio más en cotizaciones a la Seguridad Social."
+   ]
+  },
+  {
+   "i": 4,
+   "ini": 12.12,
+   "fin": 15.9,
+   "dur": 3.79,
+   "voz": [
+    "De tu bruto te quitan otro 6,5 %… y luego el IRPF."
+   ]
+  },
+  {
+   "i": 5,
+   "ini": 15.9,
+   "fin": 20.35,
+   "dur": 4.44,
+   "voz": [
+    "Al año, tu trabajo cuesta 29.469 €. A ti te llegan 18.000."
+   ]
+  },
+  {
+   "i": 6,
+   "ini": 20.35,
+   "fin": 22.7,
+   "dur": 2.35,
+   "voz": [
+    "11.466 € se quedan por el camino."
+   ]
+  },
+  {
+   "i": 7,
+   "ini": 22.7,
+   "fin": 25.78,
+   "dur": 3.08,
+   "voz": [
+    "De cada 100 € que cuestas, 39 no los tocas nunca."
+   ]
+  },
+  {
+   "i": 8,
+   "ini": 25.78,
+   "fin": 31.76,
+   "dur": 5.98,
+   "voz": [
+    "La OCDE lo confirma: en España, el 41,4 %. El nivel más alto en 25 años."
+   ]
+  },
+  {
+   "i": 9,
+   "ini": 31.76,
+   "fin": 34.3,
+   "dur": 2.54,
+   "voz": [
+    "Ojo: ese dinero no desaparece."
+   ]
+  },
+  {
+   "i": 10,
+   "ini": 34.3,
+   "fin": 38.61,
+   "dur": 4.3,
+   "voz": [
+    "Paga tu pensión, tu paro, tu baja… y la sanidad y los colegios con el IRPF."
+   ]
+  },
+  {
+   "i": 11,
+   "ini": 38.61,
+   "fin": 43.63,
+   "dur": 5.02,
+   "voz": [
+    "Lo incómodo es otra cosa: casi nadie sabe que la mayor parte la paga su empresa. Porque no sale en la nómina."
+   ]
+  },
+  {
+   "i": 12,
+   "ini": 43.63,
+   "fin": 46.25,
+   "dur": 2.62,
+   "voz": [
+    "¿Quieres ver en tu nómina lo que cuesta de verdad tu trabajo?"
+   ]
+  }
+ ]
+}

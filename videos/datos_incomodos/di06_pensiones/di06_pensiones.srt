@@ -1,0 +1,51 @@
+1
+00:00:00,000 --> 00:00:02,935
+Pensión media de jubilación: 1.576 €.
+
+2
+00:00:03,195 --> 00:00:07,079
+El sueldo más común en España: 16.520 € al año. 1.180 al mes.
+
+3
+00:00:07,639 --> 00:00:10,354
+Sí: la pensión media ya supera al sueldo más frecuente.
+
+4
+00:00:10,614 --> 00:00:13,729
+Cada mes, España paga 14.498 millones en pensiones.
+
+5
+00:00:13,989 --> 00:00:15,487
+Y las cotizaciones ya no llegan.
+
+6
+00:00:15,747 --> 00:00:19,653
+En 2025, el Estado tuvo que meter 61.342 millones de impuestos.
+
+7
+00:00:19,913 --> 00:00:23,004
+Hasta 2011, las cotizaciones bastaban. Desde entonces, no.
+
+8
+00:00:23,264 --> 00:00:26,554
+Y la Seguridad Social ya le debe al Estado 136.176 millones.
+
+9
+00:00:27,314 --> 00:00:29,278
+Mientras, los jóvenes tienen cada vez menos.
+
+10
+00:00:29,538 --> 00:00:34,432
+En 2002, los menores de 35 tenían el 8,2 % de la riqueza. En 2022, el 2,1 %.
+
+11
+00:00:34,692 --> 00:00:37,332
+Los mayores de 75 pasaron del 8,3 % al 18,3 %.
+
+12
+00:00:37,592 --> 00:00:41,867
+Ojo: los jubilados cotizaron toda su vida. El problema no es su pensión, es quién la va a pagar.
+
+13
+00:00:42,127 --> 00:00:44,365
+¿Crees que cobrarás una pensión como la de tus padres?

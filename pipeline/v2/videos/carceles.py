@@ -22,6 +22,7 @@ VIDEO = {
     "titulo": "Cárceles llenas. Calles igual.",
     "serie": "LOS DATOS QUE INCOMODAN · #4",
     "acento": "orange",
+    "voz": "elevenlabs:Pizarra Pública",  # Álvaro (edge-tts) da 403 desde el 12/10/2026
     "claves": ["veinte", "nueve", "multa", "cárcel", "homicidios", "incómodo", "mitad", "igual", "siempre", "vuelvan"],
     "musica": {"bpm": 112, "tono": -2, "seed": 44},
     "portada": {"t": 1.2, "titulo": "20 MESES DE CÁRCEL.\n¿Y LOS DE SIEMPRE?"},

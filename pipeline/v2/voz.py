@@ -99,12 +99,35 @@ def sintetizar_traductor(texto, voz=VOZ, vel=VELOCIDAD):
     return urllib.request.urlopen(req, timeout=30).read(), []
 
 
+_VOCES_EL = {}
+
+
+def busca_voz_elevenlabs(nombre_o_id):
+    """Acepta el voice_id o el nombre que se le dio a la voz en ElevenLabs (sin importar mayúsculas ni tildes)."""
+    import unicodedata
+    import urllib.request
+
+    if nombre_o_id in _VOCES_EL:
+        return _VOCES_EL[nombre_o_id]
+    n = lambda x: "".join(c for c in unicodedata.normalize("NFD", x.lower()) if c.isalnum())
+    req = urllib.request.Request("https://api.elevenlabs.io/v1/voices", headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"]})
+    voces = json.loads(urllib.request.urlopen(req, timeout=30).read())["voices"]
+    print("Voces de la cuenta:", [(v["name"], v["voice_id"], v.get("category")) for v in voces])
+    for v in voces:
+        if v["voice_id"] == nombre_o_id or n(v["name"]) == n(nombre_o_id):
+            _VOCES_EL[nombre_o_id] = v["voice_id"]
+            print("Voz elegida:", v["name"], v["voice_id"])
+            return v["voice_id"]
+    sys.exit(f"No encuentro la voz «{nombre_o_id}» en ElevenLabs")
+
+
 def sintetizar_elevenlabs(texto, voice_id, vel=VELOCIDAD):
     """Voz propia de ElevenLabs (creada con Voice Design: el plan gratis no deja usar las de la biblioteca),
     con los tiempos de cada carácter convertidos a tiempos por palabra. VOZ del vídeo: "elevenlabs:<voice_id>"."""
     import base64
     import urllib.request
 
+    voice_id = busca_voz_elevenlabs(voice_id)
     cuerpo = {"text": texto, "model_id": "eleven_multilingual_v2",
               "voice_settings": {"stability": 0.45, "similarity_boost": 0.8, "style": 0.25, "use_speaker_boost": True,
                                  "speed": 1.08 if vel == VELOCIDAD else 1.0}}

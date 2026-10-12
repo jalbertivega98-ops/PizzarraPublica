@@ -43,7 +43,7 @@ def clave(texto, voz=VOZ, vel=VELOCIDAD):
 
 
 # Microsoft rechaza a veces la versión de navegador que declara edge-tts (403). Se prueban otras.
-VERSIONES = [None, "150.0.3480.0", "149.0.3440.0", "148.0.3390.0", "147.0.3340.0", "146.0.3300.0", "145.0.3250.0", "144.0.3200.0"]
+VERSIONES = [None, "150.0.3480.0"]
 
 
 def usa_version(v):
@@ -78,6 +78,27 @@ async def sintetizar(texto, voz=VOZ, vel=VELOCIDAD):
     return audio, palabras
 
 
+def sintetizar_traductor(texto, voz=VOZ, vel=VELOCIDAD):
+    """Plan B si el servicio de lectura de Edge rechaza la conexión: la misma voz neuronal a través del
+    servicio de voz que usa el traductor de Edge. No da tiempos por palabra; el motor los reparte sobre el audio."""
+    import base64
+    import urllib.request
+    from xml.sax.saxutils import escape
+
+    ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0"
+    tok = urllib.request.urlopen(urllib.request.Request("https://edge.microsoft.com/translate/auth", headers={"User-Agent": ua}),
+                                 timeout=20).read().decode()
+    carga = tok.split(".")[1]
+    region = json.loads(base64.urlsafe_b64decode(carga + "=" * (-len(carga) % 4))).get("region", "westeurope")
+    lang = "-".join(voz.split("-")[:2])
+    ssml = (f"<speak version='1.0' xml:lang='{lang}'><voice name='{voz}'><prosody rate='{vel}'>"
+            f"{escape(texto)}</prosody></voice></speak>")
+    req = urllib.request.Request(f"https://{region}.tts.speech.microsoft.com/cognitiveservices/v1", data=ssml.encode(),
+                                 headers={"Authorization": "Bearer " + tok, "Content-Type": "application/ssml+xml",
+                                          "X-Microsoft-OutputFormat": "audio-24khz-48kbitrate-mono-mp3", "User-Agent": ua})
+    return urllib.request.urlopen(req, timeout=30).read(), []
+
+
 def main(paths):
     os.makedirs(CACHE, exist_ok=True)
     nuevas = 0
@@ -92,7 +113,7 @@ def main(paths):
             if os.path.exists(mp3) and os.path.exists(js):
                 continue
             audio = None
-            for intento in range(len(VERSIONES) + 3):
+            for intento in range(len(VERSIONES) + 1):
                 try:
                     audio, palabras = asyncio.run(sintetizar(txt, voz, vel))
                     break
@@ -101,6 +122,14 @@ def main(paths):
                     if "403" in str(e) and intento + 1 < len(VERSIONES):
                         usa_version(VERSIONES[intento + 1])
                         print("  probando versión", VERSIONES[intento + 1])
+            if audio is None:
+                for intento in range(3):
+                    try:
+                        audio, palabras = sintetizar_traductor(txt, voz, vel)
+                        print("  (plan B: voz del traductor)")
+                        break
+                    except Exception as e:
+                        print("plan B, reintento", intento, e)
             if audio is None:
                 sys.exit("No se pudo generar la voz")
             open(mp3, "wb").write(audio)

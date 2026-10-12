@@ -25,7 +25,7 @@ VIDEO = {
          "cam": "golpe", "fuente": "Seguridad Social, septiembre 2026",
          "el": [
              {"k": "pers", "tipo": "ciudadano", "x": 280, "y": 1040, "tam": 1.2, "cara": "feliz", "pose": "saluda", "at": 0.05},
-             {"k": "num", "val": 1576, "desde": 0, "dur": 0.8, "golpe": True, "px": 220, "y": 600, "suf": " €", "fondo": "yellow", "at": "@1.576-0.3"},
+             {"k": "num", "val": 1576, "desde": 0, "dur": 0.8, "golpe": True, "px": 200, "y": 620, "suf": " €", "fondo": "yellow", "at": 0.1},
              {"k": "txt", "t": "AL MES · 14 PAGAS", "px": 56, "y": 810, "at": "@1.576", "fuente": "num"},
          ]},
         {"voz": [{"tts": "El sueldo más común en España: dieciséis mil quinientos al año. Mil ciento ochenta al mes.",
@@ -33,7 +33,7 @@ VIDEO = {
          "trans": "flash", "cam": "golpe", "fuente": "INE, Estructura Salarial 2024",
          "el": [
              {"k": "pers", "tipo": "joven", "x": 800, "y": 1040, "tam": 1.2, "cara": "triste", "pose": "encoge", "mira": -1, "at": 0.05},
-             {"k": "num", "val": 1180, "desde": 0, "dur": 0.7, "golpe": True, "px": 220, "y": 600, "suf": " €", "color": "red", "at": "@1.180-0.3"},
+             {"k": "num", "val": 1180, "desde": 0, "dur": 0.7, "golpe": True, "px": 190, "y": 620, "suf": " €", "color": "red", "at": "@1.180-0.3"},
              {"k": "txt", "t": "SUELDO MÁS FRECUENTE", "px": 56, "y": 810, "at": "@común", "fuente": "num"},
          ]},
         {"voz": ["Sí: la pensión media ya supera al sueldo más frecuente."], "trans": "zoom", "cam": "aleja", "pausa": 0.3,
@@ -46,7 +46,7 @@ VIDEO = {
         {"voz": [{"tts": "Cada mes, España paga catorce mil quinientos millones en pensiones.", "text": "Cada mes, España paga 14.498 millones en pensiones."}],
          "trans": "barrido", "cam": "empuja", "fuente": "Seguridad Social, septiembre 2026",
          "el": [
-             {"k": "num", "val": 14498, "desde": 0, "dur": 1.0, "golpe": True, "px": 190, "y": 600, "suf": " M€", "at": "@paga"},
+             {"k": "num", "val": 14498, "desde": 0, "dur": 1.0, "golpe": True, "px": 150, "y": 620, "suf": " M€", "at": "@paga"},
              {"k": "dinero", "modo": "lluvia", "n": 24, "at": "@millones", "dur": 2.0, "z": -1},
              {"k": "txt", "t": "10,5 MILLONES DE PENSIONES", "px": 54, "y": 820, "at": "@pensiones", "fuente": "num"},
          ]},
@@ -62,7 +62,7 @@ VIDEO = {
              {"k": "icono", "n": "edificio", "x": 260, "y": 620, "tam": 1.0, "at": "@Estado"},
              {"k": "dinero", "modo": "fuga", "desde": [260, 640], "hacia": [800, 900], "n": 14, "at": "@meter", "dur": 1.4},
              {"k": "pers", "tipo": "hucha", "x": 800, "y": 940, "tam": 0.9, "cara": "nervioso", "at": "@meter"},
-             {"k": "num", "val": 61342, "desde": 0, "dur": 1.0, "golpe": True, "px": 150, "y": 1180, "suf": " M€", "color": "red", "at": "@61.342-0.3"},
+             {"k": "num", "val": 61342, "desde": 0, "dur": 1.0, "golpe": True, "px": 130, "y": 400, "suf": " M€", "color": "red", "at": "@61.342-0.3"},
          ]},
         {"voz": ["Hasta 2011, las cotizaciones bastaban. Desde entonces, no."], "trans": "zoom", "cam": "deriva",
          "el": [
@@ -75,7 +75,7 @@ VIDEO = {
                   "text": "Y la Seguridad Social ya le debe al Estado 136.176 millones."}],
          "trans": "flash", "cam": "golpe", "fuente": "Banco de España, julio 2026",
          "el": [
-             {"k": "num", "val": 136176, "desde": 0, "dur": 1.1, "golpe": True, "px": 170, "y": 640, "suf": " M€", "color": "red", "fondo": "estallido",
+             {"k": "num", "val": 136176, "desde": 0, "dur": 1.1, "golpe": True, "px": 130, "y": 660, "suf": " M€", "color": "red", "fondo": "estallido",
               "at": "@debe"},
              {"k": "txt", "t": "DE DEUDA", "px": 80, "y": 860, "at": "@Estado", "marca": "yellow"},
          ]},
@@ -97,16 +97,16 @@ VIDEO = {
          "trans": "sube", "cam": "empuja", "fuente": "Instituto Santalucía, 2026",
          "el": [
              {"k": "pers", "tipo": "ciudadano", "x": 300, "y": 900, "tam": 1.3, "cara": "listo", "pose": "jarras", "at": "@mayores-0.3"},
-             {"k": "num", "val": 18.3, "desde": 8.3, "dur": 1.0, "golpe": True, "px": 200, "y": 700, "x": 760, "suf": " %", "dec": 1, "color": "purple",
+             {"k": "num", "val": 18.3, "desde": 8.3, "dur": 1.0, "golpe": True, "px": 150, "y": 700, "x": 720, "suf": " %", "dec": 1, "color": "purple",
               "at": "@18,3-0.6"},
          ]},
         {"voz": ["Ojo: los jubilados cotizaron toda su vida. El problema no es su pensión, es quién la va a pagar."],
          "trans": "flash", "cam": "deriva",
          "el": [
-             {"k": "pers", "tipo": "ciudadano", "x": 280, "y": 900, "tam": 1.2, "cara": "neutral", "at": 0.05},
-             {"k": "txt", "t": "COTIZARON", "px": 80, "y": 470, "x": 280, "at": "@cotizaron", "color": "green"},
-             {"k": "pers", "tipo": "joven", "x": 800, "y": 900, "tam": 1.2, "cara": "duda", "mira": -1, "at": "@quién"},
-             {"k": "txt", "t": "¿Y QUIÉN\nPAGA?", "px": 80, "y": 470, "x": 800, "at": "@pagar", "color": "red"},
+             {"k": "pers", "tipo": "ciudadano", "x": 300, "y": 900, "tam": 1.2, "cara": "neutral", "at": 0.05},
+             {"k": "txt", "t": "COTIZARON", "px": 64, "y": 520, "x": 300, "at": "@cotizaron", "color": "green"},
+             {"k": "pers", "tipo": "joven", "x": 780, "y": 900, "tam": 1.2, "cara": "duda", "mira": -1, "at": "@problema"},
+             {"k": "txt", "t": "¿Y QUIÉN\nPAGA?", "px": 64, "y": 520, "x": 780, "at": "@pagar", "color": "red"},
          ]},
         # PREGUNTA
         {"voz": ["¿Crees que cobrarás una pensión como la de tus padres?"], "trans": "zoom", "cam": "empuja", "min": 0,

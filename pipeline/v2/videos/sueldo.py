@@ -30,7 +30,7 @@ VIDEO = {
         {"voz": [{"tts": "Tu empresa paga por ti dos mil cuatrocientos cincuenta y seis.", "text": "Tu empresa paga por ti 2.456."}],
          "trans": "flash", "cam": "golpe",
          "el": [
-             {"k": "num", "val": 2456, "desde": 1500, "dur": 0.9, "golpe": True, "px": 240, "y": 640, "suf": " €", "color": "red", "fondo": "estallido",
+             {"k": "num", "val": 2456, "desde": 1500, "dur": 0.9, "golpe": True, "px": 190, "y": 640, "suf": " €", "color": "red", "fondo": "estallido",
               "at": "@paga"},
              {"k": "pers", "tipo": "jefa", "x": 540, "y": 1100, "tam": 0.95, "cara": "nervioso", "pose": "encoge", "at": "@empresa"},
          ]},
@@ -45,8 +45,9 @@ VIDEO = {
         {"voz": ["Antes de que lo veas, la empresa ingresa un tercio más en cotizaciones a la Seguridad Social."],
          "trans": "barrido", "cam": "empuja", "fuente": "Orden de cotización 2026",
          "el": [
-             {"k": "pers", "tipo": "hucha", "x": 760, "y": 900, "tam": 1.1, "cara": "feliz", "at": "@Seguridad-0.3"},
-             {"k": "dinero", "modo": "fuga", "desde": [240, 900], "hacia": [760, 880], "n": 12, "at": "@ingresa", "dur": 1.3},
+             {"k": "pers", "tipo": "jefa", "x": 260, "y": 980, "tam": 1.0, "cara": "neutral", "pose": "sostiene", "at": 0.05},
+             {"k": "pers", "tipo": "hucha", "x": 740, "y": 980, "tam": 0.9, "cara": "feliz", "at": "@empresa"},
+             {"k": "dinero", "modo": "fuga", "desde": [300, 900], "hacia": [740, 960], "n": 12, "at": "@ingresa", "dur": 1.3},
              {"k": "txt", "t": "+32 %", "px": 160, "y": 470, "at": "@tercio", "color": "red"},
              {"k": "txt", "t": "LO PAGA LA EMPRESA", "px": 56, "y": 620, "at": "@tercio+0.2", "fuente": "num"},
          ]},
@@ -55,8 +56,8 @@ VIDEO = {
          "el": [
              {"k": "icono", "n": "documento", "x": 300, "y": 800, "tam": 1.6, "at": 0.05, "rot": -6},
              {"k": "txt", "t": "NÓMINA", "px": 64, "y": 520, "x": 300, "at": 0.1, "fuente": "num"},
-             {"k": "txt", "t": "−6,5 %", "px": 120, "y": 640, "x": 780, "at": "@6,5", "color": "red"},
-             {"k": "txt", "t": "−IRPF", "px": 120, "y": 900, "x": 780, "at": "@IRPF", "color": "red"},
+             {"k": "txt", "t": "−6,5 %", "px": 100, "y": 640, "x": 740, "at": "@6,5", "color": "red"},
+             {"k": "txt", "t": "−IRPF", "px": 100, "y": 900, "x": 740, "at": "@IRPF", "color": "red"},
          ]},
         # DATOS
         {"voz": [{"tts": "Al año, tu trabajo cuesta casi veintinueve mil quinientos euros. A ti te llegan dieciocho mil.",
@@ -106,9 +107,9 @@ VIDEO = {
         {"voz": ["Lo incómodo es otra cosa: casi nadie sabe que la mayor parte la paga su empresa. Porque no sale en la nómina."],
          "trans": "flash", "cam": "empuja",
          "el": [
-             {"k": "icono", "n": "documento", "x": 540, "y": 800, "tam": 2.0, "at": "@nómina-0.4"},
+             {"k": "icono", "n": "documento", "x": 540, "y": 800, "tam": 2.0, "at": 0.1},
              {"k": "icono", "n": "interrogacion", "x": 540, "y": 790, "tam": 1.2, "at": "@nómina"},
-             {"k": "txt", "t": "INVISIBLE", "px": 110, "y": 430, "at": "@sabe", "color": "red"},
+             {"k": "txt", "t": "INVISIBLE", "px": 110, "y": 430, "at": "@incómodo", "color": "red"},
          ]},
         # PREGUNTA
         {"voz": ["¿Quieres ver en tu nómina lo que cuesta de verdad tu trabajo?"],

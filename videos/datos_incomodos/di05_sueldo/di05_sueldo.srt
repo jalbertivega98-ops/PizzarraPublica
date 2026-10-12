@@ -1,55 +1,59 @@
 1
-00:00:00,000 --> 00:00:01,662
-Cobras 1.500 € al mes.
+00:00:00,000 --> 00:00:03,594
+Cada mes, 955 € de tu trabajo nunca llegan a tu cuenta.
 
 2
-00:00:01,922 --> 00:00:04,603
-Tu empresa paga por ti 2.456.
+00:00:03,854 --> 00:00:05,516
+Cobras 1.500 € al mes.
 
 3
-00:00:05,163 --> 00:00:07,571
-¿Dónde están los 955 que faltan?
+00:00:05,776 --> 00:00:08,457
+Tu empresa paga por ti 2.456.
 
 4
-00:00:07,831 --> 00:00:11,935
-Antes de que lo veas, la empresa ingresa un tercio más en cotizaciones a la Seguridad Social.
+00:00:09,017 --> 00:00:11,425
+¿Dónde están los 955 que faltan?
 
 5
-00:00:12,195 --> 00:00:15,724
-De tu bruto te quitan otro 6,5 %… y luego el IRPF.
+00:00:11,685 --> 00:00:15,789
+Antes de que lo veas, la empresa ingresa un tercio más en cotizaciones a la Seguridad Social.
 
 6
-00:00:15,984 --> 00:00:20,169
-Al año, tu trabajo cuesta 29.469 €. A ti te llegan 18.000.
+00:00:16,049 --> 00:00:19,578
+De tu bruto te quitan otro 6,5 %… y luego el IRPF.
 
 7
-00:00:20,429 --> 00:00:22,520
-11.466 € se quedan por el camino.
+00:00:19,838 --> 00:00:24,023
+Al año, tu trabajo cuesta 29.469 €. A ti te llegan 18.000.
 
 8
-00:00:22,780 --> 00:00:25,601
-De cada 100 € que cuestas, 39 no los tocas nunca.
+00:00:24,283 --> 00:00:26,615
+11.466 € al año que jamás verás.
 
 9
-00:00:25,861 --> 00:00:31,584
-La OCDE lo confirma: en España, el 41,4 %. El nivel más alto en 25 años.
+00:00:26,875 --> 00:00:29,695
+De cada 100 € que cuestas, 39 no los tocas nunca.
 
 10
-00:00:32,344 --> 00:00:34,124
-Ojo: ese dinero no desaparece.
+00:00:29,955 --> 00:00:35,679
+La OCDE lo confirma: en España, el 41,4 %. El nivel más alto en 25 años.
 
 11
-00:00:34,384 --> 00:00:38,425
-Paga tu pensión, tu paro, tu baja… y la sanidad y los colegios con el IRPF.
+00:00:36,439 --> 00:00:38,219
+Ojo: ese dinero no desaparece.
 
 12
-00:00:38,685 --> 00:00:43,449
-Lo incómodo es otra cosa: casi nadie sabe que la mayor parte la paga su empresa. Porque no sale en la nómina.
+00:00:38,479 --> 00:00:42,519
+Paga tu pensión, tu paro, tu baja… y la sanidad y los colegios con el IRPF.
 
 13
-00:00:43,709 --> 00:00:46,066
-¿Quieres ver en tu nómina lo que cuesta de verdad tu trabajo?
+00:00:42,779 --> 00:00:47,543
+Lo incómodo es otra cosa: casi nadie sabe que la mayor parte la paga su empresa. Porque no sale en la nómina.
 
 14
-00:00:46,166 --> 00:00:47,100
+00:00:47,803 --> 00:00:50,160
+¿Quieres ver en tu nómina lo que cuesta de verdad tu trabajo?
+
+15
+00:00:50,260 --> 00:00:51,195
 Comenta A o B.

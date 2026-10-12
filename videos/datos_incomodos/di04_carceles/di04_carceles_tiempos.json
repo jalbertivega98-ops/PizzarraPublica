@@ -1,29 +1,29 @@
 {
- "duracion": 77.96,
+ "duracion": 79.79,
  "voz_real": true,
  "planos": [
   {
    "i": 0,
    "ini": 0.0,
-   "fin": 1.4,
-   "dur": 1.4,
+   "fin": 2.38,
+   "dur": 2.38,
    "voz": [
-    "20 meses."
+    "Te roban el móvil. ¿Castigo? Una multa."
    ]
   },
   {
    "i": 1,
-   "ini": 1.4,
-   "fin": 4.06,
-   "dur": 2.66,
+   "ini": 2.38,
+   "fin": 4.69,
+   "dur": 2.32,
    "voz": [
-    "Lo que pasa de media un preso en una cárcel española."
+    "Pero quien entra en prisión, pasa 20 meses."
    ]
   },
   {
    "i": 2,
-   "ini": 4.06,
-   "fin": 5.65,
+   "ini": 4.69,
+   "fin": 6.29,
    "dur": 1.6,
    "voz": [
     "En Europa, menos de 9."
@@ -31,17 +31,17 @@
   },
   {
    "i": 3,
-   "ini": 5.65,
-   "fin": 8.11,
-   "dur": 2.45,
+   "ini": 6.29,
+   "fin": 8.89,
+   "dur": 2.6,
    "voz": [
-    "Y aun así, en la calle, siempre los mismos."
+    "Y aun así, en tu calle roban siempre los mismos."
    ]
   },
   {
    "i": 4,
-   "ini": 8.11,
-   "fin": 11.43,
+   "ini": 8.89,
+   "fin": 12.22,
    "dur": 3.33,
    "voz": [
     "¿Por qué? Un hurto de menos de 400 € es un delito leve."
@@ -49,8 +49,8 @@
   },
   {
    "i": 5,
-   "ini": 11.43,
-   "fin": 14.3,
+   "ini": 12.22,
+   "fin": 15.09,
    "dur": 2.87,
    "voz": [
     "Una multa. Te pillan, a casa… y vuelta a empezar."
@@ -58,8 +58,8 @@
   },
   {
    "i": 6,
-   "ini": 14.3,
-   "fin": 18.33,
+   "ini": 15.09,
+   "fin": 19.11,
    "dur": 4.02,
    "voz": [
     "Desde abril, con 3 condenas previas, ya es cárcel: de 6 a 18 meses."
@@ -67,8 +67,8 @@
   },
   {
    "i": 7,
-   "ini": 18.33,
-   "fin": 21.47,
+   "ini": 19.11,
+   "fin": 22.26,
    "dur": 3.15,
    "voz": [
     "Barcelona: 169.678 delitos en un año."
@@ -76,8 +76,8 @@
   },
   {
    "i": 8,
-   "ini": 21.47,
-   "fin": 22.88,
+   "ini": 22.26,
+   "fin": 23.66,
    "dur": 1.41,
    "voz": [
     "Casi la mitad, hurtos."
@@ -85,8 +85,8 @@
   },
   {
    "i": 9,
-   "ini": 22.88,
-   "fin": 26.34,
+   "ini": 23.66,
+   "fin": 27.13,
    "dur": 3.47,
    "voz": [
     "¿Más que nunca? No: la misma cifra que en 2016."
@@ -94,8 +94,8 @@
   },
   {
    "i": 10,
-   "ini": 26.34,
-   "fin": 28.23,
+   "ini": 27.13,
+   "fin": 29.02,
    "dur": 1.89,
    "voz": [
     "Pero algunos delitos graves sí suben."
@@ -103,8 +103,8 @@
   },
   {
    "i": 11,
-   "ini": 28.23,
-   "fin": 32.13,
+   "ini": 29.02,
+   "fin": 32.91,
    "dur": 3.89,
    "voz": [
     "En Madrid, los delitos bajan… pero los homicidios pasan de 10 a 17."
@@ -112,8 +112,8 @@
   },
   {
    "i": 12,
-   "ini": 32.13,
-   "fin": 34.59,
+   "ini": 32.91,
+   "fin": 35.38,
    "dur": 2.47,
    "voz": [
     "Y los delitos sexuales suben en las dos ciudades."
@@ -121,17 +121,17 @@
   },
   {
    "i": 13,
-   "ini": 34.59,
-   "fin": 36.23,
-   "dur": 1.64,
+   "ini": 35.38,
+   "fin": 38.06,
+   "dur": 2.68,
    "voz": [
-    "Ahora, lo incómodo."
+    "Ahora, lo que casi nadie se atreve a decir."
    ]
   },
   {
    "i": 14,
-   "ini": 36.23,
-   "fin": 39.93,
+   "ini": 38.06,
+   "fin": 41.76,
    "dur": 3.7,
    "voz": [
     "Por cada 1.000 adultos, condenan a 6 españoles… y a 15 extranjeros."
@@ -139,8 +139,8 @@
   },
   {
    "i": 15,
-   "ini": 39.93,
-   "fin": 43.9,
+   "ini": 41.76,
+   "fin": 45.73,
    "dur": 3.97,
    "voz": [
     "En prisión, 3 de cada 10 son extranjeros. En Cataluña, más de la mitad."
@@ -148,8 +148,8 @@
   },
   {
    "i": 16,
-   "ini": 43.9,
-   "fin": 46.91,
+   "ini": 45.73,
+   "fin": 48.74,
    "dur": 3.0,
    "voz": [
     "Pero son más jóvenes y más hombres: el perfil que más delinque."
@@ -157,8 +157,8 @@
   },
   {
    "i": 17,
-   "ini": 46.91,
-   "fin": 49.99,
+   "ini": 48.74,
+   "fin": 51.81,
    "dur": 3.08,
    "voz": [
     "A igual edad y sexo, la diferencia baja a 1,9."
@@ -166,8 +166,8 @@
   },
   {
    "i": 18,
-   "ini": 49.99,
-   "fin": 52.7,
+   "ini": 51.81,
+   "fin": 54.53,
    "dur": 2.71,
    "voz": [
     "Existe. Pero casi la mitad es edad y sexo."
@@ -175,8 +175,8 @@
   },
   {
    "i": 19,
-   "ini": 52.7,
-   "fin": 56.97,
+   "ini": 54.53,
+   "fin": 58.79,
    "dur": 4.27,
    "voz": [
     "Y según el origen, va de 0,6 en asiáticos a casi 9 en Balcanes y Georgia."
@@ -184,8 +184,8 @@
   },
   {
    "i": 20,
-   "ini": 56.97,
-   "fin": 60.48,
+   "ini": 58.79,
+   "fin": 62.3,
    "dur": 3.51,
    "voz": [
     "¿Reincidentes? En Cataluña, uno de cada cinco presos vuelve a prisión."
@@ -193,8 +193,8 @@
   },
   {
    "i": 21,
-   "ini": 60.48,
-   "fin": 62.68,
+   "ini": 62.3,
+   "fin": 64.51,
    "dur": 2.21,
    "voz": [
     "En 2008, eran 4 de cada 10."
@@ -202,8 +202,8 @@
   },
   {
    "i": 22,
-   "ini": 62.68,
-   "fin": 66.97,
+   "ini": 64.51,
+   "fin": 68.8,
    "dur": 4.29,
    "voz": [
     "Lo que nadie cuenta: españoles, 20 %. Extranjeros, 22 %."
@@ -211,8 +211,8 @@
   },
   {
    "i": 23,
-   "ini": 66.97,
-   "fin": 72.31,
+   "ini": 68.8,
+   "fin": 74.14,
    "dur": 5.34,
    "voz": [
     "El problema: unos pocos que caen una y otra vez. En Barcelona, 2.190 de alto riesgo en 6 meses."
@@ -220,8 +220,8 @@
   },
   {
    "i": 24,
-   "ini": 72.31,
-   "fin": 77.96,
+   "ini": 74.14,
+   "fin": 79.79,
    "dur": 5.65,
    "voz": [
     "¿Más cárcel para los de siempre… o más medios para que no vuelvan?",

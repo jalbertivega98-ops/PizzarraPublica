@@ -25,10 +25,10 @@ VIDEO = {
                   "text": "Cada mes, 955 € de tu trabajo nunca llegan a tu cuenta."}],
          "cam": "golpe", "fuente": "Ejemplo 2026: soltero, 12 pagas",
          "el": [
-             {"k": "num", "val": 955, "desde": 0, "dur": 0.6, "golpe": True, "px": 220, "y": 600, "suf": " €", "color": "red", "fondo": "estallido",
+             {"k": "num", "val": 955, "desde": 0, "dur": 0.6, "golpe": True, "px": 190, "y": 700, "suf": " €", "color": "red", "fondo": "estallido",
               "at": 0.05},
              {"k": "dinero", "modo": "fuga", "desde": [540, 650], "hacia": [540, -300], "n": 14, "at": "@nunca-0.2", "dur": 1.3},
-             {"k": "txt", "t": "NUNCA LLEGAN\nA TU CUENTA", "px": 76, "y": 960, "at": "@nunca", "marca": "yellow"},
+             {"k": "txt", "t": "NUNCA LLEGAN\nA TU CUENTA", "px": 76, "y": 1040, "at": "@nunca", "marca": "yellow"},
          ]},
         {"voz": [{"tts": "Cobras mil quinientos euros al mes.", "text": "Cobras 1.500 € al mes."}],
          "trans": "flash", "cam": "golpe", "min": 1.6, "fuente": "Ejemplo 2026: soltero, 12 pagas",
@@ -40,7 +40,7 @@ VIDEO = {
         {"voz": [{"tts": "Tu empresa paga por ti dos mil cuatrocientos cincuenta y seis.", "text": "Tu empresa paga por ti 2.456."}],
          "trans": "flash", "cam": "golpe",
          "el": [
-             {"k": "num", "val": 2456, "desde": 1500, "dur": 0.9, "golpe": True, "px": 190, "y": 640, "suf": " €", "color": "red", "fondo": "estallido",
+             {"k": "num", "val": 2456, "desde": 1500, "dur": 0.9, "golpe": True, "px": 180, "y": 700, "suf": " €", "color": "red", "fondo": "estallido",
               "at": "@paga"},
              {"k": "pers", "tipo": "jefa", "x": 540, "y": 1100, "tam": 0.95, "cara": "nervioso", "pose": "encoge", "at": "@empresa"},
          ]},

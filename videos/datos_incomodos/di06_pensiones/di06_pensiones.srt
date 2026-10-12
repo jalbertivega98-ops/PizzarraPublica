@@ -11,45 +11,49 @@ El sueldo más común en España: 16.520 € al año. 1.180 al mes.
 Sí: la pensión media ya supera al sueldo más frecuente.
 
 4
-00:00:10,614 --> 00:00:13,729
-Cada mes, España paga 14.498 millones en pensiones.
+00:00:10,614 --> 00:00:11,285
+Y lo pagas tú.
 
 5
-00:00:13,989 --> 00:00:15,487
-Y las cotizaciones ya no llegan.
+00:00:11,914 --> 00:00:15,029
+Cada mes, España paga 14.498 millones en pensiones.
 
 6
-00:00:15,747 --> 00:00:19,653
-En 2025, el Estado tuvo que meter 61.342 millones de impuestos.
+00:00:15,289 --> 00:00:16,787
+Y las cotizaciones ya no llegan.
 
 7
-00:00:19,913 --> 00:00:23,004
-Hasta 2011, las cotizaciones bastaban. Desde entonces, no.
+00:00:17,047 --> 00:00:20,953
+En 2025, el Estado tuvo que meter 61.342 millones de impuestos.
 
 8
-00:00:23,264 --> 00:00:26,554
-Y la Seguridad Social ya le debe al Estado 136.176 millones.
+00:00:21,213 --> 00:00:24,304
+Hasta 2011, las cotizaciones bastaban. Desde entonces, no.
 
 9
-00:00:27,314 --> 00:00:29,278
-Mientras, los jóvenes tienen cada vez menos.
+00:00:24,564 --> 00:00:27,854
+Y la Seguridad Social ya le debe al Estado 136.176 millones.
 
 10
-00:00:29,538 --> 00:00:34,432
-En 2002, los menores de 35 tenían el 8,2 % de la riqueza. En 2022, el 2,1 %.
+00:00:28,614 --> 00:00:31,011
+Mientras, los jóvenes se están quedando casi sin nada.
 
 11
-00:00:34,692 --> 00:00:37,332
-Los mayores de 75 pasaron del 8,3 % al 18,3 %.
+00:00:31,271 --> 00:00:36,165
+En 2002, los menores de 35 tenían el 8,2 % de la riqueza. En 2022, el 2,1 %.
 
 12
-00:00:37,592 --> 00:00:41,867
-Ojo: los jubilados cotizaron toda su vida. El problema no es su pensión, es quién la va a pagar.
+00:00:36,425 --> 00:00:39,064
+Los mayores de 75 pasaron del 8,3 % al 18,3 %.
 
 13
-00:00:42,127 --> 00:00:44,365
-¿Crees que cobrarás una pensión como la de tus padres?
+00:00:39,324 --> 00:00:43,599
+Ojo: los jubilados cotizaron toda su vida. El problema no es su pensión, es quién la va a pagar.
 
 14
-00:00:44,465 --> 00:00:45,400
+00:00:43,859 --> 00:00:46,097
+¿Crees que cobrarás una pensión como la de tus padres?
+
+15
+00:00:46,197 --> 00:00:47,132
 Comenta A o B.

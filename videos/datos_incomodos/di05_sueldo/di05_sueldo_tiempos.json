@@ -1,119 +1,128 @@
 {
- "duracion": 48.9,
+ "duracion": 53.0,
  "voz_real": true,
  "planos": [
   {
    "i": 0,
    "ini": 0.0,
-   "fin": 1.84,
-   "dur": 1.84,
+   "fin": 3.77,
+   "dur": 3.77,
+   "voz": [
+    "Cada mes, 955 € de tu trabajo nunca llegan a tu cuenta."
+   ]
+  },
+  {
+   "i": 1,
+   "ini": 3.77,
+   "fin": 5.7,
+   "dur": 1.92,
    "voz": [
     "Cobras 1.500 € al mes."
    ]
   },
   {
-   "i": 1,
-   "ini": 1.84,
-   "fin": 4.78,
+   "i": 2,
+   "ini": 5.7,
+   "fin": 8.64,
    "dur": 2.94,
    "voz": [
     "Tu empresa paga por ti 2.456."
    ]
   },
   {
-   "i": 2,
-   "ini": 4.78,
-   "fin": 7.75,
+   "i": 3,
+   "ini": 8.64,
+   "fin": 11.61,
    "dur": 2.97,
    "voz": [
     "¿Dónde están los 955 que faltan?"
    ]
   },
   {
-   "i": 3,
-   "ini": 7.75,
-   "fin": 12.12,
+   "i": 4,
+   "ini": 11.61,
+   "fin": 15.97,
    "dur": 4.36,
    "voz": [
     "Antes de que lo veas, la empresa ingresa un tercio más en cotizaciones a la Seguridad Social."
    ]
   },
   {
-   "i": 4,
-   "ini": 12.12,
-   "fin": 15.9,
+   "i": 5,
+   "ini": 15.97,
+   "fin": 19.76,
    "dur": 3.79,
    "voz": [
     "De tu bruto te quitan otro 6,5 %… y luego el IRPF."
    ]
   },
   {
-   "i": 5,
-   "ini": 15.9,
-   "fin": 20.35,
+   "i": 6,
+   "ini": 19.76,
+   "fin": 24.2,
    "dur": 4.44,
    "voz": [
     "Al año, tu trabajo cuesta 29.469 €. A ti te llegan 18.000."
    ]
   },
   {
-   "i": 6,
-   "ini": 20.35,
-   "fin": 22.7,
-   "dur": 2.35,
+   "i": 7,
+   "ini": 24.2,
+   "fin": 26.8,
+   "dur": 2.59,
    "voz": [
-    "11.466 € se quedan por el camino."
+    "11.466 € al año que jamás verás."
    ]
   },
   {
-   "i": 7,
-   "ini": 22.7,
-   "fin": 25.78,
+   "i": 8,
+   "ini": 26.8,
+   "fin": 29.88,
    "dur": 3.08,
    "voz": [
     "De cada 100 € que cuestas, 39 no los tocas nunca."
    ]
   },
   {
-   "i": 8,
-   "ini": 25.78,
-   "fin": 31.76,
+   "i": 9,
+   "ini": 29.88,
+   "fin": 35.86,
    "dur": 5.98,
    "voz": [
     "La OCDE lo confirma: en España, el 41,4 %. El nivel más alto en 25 años."
    ]
   },
   {
-   "i": 9,
-   "ini": 31.76,
-   "fin": 34.3,
+   "i": 10,
+   "ini": 35.86,
+   "fin": 38.4,
    "dur": 2.54,
    "voz": [
     "Ojo: ese dinero no desaparece."
    ]
   },
   {
-   "i": 10,
-   "ini": 34.3,
-   "fin": 38.61,
+   "i": 11,
+   "ini": 38.4,
+   "fin": 42.7,
    "dur": 4.3,
    "voz": [
     "Paga tu pensión, tu paro, tu baja… y la sanidad y los colegios con el IRPF."
    ]
   },
   {
-   "i": 11,
-   "ini": 38.61,
-   "fin": 43.63,
+   "i": 12,
+   "ini": 42.7,
+   "fin": 47.72,
    "dur": 5.02,
    "voz": [
     "Lo incómodo es otra cosa: casi nadie sabe que la mayor parte la paga su empresa. Porque no sale en la nómina."
    ]
   },
   {
-   "i": 12,
-   "ini": 43.63,
-   "fin": 48.9,
+   "i": 13,
+   "ini": 47.72,
+   "fin": 53.0,
    "dur": 5.27,
    "voz": [
     "¿Quieres ver en tu nómina lo que cuesta de verdad tu trabajo?",

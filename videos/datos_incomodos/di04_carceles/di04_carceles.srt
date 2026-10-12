@@ -1,103 +1,103 @@
 1
-00:00:00,000 --> 00:00:00,715
-20 meses.
+00:00:00,000 --> 00:00:02,196
+Te roban el móvil. ¿Castigo? Una multa.
 
 2
-00:00:01,480 --> 00:00:03,876
-Lo que pasa de media un preso en una cárcel española.
+00:00:02,456 --> 00:00:04,513
+Pero quien entra en prisión, pasa 20 meses.
 
 3
-00:00:04,136 --> 00:00:05,473
+00:00:04,773 --> 00:00:06,110
 En Europa, menos de 9.
 
 4
-00:00:05,733 --> 00:00:07,926
-Y aun así, en la calle, siempre los mismos.
+00:00:06,370 --> 00:00:08,712
+Y aun así, en tu calle roban siempre los mismos.
 
 5
-00:00:08,186 --> 00:00:11,252
+00:00:08,972 --> 00:00:12,039
 ¿Por qué? Un hurto de menos de 400 € es un delito leve.
 
 6
-00:00:11,512 --> 00:00:14,123
+00:00:12,299 --> 00:00:14,910
 Una multa. Te pillan, a casa… y vuelta a empezar.
 
 7
-00:00:14,383 --> 00:00:18,145
+00:00:15,170 --> 00:00:18,931
 Desde abril, con 3 condenas previas, ya es cárcel: de 6 a 18 meses.
 
 8
-00:00:18,405 --> 00:00:21,290
+00:00:19,191 --> 00:00:22,077
 Barcelona: 169.678 delitos en un año.
 
 9
-00:00:21,550 --> 00:00:22,695
+00:00:22,337 --> 00:00:23,482
 Casi la mitad, hurtos.
 
 10
-00:00:23,305 --> 00:00:26,161
+00:00:24,092 --> 00:00:26,947
 ¿Más que nunca? No: la misma cifra que en 2016.
 
 11
-00:00:26,421 --> 00:00:28,052
+00:00:27,207 --> 00:00:28,839
 Pero algunos delitos graves sí suben.
 
 12
-00:00:28,312 --> 00:00:31,947
+00:00:29,099 --> 00:00:32,733
 En Madrid, los delitos bajan… pero los homicidios pasan de 10 a 17.
 
 13
-00:00:32,207 --> 00:00:34,413
+00:00:32,993 --> 00:00:35,200
 Y los delitos sexuales suben en las dos ciudades.
 
 14
-00:00:35,173 --> 00:00:36,051
-Ahora, lo incómodo.
+00:00:35,960 --> 00:00:37,879
+Ahora, lo que casi nadie se atreve a decir.
 
 15
-00:00:36,311 --> 00:00:39,751
+00:00:38,139 --> 00:00:41,578
 Por cada 1.000 adultos, condenan a 6 españoles… y a 15 extranjeros.
 
 16
-00:00:40,011 --> 00:00:43,724
+00:00:41,838 --> 00:00:45,552
 En prisión, 3 de cada 10 son extranjeros. En Cataluña, más de la mitad.
 
 17
-00:00:43,984 --> 00:00:46,729
+00:00:45,812 --> 00:00:48,556
 Pero son más jóvenes y más hombres: el perfil que más delinque.
 
 18
-00:00:46,989 --> 00:00:49,806
+00:00:48,816 --> 00:00:51,633
 A igual edad y sexo, la diferencia baja a 1,9.
 
 19
-00:00:50,066 --> 00:00:52,520
+00:00:51,893 --> 00:00:54,348
 Existe. Pero casi la mitad es edad y sexo.
 
 20
-00:00:52,780 --> 00:00:56,786
+00:00:54,608 --> 00:00:58,613
 Y según el origen, va de 0,6 en asiáticos a casi 9 en Balcanes y Georgia.
 
 21
-00:00:57,046 --> 00:01:00,295
+00:00:58,873 --> 00:01:02,122
 ¿Reincidentes? En Cataluña, uno de cada cinco presos vuelve a prisión.
 
 22
-00:01:00,555 --> 00:01:02,501
+00:01:02,382 --> 00:01:04,329
 En 2008, eran 4 de cada 10.
 
 23
-00:01:03,211 --> 00:01:06,789
+00:01:05,039 --> 00:01:08,617
 Lo que nadie cuenta: españoles, 20 %. Extranjeros, 22 %.
 
 24
-00:01:07,049 --> 00:01:12,134
+00:01:08,877 --> 00:01:13,961
 El problema: unos pocos que caen una y otra vez. En Barcelona, 2.190 de alto riesgo en 6 meses.
 
 25
-00:01:12,394 --> 00:01:15,128
+00:01:14,221 --> 00:01:16,956
 ¿Más cárcel para los de siempre… o más medios para que no vuelvan?
 
 26
-00:01:15,228 --> 00:01:16,163
+00:01:17,056 --> 00:01:17,990
 Comenta A o B.

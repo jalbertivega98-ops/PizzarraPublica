@@ -99,6 +99,38 @@ def sintetizar_traductor(texto, voz=VOZ, vel=VELOCIDAD):
     return urllib.request.urlopen(req, timeout=30).read(), []
 
 
+def sintetizar_elevenlabs(texto, voice_id, vel=VELOCIDAD):
+    """Voz propia de ElevenLabs (creada con Voice Design: el plan gratis no deja usar las de la biblioteca),
+    con los tiempos de cada carácter convertidos a tiempos por palabra. VOZ del vídeo: "elevenlabs:<voice_id>"."""
+    import base64
+    import urllib.request
+
+    cuerpo = {"text": texto, "model_id": "eleven_multilingual_v2",
+              "voice_settings": {"stability": 0.45, "similarity_boost": 0.8, "style": 0.25, "use_speaker_boost": True,
+                                 "speed": 1.08 if vel == VELOCIDAD else 1.0}}
+    req = urllib.request.Request(f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}/with-timestamps?output_format=mp3_44100_128",
+                                 data=json.dumps(cuerpo).encode(), method="POST",
+                                 headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"], "Content-Type": "application/json"})
+    r = json.loads(urllib.request.urlopen(req, timeout=120).read())
+    al = r["alignment"]
+    palabras, w, t0, t1 = [], "", None, None
+    for ch, a, b in zip(al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"]):
+        if ch.isspace():
+            if w:
+                palabras.append({"w": w, "t": t0, "d": t1 - t0})
+            w, t0 = "", None
+            continue
+        if t0 is None:
+            t0 = a
+        w, t1 = w + ch, b
+    if w:
+        palabras.append({"w": w, "t": t0, "d": t1 - t0})
+    # quita la puntuación pegada, como hace edge-tts
+    for p in palabras:
+        p["w"] = p["w"].strip("¿?¡!.,:;…«»\"()")
+    return base64.b64decode(r["audio_base64"]), [p for p in palabras if p["w"]]
+
+
 def main(paths):
     os.makedirs(CACHE, exist_ok=True)
     nuevas = 0
@@ -113,7 +145,9 @@ def main(paths):
             if os.path.exists(mp3) and os.path.exists(js):
                 continue
             audio = None
-            for intento in range(len(VERSIONES) + 1):
+            if voz.startswith("elevenlabs:"):
+                audio, palabras = sintetizar_elevenlabs(txt, voz.split(":", 1)[1], vel)
+            for intento in range(0 if audio else len(VERSIONES) + 1):
                 try:
                     audio, palabras = asyncio.run(sintetizar(txt, voz, vel))
                     break
@@ -122,7 +156,7 @@ def main(paths):
                     if "403" in str(e) and intento + 1 < len(VERSIONES):
                         usa_version(VERSIONES[intento + 1])
                         print("  probando versión", VERSIONES[intento + 1])
-            if audio is None:
+            if audio is None and not voz.startswith("elevenlabs:"):
                 for intento in range(3):
                     try:
                         audio, palabras = sintetizar_traductor(txt, voz, vel)

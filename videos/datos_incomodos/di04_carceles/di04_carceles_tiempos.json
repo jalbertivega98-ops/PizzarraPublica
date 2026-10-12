@@ -1,5 +1,5 @@
 {
- "duracion": 75.31,
+ "duracion": 77.96,
  "voz_real": true,
  "planos": [
   {
@@ -221,10 +221,11 @@
   {
    "i": 24,
    "ini": 72.31,
-   "fin": 75.31,
-   "dur": 2.99,
+   "fin": 77.96,
+   "dur": 5.65,
    "voz": [
-    "¿Más cárcel para los de siempre… o más medios para que no vuelvan?"
+    "¿Más cárcel para los de siempre… o más medios para que no vuelvan?",
+    "Comenta A o B."
    ]
   }
  ]

@@ -1,5 +1,5 @@
 {
- "duracion": 44.55,
+ "duracion": 47.2,
  "voz_real": true,
  "planos": [
   {
@@ -113,10 +113,11 @@
   {
    "i": 12,
    "ini": 42.05,
-   "fin": 44.55,
-   "dur": 2.5,
+   "fin": 47.2,
+   "dur": 5.15,
    "voz": [
-    "¿Crees que cobrarás una pensión como la de tus padres?"
+    "¿Crees que cobrarás una pensión como la de tus padres?",
+    "Comenta A o B."
    ]
   }
  ]

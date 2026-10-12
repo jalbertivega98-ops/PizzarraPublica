@@ -97,3 +97,7 @@ El problema: unos pocos que caen una y otra vez. En Barcelona, 2.190 de alto rie
 25
 00:01:12,394 --> 00:01:15,128
 ¿Más cárcel para los de siempre… o más medios para que no vuelvan?
+
+26
+00:01:15,228 --> 00:01:16,163
+Comenta A o B.

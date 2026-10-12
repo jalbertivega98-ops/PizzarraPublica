@@ -49,3 +49,7 @@ Ojo: los jubilados cotizaron toda su vida. El problema no es su pensión, es qui
 13
 00:00:42,127 --> 00:00:44,365
 ¿Crees que cobrarás una pensión como la de tus padres?
+
+14
+00:00:44,465 --> 00:00:45,400
+Comenta A o B.

@@ -1,5 +1,5 @@
 {
- "duracion": 39.95,
+ "duracion": 42.61,
  "voz_real": true,
  "planos": [
   {
@@ -113,10 +113,11 @@
   {
    "i": 12,
    "ini": 36.56,
-   "fin": 39.95,
-   "dur": 3.39,
+   "fin": 42.61,
+   "dur": 6.05,
    "voz": [
-    "¿Qué número te parece más honesto: el de los euros o el del porcentaje?"
+    "¿Qué número te parece más honesto: el de los euros o el del porcentaje?",
+    "Comenta A o B."
    ]
   }
  ]

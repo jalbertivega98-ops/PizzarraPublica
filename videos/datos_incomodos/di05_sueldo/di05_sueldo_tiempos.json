@@ -1,5 +1,5 @@
 {
- "duracion": 46.25,
+ "duracion": 48.9,
  "voz_real": true,
  "planos": [
   {
@@ -113,10 +113,11 @@
   {
    "i": 12,
    "ini": 43.63,
-   "fin": 46.25,
-   "dur": 2.62,
+   "fin": 48.9,
+   "dur": 5.27,
    "voz": [
-    "¿Quieres ver en tu nómina lo que cuesta de verdad tu trabajo?"
+    "¿Quieres ver en tu nómina lo que cuesta de verdad tu trabajo?",
+    "Comenta A o B."
    ]
   }
  ]

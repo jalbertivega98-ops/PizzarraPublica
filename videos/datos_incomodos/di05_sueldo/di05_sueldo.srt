@@ -49,3 +49,7 @@ Lo incómodo es otra cosa: casi nadie sabe que la mayor parte la paga su empresa
 13
 00:00:43,709 --> 00:00:46,066
 ¿Quieres ver en tu nómina lo que cuesta de verdad tu trabajo?
+
+14
+00:00:46,166 --> 00:00:47,100
+Comenta A o B.

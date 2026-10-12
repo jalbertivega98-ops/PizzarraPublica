@@ -49,3 +49,7 @@ El país crece más rápido que su deuda… pero la deuda no deja de crecer.
 13
 00:00:36,641 --> 00:00:39,774
 ¿Qué número te parece más honesto: el de los euros o el del porcentaje?
+
+14
+00:00:39,874 --> 00:00:40,809
+Comenta A o B.

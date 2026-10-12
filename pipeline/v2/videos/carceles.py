@@ -77,9 +77,9 @@ VIDEO = {
          "trans": "zoom", "cam": "empuja", "fuente": "Ley Orgánica 1/2026, BOE 09/04/2026",
          "el": [
              {"k": "txt", "t": "LEY DE\nMULTIRREINCIDENCIA", "px": 76, "y": 400, "at": 0.1, "marca": "yellow"},
-             {"k": "burbujas", "y": 680, "items": ["1ª", "2ª", "3ª"], "px": 80, "at": "@3", "escalon": 0.2},
-             {"k": "icono", "n": "mazo", "x": 270, "y": 980, "tam": 1.1, "at": "@cárcel", "rot": -10},
-             {"k": "txt", "t": "6-18 MESES\nDE PRISIÓN", "px": 84, "y": 990, "x": 680, "at": "@6", "color": "red"},
+             {"k": "num", "val": 3, "desde": 0, "dur": 0.4, "px": 200, "y": 690, "at": "@3-0.2", "sub": "condenas previas", "color": "ink"},
+             {"k": "icono", "n": "mazo", "x": 250, "y": 990, "tam": 1.1, "at": "@cárcel", "rot": -10},
+             {"k": "txt", "t": "6-18 MESES\nDE PRISIÓN", "px": 80, "y": 1000, "x": 680, "at": "@6", "color": "red"},
          ]},
         # DATOS: CIUDADES
         {"voz": [{"tts": "Barcelona: ciento sesenta y nueve mil delitos en un año.", "text": "Barcelona: 169.678 delitos en un año."}],

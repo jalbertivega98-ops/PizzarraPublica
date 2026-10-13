@@ -1,6 +1,8 @@
 """Los datos que incomodan #6 · Pensiones y jóvenes.
 
-- Pensión media de jubilación: 1.576,1 €/mes en septiembre de 2026 (Ministerio de Inclusión, nómina de septiembre); 14 pagas = 22.065 €/año.
+- Pensión media del sistema (todas las pensiones contributivas): 1.374,6 €/mes en septiembre de 2026; 14 pagas = 19.244 €/año.
+  La de jubilación es 1.576,1 €/mes (Seguridad Social, nómina de septiembre).
+- Salario medio 2024: 29.540,26 €; mediano 24.497,17 € (INE). Corregido el 13/10/2026: antes comparaba la pensión de jubilación (media) con el salario más frecuente (moda).
 - Salario más frecuente (moda): 16.520,18 €/año brutos en 2024 (INE, Encuesta Anual de Estructura Salarial, 28/05/2026).
 - Nómina de pensiones de septiembre de 2026: 14.498,2 M€; 10.547.417 pensiones (Ministerio de Inclusión).
 - Fedea (22/01/2026): en 2025 el Estado transfirió 61.342 M€ a la Seguridad Social; sin ellas, déficit de 69.783 M€.
@@ -12,22 +14,22 @@
 """
 VIDEO = {
     "slug": "di06_pensiones",
-    "titulo": "Tu abuelo cobra más que tú.",
+    "titulo": "La pensión media gana al sueldo más común.",
     "serie": "LOS DATOS QUE INCOMODAN · #6",
     "acento": "purple",
     "voz": "elevenlabs:Pizarra Pública",
-    "claves": ["1.576", "más", "61.342", "2,1", "impuestos", "padres"],
+    "claves": ["1.375", "más", "61.342", "2,1", "impuestos", "padres"],
     "musica": {"bpm": 118, "tono": -1, "seed": 66},
     "portada": {"t": 2.6, "titulo": "LA PENSIÓN MEDIA\nGANA AL SUELDO MÁS COMÚN"},
     "duro": True,
     "planos": [
         # GANCHO
-        {"voz": [{"tts": "Pensión media de jubilación: mil quinientos setenta y seis euros.", "text": "Pensión media de jubilación: 1.576 €."}],
-         "cam": "golpe", "fuente": "Seguridad Social, septiembre 2026",
+        {"voz": [{"tts": "Pensión media en España: mil trescientos setenta y cinco euros.", "text": "Pensión media en España: 1.375 €."}],
+         "cam": "golpe", "fuente": "Seguridad Social, septiembre 2026 (todas las pensiones)",
          "el": [
              {"k": "pers", "tipo": "ciudadano", "x": 280, "y": 1040, "tam": 1.2, "cara": "feliz", "pose": "saluda", "at": 0.05},
-             {"k": "num", "val": 1576, "desde": 0, "dur": 0.8, "golpe": True, "px": 200, "y": 620, "suf": " €", "fondo": "yellow", "at": 0.1},
-             {"k": "txt", "t": "AL MES · 14 PAGAS", "px": 56, "y": 810, "at": "@1.576", "fuente": "num"},
+             {"k": "num", "val": 1375, "desde": 0, "dur": 0.8, "golpe": True, "px": 200, "y": 620, "suf": " €", "fondo": "yellow", "at": 0.1},
+             {"k": "txt", "t": "AL MES · 14 PAGAS", "px": 56, "y": 810, "at": "@1.375", "fuente": "num"},
          ]},
         {"voz": [{"tts": "El sueldo más común en España: dieciséis mil quinientos al año. Mil ciento ochenta al mes.",
                   "text": "El sueldo más común en España: 16.520 € al año. 1.180 al mes."}],
@@ -39,9 +41,18 @@ VIDEO = {
          ]},
         {"voz": ["Sí: la pensión media ya supera al sueldo más frecuente."], "trans": "zoom", "cam": "aleja", "pausa": 0.3,
          "el": [
-             {"k": "barras", "y": 1060, "w": 700, "h": 560, "max": 24000, "escalon": 0.5, "px_val": 62,
-              "items": [{"label": "PENSIÓN/AÑO", "val": 22065, "color": "purple", "txt": "{v} €"},
+             {"k": "barras", "y": 1060, "w": 700, "h": 560, "max": 21000, "escalon": 0.5, "px_val": 62,
+              "items": [{"label": "PENSIÓN/AÑO", "val": 19244, "color": "purple", "txt": "{v} €"},
                         {"label": "SUELDO/AÑO", "val": 16520, "color": "red", "txt": "{v} €"}]},
+         ]},
+        {"voz": [{"tts": "Ojo: el sueldo medio sí es mayor, veintinueve mil quinientos. Pero la mitad cobra menos de veinticuatro mil quinientos.",
+                  "text": "Ojo: el sueldo medio sí es mayor, 29.540 €. Pero la mitad cobra menos de 24.497 €."}],
+         "trans": "barrido", "cam": "deriva", "fuente": "INE, Estructura Salarial 2024",
+         "el": [
+             {"k": "txt", "t": "SUELDO MEDIO", "px": 60, "y": 420, "at": "@medio", "fuente": "num"},
+             {"k": "num", "val": 29540, "desde": 0, "dur": 0.8, "px": 140, "y": 570, "suf": " €", "color": "green", "at": "@29.540-0.3"},
+             {"k": "txt", "t": "LA MITAD COBRA MENOS DE", "px": 54, "y": 820, "at": "@mitad", "marca": "yellow"},
+             {"k": "num", "val": 24497, "desde": 0, "dur": 0.8, "px": 140, "y": 980, "suf": " €", "color": "red", "at": "@24.497-0.3"},
          ]},
         {"voz": ["Y lo pagas tú."], "trans": "corte", "cam": "golpe", "min": 1.3,
          "el": [

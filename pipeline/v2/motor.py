@@ -1072,7 +1072,8 @@ class Render:
             f = D.fuente("ui", 26)
             cv.drawString(serie, 52, 238, f, D.p_fill("ink"))
         # fuente del dato
-        fu = None if getattr(s, "sin_subs", False) else pl.sp.get("fuente")
+        sin_subs = getattr(s, "sin_subs", False) or s.video.get("sin_subs")
+        fu = None if sin_subs else pl.sp.get("fuente")
         if fu:
             txt = "Fuente: " + fu
             w = s.ffuente.measureText(txt)
@@ -1080,7 +1081,7 @@ class Render:
             cv.drawRoundRect(r, 23, 23, D.p_fill("white", 235))
             cv.drawRoundRect(r, 23, 23, D.p_stroke("gray", 3))
             cv.drawString(txt, W / 2 - w / 2, 1295, s.ffuente, D.p_fill("gray"))
-        if not getattr(s, "sin_subs", False):
+        if not sin_subs:
             s.subtitulos(cv, t)
 
     def trozos(s):

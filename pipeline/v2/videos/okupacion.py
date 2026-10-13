@@ -88,14 +88,14 @@ VIDEO = {
              {"k": "icono", "n": "edificio", "x": 300, "y": 720, "tam": 1.2, "at": 0.05},
              {"k": "txt", "t": "USURPACIÓN", "px": 90, "y": 440, "at": "@usurpación", "color": "purple"},
              {"k": "icono", "n": "billete", "x": 780, "y": 700, "tam": 0.9, "at": "@multa"},
-             {"k": "pers", "tipo": "juez", "x": 780, "y": 1080, "tam": 0.8, "cara": "neutral", "mira": -1, "at": "@juez"},
+             {"k": "pers", "tipo": "juez", "x": 780, "y": 1080, "tam": 0.8, "cara": "neutral", "mira": -1, "at": "@llevan"},
          ]},
         {"voz": ["Desde dos mil veinticinco, los dos van por juicio rápido."], "trans": "zoom", "cam": "empuja",
          "fuente": "Ley Orgánica 1/2025",
          "el": [
              {"k": "icono", "n": "reloj", "x": 540, "y": 620, "tam": 1.4, "at": 0.05},
-             {"k": "icono", "n": "mazo", "x": 780, "y": 900, "tam": 1.0, "rot": -12, "at": "@juicio"},
-             {"k": "txt", "t": "JUICIO RÁPIDO", "px": 90, "y": 1060, "at": "@rápido", "marca": "yellow"},
+             {"k": "icono", "n": "mazo", "x": 780, "y": 900, "tam": 1.0, "rot": -12, "at": "@dos"},
+             {"k": "txt", "t": "JUICIO RÁPIDO", "px": 90, "y": 1060, "at": "@juicio", "marca": "yellow"},
          ]},
         # QUÉ HACER
         {"voz": ["Si te pasa: denuncia ya, y lleva escrituras o contrato."], "trans": "sube", "cam": "golpe",

@@ -27,7 +27,7 @@ VIDEO = {
          "el": [
              {"k": "dinero", "modo": "lluvia", "n": 24, "at": 0.1, "dur": 2.4, "z": -1},
              {"k": "pers", "tipo": "ciudadano", "x": 540, "y": 1060, "tam": 1.1, "cara": "sorpresa", "pose": "brazos_arriba", "at": 0.2},
-             {"k": "sello", "t": "0 DÍAS COTIZADOS", "x": 540, "y": 560, "px": 80, "at": "@ni", "rot": -10},
+             {"k": "sello", "t": "0 DÍAS COTIZADOS", "x": 540, "y": 560, "px": 62, "at": "@ni", "rot": -10},
          ]},
         {"voz": ["Se llama Ingreso Mínimo Vital."], "trans": "zoom", "cam": "empuja", "min": 1.4,
          "el": [
@@ -106,7 +106,7 @@ VIDEO = {
              {"k": "pers", "tipo": "ciudadano", "x": 600, "y": 990, "tam": 0.6, "cara": "feliz", "at": "@hijos"},
              {"k": "num", "val": 1034319, "desde": 0, "dur": 1.0, "px": 110, "y": 460, "sub": "menores", "color": "green",
               "at": "@hijos"},
-             {"k": "sello", "t": "SIN COTIZAR", "x": 820, "y": 760, "px": 60, "at": "@cotizado", "rot": 10},
+             {"k": "sello", "t": "SIN COTIZAR", "x": 760, "y": 760, "px": 54, "at": "@cotizado", "rot": 10},
          ]},
         # FRAUDE VS PROTECCIÓN
         {"voz": ["Cobrarlo cumpliendo los requisitos no es fraude. Fraude es ocultar ingresos o patrimonio, y obliga a devolverlo."],

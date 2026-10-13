@@ -1,0 +1,124 @@
+{
+ "duracion": 51.97,
+ "voz_real": true,
+ "planos": [
+  {
+   "i": 0,
+   "ini": 0.0,
+   "fin": 3.25,
+   "dur": 3.25,
+   "voz": [
+    "Hay una ayuda del Estado que no te pide haber trabajado ni un solo día."
+   ]
+  },
+  {
+   "i": 1,
+   "ini": 3.25,
+   "fin": 4.91,
+   "dur": 1.66,
+   "voz": [
+    "Se llama Ingreso Mínimo Vital."
+   ]
+  },
+  {
+   "i": 2,
+   "ini": 4.91,
+   "fin": 9.69,
+   "dur": 4.78,
+   "voz": [
+    "En marzo lo cobraban más de 829.000 hogares. Más de 2,5 millones de personas."
+   ]
+  },
+  {
+   "i": 3,
+   "ini": 9.69,
+   "fin": 14.77,
+   "dur": 5.09,
+   "voz": [
+    "Ese mes costó casi 496 millones de euros. Unos 543 € por hogar."
+   ]
+  },
+  {
+   "i": 4,
+   "ini": 14.77,
+   "fin": 17.15,
+   "dur": 2.38,
+   "voz": [
+    "¿Quién puede cobrarlo? Tres requisitos."
+   ]
+  },
+  {
+   "i": 5,
+   "ini": 17.15,
+   "fin": 19.89,
+   "dur": 2.74,
+   "voz": [
+    "Uno: residencia legal en España, al menos un año."
+   ]
+  },
+  {
+   "i": 6,
+   "ini": 19.89,
+   "fin": 24.44,
+   "dur": 4.55,
+   "voz": [
+    "Dos: ingresar menos de 733,60 € al mes si vives solo."
+   ]
+  },
+  {
+   "i": 7,
+   "ini": 24.44,
+   "fin": 29.09,
+   "dur": 4.65,
+   "voz": [
+    "Y tres: patrimonio por debajo de unos 26.400 €, sin contar tu casa."
+   ]
+  },
+  {
+   "i": 8,
+   "ini": 29.09,
+   "fin": 30.83,
+   "dur": 1.74,
+   "voz": [
+    "Pero aquí está el matiz."
+   ]
+  },
+  {
+   "i": 9,
+   "ini": 30.83,
+   "fin": 35.91,
+   "dur": 5.08,
+   "voz": [
+    "Si lo pides solo, con entre 23 y 29 años, sí te exigen un año de alta en la Seguridad Social."
+   ]
+  },
+  {
+   "i": 10,
+   "ini": 35.91,
+   "fin": 39.49,
+   "dur": 3.58,
+   "voz": [
+    "Para el resto, y para las familias con hijos, no hace falta haber cotizado."
+   ]
+  },
+  {
+   "i": 11,
+   "ini": 39.49,
+   "fin": 45.03,
+   "dur": 5.54,
+   "voz": [
+    "Cobrarlo cumpliendo los requisitos no es fraude. Fraude es ocultar ingresos o patrimonio, y obliga a devolverlo."
+   ]
+  },
+  {
+   "i": 12,
+   "ini": 45.03,
+   "fin": 51.97,
+   "dur": 6.94,
+   "voz": [
+    "¿Deberían exigirse años cotizados para cobrar ayudas como esta? A: sí. B: no.",
+    "Comenta A o B."
+   ]
+  }
+ ]
+}

@@ -329,7 +329,17 @@ POSES = {
     "encoge":   (((-262, -40), "abierto", 0.35), ((262, -40), "abierto", -0.35)),
     "sostiene": (((-236, 150), "abierto", -0.3), ((246, 40), "puno", 0.3)),
     "sostiene2": (((-150, 60), "puno", -0.3), ((150, 60), "puno", 0.3)),
+    # ciclo de caminar / correr (se mezclan según la fase del paso)
+    "anda1":    (((-250, 90), "abierto", -0.45), ((210, 190), "abierto", 0.15)),
+    "anda2":    (((-210, 190), "abierto", -0.15), ((250, 90), "abierto", 0.45)),
+    "corre1":   (((-270, 10), "puno", -0.6), ((200, 170), "puno", 0.3)),
+    "corre2":   (((-200, 170), "puno", -0.3), ((270, 10), "puno", 0.6)),
+    "cae":      (((-280, -120), "abierto", 0.4), ((280, -120), "abierto", -0.4)),
+    "empuja":   (((-236, 150), "abierto", -0.3), ((330, 20), "abierto", -0.05)),
+    "ruega":    (((-60, 40), "abierto", 0.6), ((60, 40), "abierto", -0.6)),
 }
+# poses que dejan los brazos libres para balancearse al andar
+BALANCEO = {"normal", "anda1", "anda2", "caidos"}
 HOMBROS = ((-W2 + 4, 10), (W2 - 4, 10))
 
 
@@ -423,13 +433,17 @@ def accesorios_cuerpo(c, ficha):
 
 # ------------------------------------------------------------------ personaje completo
 def dibuja(c, quien="piz", cara=None, pose=None, pose_prev=None, k_pose=1.0, mira=(0, 0), parpadeo=0.0,
-           habla=0.0, paso=None, t=0.0, sombra=True, objeto=None):
-    """Dibuja el personaje en (0, 0) local. paso = fase de la caminata (None = quieto)."""
+           habla=0.0, paso=None, t=0.0, sombra=True, objeto=None, ojos=1.0, corre=False, giro=0.0):
+    """Dibuja el personaje en (0, 0) local. paso = fase de la caminata (None = quieto).
+    ojos > 1 = ojos que se salen (reacción cartoon); giro -1..1 = la cara mira hacia un lado (3/4)."""
     ficha = PERSONAJES[quien]
     cara = cara or ficha.get("cara", "normal")
     ex = EXPRESIONES.get(cara, EXPRESIONES["normal"])
     pose = pose or BRAZOS_DE.get(cara, "normal")
     P = list(mezcla_pose(pose_prev or pose, pose, k_pose))
+    if paso is not None and (pose in BALANCEO or corre):  # brazos que se balancean con el paso
+        a, b = ("corre1", "corre2") if corre else ("anda1", "anda2")
+        P = list(mezcla_pose(a, b, 0.5 + 0.5 * math.sin(paso * 2 * math.pi)))
     lleva_rotu = ficha.get("rotulador") and P[0][1] == "abierto" and P[0][0][1] > 60
     if lleva_rotu:
         P[0] = (P[0][0], "puno", P[0][2])
@@ -442,24 +456,27 @@ def dibuja(c, quien="piz", cara=None, pose=None, pose_prev=None, k_pose=1.0, mir
         fx, fy, lev = sx * 1.25, 322, 0.0
         if paso is not None:
             fase = paso * 2 * math.pi + (0 if i == 0 else math.pi)
-            fx += 34 * math.sin(fase)
+            fx += (62 if corre else 34) * math.sin(fase)
             lev = max(0.0, math.cos(fase))
-            fy -= 26 * lev
+            fy -= (44 if corre else 26) * lev
         manguera(c, (sx, H2 - 6), (fx, fy - 10), 0.12 * lado, 22)
         zapatilla(c, fx + 10 * lado, fy + 4, lado, zap, 1.4, lev)
     brazos(c, P, frente=False)
     cuerpo(c, ficha)
-    # cara
+    # cara (con giro, los rasgos se desplazan hacia donde mira: vista de 3/4)
+    c.save()
+    c.translate(giro * 55, 0)
     mx, my = mira
     mx, my = mx + ex.get("mira", (0, 0))[0], my + ex.get("mira", (0, 0))[1]
     parp = max(ex["parpado"], parpadeo)
     for x, lado in ((-45, -1), (45, 1)):
-        ojo(c, x, OJOS_Y, ex["ojo"], parp, ex.get("inclina", 0), ex["pupila"], (mx, my), lado,
+        ojo(c, x * (1 + 0.25 * (ojos - 1)), OJOS_Y - 30 * (ojos - 1), ex["ojo"] * ojos, parp, ex.get("inclina", 0), ex["pupila"], (mx, my), lado,
             ex.get("cerrados"), ficha.get("pestanas") or ex.get("pestanas"))
     if not ficha.get("gafas") == "sol":
         cejas(c, *ex["cejas"])
     boca(c, ex["boca"], habla)
     accesorios_cara(c, ficha)
+    c.restore()
     accesorios_cuerpo(c, ficha)
     if lleva_rotu:  # el rotulador rojo de Piz
         hx, hy = P[0][0]

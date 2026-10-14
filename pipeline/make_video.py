@@ -26,6 +26,7 @@ import wb  # noqa: E402
 from wb import H, W  # noqa: E402
 from universo import actor as universo_actor  # noqa: E402
 from universo import fondos as universo_fondos  # noqa: E402
+from universo import luz as universo_luz  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FPS = 30
@@ -179,8 +180,15 @@ def build_elements(story, scenes):
             if e.kind in wb.UNIVERSO:  # personajes del universo: palabras de la escena para mover la boca
                 e.palabras = [(a, b) for ln in tl["lines"] for _, a, b in ln.get("words", [])]
                 universo_actor.preparar(e)
+                e.escena = tl
             els.append(e)
             prev_end = t0 + e.dur
+        for clave in ("camara", "luz"):  # planos de cámara y cambios de luz anclados a la voz
+            if clave in sc:
+                tl[clave] = [{**x, "t": resolve_at(x.get("at", 0), tl, tl["start"])} for x in sc[clave]]
+        mundo = {e.spec["id"]: e for e in els if "id" in e.spec}  # para seguir, mirar y encuadrar por id
+        for e in els:
+            e.mundo = mundo
         per_scene.append(els)
     if viva.es_viva(story) and per_scene and per_scene[0]:
         # gancho: el fotograma 0 ya tiene el primer dibujo a medio trazar
@@ -325,9 +333,12 @@ def render(story, scenes, elements, chunks, total, out_video_noaudio, preview=Fa
         if vv:  # cámara viva: sigue al trazo, golpes de zoom
             if si != cam_scene:
                 cam, cam_scene = viva.Camara(), si
-            viva.Camara.aplicar(c, *cam.update(t, elements[si]))
-            if fondo:  # mundo cartoon: el fondo se mueve con la cámara
-                universo_fondos.dibuja(c, fondo, t)
+            cx, cy, cz = cam.update(t, elements[si], shots=sc.get("camara"))
+            if fondo:  # mundo cartoon: fondo por capas con parallax (lo lejano se mueve menos)
+                c.restore()
+                c.save()
+                universo_fondos.dibuja(c, fondo, t, (cx, cy, cz, cam.inclina))
+            viva.Camara.aplicar(c, cx, cy, cz, cam.inclina)
         else:  # cámara: zoom lento por escena
             z = 1 + spec.get("zoom", 0.035) * wb.ease((t - sc["start"]) / max(0.1, sc["end"] - sc["start"]))
             c.translate(W / 2, 820)
@@ -335,12 +346,19 @@ def render(story, scenes, elements, chunks, total, out_video_noaudio, preview=Fa
             c.translate(-W / 2, -820)
         tip, tip_col = None, "ink"
         for e in elements[si]:
+            if e.spec.get("hud"):  # rótulos de dato fijos en pantalla: se dibujan fuera de la cámara
+                continue
             tp = e.draw(c, t)
             if tp is not None:
                 tip, tip_col = tp, e.spec.get("color", "ink") if e.kind != "highlight" else "yellow"
         if tip is not None:
             wb.draw_marker(c, tip, tip_col if tip_col in wb.PALETTE else "ink")
+        if vv and sc.get("luz"):  # iluminación y ambiente (foco, oscuro, alarma, atardecer)
+            universo_luz.dibuja(c, sc["luz"], t, elements[si])
         c.restore()
+        for e in elements[si]:
+            if e.spec.get("hud"):
+                e.draw(c, t)
         if vv:  # la transición mueve solo la pizarra; barra, etiqueta y subtítulos quedan encima
             board = surface.makeImageSnapshot().toarray(colorType=skia.kRGBA_8888_ColorType)
             tipo = viva.transicion_de(story, si) if si else None
@@ -395,7 +413,12 @@ def build_audio(story, clips, sr, total, elements, workdir, scenes=None):
     vpath = os.path.join(workdir, "voice.wav")
     _write_wav(vpath, voice[: int(total * sr)], sr)
     mpath = os.path.join(workdir, "music.wav")
-    mus = music.background(total, bpm=story.get("music_bpm", 92))
+    if story.get("banda"):  # banda sonora por momentos (universo/banda.py) que se aparta cuando habla la voz
+        from universo import banda
+        mus = banda.partitura(story, scenes, total)
+        mus = banda.ducking(mus, voice[: int(total * sr)], sr, music.SR, story.get("ducking", 0.6))
+    else:
+        mus = music.background(total, bpm=story.get("music_bpm", 92))
     spath = os.path.join(workdir, "scribble.wav")
     scr = music.scribble(total, drawing_intervals(elements))
     if viva.es_viva(story):  # cortes de música y efectos sincronizados

@@ -20,10 +20,12 @@ import wb
 from wb import H, W
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "v2"))
-import sonido  # noqa: E402  (efectos generados por código, del motor v2)
+import sonido  # noqa: E402
+from universo import sfx as universo_sfx  # noqa: E402  (efectos generados por código, del motor v2)
 
 TRANSICIONES = ("borrador", "barrido", "zoom", "papel")
-DUR_TRANS = {"borrador": 0.36, "barrido": 0.26, "zoom": 0.32, "papel": 0.3, "corte": 0.0}
+DUR_TRANS = {"borrador": 0.36, "barrido": 0.26, "zoom": 0.32, "papel": 0.3, "corte": 0.0, "iris": 0.7, "pan": 0.45}
+IRIS_CENTRO = [W / 2, 820]
 CENTRO = (W / 2, 820)
 
 
@@ -94,7 +96,7 @@ class Camara:
     def foco(self, t, els):
         best = None
         for e in els:
-            if e.hidden(t):
+            if e.hidden(t) or e.spec.get("hud"):
                 continue
             activo = e.t0 <= t < e.t0 + e.dur + 0.5
             for t0, d, f in e.fx:
@@ -106,9 +108,69 @@ class Camara:
                 best = e
         return best
 
-    def update(self, t, els, base_zoom=1.04):
+    # planos de cámara (escena "camara": [{"at", "plano", "sobre": id | [x, y], "dur", "inclina"}])
+    PLANOS = {"general": 1.0, "abierto": 0.92, "medio": 1.32, "primero": 1.8, "detalle": 2.35}
+
+    @staticmethod
+    def _encuadre(shot, t, els):
+        z = Camara.PLANOS.get(shot.get("plano", "general"), 1.0) * shot.get("zoom", 1.0)
+        sobre = shot.get("sobre")
+        if isinstance(sobre, (list, tuple)):
+            return sobre[0], sobre[1], z
+        e = next((e for e in els if e.spec.get("id") == sobre), None) if sobre else None
+        if e is None:
+            return CENTRO[0], CENTRO[1], z
+        x0, y0, x1, y1 = e.bbox()
+        cx = (x0 + x1) / 2
+        if e.kind == "personaje":  # el plano corto encuadra la cara
+            frac = {"primero": 0.3, "detalle": 0.3, "medio": 0.42}.get(shot.get("plano"), 0.55)
+            cy = y0 + (y1 - y0) * frac
+        else:
+            cy = (y0 + y1) / 2
+        # el encuadre deja aire hacia donde mira/va el personaje
+        cx += shot.get("aire", 0)
+        # el punto de interés queda un poco por encima del centro (subtítulos abajo)
+        return cx, cy + 80 / z, z
+
+    @staticmethod
+    def limitar(cx, cy, z):
+        """No enseñar el borde del fondo: el fondo cubre x -260..1340, y -260..2180."""
+        z = max(z, 0.9)
+        cx = min(max(cx, -260 + CENTRO[0] / z), 1340 - (W - CENTRO[0]) / z)
+        cy = min(max(cy, -260 + CENTRO[1] / z), 2180 - (H - CENTRO[1]) / z)
+        return cx, cy, z
+
+    def planos(self, t, els, shots):
+        actual = None
+        for i, sh in enumerate(shots):
+            if sh["t"] <= t:
+                actual = i
+        if actual is None:
+            return None
+        sh = shots[actual]
+        tx, ty, tz = self._encuadre(sh, t, els)
+        d = sh.get("dur", 0.6)
+        k = 1.0 if d <= 0 else wb.ease((t - sh["t"]) / d)
+        if k < 1:
+            prev = shots[actual - 1] if actual > 0 else {"plano": "general"}
+            px, py, pz = self._encuadre(prev, t, els)
+            tx, ty, tz = px + (tx - px) * k, py + (ty - py) * k, pz + (tz - pz) * k
+        incl = sh.get("inclina", 0) * k + (shots[actual - 1].get("inclina", 0) * (1 - k) if actual > 0 else 0)
+        return tx, ty, tz, incl
+
+    def update(self, t, els, base_zoom=1.04, shots=None):
         dt = 1 / 30 if self.last_t is None else max(1e-3, t - self.last_t)
         self.last_t = t
+        self.inclina = 0.0
+        if shots:
+            r = self.planos(t, els, shots)
+            if r is not None:
+                cx, cy, z, self.inclina = r
+                kick, shake = self._golpes(t, els)
+                drift = 0.004 * math.sin(t * 0.9)
+                cx, cy, z = self.limitar(cx + 4 * math.sin(t * 0.7), cy + 3 * math.cos(t * 0.53), z + kick + drift)
+                self.cx, self.cy, self.z = cx, cy, z
+                return cx + shake * math.sin(t * 83), cy + shake * math.cos(t * 71), z
         tx, ty, tz = CENTRO[0], CENTRO[1], base_zoom
         e = self.foco(t, els)
         if e is not None:
@@ -122,22 +184,38 @@ class Camara:
         self.cx += (tx - self.cx) * a
         self.cy += (ty - self.cy) * a
         self.z += (tz - self.z) * a
-        # golpes: el más reciente manda
+        kick, shake = self._golpes(t, els)
+        drift = 0.006 * math.sin(t * 0.9)
+        sx = shake * math.sin(t * 83)
+        sy = shake * math.cos(t * 71)
+        cx, cy, z = self.limitar(self.cx, self.cy, self.z + kick + drift)
+        return cx + sx, cy + sy, z
+
+    @staticmethod
+    def _golpes(t, els):
+        """Golpes de cámara: el más reciente manda (golpe, fx golpe, aplastar, tropezar, caer)."""
         kick, shake = 0.0, 0.0
         for el in els:
-            for tg in ([el.t0] if el.spec.get("golpe") else []) + [t0 for t0, d, f in el.fx if f["do"] == "golpe"]:
+            tgs = ([el.t0] if el.spec.get("golpe") else []) + [t0 for t0, d, f in el.fx if f["do"] == "golpe"]
+            if el.kind in wb.UNIVERSO:
+                tgs += [ch["t"] for ch in el.cambios if ch.get("aplasta")]
+                tgs += [ch["t"] + 0.32 for ch in el.cambios if ch.get("tropieza")]
+                if el.spec.get("entra") == "cae":
+                    tgs.append(el.t0 + el.dur * 0.7)
+                if el.kind == "efecto" and el.spec.get("efecto") == "pum":
+                    tgs.append(el.t0)
+            for tg in tgs:
                 if 0 <= t - tg < 0.6:
                     k = math.exp(-(t - tg) / 0.16)
                     kick = max(kick, 0.075 * k)
                     shake = max(shake, 9 * k)
-        drift = 0.006 * math.sin(t * 0.9)
-        sx = shake * math.sin(t * 83)
-        sy = shake * math.cos(t * 71)
-        return self.cx + sx, self.cy + sy, self.z + kick + drift
+        return kick, shake
 
     @staticmethod
-    def aplicar(c, cx, cy, z):
+    def aplicar(c, cx, cy, z, inclina=0.0):
         c.translate(CENTRO[0], CENTRO[1])
+        if inclina:
+            c.rotate(inclina)
         c.scale(z, z)
         c.translate(-cx, -cy)
 
@@ -202,6 +280,25 @@ def mezcla(tipo, prev, cur, k):
         c.translate(CENTRO[0], CENTRO[1]); c.scale(z, z); c.translate(-CENTRO[0], -CENTRO[1])
         c.drawImage(ci, 0, 0, skia.SamplingOptions(), skia.Paint(Alphaf=e))
         c.restore()
+    elif tipo == "iris":  # círculo de dibujos animados: se cierra sobre la escena vieja y se abre en la nueva
+        R = 1250
+        cx, cy = IRIS_CENTRO
+        c.clear(skia.Color(20, 20, 26))
+        if k < 0.5:
+            r, img = R * (1 - wb.ease(k * 2)), pi
+        else:
+            r, img = R * wb.ease(k * 2 - 1), ci
+        if r > 2:
+            c.save()
+            p = skia.Path()
+            p.addCircle(cx, cy, r)
+            c.clipPath(p, skia.ClipOp.kIntersect, True)
+            c.drawImage(img, 0, 0)
+            c.restore()
+    elif tipo == "pan":  # la cámara se desplaza y sigue al personaje hasta la escena siguiente
+        e = wb.ease(k)
+        c.drawImage(pi, -W * e, 0)
+        c.drawImage(ci, W * (1 - e), 0)
     else:
         return cur
     return _SURF.makeImageSnapshot().toarray(colorType=skia.kRGBA_8888_ColorType)
@@ -260,7 +357,7 @@ def eventos_sonido(story, scenes, elements):
     for si, (sc, els) in enumerate(zip(scenes, elements)):
         if si > 0:
             tipo = transicion_de(story, si)
-            ev.append((sc["start"], "borrador" if tipo == "borrador" else "whoosh", {}))
+            ev.append((sc["start"], {"borrador": "borrador", "iris": "iris", "corte": None}.get(tipo, "whoosh"), {}))
         for e in els:
             k = e.kind
             if e.spec.get("golpe"):
@@ -277,6 +374,8 @@ def eventos_sonido(story, scenes, elements):
                     ev.append((e.t0, "whoosh", {}))
                 elif entra == "cae":
                     ev.append((e.t0 + e.dur * 0.7, "impacto", {}))
+                elif k == "efecto":
+                    pass
                 elif entra != "nada":
                     ev.append((e.t0, "pop", {"pitch": 0.8 if k == "edificio" else 1.0 + 0.2 * (len(ev) % 3)}))
                 if e.spec.get("sfx"):
@@ -284,12 +383,32 @@ def eventos_sonido(story, scenes, elements):
                 for ch in e.cambios:
                     if ch.get("sfx"):
                         ev.append((ch["t"], ch["sfx"], {}))
-                    elif ch.get("salta"):
-                        ev.append((ch["t"], "boing", {}))
-                    elif ch.get("sale") in ("izq", "der"):
+                    if ch.get("salta"):
+                        ev.append((ch["t"] + 0.06, "boing", {}))
+                    elif ch.get("take"):
+                        ev.append((ch["t"], "sorpresa", {}))
+                    elif ch.get("aplasta"):
+                        ev.append((ch["t"], "aplastar", {}))
+                    elif ch.get("tropieza"):
+                        ev.append((ch["t"] + 0.15, "tropiezo", {}))
+                        ev.append((ch["t"] + 0.45, "estrellitas", {}))
+                    elif ch.get("gira"):
                         ev.append((ch["t"], "whoosh", {}))
+                    elif ch.get("sale") in ("izq", "der", "arriba"):
+                        ev.append((ch["t"], "whoosh", {}))
+                    elif ch.get("sfx"):
+                        pass
                     elif "cara" in ch or "pose" in ch or "objeto" in ch or "props" in ch or "caras_dentro" in ch:
                         ev.append((ch["t"], "pop", {"pitch": 1.4}))
+                for tp, corre in getattr(e, "pasos", []):
+                    ev.append((tp, "carrera" if corre else "pasos", {}))
+                if k == "efecto":
+                    son = {"pum": "golpe", "lluvia": "monedas", "vuelan": "whoosh", "flash": "impacto",
+                           "estrellas": "estrellitas"}.get(e.spec["efecto"])
+                    if son and not e.spec.get("sfx"):
+                        ev.append((e.t0, son, {}))
+                if entra == "cae" and k != "efecto":
+                    ev.append((e.t0, "caida", {}))
             for ch in ([] if k in wb.UNIVERSO else getattr(e, "cambios", [])):
                 ev.append((ch["t"], "pop", {"pitch": 1.4}))
             for t0, d, f in e.fx:
@@ -317,6 +436,8 @@ def pista_efectos(total, ev, sr):
             x = sonido.contador(min(kw.get("d", 1.0), 2.0))
         elif nombre == "borrador":
             x = borrador_snd(kw.get("d", 0.35))
+        elif nombre in universo_sfx.EFECTOS:  # efectos cartoon del universo
+            x = universo_sfx.efecto(nombre, seed=len(out) % 7 + int(t * 10) % 5) * universo_sfx.VOL[nombre] / SFX_VOL.get(nombre, 0.3)
         elif nombre in sonido.EFECTOS:
             x = sonido.efecto(nombre)
         else:
@@ -351,6 +472,8 @@ def informe_ritmo(story, scenes, elements, total, max_hueco=2.5, max_escena=9.0)
             ev.append((e.t0, e.kind))
             ev += [(ch["t"], "cara") for ch in getattr(e, "cambios", [])]
             ev += [(t0, f["do"]) for t0, d, f in e.fx]
+        ev += [(x["t"], "plano") for x in sc.get("camara", [])]  # un cambio de plano también es un cambio visual
+        ev += [(x["t"], "luz") for x in sc.get("luz", [])]
     ev.sort()
     avisos = []
     primero = min((e.t0 for e in elements[0]), default=9)
@@ -363,7 +486,9 @@ def informe_ritmo(story, scenes, elements, total, max_hueco=2.5, max_escena=9.0)
         if b - a > max_hueco:
             avisos.append(f"RITMO: {b - a:.1f} s sin cambios visuales entre {a:.1f} y {b:.1f} s")
     for spec, sc in zip(story["scenes"], scenes):
-        if sc["end"] - sc["start"] > max_escena:
+        largo = max([b - a for a, b in zip([sc["start"]] + [x["t"] for x in sc.get("camara", [])],
+                                            [x["t"] for x in sc.get("camara", [])] + [sc["end"]])])
+        if largo > max_escena:  # con planos de cámara, cuenta el plano más largo
             avisos.append(f"ESCENA larga: «{spec.get('id')}» dura {sc['end'] - sc['start']:.1f} s (máx. {max_escena:.0f})")
     if total > 60:
         avisos.append(f"DURACIÓN: {total:.1f} s (objetivo 30-45 s)")

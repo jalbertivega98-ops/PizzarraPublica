@@ -280,7 +280,7 @@ ICONS = {
 
 
 # ---------------------------------------------------------------- elementos
-UNIVERSO = ("personaje", "edificio", "objeto", "rotulo")
+UNIVERSO = ("personaje", "edificio", "objeto", "rotulo", "efecto")
 
 
 class Element:

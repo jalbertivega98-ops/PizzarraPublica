@@ -304,13 +304,9 @@ def nube(c, t=0.0, s=1.0, **kw):
     p = skia.Path()
     for dx, dy, r in ((-100, 10, 55), (-40, -30, 75), (40, -40, 70), (105, 5, 55), (0, 20, 60)):
         p.addOval(skia.Rect(dx - r, dy - r, dx + r, dy + r))
-    p = skia.Op(p, rrect(-150, 0, 150, 60, 30), skia.PathOp.kUnion) or p
-    for q in (p,):
-        q.setFillType(skia.PathFillType.kWinding)
-    c.drawPath(p, relleno("tinta"))
-    c.save(); c.scale(0.97, 0.95)
+    p.addRRect(skia.RRect.MakeRectXY(skia.Rect(-150, 0, 150, 60), 30, 30))
+    c.drawPath(p, trazo(10))
     c.drawPath(p, relleno("blanco"))
-    c.restore()
 
 
 def sol(c, t=0.0, cara="ilusionado", **kw):

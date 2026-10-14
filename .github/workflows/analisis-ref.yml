@@ -13,19 +13,25 @@ jobs:
       - name: Herramientas
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg imagemagick >/dev/null
-          pip install -q -U yt-dlp pytubefix
+          pip install -q -U "yt-dlp[default]" pytubefix bgutil-ytdlp-pot-provider
+          curl -fsSL https://deno.land/install.sh | sh -s -- -y >/dev/null 2>&1 || true
+          echo "$HOME/.deno/bin" >> $GITHUB_PATH
+          docker run -d --name bgutil -p 4416:4416 --init brainicism/bgutil-ytdlp-pot-provider
+          sleep 8
       - name: Descargar
+        continue-on-error: true
         run: |
           mkdir -p analisis tmp
           URL="https://www.youtube.com/watch?v=bWZHWv0aMSI"
-          for c in default web_safari tv mweb ios android; do
+          for c in default mweb web_safari tv web_embedded android_vr; do
             yt-dlp --extractor-args "youtube:player_client=$c" -f "bv*[height<=480]+ba/b[height<=480]/b" \
               --write-info-json --write-auto-subs --write-subs --sub-langs "es.*" --sub-format json3/vtt \
               -o "tmp/ref.%(ext)s" "$URL" > analisis/ytdlp_$c.log 2>&1 && break
           done
           ls -la tmp
           if ! ls tmp/ref.*mp4 tmp/ref.*mkv tmp/ref.*webm >/dev/null 2>&1; then
-            python3 - <<'PY'
+            tail -5 analisis/ytdlp_*.log || true
+            python3 - <<'PY' || true
           from pytubefix import YouTube
           y = YouTube("https://www.youtube.com/watch?v=bWZHWv0aMSI", "WEB")
           s = y.streams.filter(progressive=True).order_by("resolution").desc().first()
@@ -36,7 +42,9 @@ jobs:
           PY
           fi
           ls -la tmp
+          tail -3 analisis/ytdlp_*.log
       - name: Analizar
+        continue-on-error: true
         run: |
           V=$(ls tmp/ref.mp4 tmp/ref.mkv tmp/ref.webm 2>/dev/null | head -1)
           cp tmp/*.json3 tmp/*.vtt tmp/*.srt analisis/ 2>/dev/null || true
@@ -60,6 +68,7 @@ jobs:
           montage tmp/i_*.jpg -tile 6x10 -geometry +2+2 analisis/hojas/inicio_4fps.jpg
           ffmpeg -i "$V" -vn -ac 1 -ar 16000 -b:a 32k analisis/audio.mp3 -y 2>/dev/null
       - name: Guardar
+        if: always()
         run: |
           git add analisis
           git config user.name "github-actions[bot]"

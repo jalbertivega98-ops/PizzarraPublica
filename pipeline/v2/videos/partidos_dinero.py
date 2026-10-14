@@ -23,7 +23,7 @@ VIDEO = {
     "voz": "elevenlabs:Pizarra Pública",
     "claves": ["104", "4", "lotería", "Hungría", "84", "cuotas"],
     "musica": {"bpm": 120, "tono": 0, "seed": 111},
-    "portada": {"t": 2.4, "titulo": "AUNQUE NO LES VOTES,\nLES PAGAS"},
+    "portada": {"t": 5.6, "titulo": "AUNQUE NO LES VOTES,\nLES PAGAS"},
     "duro": True,
     "planos": [
         # GANCHO

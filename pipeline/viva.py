@@ -100,6 +100,8 @@ class Camara:
             for t0, d, f in e.fx:
                 if t0 <= t < t0 + d + 0.4 and f["do"] != "borrar":
                     activo = True
+            if e.kind in wb.UNIVERSO and any(ch["t"] <= t < ch["t"] + 0.6 for ch in e.cambios if "x" in ch or "salta" in ch):
+                activo = True
             if activo and (best is None or e.t0 >= best.t0):
                 best = e
         return best
@@ -240,7 +242,8 @@ def draw_subtitle(c, chunks, t, color="red", y=1505):
 
 
 # ------------------------------------------------------------------ sonido
-SFX_VOL = {"pop": 0.22, "impacto": 0.55, "sello": 0.5, "whoosh": 0.35, "contador": 0.25, "borrador": 0.3, "ding": 0.25}
+SFX_VOL = {"pop": 0.22, "impacto": 0.55, "sello": 0.5, "whoosh": 0.35, "contador": 0.25, "borrador": 0.3, "ding": 0.25,
+           "boing": 0.3, "error": 0.35, "caja": 0.4, "subida": 0.3, "glitch": 0.25, "tick": 0.2}
 
 
 def borrador_snd(d=0.35, seed=0):
@@ -268,7 +271,26 @@ def eventos_sonido(story, scenes, elements):
                 ev.append((e.t0, "contador", {"d": e.dur}))
             elif k in ("icon", "tu", "cara", "check", "cross", "circle"):
                 ev.append((e.t0, "pop", {"pitch": 0.9 + 0.25 * (len(ev) % 3)}))
-            for ch in getattr(e, "cambios", []):
+            elif k in wb.UNIVERSO:  # mundo cartoon: entradas, saltos y efectos pedidos
+                entra = e.spec.get("entra", "crece" if k == "edificio" else "pop")
+                if entra in ("izq", "der", "abajo"):
+                    ev.append((e.t0, "whoosh", {}))
+                elif entra == "cae":
+                    ev.append((e.t0 + e.dur * 0.7, "impacto", {}))
+                elif entra != "nada":
+                    ev.append((e.t0, "pop", {"pitch": 0.8 if k == "edificio" else 1.0 + 0.2 * (len(ev) % 3)}))
+                if e.spec.get("sfx"):
+                    ev.append((e.t0, e.spec["sfx"], {}))
+                for ch in e.cambios:
+                    if ch.get("sfx"):
+                        ev.append((ch["t"], ch["sfx"], {}))
+                    elif ch.get("salta"):
+                        ev.append((ch["t"], "boing", {}))
+                    elif ch.get("sale") in ("izq", "der"):
+                        ev.append((ch["t"], "whoosh", {}))
+                    elif "cara" in ch or "pose" in ch or "objeto" in ch or "props" in ch or "caras_dentro" in ch:
+                        ev.append((ch["t"], "pop", {"pitch": 1.4}))
+            for ch in ([] if k in wb.UNIVERSO else getattr(e, "cambios", [])):
                 ev.append((ch["t"], "pop", {"pitch": 1.4}))
             for t0, d, f in e.fx:
                 if f["do"] == "borrar":
@@ -295,6 +317,8 @@ def pista_efectos(total, ev, sr):
             x = sonido.contador(min(kw.get("d", 1.0), 2.0))
         elif nombre == "borrador":
             x = borrador_snd(kw.get("d", 0.35))
+        elif nombre in sonido.EFECTOS:
+            x = sonido.efecto(nombre)
         else:
             continue
         a = int(max(0, t) * sr)

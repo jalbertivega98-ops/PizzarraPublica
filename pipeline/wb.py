@@ -280,6 +280,9 @@ ICONS = {
 
 
 # ---------------------------------------------------------------- elementos
+UNIVERSO = ("personaje", "edificio", "objeto", "rotulo")
+
+
 class Element:
     """Un elemento del storyboard con su ventana de tiempo dentro de la escena."""
 
@@ -288,6 +291,9 @@ class Element:
         self.kind = spec["type"]
         self.t0 = t0
         self.dur = float(spec.get("dur", 0.8))
+        if self.kind in UNIVERSO:  # pizarras-personaje, edificios y objetos cartoon (universo/actor.py)
+            from universo import actor
+            self.dur = float(spec.get("dur", actor.DUR_ENTRA[self.kind] if spec.get("entra") != "nada" else 0.0))
         self.out = spec.get("out_t")
         self.strokes, self.fills = [], []
         self.compile(rng)
@@ -468,6 +474,9 @@ class Element:
 
     def bbox(self):
         """Caja aproximada (x0, y0, x1, y1) del elemento, para la cámara y los efectos."""
+        if self.kind in UNIVERSO:
+            from universo import actor
+            return actor.bbox(self)
         if getattr(self, "_bbox", None):
             return self._bbox
         s, k = self.spec, self.kind
@@ -509,6 +518,9 @@ class Element:
         return self._bbox
 
     def _draw(self, c, t):
+        if self.kind in UNIVERSO:
+            from universo import actor
+            return actor.dibujar(self, c, t, self.alpha_mult(t))
         p = self.progress(t)
         am = self.alpha_mult(t)
         if p <= 0 or am <= 0:

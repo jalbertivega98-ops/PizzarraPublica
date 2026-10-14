@@ -24,6 +24,8 @@ import music  # noqa: E402
 import viva  # noqa: E402
 import wb  # noqa: E402
 from wb import H, W  # noqa: E402
+from universo import actor as universo_actor  # noqa: E402
+from universo import fondos as universo_fondos  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FPS = 30
@@ -172,8 +174,11 @@ def build_elements(story, scenes):
             e = wb.Element(spec, t0, rng)
             # vida después de dibujarse: fx (tachar, rodear, borrar, latir, temblar, mover, golpe) y cambios de cara
             e.fx = [(resolve_at(f["at"], tl, t0 + e.dur), f.get("dur", FX_DUR.get(f["do"], 0.35)), f) for f in spec.get("fx", [])]
-            e.cambios = sorted(({**ch, "t": resolve_at(ch["at"], tl, t0 + e.dur)} for ch in spec.get("caras", [])),
-                               key=lambda ch: ch["t"])
+            e.cambios = sorted(({**ch, "t": resolve_at(ch["at"], tl, t0 + e.dur)}
+                                for ch in spec.get("caras", []) + spec.get("acciones", [])), key=lambda ch: ch["t"])
+            if e.kind in wb.UNIVERSO:  # personajes del universo: palabras de la escena para mover la boca
+                e.palabras = [(a, b) for ln in tl["lines"] for _, a, b in ln.get("words", [])]
+                universo_actor.preparar(e)
             els.append(e)
             prev_end = t0 + e.dur
         per_scene.append(els)
@@ -270,12 +275,21 @@ def draw_chrome(c, story, scene_spec, t, total):
     handle = story.get("handle")
     if handle:
         f = wb.font("ui", 32)
-        c.drawString(handle, W / 2 - f.measureText(handle) / 2, 1650, f, skia.Paint(Color=wb.rgb("gray"), AntiAlias=True))
+        hx = W / 2 - f.measureText(handle) / 2
+        if scene_spec.get("fondo", story.get("fondo")):
+            c.drawRRect(skia.RRect.MakeRectXY(skia.Rect(hx - 18, 1618, hx + f.measureText(handle) + 18, 1662), 20, 20),
+                        skia.Paint(Color=skia.Color(255, 255, 255, 225), AntiAlias=True))
+        c.drawString(handle, hx, 1650, f, skia.Paint(Color=wb.rgb("gray"), AntiAlias=True))
     note = scene_spec.get("footnote")
     if note:
         f = wb.font("ui", 27)
+        fondo = scene_spec.get("fondo", story.get("fondo"))
         for i, ln in enumerate(note.split("\n")):
-            c.drawString(ln, W / 2 - f.measureText(ln) / 2, 1395 + i * 36, f, skia.Paint(Color=wb.rgb("gray"), AntiAlias=True))
+            x, y = W / 2 - f.measureText(ln) / 2, (1590 if fondo else 1395) + i * 36
+            if fondo:  # sobre un fondo de color, la fuente va en una pastilla blanca
+                c.drawRRect(skia.RRect.MakeRectXY(skia.Rect(x - 16, y - 27, x + f.measureText(ln) + 16, y + 9), 14, 14),
+                            skia.Paint(Color=skia.Color(255, 255, 255, 225), AntiAlias=True))
+            c.drawString(ln, x, y, f, skia.Paint(Color=wb.rgb("gray" if not fondo else "ink"), AntiAlias=True))
 
 
 def render(story, scenes, elements, chunks, total, out_video_noaudio, preview=False):
@@ -307,10 +321,13 @@ def render(story, scenes, elements, chunks, total, out_video_noaudio, preview=Fa
         c.clear(wb.rgb("paper"))
         c.drawImage(paper, 0, 0)
         c.save()
+        fondo = spec.get("fondo", story.get("fondo"))
         if vv:  # cámara viva: sigue al trazo, golpes de zoom
             if si != cam_scene:
                 cam, cam_scene = viva.Camara(), si
             viva.Camara.aplicar(c, *cam.update(t, elements[si]))
+            if fondo:  # mundo cartoon: el fondo se mueve con la cámara
+                universo_fondos.dibuja(c, fondo, t)
         else:  # cámara: zoom lento por escena
             z = 1 + spec.get("zoom", 0.035) * wb.ease((t - sc["start"]) / max(0.1, sc["end"] - sc["start"]))
             c.translate(W / 2, 820)
@@ -363,7 +380,7 @@ def drawing_intervals(elements):
     iv = []
     for els in elements:
         for e in els:
-            if e.kind in ("counter",) or e.dur < 0.15:
+            if e.kind in ("counter",) + wb.UNIVERSO or e.dur < 0.15:
                 continue
             iv.append((max(0.0, e.t0), max(0.0, e.t0 + e.dur)))
     return iv

@@ -138,8 +138,8 @@
      "from": 0,
      "to": 176,
      "x": 540,
-     "y": 900,
-     "size": 130,
+     "y": 905,
+     "size": 105,
      "color": "pp",
      "at": "L0@0.25",
      "dur": 1.2
@@ -223,18 +223,6 @@
      ],
      "at": "L0@0.2",
      "dur": 1.4
-    },
-    {
-     "type": "text",
-     "text": "2023: 137 · Encuestas de octubre: 134 de media",
-     "x": 540,
-     "y": 1290,
-     "size": 45,
-     "color": "ink",
-     "at": "L0@0.75",
-     "dur": 0.5,
-     "font": "body",
-     "align": "center"
     }
    ]
   },
@@ -316,7 +304,7 @@
      "text": "NO LLEGA",
      "sub": "la más alta: 147",
      "x": 540,
-     "y": 1260,
+     "y": 1225,
      "w": 560,
      "h": 140,
      "size": 56,
@@ -506,7 +494,7 @@
      "text": "172 SÍ · 178 NO",
      "sub": "investidura · 27/09/2023",
      "x": 540,
-     "y": 1260,
+     "y": 1225,
      "w": 600,
      "h": 140,
      "size": 56,
@@ -609,7 +597,7 @@
      "text": "PROMESA",
      "sub": "aún sin programa del 29N",
      "x": 540,
-     "y": 1260,
+     "y": 1225,
      "w": 520,
      "h": 140,
      "size": 58,

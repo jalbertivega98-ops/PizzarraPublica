@@ -48,7 +48,7 @@ def sc_regla(p):
                 footnote="Constitución, art. 99", elements=[
         dict(type="hemicycle", x=540, y=930, r_in=150, r_out=380, rows=9, dot=10, count=350, highlight=176, hl_color=p["color"],
              at="L0", dur=1.6),
-        dict(type="counter", **{"from": 0}, to=176, x=540, y=900, size=130, color=p["color"], at="L0@0.25", dur=1.2),
+        dict(type="counter", **{"from": 0}, to=176, x=540, y=905, size=105, color=p["color"], at="L0@0.25", dur=1.2),
         T("de 350", 540, 990, 60, font="body", color="gray", at="+0.05", dur=0.3),
         dict(type="highlight", x0=200, x1=880, y=1150, width=72, at="L0@0.7", dur=0.35),
         T("ganar ≠ gobernar", 540, 1170, 80, at="+0", dur=0.5),
@@ -62,7 +62,6 @@ def sc_hoy(p):
         dict(type="bars", x=300, y=1180, h=520, bar_w=170, gap=130, max=145,
              bars=[{"label": "2023", "value": h["antes"], "color": "gray"},
                    {"label": "ENCUESTAS", "value": h["hoy"], "color": p["color"]}], at="L0@0.2", dur=1.4),
-        T(h["key"], 540, 1290, fit(h["key"], 60, 960), font="body", at="L0@0.75", dur=0.5),
     ])
 
 
@@ -74,7 +73,7 @@ def sc_camino(p):
         T("176", 140 + 800 * 176 / 230, 610, 52, font="body", at="L0@0.3", dur=0.3),
         T(str(c["value"]), 540, 930, 170, color=p["color"], at="L0@0.45", dur=0.5),
         T(c["key"], 540, 1080, fit(c["key"], 74, 960), at="L0@0.6", dur=0.5),
-        *([stamp(c["stamp"], c["sub"], "L0@0.8", y=1260, w=560, h=140, size=56)] if c.get("stamp") else []),
+        *([stamp(c["stamp"], c["sub"], "L0@0.8", y=1225, w=560, h=140, size=56)] if c.get("stamp") else []),
     ])
 
 
@@ -99,7 +98,7 @@ def sc_precedente(p):
         T("¡OJO!", 540, 540, 140, at="+0", dur=0.35),
         T(r["year"], 540, 760, 150, color="gray", at="L0@0.15", dur=0.5),
         *key_lines(r["key"], "L0@0.35", y0=930),
-        stamp(r["stamp"], r["sub"], "L0@0.8", y=1260, w=600, h=140, size=56),
+        stamp(r["stamp"], r["sub"], "L0@0.8", y=1225, w=600, h=140, size=56),
     ])
 
 
@@ -111,7 +110,7 @@ def sc_promesas(p):
         els += [dict(type="check", x=150, y=y - 25, r=40, color=p["color"], width=12, at=f"L0@{0.2 + 0.25 * i:.2f}", dur=0.3),
                 T(txt, 230, y, fit(txt, 64, 810), align="left", at="+0.05", dur=0.5)]
         y += 180
-    els.append(stamp("PROMESA", m["sub"], "L0@0.85", y=1260, w=520, h=140, size=58))
+    els.append(stamp("PROMESA", m["sub"], "L0@0.85", y=1225, w=520, h=140, size=58))
     return dict(id="promesas", lines=[m["line"]], footnote=m["foot"], elements=els)
 
 

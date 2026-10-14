@@ -69,7 +69,14 @@ En reposo los personajes respiran y se balancean. Edificios y objetos aceptan `"
 4. `--ritmo` con la voz real: ningún hueco de más de 2,5 s; si lo hay, se rellena con una reacción que signifique algo.
 5. Render final y revisión de fotogramas y volúmenes.
 
-## 8. Limitaciones reales
+## 8. Portada estándar (todas iguales)
+
+Fotograma del momento más visual arriba y franja oscura fija abajo con la pastilla roja «CAPÍTULO N», el título en dos líneas
+amarillas y @pizarrapublica (dentro del recorte 4:5 de Instagram). En el storyboard:
+`"portada": {"t": <segundo del fotograma>, "titulo": "...", "capitulo": N}`. `make_video.py` la crea sola al terminar
+(`videos/<slug>/portada_<slug>.png`); para rehacerla sin renderizar: `python3 portada.py storyboards/<slug>.json`.
+
+## 9. Limitaciones reales
 
 - Animación procedural (marionetas vectoriales con brazos de manguera, estirar y aplastar), no dibujo fotograma a fotograma.
 - El giro de tres cuartos desplaza la cara; no hay perfil dibujado de verdad.

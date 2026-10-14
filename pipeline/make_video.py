@@ -514,6 +514,9 @@ def main():
         subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", final, "-vf", "fps=2,scale=216:-2,tile=10x8", "-frames:v", "1",
                         "-q:v", "4", hoja], check=True)
         print("Hoja:", hoja)
+    if story.get("portada"):
+        import portada
+        print("Portada:", portada.desde_storyboard(story, outdir))
     print("Listo:", final)
 
 

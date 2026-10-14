@@ -1354,5 +1354,10 @@
   }
  ],
  "banda": true,
- "sfx_volume": 1.0
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 7.97,
+  "titulo": "Piz y la casa imposible",
+  "capitulo": 1
+ }
 }

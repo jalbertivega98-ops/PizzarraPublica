@@ -209,6 +209,7 @@ SB = dict(base.SB)
 SB.update(
     slug="compra2026_serie", title="Piz y la casa imposible", scenes=scenes, banda=True,
     music_volume=0.2, scribble_volume=0.0, sfx_volume=1.0, end_hold=0.9,
+    portada={"t": 7.97, "titulo": "Piz y la casa imposible", "capitulo": 1},
     caption=("🏠 Piz tiene trabajo fijo y 5 años ahorrando. El banco le dice que no.\n"
              "💶 Piso medio: 223.000 € · entrada + impuestos: 66.900 € (hasta 22.300 € de ITP)\n"
              "🏃 La casa corre más que él: +12,5 % en un año\n"

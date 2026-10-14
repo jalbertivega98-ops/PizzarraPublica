@@ -203,9 +203,9 @@
     {
      "type": "objeto",
      "objeto": "movil",
-     "x": 540,
-     "y": 660,
-     "scale": 0.8,
+     "x": 300,
+     "y": 560,
+     "scale": 0.7,
      "at": "@llama-0.3",
      "props": {
       "pantalla": "llamada",
@@ -241,8 +241,8 @@
     {
      "type": "objeto",
      "objeto": "bocadillo",
-     "x": 700,
-     "y": 330,
+     "x": 760,
+     "y": 500,
      "scale": 0.8,
      "at": "@transferencias",
      "props": {
@@ -266,7 +266,7 @@
    "fondo": "salon",
    "animo": "tension",
    "trans": "corte",
-   "footnote": "Guardia Civil de Albacete, operación Corduro (08/10/2026) · códigos de ejemplo",
+   "footnote": "Guardia Civil de Albacete (08/10/2026) · códigos de ejemplo",
    "lines": [
     {
      "text": "Para cancelarlas, le llegan SMS con códigos… y se los pide.",
@@ -388,9 +388,9 @@
     {
      "type": "objeto",
      "objeto": "bocadillo",
-     "x": 300,
-     "y": 900,
-     "scale": 0.75,
+     "x": 230,
+     "y": 450,
+     "scale": 0.65,
      "at": "@Uno",
      "props": {
       "texto": "4… 8… 2…",

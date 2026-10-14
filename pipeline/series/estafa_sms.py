@@ -69,15 +69,15 @@ scenes = [
             {"at": "@llama", "cara": "sorpresa", "mira": "movil"},
             {"at": "@banco", "cara": "preocupado", "mira": "banquero"},
             {"at": "@sospechosas", "take": True, "cara": "susto"}]),
-        movil(540, 660, "@llama-0.3", "llamada", 0.8, remite="TU BANCO", suena=True, entra="pop", sfx="sorpresa",
+        movil(300, 560, "@llama-0.3", "llamada", 0.7, remite="TU BANCO", suena=True, entra="pop", sfx="sorpresa",
               out="@transferencias"),
         pj("banquero", 830, "@transferencias-0.3", 0.8, "serio", id="banquero", entra="der", pose="senala",
            acciones=[{"at": "@sospechosas", "cara": "preocupado", "pose": "manos_juntas"}]),
-        obj("bocadillo", 700, 330, "@transferencias", 0.8, props={"lineas": ["¡Transferencias", "sospechosas!"], "cola": [1, 1]},
+        obj("bocadillo", 760, 500, "@transferencias", 0.8, props={"lineas": ["¡Transferencias", "sospechosas!"], "cola": [1, 1]},
             hud=True, out="@cuenta+0.6"),
     ]),
     # 3 · LOS CÓDIGOS: «para cancelarlas, dímelos»
-    dict(id="codigos", fondo="salon", animo="tension", trans="corte", footnote=FUENTE + " · códigos de ejemplo", lines=[
+    dict(id="codigos", fondo="salon", animo="tension", trans="corte", footnote="Guardia Civil de Albacete (08/10/2026) · códigos de ejemplo", lines=[
         V("Para cancelarlas, le llegan SMS con códigos… y se los pide.", "normal"),
         V("Uno. Otro. Y otro.", "intriga", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@Uno", "medio", "pizon", 0.3, aire=220)],
@@ -91,7 +91,7 @@ scenes = [
         movil(540, 600, "@SMS-0.2", "codigo", 0.85, remite="BANCO", codigo="482719", entra="pop", sfx="calculadora",
               acciones=[{"at": "@Otro", "props": {"pantalla": "codigo", "remite": "BANCO", "codigo": "093561"}, "salta": True},
                         {"at": "@otro", "props": {"pantalla": "codigo", "remite": "BANCO", "codigo": "770248"}, "salta": True}]),
-        obj("bocadillo", 300, 900, "@Uno", 0.75, props={"texto": "4… 8… 2…", "cola": [-1, 1]}, hud=True, out="@Otro"),
+        obj("bocadillo", 230, 450, "@Uno", 0.65, props={"texto": "4… 8… 2…", "cola": [-1, 1]}, hud=True, out="@Otro"),
     ]),
     # 4 · GIRO: el banquero se quita el disfraz
     dict(id="giro", fondo="rayos", animo="comico", musica="corte", trans="iris", footnote=FUENTE, lines=[

@@ -7,70 +7,49 @@ permissions:
 jobs:
   analisis:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-      - name: Herramientas
-        run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg imagemagick >/dev/null
-          pip install -q -U "yt-dlp[default]" pytubefix bgutil-ytdlp-pot-provider
-          curl -fsSL https://deno.land/install.sh | sh -s -- -y >/dev/null 2>&1 || true
-          echo "$HOME/.deno/bin" >> $GITHUB_PATH
-          docker run -d --name bgutil -p 4416:4416 --init brainicism/bgutil-ytdlp-pot-provider
-          sleep 8
-      - name: Descargar
+      - name: Fotogramas y transcripción
         continue-on-error: true
         run: |
-          mkdir -p analisis tmp
-          URL="https://www.youtube.com/watch?v=bWZHWv0aMSI"
-          for c in default mweb web_safari tv web_embedded android_vr; do
-            yt-dlp --extractor-args "youtube:player_client=$c" -f "bv*[height<=480]+ba/b[height<=480]/b" \
-              --write-info-json --write-auto-subs --write-subs --sub-langs "es.*" --sub-format json3/vtt \
-              -o "tmp/ref.%(ext)s" "$URL" > analisis/ytdlp_$c.log 2>&1 && break
-          done
-          ls -la tmp
-          if ! ls tmp/ref.*mp4 tmp/ref.*mkv tmp/ref.*webm >/dev/null 2>&1; then
-            tail -5 analisis/ytdlp_*.log || true
-            python3 - <<'PY' || true
-          from pytubefix import YouTube
-          y = YouTube("https://www.youtube.com/watch?v=bWZHWv0aMSI", "WEB")
-          s = y.streams.filter(progressive=True).order_by("resolution").desc().first()
-          s.download("tmp", "ref.mp4")
-          for c in y.captions:
-              if c.code.startswith(("es","a.es")):
-                  open("tmp/ref.es.srt","w").write(c.generate_srt_captions())
-          PY
-          fi
-          ls -la tmp
-          tail -3 analisis/ytdlp_*.log
-      - name: Analizar
-        continue-on-error: true
-        run: |
-          V=$(ls tmp/ref.mp4 tmp/ref.mkv tmp/ref.webm 2>/dev/null | head -1)
-          cp tmp/*.json3 tmp/*.vtt tmp/*.srt analisis/ 2>/dev/null || true
-          python3 -c "import json;d=json.load(open('tmp/ref.info.json'));print(json.dumps({k:d.get(k) for k in ['title','channel','duration','view_count','like_count','upload_date','description','chapters']},ensure_ascii=False,indent=1))" > analisis/info.json || true
-          ffprobe -v error -show_entries format=duration -of csv=p=0 "$V" > analisis/duracion.txt
-          ffmpeg -i "$V" -vf "select='gt(scene,0.18)',showinfo" -an -f null - 2>&1 | grep -o "pts_time:[0-9.]*" | cut -d: -f2 > analisis/cortes.txt
-          ffmpeg -i "$V" -af silencedetect=noise=-35dB:d=0.25 -f null - 2>&1 | grep -E "silence_(start|end)" > analisis/silencios.txt
-          ffmpeg -i "$V" -vf "fps=1,scale=64:36,format=gray" -f rawvideo tmp/gray.raw -y 2>/dev/null
+          mkdir -p analisis/sb
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0 Safari/537.36"
+          curl -sL -A "$UA" -H "Accept-Language: es-ES,es" "https://www.youtube.com/watch?v=bWZHWv0aMSI&hl=es" -o tmp_watch.html
+          ls -la tmp_watch.html
+          for n in 1 2 3 maxresdefault; do curl -sfL "https://i.ytimg.com/vi/bWZHWv0aMSI/$n.jpg" -o analisis/thumb_$n.jpg || true; done
           python3 - <<'PY'
-          import numpy as np
-          a=np.fromfile("tmp/gray.raw",dtype=np.uint8).reshape(-1,36,64).astype(float)
-          d=np.abs(np.diff(a,axis=0)).mean(axis=(1,2))
-          open("analisis/movimiento_por_segundo.txt","w").write("\n".join(f"{i+1} {x:.2f}" for i,x in enumerate(d)))
+          import re, json, urllib.request
+          h = open("tmp_watch.html", encoding="utf-8", errors="ignore").read()
+          m = re.search(r'"playerStoryboardSpecRenderer":\{"spec":"([^"]+)"', h)
+          print("spec", bool(m))
+          L = re.search(r'"lengthSeconds":"(\d+)"', h); print("len", L and L.group(1))
+          open("analisis/len.txt","w").write(L.group(1) if L else "")
+          if m:
+              spec = m.group(1).encode().decode("unicode_escape")
+              open("analisis/spec.txt","w").write(spec)
+              parts = spec.split("|")
+              base = parts[0]
+              for li, lv in enumerate(parts[1:]):
+                  w,hh,count,cols,rows,interval,name,sigh = lv.split("#")
+                  print("nivel", li, w, hh, count, cols, rows, interval, name)
+              li = len(parts) - 2
+              w,hh,count,cols,rows,interval,name,sigh = parts[-1].split("#")
+              per = int(cols)*int(rows); n = (int(count)+per-1)//per
+              for i in range(n):
+                  url = base.replace("$L", str(li)).replace("$N", name.replace("$M", str(i))) + "&sigh=" + sigh
+                  try:
+                      open(f"analisis/sb/M{i:03d}.jpg","wb").write(urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent":"Mozilla/5.0"}), timeout=30).read())
+                  except Exception as e:
+                      print("sb", i, e)
+              json.dump({"w":w,"h":hh,"count":count,"cols":cols,"rows":rows,"interval_ms":interval}, open("analisis/sb/info.json","w"))
           PY
-          mkdir -p tmp/f analisis/hojas
-          ffmpeg -i "$V" -vf "fps=1,scale=320:-2,drawtext=text='%{pts\:hms}':x=4:y=4:fontsize=18:fontcolor=red:box=1" -q:v 4 tmp/f/%05d.jpg -y 2>/dev/null
-          cd tmp/f && ls *.jpg | split -l 30 - lote_ && for l in lote_*; do montage $(cat $l) -tile 6x5 -geometry +2+2 ../../analisis/hojas/$l.jpg; done
-          cd ../..
-          # tramo inicial a 4 fps
-          ffmpeg -i "$V" -t 15 -vf "fps=4,scale=320:-2,drawtext=text='%{pts\:hms}':x=4:y=4:fontsize=18:fontcolor=red:box=1" -q:v 4 tmp/i_%03d.jpg -y 2>/dev/null
-          montage tmp/i_*.jpg -tile 6x10 -geometry +2+2 analisis/hojas/inicio_4fps.jpg
-          ffmpeg -i "$V" -vn -ac 1 -ar 16000 -b:a 32k analisis/audio.mp3 -y 2>/dev/null
+          curl -sL -A "$UA" "https://youtubetotranscript.com/transcript?v=bWZHWv0aMSI&current_language_code=es" -o analisis/transcript.html || true
+          ls -la analisis analisis/sb | head -60
       - name: Guardar
         if: always()
         run: |
           git add analisis
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "analisis referencia" && git push
+          git commit -m "analisis referencia 2" && git push

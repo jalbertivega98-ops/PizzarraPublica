@@ -182,7 +182,7 @@ def mezcla(tipo, prev, cur, k):
         wb.draw_eraser(c, x - 60, 300 + (H - 700) * ((e * 5) % 1))
     elif tipo == "barrido":
         e = wb.ease(k)
-        blur = 60 * math.sin(math.pi * k)
+        blur = 22 * math.sin(math.pi * k)
         p = skia.Paint(ImageFilter=skia.ImageFilters.Blur(blur, 0.1)) if blur > 1 else skia.Paint()
         c.clear(wb.rgb("paper"))
         c.drawImage(pi, -W * e, 0, skia.SamplingOptions(), p)

@@ -53,13 +53,35 @@
    ],
    "elements": [
     {
+     "type": "tu",
+     "x": 820,
+     "y": 930,
+     "scale": 1.45,
+     "at": 0,
+     "dur": 0.7,
+     "caras": [
+      {
+       "at": "@1.176",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@15",
+       "cara": "susto"
+      },
+      {
+       "at": "@síguenos",
+       "cara": "normal"
+      }
+     ]
+    },
+    {
      "type": "text",
      "text": "SUELDO",
      "x": 290,
      "y": 500,
      "size": 74,
      "color": "ink",
-     "at": 0,
+     "at": 0.1,
      "dur": 0.3,
      "font": "hand",
      "align": "center"
@@ -76,28 +98,6 @@
      "font": "hand",
      "align": "center",
      "golpe": true
-    },
-    {
-     "type": "tu",
-     "x": 820,
-     "y": 930,
-     "scale": 1.45,
-     "at": 0.3,
-     "dur": 0.7,
-     "caras": [
-      {
-       "at": "@1.176",
-       "cara": "sorpresa"
-      },
-      {
-       "at": "@15",
-       "cara": "susto"
-      },
-      {
-       "at": "@síguenos",
-       "cara": "normal"
-      }
-     ]
     },
     {
      "type": "text",
@@ -406,8 +406,8 @@
     {
      "type": "tu",
      "x": 540,
-     "y": 860,
-     "scale": 1.5,
+     "y": 800,
+     "scale": 1.4,
      "cara": "duda",
      "at": 0.05,
      "dur": 0.5

@@ -324,20 +324,26 @@ def render(story, scenes, elements, chunks, total, out_video_noaudio, preview=Fa
         if tip is not None:
             wb.draw_marker(c, tip, tip_col if tip_col in wb.PALETTE else "ink")
         c.restore()
-        draw_chrome(c, story, spec, t, total)
-        if vv:
+        if vv:  # la transición mueve solo la pizarra; barra, etiqueta y subtítulos quedan encima
+            board = surface.makeImageSnapshot().toarray(colorType=skia.kRGBA_8888_ColorType)
+            tipo = viva.transicion_de(story, si) if si else None
+            dtr = viva.DUR_TRANS.get(tipo, TRANSITION)
+            if prev_last is not None and local < dtr:
+                c.drawImage(skia.Image.fromarray(viva.mezcla(tipo, prev_last, board, local / dtr),
+                                                 colorType=skia.kRGBA_8888_ColorType), 0, 0)
+            else:
+                last_frame = board
+            draw_chrome(c, story, spec, t, total)
             viva.draw_subtitle(c, chunks, t, story.get("accent", "red"))
-        else:
-            draw_subtitle(c, chunks, t)
+            proc.stdin.write(surface.makeImageSnapshot().toarray(colorType=skia.kRGBA_8888_ColorType).tobytes())
+            if fi % (FPS * 5) == 0:
+                print(f"  fotograma {fi}/{nframes}", flush=True)
+            continue
+        draw_chrome(c, story, spec, t, total)
+        draw_subtitle(c, chunks, t)
         frame = surface.makeImageSnapshot().toarray(colorType=skia.kRGBA_8888_ColorType)
-        tipo = viva.transicion_de(story, si) if vv and si else None
-        dtr = viva.DUR_TRANS.get(tipo, TRANSITION)
-        if vv and prev_last is not None and local < dtr:
-            frame = viva.mezcla(tipo, prev_last, frame, local / dtr)
-        elif vv:
-            last_frame = frame
         # transición: el papel nuevo entra desde la derecha
-        elif prev_last is not None and local < TRANSITION:
+        if prev_last is not None and local < TRANSITION:
             k = wb.ease(local / TRANSITION)
             off = int(W * (1 - k))
             shown = frame.copy()

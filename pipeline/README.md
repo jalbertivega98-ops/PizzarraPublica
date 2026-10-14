@@ -32,6 +32,25 @@ Cada escena tiene `lines` (frases de narración; cada una se sintetiza por separ
 - Colores: `ink`, `blue`, `red`, `yellow`, `green`, `gray`, `light`. Por neutralidad, los personajes políticos genéricos van en gris con corbata amarilla, nunca con colores de partido.
 - Lienzo de 1080×1920. Zona útil para dibujos: y≈380–1380. Los subtítulos van en y≈1520 y la nota de fuente en y≈1395.
 
+## Estilo «viva» (por defecto en todos los vídeos nuevos desde el 14/10/2026)
+
+Estándar completo: [`../docs/enganche.md`](../docs/enganche.md). Ejemplo: `series/padres_viva.py`.
+Se activa con `"estilo": "viva"` en el storyboard; los storyboards antiguos se renderizan igual que antes.
+
+- **Frases** como `{"text": "...", "tono": "intriga|sorpresa|energia|remate|normal", "pausa": 0.5}`. La voz de ElevenLabs
+  se genera con esos ajustes y con el tiempo de cada palabra (`voces_elevenlabs/<clave>.json`).
+- **Anclas por palabra**: `"at": "@15,6"`, `"@euros#2"` (2.ª vez que se dice), `"@casa+0.2"`.
+- **`fx`** en cualquier elemento: `[{"at": "@hoy", "do": "borrar"}]`; `do` = `tachar`, `rodear`, `subrayar`, `borrar`,
+  `latir`, `temblar`, `mover` (con `x`, `y`, `scale`), `golpe`. `"golpe": true` en un elemento = aparece con impacto, zoom y sonido.
+- **Personaje** `{"type": "tu", "x", "y", "scale", "etiqueta": "TÚ", "cara": "normal", "caras": [{"at": "@15", "cara": "susto"}]}`.
+  Caras: `normal`, `sorpresa`, `susto`, `enfado`, `duda`, `risa`, `triste`, `vacio`. Los brazos acompañan a la cara.
+  `{"type": "cara", ...}` pone ojos y boca a cualquier dibujo (una casa que se ríe).
+- **Escena**: `"trans": "borrador|barrido|zoom|papel|corte"` (si no, rotan) y `"musica": "corte"` (silencio antes del giro).
+- **Revisión**: `--maqueta` (sin voz, para montar antes de gastar ElevenLabs), `--ritmo` (solo el informe),
+  `--hoja` (hoja de contactos). Cada render escribe `<slug>_ritmo.txt` con los avisos.
+
+Voz: acción «Voces ElevenLabs» (`voces.yml`) en la rama, con `storyboards=storyboards/<slug>.json` y `motor=elevenlabs`.
+
 ## Limitaciones conocidas
 
 - Los subtítulos se sincronizan exactamente por frase. Dentro de cada frase, el tiempo de cada palabra se estima por su número de letras.

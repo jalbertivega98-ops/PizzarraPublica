@@ -41,7 +41,7 @@ fotogramas sueltos. Lo que lo hace adictivo no es el dibujo «bonito», es cómo
 | **Giro** | 25-35 s | La contradicción o la consecuencia poco conocida. Silencio de 0,4-0,6 s antes. |
 | **Final** | últimos 4-6 s | Dato que remata o pregunta A/B para comentar + «síguenos». Si es posible, que enlace con la primera frase (bucle). |
 
-- Duración objetivo: **30-45 s**. Escenas de **≤ 5 s**. Frases de **≤ 14 palabras**.
+- Duración objetivo: **25-45 s**. Una pizarra (escena) dura **≤ 9 s** y dentro pasa algo cada ≤ 2,5 s. Frases de **≤ 14 palabras**.
 - Cada cifra: fuente en pantalla (nota pequeña) y en el comentario fijado. Nunca redondear para exagerar.
 - Lado menos conocido: buscar la **consecuencia** (quién paga, cuánto tarda, qué no se cuenta), no la definición.
 
@@ -66,11 +66,17 @@ fotogramas sueltos. Lo que lo hace adictivo no es el dibujo «bonito», es cómo
 - **Corte de música** en el giro (`"musica": "corte"`) y vuelta en el dato.
 - La música baja sola bajo la voz (como antes).
 
-## 7. Control de calidad automático (`_ritmo.txt`)
+## 7. Cómo se hace un vídeo nuevo
+
+1. Copiar `pipeline/series/padres_viva.py` (estructura y ayudas `V()`, `T()`, `stamp()`), escribir guion y dibujos.
+2. `python3 series/<serie>.py` → `python3 make_video.py storyboards/<slug>.json --maqueta --ritmo` hasta que no haya avisos.
+3. Voz: acción «Voces ElevenLabs» en la rama. Render final con `--hoja`, revisar la hoja y entregar el enlace raw de `videos/`.
+
+## 8. Control de calidad automático (`_ritmo.txt`)
 
 El motor avisa si:
 - el fotograma 0 está vacío o la primera palabra llega después de 0,4 s;
 - hay más de **2,5 s** sin ningún cambio visual;
-- una escena dura más de 6 s;
+- una escena dura más de 9 s;
 - el vídeo pasa de 60 s;
 - la última escena no tiene pregunta ni «síguenos».

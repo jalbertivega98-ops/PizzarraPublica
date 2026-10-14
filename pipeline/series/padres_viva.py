@@ -42,10 +42,10 @@ scenes = [
         V("Te sobran 15 euros.", "remate", 0.25),
         V("Síguenos, que esto va contigo."),
     ], elements=[
-        T("SUELDO", 290, 500, 74, at=0, dur=0.3),
-        T("1.191 €", 290, 650, 150, color="green", at="@1.191", dur=0.35, golpe=True),
-        dict(type="tu", x=820, y=930, scale=1.45, at=0.3, dur=0.7,
+        dict(type="tu", x=820, y=930, scale=1.45, at=0, dur=0.7,
              caras=[{"at": "@1.176", "cara": "sorpresa"}, {"at": "@15", "cara": "susto"}, {"at": "@síguenos", "cara": "normal"}]),
+        T("SUELDO", 290, 500, 74, at=0.1, dur=0.3),
+        T("1.191 €", 290, 650, 150, color="green", at="@1.191", dur=0.35, golpe=True),
         T("ALQUILER", 290, 830, 74, at="@alquiler", dur=0.3),
         T("− 1.176 €", 290, 980, 140, color=C, at="@1.176", dur=0.35, golpe=True),
         dict(type="line", pts=[(60, 1045), (540, 1050)], width=8, at="@sobran", dur=0.2),
@@ -89,7 +89,7 @@ scenes = [
         V("¿Y tú dónde vives? A: de alquiler. B: con tus padres.", "energia"),
         V("Comenta, y síguenos para el siguiente."),
     ], elements=[
-        dict(type="tu", x=540, y=860, scale=1.5, cara="duda", at=0.05, dur=0.5),
+        dict(type="tu", x=540, y=800, scale=1.4, cara="duda", at=0.05, dur=0.5),
         T("A: DE ALQUILER", 540, 1140, 92, at="@a", dur=0.3, fx=[{"at": "@b", "do": "latir"}]),
         T("B: CON MIS PADRES", 540, 1260, 92, color=C, at="@b", dur=0.3, fx=[{"at": "@comenta", "do": "latir"}]),
         stamp("SÍGUENOS", "@pizarrapublica", "@síguenos", y=1370, w=480, h=120, size=56)

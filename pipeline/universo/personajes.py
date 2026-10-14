@@ -45,6 +45,8 @@ PERSONAJES = {
                            acento="azul", gafas="cuadradas", corbata="azul", garabatos=("lineas",), zapatilla="negro"),
     "hacienda": dict(nombre="Pizarra de Hacienda", papel="Cobra impuestos", cara="normal", marco="marco_oscuro",
                      acento="amarillo", corbata="rojo", visera=True, garabatos=("porcentaje",), zapatilla="negro"),
+    "estafador": dict(nombre="El estafador", papel="Se hace pasar por tu banco", cara="burla", marco="marco_oscuro",
+                      acento="gris", antifaz=True, corbata="tinta", garabatos=("euro",), zapatilla="negro"),
 }
 
 # ------------------------------------------------------------------ expresiones
@@ -404,6 +406,15 @@ def accesorios_cara(c, ficha):
             p = suave([(x - 50, OJOS_Y - 20), (x + 50, OJOS_Y - 24), (x + 44, OJOS_Y + 20), (x - 40, OJOS_Y + 24)])
             pieza(c, p, "tinta", 5, brillo=suave([(x - 30, OJOS_Y - 8), (x - 10, OJOS_Y - 12)], close=False))
         c.drawLine(-4, OJOS_Y - 16, 4, OJOS_Y - 16, trazo(9))
+    if ficha.get("antifaz"):  # antifaz de ladrón con agujeros para los ojos
+        p = suave([(-125, OJOS_Y - 40), (0, OJOS_Y - 50), (125, OJOS_Y - 40), (120, OJOS_Y + 38), (0, OJOS_Y + 30),
+                   (-120, OJOS_Y + 38)])
+        for x in (-45, 45):
+            p.addPath(elipse(x, OJOS_Y + 2, 36, 32))
+        p.setFillType(skia.PathFillType.kEvenOdd)
+        pieza(c, p, "tinta", 4)
+        for sx in (-1, 1):
+            c.drawLine(sx * 122, OJOS_Y - 10, sx * 150, OJOS_Y - 30 + 8 * sx, trazo(8))
     if ficha.get("bigote"):
         p = suave([(0, BOCA_Y - 18), (-34, BOCA_Y - 34), (-64, BOCA_Y - 12), (-30, BOCA_Y - 6),
                    (0, BOCA_Y - 12), (30, BOCA_Y - 6), (64, BOCA_Y - 12), (34, BOCA_Y - 34)])

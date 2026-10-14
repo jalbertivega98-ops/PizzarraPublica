@@ -317,18 +317,67 @@ def sol(c, t=0.0, cara="ilusionado", **kw):
     _cara(c, 0, 20, 0.6, cara, t)
 
 
+# ------------------------------------------------------------------ móvil
+def movil(c, t=0.0, pantalla="sms", texto="", lineas=None, codigo="", remite="BANCO", suena=False, cara=None, **kw):
+    """Móvil cartoon. pantalla: sms (burbuja con texto), codigo (código grande), llamada (llamada entrante), aviso."""
+    if suena:  # vibra y saca ondas
+        c.save(); c.translate(6 * math.sin(t * 70), 0)
+    pieza(c, rrect(-140, -230, 140, 230, 34), (52, 56, 70), 7)
+    pant = rrect(-118, -192, 118, 192, 16)
+    fondo = {"llamada": (40, 160, 90), "aviso": (226, 58, 48)}.get(pantalla, (236, 242, 250))
+    pieza(c, pant, fondo, 4)
+    c.drawLine(-24, -212, 24, -212, trazo(6))
+    if pantalla == "llamada":
+        _texto(c, remite, 0, -70, 44, "blanco", "sub")
+        _texto(c, "llamando…", 0, -24, 30, "blanco", "ui")
+        for x, col in ((-46, "verde"), (46, "rojo")):
+            pieza(c, elipse(x, 120, 34, 34), col, 4)
+    elif pantalla == "codigo":
+        _texto(c, remite, 0, -112, 30, "tinta", "sub")
+        _texto(c, "Tu código:", 0, -40, 32, "tinta", "ui")
+        size = 64
+        while _font(size, "sub").measureText(codigo) > 210 and size > 30:
+            size -= 4
+        f = _font(size, "sub")
+        c.drawString(codigo, -f.measureText(codigo) / 2, 36, f, relleno("rojo"))
+        _texto(c, "No lo compartas", 0, 110, 26, "gris", "ui")
+    elif pantalla == "aviso":
+        _texto(c, "!", 0, 30, 170, "blanco", "sub")
+    else:
+        _texto(c, remite, 0, -112, 30, "tinta", "sub")
+        ls = lineas or [texto]
+        h = 40 + 38 * len(ls)
+        size = 30
+        while max(_font(size, "ui").measureText(l) for l in ls) > 180 and size > 18:
+            size -= 2
+        f = _font(size, "ui")
+        pieza(c, rrect(-104, -86, 104, -86 + h, 18), "blanco", 4)
+        for i, l in enumerate(ls):
+            c.drawString(l, -90, -86 + 40 + i * 38, f, relleno("tinta"))
+    if suena:
+        for k in range(3):
+            a = (t * 3 + k / 3) % 1
+            onda = skia.Paint(Color=skia.Color(28, 28, 34, int(200 * (1 - a))), AntiAlias=True, Style=skia.Paint.kStroke_Style,
+                              StrokeWidth=6)
+            for sx in (-1, 1):
+                r = skia.Rect(-140 - 60 * a, -150 - 40 * a, 140 + 60 * a, -10 + 40 * a)
+                c.drawArc(r, -30 if sx > 0 else 150, 60, False, onda)
+        c.restore()
+    _cara(c, 0, -290, 0.45, cara, t)
+
+
 TIPOS = {
     "billete": billete, "fajo": fajo, "moneda": moneda, "hucha": hucha, "saco": saco,
     "contrato": contrato, "cartel": cartel, "checklist": checklist, "etiqueta": etiqueta, "bocadillo": bocadillo,
     "lupa": lupa, "calculadora": calculadora, "reloj": reloj, "llave": llave, "grafica": grafica, "flecha": flecha,
-    "coche": coche, "bus": bus, "tren": tren, "arbol": arbol, "farola": farola, "nube": nube, "sol": sol,
+    "coche": coche, "bus": bus, "tren": tren, "arbol": arbol, "farola": farola, "nube": nube, "sol": sol, "movil": movil,
 }
 # tamaño aproximado (ancho, alto) a escala 1, para la cámara y la maquetación
 TAMANO = {"billete": (300, 150), "fajo": (340, 220), "moneda": (180, 180), "hucha": (420, 320), "saco": (300, 300),
           "contrato": (280, 360), "cartel": (500, 200), "checklist": (600, 400), "etiqueta": (500, 140),
           "bocadillo": (500, 160), "lupa": (260, 320), "calculadora": (220, 320), "reloj": (260, 280), "llave": (300, 140),
           "grafica": (400, 320), "flecha": (260, 130), "coche": (480, 260), "bus": (700, 360), "tren": (900, 300),
-          "arbol": (320, 440), "farola": (100, 470), "nube": (340, 160), "sol": (340, 340)}
+          "arbol": (320, 440), "farola": (100, 470), "nube": (340, 160), "sol": (340, 340), "movil": (300, 480)}
 # objetos cuyo (0, 0) es el suelo (el resto está centrado)
 APOYADOS = {"arbol", "farola"}
 

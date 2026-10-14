@@ -1,0 +1,1045 @@
+{
+ "slug": "estafa_sms",
+ "title": "El código que no tenías que dar",
+ "series_tag": "ESTAFAS: QUE NO TE PASE",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Guardia Civil de Albacete, operación Corduro, vía El Digital de Albacete (08/10/2026): https://www.eldigitaldealbacete.com/2026/10/08/creyo-que-evitaba-una-estafa-y-perdio-90-000-euros-guardia-civil-de-albacete-desarticula-una-red-criminal-con-un-detenido-de-valencia/",
+  "Cadena SER Radio Albacete (08/10/2026): https://cadenaser.com/castillalamancha/2026/10/08/se-hicieron-pasar-por-su-entidad-bancaria-para-estafarle-89900-con-sms-falsos-radio-albacete/",
+  "Ministerio del Interior, ciberdelitos 2025 (10/07/2026): https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/interior/Paginas/2026/100726-interior-ciberdelitos.aspx"
+ ],
+ "caption": "📱 Le llamó «su banco» por unas transferencias sospechosas… y perdió 89.900 €\n🔢 Los códigos SMS que dictó no cancelaban nada: las autorizaban\n🏃 4 transferencias saltando de cuenta en cuenta\n🚔 Recuperados 57.600 € · faltan 32.300 € · 1 detenido y 3 investigados\n💬 ¿Te han intentado algo parecido? Cuéntalo\n➡️ Mándaselo a quien siempre coge el teléfono · 🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Guardia Civil de Albacete, operación Corduro (El Digital de Albacete y Cadena SER, 08/10/2026) · Ministerio del Interior, ciberdelitos 2025 (10/07/2026): 429.677 de 488.426 son estafas informáticas. Pizón representa a la víctima; los códigos del vídeo son de ejemplo. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PizarraPública",
+  "#Estafa",
+  "#Phishing",
+  "#SMS",
+  "#Banco",
+  "#GuardiaCivil",
+  "#Albacete",
+  "#Ciberseguridad"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "salon",
+   "animo": "tension",
+   "footnote": "Guardia Civil de Albacete, operación Corduro (08/10/2026)",
+   "lines": [
+    {
+     "text": "Una persona de Albacete perdió 89.900 euros…",
+     "tono": "energia"
+    },
+    {
+     "text": "intentando proteger su dinero.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "medio",
+     "sobre": [
+      470,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@89.900",
+     "plano": "general",
+     "sobre": null,
+     "dur": 0.3
+    },
+    {
+     "at": "@proteger",
+     "plano": "medio",
+     "sobre": "pizon",
+     "dur": 0.4,
+     "aire": 160
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "id": "pizon",
+     "x": 400,
+     "y": 1340,
+     "scale": 0.85,
+     "at": 0,
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": "@perdió",
+       "take": true,
+       "cara": "susto"
+      },
+      {
+       "at": "@89.900",
+       "objeto": null,
+       "pose": "cabeza",
+       "cara": "susto",
+       "tiembla": true
+      },
+      {
+       "at": "@proteger",
+       "cara": "confundido",
+       "pose": "encoge",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "objeto": "hucha",
+     "pose": "sostiene"
+    },
+    {
+     "type": "efecto",
+     "efecto": "vuelan",
+     "objeto": "billete",
+     "n": 8,
+     "x": 620,
+     "y": 1000,
+     "at": "@perdió+0.2",
+     "vida": 1.8
+    },
+    {
+     "type": "rotulo",
+     "text": "−89.900 €",
+     "x": 540,
+     "y": 560,
+     "size": 140,
+     "color": "red",
+     "at": "@89.900",
+     "golpe": true,
+     "rot": -4,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "llamada",
+   "fondo": "salon",
+   "animo": "tension",
+   "trans": "pan",
+   "footnote": "Guardia Civil de Albacete, operación Corduro (08/10/2026)",
+   "lines": [
+    {
+     "text": "Le llama alguien «de su banco»: hay transferencias sospechosas en su cuenta.",
+     "tono": "intriga"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@banco",
+     "plano": "medio",
+     "sobre": "pizon",
+     "dur": 0.35,
+     "aire": 200
+    },
+    {
+     "at": "@sospechosas",
+     "plano": "general",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "luz": [
+    {
+     "at": "@sospechosas",
+     "tipo": "alarma"
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "id": "pizon",
+     "x": 260,
+     "y": 1340,
+     "scale": 0.8,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@llama",
+       "cara": "sorpresa",
+       "mira": "movil"
+      },
+      {
+       "at": "@banco",
+       "cara": "preocupado",
+       "mira": "banquero"
+      },
+      {
+       "at": "@sospechosas",
+       "take": true,
+       "cara": "susto"
+      }
+     ],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "movil",
+     "x": 540,
+     "y": 660,
+     "scale": 0.8,
+     "at": "@llama-0.3",
+     "props": {
+      "pantalla": "llamada",
+      "remite": "TU BANCO",
+      "suena": true,
+      "entra": "pop",
+      "sfx": "sorpresa",
+      "out": "@transferencias"
+     },
+     "acciones": [],
+     "id": "movil",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "banquero",
+     "x": 830,
+     "y": 1340,
+     "scale": 0.8,
+     "at": "@transferencias-0.3",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@sospechosas",
+       "cara": "preocupado",
+       "pose": "manos_juntas"
+      }
+     ],
+     "id": "banquero",
+     "entra": "der",
+     "pose": "senala"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 700,
+     "y": 330,
+     "scale": 0.8,
+     "at": "@transferencias",
+     "props": {
+      "lineas": [
+       "¡Transferencias",
+       "sospechosas!"
+      ],
+      "cola": [
+       1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "out": "@cuenta+0.6"
+    }
+   ]
+  },
+  {
+   "id": "codigos",
+   "fondo": "salon",
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Guardia Civil de Albacete, operación Corduro (08/10/2026) · códigos de ejemplo",
+   "lines": [
+    {
+     "text": "Para cancelarlas, le llegan SMS con códigos… y se los pide.",
+     "tono": "normal"
+    },
+    {
+     "text": "Uno. Otro. Y otro.",
+     "tono": "intriga",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@Uno",
+     "plano": "medio",
+     "sobre": "pizon",
+     "dur": 0.3,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "id": "pizon",
+     "x": 260,
+     "y": 1340,
+     "scale": 0.8,
+     "at": 0,
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": "@SMS",
+       "mira": "movil",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@pide",
+       "cara": "preocupado",
+       "habla": true,
+       "pose": "manos_juntas"
+      },
+      {
+       "at": "@Otro",
+       "salta": true
+      },
+      {
+       "at": "@otro",
+       "cara": "confundido"
+      }
+     ],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "banquero",
+     "x": 830,
+     "y": 1340,
+     "scale": 0.8,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@pide",
+       "cara": "ilusionado",
+       "pose": "ruega"
+      },
+      {
+       "at": "@otro",
+       "cara": "riendo"
+      }
+     ],
+     "id": "banquero",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "movil",
+     "x": 540,
+     "y": 600,
+     "scale": 0.85,
+     "at": "@SMS-0.2",
+     "props": {
+      "pantalla": "codigo",
+      "remite": "BANCO",
+      "codigo": "482719",
+      "entra": "pop",
+      "sfx": "calculadora"
+     },
+     "acciones": [
+      {
+       "at": "@Otro",
+       "props": {
+        "pantalla": "codigo",
+        "remite": "BANCO",
+        "codigo": "093561"
+       },
+       "salta": true
+      },
+      {
+       "at": "@otro",
+       "props": {
+        "pantalla": "codigo",
+        "remite": "BANCO",
+        "codigo": "770248"
+       },
+       "salta": true
+      }
+     ],
+     "id": "movil",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 300,
+     "y": 900,
+     "scale": 0.75,
+     "at": "@Uno",
+     "props": {
+      "texto": "4… 8… 2…",
+      "cola": [
+       -1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "out": "@Otro"
+    }
+   ]
+  },
+  {
+   "id": "giro",
+   "fondo": "rayos",
+   "animo": "comico",
+   "musica": "corte",
+   "trans": "iris",
+   "footnote": "Guardia Civil de Albacete, operación Corduro (08/10/2026)",
+   "lines": [
+    {
+     "text": "Pero esos códigos no cancelaban nada.",
+     "tono": "remate"
+    },
+    {
+     "text": "Autorizaban las transferencias.",
+     "tono": "sorpresa",
+     "pausa": 0.35
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@Autorizaban",
+     "plano": "medio",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.2
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "id": "pizon",
+     "x": 250,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "confundido",
+     "acciones": [
+      {
+       "at": "@nada",
+       "cara": "pensativo",
+       "mira": "banquero"
+      },
+      {
+       "at": "@Autorizaban",
+       "take": true,
+       "cara": "susto",
+       "pose": "cabeza",
+       "mira": "estafador"
+      }
+     ],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "banquero",
+     "x": 760,
+     "y": 1340,
+     "scale": 0.8,
+     "at": 0,
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@Autorizaban-0.05",
+       "sale": "pop"
+      }
+     ],
+     "id": "banquero",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "estafador",
+     "x": 760,
+     "y": 1340,
+     "scale": 0.8,
+     "at": "@Autorizaban",
+     "cara": "burla",
+     "acciones": [
+      {
+       "at": "@transferencias",
+       "salta": true,
+       "pose": "punos"
+      }
+     ],
+     "id": "estafador",
+     "entra": "pop"
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¡ZAS!",
+     "x": 760,
+     "y": 820,
+     "at": "@Autorizaban",
+     "scale": 0.9,
+     "vida": 0.8
+    },
+    {
+     "type": "rotulo",
+     "text": "CANCELAR",
+     "x": 540,
+     "y": 400,
+     "size": 100,
+     "color": "verde",
+     "at": "@cancelaban",
+     "out": "@Autorizaban",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "AUTORIZAR",
+     "x": 540,
+     "y": 400,
+     "size": 120,
+     "color": "red",
+     "at": "@Autorizaban",
+     "golpe": true,
+     "rot": -5,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "huye",
+   "fondo": "calle",
+   "animo": "comico",
+   "trans": "pan",
+   "footnote": "Guardia Civil de Albacete, operación Corduro (08/10/2026)",
+   "lines": [
+    {
+     "text": "Cuatro transferencias. 89.900 euros.",
+     "tono": "energia"
+    },
+    {
+     "text": "Y el dinero, saltando de cuenta en cuenta para no dejar rastro.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@saltando",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "banco",
+     "x": 190,
+     "y": 1340,
+     "scale": 0.3,
+     "at": 0,
+     "acciones": [],
+     "entra": "nada",
+     "cara": "sorpresa"
+    },
+    {
+     "type": "edificio",
+     "edificio": "banco",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.3,
+     "at": 0,
+     "acciones": [],
+     "entra": "nada",
+     "cara": "esceptica"
+    },
+    {
+     "type": "edificio",
+     "edificio": "banco",
+     "x": 890,
+     "y": 1340,
+     "scale": 0.3,
+     "at": 0,
+     "acciones": [],
+     "entra": "nada",
+     "cara": "confundido"
+    },
+    {
+     "type": "objeto",
+     "objeto": "saco",
+     "x": 190,
+     "y": 1210,
+     "scale": 0.75,
+     "at": "@Cuatro",
+     "props": {},
+     "acciones": [
+      {
+       "at": "@saltando",
+       "x": 540,
+       "corre": true,
+       "dur": 0.7
+      },
+      {
+       "at": "@saltando+0.75",
+       "salta": true
+      },
+      {
+       "at": "@cuenta#2",
+       "x": 890,
+       "corre": true,
+       "dur": 0.7
+      },
+      {
+       "at": "@rastro",
+       "sale": "der"
+      }
+     ],
+     "id": "saco",
+     "entra": "pop",
+     "piernas": true,
+     "cara": "burla"
+    },
+    {
+     "type": "rotulo",
+     "text": "4 TRANSFERENCIAS",
+     "x": 540,
+     "y": 470,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@Cuatro",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "89.900 €",
+     "x": 540,
+     "y": 600,
+     "size": 120,
+     "color": "red",
+     "at": "@89.900",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "efecto",
+     "efecto": "lineas",
+     "x": 700,
+     "y": 1220,
+     "at": "@saltando",
+     "vida": 1.2
+    }
+   ]
+  },
+  {
+   "id": "pillado",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Guardia Civil de Albacete, operación Corduro (08/10/2026)",
+   "lines": [
+    {
+     "text": "La Guardia Civil recuperó 57.600 euros. Faltan 32.300.",
+     "tono": "normal"
+    },
+    {
+     "text": "Un detenido en Valencia y tres investigados.",
+     "tono": "remate"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@detenido",
+     "plano": "medio",
+     "sobre": "estafador",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "estafador",
+     "x": 150,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "burla",
+     "acciones": [
+      {
+       "at": 0,
+       "x": 520,
+       "corre": true,
+       "dur": 1.6
+      },
+      {
+       "at": "@Faltan",
+       "x": 760,
+       "corre": true,
+       "dur": 0.8
+      },
+      {
+       "at": "@detenido",
+       "tropieza": true,
+       "cara": "susto"
+      },
+      {
+       "at": "@investigados",
+       "cara": "triste"
+      }
+     ],
+     "id": "estafador",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "saco",
+     "x": 860,
+     "y": 1220,
+     "scale": 0.55,
+     "at": "@57.600",
+     "props": {},
+     "acciones": [],
+     "entra": "cae",
+     "cara": "riendo"
+    },
+    {
+     "type": "rotulo",
+     "text": "RECUPERADOS: 57.600 €",
+     "x": 540,
+     "y": 460,
+     "size": 70,
+     "color": "verde",
+     "at": "@57.600",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIN RECUPERAR: 32.300 €",
+     "x": 540,
+     "y": 560,
+     "size": 70,
+     "color": "red",
+     "at": "@32.300",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "1 DETENIDO · 3 INVESTIGADOS",
+     "x": 540,
+     "y": 680,
+     "size": 60,
+     "color": "amarillo",
+     "at": "@detenido",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "regla",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "pan",
+   "footnote": "Recomendaciones de la Guardia Civil",
+   "lines": [
+    {
+     "text": "Regla de oro: un código que no has pedido es alguien intentando usar tu cuenta.",
+     "tono": "intriga"
+    },
+    {
+     "text": "Tu banco nunca te lo pide. Cuelga y llama tú.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@Cuelga",
+     "plano": "medio",
+     "sobre": "profe",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.82,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@pedido",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@alguien",
+       "cara": "esceptica",
+       "pose": "senala"
+      },
+      {
+       "at": "@usar",
+       "take": true
+      },
+      {
+       "at": "@nunca",
+       "cara": "serio",
+       "pose": "jarras"
+      },
+      {
+       "at": "@Cuelga",
+       "cara": "ilusionado",
+       "pose": "pulgar"
+      }
+     ],
+     "id": "profe",
+     "entra": "izq",
+     "pose": "senala_arriba"
+    },
+    {
+     "type": "objeto",
+     "objeto": "movil",
+     "x": 740,
+     "y": 640,
+     "scale": 0.8,
+     "at": "@código-0.2",
+     "props": {
+      "pantalla": "codigo",
+      "remite": "BANCO",
+      "codigo": "482719",
+      "entra": "pop"
+     },
+     "acciones": [
+      {
+       "at": "@alguien",
+       "props": {
+        "pantalla": "aviso"
+       },
+       "tiembla": true
+      },
+      {
+       "at": "@cuenta",
+       "salta": true
+      }
+     ],
+     "id": "movil",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "CÓDIGO = FIRMA",
+     "x": 540,
+     "y": 460,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@alguien",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "checklist",
+     "x": 600,
+     "y": 900,
+     "scale": 0.85,
+     "at": "@nunca",
+     "props": {
+      "items": [
+       "No dictes códigos",
+       "Cuelga y llama tú",
+       "Activa los avisos"
+      ],
+      "marcas": [
+       "si",
+       "si",
+       "si"
+      ]
+     },
+     "acciones": [],
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "salon",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Ministerio del Interior, balance de cibercriminalidad 2025 (10/07/2026)",
+   "lines": [
+    {
+     "text": "En España, casi nueve de cada diez ciberdelitos ya son estafas.",
+     "tono": "normal"
+    },
+    {
+     "text": "Mándaselo a quien siempre coge el teléfono. Y síguenos para no picar.",
+     "tono": "energia"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@Mándaselo",
+     "plano": "medio",
+     "sobre": "pizon",
+     "dur": 0.4,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "id": "pizon",
+     "x": 320,
+     "y": 1340,
+     "scale": 0.82,
+     "at": 0,
+     "cara": "triste",
+     "acciones": [
+      {
+       "at": "@ciberdelitos",
+       "take": true,
+       "cara": "susto",
+       "mira": "camara"
+      },
+      {
+       "at": "@estafas",
+       "cara": "indignado",
+       "pose": "punos"
+      },
+      {
+       "at": "@teléfono",
+       "salta": true
+      },
+      {
+       "at": "@Mándaselo",
+       "cara": "idea",
+       "pose": "sostiene",
+       "objeto": {
+        "tipo": "movil",
+        "pantalla": "sms",
+        "lineas": [
+         "¡Ojo con",
+         "los códigos!"
+        ]
+       }
+      },
+      {
+       "at": "@síguenos",
+       "cara": "riendo",
+       "pose": "saluda",
+       "objeto": null,
+       "salta": true
+      }
+     ],
+     "entra": "nada"
+    },
+    {
+     "type": "rotulo",
+     "text": "9 DE CADA 10",
+     "x": 540,
+     "y": 480,
+     "size": 120,
+     "color": "red",
+     "at": "@nueve",
+     "golpe": true,
+     "out": "@Mándaselo",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "de los ciberdelitos son estafas",
+     "x": 540,
+     "y": 600,
+     "size": 58,
+     "color": "blanco",
+     "at": "@ciberdelitos",
+     "out": "@Mándaselo",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 480,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@picar",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.0,
+  "titulo": "El código que no tenías que dar",
+  "capitulo": null
+ }
+}

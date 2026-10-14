@@ -56,9 +56,8 @@ scenes = [
             acciones=[{"at": "@fijo", "props": {"marcas": ["si"]}}, {"at": "@ahorrando", "props": {"marcas": ["si", "si"]}}],
             out="@aun"),
         edif("banco", 770, "@banco", 0.55, cara="burla", entra="cae"),
-        rot("¡DENEGADA!", 560, 540, "@no", 130, C, golpe=True, rot=-6, out="@síguenos-0.3"),
-        rot("SÍGUENOS", 560, 470, "@síguenos", 110, "amarillo"),
-        rot("@pizarrapublica", 560, 580, "@síguenos+0.2", 62, "blanco"),
+        rot("¡DENEGADA!", 560, 620, "@no", 130, C, golpe=True, rot=-6),
+        rot("SÍGUENOS", 560, 440, "@síguenos", 96, "amarillo", fx=[{"at": "@sonará", "do": "latir"}]),
     ]),
     # LA CASA Y SU PRECIO
     dict(id="precio", fondo="calle", footnote=base.CJE, lines=[
@@ -107,7 +106,8 @@ scenes = [
     ], elements=[
         rot("…Y LO PEOR", 540, 470, 0.05, 110, "amarillo", out="@sube"),
         piz(230, 0.0, 0.85, "preocupado", entra="nada", objeto="hucha", pose="sostiene",
-            acciones=[{"at": "@sube", "cara": "susto"}, {"at": "@25.000", "cara": "indignado", "tiembla": True},
+            acciones=[{"at": "@peor", "cara": "pensativo"}, {"at": "@ahorra", "cara": "ilusionado", "pose": "sostiene2"},
+                      {"at": "@sube", "cara": "susto", "pose": "sostiene"}, {"at": "@25.000", "cara": "indignado", "tiembla": True},
                       {"at": "@ahorró", "cara": "triste", "objeto": None, "pose": "caidos"}]),
         edif("casa", 770, 0.0, 0.75, cara="riendo", entra="nada",
              fx=[{"at": "@sube", "do": "mover", "x": 740, "y": 1060, "scale": 1.3, "dur": 0.9}],
@@ -143,12 +143,14 @@ scenes = [
         V("Y la de Piz sería el 63 %.", "remate", 0.2),
     ], elements=[
         pj("banquera_seria", 230, 0.0, 0.85, "serio", entra="izq",
-           acciones=[{"at": "@banco", "pose": "senala"}, {"at": "@63", "cara": "esceptica", "pose": "cruzados"}]),
+           acciones=[{"at": "@banco", "pose": "senala"}, {"at": "@sueldo", "pose": "senala_arriba", "cara": "burla"},
+                     {"at": "@63", "cara": "esceptica", "pose": "cruzados"}]),
         piz(850, 0.0, 0.8, "confundido", entra="der",
-            acciones=[{"at": "@35", "cara": "preocupado"}, {"at": "@63", "cara": "triste", "pose": "caidos"}]),
+            acciones=[{"at": "@35", "cara": "preocupado"}, {"at": "@Piz", "cara": "susto", "salta": True}, {"at": "@63", "cara": "triste", "pose": "caidos"}]),
         obj("checklist", 540, 520, "@banco", 1.1,
             props={"items": ["Trabajo fijo", "Ahorros", "Cuota < 35 %"], "marcas": ["si", "si"]},
-            acciones=[{"at": "@63", "props": {"marcas": ["si", "si", "no"]}, "sfx": "error"}]),
+            acciones=[{"at": "@63", "props": {"marcas": ["si", "si", "no"]}, "sfx": "error"}],
+            fx=[{"at": "@sueldo", "do": "latir"}]),
         rot("63 %", 540, 820, "@63", 170, C, golpe=True),
     ]),
     # CONCLUSIÓN
@@ -157,8 +159,9 @@ scenes = [
     ], elements=[
         piz(540, 0.0, 1.0, "triste", entra="nada", pose="caidos",
             acciones=[{"at": "@1.176", "objeto": {"tipo": "fajo"}, "pose": "sostiene"},
+                      {"at": "@poder", "cara": "preocupado", "mira": "der"},
                       {"at": "@hipoteca", "cara": "indignado", "objeto": None, "pose": "punos", "tiembla": True}]),
-        rot("PAGA 1.176 €", 310, 470, "@1.176", 70, C, golpe=True),
+        rot("PAGA 1.176 €", 310, 470, "@1.176", 70, C, golpe=True, fx=[{"at": "@alquiler", "do": "latir"}]),
         rot("753 €", 790, 470, "@753", 100, "verde", fx=[{"at": "@hipoteca", "do": "tachar"}]),
     ]),
     # FINAL: siguiente capítulo + síguenos

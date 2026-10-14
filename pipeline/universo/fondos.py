@@ -119,9 +119,9 @@ def salon(c, t=0.0, suelo=SUELO, **kw):
     _rect(c, X0, Y0, X1, suelo, (240, 220, 200), degradado(Y0, suelo, (246, 230, 214), (226, 200, 176)))
     for x in range(X0, X1, 90):  # papel pintado
         c.drawLine(x, Y0, x, suelo, trazo(10, (236, 210, 188)))
-    pieza(c, rrect(360, 560, 720, 980, 14), "cristal", 7, shader=degradado(560, 980, "cielo", "blanco"))
-    c.drawLine(540, 560, 540, 980, trazo(7))
-    pieza(c, rrect(330, 540, 750, 580, 10), "rojo", 6)
+    pieza(c, rrect(390, 660, 690, 1010, 14), "cristal", 7, shader=degradado(660, 1010, "cielo", "blanco"))
+    c.drawLine(540, 660, 540, 1010, trazo(7))
+    pieza(c, rrect(370, 630, 710, 664, 10), "rojo", 6)
     _rect(c, X0, suelo - 20, X1, Y1, (180, 128, 84), degradado(suelo, Y1, (190, 136, 90), (150, 100, 60)))
     c.drawLine(X0, suelo - 20, X1, suelo - 20, trazo(6))
     for y in range(int(suelo + 40), Y1, 90):

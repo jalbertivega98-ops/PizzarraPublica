@@ -152,31 +152,27 @@
      "type": "rotulo",
      "text": "¡DENEGADA!",
      "x": 560,
-     "y": 540,
+     "y": 620,
      "size": 130,
      "color": "red",
      "at": "@no",
      "golpe": true,
-     "rot": -6,
-     "out": "@síguenos-0.3"
+     "rot": -6
     },
     {
      "type": "rotulo",
      "text": "SÍGUENOS",
      "x": 560,
-     "y": 470,
-     "size": 110,
+     "y": 440,
+     "size": 96,
      "color": "amarillo",
-     "at": "@síguenos"
-    },
-    {
-     "type": "rotulo",
-     "text": "@pizarrapublica",
-     "x": 560,
-     "y": 580,
-     "size": 62,
-     "color": "blanco",
-     "at": "@síguenos+0.2"
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@sonará",
+       "do": "latir"
+      }
+     ]
     }
    ]
   },
@@ -515,8 +511,18 @@
      "cara": "preocupado",
      "acciones": [
       {
+       "at": "@peor",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@ahorra",
+       "cara": "ilusionado",
+       "pose": "sostiene2"
+      },
+      {
        "at": "@sube",
-       "cara": "susto"
+       "cara": "susto",
+       "pose": "sostiene"
       },
       {
        "at": "@25.000",
@@ -786,6 +792,11 @@
        "pose": "senala"
       },
       {
+       "at": "@sueldo",
+       "pose": "senala_arriba",
+       "cara": "burla"
+      },
+      {
        "at": "@63",
        "cara": "esceptica",
        "pose": "cruzados"
@@ -805,6 +816,11 @@
       {
        "at": "@35",
        "cara": "preocupado"
+      },
+      {
+       "at": "@Piz",
+       "cara": "susto",
+       "salta": true
       },
       {
        "at": "@63",
@@ -843,6 +859,12 @@
         ]
        },
        "sfx": "error"
+      }
+     ],
+     "fx": [
+      {
+       "at": "@sueldo",
+       "do": "latir"
       }
      ]
     },
@@ -886,6 +908,11 @@
        "pose": "sostiene"
       },
       {
+       "at": "@poder",
+       "cara": "preocupado",
+       "mira": "der"
+      },
+      {
        "at": "@hipoteca",
        "cara": "indignado",
        "objeto": null,
@@ -904,7 +931,13 @@
      "size": 70,
      "color": "red",
      "at": "@1.176",
-     "golpe": true
+     "golpe": true,
+     "fx": [
+      {
+       "at": "@alquiler",
+       "do": "latir"
+      }
+     ]
     },
     {
      "type": "rotulo",

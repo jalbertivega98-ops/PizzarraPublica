@@ -27,6 +27,14 @@ MODEL = "eleven_multilingual_v2"
 MUESTRAS = {"George": "JBFqnCBsd6RMkjVDRZzb", "Brian": "nPczCjzI2devNBz1zQrb", "Daniel": "onwK4e9ZLuTAKqWW03F9",
             "Liam": "TX3LPaxmHKxFdv7VOQHJ", "Sarah": "EXAVITQu4vr4xnSDxMaL", "Alice": "Xb7hH8MSUJpSbSDYk0k2"}
 SETTINGS = {"stability": 0.5, "similarity_boost": 0.75, "style": 0.15, "use_speaker_boost": True}
+# Estilo «viva» (docs/enganche.md): cada frase puede llevar un tono. Menos estabilidad = más expresiva.
+TONOS = {
+    "normal":   {"stability": 0.38, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": True, "speed": 1.06},
+    "energia":  {"stability": 0.30, "similarity_boost": 0.8, "style": 0.55, "use_speaker_boost": True, "speed": 1.10},
+    "sorpresa": {"stability": 0.28, "similarity_boost": 0.8, "style": 0.60, "use_speaker_boost": True, "speed": 1.04},
+    "intriga":  {"stability": 0.45, "similarity_boost": 0.8, "style": 0.45, "use_speaker_boost": True, "speed": 0.94},
+    "remate":   {"stability": 0.50, "similarity_boost": 0.8, "style": 0.40, "use_speaker_boost": True, "speed": 0.92},
+}
 
 
 def line_text(line):
@@ -34,8 +42,46 @@ def line_text(line):
     return line["text"] if isinstance(line, dict) else line
 
 
-def key(voice, model, text):
-    return hashlib.sha1(f"{voice}|{model}|{text}".encode()).hexdigest()[:16]
+def key(voice, model, text, tono=None):
+    """tono=None conserva las claves de los vídeos antiguos; el estilo «viva» añade el tono a la clave."""
+    base = f"{voice}|{model}|{text}" + (f"|viva:{tono}" if tono else "")
+    return hashlib.sha1(base.encode()).hexdigest()[:16]
+
+
+def line_tono(story, line):
+    """Tono de una frase en el estilo «viva» (None en los storyboards antiguos)."""
+    if story.get("estilo") != "viva":
+        return None
+    t = line.get("tono") if isinstance(line, dict) else None
+    return t or story.get("tono", "normal")
+
+
+def synth_tiempos(text, voice, model, api_key, tono):
+    """MP3 + tiempo de cada palabra [{"w","t0","t1"}] (endpoint /with-timestamps)."""
+    import base64
+    body = {"text": text, "model_id": model, "language_code": "es", "voice_settings": TONOS.get(tono, TONOS["normal"])}
+    req = urllib.request.Request(f"{API}/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_128",
+                                 data=json.dumps(body).encode(), method="POST",
+                                 headers={"xi-api-key": api_key, "Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            res = json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        sys.exit(f"ElevenLabs respondió HTTP {e.code}: {e.read().decode()[:500]}")
+    al = res.get("alignment") or res.get("normalized_alignment")
+    words, w, t0, t1 = [], "", None, None
+    for ch, a, b in zip(al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"]):
+        if ch.isspace():
+            if w:
+                words.append({"w": w, "t0": t0, "t1": t1})
+            w, t0 = "", None
+            continue
+        if t0 is None:
+            t0 = a
+        w, t1 = w + ch, b
+    if w:
+        words.append({"w": w, "t0": t0, "t1": t1})
+    return base64.b64decode(res["audio_base64"]), words
 
 
 def get_json(url, api_key, data=None):
@@ -195,10 +241,17 @@ def main():
         for sc in story["scenes"]:
             for line in sc["lines"]:
                 text = line_text(line)
-                path = os.path.join(CACHE, key(voice, model, text) + ".mp3")
-                if not os.path.exists(path):
+                tono = line_tono(story, line)
+                path = os.path.join(CACHE, key(voice, model, text, tono) + ".mp3")
+                if os.path.exists(path):
+                    continue
+                if tono and not model.startswith("edge"):
+                    audio, words = synth_tiempos(text, voice, model, api_key, tono)
+                    open(path, "wb").write(audio)
+                    json.dump(words, open(path[:-4] + ".json", "w", encoding="utf-8"), ensure_ascii=False)
+                else:
                     open(path, "wb").write(synth(text, voice, model, api_key))
-                    n += len(text)
+                n += len(text)
         print("✓", os.path.relpath(f, HERE))
     print(f"{n} caracteres enviados a ElevenLabs")
 

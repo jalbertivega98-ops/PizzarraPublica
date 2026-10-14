@@ -1,0 +1,473 @@
+{
+ "slug": "padres_viva",
+ "title": "Tus padres a tu edad",
+ "series_tag": "TUS PADRES A TU EDAD",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.12,
+ "scribble_volume": 0.05,
+ "end_hold": 0.8,
+ "sources": [
+  "Consejo de la Juventud de España, Observatorio de Emancipación, 2.º semestre 2025 (EFE, 22/05/2026)",
+  "Banco de España, Encuesta Financiera de las Familias 2002-2024 (vía CaixaBank Research): https://www.caixabankresearch.com/es/economia-y-mercados/mercado-laboral-y-demografia/encuesta-financiera-familias-espana-no-pais-0"
+ ],
+ "caption": "💸 Sueldo medio de un joven: 1.191 €. Alquiler medio: 1.176 €. Te sobran 15 €.\n🏠 Comprar: 15,6 años de sueldo íntegro\n👨‍👩‍👦 A tu edad, 2 de cada 3 de tus padres ya tenían casa. Hoy, 1 de cada 3\n💬 ¿Y tú? A: de alquiler · B: con tus padres\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Consejo de la Juventud, Observatorio de Emancipación 2.º sem. 2025 (sueldo joven 1.191 €, alquiler medio 1.176 €, compra = 15,6 años de sueldo) · Banco de España, Encuesta Financiera de las Familias (menores de 35 con vivienda en propiedad: 66 % en 2002, 36 % en 2024). ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PizarraPública",
+  "#Vivienda",
+  "#Jóvenes",
+  "#Alquiler",
+  "#Generaciones"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "footnote": "Consejo de la Juventud · Observatorio de Emancipación, 2.º sem. 2025",
+   "lines": [
+    {
+     "text": "Sueldo medio de un joven: 1.191 euros.",
+     "tono": "energia"
+    },
+    {
+     "text": "Alquiler medio: 1.176.",
+     "tono": "sorpresa"
+    },
+    {
+     "text": "Te sobran 15 euros.",
+     "tono": "remate",
+     "pausa": 0.25
+    },
+    {
+     "text": "Síguenos, que esto va contigo."
+    }
+   ],
+   "elements": [
+    {
+     "type": "text",
+     "text": "SUELDO",
+     "x": 290,
+     "y": 500,
+     "size": 74,
+     "color": "ink",
+     "at": 0,
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "1.191 €",
+     "x": 290,
+     "y": 650,
+     "size": 150,
+     "color": "green",
+     "at": "@1.191",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center",
+     "golpe": true
+    },
+    {
+     "type": "tu",
+     "x": 820,
+     "y": 930,
+     "scale": 1.45,
+     "at": 0.3,
+     "dur": 0.7,
+     "caras": [
+      {
+       "at": "@1.176",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@15",
+       "cara": "susto"
+      },
+      {
+       "at": "@síguenos",
+       "cara": "normal"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "ALQUILER",
+     "x": 290,
+     "y": 830,
+     "size": 74,
+     "color": "ink",
+     "at": "@alquiler",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "− 1.176 €",
+     "x": 290,
+     "y": 980,
+     "size": 140,
+     "color": "red",
+     "at": "@1.176",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center",
+     "golpe": true
+    },
+    {
+     "type": "line",
+     "pts": [
+      [
+       60,
+       1045
+      ],
+      [
+       540,
+       1050
+      ]
+     ],
+     "width": 8,
+     "at": "@sobran",
+     "dur": 0.2
+    },
+    {
+     "type": "text",
+     "text": "15 €",
+     "x": 290,
+     "y": 1230,
+     "size": 210,
+     "color": "red",
+     "at": "@15",
+     "dur": 0.25,
+     "font": "hand",
+     "align": "center",
+     "golpe": true,
+     "fx": [
+      {
+       "at": "@euros#2",
+       "do": "rodear"
+      },
+      {
+       "at": "@contigo",
+       "do": "latir"
+      }
+     ]
+    },
+    {
+     "type": "stamp",
+     "text": "SÍGUENOS",
+     "sub": "@pizarrapublica",
+     "x": 820,
+     "y": 1250,
+     "w": 420,
+     "h": 120,
+     "size": 54,
+     "rotate": -5,
+     "at": "@síguenos",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "comprar",
+   "footnote": "Consejo de la Juventud · Observatorio de Emancipación, 2.º sem. 2025",
+   "lines": [
+    {
+     "text": "¿Y comprar? Peor.",
+     "tono": "intriga"
+    },
+    {
+     "text": "15,6 años de sueldo íntegro.",
+     "tono": "sorpresa"
+    },
+    {
+     "text": "Sin gastar ni un euro en nada más."
+    }
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "house",
+     "x": 540,
+     "y": 640,
+     "scale": 1.9,
+     "at": 0.05,
+     "dur": 0.6
+    },
+    {
+     "type": "cara",
+     "x": 540,
+     "y": 690,
+     "scale": 1.2,
+     "cara": "risa",
+     "at": "@peor",
+     "dur": 0.25
+    },
+    {
+     "type": "text",
+     "text": "15,6",
+     "x": 540,
+     "y": 1080,
+     "size": 270,
+     "color": "red",
+     "at": "@15,6",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center",
+     "golpe": true
+    },
+    {
+     "type": "text",
+     "text": "AÑOS DE SUELDO",
+     "x": 540,
+     "y": 1190,
+     "size": 92,
+     "color": "ink",
+     "at": "@años",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "sin gastar ni un euro",
+     "x": 540,
+     "y": 1310,
+     "size": 72,
+     "color": "ink",
+     "at": "@gastar",
+     "dur": 0.35,
+     "font": "body",
+     "align": "center",
+     "fx": [
+      {
+       "at": "@nada",
+       "do": "subrayar",
+       "color": "red"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "padres",
+   "footnote": "Banco de España · Encuesta Financiera de las Familias (menores de 35)",
+   "lines": [
+    {
+     "text": "Pero lo que de verdad duele es compararte.",
+     "tono": "intriga"
+    },
+    {
+     "text": "A tu edad, dos de cada tres de tus padres ya tenían casa.",
+     "tono": "normal"
+    },
+    {
+     "text": "¿Hoy? Uno de cada tres.",
+     "tono": "remate",
+     "pausa": 0.5
+    }
+   ],
+   "musica": "corte",
+   "elements": [
+    {
+     "type": "text",
+     "text": "A TU EDAD…",
+     "x": 540,
+     "y": 480,
+     "size": 100,
+     "color": "ink",
+     "at": 0.05,
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center",
+     "fx": [
+      {
+       "at": "@hoy",
+       "do": "borrar",
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "type": "tu",
+     "x": 280,
+     "y": 1010,
+     "scale": 1.4,
+     "etiqueta": "TUS PADRES",
+     "color_etiqueta": "gray",
+     "cara": "normal",
+     "at": "@compararte",
+     "dur": 0.6,
+     "caras": [
+      {
+       "at": "@padres",
+       "cara": "risa"
+      }
+     ],
+     "fx": [
+      {
+       "at": "@hoy",
+       "do": "borrar",
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "type": "bars",
+     "x": 590,
+     "y": 1250,
+     "h": 560,
+     "bar_w": 170,
+     "gap": 90,
+     "max": 70,
+     "bars": [
+      {
+       "label": "2002",
+       "value": 66,
+       "value_label": "66 %",
+       "color": "gray"
+      }
+     ],
+     "at": "@dos",
+     "dur": 0.8,
+     "fx": [
+      {
+       "at": "@casa",
+       "do": "latir",
+       "fuerza": 0.08
+      }
+     ]
+    },
+    {
+     "type": "tu",
+     "x": 280,
+     "y": 1010,
+     "scale": 1.4,
+     "cara": "triste",
+     "at": "@uno",
+     "dur": 0.4
+    },
+    {
+     "type": "bars",
+     "x": 840,
+     "y": 1250,
+     "h": 560,
+     "bar_w": 170,
+     "gap": 90,
+     "max": 70,
+     "bars": [
+      {
+       "label": "2024",
+       "value": 36,
+       "value_label": "36 %",
+       "color": "red"
+      }
+     ],
+     "at": "@uno",
+     "dur": 0.6
+    },
+    {
+     "type": "text",
+     "text": "1 DE CADA 3",
+     "x": 540,
+     "y": 490,
+     "size": 120,
+     "color": "red",
+     "at": "@tres#2",
+     "dur": 0.25,
+     "font": "hand",
+     "align": "center",
+     "golpe": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "lines": [
+    {
+     "text": "¿Y tú dónde vives? A: de alquiler. B: con tus padres.",
+     "tono": "energia"
+    },
+    {
+     "text": "Comenta, y síguenos para el siguiente."
+    }
+   ],
+   "elements": [
+    {
+     "type": "tu",
+     "x": 540,
+     "y": 860,
+     "scale": 1.5,
+     "cara": "duda",
+     "at": 0.05,
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "A: DE ALQUILER",
+     "x": 540,
+     "y": 1140,
+     "size": 92,
+     "color": "ink",
+     "at": "@a",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center",
+     "fx": [
+      {
+       "at": "@b",
+       "do": "latir"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "B: CON MIS PADRES",
+     "x": 540,
+     "y": 1260,
+     "size": 92,
+     "color": "red",
+     "at": "@b",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center",
+     "fx": [
+      {
+       "at": "@comenta",
+       "do": "latir"
+      }
+     ]
+    },
+    {
+     "type": "stamp",
+     "text": "SÍGUENOS",
+     "sub": "@pizarrapublica",
+     "x": 540,
+     "y": 1370,
+     "w": 480,
+     "h": 120,
+     "size": 56,
+     "rotate": -5,
+     "at": "@síguenos",
+     "dur": 0.55,
+     "fx": [
+      {
+       "at": "@siguiente",
+       "do": "latir"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

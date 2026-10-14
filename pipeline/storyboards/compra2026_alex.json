@@ -72,7 +72,7 @@
     },
     {
      "type": "check",
-     "x": 600,
+     "x": 560,
      "y": 560,
      "r": 40,
      "color": "green",
@@ -83,9 +83,9 @@
     {
      "type": "text",
      "text": "trabajo fijo",
-     "x": 660,
+     "x": 615,
      "y": 585,
-     "size": 74,
+     "size": 70,
      "color": "ink",
      "at": "@trabajo",
      "dur": 0.35,
@@ -94,7 +94,7 @@
     },
     {
      "type": "check",
-     "x": 600,
+     "x": 560,
      "y": 730,
      "r": 40,
      "color": "green",
@@ -105,9 +105,9 @@
     {
      "type": "text",
      "text": "5 años ahorrando",
-     "x": 660,
+     "x": 615,
      "y": 755,
-     "size": 66,
+     "size": 54,
      "color": "ink",
      "at": "@cinco",
      "dur": 0.4,
@@ -276,10 +276,46 @@
    "elements": [
     {
      "type": "text",
+     "text": "entrada",
+     "x": 200,
+     "y": 470,
+     "size": 64,
+     "color": "ink",
+     "at": "@entrada",
+     "dur": 0.25,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "+ impuestos",
+     "x": 520,
+     "y": 470,
+     "size": 64,
+     "color": "ink",
+     "at": "@impuestos",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "+ notaría",
+     "x": 860,
+     "y": 470,
+     "size": 64,
+     "color": "ink",
+     "at": "@notaría",
+     "dur": 0.25,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
      "text": "66.900 €",
      "x": 540,
-     "y": 560,
-     "size": 180,
+     "y": 650,
+     "size": 170,
      "color": "red",
      "at": "@66.900",
      "dur": 0.35,
@@ -290,8 +326,8 @@
     {
      "type": "bars",
      "x": 170,
-     "y": 1200,
-     "h": 500,
+     "y": 1220,
+     "h": 430,
      "bar_w": 170,
      "gap": 90,
      "max": 70,
@@ -309,8 +345,8 @@
     {
      "type": "bars",
      "x": 430,
-     "y": 1200,
-     "h": 500,
+     "y": 1220,
+     "h": 430,
      "bar_w": 170,
      "gap": 90,
      "max": 70,
@@ -726,8 +762,8 @@
      "type": "tu",
      "etiqueta": "ÁLEX",
      "x": 540,
-     "y": 980,
-     "scale": 1.4,
+     "y": 1060,
+     "scale": 1.35,
      "at": 0.05,
      "dur": 0.6,
      "cara": "triste",
@@ -737,20 +773,26 @@
      "type": "text",
      "text": "paga 1.176 €",
      "x": 270,
-     "y": 560,
+     "y": 470,
      "size": 76,
      "color": "red",
      "at": "@1.176",
      "dur": 0.3,
      "font": "hand",
      "align": "center",
-     "golpe": true
+     "golpe": true,
+     "fx": [
+      {
+       "at": "@poder",
+       "do": "temblar"
+      }
+     ]
     },
     {
      "type": "text",
      "text": "753 €",
      "x": 810,
-     "y": 560,
+     "y": 470,
      "size": 90,
      "color": "green",
      "at": "@753",

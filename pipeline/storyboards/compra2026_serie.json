@@ -15,7 +15,7 @@
  },
  "music_volume": 0.2,
  "scribble_volume": 0.0,
- "end_hold": 1.2,
+ "end_hold": 0.9,
  "sources": [
   "Consejo de la Juventud de España, Observatorio de Emancipación (nota 22/05/2026): https://www.cje.org/en/observatorio_2025/",
   "Ministerio de Vivienda, valor tasado de la vivienda libre, 2.º trimestre 2026 (17/09/2026)",
@@ -89,7 +89,7 @@
      "type": "personaje",
      "quien": "piz",
      "id": "piz",
-     "x": 150,
+     "x": 230,
      "y": 1340,
      "scale": 0.85,
      "at": 0,
@@ -239,7 +239,10 @@
     {
      "at": "@223.000+0.6",
      "plano": "medio",
-     "sobre": "piz",
+     "sobre": [
+      440,
+      980
+     ],
      "dur": 0.25
     },
     {
@@ -441,7 +444,7 @@
      "type": "rotulo",
      "text": "TÚ: 20 % + GASTOS",
      "x": 560,
-     "y": 440,
+     "y": 1180,
      "size": 86,
      "color": "red",
      "at": "@resto",
@@ -548,10 +551,17 @@
        "mira": "hacienda"
       },
       {
+       "at": "@impuesto",
+       "cara": "indignado",
+       "mira": "banquero",
+       "salta": true
+      },
+      {
        "at": "@66.900",
        "cara": "susto",
        "mira": "camara",
-       "tiembla": true
+       "tiembla": true,
+       "pose": "sostiene"
       },
       {
        "at": "@20.000",
@@ -620,12 +630,13 @@
     {
      "type": "rotulo",
      "text": "+ 22.300 €",
-     "x": 820,
-     "y": 430,
-     "size": 92,
+     "x": 540,
+     "y": 600,
+     "size": 110,
      "color": "red",
      "at": "@22.300",
      "golpe": true,
+     "out": "@66.900",
      "hud": true
     },
     {
@@ -776,7 +787,7 @@
     {
      "type": "rotulo",
      "text": "+12,5 %",
-     "x": 860,
+     "x": 700,
      "y": 470,
      "size": 120,
      "color": "red",
@@ -935,7 +946,7 @@
     {
      "type": "objeto",
      "objeto": "etiqueta",
-     "x": 840,
+     "x": 720,
      "y": 640,
      "scale": 0.72,
      "at": "@alquiler",
@@ -1193,6 +1204,11 @@
        "dur": 2.6
       },
       {
+       "at": "@alquiler",
+       "mira": "persigue",
+       "take": true
+      },
+      {
        "at": "@753",
        "gira": true,
        "flip": true,
@@ -1254,6 +1270,18 @@
      "size": 80,
      "color": "red",
      "at": "@1.176",
+     "golpe": true,
+     "out": "@salida",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "753 €/mes",
+     "x": 780,
+     "y": 470,
+     "size": 80,
+     "color": "verde",
+     "at": "@753",
      "golpe": true,
      "out": "@salida",
      "hud": true

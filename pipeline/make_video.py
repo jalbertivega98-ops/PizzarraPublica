@@ -488,6 +488,7 @@ def main():
         open(os.path.join(outdir, f"{slug}_ritmo.txt"), "w", encoding="utf-8").write(txt + "\n")
         print("   " + txt.replace("\n", "\n   "))
         if args.ritmo:
+            [print(f"   escena {s.get('id', i)}: {s['start']:.1f}-{s['end']:.1f}") for i, s in enumerate(scenes)]
             return
     write_srt(chunks, os.path.join(outdir, f"{slug}.srt"))
 

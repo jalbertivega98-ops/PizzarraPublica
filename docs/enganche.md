@@ -34,12 +34,13 @@ fotogramas sueltos. Lo que lo hace adictivo no es el dibujo «bonito», es cómo
 | Tramo | Tiempo | Regla |
 |---|---|---|
 | **Gancho** | 0-2 s | Pregunta incómoda, contradicción o dato que choca. La pantalla **ya tiene algo** en el fotograma 0. Prohibido: «Hoy vamos a hablar», «¿Sabías que…?», «Hola». |
-| **Síguenos** | 2-4 s | Sello corto, sin parar la historia («Síguenos, que esto va contigo»). |
 | **Problema con protagonista** | 4-12 s | Le pasa a «TÚ» o a alguien concreto. Un dato, una imagen física. |
 | **Bucle abierto** | ~10 s | «Pero lo raro no es eso…», «Y aquí viene lo que nadie cuenta». |
 | **Escalada** | 12-25 s | 2-3 datos, cada uno más fuerte, cada uno con reacción del personaje. |
 | **Giro** | 25-35 s | La contradicción o la consecuencia poco conocida. Silencio de 0,4-0,6 s antes. |
-| **Final** | últimos 4-6 s | Dato que remata o pregunta A/B para comentar + «síguenos». Si es posible, que enlace con la primera frase (bucle). |
+| **Final** | últimos 4-6 s | Dato que remata + «síguenos» **dentro de la historia** (Piz pide ayuda o anuncia el próximo capítulo; nunca una pantalla publicitaria suelta). Si es posible, que enlace con la primera frase (bucle). |
+
+> Desde el 14/10/2026 cada vídeo es un episodio de la serie: ver [serie.md](serie.md) (acciones, cámara, luz, gags, sonido). Nada de cambios arbitrarios: cada movimiento aporta información, humor, emoción o curiosidad.
 
 - Duración objetivo: **25-45 s**. Una pizarra (escena) dura **≤ 9 s** y dentro pasa algo cada ≤ 2,5 s. Frases de **≤ 14 palabras**.
 - Cada cifra: fuente en pantalla (nota pequeña) y en el comentario fijado. Nunca redondear para exagerar.

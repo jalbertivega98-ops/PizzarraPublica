@@ -63,7 +63,7 @@ scenes = [
                plano("@no", "medio", "piz", 0.15)],
        luz=[{"at": "@Spoiler", "tipo": "foco", "sobre": "piz", "r": 380, "dur": 0.2}, {"at": "@no+0.6", "tipo": "normal"}],
        elements=[
-        piz(150, 0, 0.85, "ilusionado", entra="nada", objeto="hucha", pose="sostiene", acciones=[
+        piz(230, 0, 0.85, "ilusionado", entra="nada", objeto="hucha", pose="sostiene", acciones=[
             {"at": 0, "x": 330, "dur": 1.6}, {"at": "@fijo", "cara": "riendo"},
             {"at": "@ahorrando", "salta": True}, {"at": "@sueño", "objeto": None, "pose": "arriba", "cara": "ilusionado", "mira": "casa"},
             {"at": "@Spoiler", "cara": "preocupado", "pose": "manos_juntas", "mira": "camara"},
@@ -78,7 +78,7 @@ scenes = [
     # 2 · OBSTÁCULO 1: el precio le cae encima
     dict(id="precio", fondo="calle", animo="comico", trans="pan", footnote=base.CJE, lines=[
         V("Precio medio de un piso en España: 223.000 euros.", "normal"),
-    ], camara=[plano(0, "general", dur=0), plano("@223.000+0.6", "medio", "piz", 0.25),
+    ], camara=[plano(0, "general", dur=0), plano("@223.000+0.6", "medio", [440, 980], 0.25),
                plano("@euros+0.3", "general", dur=0.6)],
        elements=[
         edif("casa", 790, 0, 0.8, id="casa", cara="ilusionado", entra="nada", acciones=[{"at": "@223.000+0.7", "cara": "riendo"}]),
@@ -98,7 +98,7 @@ scenes = [
             {"at": 0, "x": 190, "dur": 1.1}, {"at": "@80", "cara": "riendo", "pose": "pulgar"},
             {"at": "@él", "take": True, "cara": "susto", "pose": None}]),
         rot("BANCO: 80 %", 600, 440, "@80", 104, "azul_claro", golpe=True, out="@resto"),
-        rot("TÚ: 20 % + GASTOS", 560, 440, "@resto", 86, C, golpe=True),
+        rot("TÚ: 20 % + GASTOS", 560, 1180, "@resto", 86, C, golpe=True),
     ]),
     # 4 · OBSTÁCULO 3: dentro del banco… y Hacienda
     dict(id="entrada", fondo="banco_dentro", animo="tension", trans="iris", footnote=base.CJE + "\nITP 2026: 4-10 % según comunidad", lines=[
@@ -113,12 +113,13 @@ scenes = [
                      {"at": "@66.900", "cara": "esceptica", "pose": "encoge", "mira": "piz"}]),
         piz(820, 0, 0.82, "ilusionado", entra="nada", objeto="hucha", pose="sostiene",
             acciones=[{"at": "@notaría", "cara": "preocupado"}, {"at": "@Hacienda", "take": True, "cara": "susto", "mira": "hacienda"},
-                      {"at": "@66.900", "cara": "susto", "mira": "camara", "tiembla": True},
+                      {"at": "@impuesto", "cara": "indignado", "mira": "banquero", "salta": True},
+                      {"at": "@66.900", "cara": "susto", "mira": "camara", "tiembla": True, "pose": "sostiene"},
                       {"at": "@20.000", "cara": "triste", "objeto": None, "pose": "caidos"}]),
         obj("cartel", 260, 430, "@Entrada", 0.7, props={"texto": "ENTRADA"}, entra="cae", dur=0.5),
         obj("cartel", 560, 430, "@notaría", 0.7, props={"texto": "+ NOTARÍA"}, entra="cae", dur=0.5),
         gags.aparece_hacienda("@Hacienda-0.2", 560),
-        rot("+ 22.300 €", 820, 430, "@22.300", 92, C, golpe=True),
+        rot("+ 22.300 €", 540, 600, "@22.300", 110, C, golpe=True, out="@66.900"),
         rot("66.900 €", 540, 600, "@66.900", 150, C, golpe=True, out="@20.000"),
         gags.dinero_vuela("@tiene", 900, 1080, 6),
         rot("TIENE 20.000 €", 540, 600, "@20.000", 92, "verde", golpe=True),
@@ -138,7 +139,7 @@ scenes = [
         edif("casa", 690, 0, 0.6, id="casa", cara="ilusionado", entra="nada", piernas=True,
              acciones=gags.casa_se_aleja("casa", [("@ahorra+0.3", 860), ("@sube+0.2", 1010)])
              + [{"at": "@12,5", "cara": "burla"}]),
-        rot("+12,5 %", 860, 470, "@12,5", 120, C, golpe=True, out="@25.000"),
+        rot("+12,5 %", 700, 470, "@12,5", 120, C, golpe=True, out="@25.000"),
         rot("+25.000 €", 600, 460, "@25.000", 140, C, golpe=True, fx=[{"at": "@ahorró", "do": "rodear"}]),
         rot("sus ahorros: 20.000 €", 330, 600, "@ahorró", 56, "blanco"),
     ]),
@@ -159,7 +160,7 @@ scenes = [
         obj("calculadora", 220, 730, "@hipoteca", 0.85, id="calc", props={"texto": "0"}, sfx="calculadora",
             acciones=[{"at": "@753", "props": {"texto": "753"}}]),
         rot("753 €/mes", 230, 940, "@753", 76, "verde", golpe=True),
-        obj("etiqueta", 840, 640, "@alquiler", 0.72, props={"texto": "1.176 €", "color": "rojo"}, entra="cae", dur=0.5, rot=6),
+        obj("etiqueta", 720, 640, "@alquiler", 0.72, props={"texto": "1.176 €", "color": "rojo"}, entra="cae", dur=0.5, rot=6),
         rot("ALQUILER", 840, 520, "@alquiler", 58, C),
         pj("sarcastica", 940, "@1.176+0.3", 0.45, "burla", entra="pop"),
     ]),
@@ -189,12 +190,14 @@ scenes = [
                plano("@salida", "general", dur=0.5), plano("@Síguenos", "medio", "piz", 0.4)],
        elements=[
         piz(150, 0, 0.75, "susto", entra="nada", pose=None,
-            acciones=[{"at": 0, "x": 760, "corre": True, "dur": 2.6}, {"at": "@753", "gira": True, "flip": True, "cara": "indignado"},
+            acciones=[{"at": 0, "x": 760, "corre": True, "dur": 2.6}, {"at": "@alquiler", "mira": "persigue", "take": True},
+                      {"at": "@753", "gira": True, "flip": True, "cara": "indignado"},
                       {"at": "@salida", "x": 540, "dur": 0.6, "cara": "pensativo", "pose": "piensa", "mira": "camara"},
                       {"at": "@Síguenos", "cara": "ilusionado", "pose": "ruega", "mira": "camara", "salta": True},
                       {"at": "@consigue", "pose": "saluda", "cara": "riendo"}]),
         gags.persecucion(0, "piz", "contrato", {"titulo": "ALQUILER", "hojas": 1}, x=-300, scale=0.65, offset=-340),
         rot("1.176 €/mes", 300, 470, "@1.176", 80, C, golpe=True, out="@salida"),
+        rot("753 €/mes", 780, 470, "@753", 80, "verde", golpe=True, out="@salida"),
         obj("cartel", 220, 470, "@PSOE", 0.85, props={"texto": "PSOE", "color": "psoe", "tinta": "blanco"}, golpe=True, hud=True),
         obj("cartel", 540, 430, "@PP", 0.85, props={"texto": "PP", "color": "pp", "tinta": "blanco"}, golpe=True, hud=True),
         obj("cartel", 860, 470, "@Vox", 0.85, props={"texto": "VOX", "color": "vox", "tinta": "blanco"}, golpe=True, hud=True),
@@ -205,7 +208,7 @@ scenes = [
 SB = dict(base.SB)
 SB.update(
     slug="compra2026_serie", title="Piz y la casa imposible", scenes=scenes, banda=True,
-    music_volume=0.2, scribble_volume=0.0, sfx_volume=1.0, end_hold=1.2,
+    music_volume=0.2, scribble_volume=0.0, sfx_volume=1.0, end_hold=0.9,
     caption=("🏠 Piz tiene trabajo fijo y 5 años ahorrando. El banco le dice que no.\n"
              "💶 Piso medio: 223.000 € · entrada + impuestos: 66.900 € (hasta 22.300 € de ITP)\n"
              "🏃 La casa corre más que él: +12,5 % en un año\n"

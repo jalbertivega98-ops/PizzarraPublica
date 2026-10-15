@@ -366,8 +366,7 @@
       },
       {
        "at": "@mar",
-       "x": 640,
-       "dur": 0.5
+       "mira": "der"
       },
       {
        "at": "@restringido",
@@ -410,9 +409,9 @@
     {
      "type": "objeto",
      "objeto": "cartel",
-     "x": 820,
-     "y": 980,
-     "scale": 0.8,
+     "x": 850,
+     "y": 1000,
+     "scale": 0.62,
      "at": "@restringido-0.2",
      "props": {
       "lineas": [
@@ -728,10 +727,10 @@
     {
      "type": "objeto",
      "objeto": "queso",
-     "x": 300,
-     "y": 1100,
-     "scale": 0.9,
-     "at": "@quesería-0.2",
+     "x": 400,
+     "y": 1120,
+     "scale": 0.8,
+     "at": "@quesería-0.3",
      "props": {
       "texto": "GAMONÉU",
       "cara": "riendo"

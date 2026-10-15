@@ -77,12 +77,12 @@ scenes = [
        elements=[
         cand("sanchez", 320, 0, 0.75, "ilusionado", entra="nada", acciones=[
             {"at": "@seguridad", "x": 520, "dur": 0.9}, {"at": "@patrullera", "mira": "der"},
-            {"at": "@mar", "x": 640, "dur": 0.5}, {"at": "@restringido", "take": True, "cara": "sorpresa"},
+            {"at": "@mar", "mira": "der"}, {"at": "@restringido", "take": True, "cara": "sorpresa"},
             {"at": "@Coste", "cara": "pensativo", "mira": "camara"},
             {"at": "@250.000", "pose": "encoge", "cara": "serio"}]),
         obj("coche", -300, SUELO - 90, "@agentes", 0.6, entra="nada", props={"color": "azul"},
             acciones=[{"at": "@agentes", "x": 1400, "dur": 2.4}]),
-        obj("cartel", 820, 980, "@restringido-0.2", 0.8, props={"lineas": ["NAVEGACIÓN", "RESTRINGIDA"], "color": "rojo", "tinta": "blanco"},
+        obj("cartel", 850, 1000, "@restringido-0.2", 0.62, props={"lineas": ["NAVEGACIÓN", "RESTRINGIDA"], "color": "rojo", "tinta": "blanco"},
             entra="cae", dur=0.5, sfx="golpe"),
         rot("+60 AGENTES", 540, 470, "@60", 110, "amarillo", golpe=True, out="@Coste"),
         rot("+ PATRULLERA", 540, 590, "@patrullera", 70, "blanco", out="@Coste"),
@@ -120,7 +120,7 @@ scenes = [
             {"at": "@Covadonga", "pose": "arriba", "cara": "riendo"}, {"at": "@Llanes", "salta": True},
             {"at": "@quesería", "mira": "queso", "pose": "punos", "cara": "sorpresa"},
             {"at": "@quesería+0.6", "take": True}, {"at": "@quesería+1.2", "cara": "riendo", "pose": "pulgar"}]),
-        obj("queso", 300, 1100, "@quesería-0.2", 0.9, id="queso", entra="cae", dur=0.5, props={"texto": "GAMONÉU", "cara": "riendo"}),
+        obj("queso", 400, 1120, "@quesería-0.3", 0.8, id="queso", entra="cae", dur=0.5, props={"texto": "GAMONÉU", "cara": "riendo"}),
         rot("BENIA DE ONÍS", 540, 470, "@Benia", 90, "amarillo", golpe=True, out="@200"),
         rot("200 VECINOS", 540, 470, "@200", 100, "amarillo", golpe=True, out="@Covadonga"),
         rot("COVADONGA · LLANES", 540, 470, "@Covadonga", 70, "amarillo"),

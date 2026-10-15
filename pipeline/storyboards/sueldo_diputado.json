@@ -1,0 +1,944 @@
+{
+ "slug": "sueldo_diputado",
+ "title": "¿Cuánto cobra un diputado?",
+ "series_tag": "TU DINERO, CON DATOS",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Congreso de los Diputados: régimen económico de los diputados, retribuciones 2026",
+  "INE: Encuesta Anual de Estructura Salarial 2024 (28/05/2026)",
+  "SMI 2026: Real Decreto 126/2026"
+ ],
+ "caption": "🏛️ Un diputado cobra en un año lo que el trabajador mediano gana en casi tres\n💶 Asignación: 3.367 €/mes · gastos (fuera de Madrid): 2.163 €/mes, sin IRPF\n📊 Total: 5.530 €/mes, unos 66.000 € al año\n🧑‍💼 Sueldo mediano (INE): 24.497 € → 2,7 años · SMI: 3,9 años\n⚖️ Los gastos compensan vivir lejos de casa: no son sueldo\n💬 ¿Mucho o poco?\n➡️ Próximo: la cesta de la compra · 🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Congreso de los Diputados, régimen económico 2026 (asignación 3.366,99 €/mes; indemnización 2.162,85 €/mes fuera de Madrid y 1.032,38 € en Madrid, exenta de IRPF; portavoz +3.197,41 €; Presidencia 14.330,84 €/mes, suma propia) · INE, Estructura Salarial 2024: mediana 24.497,17 € · SMI 2026 (RD 126/2026): 17.094 €. Cálculo con 12 pagas; el Congreso no publica el número de pagas (con 14 de asignación, 73.092 €). Diputado sin cargo, de fuera de Madrid. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PizarraPública",
+  "#Congreso",
+  "#Diputados",
+  "#Sueldos",
+  "#INE",
+  "#TuDinero",
+  "#Elecciones29N"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "calle",
+   "animo": "curioso",
+   "footnote": "Congreso de los Diputados, retribuciones 2026 · diputado sin cargo, de fuera de Madrid",
+   "lines": [
+    {
+     "text": "Un diputado cobra en un año lo que un trabajador normal tarda casi tres en ganar.",
+     "tono": "energia"
+    },
+    {
+     "text": "Y una parte, sin pagar IRPF.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@tres",
+     "plano": "abierto",
+     "sobre": "piz",
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 330,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "acciones": [],
+     "id": "congreso",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 330,
+     "y": 1340,
+     "scale": 0.6,
+     "at": "@diputado",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@año",
+       "pose": "pulgar"
+      },
+      {
+       "at": "@IRPF",
+       "cara": "riendo",
+       "salta": true
+      }
+     ],
+     "id": "diputado",
+     "entra": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1300,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@trabajador",
+       "x": 820,
+       "dur": 0.9
+      },
+      {
+       "at": "@tres",
+       "take": true,
+       "cara": "susto"
+      },
+      {
+       "at": "@IRPF",
+       "mira": "diputado",
+       "cara": "indignado"
+      }
+     ],
+     "id": "piz",
+     "entra": "nada"
+    },
+    {
+     "type": "rotulo",
+     "text": "1 AÑO",
+     "x": 330,
+     "y": 520,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@año",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "≈ 3 AÑOS",
+     "x": 800,
+     "y": 520,
+     "size": 100,
+     "color": "red",
+     "at": "@tres",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIN IRPF",
+     "x": 540,
+     "y": 700,
+     "size": 90,
+     "color": "verde",
+     "at": "@IRPF",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "nomina",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "pan",
+   "footnote": "Congreso de los Diputados, retribuciones 2026 · diputado sin cargo, de fuera de Madrid",
+   "lines": [
+    {
+     "text": "Su sueldo base, la asignación, son 3.367 euros al mes. La cobran todos.",
+     "tono": "normal"
+    },
+    {
+     "text": "Si es de fuera de Madrid, suma 2.163 para gastos. Total: 5.530 al mes.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@5.530",
+     "plano": "medio",
+     "sobre": "diputado",
+     "dur": 0.3,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@3.367",
+       "pose": "sostiene",
+       "objeto": "fajo",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@Madrid",
+       "mira": "der"
+      },
+      {
+       "at": "@2.163",
+       "salta": true,
+       "cara": "riendo"
+      },
+      {
+       "at": "@5.530",
+       "pose": "arriba",
+       "objeto": null
+      }
+     ],
+     "id": "diputado",
+     "entra": "izq"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calculadora",
+     "x": 800,
+     "y": 860,
+     "scale": 0.85,
+     "at": "@asignación",
+     "props": {
+      "texto": "3.367"
+     },
+     "acciones": [
+      {
+       "at": "@2.163",
+       "props": {
+        "texto": "+2.163"
+       },
+       "salta": true
+      },
+      {
+       "at": "@5.530",
+       "props": {
+        "texto": "5.530"
+       },
+       "salta": true
+      }
+     ],
+     "id": "calc",
+     "entra": "pop",
+     "sfx": "calculadora"
+    },
+    {
+     "type": "rotulo",
+     "text": "ASIGNACIÓN: 3.367 €",
+     "x": 600,
+     "y": 600,
+     "size": 74,
+     "color": "amarillo",
+     "at": "@3.367",
+     "golpe": true,
+     "out": "@Madrid",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "+ GASTOS: 2.163 €",
+     "x": 600,
+     "y": 600,
+     "size": 74,
+     "color": "verde",
+     "at": "@2.163",
+     "golpe": true,
+     "out": "@5.530",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "5.530 €/MES",
+     "x": 600,
+     "y": 600,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@5.530",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "efecto",
+     "efecto": "lluvia",
+     "objeto": "moneda",
+     "n": 10,
+     "x0": 150,
+     "x1": 500,
+     "at": "@5.530",
+     "vida": 1.8
+    }
+   ]
+  },
+  {
+   "id": "exento",
+   "fondo": "oficina",
+   "animo": "comico",
+   "trans": "iris",
+   "footnote": "Indemnización exenta de IRPF: art. 17.2.b Ley 35/2006 (según el Congreso)",
+   "lines": [
+    {
+     "text": "Y esos 2.163 de gastos están exentos: Hacienda no los toca.",
+     "tono": "sorpresa"
+    },
+    {
+     "text": "Son para pagarse el alojamiento y los viajes a Madrid.",
+     "tono": "normal",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@exentos",
+     "plano": "medio",
+     "sobre": "hacienda",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 280,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@exentos",
+       "pose": "pulgar",
+       "cara": "riendo"
+      },
+      {
+       "at": "@alojamiento",
+       "mira": "camara",
+       "cara": "normal"
+      }
+     ],
+     "id": "diputado",
+     "entra": "nada",
+     "pose": "sostiene",
+     "objeto": "billete"
+    },
+    {
+     "type": "personaje",
+     "quien": "hacienda",
+     "id": "hacienda",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.82,
+     "at": "@Hacienda-0.3",
+     "entra": "der",
+     "dur": 0.4,
+     "cara": "burla",
+     "pose": "sostiene",
+     "objeto": {
+      "tipo": "contrato",
+      "titulo": "IRPF",
+      "hojas": 1
+     },
+     "sfx": "kaching",
+     "acciones": [
+      {
+       "at": "@Hacienda+0.15",
+       "salta": true
+      }
+     ]
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¡NO!",
+     "x": 640,
+     "y": 820,
+     "at": "@toca",
+     "scale": 0.8,
+     "vida": 0.8
+    },
+    {
+     "type": "rotulo",
+     "text": "0 € DE IRPF",
+     "x": 600,
+     "y": 600,
+     "size": 100,
+     "color": "verde",
+     "at": "@exentos",
+     "golpe": true,
+     "out": "@alojamiento",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "ALOJAMIENTO + VIAJES",
+     "x": 600,
+     "y": 600,
+     "size": 72,
+     "color": "blanco",
+     "at": "@alojamiento",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "avion",
+     "x": 540,
+     "y": 960,
+     "scale": 0.6,
+     "at": "@viajes",
+     "props": {},
+     "acciones": [
+      {
+       "at": "@Madrid",
+       "sale": "der"
+      }
+     ],
+     "entra": "izq"
+    }
+   ]
+  },
+  {
+   "id": "piz",
+   "fondo": "calle",
+   "animo": "tension",
+   "trans": "pan",
+   "footnote": "INE, Encuesta de Estructura Salarial 2024 (mediana) · 12 pagas",
+   "lines": [
+    {
+     "text": "Piz cobra el sueldo mediano de España: 24.497 euros al año, según el INE.",
+     "tono": "normal"
+    },
+    {
+     "text": "El diputado, unos 66.000. A Piz le cuesta casi tres años.",
+     "tono": "sorpresa",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@tres",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.3,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 260,
+     "y": 1340,
+     "scale": 0.7,
+     "at": "@diputado",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@66.000",
+       "salta": true,
+       "cara": "ilusionado"
+      }
+     ],
+     "id": "diputado",
+     "entra": "izq",
+     "objeto": "saco",
+     "pose": "sostiene"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@24.497",
+       "salta": true
+      },
+      {
+       "at": "@66.000",
+       "mira": "diputado",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@tres",
+       "tropieza": true,
+       "objeto": null
+      }
+     ],
+     "id": "piz",
+     "entra": "der",
+     "objeto": "hucha",
+     "pose": "sostiene"
+    },
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 800,
+     "y": 600,
+     "scale": 0.7,
+     "at": "@cuesta",
+     "props": {},
+     "acciones": [],
+     "entra": "pop",
+     "velocidad": 4
+    },
+    {
+     "type": "rotulo",
+     "text": "24.497 €/AÑO",
+     "x": 800,
+     "y": 470,
+     "size": 74,
+     "color": "amarillo",
+     "at": "@24.497",
+     "golpe": true,
+     "out": "@cuesta",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "66.358 €/AÑO",
+     "x": 270,
+     "y": 470,
+     "size": 74,
+     "color": "verde",
+     "at": "@66.000",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "× 2,7",
+     "x": 800,
+     "y": 470,
+     "size": 120,
+     "color": "red",
+     "at": "@tres",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "pizon",
+   "fondo": "salon",
+   "animo": "triste",
+   "trans": "corte",
+   "footnote": "SMI 2026: 17.094 €/año (RD 126/2026)",
+   "lines": [
+    {
+     "text": "Y Pizón, con el sueldo mínimo, necesita casi cuatro.",
+     "tono": "remate"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@cuatro",
+     "plano": "medio",
+     "sobre": "pizon",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@mínimo-0.35",
+       "mira": "arriba",
+       "cara": "susto"
+      },
+      {
+       "at": "@mínimo+0.13",
+       "aplasta": true
+      },
+      {
+       "at": "@mínimo+0.80",
+       "cara": "confundido",
+       "mira": null
+      },
+      {
+       "at": "@cuatro+0.6",
+       "cara": "triste",
+       "pose": "caidos"
+      }
+     ],
+     "id": "pizon",
+     "entra": "izq"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "id": "precio_cae",
+     "x": 300,
+     "y": 1040,
+     "scale": 1.1,
+     "at": "@mínimo-0.5",
+     "dur": 0.9,
+     "entra": "cae",
+     "props": {
+      "texto": "3,9 AÑOS",
+      "color": "amarillo"
+     },
+     "rot": -3,
+     "acciones": [
+      {
+       "at": "@mínimo+0.13",
+       "y": 1230,
+       "dur": 0.06
+      },
+      {
+       "at": "@mínimo+0.75",
+       "y": 560,
+       "x": 340,
+       "dur": 0.45
+      }
+     ]
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¡PLAF!",
+     "x": 420,
+     "y": 1010,
+     "at": "@mínimo+0.13",
+     "scale": 0.9,
+     "vida": 0.8
+    },
+    {
+     "type": "rotulo",
+     "text": "17.094 €/AÑO",
+     "x": 700,
+     "y": 470,
+     "size": 74,
+     "color": "amarillo",
+     "at": "@Pizón",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "cargos",
+   "fondo": "rayos",
+   "animo": "comico",
+   "trans": "iris",
+   "footnote": "Congreso 2026: portavoz de grupo +3.197,41 €/mes · Presidencia 14.330,84 €/mes (suma propia)",
+   "lines": [
+    {
+     "text": "Y eso, sin cargos. Un portavoz suma 3.197 euros más al mes.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y la presidencia del Congreso pasa de 14.000.",
+     "tono": "sorpresa",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@14.000",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@portavoz",
+       "pose": "senala"
+      },
+      {
+       "at": "@14.000",
+       "take": true,
+       "cara": "sorpresa"
+      }
+     ],
+     "id": "profe",
+     "entra": "izq",
+     "pose": "senala_arriba"
+    },
+    {
+     "type": "personaje",
+     "quien": "sarcastica",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": "@cargos",
+     "cara": "burla",
+     "acciones": [
+      {
+       "at": "@3.197",
+       "pose": "jarras"
+      },
+      {
+       "at": "@14.000",
+       "salta": true,
+       "cara": "riendo"
+      }
+     ],
+     "id": "sarcastica",
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "grafica",
+     "x": 560,
+     "y": 900,
+     "scale": 0.75,
+     "at": "@portavoz",
+     "props": {
+      "valores": [
+       1,
+       1.6,
+       4.3
+      ],
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "PORTAVOZ: +3.197 €",
+     "x": 560,
+     "y": 520,
+     "size": 72,
+     "color": "amarillo",
+     "at": "@3.197",
+     "golpe": true,
+     "out": "@presidencia",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "PRESIDENCIA: 14.331 €",
+     "x": 560,
+     "y": 520,
+     "size": 72,
+     "color": "red",
+     "at": "@14.000",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Con 14 pagas de asignación serían 73.092 €/año (el Congreso no publica el nº de pagas)",
+   "lines": [
+    {
+     "text": "Ojo: los gastos no son sueldo, compensan vivir lejos de casa.",
+     "tono": "normal"
+    },
+    {
+     "text": "¿Te parece mucho o poco? Te leemos. Y síguenos: la próxima, la cesta de la compra.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@síguenos",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 280,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@compensan",
+       "pose": "senala",
+       "mira": "piz"
+      },
+      {
+       "at": "@poco",
+       "mira": "camara",
+       "cara": "pensativo"
+      }
+     ],
+     "id": "profe",
+     "entra": "nada",
+     "pose": "senala_arriba"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 790,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@sueldo",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@mucho",
+       "pose": "encoge",
+       "cara": "confundido"
+      },
+      {
+       "at": "@leemos",
+       "pose": "senala",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@compra",
+       "salta": true
+      }
+     ],
+     "id": "piz",
+     "entra": "nada"
+    },
+    {
+     "type": "rotulo",
+     "text": "GASTOS ≠ SUELDO",
+     "x": 540,
+     "y": 470,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@Ojo",
+     "golpe": true,
+     "out": "@mucho",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "¿MUCHO O POCO?",
+     "x": 540,
+     "y": 470,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@mucho",
+     "golpe": true,
+     "out": "@síguenos",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 470,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@compra",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.4,
+  "titulo": "¿Cuánto cobra un diputado?",
+  "capitulo": null
+ }
+}

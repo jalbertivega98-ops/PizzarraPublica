@@ -53,6 +53,8 @@ PERSONAJES = {
     "abascal": dict(nombre="Santiago Abascal", papel="Candidato de Vox", cara="normal", marco="marco", acento="vox",
                     pelo=((50, 44, 44), "corto"), barba=(60, 52, 52), chapa=("ABASCAL", "vox"), zapatilla="verde_osc",
                     garabatos=()),
+    "diputado": dict(nombre="Pizarra diputada", papel="Un diputado cualquiera (sin partido)", cara="normal", marco="marco_oscuro",
+                     acento="gris", corbata="tinta", chapa=("DIPUTADO", "gris"), zapatilla="negro", garabatos=("euro",)),
     "estafador": dict(nombre="El estafador", papel="Se hace pasar por tu banco", cara="burla", marco="marco_oscuro",
                       acento="gris", antifaz=True, corbata="tinta", garabatos=("euro",), zapatilla="negro"),
 }

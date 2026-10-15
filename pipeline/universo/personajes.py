@@ -55,6 +55,14 @@ PERSONAJES = {
                     garabatos=()),
     "diputado": dict(nombre="Pizarra diputada", papel="Un diputado cualquiera (sin partido)", cara="normal", marco="marco_oscuro",
                      acento="gris", corbata="tinta", chapa=("DIPUTADO", "gris"), zapatilla="negro", garabatos=("euro",)),
+    # caso Diputación de Badajoz (2026): sin caricatura, solo la chapa con el nombre y sin colores de partido
+    "david": dict(nombre="David Sánchez", papel="Hermano del presidente del Gobierno", cara="normal", marco="marco", acento="gris",
+                  pelo=((70, 62, 60), "corto"), chapa=("DAVID S.", "gris"), zapatilla="negro", garabatos=()),
+    "gallardo": dict(nombre="Miguel Ángel Gallardo", papel="Expresidente de la Diputación de Badajoz", cara="normal", marco="marco_oscuro",
+                     acento="gris", pelo=((222, 222, 226), "canoso"), corbata="tinta", chapa=("GALLARDO", "gris"), zapatilla="negro",
+                     garabatos=()),
+    "jueza": dict(nombre="La jueza", papel="Instruye la causa", cara="serio", marco="marco_oscuro", acento="gris", gafas="cuadradas",
+                  melena=True, chapa=("JUEZA", "tinta"), zapatilla="negro", garabatos=()),
     "estafador": dict(nombre="El estafador", papel="Se hace pasar por tu banco", cara="burla", marco="marco_oscuro",
                       acento="gris", antifaz=True, corbata="tinta", garabatos=("euro",), zapatilla="negro"),
 }

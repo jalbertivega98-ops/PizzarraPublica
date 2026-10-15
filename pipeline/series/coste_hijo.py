@@ -12,7 +12,7 @@ Matiz: ayudas autonómicas, escuelas 0-3 gratuitas, cheque guardería y mínimos
 """
 from _tu_dinero import *  # noqa: F401,F403
 
-STC = "Save the Children, «El coste de la crianza 2024» (precios de 2024)"
+STC = "Save the Children, coste de la crianza 2024"
 
 
 def peque(x, at=0.0, cara="ilusionado", acciones=(), scale=0.42, **kw):
@@ -32,7 +32,7 @@ scenes = [
         rot("758 €/MES", 540, 500, "@758", 110, C, golpe=True),
         rot("¿Y EL ESTADO?", 540, 640, "@Estado", 84, "amarillo", golpe=True),
     ]),
-    dict(id="bebe", fondo="salon", animo="alegre", trans="pan", footnote=STC + " · deducción por maternidad (art. 81 LIRPF)", lines=[
+    dict(id="bebe", fondo="salon", animo="alegre", trans="pan", footnote="Save the Children 2024 · deducción por maternidad (art. 81 LIRPF)", lines=[
         V("Un bebé: 604 al mes.", "normal"),
         V("Si la madre trabaja, Hacienda le da 100: la deducción por maternidad.", "normal", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@maternidad", "medio", "hacienda", 0.3, aire=200)],
@@ -44,7 +44,7 @@ scenes = [
         rot("BEBÉ: 604 €/MES", 600, 480, "@604", 84, C, golpe=True, out="@100"),
         rot("− 100 €", 600, 480, "@100", 110, "verde", golpe=True),
     ]),
-    dict(id="capi", fondo="oficina", animo="curioso", trans="iris", footnote="CAPI (Ley 19/2021): 115 €/mes a menores de 3 años, solo rentas bajas · cálculo propio", lines=[
+    dict(id="capi", fondo="oficina", animo="curioso", trans="iris", footnote="CAPI (Ley 19/2021): 115 €/mes (<3 años), rentas bajas · cálculo propio", lines=[
         V("Si la familia tiene poca renta, suma el complemento de infancia: 115 euros.", "normal"),
         V("Aun así, le quedan 389 por pagar.", "remate", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@389", "medio", "pizon", 0.3, aire=200)],
@@ -54,10 +54,10 @@ scenes = [
             {"at": "@389", "tiembla": True, "cara": "preocupado"}]),
         obj("calculadora", 800, 860, "@complemento", 0.85, id="calc", props={"texto": "604"}, entra="pop", sfx="calculadora",
             acciones=[{"at": "@115", "props": {"texto": "-215"}, "salta": True}, {"at": "@389", "props": {"texto": "389"}, "salta": True}]),
-        rot("+ 115 € (CAPI)", 600, 480, "@115", 84, "verde", golpe=True, out="@389"),
-        rot("QUEDAN 389 €", 600, 480, "@389", 96, C, golpe=True),
+        rot("+ 115 € (CAPI)", 540, 460, "@115", 84, "verde", golpe=True, out="@389"),
+        rot("QUEDAN 389 €", 520, 460, "@389", 96, C, golpe=True),
     ]),
-    dict(id="giro", fondo="rayos", animo="tension", musica="corte", trans="iris", footnote=STC + " · 7-12 años: 812 €/mes", lines=[
+    dict(id="giro", fondo="rayos", animo="tension", musica="corte", trans="iris", footnote="Save the Children 2024 · 7-12 años: 812 €/mes", lines=[
         V("Pero a los tres años, la deducción se acaba.", "sorpresa"),
         V("Con siete, cuesta 812. Y una familia de renta media no recibe ni un euro al mes.", "remate", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@euro", "medio", "piz", 0.3, aire=220)],
@@ -70,7 +70,7 @@ scenes = [
         rot("7 AÑOS: 812 €/MES", 540, 480, "@812", 84, "amarillo", golpe=True, out="@euro"),
         rot("AYUDA: 0 €", 540, 480, "@euro", 110, C, golpe=True),
     ]),
-    dict(id="baja", fondo="oficina", animo="triste", trans="pan", footnote="CAPI 6-18 años: 57,50 €/mes · cálculo propio sobre 812 €", lines=[
+    dict(id="baja", fondo="oficina", animo="triste", trans="pan", footnote="CAPI 6-18 años: 57,50 €/mes · cálculo propio", lines=[
         V("Con renta baja, 57,50. Un 7 % de lo que cuesta.", "normal"),
     ], camara=[plano(0, "general", dur=0), plano("@7", "medio", "pizon", 0.3, aire=200)],
        elements=[
@@ -79,7 +79,7 @@ scenes = [
         obj("moneda", 780, 820, "@57,50", 0.7, entra="cae"),
         rot("57,50 € = 7 %", 600, 480, "@57,50", 96, "amarillo", golpe=True),
     ]),
-    dict(id="matiz", fondo="oficina", animo="curioso", trans="pan", footnote="No incluye ayudas autonómicas, guarderías gratuitas ni mínimos del IRPF", lines=[
+    dict(id="matiz", fondo="oficina", animo="curioso", trans="pan", footnote="Sin ayudas autonómicas, guarderías gratuitas ni IRPF", lines=[
         V("Ojo: hay ayudas de cada comunidad, guarderías gratis y rebajas en la renta que no son un pago al mes.", "normal"),
     ], camara=[plano(0, "general", dur=0), plano("@mes", "medio", "profe", 0.3, aire=200)],
        elements=[

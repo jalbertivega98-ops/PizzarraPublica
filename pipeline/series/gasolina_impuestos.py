@@ -10,7 +10,7 @@ El IVA (21 %) se aplica sobre el precio más el impuesto especial. Canarias, Ceu
 """
 from _tu_dinero import *  # noqa: F401,F403
 
-FN = "Comisión Europea, Weekly Oil Bulletin 05/10/2026 · gasolina 95 · cálculo propio"
+FN = "Weekly Oil Bulletin (CE) 05/10/2026 · gasolina 95 · cálculo propio"
 
 scenes = [
     dict(id="gancho", fondo="calle", animo="curioso", footnote=FN, lines=[
@@ -35,8 +35,8 @@ scenes = [
         obj("calculadora", 800, 860, "@litro", 0.8, id="calc", props={"texto": "1,85"}, entra="pop", sfx="calculadora",
             acciones=[{"at": "@27", "props": {"texto": "-0,27"}, "salta": True}, {"at": "@IVA", "props": {"texto": "-0,32"}, "salta": True}]),
         rot("1,85 €/LITRO", 600, 470, "@1,85", 90, "amarillo", golpe=True, out="@27"),
-        rot("ESPECIAL: 0,27 €", 600, 470, "@27", 76, C, golpe=True),
-        rot("IVA: 0,32 €", 600, 580, "@IVA", 76, C, golpe=True),
+        rot("ESPECIAL: 0,27 €", 540, 450, "@27", 76, C, golpe=True),
+        rot("IVA: 0,32 €", 540, 560, "@IVA", 76, C, golpe=True),
     ]),
     dict(id="doble", fondo="rayos", animo="comico", musica="corte", trans="iris", footnote="Ley del IVA: la base incluye los impuestos especiales", lines=[
         V("Y sí: el IVA se cobra también sobre el impuesto.", "sorpresa"),
@@ -46,10 +46,10 @@ scenes = [
         quien("sarcastica", 540, 0, 0.8, "burla", entra="pop", acciones=[
             {"at": "@también", "take": True, "cara": "sorpresa"}, {"at": "@Impuesto", "pose": "jarras", "cara": "esceptica"},
             {"at": "@impuesto#2", "salta": True, "cara": "riendo"}]),
-        rot("IVA SOBRE IMPUESTO", 540, 500, "@también", 80, C, golpe=True),
-        pum("¡DOBLE!", 780, 800, "@impuesto#2"),
+        rot("IVA SOBRE IMPUESTO", 540, 470, "@también", 80, C, golpe=True),
+        pum("¡DOBLE!", 800, 1150, "@impuesto#2"),
     ]),
-    dict(id="rebaja", fondo="calle", animo="tension", trans="pan", footnote="RDL 25/2026: −20 cts/l en octubre · sin rebaja, estimación con el tipo ordinario", lines=[
+    dict(id="rebaja", fondo="calle", animo="tension", trans="pan", footnote="RDL 25/2026: −20 cts/l en octubre · sin rebaja: estimación", lines=[
         V("En octubre, el impuesto especial baja 20 céntimos.", "normal"),
         V("Sin esa rebaja, serían unos 24 euros de cada 60.", "sorpresa", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@24", "abierto", dur=0.4)],
@@ -61,7 +61,7 @@ scenes = [
         rot("OCTUBRE: −20 CTS", 540, 480, "@20", 84, "verde", golpe=True, out="@Sin"),
         rot("SIN REBAJA: 24 €", 540, 480, "@24", 84, C, golpe=True),
     ]),
-    dict(id="europa", fondo={"tipo": "playa", "variante": "montana"}, animo="alegre", trans="iris", footnote="Weekly Oil Bulletin 05/10/2026 · impuestos en 60 € de gasolina 95 · cálculo propio", lines=[
+    dict(id="europa", fondo={"tipo": "playa", "variante": "montana"}, animo="alegre", trans="iris", footnote="Weekly Oil Bulletin 05/10/2026 · impuestos en 60 € · cálculo propio", lines=[
         V("En Francia, de esos 60, casi 29 son impuestos. En Alemania o Portugal, unos 28.", "normal"),
     ], camara=[plano(0, "general", dur=0), plano("@Portugal", "abierto", dur=0.4)],
        elements=[
@@ -73,7 +73,7 @@ scenes = [
         etq("ALEMANIA: 27,68 €", 760, 820, "@Alemania", "amarillo"),
         etq("PORTUGAL: 28,14 €", 760, 1000, "@Portugal", "verde"),
     ]),
-    dict(id="matiz", fondo="oficina", animo="curioso", trans="pan", footnote="RDL 25/2026: −13 cts en noviembre y −6 en diciembre · Canarias, Ceuta y Melilla: otros tributos", lines=[
+    dict(id="matiz", fondo="oficina", animo="curioso", trans="pan", footnote="RDL 25/2026: −13 cts en noviembre y −6 en diciembre", lines=[
         V("Ojo: en noviembre la rebaja es de 13 céntimos, y en diciembre de 6.", "normal"),
         V("En Canarias, Ceuta y Melilla, el sistema es otro.", "normal", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@Canarias", "medio", "profe", 0.3, aire=200)],

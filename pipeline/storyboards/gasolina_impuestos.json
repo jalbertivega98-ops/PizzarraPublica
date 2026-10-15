@@ -36,7 +36,7 @@
    "id": "gancho",
    "fondo": "calle",
    "animo": "curioso",
-   "footnote": "Comisión Europea, Weekly Oil Bulletin 05/10/2026 · gasolina 95 · cálculo propio",
+   "footnote": "Weekly Oil Bulletin (CE) 05/10/2026 · gasolina 95 · cálculo propio",
    "lines": [
     {
      "text": "Echas 60 euros de gasolina: 19 se los queda Hacienda.",
@@ -152,7 +152,7 @@
    "fondo": "oficina",
    "animo": "curioso",
    "trans": "pan",
-   "footnote": "Comisión Europea, Weekly Oil Bulletin 05/10/2026 · gasolina 95 · cálculo propio",
+   "footnote": "Weekly Oil Bulletin (CE) 05/10/2026 · gasolina 95 · cálculo propio",
    "lines": [
     {
      "text": "El litro, 1,85. De eso, 27 céntimos son impuesto especial y 32, IVA.",
@@ -247,8 +247,8 @@
     {
      "type": "rotulo",
      "text": "ESPECIAL: 0,27 €",
-     "x": 600,
-     "y": 470,
+     "x": 540,
+     "y": 450,
      "size": 76,
      "color": "red",
      "at": "@27",
@@ -258,8 +258,8 @@
     {
      "type": "rotulo",
      "text": "IVA: 0,32 €",
-     "x": 600,
-     "y": 580,
+     "x": 540,
+     "y": 560,
      "size": 76,
      "color": "red",
      "at": "@IVA",
@@ -334,7 +334,7 @@
      "type": "rotulo",
      "text": "IVA SOBRE IMPUESTO",
      "x": 540,
-     "y": 500,
+     "y": 470,
      "size": 80,
      "color": "red",
      "at": "@también",
@@ -345,8 +345,8 @@
      "type": "efecto",
      "efecto": "pum",
      "text": "¡DOBLE!",
-     "x": 780,
-     "y": 800,
+     "x": 800,
+     "y": 1150,
      "at": "@impuesto#2",
      "scale": 0.75,
      "vida": 0.8
@@ -358,7 +358,7 @@
    "fondo": "calle",
    "animo": "tension",
    "trans": "pan",
-   "footnote": "RDL 25/2026: −20 cts/l en octubre · sin rebaja, estimación con el tipo ordinario",
+   "footnote": "RDL 25/2026: −20 cts/l en octubre · sin rebaja: estimación",
    "lines": [
     {
      "text": "En octubre, el impuesto especial baja 20 céntimos.",
@@ -457,7 +457,7 @@
    },
    "animo": "alegre",
    "trans": "iris",
-   "footnote": "Weekly Oil Bulletin 05/10/2026 · impuestos en 60 € de gasolina 95 · cálculo propio",
+   "footnote": "Weekly Oil Bulletin 05/10/2026 · impuestos en 60 € · cálculo propio",
    "lines": [
     {
      "text": "En Francia, de esos 60, casi 29 son impuestos. En Alemania o Portugal, unos 28.",
@@ -575,7 +575,7 @@
    "fondo": "oficina",
    "animo": "curioso",
    "trans": "pan",
-   "footnote": "RDL 25/2026: −13 cts en noviembre y −6 en diciembre · Canarias, Ceuta y Melilla: otros tributos",
+   "footnote": "RDL 25/2026: −13 cts en noviembre y −6 en diciembre",
    "lines": [
     {
      "text": "Ojo: en noviembre la rebaja es de 13 céntimos, y en diciembre de 6.",
@@ -675,7 +675,7 @@
    "fondo": "calle",
    "animo": "final",
    "trans": "iris",
-   "footnote": "Comisión Europea, Weekly Oil Bulletin 05/10/2026 · gasolina 95 · cálculo propio",
+   "footnote": "Weekly Oil Bulletin (CE) 05/10/2026 · gasolina 95 · cálculo propio",
    "lines": [
     {
      "text": "¿Cuánto te gastas al mes? Te leemos.",

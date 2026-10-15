@@ -35,7 +35,7 @@
    "id": "gancho",
    "fondo": "calle",
    "animo": "curioso",
-   "footnote": "INE, Estadística de Migraciones 2024 (definitiva, 11/12/2025) · españoles de 20 a 39 años",
+   "footnote": "INE, Estadística de Migraciones 2024 · españoles de 20 a 39 años",
    "lines": [
     {
      "text": "En 2024 se fueron de España casi 50.000 españoles de entre 20 y 39 años.",
@@ -148,7 +148,7 @@
    },
    "animo": "alegre",
    "trans": "pan",
-   "footnote": "INE, Estadística de Migraciones 2024 (definitiva, 11/12/2025) · destinos, todas las edades",
+   "footnote": "INE, Estadística de Migraciones 2024 · destinos, todas las edades",
    "lines": [
     {
      "text": "Primero, Francia: 16.353. Después, Reino Unido, Estados Unidos y Alemania.",
@@ -212,64 +212,48 @@
      "id": "pizon"
     },
     {
-     "type": "objeto",
-     "objeto": "etiqueta",
-     "x": 740,
-     "y": 560,
-     "scale": 0.75,
+     "type": "rotulo",
+     "text": "1. FRANCIA: 16.353",
+     "x": 600,
+     "y": 460,
+     "size": 66,
+     "color": "blanco",
      "at": "@Francia",
-     "props": {
-      "texto": "1. FRANCIA: 16.353",
-      "color": "blanco"
-     },
-     "acciones": [],
-     "entra": "pop",
-     "sfx": "kaching"
+     "golpe": true,
+     "hud": true
     },
     {
-     "type": "objeto",
-     "objeto": "etiqueta",
-     "x": 740,
-     "y": 720,
-     "scale": 0.75,
+     "type": "rotulo",
+     "text": "2. REINO UNIDO: 15.349",
+     "x": 600,
+     "y": 550,
+     "size": 66,
+     "color": "amarillo",
      "at": "@Reino",
-     "props": {
-      "texto": "2. REINO UNIDO: 15.349",
-      "color": "amarillo"
-     },
-     "acciones": [],
-     "entra": "pop",
-     "sfx": "kaching"
+     "golpe": true,
+     "hud": true
     },
     {
-     "type": "objeto",
-     "objeto": "etiqueta",
-     "x": 740,
-     "y": 880,
-     "scale": 0.75,
+     "type": "rotulo",
+     "text": "3. EE. UU.: 13.185",
+     "x": 600,
+     "y": 640,
+     "size": 66,
+     "color": "blanco",
      "at": "@Unidos",
-     "props": {
-      "texto": "3. EE. UU.: 13.185",
-      "color": "blanco"
-     },
-     "acciones": [],
-     "entra": "pop",
-     "sfx": "kaching"
+     "golpe": true,
+     "hud": true
     },
     {
-     "type": "objeto",
-     "objeto": "etiqueta",
-     "x": 740,
-     "y": 1040,
-     "scale": 0.75,
+     "type": "rotulo",
+     "text": "4. ALEMANIA: 12.509",
+     "x": 600,
+     "y": 730,
+     "size": 66,
+     "color": "amarillo",
      "at": "@Alemania",
-     "props": {
-      "texto": "4. ALEMANIA: 12.509",
-      "color": "amarillo"
-     },
-     "acciones": [],
-     "entra": "pop",
-     "sfx": "kaching"
+     "golpe": true,
+     "hud": true
     }
    ]
   },
@@ -279,7 +263,7 @@
    "animo": "comico",
    "musica": "corte",
    "trans": "iris",
-   "footnote": "INE, Estadística de Migraciones 2024 (definitiva, 11/12/2025) · 49.476 de 137.719 nacieron fuera",
+   "footnote": "INE 2024 · 49.476 de 137.719 nacieron fuera",
    "lines": [
     {
      "text": "Pero ojo: un tercio de los que se van nacieron fuera.",
@@ -371,7 +355,7 @@
    "fondo": "calle",
    "animo": "tension",
    "trans": "pan",
-   "footnote": "INE, Estadística de Migraciones 2024 (definitiva, 11/12/2025) · saldo de españoles nacidos en España",
+   "footnote": "INE, Estadística de Migraciones 2024 · saldo de españoles nacidos en España",
    "lines": [
     {
      "text": "Solo los nacidos aquí: se fueron 88.243 y volvieron muchos menos.",
@@ -475,7 +459,7 @@
    "fondo": "salon",
    "animo": "triste",
    "trans": "iris",
-   "footnote": "INE, Estadística de Migraciones 2024 (definitiva, 11/12/2025) · nacidos en España de 25 a 34 años",
+   "footnote": "INE, Estadística de Migraciones 2024 · nacidos en España de 25 a 34 años",
    "lines": [
     {
      "text": "El grupo que más se va: de 25 a 34 años. 17.792 nacidos en España.",
@@ -537,17 +521,6 @@
      "id": "piz"
     },
     {
-     "type": "objeto",
-     "objeto": "llave",
-     "x": 780,
-     "y": 800,
-     "scale": 0.7,
-     "at": "@grupo",
-     "props": {},
-     "acciones": [],
-     "entra": "pop"
-    },
-    {
      "type": "rotulo",
      "text": "25-34 AÑOS",
      "x": 600,
@@ -577,7 +550,7 @@
    "fondo": "oficina",
    "animo": "curioso",
    "trans": "pan",
-   "footnote": "El Padrón infravalora las salidas · datos de 2024 (los de 2025, en diciembre de 2026)",
+   "footnote": "El Padrón infravalora las salidas · datos de 2024",
    "lines": [
     {
      "text": "Y seguramente son más: muchos no se dan de baja en el padrón.",
@@ -659,7 +632,7 @@
    "fondo": "calle",
    "animo": "final",
    "trans": "iris",
-   "footnote": "INE, Estadística de Migraciones 2024 (definitiva, 11/12/2025)",
+   "footnote": "INE, Estadística de Migraciones 2024",
    "lines": [
     {
      "text": "¿Tienes a alguien fuera? Te leemos.",

@@ -37,7 +37,7 @@
    "id": "gancho",
    "fondo": "salon",
    "animo": "curioso",
-   "footnote": "Cálculo propio: factura tipo PVPC sep 2026 (FACUA, 104,31 €) · peajes y cargos 2026",
+   "footnote": "Cálculo propio: factura tipo PVPC sep 2026 (FACUA, 104,31 €)",
    "lines": [
     {
      "text": "De cada 100 euros de tu factura de la luz, unos 45 no son luz.",
@@ -146,7 +146,7 @@
    "fondo": "calle",
    "animo": "alegre",
    "trans": "pan",
-   "footnote": "Cálculo propio: factura tipo PVPC sep 2026 (FACUA, 104,31 €) · peajes y cargos 2026",
+   "footnote": "Cálculo propio: factura tipo PVPC sep 2026 (FACUA, 104,31 €)",
    "lines": [
     {
      "text": "La energía que gastas, con el margen de la comercializadora: unos 55.",
@@ -224,7 +224,7 @@
    "fondo": "oficina",
    "animo": "tension",
    "trans": "iris",
-   "footnote": "Peajes (CNMC) y cargos (Ministerio) 2.0TD 2026 · reparto estimado",
+   "footnote": "Peajes (CNMC) y cargos 2.0TD 2026 · reparto estimado",
    "lines": [
     {
      "text": "Los cables que la traen a casa: 13.",
@@ -289,34 +289,26 @@
      "id": "pizon"
     },
     {
-     "type": "objeto",
-     "objeto": "etiqueta",
-     "x": 760,
-     "y": 660,
-     "scale": 0.75,
+     "type": "rotulo",
+     "text": "PEAJES: 13 €",
+     "x": 600,
+     "y": 470,
+     "size": 84,
+     "color": "amarillo",
      "at": "@13",
-     "props": {
-      "texto": "PEAJES: 13 €",
-      "color": "amarillo"
-     },
-     "acciones": [],
-     "entra": "pop",
-     "sfx": "kaching"
+     "golpe": true,
+     "hud": true
     },
     {
-     "type": "objeto",
-     "objeto": "etiqueta",
-     "x": 760,
-     "y": 880,
-     "scale": 0.75,
+     "type": "rotulo",
+     "text": "CARGOS: 10 €",
+     "x": 600,
+     "y": 580,
+     "size": 84,
+     "color": "blanco",
      "at": "@10",
-     "props": {
-      "texto": "CARGOS: 10 €",
-      "color": "blanco"
-     },
-     "acciones": [],
-     "entra": "pop",
-     "sfx": "kaching"
+     "golpe": true,
+     "hud": true
     }
    ]
   },
@@ -325,7 +317,7 @@
    "fondo": "oficina",
    "animo": "comico",
    "trans": "pan",
-   "footnote": "IVA 21 % · impuesto eléctrico 5,11 % · alquiler de contador 0,81 €/mes",
+   "footnote": "IVA 21 % · impuesto eléctrico 5,11 % · contador 0,81 €/mes",
    "lines": [
     {
      "text": "Y Hacienda: 17 de IVA y 4 del impuesto eléctrico.",
@@ -462,7 +454,7 @@
    "animo": "comico",
    "musica": "corte",
    "trans": "iris",
-   "footnote": "RDL 7/2026: IVA 10 % e IEE 0,5 % de marzo a mayo · desde junio, 21 % y 5,11 %",
+   "footnote": "RDL 7/2026: IVA 10 % de marzo a mayo · desde junio, 21 %",
    "lines": [
     {
      "text": "En primavera pagabas menos: el IVA de la luz bajó al 10 %.",
@@ -567,7 +559,7 @@
    "fondo": "oficina",
    "animo": "curioso",
    "trans": "pan",
-   "footnote": "Estimación propia, no dato oficial de la CNMC · mercado libre: estructura distinta",
+   "footnote": "Estimación propia, no dato oficial de la CNMC",
    "lines": [
     {
      "text": "Ojo: es una factura tipo de septiembre. Cada mes cambia, porque la energía sigue al mercado.",
@@ -656,7 +648,7 @@
    "fondo": "salon",
    "animo": "final",
    "trans": "iris",
-   "footnote": "Cálculo propio: factura tipo PVPC sep 2026 (FACUA, 104,31 €) · peajes y cargos 2026",
+   "footnote": "Cálculo propio: factura tipo PVPC sep 2026 (FACUA, 104,31 €)",
    "lines": [
     {
      "text": "¿Miras tu factura? Te leemos.",

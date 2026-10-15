@@ -10,7 +10,7 @@ Fuente: INE, Estadística de Migraciones y Cambios de Residencia 2024 (definitiv
 """
 from _tu_dinero import *  # noqa: F401,F403
 
-INE = "INE, Estadística de Migraciones 2024 (definitiva, 11/12/2025)"
+INE = "INE, Estadística de Migraciones 2024"
 
 scenes = [
     dict(id="gancho", fondo="calle", animo="curioso", footnote=INE + " · españoles de 20 a 39 años", lines=[
@@ -33,12 +33,12 @@ scenes = [
         quien("pizon", 280, 0, 0.72, "ilusionado", entra="izq", objeto="saco", pose="sostiene", acciones=[
             {"at": 0.9, "mira": "der"}, {"at": "@Francia", "salta": True, "cara": "riendo"}, {"at": "@16.353", "pose": "arriba"}, {"at": "@Reino", "mira": "der"},
             {"at": "@Unidos", "cara": "sorpresa"}, {"at": "@Alemania", "pose": "arriba", "objeto": None}]),
-        etq("1. FRANCIA: 16.353", 740, 560, "@Francia", "blanco"),
-        etq("2. REINO UNIDO: 15.349", 740, 720, "@Reino", "amarillo"),
-        etq("3. EE. UU.: 13.185", 740, 880, "@Unidos", "blanco"),
-        etq("4. ALEMANIA: 12.509", 740, 1040, "@Alemania", "amarillo"),
+        rot("1. FRANCIA: 16.353", 600, 460, "@Francia", 66, "blanco", golpe=True),
+        rot("2. REINO UNIDO: 15.349", 600, 550, "@Reino", 66, "amarillo", golpe=True),
+        rot("3. EE. UU.: 13.185", 600, 640, "@Unidos", 66, "blanco", golpe=True),
+        rot("4. ALEMANIA: 12.509", 600, 730, "@Alemania", 66, "amarillo", golpe=True),
     ]),
-    dict(id="nacidos", fondo="rayos", animo="comico", musica="corte", trans="iris", footnote=INE + " · 49.476 de 137.719 nacieron fuera", lines=[
+    dict(id="nacidos", fondo="rayos", animo="comico", musica="corte", trans="iris", footnote="INE 2024 · 49.476 de 137.719 nacieron fuera", lines=[
         V("Pero ojo: un tercio de los que se van nacieron fuera.", "sorpresa"),
         V("Españoles nacionalizados que vuelven a su país o se mudan a otro.", "normal", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@tercio", "medio", "profe", 0.3, aire=220)],
@@ -67,11 +67,10 @@ scenes = [
        elements=[
         quien("piz", 320, 0, 0.75, "normal", entra="nada", objeto="saco", pose="sostiene", acciones=[
             {"at": "@25", "mira": "camara"}, {"at": "@34", "salta": True}, {"at": "@nacidos", "mira": "camara", "cara": "pensativo"}, {"at": "@España", "tiembla": True}, {"at": "@17.792", "cara": "triste", "pose": "caidos", "objeto": None}]),
-        obj("llave", 780, 800, "@grupo", 0.7, entra="pop"),
         rot("25-34 AÑOS", 600, 480, "@25", 96, "amarillo", golpe=True, out="@17.792"),
         rot("17.792", 600, 480, "@17.792", 120, C, golpe=True),
     ]),
-    dict(id="padron", fondo="oficina", animo="curioso", trans="pan", footnote="El Padrón infravalora las salidas · datos de 2024 (los de 2025, en diciembre de 2026)", lines=[
+    dict(id="padron", fondo="oficina", animo="curioso", trans="pan", footnote="El Padrón infravalora las salidas · datos de 2024", lines=[
         V("Y seguramente son más: muchos no se dan de baja en el padrón.", "sorpresa"),
     ], camara=[plano(0, "general", dur=0), plano("@padrón", "medio", "sarcastica", 0.3, aire=200)],
        elements=[

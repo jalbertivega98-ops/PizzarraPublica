@@ -8,8 +8,8 @@ Tiempo para resolver lo pendiente al ritmo de 2025 (pendientes / resueltos × 12
 """
 from _tu_dinero import *  # noqa: F401,F403
 
-CG = "CGPJ, situación de los órganos judiciales 2025 (nota 30/03/2026)"
-CEPEJ = "Cálculo propio: pendientes ÷ resueltos en 2025 (indicador del CEPEJ)"
+CG = "CGPJ, órganos judiciales 2025 (nota 30/03/2026)"
+CEPEJ = "Cálculo propio: pendientes ÷ resueltos 2025 (CEPEJ)"
 pila_els, pila_pizon = gags.cae_del_cielo("4,7 MILLONES", "@millones-0.5", 330, 820, scale=1.1, onomatopeya="¡PATAPLAF!")
 
 scenes = [
@@ -21,7 +21,7 @@ scenes = [
         quien("pizon", 330, 0, 0.75, "normal", entra="izq", acciones=pila_pizon + [{"at": "@papeles", "cara": "confundido"}]),
         *pila_els,
         dict(type="efecto", efecto="lluvia", objeto="contrato", n=9, x0=520, x1=960, at="@montaña", vida=2.0),
-        rot("4.673.596 CASOS", 600, 480, "@millones", 84, C, golpe=True),
+        rot("4.673.596 CASOS", 600, 560, "@millones", 84, C, golpe=True),
     ]),
     dict(id="tipos", fondo="oficina", animo="curioso", trans="pan", footnote=CG, lines=[
         V("En lo civil, 2,7 millones. En lo penal, 1,3.", "normal"),
@@ -31,9 +31,9 @@ scenes = [
         quien("profe", 280, 0, 0.75, "normal", entra="izq", pose="senala_arriba", acciones=[
             {"at": "@civil", "pose": "senala"}, {"at": "@penal", "mira": "camara"}, {"at": "@social", "salta": True},
             {"at": "@despidos", "cara": "serio"}, {"at": "@526.000", "pose": "pulgar"}]),
-        etq("CIVIL: 2,7 M", 760, 600, "@civil", "amarillo"),
-        etq("PENAL: 1,3 M", 760, 780, "@penal", "blanco"),
-        etq("SOCIAL: 526.000", 760, 960, "@social", "rojo"),
+        rot("CIVIL: 2,7 M", 600, 460, "@civil", 76, "amarillo", golpe=True),
+        rot("PENAL: 1,3 M", 600, 560, "@penal", 76, "blanco", golpe=True),
+        rot("SOCIAL: 526.000", 600, 660, "@social", 76, C, golpe=True),
     ]),
     dict(id="ritmo", fondo="rayos", animo="tension", musica="corte", trans="iris", footnote=CEPEJ, lines=[
         V("Al ritmo de 2025, lo social tardaría casi 14 meses en ponerse al día.", "sorpresa"),
@@ -43,12 +43,12 @@ scenes = [
         quien("pizon", 300, 0, 0.78, "preocupado", entra="pop", acciones=[
             {"at": "@social", "mira": "reloj"}, {"at": "@14", "take": True, "cara": "susto"},
             {"at": "@contencioso", "tiembla": True}, {"at": "@4", "cara": "pensativo"}]),
-        obj("reloj", 780, 760, "@ritmo", 0.8, id="reloj", entra="pop", velocidad=8),
+        obj("reloj", 790, 1000, "@ritmo", 0.7, id="reloj", entra="pop", velocidad=8),
         rot("SOCIAL: 13,6 MESES", 600, 480, "@14", 76, C, golpe=True),
         rot("CONTENCIOSO: 12,4", 600, 590, "@contencioso", 64, "amarillo", golpe=True),
         rot("PENAL: 4,4", 600, 690, "@penal", 64, "verde", golpe=True),
     ]),
-    dict(id="pizon", fondo="calle", animo="triste", trans="pan", footnote=CEPEJ + " · jurisdicción social", lines=[
+    dict(id="pizon", fondo="calle", animo="triste", trans="pan", footnote="Cálculo propio (CEPEJ) · jurisdicción social", lines=[
         V("Si a Pizón le despiden y reclama, la cola que tiene delante es la más larga.", "normal"),
     ], camara=[plano(0, "general", dur=0), plano("@larga", "abierto", dur=0.4)],
        elements=[
@@ -59,7 +59,7 @@ scenes = [
         quien("sarcastica", 420, "@cola+0.2", 0.55, "burla", entra="izq"),
         rot("LA COLA MÁS LARGA", 540, 480, "@cola", 84, "amarillo", golpe=True),
     ]),
-    dict(id="crece", fondo="oficina", animo="tension", trans="iris", footnote=CG + " · pendientes +3,4 % (social +9,4 %)", lines=[
+    dict(id="crece", fondo="oficina", animo="tension", trans="iris", footnote="CGPJ 2025 · pendientes +3,4 % (social +9,4 %)", lines=[
         V("Y la pila crece: un 3,4 % más que el año anterior. Lo social, un 9,4.", "sorpresa"),
     ], camara=[plano(0, "general", dur=0), plano("@9,4", "abierto", dur=0.4)],
        elements=[
@@ -69,7 +69,7 @@ scenes = [
         rot("+3,4 %", 600, 480, "@3,4", 110, C, golpe=True, out="@9,4"),
         rot("SOCIAL: +9,4 %", 600, 480, "@9,4", 90, C, golpe=True),
     ]),
-    dict(id="matiz", fondo="oficina", animo="curioso", trans="pan", footnote="No es la duración oficial de un juicio: es pendientes ÷ resueltos", lines=[
+    dict(id="matiz", fondo="oficina", animo="curioso", trans="pan", footnote="No es la duración oficial de un juicio", lines=[
         V("Ojo: no es lo que dura un juicio. Es lo que tardarían en vaciar la mesa sin que entrara nada nuevo.", "normal"),
     ], camara=[plano(0, "general", dur=0), plano("@nuevo", "medio", "profe", 0.3, aire=200)],
        elements=[

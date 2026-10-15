@@ -265,7 +265,7 @@
    "fondo": "salon",
    "animo": "comico",
    "trans": "iris",
-   "footnote": "Ministerio de Sanidad, SISLE-SNS a 31/12/2025 · por especialidad",
+   "footnote": "SISLE-SNS 31/12/2025 · por especialidad",
    "lines": [
     {
      "text": "Lo más lento: cirugía plástica, 269 días. Neurocirugía, 172.",
@@ -351,7 +351,7 @@
    "fondo": "calle",
    "animo": "tension",
    "trans": "pan",
-   "footnote": "Ministerio de Sanidad, SISLE-SNS a 31/12/2025 · por comunidad · cálculo propio",
+   "footnote": "SISLE-SNS 31/12/2025 · por comunidad · cálculo propio",
    "lines": [
     {
      "text": "Por comunidades, Andalucía es la que más: 173 días.",
@@ -480,9 +480,9 @@
     },
     {
      "type": "rotulo",
-     "text": "ANDALUCÍA: 173",
-     "x": 300,
-     "y": 470,
+     "text": "ANDALUCÍA: 173 DÍAS",
+     "x": 540,
+     "y": 460,
      "size": 70,
      "color": "red",
      "at": "@Andalucía",
@@ -491,9 +491,9 @@
     },
     {
      "type": "rotulo",
-     "text": "MADRID: 50",
-     "x": 800,
-     "y": 470,
+     "text": "MADRID: 50 DÍAS",
+     "x": 540,
+     "y": 560,
      "size": 70,
      "color": "verde",
      "at": "@Madrid",
@@ -504,7 +504,7 @@
      "type": "rotulo",
      "text": "× 3,5",
      "x": 540,
-     "y": 640,
+     "y": 680,
      "size": 120,
      "color": "amarillo",
      "at": "@media",
@@ -519,7 +519,7 @@
    "animo": "comico",
    "musica": "corte",
    "trans": "iris",
-   "footnote": "Ministerio de Sanidad, SISLE-SNS a 31/12/2025 · consultas externas: 102 días de media",
+   "footnote": "SISLE-SNS 31/12/2025 · consultas externas: 102 días",
    "lines": [
     {
      "text": "Y eso, sin contar la espera de antes: ver al especialista, 102 días más.",
@@ -597,7 +597,7 @@
    "fondo": "oficina",
    "animo": "curioso",
    "trans": "pan",
-   "footnote": "Cada comunidad envía sus datos · espera de quien aún no se ha operado",
+   "footnote": "Cada comunidad envía sus datos con sus criterios",
    "lines": [
     {
      "text": "Ojo: cada comunidad cuenta a su manera, y es la espera de quien aún no se ha operado.",

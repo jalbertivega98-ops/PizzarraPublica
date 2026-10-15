@@ -37,7 +37,7 @@
    "id": "gancho",
    "fondo": "salon",
    "animo": "curioso",
-   "footnote": "Save the Children, «El coste de la crianza 2024» (precios de 2024)",
+   "footnote": "Save the Children, coste de la crianza 2024",
    "lines": [
     {
      "text": "Criar a un hijo cuesta 758 euros al mes, según Save the Children.",
@@ -148,7 +148,7 @@
    "fondo": "salon",
    "animo": "alegre",
    "trans": "pan",
-   "footnote": "Save the Children, «El coste de la crianza 2024» (precios de 2024) · deducción por maternidad (art. 81 LIRPF)",
+   "footnote": "Save the Children 2024 · deducción por maternidad (art. 81 LIRPF)",
    "lines": [
     {
      "text": "Un bebé: 604 al mes.",
@@ -257,7 +257,7 @@
    "fondo": "oficina",
    "animo": "curioso",
    "trans": "iris",
-   "footnote": "CAPI (Ley 19/2021): 115 €/mes a menores de 3 años, solo rentas bajas · cálculo propio",
+   "footnote": "CAPI (Ley 19/2021): 115 €/mes (<3 años), rentas bajas · cálculo propio",
    "lines": [
     {
      "text": "Si la familia tiene poca renta, suma el complemento de infancia: 115 euros.",
@@ -345,8 +345,8 @@
     {
      "type": "rotulo",
      "text": "+ 115 € (CAPI)",
-     "x": 600,
-     "y": 480,
+     "x": 540,
+     "y": 460,
      "size": 84,
      "color": "verde",
      "at": "@115",
@@ -357,8 +357,8 @@
     {
      "type": "rotulo",
      "text": "QUEDAN 389 €",
-     "x": 600,
-     "y": 480,
+     "x": 520,
+     "y": 460,
      "size": 96,
      "color": "red",
      "at": "@389",
@@ -373,7 +373,7 @@
    "animo": "tension",
    "musica": "corte",
    "trans": "iris",
-   "footnote": "Save the Children, «El coste de la crianza 2024» (precios de 2024) · 7-12 años: 812 €/mes",
+   "footnote": "Save the Children 2024 · 7-12 años: 812 €/mes",
    "lines": [
     {
      "text": "Pero a los tres años, la deducción se acaba.",
@@ -496,7 +496,7 @@
    "fondo": "oficina",
    "animo": "triste",
    "trans": "pan",
-   "footnote": "CAPI 6-18 años: 57,50 €/mes · cálculo propio sobre 812 €",
+   "footnote": "CAPI 6-18 años: 57,50 €/mes · cálculo propio",
    "lines": [
     {
      "text": "Con renta baja, 57,50. Un 7 % de lo que cuesta.",
@@ -571,7 +571,7 @@
    "fondo": "oficina",
    "animo": "curioso",
    "trans": "pan",
-   "footnote": "No incluye ayudas autonómicas, guarderías gratuitas ni mínimos del IRPF",
+   "footnote": "Sin ayudas autonómicas, guarderías gratuitas ni IRPF",
    "lines": [
     {
      "text": "Ojo: hay ayudas de cada comunidad, guarderías gratis y rebajas en la renta que no son un pago al mes.",
@@ -665,7 +665,7 @@
    "fondo": "salon",
    "animo": "final",
    "trans": "iris",
-   "footnote": "Save the Children, «El coste de la crianza 2024» (precios de 2024)",
+   "footnote": "Save the Children, coste de la crianza 2024",
    "lines": [
     {
      "text": "¿Cuánto te cuesta a ti? Te leemos.",

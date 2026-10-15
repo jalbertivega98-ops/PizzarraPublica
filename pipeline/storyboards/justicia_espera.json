@@ -35,7 +35,7 @@
    "id": "gancho",
    "fondo": "oficina",
    "animo": "curioso",
-   "footnote": "CGPJ, situación de los órganos judiciales 2025 (nota 30/03/2026)",
+   "footnote": "CGPJ, órganos judiciales 2025 (nota 30/03/2026)",
    "lines": [
     {
      "text": "Hay 4,7 millones de casos esperando en los juzgados de España.",
@@ -146,7 +146,7 @@
      "type": "rotulo",
      "text": "4.673.596 CASOS",
      "x": 600,
-     "y": 480,
+     "y": 560,
      "size": 84,
      "color": "red",
      "at": "@millones",
@@ -160,7 +160,7 @@
    "fondo": "oficina",
    "animo": "curioso",
    "trans": "pan",
-   "footnote": "CGPJ, situación de los órganos judiciales 2025 (nota 30/03/2026)",
+   "footnote": "CGPJ, órganos judiciales 2025 (nota 30/03/2026)",
    "lines": [
     {
      "text": "En lo civil, 2,7 millones. En lo penal, 1,3.",
@@ -223,49 +223,37 @@
      "id": "profe"
     },
     {
-     "type": "objeto",
-     "objeto": "etiqueta",
-     "x": 760,
-     "y": 600,
-     "scale": 0.75,
+     "type": "rotulo",
+     "text": "CIVIL: 2,7 M",
+     "x": 600,
+     "y": 460,
+     "size": 76,
+     "color": "amarillo",
      "at": "@civil",
-     "props": {
-      "texto": "CIVIL: 2,7 M",
-      "color": "amarillo"
-     },
-     "acciones": [],
-     "entra": "pop",
-     "sfx": "kaching"
+     "golpe": true,
+     "hud": true
     },
     {
-     "type": "objeto",
-     "objeto": "etiqueta",
-     "x": 760,
-     "y": 780,
-     "scale": 0.75,
+     "type": "rotulo",
+     "text": "PENAL: 1,3 M",
+     "x": 600,
+     "y": 560,
+     "size": 76,
+     "color": "blanco",
      "at": "@penal",
-     "props": {
-      "texto": "PENAL: 1,3 M",
-      "color": "blanco"
-     },
-     "acciones": [],
-     "entra": "pop",
-     "sfx": "kaching"
+     "golpe": true,
+     "hud": true
     },
     {
-     "type": "objeto",
-     "objeto": "etiqueta",
-     "x": 760,
-     "y": 960,
-     "scale": 0.75,
+     "type": "rotulo",
+     "text": "SOCIAL: 526.000",
+     "x": 600,
+     "y": 660,
+     "size": 76,
+     "color": "red",
      "at": "@social",
-     "props": {
-      "texto": "SOCIAL: 526.000",
-      "color": "rojo"
-     },
-     "acciones": [],
-     "entra": "pop",
-     "sfx": "kaching"
+     "golpe": true,
+     "hud": true
     }
    ]
   },
@@ -275,7 +263,7 @@
    "animo": "tension",
    "musica": "corte",
    "trans": "iris",
-   "footnote": "Cálculo propio: pendientes ÷ resueltos en 2025 (indicador del CEPEJ)",
+   "footnote": "Cálculo propio: pendientes ÷ resueltos 2025 (CEPEJ)",
    "lines": [
     {
      "text": "Al ritmo de 2025, lo social tardaría casi 14 meses en ponerse al día.",
@@ -336,9 +324,9 @@
     {
      "type": "objeto",
      "objeto": "reloj",
-     "x": 780,
-     "y": 760,
-     "scale": 0.8,
+     "x": 790,
+     "y": 1000,
+     "scale": 0.7,
      "at": "@ritmo",
      "props": {},
      "acciones": [],
@@ -386,7 +374,7 @@
    "fondo": "calle",
    "animo": "triste",
    "trans": "pan",
-   "footnote": "Cálculo propio: pendientes ÷ resueltos en 2025 (indicador del CEPEJ) · jurisdicción social",
+   "footnote": "Cálculo propio (CEPEJ) · jurisdicción social",
    "lines": [
     {
      "text": "Si a Pizón le despiden y reclama, la cola que tiene delante es la más larga.",
@@ -492,7 +480,7 @@
    "fondo": "oficina",
    "animo": "tension",
    "trans": "iris",
-   "footnote": "CGPJ, situación de los órganos judiciales 2025 (nota 30/03/2026) · pendientes +3,4 % (social +9,4 %)",
+   "footnote": "CGPJ 2025 · pendientes +3,4 % (social +9,4 %)",
    "lines": [
     {
      "text": "Y la pila crece: un 3,4 % más que el año anterior. Lo social, un 9,4.",
@@ -599,7 +587,7 @@
    "fondo": "oficina",
    "animo": "curioso",
    "trans": "pan",
-   "footnote": "No es la duración oficial de un juicio: es pendientes ÷ resueltos",
+   "footnote": "No es la duración oficial de un juicio",
    "lines": [
     {
      "text": "Ojo: no es lo que dura un juicio. Es lo que tardarían en vaciar la mesa sin que entrara nada nuevo.",
@@ -683,7 +671,7 @@
    "fondo": "calle",
    "animo": "final",
    "trans": "iris",
-   "footnote": "CGPJ, situación de los órganos judiciales 2025 (nota 30/03/2026)",
+   "footnote": "CGPJ, órganos judiciales 2025 (nota 30/03/2026)",
    "lines": [
     {
      "text": "¿Has esperado un juicio? Te leemos.",

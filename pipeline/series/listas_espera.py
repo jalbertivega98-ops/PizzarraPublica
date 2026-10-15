@@ -37,7 +37,7 @@ scenes = [
         rot("121 DÍAS", 600, 560, "@121", 110, "amarillo", golpe=True, out="@cinco"),
         rot("1 DE CADA 5: +6 MESES", 600, 560, "@cinco", 70, C, golpe=True),
     ]),
-    dict(id="especialidades", fondo="salon", animo="comico", trans="iris", footnote=SIS + " · por especialidad", lines=[
+    dict(id="especialidades", fondo="salon", animo="comico", trans="iris", footnote="SISLE-SNS 31/12/2025 · por especialidad", lines=[
         V("Lo más lento: cirugía plástica, 269 días. Neurocirugía, 172.", "normal"),
     ], camara=[plano(0, "general", dur=0), plano("@Neurocirugía", "abierto", dur=0.4)],
        elements=[
@@ -47,7 +47,7 @@ scenes = [
         etq("PLÁSTICA: 269 DÍAS", 720, 640, "@plástica", "rojo"),
         etq("NEUROCIRUGÍA: 172", 720, 860, "@Neurocirugía", "amarillo"),
     ]),
-    dict(id="ccaa", fondo="calle", animo="tension", trans="pan", footnote=SIS + " · por comunidad · cálculo propio", lines=[
+    dict(id="ccaa", fondo="calle", animo="tension", trans="pan", footnote="SISLE-SNS 31/12/2025 · por comunidad · cálculo propio", lines=[
         V("Por comunidades, Andalucía es la que más: 173 días.", "normal"),
         V("Madrid, la que menos: 50. Tres veces y media menos.", "sorpresa", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@media", "abierto", dur=0.4)],
@@ -57,11 +57,11 @@ scenes = [
         quien("piz", 1300, "@Madrid-0.3", 0.72, "riendo", entra="nada", acciones=[
             {"at": "@Madrid", "x": 800, "dur": 0.6, "corre": True}, {"at": "@50", "salta": True, "pose": "arriba"},
             {"at": "@media", "mira": "pizon", "cara": "pensativo"}]),
-        rot("ANDALUCÍA: 173", 300, 470, "@Andalucía", 70, C, golpe=True),
-        rot("MADRID: 50", 800, 470, "@Madrid", 70, "verde", golpe=True),
-        rot("× 3,5", 540, 640, "@media", 120, "amarillo", golpe=True),
+        rot("ANDALUCÍA: 173 DÍAS", 540, 460, "@Andalucía", 70, C, golpe=True),
+        rot("MADRID: 50 DÍAS", 540, 560, "@Madrid", 70, "verde", golpe=True),
+        rot("× 3,5", 540, 680, "@media", 120, "amarillo", golpe=True),
     ]),
-    dict(id="consultas", fondo="rayos", animo="comico", musica="corte", trans="iris", footnote=SIS + " · consultas externas: 102 días de media", lines=[
+    dict(id="consultas", fondo="rayos", animo="comico", musica="corte", trans="iris", footnote="SISLE-SNS 31/12/2025 · consultas externas: 102 días", lines=[
         V("Y eso, sin contar la espera de antes: ver al especialista, 102 días más.", "sorpresa"),
     ], camara=[plano(0, "general", dur=0), plano("@102", "medio", "pizon", 0.3, aire=220)],
        elements=[
@@ -71,7 +71,7 @@ scenes = [
         rot("+102 DÍAS ANTES", 540, 520, "@102", 92, C, golpe=True),
         pum("¡OTRA COLA!", 760, 820, "@102+0.3"),
     ]),
-    dict(id="matiz", fondo="oficina", animo="curioso", trans="pan", footnote="Cada comunidad envía sus datos · espera de quien aún no se ha operado", lines=[
+    dict(id="matiz", fondo="oficina", animo="curioso", trans="pan", footnote="Cada comunidad envía sus datos con sus criterios", lines=[
         V("Ojo: cada comunidad cuenta a su manera, y es la espera de quien aún no se ha operado.", "normal"),
     ], camara=[plano(0, "general", dur=0), plano("@operado", "medio", "profe", 0.3, aire=200)],
        elements=[

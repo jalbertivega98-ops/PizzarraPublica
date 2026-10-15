@@ -9,7 +9,7 @@ Impuestos 2026: RDL 7/2026 (BOE 21/03/2026) bajó el IVA al 10 % y el IEE al 0,5
 """
 from _tu_dinero import *  # noqa: F401,F403
 
-FN = "Cálculo propio: factura tipo PVPC sep 2026 (FACUA, 104,31 €) · peajes y cargos 2026"
+FN = "Cálculo propio: factura tipo PVPC sep 2026 (FACUA, 104,31 €)"
 
 scenes = [
     dict(id="gancho", fondo="salon", animo="curioso", footnote=FN, lines=[
@@ -34,7 +34,7 @@ scenes = [
         obj("sol", 780, 600, "@energía", 0.6, entra="pop"),
         rot("ENERGÍA: 55 €", 600, 480, "@55", 96, "verde", golpe=True),
     ]),
-    dict(id="redes", fondo="oficina", animo="tension", trans="iris", footnote="Peajes (CNMC) y cargos (Ministerio) 2.0TD 2026 · reparto estimado", lines=[
+    dict(id="redes", fondo="oficina", animo="tension", trans="iris", footnote="Peajes (CNMC) y cargos 2.0TD 2026 · reparto estimado", lines=[
         V("Los cables que la traen a casa: 13.", "normal"),
         V("Los cargos del sistema, como las renovables o la deuda de años pasados: 10.", "normal", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@10", "medio", "pizon", 0.3, aire=200)],
@@ -43,10 +43,10 @@ scenes = [
             {"at": "@cables", "mira": "der"}, {"at": "@13", "salta": True, "cara": "sorpresa"},
             {"at": "@renovables", "cara": "pensativo"}, {"at": "@deuda", "take": True, "cara": "susto"},
             {"at": "@10", "pose": "encoge", "cara": "confundido"}]),
-        etq("PEAJES: 13 €", 760, 660, "@13", "amarillo"),
-        etq("CARGOS: 10 €", 760, 880, "@10", "blanco"),
+        rot("PEAJES: 13 €", 600, 470, "@13", 84, "amarillo", golpe=True),
+        rot("CARGOS: 10 €", 600, 580, "@10", 84, "blanco", golpe=True),
     ]),
-    dict(id="impuestos", fondo="oficina", animo="comico", trans="pan", footnote="IVA 21 % · impuesto eléctrico 5,11 % · alquiler de contador 0,81 €/mes", lines=[
+    dict(id="impuestos", fondo="oficina", animo="comico", trans="pan", footnote="IVA 21 % · impuesto eléctrico 5,11 % · contador 0,81 €/mes", lines=[
         V("Y Hacienda: 17 de IVA y 4 del impuesto eléctrico.", "sorpresa"),
         V("El euro que falta, el alquiler del contador.", "remate", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@contador", "medio", "hacienda", 0.3, aire=200)],
@@ -60,7 +60,7 @@ scenes = [
         rot("IMPUESTO ELÉCTRICO: 4 €", 600, 580, "@4", 62, "amarillo", golpe=True),
         rot("CONTADOR: 1 €", 600, 690, "@contador", 62, "blanco", golpe=True),
     ]),
-    dict(id="primavera", fondo="rayos", animo="comico", musica="corte", trans="iris", footnote="RDL 7/2026: IVA 10 % e IEE 0,5 % de marzo a mayo · desde junio, 21 % y 5,11 %", lines=[
+    dict(id="primavera", fondo="rayos", animo="comico", musica="corte", trans="iris", footnote="RDL 7/2026: IVA 10 % de marzo a mayo · desde junio, 21 %", lines=[
         V("En primavera pagabas menos: el IVA de la luz bajó al 10 %.", "normal"),
         V("Desde junio, otra vez al 21.", "remate", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@21", "medio", "sarcastica", 0.3, aire=220)],
@@ -72,7 +72,7 @@ scenes = [
         rot("DESDE JUNIO: 21 %", 540, 480, "@21", 80, C, golpe=True),
         pum("¡ZAS!", 760, 820, "@21+0.2"),
     ]),
-    dict(id="matiz", fondo="oficina", animo="curioso", trans="pan", footnote="Estimación propia, no dato oficial de la CNMC · mercado libre: estructura distinta", lines=[
+    dict(id="matiz", fondo="oficina", animo="curioso", trans="pan", footnote="Estimación propia, no dato oficial de la CNMC", lines=[
         V("Ojo: es una factura tipo de septiembre. Cada mes cambia, porque la energía sigue al mercado.", "normal"),
     ], camara=[plano(0, "general", dur=0), plano("@mercado", "medio", "profe", 0.3, aire=200)],
        elements=[

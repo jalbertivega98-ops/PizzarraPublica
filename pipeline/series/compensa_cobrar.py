@@ -59,7 +59,7 @@ scenes = [
         obj("calculadora", 800, 860, "@pagas", 0.85, id="calc", props={"texto": "1.221"}, entra="pop", sfx="calculadora",
             acciones=[{"at": "@1.330", "props": {"texto": "1.330"}, "salta": True}]),
         rot("1.221 € × 14", 540, 470, "@1.221", 100, "amarillo", golpe=True, out="@Neto"),
-        rot("1.330 €/mes", 540, 470, "@1.330", 110, "verde", golpe=True),
+        rot("1.330 €", 540, 470, "@1.330", 110, "verde", golpe=True),
     ]),
     # 3 · LA AYUDA QUE NO PIERDE
     dict(id="ayuda", fondo="oficina", animo="tension", trans="iris", footnote="IMV 2026: 733,60 €/mes (1 adulto) · RD 240/2026 · estimación 270-400 €", lines=[
@@ -73,8 +73,8 @@ scenes = [
         pj("hacienda", 800, "@Vital-0.3", 0.75, "serio", id="hacienda", entra="der", pose="sostiene",
            objeto={"tipo": "contrato", "titulo": "IMV", "hojas": 1},
            acciones=[{"at": "@entero", "cara": "riendo", "pose": "pulgar"}]),
-        rot("IMV: 733,60 €", 540, 470, "@Vital", 90, "amarillo", golpe=True, out="@conserva"),
-        rot("+300 €/mes", 540, 470, "@300", 120, "verde", golpe=True),
+        rot("IMV: 733,60 €", 600, 600, "@Vital", 90, "amarillo", golpe=True, out="@conserva"),
+        rot("+300 €/mes", 600, 600, "@300", 120, "verde", golpe=True),
         dict(type="efecto", efecto="lluvia", objeto="moneda", n=10, x0=200, x1=500, at="@300", vida=1.8),
     ]),
     # 4 · TOTAL PIZÓN vs PIZ
@@ -91,7 +91,7 @@ scenes = [
             {"at": "@1.630#2", "take": True, "cara": "confundido"}]),
         dict(type="efecto", efecto="vuelan", objeto="billete", n=7, x=820, y=1000, at="@IRPF", vida=1.8),
         rot("1.630 €", 260, 560, "@Total", 90, "verde", golpe=True),
-        rot("24.500 € brutos", 800, 470, "@24.500", 76, "amarillo", golpe=True, out="@1.630#2"),
+        rot("24.500 € brutos", 700, 470, "@24.500", 70, "amarillo", golpe=True, out="@1.630#2"),
         rot("1.630 €", 800, 560, "@1.630#2", 90, "verde", golpe=True),
     ]),
     # 5 · GIRO: es a propósito
@@ -103,12 +103,13 @@ scenes = [
         pj("sarcastica", 800, 0, 0.72, "burla", id="sarcastica", entra="pop", acciones=[{"at": "@propósito", "take": True, "cara": "sorpresa"},
                                                                                        {"at": "@marzo", "sale": "der"}]),
         pj("profe", 300, "@propósito-0.2", 0.78, "serio", id="profe", entra="izq", pose="senala_arriba", acciones=[
-            {"at": "@6.000", "pose": "senala", "cara": "normal"}, {"at": "@mitad", "pose": "pulgar", "cara": "ilusionado"}]),
-        rot("6.000 € → NO CUENTAN", 600, 480, "@6.000", 72, "amarillo", golpe=True),
+            {"at": "@6.000", "pose": "senala", "cara": "normal"}, {"at": "@cuentan", "salta": True, "cara": "riendo"}, {"at": "@resto", "mira": "camara", "pose": "senala_arriba"}, {"at": "@mitad", "pose": "pulgar", "cara": "ilusionado"}]),
+        rot("6.000 €: NO CUENTAN", 600, 480, "@6.000", 72, "amarillo", golpe=True),
+        dict(type="efecto", efecto="pum", text="¡0 €!", x=760, y=820, at="@cuentan", scale=0.8, vida=0.8),
         rot("EL RESTO: SOLO LA MITAD", 600, 600, "@mitad", 64, "blanco", golpe=True),
     ]),
     # 6 · POR QUÉ
-    dict(id="porque", fondo="oficina", animo="curioso", trans="pan", footnote="El IMV completa la renta hasta un mínimo: sin incentivo, cada euro ganado restaría un euro", lines=[
+    dict(id="porque", fondo="oficina", animo="curioso", trans="pan", footnote="El IMV completa la renta hasta un mínimo garantizado", lines=[
         V("Sin esta regla, cada euro que ganas te quitaría un euro de ayuda. Y trabajar no compensaría.", "intriga"),
     ], camara=[plano(0, "general", dur=0), plano("@compensaría", "medio", "pizon", 0.3, aire=200)],
        elements=[
@@ -117,8 +118,8 @@ scenes = [
             {"at": "@quitaría", "objeto": None, "take": True, "cara": "susto"},
             {"at": "@compensaría", "cara": "triste", "pose": "caidos"}]),
         obj("billete", 760, 760, "@ganas", 0.9, entra="pop", acciones=[{"at": "@quitaría", "sale": "der"}]),
-        rot("+1 € SUELDO", 540, 470, "@ganas", 90, "verde", golpe=True, out="@quitaría"),
-        rot("−1 € AYUDA", 540, 470, "@quitaría", 90, C, golpe=True),
+        rot("+1 € SUELDO", 600, 600, "@ganas", 90, "verde", golpe=True, out="@quitaría"),
+        rot("-1 € AYUDA", 600, 600, "@quitaría", 90, C, golpe=True),
     ]),
     # 7 · PEGAS + FINAL
     dict(id="final", fondo="calle", animo="final", trans="iris", footnote="Solo si ya se cobraba el IMV · se revisa cada año", lines=[
@@ -126,10 +127,10 @@ scenes = [
         V("¿Te parece justo? Te leemos. Y síguenos: la próxima, lo que cobra un diputado.", "energia", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@síguenos", "abierto", dur=0.4)],
        elements=[
-        quien("pizon", 300, 0, 0.72, "normal", entra="nada", acciones=[{"at": "@Ojo", "pose": "senala_arriba", "cara": "serio"},
+        quien("pizon", 300, 0, 0.72, "normal", entra="nada", acciones=[{"at": "@Ojo", "pose": "senala_arriba", "cara": "serio"}, {"at": "@cobrabas", "mira": "piz"},
                                                                       {"at": "@justo", "mira": "camara", "cara": "pensativo"},
                                                                       {"at": "@síguenos", "pose": "saluda", "cara": "riendo"}]),
-        quien("piz", 780, 0, 0.72, "normal", entra="nada", acciones=[{"at": "@año", "pose": "encoge"},
+        quien("piz", 780, 0, 0.72, "normal", entra="nada", acciones=[{"at": "@cobrabas", "mira": "pizon", "cara": "pensativo"}, {"at": "@revisa", "tiembla": True, "cara": "preocupado"}, {"at": "@año", "pose": "encoge"},
                                                                     {"at": "@leemos", "pose": "senala", "cara": "ilusionado"},
                                                                     {"at": "@diputado", "salta": True, "cara": "sorpresa"}]),
         rot("SOLO SI YA COBRABAS EL IMV", 540, 470, "@Ojo", 64, "amarillo", golpe=True, out="@justo"),

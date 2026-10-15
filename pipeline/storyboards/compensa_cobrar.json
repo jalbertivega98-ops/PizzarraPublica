@@ -237,7 +237,7 @@
     },
     {
      "type": "rotulo",
-     "text": "1.330 €/mes",
+     "text": "1.330 €",
      "x": 540,
      "y": 470,
      "size": 110,
@@ -340,8 +340,8 @@
     {
      "type": "rotulo",
      "text": "IMV: 733,60 €",
-     "x": 540,
-     "y": 470,
+     "x": 600,
+     "y": 600,
      "size": 90,
      "color": "amarillo",
      "at": "@Vital",
@@ -352,8 +352,8 @@
     {
      "type": "rotulo",
      "text": "+300 €/mes",
-     "x": 540,
-     "y": 470,
+     "x": 600,
+     "y": 600,
      "size": 120,
      "color": "verde",
      "at": "@300",
@@ -490,9 +490,9 @@
     {
      "type": "rotulo",
      "text": "24.500 € brutos",
-     "x": 800,
+     "x": 700,
      "y": 470,
-     "size": 76,
+     "size": 70,
      "color": "amarillo",
      "at": "@24.500",
      "golpe": true,
@@ -583,6 +583,16 @@
        "cara": "normal"
       },
       {
+       "at": "@cuentan",
+       "salta": true,
+       "cara": "riendo"
+      },
+      {
+       "at": "@resto",
+       "mira": "camara",
+       "pose": "senala_arriba"
+      },
+      {
        "at": "@mitad",
        "pose": "pulgar",
        "cara": "ilusionado"
@@ -594,7 +604,7 @@
     },
     {
      "type": "rotulo",
-     "text": "6.000 € → NO CUENTAN",
+     "text": "6.000 €: NO CUENTAN",
      "x": 600,
      "y": 480,
      "size": 72,
@@ -602,6 +612,16 @@
      "at": "@6.000",
      "golpe": true,
      "hud": true
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¡0 €!",
+     "x": 760,
+     "y": 820,
+     "at": "@cuentan",
+     "scale": 0.8,
+     "vida": 0.8
     },
     {
      "type": "rotulo",
@@ -621,7 +641,7 @@
    "fondo": "oficina",
    "animo": "curioso",
    "trans": "pan",
-   "footnote": "El IMV completa la renta hasta un mínimo: sin incentivo, cada euro ganado restaría un euro",
+   "footnote": "El IMV completa la renta hasta un mínimo garantizado",
    "lines": [
     {
      "text": "Sin esta regla, cada euro que ganas te quitaría un euro de ayuda. Y trabajar no compensaría.",
@@ -693,8 +713,8 @@
     {
      "type": "rotulo",
      "text": "+1 € SUELDO",
-     "x": 540,
-     "y": 470,
+     "x": 600,
+     "y": 600,
      "size": 90,
      "color": "verde",
      "at": "@ganas",
@@ -704,9 +724,9 @@
     },
     {
      "type": "rotulo",
-     "text": "−1 € AYUDA",
-     "x": 540,
-     "y": 470,
+     "text": "-1 € AYUDA",
+     "x": 600,
+     "y": 600,
      "size": 90,
      "color": "red",
      "at": "@quitaría",
@@ -762,6 +782,10 @@
        "cara": "serio"
       },
       {
+       "at": "@cobrabas",
+       "mira": "piz"
+      },
+      {
        "at": "@justo",
        "mira": "camara",
        "cara": "pensativo"
@@ -784,6 +808,16 @@
      "at": 0,
      "cara": "normal",
      "acciones": [
+      {
+       "at": "@cobrabas",
+       "mira": "pizon",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@revisa",
+       "tiembla": true,
+       "cara": "preocupado"
+      },
       {
        "at": "@año",
        "pose": "encoge"

@@ -31,7 +31,7 @@ scenes = [
     ], camara=[plano(0, "general", dur=0), plano("@Alemania", "abierto", dur=0.4)],
        elements=[
         quien("pizon", 280, 0, 0.72, "ilusionado", entra="izq", objeto="saco", pose="sostiene", acciones=[
-            {"at": "@Francia", "salta": True, "cara": "riendo"}, {"at": "@Reino", "mira": "der"},
+            {"at": 0.9, "mira": "der"}, {"at": "@Francia", "salta": True, "cara": "riendo"}, {"at": "@16.353", "pose": "arriba"}, {"at": "@Reino", "mira": "der"},
             {"at": "@Unidos", "cara": "sorpresa"}, {"at": "@Alemania", "pose": "arriba", "objeto": None}]),
         etq("1. FRANCIA: 16.353", 740, 560, "@Francia", "blanco"),
         etq("2. REINO UNIDO: 15.349", 740, 720, "@Reino", "amarillo"),
@@ -66,7 +66,7 @@ scenes = [
     ], camara=[plano(0, "general", dur=0), plano("@17.792", "medio", "piz", 0.3, aire=200)],
        elements=[
         quien("piz", 320, 0, 0.75, "normal", entra="nada", objeto="saco", pose="sostiene", acciones=[
-            {"at": "@25", "mira": "camara"}, {"at": "@34", "salta": True}, {"at": "@17.792", "cara": "triste", "pose": "caidos", "objeto": None}]),
+            {"at": "@25", "mira": "camara"}, {"at": "@34", "salta": True}, {"at": "@nacidos", "mira": "camara", "cara": "pensativo"}, {"at": "@España", "tiembla": True}, {"at": "@17.792", "cara": "triste", "pose": "caidos", "objeto": None}]),
         obj("llave", 780, 800, "@grupo", 0.7, entra="pop"),
         rot("25-34 AÑOS", 600, 480, "@25", 96, "amarillo", golpe=True, out="@17.792"),
         rot("17.792", 600, 480, "@17.792", 120, C, golpe=True),

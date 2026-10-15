@@ -66,7 +66,7 @@ scenes = [
     ], camara=[plano(0, "general", dur=0), plano("@21", "medio", "sarcastica", 0.3, aire=220)],
        elements=[
         quien("sarcastica", 540, 0, 0.8, "riendo", entra="pop", acciones=[
-            {"at": "@10", "salta": True, "pose": "arriba"}, {"at": "@junio", "cara": "burla"},
+            {"at": 1.1, "mira": "camara", "pose": "senala_arriba"}, {"at": 2.2, "cara": "burla", "pose": "jarras"}, {"at": "@10", "salta": True, "pose": "arriba"}, {"at": "@junio", "cara": "burla"},
             {"at": "@21", "pose": "jarras", "cara": "esceptica"}]),
         rot("MAR-MAY: IVA 10 %", 540, 480, "@10", 80, "verde", golpe=True, out="@junio"),
         rot("DESDE JUNIO: 21 %", 540, 480, "@21", 80, C, golpe=True),

@@ -80,7 +80,7 @@ scenes = [
        elements=[
         quien("profe", 300, 0, 0.75, "normal", entra="izq", pose="senala_arriba", acciones=[
             {"at": "@noviembre", "pose": "senala"}, {"at": "@diciembre", "mira": "camara"},
-            {"at": "@Canarias", "pose": "pulgar", "cara": "ilusionado"}]),
+            {"at": "@Canarias", "pose": "pulgar", "cara": "ilusionado"}, {"at": "@Melilla", "salta": True}, {"at": "@otro", "mira": "camara", "pose": "encoge"}]),
         obj("grafica", 760, 800, "@noviembre", 0.8, entra="pop", props={"valores": [3.3, 2.2, 1.0], "color": "verde"}),
         rot("NOV: −13 · DIC: −6", 600, 480, "@noviembre", 76, "amarillo", golpe=True),
     ]),

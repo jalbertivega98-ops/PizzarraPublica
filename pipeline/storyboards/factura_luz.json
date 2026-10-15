@@ -500,6 +500,16 @@
      "cara": "riendo",
      "acciones": [
       {
+       "at": 1.1,
+       "mira": "camara",
+       "pose": "senala_arriba"
+      },
+      {
+       "at": 2.2,
+       "cara": "burla",
+       "pose": "jarras"
+      },
+      {
        "at": "@10",
        "salta": true,
        "pose": "arriba"

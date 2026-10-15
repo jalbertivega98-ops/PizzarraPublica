@@ -26,9 +26,9 @@ scenes = [
     ], camara=[plano(0, "general", dur=0), plano("@Estado", "abierto", dur=0.4)],
        elements=[
         quien("piz", 300, 0, 0.75, "ilusionado", entra="izq", acciones=[
-            {"at": "@hijo", "mira": "peque", "cara": "riendo"}, {"at": "@758", "take": True, "cara": "susto"},
+            {"at": "@hijo", "mira": "peque", "cara": "riendo"}, {"at": 2.4, "pose": "senala"}, {"at": "@758", "take": True, "cara": "susto"},
             {"at": "@Estado", "mira": "camara", "pose": "encoge", "cara": "pensativo"}]),
-        peque(760, "@hijo", entra="pop", acciones=[{"at": "@758", "salta": True}]),
+        peque(760, "@hijo", entra="pop", acciones=[{"at": 3.4, "salta": True, "mira": "piz"}, {"at": "@758", "take": True}]),
         rot("758 €/MES", 540, 500, "@758", 110, C, golpe=True),
         rot("¿Y EL ESTADO?", 540, 640, "@Estado", 84, "amarillo", golpe=True),
     ]),
@@ -63,9 +63,9 @@ scenes = [
     ], camara=[plano(0, "general", dur=0), plano("@euro", "medio", "piz", 0.3, aire=220)],
        elements=[
         quien("piz", 320, 0, 0.78, "normal", entra="pop", acciones=[
-            {"at": "@acaba", "take": True, "cara": "susto"}, {"at": "@812", "tiembla": True},
+            {"at": "@acaba", "take": True, "cara": "susto"}, {"at": "@812", "tiembla": True}, {"at": "@familia", "mira": "camara", "cara": "preocupado"},
             {"at": "@euro", "tropieza": True}]),
-        peque(780, "@siete", "riendo", entra="pop", scale=0.55, acciones=[{"at": "@812", "salta": True}]),
+        peque(780, "@siete", "riendo", entra="pop", scale=0.55, acciones=[{"at": "@812", "salta": True}, {"at": "@media", "mira": "piz", "cara": "sorpresa"}]),
         rot("DEDUCCIÓN: FIN", 540, 480, "@acaba", 84, C, golpe=True, out="@812"),
         rot("7 AÑOS: 812 €/MES", 540, 480, "@812", 84, "amarillo", golpe=True, out="@euro"),
         rot("AYUDA: 0 €", 540, 480, "@euro", 110, C, golpe=True),

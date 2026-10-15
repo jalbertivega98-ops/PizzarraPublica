@@ -79,6 +79,10 @@
        "cara": "riendo"
       },
       {
+       "at": 2.4,
+       "pose": "senala"
+      },
+      {
        "at": "@758",
        "take": true,
        "cara": "susto"
@@ -103,8 +107,13 @@
      "cara": "ilusionado",
      "acciones": [
       {
+       "at": 3.4,
+       "salta": true,
+       "mira": "piz"
+      },
+      {
        "at": "@758",
-       "salta": true
+       "take": true
       }
      ],
      "id": "peque",
@@ -411,6 +420,11 @@
        "tiembla": true
       },
       {
+       "at": "@familia",
+       "mira": "camara",
+       "cara": "preocupado"
+      },
+      {
        "at": "@euro",
        "tropieza": true
       }
@@ -430,6 +444,11 @@
       {
        "at": "@812",
        "salta": true
+      },
+      {
+       "at": "@media",
+       "mira": "piz",
+       "cara": "sorpresa"
       }
      ],
      "id": "peque",

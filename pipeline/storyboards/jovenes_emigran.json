@@ -180,9 +180,17 @@
      "cara": "ilusionado",
      "acciones": [
       {
+       "at": 0.9,
+       "mira": "der"
+      },
+      {
        "at": "@Francia",
        "salta": true,
        "cara": "riendo"
+      },
+      {
+       "at": "@16.353",
+       "pose": "arriba"
       },
       {
        "at": "@Reino",
@@ -506,6 +514,15 @@
       {
        "at": "@34",
        "salta": true
+      },
+      {
+       "at": "@nacidos",
+       "mira": "camara",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@España",
+       "tiembla": true
       },
       {
        "at": "@17.792",

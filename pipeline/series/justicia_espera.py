@@ -64,7 +64,7 @@ scenes = [
     ], camara=[plano(0, "general", dur=0), plano("@9,4", "abierto", dur=0.4)],
        elements=[
         quien("profe", 300, 0, 0.75, "serio", entra="izq", acciones=[
-            {"at": "@crece", "mira": "grafica", "pose": "senala"}, {"at": "@3,4", "take": True}, {"at": "@9,4", "cara": "sorpresa"}]),
+            {"at": "@crece", "mira": "grafica", "pose": "senala"}, {"at": "@3,4", "take": True}, {"at": "@anterior", "pose": "senala_arriba", "mira": "camara"}, {"at": "@social", "salta": True}, {"at": "@9,4", "cara": "sorpresa"}]),
         obj("grafica", 760, 800, "@pila", 0.85, id="grafica", entra="pop", props={"valores": [1, 1.2, 1.5, 1.9], "color": "rojo"}),
         rot("+3,4 %", 600, 480, "@3,4", 110, C, golpe=True, out="@9,4"),
         rot("SOCIAL: +9,4 %", 600, 480, "@9,4", 90, C, golpe=True),

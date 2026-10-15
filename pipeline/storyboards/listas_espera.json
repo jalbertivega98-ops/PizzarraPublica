@@ -82,6 +82,11 @@
      "cara": "normal",
      "acciones": [
       {
+       "at": 2.6,
+       "mira": "hospital",
+       "cara": "pensativo"
+      },
+      {
        "at": "@50",
        "salta": true,
        "cara": "riendo"
@@ -99,6 +104,15 @@
      "at": "@personas+0.3",
      "cara": "preocupado",
      "acciones": [
+      {
+       "at": 3.7,
+       "mira": "piz",
+       "pose": "encoge"
+      },
+      {
+       "at": 4.6,
+       "tiembla": true
+      },
       {
        "at": "@173",
        "take": true,

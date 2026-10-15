@@ -19,8 +19,8 @@ scenes = [
     ], camara=[plano(0, "general", dur=0), plano("@173", "abierto", dur=0.4)],
        elements=[
         edif("hospital", 540, 0, 0.6, id="hospital", entra="nada"),
-        quien("piz", 250, "@personas", 0.62, "normal", entra="izq", acciones=[{"at": "@50", "salta": True, "cara": "riendo"}]),
-        quien("pizon", 830, "@personas+0.3", 0.62, "preocupado", entra="der", acciones=[{"at": "@173", "take": True, "cara": "susto"}]),
+        quien("piz", 250, "@personas", 0.62, "normal", entra="izq", acciones=[{"at": 2.6, "mira": "hospital", "cara": "pensativo"}, {"at": "@50", "salta": True, "cara": "riendo"}]),
+        quien("pizon", 830, "@personas+0.3", 0.62, "preocupado", entra="der", acciones=[{"at": 3.7, "mira": "piz", "pose": "encoge"}, {"at": 4.6, "tiembla": True}, {"at": "@173", "take": True, "cara": "susto"}]),
         rot("853.509", 540, 480, "@853.509", 120, "amarillo", golpe=True, out="@vivas"),
         rot("50 DÍAS", 250, 520, "@50", 90, "verde", golpe=True),
         rot("173 DÍAS", 830, 520, "@173", 90, C, golpe=True),

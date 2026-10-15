@@ -533,6 +533,15 @@
        "take": true
       },
       {
+       "at": "@anterior",
+       "pose": "senala_arriba",
+       "mira": "camara"
+      },
+      {
+       "at": "@social",
+       "salta": true
+      },
+      {
        "at": "@9,4",
        "cara": "sorpresa"
       }

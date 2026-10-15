@@ -24,14 +24,14 @@ from padres_viva import V  # noqa: E402
 from universo import gags  # noqa: E402
 
 C = "red"
-CONG = "Congreso de los Diputados, retribuciones 2026 · diputado sin cargo, de fuera de Madrid"
+CONG = "Congreso, retribuciones 2026 · diputado sin cargo, de fuera de Madrid"
 
 
 def quien(q, x, at=0.0, scale=0.75, cara="normal", acciones=(), **kw):
     return pj(q, x, at, scale, cara, acciones, id=q, **kw)
 
 
-saco_els, saco_pizon = gags.cae_del_cielo("3,9 AÑOS", "@mínimo-0.5", 300, 560, scale=1.1, onomatopeya="¡PLAF!")
+saco_els, saco_pizon = gags.cae_del_cielo("3,9 AÑOS", "@mínimo-0.5", 300, 820, scale=1.1, onomatopeya="¡PLAF!")
 
 scenes = [
     # 1 · GANCHO
@@ -47,7 +47,7 @@ scenes = [
                                                                        {"at": "@tres", "take": True, "cara": "susto"},
                                                                        {"at": "@IRPF", "mira": "diputado", "cara": "indignado"}]),
         rot("1 AÑO", 330, 520, "@año", 100, "amarillo", golpe=True),
-        rot("≈ 3 AÑOS", 800, 520, "@tres", 100, C, golpe=True),
+        rot("≈ 3 AÑOS", 760, 520, "@tres", 84, C, golpe=True),
         rot("SIN IRPF", 540, 700, "@IRPF", 90, "verde", golpe=True),
     ]),
     # 2 · LA NÓMINA
@@ -69,7 +69,7 @@ scenes = [
         dict(type="efecto", efecto="lluvia", objeto="moneda", n=10, x0=150, x1=500, at="@5.530", vida=1.8),
     ]),
     # 3 · LO EXENTO
-    dict(id="exento", fondo="oficina", animo="comico", trans="iris", footnote="Indemnización exenta de IRPF: art. 17.2.b Ley 35/2006 (según el Congreso)", lines=[
+    dict(id="exento", fondo="oficina", animo="comico", trans="iris", footnote="Indemnización exenta de IRPF: art. 17.2.b Ley 35/2006", lines=[
         V("Y esos 2.163 de gastos están exentos: Hacienda no los toca.", "sorpresa"),
         V("Son para pagarse el alojamiento y los viajes a Madrid.", "normal", 0.2),
     ], camara=[plano(0, "general", dur=0), plano("@exentos", "medio", "hacienda", 0.3, aire=200)],
@@ -95,20 +95,20 @@ scenes = [
             {"at": "@tres", "tropieza": True, "objeto": None}]),
         obj("reloj", 800, 600, "@cuesta", 0.7, entra="pop", velocidad=4),
         rot("24.497 €/AÑO", 800, 470, "@24.497", 74, "amarillo", golpe=True, out="@cuesta"),
-        rot("66.358 €/AÑO", 270, 470, "@66.000", 74, "verde", golpe=True),
+        rot("66.358 €/AÑO", 300, 620, "@66.000", 70, "verde", golpe=True),
         rot("× 2,7", 800, 470, "@tres", 120, C, golpe=True),
     ]),
     # 5 · PIZÓN: el SMI
     dict(id="pizon", fondo="salon", animo="triste", trans="corte", footnote="SMI 2026: 17.094 €/año (RD 126/2026)", lines=[
         V("Y Pizón, con el sueldo mínimo, necesita casi cuatro.", "remate"),
-    ], camara=[plano(0, "general", dur=0), plano("@cuatro", "medio", "pizon", 0.3, aire=200)],
+    ], camara=[plano(0, "general", dur=0)],
        elements=[
         quien("pizon", 300, 0, 0.75, "normal", entra="izq", acciones=saco_pizon + [{"at": "@cuatro+0.6", "cara": "triste", "pose": "caidos"}]),
         *saco_els,
-        rot("17.094 €/AÑO", 700, 470, "@Pizón", 74, "amarillo", golpe=True),
+        rot("17.094 €/AÑO", 740, 520, "@Pizón", 74, "amarillo", golpe=True),
     ]),
     # 6 · LOS CARGOS
-    dict(id="cargos", fondo="rayos", animo="comico", trans="iris", footnote="Congreso 2026: portavoz de grupo +3.197,41 €/mes · Presidencia 14.330,84 €/mes (suma propia)", lines=[
+    dict(id="cargos", fondo="rayos", animo="comico", trans="iris", footnote="Congreso 2026: portavoz +3.197,41 €/mes · Presidencia 14.330,84 €/mes", lines=[
         V("Y eso, sin cargos. Un portavoz suma 3.197 euros más al mes.", "normal"),
         V("Y la presidencia del Congreso pasa de 14.000.", "sorpresa", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@14.000", "abierto", dur=0.4)],
@@ -123,7 +123,7 @@ scenes = [
         rot("PRESIDENCIA: 14.331 €", 560, 520, "@14.000", 72, C, golpe=True),
     ]),
     # 7 · MATIZ + FINAL
-    dict(id="final", fondo="calle", animo="final", trans="iris", footnote="Con 14 pagas de asignación serían 73.092 €/año (el Congreso no publica el nº de pagas)", lines=[
+    dict(id="final", fondo="calle", animo="final", trans="iris", footnote="Con 12 pagas · con 14 de asignación, 73.092 €/año", lines=[
         V("Ojo: los gastos no son sueldo, compensan vivir lejos de casa.", "normal"),
         V("¿Te parece mucho o poco? Te leemos. Y síguenos: la próxima, la cesta de la compra.", "energia", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@síguenos", "abierto", dur=0.4)],

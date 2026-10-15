@@ -37,7 +37,7 @@
    "id": "gancho",
    "fondo": "calle",
    "animo": "curioso",
-   "footnote": "Congreso de los Diputados, retribuciones 2026 · diputado sin cargo, de fuera de Madrid",
+   "footnote": "Congreso, retribuciones 2026 · diputado sin cargo, de fuera de Madrid",
    "lines": [
     {
      "text": "Un diputado cobra en un año lo que un trabajador normal tarda casi tres en ganar.",
@@ -139,9 +139,9 @@
     {
      "type": "rotulo",
      "text": "≈ 3 AÑOS",
-     "x": 800,
+     "x": 760,
      "y": 520,
-     "size": 100,
+     "size": 84,
      "color": "red",
      "at": "@tres",
      "golpe": true,
@@ -165,7 +165,7 @@
    "fondo": "oficina",
    "animo": "curioso",
    "trans": "pan",
-   "footnote": "Congreso de los Diputados, retribuciones 2026 · diputado sin cargo, de fuera de Madrid",
+   "footnote": "Congreso, retribuciones 2026 · diputado sin cargo, de fuera de Madrid",
    "lines": [
     {
      "text": "Su sueldo base, la asignación, son 3.367 euros al mes. La cobran todos.",
@@ -323,7 +323,7 @@
    "fondo": "oficina",
    "animo": "comico",
    "trans": "iris",
-   "footnote": "Indemnización exenta de IRPF: art. 17.2.b Ley 35/2006 (según el Congreso)",
+   "footnote": "Indemnización exenta de IRPF: art. 17.2.b Ley 35/2006",
    "lines": [
     {
      "text": "Y esos 2.163 de gastos están exentos: Hacienda no los toca.",
@@ -581,9 +581,9 @@
     {
      "type": "rotulo",
      "text": "66.358 €/AÑO",
-     "x": 270,
-     "y": 470,
-     "size": 74,
+     "x": 300,
+     "y": 620,
+     "size": 70,
      "color": "verde",
      "at": "@66.000",
      "golpe": true,
@@ -620,13 +620,6 @@
      "plano": "general",
      "sobre": null,
      "dur": 0
-    },
-    {
-     "at": "@cuatro",
-     "plano": "medio",
-     "sobre": "pizon",
-     "dur": 0.3,
-     "aire": 200
     }
    ],
    "elements": [
@@ -685,7 +678,7 @@
       },
       {
        "at": "@mínimo+0.75",
-       "y": 560,
+       "y": 820,
        "x": 340,
        "dur": 0.45
       }
@@ -704,8 +697,8 @@
     {
      "type": "rotulo",
      "text": "17.094 €/AÑO",
-     "x": 700,
-     "y": 470,
+     "x": 740,
+     "y": 520,
      "size": 74,
      "color": "amarillo",
      "at": "@Pizón",
@@ -719,7 +712,7 @@
    "fondo": "rayos",
    "animo": "comico",
    "trans": "iris",
-   "footnote": "Congreso 2026: portavoz de grupo +3.197,41 €/mes · Presidencia 14.330,84 €/mes (suma propia)",
+   "footnote": "Congreso 2026: portavoz +3.197,41 €/mes · Presidencia 14.330,84 €/mes",
    "lines": [
     {
      "text": "Y eso, sin cargos. Un portavoz suma 3.197 euros más al mes.",
@@ -863,7 +856,7 @@
    "fondo": "calle",
    "animo": "final",
    "trans": "iris",
-   "footnote": "Con 14 pagas de asignación serían 73.092 €/año (el Congreso no publica el nº de pagas)",
+   "footnote": "Con 12 pagas · con 14 de asignación, 73.092 €/año",
    "lines": [
     {
      "text": "Ojo: los gastos no son sueldo, compensan vivir lejos de casa.",

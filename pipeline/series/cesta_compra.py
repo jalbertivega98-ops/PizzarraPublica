@@ -24,7 +24,7 @@ from padres_viva import V  # noqa: E402
 from universo import gags  # noqa: E402
 
 C = "red"
-INE = "INE, IPC base 2025: alimentos y bebidas no alcohólicas, enero 2021 → septiembre 2026 · cálculo propio"
+INE = "INE, IPC alimentos y bebidas, ene 2021 - sep 2026 · cálculo propio"
 
 
 def quien(q, x, at=0.0, scale=0.75, cara="normal", acciones=(), **kw):
@@ -59,13 +59,13 @@ scenes = [
     ], camara=[plano(0, "general", dur=0), plano("@Nueve", "medio", "profe", 0.3, aire=220)],
        elements=[
         quien("profe", 280, 0, 0.75, "normal", entra="izq", pose="senala_arriba", acciones=[
-            {"at": "@36", "pose": "senala", "cara": "serio"}, {"at": "@Nueve", "salta": True, "cara": "sorpresa"}]),
+            {"at": "@36", "pose": "senala", "cara": "serio"}, {"at": 3.4, "mira": "camara", "pose": "senala_arriba", "cara": "sorpresa"}, {"at": "@Nueve", "salta": True, "cara": "sorpresa"}]),
         obj("grafica", 760, 860, "@comida", 0.85, entra="pop", props={"valores": [1, 1.1, 1.5, 2.2, 2.6], "color": "rojo"}),
-        rot("COMIDA: +36 %", 620, 600, "@36", 90, C, golpe=True),
-        rot("RESTO: +27 %", 620, 720, "@Nueve", 76, "amarillo", golpe=True),
+        rot("COMIDA: +36 %", 600, 450, "@36", 90, C, golpe=True),
+        rot("RESTO: +27 %", 600, 560, "@Nueve", 76, "amarillo", golpe=True),
     ]),
     # 3 · LOS HUEVOS
-    dict(id="huevos", fondo="salon", animo="comico", trans="iris", footnote="INE, subclase «Huevos» (IPC291439): 58,931 → 112,611", lines=[
+    dict(id="huevos", fondo="salon", animo="comico", trans="iris", footnote="INE, subclase del IPC «Huevos»: 58,931 → 112,611", lines=[
         V("El récord, los huevos: un 91 % más. Casi el doble.", "sorpresa"),
     ], camara=[plano(0, "general", dur=0), plano("@doble", "medio", "piz", 0.3, aire=200)],
        elements=[
@@ -75,7 +75,7 @@ scenes = [
         rot("× 1,9", 800, 520, "@doble", 120, C, golpe=True),
     ]),
     # 4 · LA LISTA
-    dict(id="lista", fondo="salon", animo="tension", trans="pan", footnote="INE, subclases: aceites vegetales (IPC291663) · leche entera (IPC291643) · chocolate (IPC291739)", lines=[
+    dict(id="lista", fondo="salon", animo="tension", trans="pan", footnote="INE, subclases del IPC: aceites vegetales, leche entera, chocolate", lines=[
         V("El aceite, un 56 % más. La leche entera, un 52.", "normal"),
         V("Y el chocolate, un 58.", "remate", 0.1),
     ], camara=[plano(0, "general", dur=0), plano("@chocolate", "abierto", dur=0.4)],
@@ -97,7 +97,7 @@ scenes = [
         rot("AZÚCAR: +26 %", 540, 560, "@26", 100, "verde", golpe=True),
     ]),
     # 6 · MATIZ
-    dict(id="matiz", fondo="oficina", animo="curioso", trans="pan", footnote="INE, IPC septiembre 2026: alimentos +2,7 % · general +4,9 % (tasa anual)", lines=[
+    dict(id="matiz", fondo="oficina", animo="curioso", trans="pan", footnote="INE, IPC sep 2026 (anual): alimentos +2,7 % · general +4,9 %", lines=[
         V("Ojo: este año la comida sube un 2,7 %, menos que el resto, que va al 4,9.", "normal"),
         V("Lo de antes ya no baja: se queda.", "remate", 0.2),
     ], camara=[plano(0, "general", dur=0), plano("@queda", "medio", "piz", 0.3, aire=200)],
@@ -107,8 +107,8 @@ scenes = [
         quien("piz", 800, 0, 0.72, "pensativo", entra="der", acciones=[
             {"at": "@2,7", "cara": "ilusionado", "salta": True}, {"at": "@baja", "cara": "preocupado"},
             {"at": "@queda", "take": True, "cara": "triste"}]),
-        rot("COMIDA HOY: +2,7 %", 540, 520, "@2,7", 72, "verde", golpe=True),
-        rot("GENERAL: +4,9 %", 540, 640, "@4,9", 72, "amarillo", golpe=True),
+        rot("COMIDA HOY: +2,7 %", 600, 580, "@2,7", 72, "verde", golpe=True),
+        rot("GENERAL: +4,9 %", 600, 690, "@4,9", 72, "amarillo", golpe=True),
     ]),
     # 7 · FINAL
     dict(id="final", fondo="calle", animo="final", trans="iris", footnote="El IPC mide una cesta media: tu ticket puede subir más o menos", lines=[
@@ -120,7 +120,7 @@ scenes = [
         quien("piz", 280, 0, 0.72, "normal", entra="nada", objeto="contrato", pose="sostiene", acciones=[
             {"at": "@notas", "mira": "camara", "cara": "pensativo"}, {"at": "@leemos", "pose": "senala", "cara": "ilusionado", "objeto": None},
             {"at": "@síguenos", "pose": "saluda", "cara": "riendo"}, {"at": "@espera", "salta": True}]),
-        rot("¿QUÉ NOTAS MÁS?", 540, 470, "@notas", 100, "amarillo", golpe=True, out="@síguenos"),
+        rot("¿QUÉ NOTAS MÁS?", 540, 470, "@notas", 100, "amarillo", golpe=True, out="@síguenos-0.4"),
         rot("SÍGUENOS", 540, 470, "@síguenos", 110, "amarillo", fx=[{"at": "@espera", "do": "latir"}]),
     ]),
 ]

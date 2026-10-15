@@ -366,18 +366,57 @@ def movil(c, t=0.0, pantalla="sms", texto="", lineas=None, codigo="", remite="BA
     _cara(c, 0, -290, 0.45, cara, t)
 
 
+# ------------------------------------------------------------------ verano
+def avion(c, t=0.0, texto="", cara=None, **kw):
+    """Avión pequeño (tipo Falcon) visto de lado, mirando a la derecha."""
+    pieza(c, suave([(-300, 10), (-250, -40), (200, -46), (300, -10), (310, 12), (200, 40), (-250, 40)]), "blanco", 7,
+          shader=degradado(-46, 40, "blanco", "gris_claro"))
+    pieza(c, poly([(-250, -30), (-320, -150), (-260, -150), (-180, -36)]), "blanco", 6)
+    pieza(c, poly([(-40, 20), (-140, 120), (-80, 120), (60, 24)]), "gris_claro", 6)
+    pieza(c, rrect(-230, -70, -130, -36, 14), "gris_claro", 5)
+    for i in range(6):
+        c.drawCircle(-90 + i * 50, -14, 12, relleno("cristal")); c.drawCircle(-90 + i * 50, -14, 12, trazo(4))
+    pieza(c, suave([(200, -40), (270, -24), (250, -10), (196, -14)]), "cristal", 4)
+    c.drawLine(-300, 22, 300, 22, trazo(6, "azul"))
+    if texto:
+        _texto(c, texto, -40, 74, 30, "azul", "sub")
+    _cara(c, 120, -110, 0.4, cara, t)
+
+
+def balon(c, t=0.0, cara=None, **kw):
+    pieza(c, elipse(0, 0, 70, 70), "blanco", 6)
+    c.save(); c.rotate(t * 360)
+    pieza(c, poly([(0, -26), (25, -8), (16, 22), (-16, 22), (-25, -8)]), "tinta", 0)
+    for a in range(0, 360, 72):
+        r = math.radians(a - 90)
+        c.drawLine(30 * math.cos(r), 30 * math.sin(r), 66 * math.cos(r), 66 * math.sin(r), trazo(5))
+    c.restore()
+    _cara(c, 0, -110, 0.35, cara, t)
+
+
+def queso(c, t=0.0, cara=None, texto="", **kw):
+    """Cuña de queso (azul de los Picos / Gamonéu)."""
+    pieza(c, poly([(-150, 60), (150, 60), (150, -10), (-150, -90)]), (246, 226, 160), 6)
+    pieza(c, poly([(-150, -90), (150, -10), (150, 60), (-150, 60)]), (246, 226, 160), 6, shader=degradado(-90, 60, (252, 238, 186), (232, 205, 130)))
+    for x, y, r in ((-80, 10, 14), (0, 30, 18), (70, 0, 12), (-20, -20, 10), (110, 34, 10)):
+        c.drawCircle(x, y, r, relleno((150, 160, 120))); c.drawCircle(x, y, r, trazo(3))
+    if texto:
+        _texto(c, texto, 0, 120, 34, "tinta", "sub")
+    _cara(c, 0, -170, 0.45, cara, t)
+
+
 TIPOS = {
     "billete": billete, "fajo": fajo, "moneda": moneda, "hucha": hucha, "saco": saco,
     "contrato": contrato, "cartel": cartel, "checklist": checklist, "etiqueta": etiqueta, "bocadillo": bocadillo,
     "lupa": lupa, "calculadora": calculadora, "reloj": reloj, "llave": llave, "grafica": grafica, "flecha": flecha,
-    "coche": coche, "bus": bus, "tren": tren, "arbol": arbol, "farola": farola, "nube": nube, "sol": sol, "movil": movil,
+    "coche": coche, "bus": bus, "tren": tren, "arbol": arbol, "farola": farola, "nube": nube, "sol": sol, "movil": movil, "avion": avion, "balon": balon, "queso": queso,
 }
 # tamaño aproximado (ancho, alto) a escala 1, para la cámara y la maquetación
 TAMANO = {"billete": (300, 150), "fajo": (340, 220), "moneda": (180, 180), "hucha": (420, 320), "saco": (300, 300),
           "contrato": (280, 360), "cartel": (500, 200), "checklist": (600, 400), "etiqueta": (500, 140),
           "bocadillo": (500, 160), "lupa": (260, 320), "calculadora": (220, 320), "reloj": (260, 280), "llave": (300, 140),
           "grafica": (400, 320), "flecha": (260, 130), "coche": (480, 260), "bus": (700, 360), "tren": (900, 300),
-          "arbol": (320, 440), "farola": (100, 470), "nube": (340, 160), "sol": (340, 340), "movil": (300, 480)}
+          "arbol": (320, 440), "farola": (100, 470), "nube": (340, 160), "sol": (340, 340), "movil": (300, 480), "avion": (640, 300), "balon": (150, 150), "queso": (320, 180)}
 # objetos cuyo (0, 0) es el suelo (el resto está centrado)
 APOYADOS = {"arbol", "farola"}
 

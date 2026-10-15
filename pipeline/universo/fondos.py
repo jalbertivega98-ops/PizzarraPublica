@@ -7,7 +7,7 @@ import math
 
 import skia
 
-from .estilo import COL, degradado, elipse, mezcla, pieza, poly, relleno, rrect, trazo
+from .estilo import COL, degradado, elipse, mezcla, pieza, poly, relleno, rrect, suave, trazo
 
 X0, X1, Y0, Y1 = -260, 1340, -260, 2180
 SUELO = 1340
@@ -229,12 +229,73 @@ def _suelo_baldosas(c, suelo, a, b):
                 _rect(c, x, y, x + sz, y + sz, b)
 
 
+def playa(c, t=0.0, capa=lambda d: None, suelo=SUELO, variante="volcan", **kw):
+    """Verano: volcan (Lanzarote: lomas volcánicas y casitas blancas), ria (Galicia: montes verdes y bateas),
+    montana (Asturias: prados y Picos de Europa). Mar con olas y arena o prado delante."""
+    capa(0.15)
+    _rect(c, X0, Y0, X1, suelo, "cielo_alto", degradado(Y0, suelo, "cielo_alto", (200, 232, 250)))
+    c.drawCircle(880, 260, 90, relleno((255, 222, 110)))
+    for i, (y, s_, v) in enumerate(((200, 0.9, 12), (380, 0.6, 8))):
+        _nube(c, (i * 640 + t * v) % 1700 - 300, y, s_, 210)
+    _pajaros(c, t)
+    capa(0.4)
+    hz = suelo - 260  # horizonte
+    if variante == "montana":
+        for x, h, col in ((-200, 520, "piedra_osc"), (180, 640, "piedra"), (560, 560, "piedra_osc"), (920, 600, "piedra")):
+            pieza(c, poly([(x - 320, hz + 60), (x, hz - h), (x + 320, hz + 60)]), col, 5)
+        capa(0.7)
+        for i in range(8):
+            cx = X0 + i * 240
+            c.drawCircle(cx, hz + 150, 190, relleno(mezcla("hierba", "verde_osc", 0.3 + 0.2 * (i % 2))))
+    else:
+        cerros = (125, 78, 64) if variante == "volcan" else "verde_osc"
+        for x, h in ((-150, 230), (260, 300), (700, 250), (1100, 320)):
+            pieza(c, suave_cerro(x, hz, h), mezcla(cerros, "cielo", 0.15), 5)
+        if variante == "volcan":
+            for i in range(6):
+                bx = 120 + i * 150
+                pieza(c, rrect(bx, hz - 60, bx + 90, hz + 4, 6), "blanco", 4)
+                _rect(c, bx + 34, hz - 34, bx + 56, hz, "azul")
+        capa(0.7)
+        _rect(c, X0, hz, X1, suelo + 10, (70, 160, 215), degradado(hz, suelo, (90, 175, 225), (40, 130, 200)))
+        for k in range(5):  # olas
+            y = hz + 40 + k * 50
+            off = (t * (30 + 8 * k)) % 160
+            for x in range(int(X0 - 160 + off), X1, 160):
+                c.drawArc(skia.Rect(x, y - 14, x + 70, y + 14), 200, 140, False, trazo(4, "blanco", 170))
+        if variante == "ria":
+            for i, bx in enumerate((200, 640, 960)):  # bateas de mejillones
+                yb = hz + 90 + 20 * i + 6 * math.sin(t * 1.4 + i)
+                pieza(c, rrect(bx - 80, yb - 10, bx + 80, yb + 10, 4), "madera", 4)
+    capa(1.0)
+    delante = (238, 214, 160) if variante != "montana" else "hierba"
+    _rect(c, X0, suelo - 20, X1, Y1, delante, degradado(suelo - 20, Y1, delante, mezcla(delante, "tinta", 0.15)))
+    c.drawLine(X0, suelo - 20, X1, suelo - 20, trazo(6))
+    if variante == "volcan":  # palmera
+        c.save(); c.translate(980, suelo - 20)
+        c.drawPath(poly([(-14, 0), (14, 0), (40, -380), (20, -380)]), relleno("madera")); c.drawPath(poly([(-14, 0), (14, 0), (40, -380), (20, -380)]), trazo(5))
+        for a in range(0, 360, 60):
+            r = math.radians(a + 4 * math.sin(t * 1.5))
+            pieza(c, suave([(30, -380), (30 + 150 * math.cos(r), -380 + 80 * math.sin(r) - 30), (30 + 170 * math.cos(r), -360 + 90 * math.sin(r))],
+                           close=False) if False else poly([(30, -386), (30 + 160 * math.cos(r), -380 + 70 * math.sin(r) - 20),
+                                                           (30 + 150 * math.cos(r), -360 + 70 * math.sin(r))]), "verde", 4)
+        c.restore()
+
+
+def suave_cerro(x, base, h):
+    p = skia.Path()
+    p.moveTo(x - 330, base + 30)
+    p.cubicTo(x - 200, base - h, x + 200, base - h, x + 330, base + 30)
+    p.close()
+    return p
+
+
 def _f(size, cual="hand"):
     import wb
     return wb.font(cual, size)
 
 
-TIPOS = {"calle": calle, "banco_dentro": banco_dentro, "oficina": oficina, "salon": salon, "plano": plano, "rayos": rayos}
+TIPOS = {"calle": calle, "banco_dentro": banco_dentro, "oficina": oficina, "salon": salon, "plano": plano, "rayos": rayos, "playa": playa}
 
 
 def dibuja(c, fondo, t=0.0, cam=None):

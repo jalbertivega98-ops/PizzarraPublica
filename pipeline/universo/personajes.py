@@ -45,6 +45,14 @@ PERSONAJES = {
                            acento="azul", gafas="cuadradas", corbata="azul", garabatos=("lineas",), zapatilla="negro"),
     "hacienda": dict(nombre="Pizarra de Hacienda", papel="Cobra impuestos", cara="normal", marco="marco_oscuro",
                      acento="amarillo", corbata="rojo", visera=True, garabatos=("porcentaje",), zapatilla="negro"),
+    # candidatos (verano 2026): pizarras reconocibles por el pelo, la barba y la chapa con el nombre; sin caricatura
+    "sanchez": dict(nombre="Pedro Sánchez", papel="Candidato del PSOE", cara="normal", marco="marco", acento="psoe",
+                    pelo=((105, 100, 106), "corto"), chapa=("SÁNCHEZ", "psoe"), zapatilla="blanco", garabatos=()),
+    "feijoo": dict(nombre="Alberto Núñez Feijóo", papel="Candidato del PP", cara="normal", marco="marco", acento="pp",
+                   pelo=((222, 222, 226), "canoso"), chapa=("FEIJÓO", "pp"), zapatilla="azul", garabatos=()),
+    "abascal": dict(nombre="Santiago Abascal", papel="Candidato de Vox", cara="normal", marco="marco", acento="vox",
+                    pelo=((50, 44, 44), "corto"), barba=(60, 52, 52), chapa=("ABASCAL", "vox"), zapatilla="verde_osc",
+                    garabatos=()),
     "estafador": dict(nombre="El estafador", papel="Se hace pasar por tu banco", cara="burla", marco="marco_oscuro",
                       acento="gris", antifaz=True, corbata="tinta", garabatos=("euro",), zapatilla="negro"),
 }
@@ -406,6 +414,13 @@ def accesorios_cara(c, ficha):
             p = suave([(x - 50, OJOS_Y - 20), (x + 50, OJOS_Y - 24), (x + 44, OJOS_Y + 20), (x - 40, OJOS_Y + 24)])
             pieza(c, p, "tinta", 5, brillo=suave([(x - 30, OJOS_Y - 8), (x - 10, OJOS_Y - 12)], close=False))
         c.drawLine(-4, OJOS_Y - 16, 4, OJOS_Y - 16, trazo(9))
+    if ficha.get("barba"):  # barba alrededor de la boca (con hueco para que se vea la expresión)
+        p = suave([(-128, OJOS_Y + 50), (-118, BOCA_Y + 60), (-60, BOCA_Y + 98), (0, BOCA_Y + 108), (60, BOCA_Y + 98),
+                   (118, BOCA_Y + 60), (128, OJOS_Y + 50), (100, BOCA_Y - 10), (60, BOCA_Y - 30), (-60, BOCA_Y - 30),
+                   (-100, BOCA_Y - 10)])
+        p.addPath(elipse(0, BOCA_Y + 14, 62, 38))
+        p.setFillType(skia.PathFillType.kEvenOdd)
+        pieza(c, p, ficha["barba"], 4)
     if ficha.get("antifaz"):  # antifaz de ladrón con agujeros para los ojos
         p = suave([(-125, OJOS_Y - 40), (0, OJOS_Y - 50), (125, OJOS_Y - 40), (120, OJOS_Y + 38), (0, OJOS_Y + 30),
                    (-120, OJOS_Y + 38)])
@@ -435,6 +450,28 @@ def accesorios_cuerpo(c, ficha):
         pieza(c, rrect(-34, 0, 34, 26, 6), "tinta", 0)
         c.drawLine(50, -16, 64, 30, trazo(4, "amarillo")); c.drawCircle(64, 34, 6, relleno("amarillo"))
         c.restore()
+    if ficha.get("pelo"):  # pelo asomando por encima del marco
+        col, estilo = ficha["pelo"]
+        c.save(); c.translate(0, -H2 + 4)
+        if estilo == "canoso":  # pelo blanco, algo despejado arriba
+            for sx in (-1, 1):
+                pieza(c, suave([(sx * 40, 0), (sx * 70, -40), (sx * 130, -36), (sx * 158, 10), (sx * 120, 6)]), col, 5)
+            pieza(c, suave([(-46, -4), (0, -30), (46, -4), (0, 4)]), col, 4)
+        else:
+            pts = [(-156, 14), (-152, -34)]
+            for k in range(7):  # mechones
+                x = -130 + k * 44
+                pts += [(x, -60 - 8 * (k % 2)), (x + 22, -44)]
+            pts += [(158, -30), (156, 14), (60, -4), (-40, 0)]
+            pieza(c, poly(pts), col, 5)
+        c.restore()
+    if ficha.get("chapa"):  # chapa con el apellido (para que se sepa quién es sin caricaturizar)
+        txt, col = ficha["chapa"]
+        import wb
+        f = wb.font("sub", 34)
+        w = f.measureText(txt) + 36
+        pieza(c, rrect(-w / 2, 172, w / 2, 222, 14), col, 4)
+        c.drawString(txt, -w / 2 + 18, 209, f, relleno("blanco"))
     if ficha.get("visera"):
         c.save(); c.translate(0, -H2 - 4)
         pieza(c, suave([(-90, 0), (-70, -46), (70, -46), (90, 0)]), "verde_osc", 5)

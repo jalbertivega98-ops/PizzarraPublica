@@ -37,7 +37,7 @@
    "id": "gancho",
    "fondo": "salon",
    "animo": "curioso",
-   "footnote": "PVPC 13/10/2026 (REE/OMIE) · con impuestos, cálculo propio",
+   "footnote": "PVPC 13/10/2026 (REE) · con impuestos, cálculo propio",
    "lines": [
     {
      "text": "Poner la lavadora a las ocho de la tarde te cuesta once veces más que a las tres.",
@@ -130,7 +130,7 @@
    "fondo": "salon",
    "animo": "tension",
    "trans": "pan",
-   "footnote": "PVPC 13/10/2026 (REE/OMIE) · con impuestos, cálculo propio",
+   "footnote": "PVPC 13/10/2026 (REE) · con impuestos, cálculo propio",
    "lines": [
     {
      "text": "El martes: una lavadora a las ocho, 49 céntimos. A las tres, 4.",
@@ -192,7 +192,7 @@
     },
     {
      "type": "rotulo",
-     "text": "20:00 → 0,49 €",
+     "text": "20:00: 0,49 €",
      "x": 600,
      "y": 470,
      "size": 90,
@@ -203,7 +203,7 @@
     },
     {
      "type": "rotulo",
-     "text": "15:00 → 0,04 €",
+     "text": "15:00: 0,04 €",
      "x": 600,
      "y": 590,
      "size": 90,
@@ -219,7 +219,7 @@
    "fondo": "salon",
    "animo": "comico",
    "trans": "iris",
-   "footnote": "PVPC 13/10/2026 (REE/OMIE) · con impuestos, cálculo propio · horno 2 kWh · aire 4 h",
+   "footnote": "PVPC 13/10/2026 (REE) · horno 2 kWh · cálculo propio",
    "lines": [
     {
      "text": "El horno: 97 céntimos o 9. Cuatro horas de aire: 1,74 euros o 31 céntimos.",
@@ -306,7 +306,7 @@
    "animo": "tension",
    "musica": "corte",
    "trans": "iris",
-   "footnote": "PVPC 13/10/2026 (REE/OMIE) · con impuestos, cálculo propio · madrugada ≈ 0,20 €/kWh",
+   "footnote": "PVPC 13/10/2026 (REE) · madrugada ≈ 0,20 €/kWh",
    "lines": [
     {
      "text": "Y lo de que de noche es barato ya no vale.",
@@ -391,7 +391,7 @@
    "fondo": "calle",
    "animo": "comico",
    "trans": "pan",
-   "footnote": "PVPC negativo el domingo 11/10/2026 de 12 a 17 h (REE) · vertidos: Aurora, 1.er semestre 2026",
+   "footnote": "PVPC 11/10/2026 (REE) · vertidos: Aurora, 1.er semestre",
    "lines": [
     {
      "text": "Pero el domingo, de doce a cinco de la tarde, la luz costó menos que cero.",
@@ -443,6 +443,11 @@
        "mira": "arriba"
       },
       {
+       "at": 1.9,
+       "cara": "sorpresa",
+       "pose": "senala_arriba"
+      },
+      {
        "at": "@cero",
        "salta": true,
        "cara": "riendo",
@@ -460,6 +465,15 @@
       {
        "at": "@570.000",
        "pose": "jarras"
+      },
+      {
+       "at": "@casas",
+       "tiembla": true
+      },
+      {
+       "at": "@año",
+       "mira": "camara",
+       "cara": "triste"
       }
      ],
      "entra": "nada",
@@ -517,7 +531,7 @@
    "fondo": "oficina",
    "animo": "tension",
    "trans": "iris",
-   "footnote": "FACUA, usuario medio PVPC (4,4 kW, 366 kWh): sep 2026 104,31 € · sep 2021 102,71 €",
+   "footnote": "FACUA, usuario medio PVPC (4,4 kW, 366 kWh)",
    "lines": [
     {
      "text": "Y aun así, la factura media de septiembre fue más cara que en 2021: 104 euros.",

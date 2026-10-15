@@ -11,7 +11,7 @@ Investigación con fuentes: /mnt/project-files/insta/investigacion/luz_datos_lla
 """
 from _tu_dinero import *  # noqa: F401,F403
 
-PV = "PVPC 13/10/2026 (REE/OMIE) · con impuestos, cálculo propio"
+PV = "PVPC 13/10/2026 (REE) · con impuestos, cálculo propio"
 
 scenes = [
     dict(id="gancho", fondo="salon", animo="curioso", footnote=PV, lines=[
@@ -33,10 +33,10 @@ scenes = [
             {"at": "@martes", "mira": "camara"}, {"at": "@49", "take": True, "cara": "susto"},
             {"at": "@4", "salta": True, "cara": "riendo"}]),
         obj("moneda", 780, 700, "@49", 0.9, entra="cae"),
-        rot("20:00 → 0,49 €", 600, 470, "@49", 90, C, golpe=True),
-        rot("15:00 → 0,04 €", 600, 590, "@4", 90, "verde", golpe=True),
+        rot("20:00: 0,49 €", 600, 470, "@49", 90, C, golpe=True),
+        rot("15:00: 0,04 €", 600, 590, "@4", 90, "verde", golpe=True),
     ]),
-    dict(id="mas", fondo="salon", animo="comico", trans="iris", footnote=PV + " · horno 2 kWh · aire 4 h", lines=[
+    dict(id="mas", fondo="salon", animo="comico", trans="iris", footnote="PVPC 13/10/2026 (REE) · horno 2 kWh · cálculo propio", lines=[
         V("El horno: 97 céntimos o 9. Cuatro horas de aire: 1,74 euros o 31 céntimos.", "normal"),
     ], camara=[plano(0, "general", dur=0), plano("@aire", "medio", "sarcastica", 0.3, aire=200)],
        elements=[
@@ -46,7 +46,7 @@ scenes = [
         rot("HORNO: 0,97 € / 0,09 €", 600, 470, "@97", 70, "amarillo", golpe=True),
         rot("AIRE 4 H: 1,74 € / 0,31 €", 600, 580, "@1,74", 66, "amarillo", golpe=True),
     ]),
-    dict(id="noche", fondo="rayos", animo="tension", musica="corte", trans="iris", footnote=PV + " · madrugada ≈ 0,20 €/kWh", lines=[
+    dict(id="noche", fondo="rayos", animo="tension", musica="corte", trans="iris", footnote="PVPC 13/10/2026 (REE) · madrugada ≈ 0,20 €/kWh", lines=[
         V("Y lo de que de noche es barato ya no vale.", "sorpresa"),
         V("La madrugada cuesta seis veces más que la siesta.", "remate", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@siesta", "medio", "piz", 0.3, aire=220)],
@@ -57,22 +57,22 @@ scenes = [
         rot("NOCHE ≠ BARATO", 540, 480, "@vale", 96, C, golpe=True, out="@seis"),
         rot("MADRUGADA × 6", 540, 480, "@seis", 110, C, golpe=True),
     ]),
-    dict(id="negativo", fondo="calle", animo="comico", trans="pan", footnote="PVPC negativo el domingo 11/10/2026 de 12 a 17 h (REE) · vertidos: Aurora, 1.er semestre 2026", lines=[
+    dict(id="negativo", fondo="calle", animo="comico", trans="pan", footnote="PVPC 11/10/2026 (REE) · vertidos: Aurora, 1.er semestre", lines=[
         V("Pero el domingo, de doce a cinco de la tarde, la luz costó menos que cero.", "sorpresa"),
         V("Sobra tanta solar que en seis meses se tiraron 2,5 teravatios: la luz de 570.000 casas durante un año.", "normal", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@570.000", "abierto", dur=0.4)],
        elements=[
         obj("sol", 790, 560, "@domingo", 0.7, entra="pop"),
         quien("piz", 300, 0, 0.72, "normal", entra="nada", acciones=[
-            {"at": "@domingo", "mira": "arriba"}, {"at": "@cero", "salta": True, "cara": "riendo", "pose": "arriba"},
+            {"at": "@domingo", "mira": "arriba"}, {"at": 1.9, "cara": "sorpresa", "pose": "senala_arriba"}, {"at": "@cero", "salta": True, "cara": "riendo", "pose": "arriba"},
             {"at": "@solar", "mira": "camara"}, {"at": "@tiraron", "take": True, "cara": "indignado"},
-            {"at": "@570.000", "pose": "jarras"}]),
+            {"at": "@570.000", "pose": "jarras"}, {"at": "@casas", "tiembla": True}, {"at": "@año", "mira": "camara", "cara": "triste"}]),
         rot("< 0 €", 540, 480, "@cero", 150, "verde", golpe=True, out="@tiraron"),
         rot("2,5 TWh TIRADOS", 540, 480, "@tiraron", 90, C, golpe=True, out="@570.000"),
         rot("= 570.000 CASAS", 540, 480, "@570.000", 90, "amarillo", golpe=True),
         monedas("@cero", 200, 900, 8),
     ]),
-    dict(id="factura", fondo="oficina", animo="tension", trans="iris", footnote="FACUA, usuario medio PVPC (4,4 kW, 366 kWh): sep 2026 104,31 € · sep 2021 102,71 €", lines=[
+    dict(id="factura", fondo="oficina", animo="tension", trans="iris", footnote="FACUA, usuario medio PVPC (4,4 kW, 366 kWh)", lines=[
         V("Y aun así, la factura media de septiembre fue más cara que en 2021: 104 euros.", "remate"),
     ], camara=[plano(0, "general", dur=0), plano("@104", "medio", "pizon", 0.3, aire=200)],
        elements=[

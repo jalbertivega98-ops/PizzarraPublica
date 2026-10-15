@@ -315,11 +315,11 @@
    "footnote": "Vozpópuli (30/07/2026), estimación · El Independiente (01/08/2026)",
    "lines": [
     {
-     "text": "Por seguridad: más de 60 policías y guardias civiles, una patrullera…",
+     "text": "Por seguridad: más de 60 agentes, una patrullera y el mar de delante, restringido.",
      "tono": "normal"
     },
     {
-     "text": "y el mar de delante, con la navegación restringida.",
+     "text": "Coste publicado: unos 250.000 euros de vigilancia privada.",
      "tono": "remate",
      "pausa": 0.15
     }
@@ -337,6 +337,12 @@
      "sobre": "sanchez",
      "dur": 0.3,
      "aire": 200
+    },
+    {
+     "at": "@Coste",
+     "plano": "general",
+     "sobre": null,
+     "dur": 0.4
     }
    ],
    "elements": [
@@ -364,15 +370,19 @@
        "dur": 0.5
       },
       {
-       "at": "@restringida",
+       "at": "@restringido",
        "take": true,
        "cara": "sorpresa"
       },
       {
-       "at": "@restringida+0.7",
-       "cara": "riendo",
-       "pose": "encoge",
+       "at": "@Coste",
+       "cara": "pensativo",
        "mira": "camara"
+      },
+      {
+       "at": "@250.000",
+       "pose": "encoge",
+       "cara": "serio"
       }
      ],
      "id": "sanchez",
@@ -384,13 +394,13 @@
      "x": -300,
      "y": 1250,
      "scale": 0.6,
-     "at": "@policías",
+     "at": "@agentes",
      "props": {
       "color": "azul"
      },
      "acciones": [
       {
-       "at": "@policías",
+       "at": "@agentes",
        "x": 1400,
        "dur": 2.4
       }
@@ -403,7 +413,7 @@
      "x": 820,
      "y": 980,
      "scale": 0.8,
-     "at": "@restringida-0.2",
+     "at": "@restringido-0.2",
      "props": {
       "lineas": [
        "NAVEGACIÓN",
@@ -426,6 +436,7 @@
      "color": "amarillo",
      "at": "@60",
      "golpe": true,
+     "out": "@Coste",
      "hud": true
     },
     {
@@ -436,108 +447,15 @@
      "size": 70,
      "color": "blanco",
      "at": "@patrullera",
+     "out": "@Coste",
      "hud": true
-    }
-   ]
-  },
-  {
-   "id": "coste",
-   "fondo": "oficina",
-   "animo": "tension",
-   "trans": "iris",
-   "footnote": "Vozpópuli (30/07/2026), estimación",
-   "lines": [
-    {
-     "text": "¿Cuánto cuesta? Solo hay un dato publicado:",
-     "tono": "intriga"
-    },
-    {
-     "text": "unos 250.000 euros de vigilancia privada para el recinto.",
-     "tono": "remate",
-     "pausa": 0.15
-    }
-   ],
-   "camara": [
-    {
-     "at": 0,
-     "plano": "general",
-     "sobre": null,
-     "dur": 0
-    },
-    {
-     "at": "@250.000",
-     "plano": "medio",
-     "sobre": [
-      560,
-      900
-     ],
-     "dur": 0.3
-    }
-   ],
-   "elements": [
-    {
-     "type": "personaje",
-     "quien": "sanchez",
-     "x": 300,
-     "y": 1340,
-     "scale": 0.75,
-     "at": 0,
-     "cara": "pensativo",
-     "acciones": [
-      {
-       "at": "@dato",
-       "mira": "calc"
-      },
-      {
-       "at": "@250.000",
-       "take": true,
-       "cara": "sorpresa"
-      },
-      {
-       "at": "@recinto",
-       "pose": "encoge",
-       "cara": "serio",
-       "mira": "camara"
-      }
-     ],
-     "id": "sanchez",
-     "entra": "izq"
-    },
-    {
-     "type": "objeto",
-     "objeto": "calculadora",
-     "x": 760,
-     "y": 860,
-     "scale": 0.9,
-     "at": "@cuesta",
-     "props": {
-      "texto": "0"
-     },
-     "acciones": [
-      {
-       "at": "@dato",
-       "props": {
-        "texto": "?"
-       }
-      },
-      {
-       "at": "@250.000",
-       "props": {
-        "texto": "€€€"
-       },
-       "salta": true
-      }
-     ],
-     "id": "calc",
-     "entra": "pop",
-     "sfx": "calculadora"
     },
     {
      "type": "rotulo",
      "text": "250.000 €",
      "x": 540,
-     "y": 520,
-     "size": 140,
+     "y": 500,
+     "size": 130,
      "color": "red",
      "at": "@250.000",
      "golpe": true,
@@ -547,7 +465,7 @@
      "type": "rotulo",
      "text": "vigilancia privada del recinto",
      "x": 540,
-     "y": 640,
+     "y": 620,
      "size": 54,
      "color": "blanco",
      "at": "@vigilancia",

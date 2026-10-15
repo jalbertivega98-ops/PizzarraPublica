@@ -69,36 +69,25 @@ scenes = [
         rot("1 DE AGOSTO", 540, 470, "@agosto", 90, "amarillo", golpe=True, out="@Ceuta"),
         rot("31/07: CEUTA", 540, 470, "@Ceuta", 90, C, golpe=True),
     ]),
-    # 3 · SEGURIDAD: el gag del mar restringido
+    # 3 · SEGURIDAD Y COSTE: el gag del mar restringido y el único número publicado
     dict(id="seguridad", fondo={"tipo": "playa", "variante": "volcan"}, animo="comico", trans="pan", footnote=VOZ + " · " + INDEP, lines=[
-        V("Por seguridad: más de 60 policías y guardias civiles, una patrullera…", "normal"),
-        V("y el mar de delante, con la navegación restringida.", "remate", 0.15),
-    ], camara=[plano(0, "general", dur=0), plano("@mar", "medio", "sanchez", 0.3, aire=200)],
+        V("Por seguridad: más de 60 agentes, una patrullera y el mar de delante, restringido.", "normal"),
+        V("Coste publicado: unos 250.000 euros de vigilancia privada.", "remate", 0.15),
+    ], camara=[plano(0, "general", dur=0), plano("@mar", "medio", "sanchez", 0.3, aire=200), plano("@Coste", "general", dur=0.4)],
        elements=[
         cand("sanchez", 320, 0, 0.75, "ilusionado", entra="nada", acciones=[
             {"at": "@seguridad", "x": 520, "dur": 0.9}, {"at": "@patrullera", "mira": "der"},
-            {"at": "@mar", "x": 640, "dur": 0.5}, {"at": "@restringida", "take": True, "cara": "sorpresa"},
-            {"at": "@restringida+0.7", "cara": "riendo", "pose": "encoge", "mira": "camara"}]),
-        obj("coche", -300, SUELO - 90, "@policías", 0.6, entra="nada", props={"color": "azul"},
-            acciones=[{"at": "@policías", "x": 1400, "dur": 2.4}]),
-        obj("cartel", 820, 980, "@restringida-0.2", 0.8, props={"lineas": ["NAVEGACIÓN", "RESTRINGIDA"], "color": "rojo", "tinta": "blanco"},
+            {"at": "@mar", "x": 640, "dur": 0.5}, {"at": "@restringido", "take": True, "cara": "sorpresa"},
+            {"at": "@Coste", "cara": "pensativo", "mira": "camara"},
+            {"at": "@250.000", "pose": "encoge", "cara": "serio"}]),
+        obj("coche", -300, SUELO - 90, "@agentes", 0.6, entra="nada", props={"color": "azul"},
+            acciones=[{"at": "@agentes", "x": 1400, "dur": 2.4}]),
+        obj("cartel", 820, 980, "@restringido-0.2", 0.8, props={"lineas": ["NAVEGACIÓN", "RESTRINGIDA"], "color": "rojo", "tinta": "blanco"},
             entra="cae", dur=0.5, sfx="golpe"),
-        rot("+60 AGENTES", 540, 470, "@60", 110, "amarillo", golpe=True),
-        rot("+ PATRULLERA", 540, 590, "@patrullera", 70, "blanco"),
-    ]),
-    # 4 · COSTE: el único número publicado
-    dict(id="coste", fondo="oficina", animo="tension", trans="iris", footnote=VOZ, lines=[
-        V("¿Cuánto cuesta? Solo hay un dato publicado:", "intriga"),
-        V("unos 250.000 euros de vigilancia privada para el recinto.", "remate", 0.15),
-    ], camara=[plano(0, "general", dur=0), plano("@250.000", "medio", [560, 900], 0.3)],
-       elements=[
-        cand("sanchez", 300, 0, 0.75, "pensativo", entra="izq", acciones=[{"at": "@dato", "mira": "calc"},
-                                                                          {"at": "@250.000", "take": True, "cara": "sorpresa"},
-                                                                          {"at": "@recinto", "pose": "encoge", "cara": "serio", "mira": "camara"}]),
-        obj("calculadora", 760, 860, "@cuesta", 0.9, id="calc", props={"texto": "0"}, entra="pop", sfx="calculadora",
-            acciones=[{"at": "@dato", "props": {"texto": "?"}}, {"at": "@250.000", "props": {"texto": "€€€"}, "salta": True}]),
-        rot("250.000 €", 540, 520, "@250.000", 140, C, golpe=True),
-        rot("vigilancia privada del recinto", 540, 640, "@vigilancia", 54, "blanco"),
+        rot("+60 AGENTES", 540, 470, "@60", 110, "amarillo", golpe=True, out="@Coste"),
+        rot("+ PATRULLERA", 540, 590, "@patrullera", 70, "blanco", out="@Coste"),
+        rot("250.000 €", 540, 500, "@250.000", 130, C, golpe=True),
+        rot("vigilancia privada del recinto", 540, 620, "@vigilancia", 54, "blanco"),
     ]),
     # 5 · FEIJÓO: Moaña, ría de Vigo
     dict(id="feijoo", fondo={"tipo": "playa", "variante": "ria"}, animo="alegre", trans="pan", footnote=INFOBAE, lines=[

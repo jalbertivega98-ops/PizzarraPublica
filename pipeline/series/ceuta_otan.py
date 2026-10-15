@@ -252,5 +252,5 @@ if __name__ == "__main__":
               "🔔 Síguenos · 📚 Fuentes en comentarios"),
              "📚 Fuentes: Tratado del Atlántico Norte arts. 4-6 (nato.int) · TUE art. 42.7 · Senado 24/02/2022 · "
              "Sánchez 12/10/2026 · Gobierno 13/10 · Feijóo 14/10 · Infobae 15/10 · Maldita 15/10. ¿Ves un error? Dínoslo.",
-             "#Ceuta #OTAN #Melilla #Marruecos #politica #España #29N #pizarrapublica",
+             ["#Ceuta", "#OTAN", "#Melilla", "#Marruecos", "#politica", "#España", "#29N", "#pizarrapublica"],
              series_tag="EXPLICADO FÁCIL")

@@ -84,3 +84,28 @@ amarillas y @pizarrapublica (dentro del recorte 4:5 de Instagram). En el storybo
 - Una sola voz (narrador). Para que Piz hable con voz propia hace falta una segunda voz de ElevenLabs.
 - El arte vectorial es más limpio y menos texturizado que las ilustraciones de referencia.
 - Render: unos 4 minutos por minuto de vídeo.
+
+## 10. Mundo dibujado (desde el 15/10/2026, norma para todos los vídeos)
+
+Los personajes siguen siendo protagonistas, pero ahora **viven en un mundo dibujado a mano** que cuenta la historia:
+mapas que se trazan con rotulador, mares y barcos con estela, ciudades con murallas, banderas, tratados que se despliegan.
+Episodio de referencia: `pipeline/series/ceuta_otan.py` → «Si atacan Ceuta, ¿viene la OTAN?» (guion y fuentes en `docs/series/ceuta_otan/`).
+
+**Reglas**: no repetir composición; cambiar de escenario cuando avanza la historia; cámara que se mueve con motivo;
+los dibujos se **dibujan** (no aparecen sin más); humor y emoción con los personajes; continuidad entre escenas;
+mapas geográficamente correctos; historia visual antes que pantallas de texto; recursos reutilizables; 9:16 y unos 60 s;
+ninguna escena quieta más de 3 s. Datos históricos, jurídicos y de actualidad comprobados; lo discutido nunca como confirmado
+(sellos `CONFIRMADO` / `DECLARACIÓN` / `SIN CONFIRMAR`).
+
+| Pieza | Uso en el storyboard |
+|---|---|
+| `mapa` (objeto) | `props: region (estrecho, atlantico), orden, colores, resalta, apaga, lineas, tropico, ambito6`; se traza en `dibujo` s. Contornos reales de Natural Earth (`universo/geo/`, nuevas regiones con `geo/preparar.py`). Líneas siempre del mismo grosor aunque la cámara haga zoom x10. |
+| `mapas.punto(region, lon, lat, x, y, escala)` | coloca barcos, personajes, banderas y rótulos en su sitio real del mapa |
+| `barco` | buque de perfil que se mece; al navegar (`acciones` con `x`, `dur`) deja estela y espuma. `props: bandera, numero, rumbo` |
+| `bandera`, `chincheta` | ondean: `espana`, `marruecos`, `otan`, `ue`, `ceuta` |
+| `documento` | pergamino que se despliega; `articulos` y `resalta` (fosforito que se pinta) |
+| `otan`, `atril`, `sello`, `prismaticos`, `faro`, `barquito` | símbolo de la OTAN, atril de partido, sello de verificación, prismáticos (pose `prismaticos`) |
+| fondos `ceuta`, `mar_mapa` | paseo junto a las Murallas Reales con el Monte Hacho y la península al fondo; mar infinito bajo los mapas |
+| `"dibuja": s` en cualquier elemento | el rotulador lo traza de izquierda a derecha (con sonido) |
+| acción `brinco` | `{"x", "y", "dur", "brinco": alto}`: salto en arco (p. ej. cruzar el Estrecho) |
+| escena `"limites"` | hasta dónde puede ir la cámara (en los mapas, muy lejos); zoom grande = interpolación logarítmica |

@@ -15,7 +15,7 @@ Investigación con fuentes: /mnt/project-files/insta/investigacion/caso_david_sa
 """
 from _tu_dinero import *  # noqa: F401,F403
 
-FN = "Audiencia Provincial de Badajoz, sentencia 14/07/2026 (no firme) · EFE y Europa Press"
+FN = "Audiencia Provincial de Badajoz, 14/07/2026 (no firme)"
 
 scenes = [
     dict(id="gancho", fondo="calle", animo="curioso", footnote="Sentencia no firme: está recurrida", lines=[
@@ -30,7 +30,7 @@ scenes = [
         rot("EL CASO DAVID SÁNCHEZ", 540, 480, "@hermano", 72, "amarillo", golpe=True),
         rot("EN 1 MINUTO", 540, 590, "@minuto", 84, "blanco", golpe=True),
     ]),
-    dict(id="contrato", fondo="oficina", animo="alegre", trans="pan", footnote="2017: coordinador de actividades de los conservatorios · Diputación de Badajoz", lines=[
+    dict(id="contrato", fondo="oficina", animo="alegre", trans="pan", footnote="Diputación de Badajoz, 2017", lines=[
         V("2017. La Diputación de Badajoz le contrata para la música de sus conservatorios.", "normal"),
         V("La preside Miguel Ángel Gallardo.", "normal", 0.1),
     ], camara=[plano(0, "general", dur=0), plano("@Gallardo", "abierto", dur=0.4)],
@@ -43,7 +43,7 @@ scenes = [
         rot("2017", 540, 470, "@2017", 120, "amarillo", golpe=True, out="@Gallardo"),
         rot("PRESIDENTE: GALLARDO", 540, 470, "@Gallardo", 70, "blanco", golpe=True),
     ]),
-    dict(id="denuncia", fondo="oficina", animo="tension", trans="iris", footnote="Denuncia de Manos Limpias (2024) · jueza Beatriz Biedma", lines=[
+    dict(id="denuncia", fondo="oficina", animo="tension", trans="iris", footnote="Denuncia de 2024 · jueza Beatriz Biedma", lines=[
         V("2024. Manos Limpias le denuncia: dice que la plaza se hizo a dedo para él.", "sorpresa"),
         V("Una jueza empieza a investigar.", "remate", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@jueza", "medio", "jueza", 0.3, aire=220)],
@@ -57,7 +57,7 @@ scenes = [
         rot("«A DEDO»", 600, 480, "@dedo", 110, C, golpe=True, out="@jueza"),
         rot("INVESTIGACIÓN", 600, 480, "@jueza", 84, "amarillo", golpe=True),
     ]),
-    dict(id="portugal", fondo={"tipo": "playa", "variante": "ria"}, animo="comico", trans="pan", footnote=FN + " · delito fiscal descartado", lines=[
+    dict(id="portugal", fondo={"tipo": "playa", "variante": "ria"}, animo="comico", trans="pan", footnote=FN, lines=[
         V("El juicio da por probado que vivía en Portugal y pasó más de un año sin despacho fijo.", "normal"),
         V("Lo de Hacienda se archivó.", "normal", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@despacho", "abierto", dur=0.4)],
@@ -78,24 +78,25 @@ scenes = [
             {"at": "@condenado", "take": True, "cara": "susto"}, {"at": "@público", "cara": "triste", "pose": "caidos"},
             {"at": "@prisión", "mira": "camara", "cara": "pensativo"}]),
         quien("gallardo", 800, "@Gallardo-0.2", 0.72, "normal", entra="pop", acciones=[{"at": "@18", "take": True, "cara": "triste"}]),
-        rot("9 AÑOS DE INHABILITACIÓN", 540, 470, "@nueve", 64, C, golpe=True),
+        rot("9 AÑOS INHABILITADO", 540, 470, "@nueve", 76, C, golpe=True),
         rot("SIN PRISIÓN", 540, 580, "@prisión", 80, "blanco", golpe=True),
         rot("GALLARDO: 18 AÑOS", 540, 690, "@18", 70, C, golpe=True),
     ]),
-    dict(id="porque", fondo="oficina", animo="curioso", trans="pan", footnote="Prevaricación (cooperador necesario) · 2017 prescrito · absueltos de tráfico de influencias", lines=[
+    dict(id="porque", fondo="oficina", animo="curioso", trans="pan", footnote="Condena por prevaricación · " + FN, lines=[
         V("¿Por el contrato de 2017? No, eso prescribió.", "normal"),
         V("Por cambiarle el nombre al puesto en 2022 sin funciones nuevas. Del tráfico de influencias, absueltos.", "normal", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@absueltos", "medio", "profe", 0.3, aire=200)],
        elements=[
         quien("profe", 300, 0, 0.75, "normal", entra="izq", pose="senala_arriba", acciones=[
-            {"at": "@prescribió", "pose": "senala", "cara": "serio"}, {"at": "@nombre", "mira": "contrato"},
+            {"at": 0.9, "mira": "camara", "cara": "pensativo"}, {"at": "@2017", "salta": True}, {"at": "@prescribió", "pose": "senala", "cara": "serio"}, {"at": "@nombre", "mira": "contrato"},
             {"at": "@nuevas", "cara": "pensativo"}, {"at": "@absueltos", "pose": "pulgar", "mira": "camara"}]),
         obj("contrato", 780, 780, "@nombre", 0.7, id="contrato", entra="pop", props={"titulo": "NUEVO NOMBRE", "hojas": 1}, sfx="papel"),
         rot("2017: PRESCRITO", 600, 470, "@prescribió", 80, "blanco", golpe=True, out="@nombre"),
-        rot("2022: NOMBRE NUEVO, MISMAS FUNCIONES", 600, 470, "@nombre", 52, "amarillo", golpe=True, out="@absueltos"),
-        rot("TRÁFICO DE INFLUENCIAS: ABSUELTOS", 600, 470, "@absueltos", 50, "verde", golpe=True),
+        rot("2022: CAMBIO DE NOMBRE", 600, 470, "@nombre", 70, "amarillo", golpe=True, out="@absueltos"),
+        rot("TRÁFICO DE INFLUENCIAS:", 600, 460, "@absueltos", 60, "verde", golpe=True),
+        rot("ABSUELTOS", 600, 560, "@absueltos", 90, "verde", golpe=True),
     ]),
-    dict(id="recurso", fondo="oficina", animo="tension", trans="iris", footnote="Recursos al TSJ de Extremadura: David Sánchez, Fiscalía y Gallardo (octubre de 2026)", lines=[
+    dict(id="recurso", fondo="oficina", animo="tension", trans="iris", footnote="Recursos al TSJ de Extremadura, octubre de 2026 (EFE)", lines=[
         V("Ojo: no es firme. Han recurrido él, Gallardo y la Fiscalía, que pidió la absolución.", "normal"),
         V("Decide el Tribunal Superior de Extremadura.", "normal", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@Extremadura", "abierto", dur=0.4)],
@@ -105,9 +106,9 @@ scenes = [
         quien("gallardo", 540, "@Gallardo", 0.62, "normal", entra="pop", acciones=[{"at": "@recurrido", "salta": True}]),
         quien("profe", 830, "@Fiscalía", 0.62, "serio", entra="pop", acciones=[{"at": "@absolución", "pose": "senala_arriba"}, {"at": "@recurrido", "salta": True}]),
         rot("NO ES FIRME", 540, 470, "@firme", 100, "amarillo", golpe=True, out="@Decide"),
-        rot("DECIDE EL TSJ DE EXTREMADURA", 540, 470, "@Tribunal", 56, "blanco", golpe=True),
+        rot("DECIDE EL TSJ", 540, 470, "@Tribunal", 90, "blanco", golpe=True),
     ]),
-    dict(id="partidos", fondo="calle", animo="curioso", trans="pan", footnote="Elma Saiz (Gobierno) · Alberto Núñez Feijóo (PP) · petición de Vox en el juicio", lines=[
+    dict(id="partidos", fondo="calle", animo="curioso", trans="pan", footnote="Elma Saiz (Gobierno) · Feijóo (PP) · Vox en el juicio", lines=[
         V("El Gobierno confía en su inocencia.", "normal"),
         V("El PP: «el tiempo pone las cosas en su sitio». Vox, que acusaba, pedía seis años de cárcel.", "normal", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@cárcel", "abierto", dur=0.4)],
@@ -116,10 +117,11 @@ scenes = [
         quien("feijoo", 540, "@PP", 0.6, "normal", entra="pop", acciones=[{"at": "@sitio", "pose": "senala_arriba"}]),
         quien("abascal", 850, "@Vox", 0.6, "normal", entra="pop", acciones=[{"at": "@cárcel", "pose": "senala"}]),
         rot("GOBIERNO: «INOCENCIA»", 540, 470, "@Gobierno", 66, "blanco", golpe=True, out="@PP"),
-        rot("PP: «EL TIEMPO LO PONE EN SU SITIO»", 540, 470, "@PP", 48, "blanco", golpe=True, out="@Vox"),
+        rot("PP: «EL TIEMPO PONE", 540, 460, "@PP", 62, "blanco", golpe=True, out="@Vox"),
+        rot("LAS COSAS EN SU SITIO»", 540, 550, "@PP", 62, "blanco", golpe=True, out="@Vox"),
         rot("VOX PEDÍA 6 AÑOS DE CÁRCEL", 540, 470, "@Vox", 56, "blanco", golpe=True),
     ]),
-    dict(id="final", fondo="calle", animo="final", trans="iris", footnote="Sentencia no firme · presunción de inocencia hasta sentencia firme", lines=[
+    dict(id="final", fondo="calle", animo="final", trans="iris", footnote="Presunción de inocencia hasta sentencia firme", lines=[
         V("¿Qué opinas? Te leemos.", "normal"),
         V("Y síguenos para saber qué decide el tribunal.", "energia", 0.15),
     ], camara=[plano(0, "general", dur=0), plano("@síguenos", "abierto", dur=0.4)],
@@ -150,4 +152,5 @@ if __name__ == "__main__":
               "como cooperador necesario; Gallardo, 18; absolución por tráfico de influencias; el nombramiento de 2017 está prescrito. Recursos ante "
               "el TSJ de Extremadura de David Sánchez (08/10), la Fiscalía (09/10) y Gallardo (13/10), según EFE. Delito fiscal descartado y archivado. "
               "Rige la presunción de inocencia hasta sentencia firme. ¿Ves un error? Dínoslo."),
-             ["#PizarraPública", "#DavidSánchez", "#Justicia", "#Badajoz", "#ExplicadoFácil", "#Política"])
+             ["#PizarraPública", "#DavidSánchez", "#Justicia", "#Badajoz", "#ExplicadoFácil", "#Política"],
+             series_tag="EXPLICADO FÁCIL")

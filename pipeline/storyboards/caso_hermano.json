@@ -1,7 +1,7 @@
 {
  "slug": "caso_hermano",
  "title": "El caso del hermano de Sánchez",
- "series_tag": "TU DINERO, CON DATOS",
+ "series_tag": "EXPLICADO FÁCIL",
  "accent": "red",
  "estilo": "viva",
  "icon_accent": {
@@ -137,7 +137,7 @@
    "fondo": "oficina",
    "animo": "alegre",
    "trans": "pan",
-   "footnote": "2017: coordinador de actividades de los conservatorios · Diputación de Badajoz",
+   "footnote": "Diputación de Badajoz, 2017",
    "lines": [
     {
      "text": "2017. La Diputación de Badajoz le contrata para la música de sus conservatorios.",
@@ -249,7 +249,7 @@
    "fondo": "oficina",
    "animo": "tension",
    "trans": "iris",
-   "footnote": "Denuncia de Manos Limpias (2024) · jueza Beatriz Biedma",
+   "footnote": "Denuncia de 2024 · jueza Beatriz Biedma",
    "lines": [
     {
      "text": "2024. Manos Limpias le denuncia: dice que la plaza se hizo a dedo para él.",
@@ -378,7 +378,7 @@
    },
    "animo": "comico",
    "trans": "pan",
-   "footnote": "Audiencia Provincial de Badajoz, sentencia 14/07/2026 (no firme) · EFE y Europa Press · delito fiscal descartado",
+   "footnote": "Audiencia Provincial de Badajoz, 14/07/2026 (no firme)",
    "lines": [
     {
      "text": "El juicio da por probado que vivía en Portugal y pasó más de un año sin despacho fijo.",
@@ -480,7 +480,7 @@
    "animo": "tension",
    "musica": "corte",
    "trans": "iris",
-   "footnote": "Audiencia Provincial de Badajoz, sentencia 14/07/2026 (no firme) · EFE y Europa Press",
+   "footnote": "Audiencia Provincial de Badajoz, 14/07/2026 (no firme)",
    "lines": [
     {
      "text": "Julio de 2026: condenado a nueve años sin poder ocupar un cargo público.",
@@ -555,10 +555,10 @@
     },
     {
      "type": "rotulo",
-     "text": "9 AÑOS DE INHABILITACIÓN",
+     "text": "9 AÑOS INHABILITADO",
      "x": 540,
      "y": 470,
-     "size": 64,
+     "size": 76,
      "color": "red",
      "at": "@nueve",
      "golpe": true,
@@ -593,7 +593,7 @@
    "fondo": "oficina",
    "animo": "curioso",
    "trans": "pan",
-   "footnote": "Prevaricación (cooperador necesario) · 2017 prescrito · absueltos de tráfico de influencias",
+   "footnote": "Condena por prevaricación · Audiencia Provincial de Badajoz, 14/07/2026 (no firme)",
    "lines": [
     {
      "text": "¿Por el contrato de 2017? No, eso prescribió.",
@@ -630,6 +630,15 @@
      "at": 0,
      "cara": "normal",
      "acciones": [
+      {
+       "at": 0.9,
+       "mira": "camara",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@2017",
+       "salta": true
+      },
       {
        "at": "@prescribió",
        "pose": "senala",
@@ -683,10 +692,10 @@
     },
     {
      "type": "rotulo",
-     "text": "2022: NOMBRE NUEVO, MISMAS FUNCIONES",
+     "text": "2022: CAMBIO DE NOMBRE",
      "x": 600,
      "y": 470,
-     "size": 52,
+     "size": 70,
      "color": "amarillo",
      "at": "@nombre",
      "golpe": true,
@@ -695,10 +704,21 @@
     },
     {
      "type": "rotulo",
-     "text": "TRÁFICO DE INFLUENCIAS: ABSUELTOS",
+     "text": "TRÁFICO DE INFLUENCIAS:",
      "x": 600,
-     "y": 470,
-     "size": 50,
+     "y": 460,
+     "size": 60,
+     "color": "verde",
+     "at": "@absueltos",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "ABSUELTOS",
+     "x": 600,
+     "y": 560,
+     "size": 90,
      "color": "verde",
      "at": "@absueltos",
      "golpe": true,
@@ -711,7 +731,7 @@
    "fondo": "oficina",
    "animo": "tension",
    "trans": "iris",
-   "footnote": "Recursos al TSJ de Extremadura: David Sánchez, Fiscalía y Gallardo (octubre de 2026)",
+   "footnote": "Recursos al TSJ de Extremadura, octubre de 2026 (EFE)",
    "lines": [
     {
      "text": "Ojo: no es firme. Han recurrido él, Gallardo y la Fiscalía, que pidió la absolución.",
@@ -813,10 +833,10 @@
     },
     {
      "type": "rotulo",
-     "text": "DECIDE EL TSJ DE EXTREMADURA",
+     "text": "DECIDE EL TSJ",
      "x": 540,
      "y": 470,
-     "size": 56,
+     "size": 90,
      "color": "blanco",
      "at": "@Tribunal",
      "golpe": true,
@@ -829,7 +849,7 @@
    "fondo": "calle",
    "animo": "curioso",
    "trans": "pan",
-   "footnote": "Elma Saiz (Gobierno) · Alberto Núñez Feijóo (PP) · petición de Vox en el juicio",
+   "footnote": "Elma Saiz (Gobierno) · Feijóo (PP) · Vox en el juicio",
    "lines": [
     {
      "text": "El Gobierno confía en su inocencia.",
@@ -921,10 +941,22 @@
     },
     {
      "type": "rotulo",
-     "text": "PP: «EL TIEMPO LO PONE EN SU SITIO»",
+     "text": "PP: «EL TIEMPO PONE",
      "x": 540,
-     "y": 470,
-     "size": 48,
+     "y": 460,
+     "size": 62,
+     "color": "blanco",
+     "at": "@PP",
+     "golpe": true,
+     "out": "@Vox",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "LAS COSAS EN SU SITIO»",
+     "x": 540,
+     "y": 550,
+     "size": 62,
      "color": "blanco",
      "at": "@PP",
      "golpe": true,
@@ -949,7 +981,7 @@
    "fondo": "calle",
    "animo": "final",
    "trans": "iris",
-   "footnote": "Sentencia no firme · presunción de inocencia hasta sentencia firme",
+   "footnote": "Presunción de inocencia hasta sentencia firme",
    "lines": [
     {
      "text": "¿Qué opinas? Te leemos.",

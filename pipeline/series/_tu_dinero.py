@@ -33,9 +33,9 @@ def monedas(at, x0=200, x1=880, n=10):
     return dict(type="efecto", efecto="lluvia", objeto="moneda", n=n, x0=x0, x1=x1, at=at, vida=1.8)
 
 
-def episodio(slug, title, scenes, portada, sources, caption, pinned, hashtags):
+def episodio(slug, title, scenes, portada, sources, caption, pinned, hashtags, series_tag="TU DINERO, CON DATOS"):
     SB = dict(base.SB)
-    SB.update(slug=slug, title=title, series_tag="TU DINERO, CON DATOS", scenes=scenes, banda=True, music_volume=0.2,
+    SB.update(slug=slug, title=title, series_tag=series_tag, scenes=scenes, banda=True, music_volume=0.2,
               scribble_volume=0.0, sfx_volume=1.0, end_hold=0.9, portada=portada, sources=sources, caption=caption,
               pinned_comment=pinned, hashtags=hashtags)
     path = os.path.join(OUT, f"{slug}.json")

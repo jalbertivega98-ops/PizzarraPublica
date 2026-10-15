@@ -1,0 +1,1615 @@
+{
+ "slug": "ceuta_otan",
+ "title": "Si atacan Ceuta, ¿viene la OTAN?",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Tratado del Atlántico Norte (1949), arts. 4, 5 y 6: https://www.nato.int/cps/en/natohq/official_texts_17120.htm",
+  "Tratado de la Unión Europea, art. 42.7 (cláusula de ayuda mutua)",
+  "Senado, Comisión de Defensa, 24/02/2022: moción de Vox sobre el art. 6 (Ceuta al Día, El Confidencial Digital)",
+  "Sánchez confirma los buques (12/10/2026, The Objective/Euronews); Elma Saiz (13/10, Infobae); Maldita (15/10)",
+  "Feijóo lleva los buques a la Audiencia Nacional (El Independiente, 14/10/2026)",
+  "Marruecos no reconoce la soberanía sobre Ceuta ni sus aguas (Infobae, 15/10/2026)",
+  "Mapas dibujados sobre contornos de Natural Earth (dominio público)"
+ ],
+ "caption": "🌍 Si atacan Ceuta, ¿viene la OTAN? No es automático\n📜 Art. 5: un ataque a uno es un ataque a todos\n🗺️ Art. 6: Europa, Norteamérica e islas al norte del trópico. Ceuta y Melilla, en África, no se nombran\n🤝 Hay otras vías: consultas (art. 4) y la ayuda mutua de la UE\n🚢 Buques marroquíes en aguas de Ceuta: confirmado por Sánchez; agosto, sin confirmar\n💬 ¿Debería el tratado nombrar a Ceuta y Melilla?\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Tratado del Atlántico Norte arts. 4-6 (nato.int) · TUE art. 42.7 · Senado 24/02/2022 · Sánchez 12/10/2026 · Gobierno 13/10 · Feijóo 14/10 · Infobae 15/10 · Maldita 15/10. ¿Ves un error? Dínoslo.",
+ "hashtags": "#Ceuta #OTAN #Melilla #Marruecos #politica #España #29N #pizarrapublica",
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "tension",
+   "footnote": "Tratado del Atlántico Norte (1949), arts. 5 y 6 · nato.int",
+   "lines": [
+    {
+     "text": "Si alguien atacara Ceuta, ¿vendría la OTAN a defenderla?",
+     "tono": "energia"
+    },
+    {
+     "text": "Spoiler: no es automático.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@Ceuta",
+     "plano": "general",
+     "sobre": [
+      398.2,
+      1108.0
+     ],
+     "dur": 0.8,
+     "zoom": 2.2
+    },
+    {
+     "at": "@OTAN",
+     "plano": "general",
+     "sobre": [
+      407.0,
+      1118.1
+     ],
+     "dur": 0.7,
+     "zoom": 6.5
+    },
+    {
+     "at": "@Spoiler",
+     "plano": "general",
+     "sobre": [
+      398.2,
+      1108.0
+     ],
+     "dur": 0.6,
+     "zoom": 4.2
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "estrecho",
+      "orden": [
+       "Spain",
+       "Portugal",
+       "Gibraltar",
+       "Ceuta",
+       "Morocco",
+       "Melilla",
+       "Balearic Islands",
+       "France",
+       "Andorra",
+       "Algeria"
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@Ceuta",
+       "props": {
+        "resalta": [
+         "Ceuta"
+        ]
+       },
+       "sfx": "pop"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.5
+    },
+    {
+     "type": "objeto",
+     "objeto": "barco",
+     "x": 458.8,
+     "y": 1116.8,
+     "scale": 0.12,
+     "at": "@atacara",
+     "props": {
+      "bandera": "otan",
+      "numero": "",
+      "rumbo": -1
+     },
+     "acciones": [
+      {
+       "at": "@atacara",
+       "x": 447.0,
+       "y": 1110.1,
+       "dur": 2.6
+      }
+     ],
+     "id": "barco",
+     "entra": "pop",
+     "sfx": "redoble"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 379.9,
+     "y": 1112.1,
+     "scale": 0.055,
+     "at": "@OTAN-0.5",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@OTAN",
+       "take": true,
+       "cara": "sorpresa",
+       "mira": "barco"
+      },
+      {
+       "at": "@Spoiler",
+       "cara": "confundido",
+       "pose": "encoge",
+       "mira": "camara"
+      }
+     ],
+     "entra": "pop",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿LA OTAN",
+     "x": 540,
+     "y": 430,
+     "size": 104,
+     "color": "amarillo",
+     "at": "@OTAN",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "DEFENDERÍA CEUTA?",
+     "x": 540,
+     "y": 545,
+     "size": 92,
+     "color": "blanco",
+     "at": "@OTAN+0.15",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "NO ES AUTOMÁTICO",
+     "x": 540,
+     "y": 680,
+     "size": 78,
+     "color": "rojo",
+     "at": "@automático",
+     "golpe": true,
+     "rot": -4,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "donde",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "curioso",
+   "trans": "corte",
+   "footnote": "Ceuta: 18,5 km², ciudad autónoma",
+   "lines": [
+    {
+     "text": "Ceuta es una ciudad española… en África.",
+     "tono": "normal"
+    },
+    {
+     "text": "Al otro lado del Estrecho, pegada a Marruecos.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      398.2,
+      1108.0
+     ],
+     "dur": 0,
+     "zoom": 4.2
+    },
+    {
+     "at": "@española",
+     "plano": "general",
+     "sobre": [
+      463.3,
+      858.4
+     ],
+     "dur": 0.9,
+     "zoom": 1.15
+    },
+    {
+     "at": "@África",
+     "plano": "general",
+     "sobre": [
+      398.2,
+      1108.0
+     ],
+     "dur": 0.9,
+     "zoom": 5.5
+    },
+    {
+     "at": "@Estrecho",
+     "plano": "general",
+     "sobre": [
+      396.6,
+      1111.8
+     ],
+     "dur": 0.6,
+     "zoom": 8.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "estrecho",
+      "orden": [
+       "Spain",
+       "Portugal",
+       "Gibraltar",
+       "Ceuta",
+       "Morocco",
+       "Melilla",
+       "Balearic Islands",
+       "France",
+       "Andorra",
+       "Algeria"
+      ],
+      "progreso": 1.0,
+      "resalta": [
+       "Ceuta"
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@española",
+       "props": {
+        "resalta": [
+         "Ceuta",
+         "Spain"
+        ]
+       }
+      },
+      {
+       "at": "@África",
+       "props": {
+        "resalta": [
+         "Ceuta"
+        ],
+        "apaga": [
+         "Spain",
+         "Portugal",
+         "France"
+        ]
+       }
+      },
+      {
+       "at": "@Marruecos",
+       "props": {
+        "resalta": [
+         "Ceuta",
+         "Morocco"
+        ],
+        "apaga": [
+         "Spain",
+         "Portugal",
+         "France"
+        ]
+       }
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 0.01
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 532.3,
+     "y": 685.6,
+     "scale": 0.28,
+     "at": "@española",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "out": "@África"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 381.9,
+     "y": 1112.1,
+     "scale": 0.05,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@África",
+       "mira": "der",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@Estrecho",
+       "x": 401.0,
+       "y": 1128.1,
+       "dur": 0.75,
+       "brinco": 26,
+       "cara": "riendo"
+      },
+      {
+       "at": "@Marruecos",
+       "mira": "abajo",
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 421.0,
+     "y": 1120.1,
+     "scale": 0.05,
+     "at": "@Estrecho+0.6",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 400.5,
+     "y": 1125.3,
+     "scale": 0.05,
+     "at": "@Marruecos",
+     "props": {
+      "diseno": "marruecos"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "rotulo",
+     "text": "ESPAÑOLA",
+     "x": 540,
+     "y": 450,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@española",
+     "golpe": true,
+     "out": "@África",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "…EN ÁFRICA",
+     "x": 540,
+     "y": 450,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@África",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "ciudad",
+   "fondo": "ceuta",
+   "animo": "alegre",
+   "trans": "zoom",
+   "footnote": "Tratado de Lisboa, 1668",
+   "lines": [
+    {
+     "text": "Portuguesa desde 1415. Española desde 1668.",
+     "tono": "normal"
+    },
+    {
+     "text": "Murallas incluidas.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "abierto",
+     "sobre": [
+      380,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@1668",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.8,
+     "aire": 120
+    },
+    {
+     "at": "@Murallas",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": -120,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": 0,
+       "x": 330,
+       "dur": 2.0
+      },
+      {
+       "at": "@1415",
+       "mira": "arriba"
+      },
+      {
+       "at": "@1668",
+       "x": 520,
+       "dur": 1.0,
+       "mira": "camara",
+       "cara": "riendo"
+      },
+      {
+       "at": "@Murallas",
+       "pose": "senala_arriba",
+       "salta": true,
+       "cara": "riendo"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "1415 · PORTUGAL",
+     "x": 540,
+     "y": 450,
+     "size": 80,
+     "color": "blanco",
+     "at": "@1415",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "1668 · ESPAÑA",
+     "x": 540,
+     "y": 560,
+     "size": 88,
+     "color": "amarillo",
+     "at": "@1668",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "tratado",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Tratado del Atlántico Norte (1949), arts. 5 y 6 · nato.int",
+   "lines": [
+    {
+     "text": "La OTAN funciona con el artículo 5: si atacan a uno, atacan a todos.",
+     "tono": "normal"
+    },
+    {
+     "text": "Pero el artículo 6 dice dónde: Europa, Norteamérica e islas del Atlántico norte.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      860
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@5",
+     "plano": "general",
+     "sobre": [
+      540,
+      700
+     ],
+     "dur": 0.6,
+     "zoom": 1.12
+    },
+    {
+     "at": "@6",
+     "plano": "general",
+     "sobre": [
+      540,
+      980
+     ],
+     "dur": 0.6,
+     "zoom": 1.12
+    },
+    {
+     "at": "@norte",
+     "plano": "general",
+     "sobre": [
+      540,
+      860
+     ],
+     "dur": 0.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "otan",
+     "x": 540,
+     "y": 215,
+     "scale": 0.42,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 540,
+     "y": 860,
+     "scale": 1.18,
+     "at": 0.3,
+     "props": {
+      "titulo": "TRATADO DEL ATLÁNTICO NORTE",
+      "subtitulo": "Washington, 1949",
+      "articulos": [
+       {
+        "id": "a5",
+        "titulo": "ARTÍCULO 5",
+        "lineas": [
+         "Un ataque armado contra uno",
+         "se considera un ataque",
+         "contra todos"
+        ]
+       },
+       {
+        "id": "a6",
+        "titulo": "ARTÍCULO 6",
+        "lineas": [
+         "Dónde vale: Europa, Norteamérica,",
+         "Turquía e islas del Atlántico norte",
+         "al norte del trópico de Cáncer"
+        ]
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@uno",
+       "props": {
+        "resalta": [
+         "a5"
+        ]
+       }
+      },
+      {
+       "at": "@dónde",
+       "props": {
+        "resalta": [
+         "a5",
+         "a6"
+        ]
+       }
+      }
+     ],
+     "id": "doc",
+     "entra": "nada",
+     "dibujo": 1.1,
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1300,
+     "y": 1500,
+     "scale": 0.36,
+     "at": "@6-0.4",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@6-0.4",
+       "x": 930,
+       "dur": 0.6
+      },
+      {
+       "at": "@dónde",
+       "pose": "senala_izq",
+       "mira": "doc"
+      },
+      {
+       "at": "@norte",
+       "cara": "sorpresa",
+       "take": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "ambito",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "comico",
+   "trans": "zoom",
+   "footnote": "Tratado del Atlántico Norte (1949), arts. 5 y 6 · nato.int · Natural Earth",
+   "lines": [
+    {
+     "text": "Ceuta y Melilla están en África, y el tratado no las nombra.",
+     "tono": "normal"
+    },
+    {
+     "text": "Ni siquiera Hawái entra.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      820
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Ceuta",
+     "plano": "general",
+     "sobre": [
+      677.9,
+      883.0
+     ],
+     "dur": 0.9,
+     "zoom": 2.6
+    },
+    {
+     "at": "@Hawái",
+     "plano": "general",
+     "sobre": [
+      -232.2,
+      1000.0
+     ],
+     "dur": 0.8,
+     "zoom": 1.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "atlantico",
+      "ambito6": true,
+      "tropico": true,
+      "orden": [
+       "USA",
+       "CAN",
+       "GRL",
+       "ESP",
+       "PRT",
+       "FRA",
+       "GBR",
+       "TUR"
+      ]
+     },
+     "acciones": [],
+     "id": "atl",
+     "entra": "nada",
+     "dibujo": 1.3
+    },
+    {
+     "type": "rotulo",
+     "text": "DENTRO DEL ARTÍCULO 6",
+     "x": 540,
+     "y": 430,
+     "size": 66,
+     "color": "blanco",
+     "at": 0.3,
+     "out": "@Ceuta",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "CEUTA Y MELILLA: FUERA",
+     "x": 540,
+     "y": 430,
+     "size": 76,
+     "color": "rojo",
+     "at": "@nombra",
+     "golpe": true,
+     "out": "@Hawái",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": -339.4,
+     "y": 1044.0,
+     "scale": 0.11,
+     "at": "@Hawái-0.2",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@entra",
+       "take": true,
+       "cara": "sorpresa",
+       "pose": "cabeza"
+      }
+     ],
+     "entra": "cae",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¡NI HAWÁI!",
+     "x": 540,
+     "y": 430,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@Hawái",
+     "golpe": true,
+     "rot": -5,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "matiz",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "curioso",
+   "trans": "corte",
+   "footnote": "Art. 4 del Tratado (consultas) · Art. 42.7 del Tratado de la UE",
+   "lines": [
+    {
+     "text": "¿Nadie ayudaría? Tampoco.",
+     "tono": "normal"
+    },
+    {
+     "text": "España puede pedir consultas a los aliados, y la Unión Europea tiene su propia ayuda mutua.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      691.7,
+      829.0
+     ],
+     "dur": 0,
+     "zoom": 2.4
+    },
+    {
+     "at": "@consultas",
+     "plano": "general",
+     "sobre": [
+      746.8,
+      811.0
+     ],
+     "dur": 0.8,
+     "zoom": 2.0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "atlantico",
+      "ambito6": true,
+      "tropico": true,
+      "progreso": 1.0
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 705.5,
+     "y": 875.0,
+     "scale": 0.1,
+     "at": 0,
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": "@Tampoco",
+       "cara": "ilusionado",
+       "salta": true
+      },
+      {
+       "at": "@consultas",
+       "pose": "senala",
+       "mira": "der"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bandera",
+     "x": 788.2,
+     "y": 775.0,
+     "scale": 0.26,
+     "at": "@aliados",
+     "props": {
+      "diseno": "otan"
+     },
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bandera",
+     "x": 857.1,
+     "y": 802.0,
+     "scale": 0.26,
+     "at": "@Unión",
+     "props": {
+      "diseno": "ue"
+     },
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "papel"
+    },
+    {
+     "type": "rotulo",
+     "text": "ART. 4: CONSULTAS",
+     "x": 540,
+     "y": 430,
+     "size": 76,
+     "color": "blanco",
+     "at": "@consultas",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "UE: AYUDA MUTUA",
+     "x": 540,
+     "y": 540,
+     "size": 76,
+     "color": "amarillo",
+     "at": "@Unión",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "buques",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "tension",
+   "trans": "zoom",
+   "footnote": "Sánchez, 12/10/2026 · Gobierno, 13/10 · El País · Infobae",
+   "lines": [
+    {
+     "text": "¿Por qué se habla ahora? Sánchez confirmó que buques militares marroquíes entraron en aguas de Ceuta en julio.",
+     "tono": "normal"
+    },
+    {
+     "text": "El Gobierno dice que fue puntual. Si se repitió en agosto, no está confirmado.",
+     "tono": "normal",
+     "pausa": 0.15
+    },
+    {
+     "text": "Y Marruecos no reconoce esas aguas como españolas.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      409.7,
+      1114.7
+     ],
+     "dur": 0,
+     "zoom": 9.0
+    },
+    {
+     "at": "@aguas",
+     "plano": "general",
+     "sobre": [
+      408.9,
+      1117.6
+     ],
+     "dur": 0.8,
+     "zoom": 11.0
+    },
+    {
+     "at": "@Gobierno",
+     "plano": "general",
+     "sobre": [
+      407.4,
+      1115.7
+     ],
+     "dur": 0.6,
+     "zoom": 9.0
+    },
+    {
+     "at": "@Marruecos",
+     "plano": "general",
+     "sobre": [
+      407.4,
+      1117.6
+     ],
+     "dur": 0.6,
+     "zoom": 8.0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "estrecho",
+      "orden": [
+       "Spain",
+       "Portugal",
+       "Gibraltar",
+       "Ceuta",
+       "Morocco",
+       "Melilla",
+       "Balearic Islands",
+       "France",
+       "Andorra",
+       "Algeria"
+      ],
+      "progreso": 1.0
+     },
+     "acciones": [
+      {
+       "at": "@aguas",
+       "props": {
+        "lineas": [
+         {
+          "id": "aguas",
+          "puntos": [
+           [
+            -5.402,
+            35.936
+           ],
+           [
+            -5.35,
+            35.946
+           ],
+           [
+            -5.29,
+            35.937
+           ],
+           [
+            -5.258,
+            35.912
+           ],
+           [
+            -5.275,
+            35.876
+           ],
+           [
+            -5.33,
+            35.843
+           ]
+          ],
+          "color": "rojo",
+          "discontinua": true,
+          "ancho": 6,
+          "dur": 1.2
+         }
+        ]
+       },
+       "sfx": "papel"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 0.01
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 405.1,
+     "y": 1117.1,
+     "scale": 0.028,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@buques",
+       "cara": "sorpresa",
+       "mira": "der"
+      },
+      {
+       "at": "@puntual",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@reconoce",
+       "objeto": null,
+       "pose": "encoge",
+       "cara": "preocupado",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "objeto": "prismaticos",
+     "pose": "prismaticos",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "barco",
+     "x": 423.5,
+     "y": 1112.8,
+     "scale": 0.05,
+     "at": "@buques-0.3",
+     "props": {
+      "bandera": "marruecos",
+      "rumbo": -1
+     },
+     "acciones": [
+      {
+       "at": "@buques",
+       "x": 412.0,
+       "dur": 3.2
+      }
+     ],
+     "id": "b1",
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "barco",
+     "x": 426.5,
+     "y": 1116.6,
+     "scale": 0.045,
+     "at": "@militares",
+     "props": {
+      "bandera": "marruecos",
+      "rumbo": -1
+     },
+     "acciones": [
+      {
+       "at": "@militares",
+       "x": 415.0,
+       "dur": 3.0
+      }
+     ],
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 470,
+     "scale": 1.0,
+     "at": "@confirmó",
+     "props": {
+      "texto": "CONFIRMADO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@Gobierno"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 470,
+     "scale": 1.0,
+     "at": "@puntual",
+     "props": {
+      "texto": "GOBIERNO: «PUNTUAL»",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@agosto-0.3"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 470,
+     "scale": 1.0,
+     "at": "@agosto",
+     "props": {
+      "texto": "¿AGOSTO? SIN CONFIRMAR",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@Marruecos-0.2"
+    },
+    {
+     "type": "rotulo",
+     "text": "MARRUECOS NO LAS RECONOCE",
+     "x": 540,
+     "y": 470,
+     "size": 64,
+     "color": "blanco",
+     "at": "@reconoce",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "posturas",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "iris",
+   "footnote": "Senado, 24/02/2022 · Feijóo, 14/10/2026",
+   "lines": [
+    {
+     "text": "El PSOE dijo en el Senado, en 2022, que ya están amparadas.",
+     "tono": "normal"
+    },
+    {
+     "text": "El PP ha llevado lo de los buques a la Audiencia Nacional.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Y Vox pidió cambiar el tratado para nombrarlas; el Senado dijo no.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@PSOE",
+     "plano": "medio",
+     "sobre": "p1",
+     "dur": 0.5
+    },
+    {
+     "at": "@PP",
+     "plano": "medio",
+     "sobre": "p2",
+     "dur": 0.5
+    },
+    {
+     "at": "@Vox",
+     "plano": "medio",
+     "sobre": "p3",
+     "dur": 0.5
+    },
+    {
+     "at": "@Senado#2",
+     "plano": "general",
+     "sobre": null,
+     "dur": 0.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 230,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@amparadas",
+       "pose": "pulgar",
+       "cara": "riendo"
+      }
+     ],
+     "id": "p1",
+     "entra": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0.15,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Audiencia",
+       "pose": "senala_arriba",
+       "cara": "serio"
+      }
+     ],
+     "id": "p2",
+     "entra": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 850,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0.3,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@cambiar",
+       "pose": "puno",
+       "cara": "enfadado"
+      },
+      {
+       "at": "@Senado#2",
+       "cara": "triste",
+       "pose": "caidos"
+      }
+     ],
+     "id": "p3",
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 230,
+     "y": 1350,
+     "scale": 0.46,
+     "at": 0,
+     "props": {
+      "texto": "PSOE",
+      "color": "psoe"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 540,
+     "y": 1350,
+     "scale": 0.46,
+     "at": 0.15,
+     "props": {
+      "texto": "PP",
+      "color": "pp"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 850,
+     "y": 1350,
+     "scale": 0.46,
+     "at": 0.3,
+     "props": {
+      "texto": "VOX",
+      "color": "vox"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "rotulo",
+     "text": "PSOE: «YA ESTÁN AMPARADAS»",
+     "x": 540,
+     "y": 450,
+     "size": 62,
+     "color": "blanco",
+     "at": "@amparadas",
+     "golpe": true,
+     "out": "@PP",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "PP: A LA AUDIENCIA NACIONAL",
+     "x": 540,
+     "y": 450,
+     "size": 62,
+     "color": "blanco",
+     "at": "@Audiencia",
+     "golpe": true,
+     "out": "@Vox",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "VOX: CAMBIAR EL TRATADO",
+     "x": 540,
+     "y": 450,
+     "size": 62,
+     "color": "blanco",
+     "at": "@cambiar",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SENADO: NO",
+     "x": 540,
+     "y": 560,
+     "size": 80,
+     "color": "rojo",
+     "at": "@Senado#2",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "final",
+   "trans": "zoom",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Debería el tratado nombrar a Ceuta y Melilla? Te leo.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y síguenos para el próximo viaje de Piz.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      407.0,
+      1118.1
+     ],
+     "dur": 0,
+     "zoom": 7.0
+    },
+    {
+     "at": 0.2,
+     "plano": "general",
+     "sobre": [
+      540.0,
+      896.8
+     ],
+     "dur": 2.2,
+     "zoom": 1.0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "estrecho",
+      "orden": [
+       "Spain",
+       "Portugal",
+       "Gibraltar",
+       "Ceuta",
+       "Morocco",
+       "Melilla",
+       "Balearic Islands",
+       "France",
+       "Andorra",
+       "Algeria"
+      ],
+      "progreso": 1.0,
+      "resalta": [
+       "Ceuta",
+       "Melilla"
+      ]
+     },
+     "acciones": [],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 0.01
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 790,
+     "y": 1500,
+     "scale": 0.6,
+     "at": "@Debería",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Ceuta",
+       "pose": "senala_izq"
+      },
+      {
+       "at": "@leo",
+       "mira": "camara",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@viaje",
+       "salta": true
+      }
+     ],
+     "hud": true,
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿SÍ O NO?",
+     "x": 540,
+     "y": 450,
+     "size": 120,
+     "color": "amarillo",
+     "at": "@Melilla",
+     "golpe": true,
+     "out": "@síguenos-0.3",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 450,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@Piz",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.6,
+  "titulo": "Si atacan Ceuta, ¿viene la OTAN?",
+  "capitulo": null
+ }
+}

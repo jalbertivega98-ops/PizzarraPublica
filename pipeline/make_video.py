@@ -333,6 +333,7 @@ def render(story, scenes, elements, chunks, total, out_video_noaudio, preview=Fa
         if vv:  # cámara viva: sigue al trazo, golpes de zoom
             if si != cam_scene:
                 cam, cam_scene = viva.Camara(), si
+                cam.lim = spec.get("limites")
             cx, cy, cz = cam.update(t, elements[si], shots=sc.get("camara"))
             if fondo:  # mundo cartoon: fondo por capas con parallax (lo lejano se mueve menos)
                 c.restore()

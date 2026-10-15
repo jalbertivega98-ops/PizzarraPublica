@@ -347,6 +347,7 @@ POSES = {
     "pulgar":   (((-236, 150), "abierto", -0.3), ((250, 30), "pulgar", -0.3)),
     "caidos":   (((-200, 196), "abierto", -0.08), ((200, 196), "abierto", 0.08)),
     "encoge":   (((-262, -40), "abierto", 0.35), ((262, -40), "abierto", -0.35)),
+    "prismaticos": (((-120, -30), "puno", 0.7), ((120, -30), "puno", -0.7)),
     "sostiene": (((-236, 150), "abierto", -0.3), ((246, 40), "puno", 0.3)),
     "sostiene2": (((-150, 60), "puno", -0.3), ((150, 60), "puno", 0.3)),
     # ciclo de caminar / correr (se mezclan según la fase del paso)
@@ -545,6 +546,13 @@ def dibuja(c, quien="piz", cara=None, pose=None, pose_prev=None, k_pose=1.0, mir
         c.restore()
         ang = math.degrees(math.atan2(hy - HOMBROS[0][1], hx - HOMBROS[0][0]))
         guante(c, hx, hy, ang, "puno", 1.35, -1)
+    tipo_obj = objeto.get("tipo") if isinstance(objeto, dict) else objeto
+    if tipo_obj == "prismaticos":  # delante de los ojos (pose "prismaticos")
+        from . import objetos
+        c.save(); c.translate(giro * 55, OJOS_Y + 20); c.scale(0.95, 0.95)
+        objetos.dibuja(c, objeto, t)
+        c.restore()
+        objeto = None
     if objeto:
         from . import objetos
         hx, hy = P[1][0]

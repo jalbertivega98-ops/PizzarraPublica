@@ -22,6 +22,8 @@ polvo al aterrizar y al correr, pop al cambiar de cara, boca sincronizada con la
 """
 import math
 
+import skia
+
 from . import edificios, efectos, objetos, personajes
 from .estilo import manguera, texto_cartoon
 
@@ -59,12 +61,15 @@ def preparar(e):
     # tramos de movimiento: [(t0, t1, x0, y0, x1, y1, corre)]
     x, y = s.get("x", 540), s.get("y", 1300)
     e.tramos = []
+    e.arcos = []
     for ch in e.cambios:
         if "x" in ch or "y" in ch:
             nx, ny = ch.get("x", x), ch.get("y", y)
             vel = VEL_CORRE if ch.get("corre") else VEL_ANDA
             d = ch.get("dur", max(0.3, math.hypot(nx - x, ny - y) / vel))
             e.tramos.append((ch["t"], ch["t"] + d, x, y, nx, ny, bool(ch.get("corre"))))
+            if ch.get("brinco"):  # salto en arco hasta el destino (p. ej. de la península a Ceuta)
+                e.arcos.append((ch["t"], ch["t"] + d, float(ch["brinco"])))
             x, y = nx, ny
     # polvo (aterrizajes y carrera) y pasos (para el sonido)
     e.polvo, e.pasos = [], []
@@ -111,6 +116,9 @@ def _pos(e, t, prof=0):
             x, y = x0 + (x1 - x0) * k, y0 + (y1 - y0) * k
             mov, dirx, corre = True, (1 if x1 > x0 else -1 if x1 < x0 else 0), cr
             break
+    for t0, t1, h in getattr(e, "arcos", ()):
+        if t0 <= t < t1:
+            y -= h * math.sin(math.pi * (t - t0) / (t1 - t0))
     seg, tc = _sigue(e, t)
     if seg and prof < 3:
         obj = e.mundo.get(seg[0])
@@ -264,6 +272,7 @@ def dibujar(e, c, t, am):
         return None
     e._t = t
     s = e.spec
+    M0 = c.getTotalMatrix()
     if e.kind == "efecto":
         efectos.dibuja(c, e, t, am)
         return None
@@ -361,6 +370,17 @@ def dibujar(e, c, t, am):
         c.rotate(s["rot"])
     if alpha < 255:
         c.saveLayerAlpha(None, alpha)
+    tip = None
+    dib = s.get("dibuja")
+    if dib and t - e.t0 < dib:  # «se dibuja»: el rotulador lo va trazando de izquierda a derecha
+        k = max(0.0, (t - e.t0) / dib)
+        w, h = tamano(e)
+        abajo = e.kind in ("personaje", "edificio") or (e.kind == "objeto" and _tipo_obj(e) in objetos.APOYADOS)
+        x0, y0 = -w / 2, (-h if abajo else -h / 2)
+        xe = x0 + w * k
+        c.save()
+        c.clipRect(skia.Rect(x0 - 400, y0 - 400, xe, y0 + h + 400))
+        tip = (xe, y0 + h * (0.5 + 0.42 * math.sin(k * 38)))
     if e.kind == "personaje":
         mira_v, _, _ = _vigente(e, t, "mira", s.get("mira"))
         mira = _mira(e, mira_v, t, x, y) if mira_v is not None else ((dirx * 14, 0) if moviendo else (0, 0))
@@ -378,10 +398,15 @@ def dibujar(e, c, t, am):
     elif e.kind == "edificio":
         _edificio(e, c, t, cara, paso)
     elif e.kind == "objeto":
-        _objeto(e, c, t, cara, paso)
+        t_obj = _objeto(e, c, t, cara, paso, moviendo, dirx)
+        tip = tip or t_obj
     else:
         texto_cartoon(c, s["text"], 0, s.get("size", 90) * 0.35, s.get("size", 90), color=s.get("color", "amarillo"),
                       fuente=s.get("font", "sub"))
+    if tip is not None:
+        tip = _a_mundo(M0, c, tip)
+    if dib and t - e.t0 < dib:
+        c.restore()
     if alpha < 255:
         c.restore()
     c.restore()
@@ -389,7 +414,20 @@ def dibujar(e, c, t, am):
     for tp in e.polvo:
         if 0 <= t - tp < 0.5:
             efectos.polvo(c, x, y, (t - tp) / 0.5, sc, dirx)
-    return None
+    return tip
+
+
+def _a_mundo(M0, c, pt):
+    """Punta del rotulador en coordenadas del mundo (fuera de la cámara se dibuja a escala de cámara: con mucho
+    zoom el rotulador taparía la pantalla, así que solo aparece en planos abiertos)."""
+    if math.hypot(M0.getScaleX(), M0.getSkewY()) > 1.6:
+        return None
+    inv = skia.Matrix()
+    if not M0.invert(inv):
+        return None
+    d = c.getTotalMatrix().mapXY(float(pt[0]), float(pt[1]))
+    w = inv.mapXY(d.x(), d.y())
+    return (w.x(), w.y())
 
 
 def _personaje(e, c, t, cara, tc, paso, mira, ojos, corre, giro):
@@ -441,21 +479,25 @@ def _edificio(e, c, t, cara, paso):
     edificios.dibuja(c, s["edificio"], est, t, **kw)
 
 
-def _objeto(e, c, t, cara, paso):
+def _objeto(e, c, t, cara, paso, moviendo=False, dirx=0):
     s = e.spec
     o = s["objeto"]
     kw = dict(o) if isinstance(o, dict) else {"tipo": o}
     kw.update(s.get("props", {}))
+    cambios = [(e.t0, s.get("props", {}))]
     for ch in e.cambios:
         if ch["t"] <= t and "props" in ch:
             kw.update(ch["props"])
+            cambios.append((ch["t"], ch["props"]))
     if cara:
         kw["cara"] = cara
-    if kw["tipo"] == "grafica" and "progreso" not in kw:
-        kw["progreso"] = min(1.0, (t - e.t0) / max(0.3, s.get("dibujo", 1.2)))
+    if kw["tipo"] in objetos.DIBUJO and "progreso" not in kw:
+        kw["progreso"] = min(1.0, (t - e.t0) / max(0.3, s.get("dibujo", objetos.DIBUJO[kw["tipo"]])))
+    if kw["tipo"] in ("mapa", "documento", "barco"):
+        kw.update(_cambios=cambios, _t0=e.t0, _mov=moviendo, _dir=dirx)
     if s.get("flota"):
         c.translate(0, 10 * math.sin(t * 2.6 + e.t0))
     if s.get("piernas"):
         w, h = objetos.TAMANO.get(kw["tipo"], (300, 300))
         _piernas(c, w, h / 2 - 10, paso, 100)
-    objetos.dibuja(c, kw, t)
+    return objetos.dibuja(c, kw, t)

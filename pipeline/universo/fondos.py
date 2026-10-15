@@ -296,6 +296,9 @@ def _f(size, cual="hand"):
 
 
 TIPOS = {"calle": calle, "banco_dentro": banco_dentro, "oficina": oficina, "salon": salon, "plano": plano, "rayos": rayos, "playa": playa}
+from . import fondos_mundo as _fm  # noqa: E402  (Ceuta, mar de los mapas)
+
+TIPOS.update(_fm.TIPOS)
 
 
 def dibuja(c, fondo, t=0.0, cam=None):

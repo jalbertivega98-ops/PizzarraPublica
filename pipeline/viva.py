@@ -132,12 +132,14 @@ class Camara:
         # el punto de interés queda un poco por encima del centro (subtítulos abajo)
         return cx, cy + 80 / z, z
 
-    @staticmethod
-    def limitar(cx, cy, z):
-        """No enseñar el borde del fondo: el fondo cubre x -260..1340, y -260..2180."""
+    lim = None  # límites del mundo de la escena ("limites": [x0, y0, x1, y1]); por defecto, los del fondo
+
+    def limitar(self, cx, cy, z):
+        """No enseñar el borde del fondo: el fondo cubre x -260..1340, y -260..2180 (los mapas, mucho más)."""
+        x0, y0, x1, y1 = self.lim or (-260, -260, 1340, 2180)
         z = max(z, 0.9)
-        cx = min(max(cx, -260 + CENTRO[0] / z), 1340 - (W - CENTRO[0]) / z)
-        cy = min(max(cy, -260 + CENTRO[1] / z), 2180 - (H - CENTRO[1]) / z)
+        cx = min(max(cx, x0 + CENTRO[0] / z), x1 - (W - CENTRO[0]) / z)
+        cy = min(max(cy, y0 + CENTRO[1] / z), y1 - (H - CENTRO[1]) / z)
         return cx, cy, z
 
     def planos(self, t, els, shots):
@@ -154,7 +156,12 @@ class Camara:
         if k < 1:
             prev = shots[actual - 1] if actual > 0 else {"plano": "general"}
             px, py, pz = self._encuadre(prev, t, els)
-            tx, ty, tz = px + (tx - px) * k, py + (ty - py) * k, pz + (tz - pz) * k
+            if max(tz, pz) / max(1e-3, min(tz, pz)) > 1.6:  # zoom grande (sobre un mapa): interpolación logarítmica
+                z = pz * (tz / pz) ** k
+                kp = (1 / pz - 1 / z) / (1 / pz - 1 / tz)
+                tx, ty, tz = px + (tx - px) * kp, py + (ty - py) * kp, z
+            else:
+                tx, ty, tz = px + (tx - px) * k, py + (ty - py) * k, pz + (tz - pz) * k
         incl = sh.get("inclina", 0) * k + (shots[actual - 1].get("inclina", 0) * (1 - k) if actual > 0 else 0)
         return tx, ty, tz, incl
 
@@ -380,6 +387,10 @@ def eventos_sonido(story, scenes, elements):
                     ev.append((e.t0, "pop", {"pitch": 0.8 if k == "edificio" else 1.0 + 0.2 * (len(ev) % 3)}))
                 if e.spec.get("sfx"):
                     ev.append((e.t0, e.spec["sfx"], {}))
+                if e.spec.get("dibuja"):  # se dibuja con rotulador
+                    ev.append((e.t0, "rotulador", {"d": e.spec["dibuja"]}))
+                elif k == "objeto" and e.spec.get("objeto") == "mapa" and "progreso" not in e.spec.get("props", {}):
+                    ev.append((e.t0, "rotulador", {"d": e.spec.get("dibujo", 2.0) * 0.75}))
                 for ch in e.cambios:
                     if ch.get("sfx"):
                         ev.append((ch["t"], ch["sfx"], {}))
@@ -437,7 +448,7 @@ def pista_efectos(total, ev, sr):
         elif nombre == "borrador":
             x = borrador_snd(kw.get("d", 0.35))
         elif nombre in universo_sfx.EFECTOS:  # efectos cartoon del universo
-            x = universo_sfx.efecto(nombre, seed=len(out) % 7 + int(t * 10) % 5) * universo_sfx.VOL[nombre] / SFX_VOL.get(nombre, 0.3)
+            x = universo_sfx.efecto(nombre, seed=len(out) % 7 + int(t * 10) % 5, **kw) * universo_sfx.VOL[nombre] / SFX_VOL.get(nombre, 0.3)
         elif nombre in sonido.EFECTOS:
             x = sonido.efecto(nombre)
         else:

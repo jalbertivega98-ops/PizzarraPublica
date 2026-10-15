@@ -178,14 +178,32 @@ def papel(seed=0):
     return (_lp(_ruido(len(t), seed), 2) * np.exp(-t * 10) * 0.25).astype(np.float32)
 
 
-EFECTOS = {"pasos": pasos, "carrera": carrera, "golpe": golpe, "aplastar": aplastar, "tropiezo": tropiezo,
+def rotulador(seed=0, d=1.2):
+    """Rotulador sobre papel: roce rápido con golpecitos de trazo (mapas y dibujos que se trazan)."""
+    t = _t(max(0.2, d))
+    n = _ruido(len(t), seed + 11)
+    roce = n - _lp(n, 8)  # agudo
+    trazos = 0.55 + 0.45 * np.abs(np.sin(2 * np.pi * (5.5 + 1.5 * np.sin(t * 3)) * t))
+    fade = np.minimum(1, t / 0.05) * np.minimum(1, (t[-1] - t) / 0.12 + 1e-3)
+    return (roce * trazos * fade * 0.22).astype(np.float32)
+
+
+def bocina(seed=0):
+    """Sirena grave de barco."""
+    t = _t(0.9)
+    y = sum(np.sin(2 * np.pi * f * t) / (i + 1) for i, f in enumerate((110, 220, 330)))
+    return (y * np.minimum(1, t / 0.08) * np.minimum(1, (0.9 - t) / 0.25) * 0.18).astype(np.float32)
+
+
+EFECTOS = {"rotulador": rotulador, "bocina": bocina, "pasos": pasos, "carrera": carrera, "golpe": golpe, "aplastar": aplastar, "tropiezo": tropiezo,
            "sorpresa": sorpresa, "caida": caida, "puerta": puerta, "monedas": monedas, "calculadora": calculadora,
            "kaching": kaching, "estrellitas": estrellitas, "redoble": redoble, "scratch": scratch, "iris": iris,
            "papel": papel}
-VOL = {"pasos": 0.5, "carrera": 0.55, "golpe": 0.55, "aplastar": 0.6, "tropiezo": 0.55, "sorpresa": 0.5, "caida": 0.45,
+VOL = {"rotulador": 0.5, "bocina": 0.5, "pasos": 0.5, "carrera": 0.55, "golpe": 0.55, "aplastar": 0.6, "tropiezo": 0.55, "sorpresa": 0.5, "caida": 0.45,
        "puerta": 0.5, "monedas": 0.5, "calculadora": 0.5, "kaching": 0.45, "estrellitas": 0.5, "redoble": 0.4,
        "scratch": 0.5, "iris": 0.4, "papel": 0.4}
 
 
-def efecto(nombre, seed=0):
-    return EFECTOS[nombre](seed=seed).astype(np.float32)
+def efecto(nombre, seed=0, **kw):
+    kw = {k: v for k, v in kw.items() if k in ("d",) and nombre in ("rotulador", "redoble")}
+    return EFECTOS[nombre](seed=seed, **kw).astype(np.float32)

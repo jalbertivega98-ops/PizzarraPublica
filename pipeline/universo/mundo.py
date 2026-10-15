@@ -206,7 +206,11 @@ def barco(c, t=0.0, color=(150, 160, 172), bandera="espana", numero="", estela=T
     # cañón de proa (pequeño y redondeado)
     pieza(c, elipse(-210, 6, 44, 26), mezcla(color, "blanco", 0.1), 5)
     pieza(c, rrect(-300, -6, -220, 8, 6), osc, 4)
-    # bandera en popa
+    # bandera en popa (bandera=None: barco sin bandera, «alguien»)
+    if not bandera:
+        c.restore()
+        _agua(c, bob)
+        return
     c.drawLine(262, 20, 262, -110, trazo(5))
     c.save(); c.translate(262, -108)
     if _dir > 0:
@@ -219,7 +223,11 @@ def barco(c, t=0.0, color=(150, 160, 172), bandera="espana", numero="", estela=T
             k = (t * 3 + i / 4) % 1
             c.drawCircle(-330 - 30 * k, 92 - 30 * k, 12 + 10 * (1 - k), relleno("blanco", int(240 * (1 - k))))
     c.restore()
-    # agua por delante del casco (el barco «se hunde» en el mar)
+    _agua(c, bob)
+
+
+def _agua(c, bob):
+    """Agua por delante del casco (el barco «se hunde» en el mar)."""
     p = skia.Path()
     p.moveTo(-380, 104 + bob)
     for i in range(16):

@@ -135,8 +135,8 @@
      "scale": 0.12,
      "at": "@atacara",
      "props": {
-      "bandera": "otan",
-      "numero": "",
+      "bandera": null,
+      "numero": "?",
       "rumbo": -1
      },
      "acciones": [
@@ -484,6 +484,15 @@
       900
      ],
      "dur": 0.6
+    },
+    {
+     "at": "@incluidas+1.6",
+     "plano": "abierto",
+     "sobre": [
+      420,
+      950
+     ],
+     "dur": 1.0
     }
    ],
    "elements": [
@@ -517,6 +526,17 @@
        "pose": "senala_arriba",
        "salta": true,
        "cara": "riendo"
+      },
+      {
+       "at": "@incluidas+0.5",
+       "gira": true,
+       "flip": true,
+       "pose": "normal"
+      },
+      {
+       "at": "@incluidas+0.9",
+       "x": 380,
+       "dur": 1.0
       }
      ],
      "entra": "nada",
@@ -760,6 +780,16 @@
      ],
      "dur": 0.8,
      "zoom": 1.4
+    },
+    {
+     "at": "@entra+1.5",
+     "plano": "general",
+     "sobre": [
+      -301.1,
+      1027.0
+     ],
+     "dur": 0.8,
+     "zoom": 2.0
     }
    ],
    "elements": [
@@ -827,6 +857,10 @@
        "take": true,
        "cara": "sorpresa",
        "pose": "cabeza"
+      },
+      {
+       "at": "@entra+0.7",
+       "tropieza": true
       }
      ],
      "entra": "cae",
@@ -1016,41 +1050,41 @@
      "at": 0,
      "plano": "general",
      "sobre": [
-      409.7,
-      1114.7
+      413.5,
+      1109.9
      ],
      "dur": 0,
-     "zoom": 9.0
+     "zoom": 6.5
     },
     {
      "at": "@aguas",
      "plano": "general",
      "sobre": [
-      408.9,
-      1117.6
+      409.7,
+      1114.7
      ],
      "dur": 0.8,
-     "zoom": 11.0
+     "zoom": 8.5
     },
     {
      "at": "@Gobierno",
      "plano": "general",
      "sobre": [
-      407.4,
-      1115.7
+      412.0,
+      1110.9
      ],
      "dur": 0.6,
-     "zoom": 9.0
+     "zoom": 7.0
     },
     {
      "at": "@Marruecos",
      "plano": "general",
      "sobre": [
-      407.4,
-      1117.6
+      409.7,
+      1112.8
      ],
      "dur": 0.6,
-     "zoom": 8.0
+     "zoom": 7.5
     }
    ],
    "elements": [
@@ -1127,9 +1161,9 @@
     {
      "type": "personaje",
      "quien": "piz",
-     "x": 405.1,
-     "y": 1117.1,
-     "scale": 0.028,
+     "x": 398.9,
+     "y": 1100.8,
+     "scale": 0.03,
      "at": 0,
      "cara": "normal",
      "acciones": [
@@ -1158,9 +1192,9 @@
     {
      "type": "objeto",
      "objeto": "barco",
-     "x": 423.5,
-     "y": 1112.8,
-     "scale": 0.05,
+     "x": 436.5,
+     "y": 1114.7,
+     "scale": 0.035,
      "at": "@buques-0.3",
      "props": {
       "bandera": "marruecos",
@@ -1169,7 +1203,7 @@
      "acciones": [
       {
        "at": "@buques",
-       "x": 412.0,
+       "x": 416.2,
        "dur": 3.2
       }
      ],
@@ -1179,9 +1213,9 @@
     {
      "type": "objeto",
      "objeto": "barco",
-     "x": 426.5,
-     "y": 1116.6,
-     "scale": 0.045,
+     "x": 438.8,
+     "y": 1119.0,
+     "scale": 0.032,
      "at": "@militares",
      "props": {
       "bandera": "marruecos",
@@ -1190,7 +1224,7 @@
      "acciones": [
       {
        "at": "@militares",
-       "x": 415.0,
+       "x": 418.1,
        "dur": 3.0
       }
      ],
@@ -1324,6 +1358,16 @@
      "at": 0,
      "cara": "normal",
      "acciones": [
+      {
+       "at": "@Senado",
+       "salta": true,
+       "mira": "camara"
+      },
+      {
+       "at": "@2022",
+       "cara": "pensativo",
+       "pose": "senala_arriba"
+      },
       {
        "at": "@amparadas",
        "pose": "pulgar",

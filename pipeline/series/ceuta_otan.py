@@ -79,7 +79,7 @@ scenes = [
        elements=[
         mapa_estrecho(0, 1.5, acciones=[{"at": "@Ceuta", "props": {"resalta": ["Ceuta"]}, "sfx": "pop"}]),
         obj("barco", MAR_ESTE[0] + 30, MAR_ESTE[1] + 4, "@atacara", 0.12, id="barco", entra="pop", sfx="redoble",
-            props={"bandera": "otan", "numero": "", "rumbo": -1},
+            props={"bandera": None, "numero": "?", "rumbo": -1},
             acciones=[{"at": "@atacara", "x": CEUTA[0] + 40, "y": CEUTA[1] - 8, "dur": 2.6}]),
         quien("piz", TARIFA[0] - 6, "@OTAN-0.5", 0.055, "normal", y=TARIFA[1] + 6, entra="pop", acciones=[
             {"at": "@OTAN", "take": True, "cara": "sorpresa", "mira": "barco"},
@@ -115,12 +115,13 @@ scenes = [
         V("Portuguesa desde 1415. Española desde 1668.", "normal"),
         V("Murallas incluidas.", "remate", 0.15),
     ], camara=[plano(0, "abierto", [380, 1000], 0), plano("@1668", "medio", "piz", 0.8, aire=120),
-               plano("@Murallas", "general", [540, 900], 0.6)],
+               plano("@Murallas", "general", [540, 900], 0.6), plano("@incluidas+1.6", "abierto", [420, 950], 1.0)],
        elements=[
         quien("piz", -120, 0, 0.62, "ilusionado", entra="nada", acciones=[
             {"at": 0, "x": 330, "dur": 2.0}, {"at": "@1415", "mira": "arriba"},
             {"at": "@1668", "x": 520, "dur": 1.0, "mira": "camara", "cara": "riendo"},
-            {"at": "@Murallas", "pose": "senala_arriba", "salta": True, "cara": "riendo"}]),
+            {"at": "@Murallas", "pose": "senala_arriba", "salta": True, "cara": "riendo"},
+            {"at": "@incluidas+0.5", "gira": True, "flip": True, "pose": "normal"}, {"at": "@incluidas+0.9", "x": 380, "dur": 1.0}]),
         rot("1415 · PORTUGAL", 540, 450, "@1415", 80, "blanco", golpe=True),
         rot("1668 · ESPAÑA", 540, 560, "@1668", 88, "amarillo", golpe=True),
     ]),
@@ -146,7 +147,7 @@ scenes = [
     dict(id="ambito", fondo="mar_mapa", limites=LIM, animo="comico", trans="zoom", footnote=FTRAT + " · Natural Earth", lines=[
         V("Ceuta y Melilla están en África, y el tratado no las nombra.", "normal"),
         V("Ni siquiera Hawái entra.", "remate", 0.2),
-    ], camara=[plano(0, "general", [540, 820], 0), zoom("@Ceuta", PA(-8, 38), 2.6, 0.9), zoom("@Hawái", PA(-140, 25), 1.4, 0.8)],
+    ], camara=[plano(0, "general", [540, 820], 0), zoom("@Ceuta", PA(-8, 38), 2.6, 0.9), zoom("@Hawái", PA(-140, 25), 1.4, 0.8), zoom("@entra+1.5", PA(-150, 22), 2.0, 0.8)],
        elements=[
         obj("mapa", AT[0], AT[1], 0, 1.0, id="atl", entra="nada", dibujo=1.3,
             props={"region": "atlantico", "ambito6": True, "tropico": True,
@@ -154,7 +155,7 @@ scenes = [
         rot("DENTRO DEL ARTÍCULO 6", 540, 430, 0.3, 66, "blanco", out="@Ceuta"),
         rot("CEUTA Y MELILLA: FUERA", 540, 430, "@nombra", 76, "rojo", golpe=True, out="@Hawái"),
         quien("piz", PA(-157, 21)[0] + 10, "@Hawái-0.2", 0.11, "normal", y=PA(-157, 21)[1] + 8, entra="cae", acciones=[
-            {"at": "@entra", "take": True, "cara": "sorpresa", "pose": "cabeza"}]),
+            {"at": "@entra", "take": True, "cara": "sorpresa", "pose": "cabeza"}, {"at": "@entra+0.7", "tropieza": True}]),
         rot("¡NI HAWÁI!", 540, 430, "@Hawái", 110, "amarillo", golpe=True, rot=-5),
     ]),
     # 6 · EL MATIZ: no es automático, pero hay otras vías
@@ -177,19 +178,19 @@ scenes = [
         V("¿Por qué se habla ahora? Sánchez confirmó que buques militares marroquíes entraron en aguas de Ceuta en julio.", "normal"),
         V("El Gobierno dice que fue puntual. Si se repitió en agosto, no está confirmado.", "normal", 0.15),
         V("Y Marruecos no reconoce esas aguas como españolas.", "remate", 0.15),
-    ], camara=[zoom(0, P(-5.3, 35.93), 9.0, 0), zoom("@aguas", P(-5.31, 35.9), 11.0, 0.8),
-               zoom("@Gobierno", P(-5.33, 35.92), 9.0, 0.6), zoom("@Marruecos", P(-5.33, 35.9), 8.0, 0.6)],
+    ], camara=[zoom(0, P(-5.25, 35.98), 6.5, 0), zoom("@aguas", P(-5.3, 35.93), 8.5, 0.8),
+               zoom("@Gobierno", P(-5.27, 35.97), 7.0, 0.6), zoom("@Marruecos", P(-5.3, 35.95), 7.5, 0.6)],
        elements=[
         mapa_estrecho(0, 0.01, progreso=1.0, acciones=[
             {"at": "@aguas", "props": {"lineas": [{"id": "aguas", "puntos": AGUAS, "color": "rojo", "discontinua": True, "ancho": 6, "dur": 1.2}]}, "sfx": "papel"}]),
-        quien("piz", P(-5.36, 35.905)[0], 0, 0.028, "normal", y=P(-5.36, 35.905)[1], entra="nada",
+        quien("piz", P(-5.44, 36.075)[0], 0, 0.03, "normal", y=P(-5.44, 36.075)[1], entra="nada",
               objeto="prismaticos", pose="prismaticos", acciones=[{"at": "@buques", "cara": "sorpresa", "mira": "der"},
                                                                     {"at": "@puntual", "cara": "pensativo"},
                                                                     {"at": "@reconoce", "objeto": None, "pose": "encoge", "cara": "preocupado", "mira": "camara"}]),
-        obj("barco", P(-5.12, 35.95)[0], P(-5.12, 35.95)[1], "@buques-0.3", 0.05, id="b1", entra="pop",
-            props={"bandera": "marruecos", "rumbo": -1}, acciones=[{"at": "@buques", "x": P(-5.27, 35.94)[0], "dur": 3.2}]),
-        obj("barco", P(-5.08, 35.91)[0], P(-5.08, 35.91)[1], "@militares", 0.045, entra="pop",
-            props={"bandera": "marruecos", "rumbo": -1}, acciones=[{"at": "@militares", "x": P(-5.23, 35.905)[0], "dur": 3.0}]),
+        obj("barco", P(-4.95, 35.93)[0], P(-4.95, 35.93)[1], "@buques-0.3", 0.035, id="b1", entra="pop",
+            props={"bandera": "marruecos", "rumbo": -1}, acciones=[{"at": "@buques", "x": P(-5.215, 35.93)[0], "dur": 3.2}]),
+        obj("barco", P(-4.92, 35.885)[0], P(-4.92, 35.885)[1], "@militares", 0.032, entra="pop",
+            props={"bandera": "marruecos", "rumbo": -1}, acciones=[{"at": "@militares", "x": P(-5.19, 35.885)[0], "dur": 3.0}]),
         sello("CONFIRMADO", "verde", 470, "@confirmó", out="@Gobierno"),
         sello("GOBIERNO: «PUNTUAL»", "azul", 470, "@puntual", out="@agosto-0.3"),
         sello("¿AGOSTO? SIN CONFIRMAR", "naranja", 470, "@agosto", out="@Marruecos-0.2"),
@@ -204,7 +205,8 @@ scenes = [
     ], camara=[plano(0, "general", dur=0), plano("@PSOE", "medio", "p1", 0.5), plano("@PP", "medio", "p2", 0.5),
                plano("@Vox", "medio", "p3", 0.5), plano("@Senado#2", "general", dur=0.6)],
        elements=[
-        quien("diputado", 230, 0, 0.55, "normal", id="p1", entra="pop", acciones=[{"at": "@amparadas", "pose": "pulgar", "cara": "riendo"}]),
+        quien("diputado", 230, 0, 0.55, "normal", id="p1", entra="pop", acciones=[{"at": "@Senado", "salta": True, "mira": "camara"},
+                                                                               {"at": "@2022", "cara": "pensativo", "pose": "senala_arriba"}, {"at": "@amparadas", "pose": "pulgar", "cara": "riendo"}]),
         quien("diputado", 540, 0.15, 0.55, "normal", id="p2", entra="pop", acciones=[{"at": "@Audiencia", "pose": "senala_arriba", "cara": "serio"}]),
         quien("diputado", 850, 0.3, 0.55, "normal", id="p3", entra="pop", acciones=[{"at": "@cambiar", "pose": "puno", "cara": "enfadado"},
                                                                                  {"at": "@Senado#2", "cara": "triste", "pose": "caidos"}]),

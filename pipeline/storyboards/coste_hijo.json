@@ -1,0 +1,767 @@
+{
+ "slug": "coste_hijo",
+ "title": "¿Cuánto cuesta un hijo?",
+ "series_tag": "TU DINERO, CON DATOS",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Save the Children: «El coste de la crianza 2024»",
+  "Deducción por maternidad: art. 81 Ley 35/2006 del IRPF",
+  "Complemento de Ayuda para la Infancia: Ley 19/2021"
+ ],
+ "caption": "👶 Criar a un hijo cuesta 758 € al mes (Save the Children, precios de 2024)\n🍼 Bebé: 604 € · deducción por maternidad: 100 €/mes si la madre trabaja\n🤝 Rentas bajas: + 115 € de complemento de infancia → quedan 389 €\n🎂 A los 3 años se acaba la deducción · con 7 años cuesta 812 €\n📉 Renta media: 0 € al mes · renta baja: 57,50 € (un 7 %)\n⚖️ Sin contar ayudas autonómicas, guarderías gratis ni el IRPF\n💬 ¿Cuánto te cuesta a ti?\n➡️ Próximo: lo que tarda la justicia · 🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Coste: Save the Children, «El coste de la crianza 2024» (diciembre de 2024, precios de 2024): 758 €/mes de media; 604 € de 0 a 3 años; 812 € de 7 a 12. Ayudas 2026: deducción por maternidad de 100 €/mes hasta los 3 años (art. 81 LIRPF) y Complemento de Ayuda para la Infancia (Ley 19/2021): 115 € (<3), 80,50 € (3-6) y 57,50 € (6-18) en hogares con rentas bajas. Cálculo propio. No incluye ayudas autonómicas, educación 0-3 gratuita, cheque guardería ni mínimos del IRPF. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PizarraPública",
+  "#Crianza",
+  "#Hijos",
+  "#Familia",
+  "#Ayudas",
+  "#TuDinero",
+  "#Maternidad"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "salon",
+   "animo": "curioso",
+   "footnote": "Save the Children, «El coste de la crianza 2024» (precios de 2024)",
+   "lines": [
+    {
+     "text": "Criar a un hijo cuesta 758 euros al mes, según Save the Children.",
+     "tono": "energia"
+    },
+    {
+     "text": "¿Cuánto pone el Estado?",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@Estado",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@hijo",
+       "mira": "peque",
+       "cara": "riendo"
+      },
+      {
+       "at": "@758",
+       "take": true,
+       "cara": "susto"
+      },
+      {
+       "at": "@Estado",
+       "mira": "camara",
+       "pose": "encoge",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "izq",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 760,
+     "y": 1340,
+     "scale": 0.42,
+     "at": "@hijo",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@758",
+       "salta": true
+      }
+     ],
+     "id": "peque",
+     "entra": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "758 €/MES",
+     "x": 540,
+     "y": 500,
+     "size": 110,
+     "color": "red",
+     "at": "@758",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "¿Y EL ESTADO?",
+     "x": 540,
+     "y": 640,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@Estado",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "bebe",
+   "fondo": "salon",
+   "animo": "alegre",
+   "trans": "pan",
+   "footnote": "Save the Children, «El coste de la crianza 2024» (precios de 2024) · deducción por maternidad (art. 81 LIRPF)",
+   "lines": [
+    {
+     "text": "Un bebé: 604 al mes.",
+     "tono": "normal"
+    },
+    {
+     "text": "Si la madre trabaja, Hacienda le da 100: la deducción por maternidad.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@maternidad",
+     "plano": "medio",
+     "sobre": "hacienda",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@604",
+       "salta": true
+      },
+      {
+       "at": "@100",
+       "mira": "hacienda"
+      }
+     ],
+     "id": "peque",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "hacienda",
+     "x": 1300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": "@Hacienda-0.3",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Hacienda",
+       "x": 780,
+       "dur": 0.7
+      },
+      {
+       "at": "@100",
+       "salta": true,
+       "cara": "riendo"
+      },
+      {
+       "at": "@maternidad",
+       "pose": "pulgar",
+       "objeto": null
+      }
+     ],
+     "entra": "nada",
+     "pose": "sostiene",
+     "objeto": "billete",
+     "id": "hacienda"
+    },
+    {
+     "type": "rotulo",
+     "text": "BEBÉ: 604 €/MES",
+     "x": 600,
+     "y": 480,
+     "size": 84,
+     "color": "red",
+     "at": "@604",
+     "golpe": true,
+     "out": "@100",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "− 100 €",
+     "x": 600,
+     "y": 480,
+     "size": 110,
+     "color": "verde",
+     "at": "@100",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "capi",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "iris",
+   "footnote": "CAPI (Ley 19/2021): 115 €/mes a menores de 3 años, solo rentas bajas · cálculo propio",
+   "lines": [
+    {
+     "text": "Si la familia tiene poca renta, suma el complemento de infancia: 115 euros.",
+     "tono": "normal"
+    },
+    {
+     "text": "Aun así, le quedan 389 por pagar.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@389",
+     "plano": "medio",
+     "sobre": "pizon",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": "@renta",
+       "cara": "triste"
+      },
+      {
+       "at": "@115",
+       "salta": true,
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@389",
+       "tiembla": true,
+       "cara": "preocupado"
+      }
+     ],
+     "entra": "izq",
+     "id": "pizon"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calculadora",
+     "x": 800,
+     "y": 860,
+     "scale": 0.85,
+     "at": "@complemento",
+     "props": {
+      "texto": "604"
+     },
+     "acciones": [
+      {
+       "at": "@115",
+       "props": {
+        "texto": "-215"
+       },
+       "salta": true
+      },
+      {
+       "at": "@389",
+       "props": {
+        "texto": "389"
+       },
+       "salta": true
+      }
+     ],
+     "id": "calc",
+     "entra": "pop",
+     "sfx": "calculadora"
+    },
+    {
+     "type": "rotulo",
+     "text": "+ 115 € (CAPI)",
+     "x": 600,
+     "y": 480,
+     "size": 84,
+     "color": "verde",
+     "at": "@115",
+     "golpe": true,
+     "out": "@389",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "QUEDAN 389 €",
+     "x": 600,
+     "y": 480,
+     "size": 96,
+     "color": "red",
+     "at": "@389",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "giro",
+   "fondo": "rayos",
+   "animo": "tension",
+   "musica": "corte",
+   "trans": "iris",
+   "footnote": "Save the Children, «El coste de la crianza 2024» (precios de 2024) · 7-12 años: 812 €/mes",
+   "lines": [
+    {
+     "text": "Pero a los tres años, la deducción se acaba.",
+     "tono": "sorpresa"
+    },
+    {
+     "text": "Con siete, cuesta 812. Y una familia de renta media no recibe ni un euro al mes.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@euro",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.3,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 320,
+     "y": 1340,
+     "scale": 0.78,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@acaba",
+       "take": true,
+       "cara": "susto"
+      },
+      {
+       "at": "@812",
+       "tiembla": true
+      },
+      {
+       "at": "@euro",
+       "tropieza": true
+      }
+     ],
+     "entra": "pop",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 780,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@siete",
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@812",
+       "salta": true
+      }
+     ],
+     "id": "peque",
+     "entra": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "DEDUCCIÓN: FIN",
+     "x": 540,
+     "y": 480,
+     "size": 84,
+     "color": "red",
+     "at": "@acaba",
+     "golpe": true,
+     "out": "@812",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "7 AÑOS: 812 €/MES",
+     "x": 540,
+     "y": 480,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@812",
+     "golpe": true,
+     "out": "@euro",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "AYUDA: 0 €",
+     "x": 540,
+     "y": 480,
+     "size": 110,
+     "color": "red",
+     "at": "@euro",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "baja",
+   "fondo": "oficina",
+   "animo": "triste",
+   "trans": "pan",
+   "footnote": "CAPI 6-18 años: 57,50 €/mes · cálculo propio sobre 812 €",
+   "lines": [
+    {
+     "text": "Con renta baja, 57,50. Un 7 % de lo que cuesta.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@7",
+     "plano": "medio",
+     "sobre": "pizon",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@57,50",
+       "salta": true,
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@7",
+       "cara": "triste",
+       "pose": "caidos"
+      }
+     ],
+     "entra": "nada",
+     "id": "pizon"
+    },
+    {
+     "type": "objeto",
+     "objeto": "moneda",
+     "x": 780,
+     "y": 820,
+     "scale": 0.7,
+     "at": "@57,50",
+     "props": {},
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "rotulo",
+     "text": "57,50 € = 7 %",
+     "x": 600,
+     "y": 480,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@57,50",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "matiz",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "pan",
+   "footnote": "No incluye ayudas autonómicas, guarderías gratuitas ni mínimos del IRPF",
+   "lines": [
+    {
+     "text": "Ojo: hay ayudas de cada comunidad, guarderías gratis y rebajas en la renta que no son un pago al mes.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@mes",
+     "plano": "medio",
+     "sobre": "profe",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@comunidad",
+       "pose": "senala"
+      },
+      {
+       "at": "@guarderías",
+       "mira": "camara",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@renta",
+       "pose": "pulgar"
+      },
+      {
+       "at": "@mes",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "izq",
+     "pose": "senala_arriba",
+     "id": "profe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "checklist",
+     "x": 760,
+     "y": 760,
+     "scale": 0.6,
+     "at": "@ayudas",
+     "props": {
+      "items": [
+       "AYUDAS AUTONÓMICAS",
+       "GUARDERÍA GRATIS",
+       "IRPF"
+      ],
+      "marcas": [
+       "si",
+       "si",
+       "si"
+      ]
+     },
+     "acciones": [],
+     "entra": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "NO ENTRAN EN LA CUENTA",
+     "x": 600,
+     "y": 480,
+     "size": 64,
+     "color": "amarillo",
+     "at": "@Ojo",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "salon",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Save the Children, «El coste de la crianza 2024» (precios de 2024)",
+   "lines": [
+    {
+     "text": "¿Cuánto te cuesta a ti? Te leemos.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y síguenos: la próxima, lo que tarda la justicia.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@síguenos",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@cuesta",
+       "mira": "camara",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@leemos",
+       "pose": "senala",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@justicia",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 760,
+     "y": 1340,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@leemos",
+       "salta": true
+      },
+      {
+       "at": "@justicia",
+       "take": true
+      }
+     ],
+     "id": "peque",
+     "entra": "nada"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿CUÁNTO TE CUESTA?",
+     "x": 540,
+     "y": 470,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@cuesta",
+     "golpe": true,
+     "out": "@síguenos-0.4",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 470,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@justicia",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.3,
+  "titulo": "Un hijo: 758 € al mes",
+  "capitulo": null
+ }
+}

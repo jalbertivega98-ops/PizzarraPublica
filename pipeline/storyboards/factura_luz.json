@@ -1,0 +1,767 @@
+{
+ "slug": "factura_luz",
+ "title": "¿Qué pagas en la luz?",
+ "series_tag": "TU DINERO, CON DATOS",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Peajes y cargos 2.0TD 2026: IDAE, Tarifas reguladas julio 2026",
+  "RDL 7/2026 (BOE 21/03/2026) y nota de Hacienda 29/06/2026",
+  "Factura tipo PVPC septiembre 2026: FACUA"
+ ],
+ "caption": "💡 De cada 100 € de tu factura de la luz, unos 45 no son luz\n⚡ Energía (con margen): 55 € · cables (peajes): 13 € · cargos del sistema: 10 €\n🧾 IVA: 17 € · impuesto eléctrico: 4 € · contador: 1 €\n🌸 De marzo a mayo el IVA bajó al 10 %; desde junio, otra vez al 21 %\n📈 Es una factura tipo de septiembre: cada mes cambia\n💬 ¿Miras tu factura?\n➡️ Próximo: la gasolina · 🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Cálculo propio sobre la factura tipo PVPC de septiembre de 2026 de FACUA (104,31 €; 4,4 kW; 366 kWh) con los peajes y cargos 2.0TD vigentes desde el 01/01/2026 (IDAE, Tarifas reguladas julio 2026), IVA 21 % e impuesto eléctrico 5,11 %. «Energía» incluye el margen de comercialización y la financiación del bono social. Impuestos: RDL 7/2026 (IVA 10 % e IEE 0,5 % de marzo a mayo) y nota de Hacienda del 29/06/2026. Estimación, no dato oficial de la CNMC; cambia cada mes y en el mercado libre es distinto. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PizarraPública",
+  "#FacturaDeLaLuz",
+  "#Luz",
+  "#PVPC",
+  "#IVA",
+  "#TuDinero",
+  "#Energía"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "salon",
+   "animo": "curioso",
+   "footnote": "Cálculo propio: factura tipo PVPC sep 2026 (FACUA, 104,31 €) · peajes y cargos 2026",
+   "lines": [
+    {
+     "text": "De cada 100 euros de tu factura de la luz, unos 45 no son luz.",
+     "tono": "energia"
+    },
+    {
+     "text": "¿Adónde van?",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@45",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.3,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 320,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@factura",
+       "mira": "camara"
+      },
+      {
+       "at": "@45",
+       "take": true,
+       "cara": "susto"
+      },
+      {
+       "at": "@van",
+       "pose": "encoge",
+       "cara": "confundido",
+       "objeto": null
+      }
+     ],
+     "entra": "izq",
+     "objeto": {
+      "tipo": "contrato",
+      "titulo": "FACTURA LUZ",
+      "hojas": 1
+     },
+     "pose": "sostiene",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "billete",
+     "x": 780,
+     "y": 760,
+     "scale": 0.9,
+     "at": "@100",
+     "props": {},
+     "acciones": [
+      {
+       "at": "@van",
+       "sale": "der"
+      }
+     ],
+     "id": "billete",
+     "entra": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "100 €",
+     "x": 700,
+     "y": 520,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@100",
+     "golpe": true,
+     "out": "@45",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "45 € NO SON LUZ",
+     "x": 600,
+     "y": 520,
+     "size": 84,
+     "color": "red",
+     "at": "@45",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "energia",
+   "fondo": "calle",
+   "animo": "alegre",
+   "trans": "pan",
+   "footnote": "Cálculo propio: factura tipo PVPC sep 2026 (FACUA, 104,31 €) · peajes y cargos 2026",
+   "lines": [
+    {
+     "text": "La energía que gastas, con el margen de la comercializadora: unos 55.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@55",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@energía",
+       "pose": "senala_arriba",
+       "mira": "arriba"
+      },
+      {
+       "at": "@margen",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@55",
+       "salta": true,
+       "cara": "ilusionado"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sol",
+     "x": 780,
+     "y": 600,
+     "scale": 0.6,
+     "at": "@energía",
+     "props": {},
+     "acciones": [],
+     "entra": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "ENERGÍA: 55 €",
+     "x": 600,
+     "y": 480,
+     "size": 96,
+     "color": "verde",
+     "at": "@55",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "redes",
+   "fondo": "oficina",
+   "animo": "tension",
+   "trans": "iris",
+   "footnote": "Peajes (CNMC) y cargos (Ministerio) 2.0TD 2026 · reparto estimado",
+   "lines": [
+    {
+     "text": "Los cables que la traen a casa: 13.",
+     "tono": "normal"
+    },
+    {
+     "text": "Los cargos del sistema, como las renovables o la deuda de años pasados: 10.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@10",
+     "plano": "medio",
+     "sobre": "pizon",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@cables",
+       "mira": "der"
+      },
+      {
+       "at": "@13",
+       "salta": true,
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@renovables",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@deuda",
+       "take": true,
+       "cara": "susto"
+      },
+      {
+       "at": "@10",
+       "pose": "encoge",
+       "cara": "confundido"
+      }
+     ],
+     "entra": "izq",
+     "id": "pizon"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 760,
+     "y": 660,
+     "scale": 0.75,
+     "at": "@13",
+     "props": {
+      "texto": "PEAJES: 13 €",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 760,
+     "y": 880,
+     "scale": 0.75,
+     "at": "@10",
+     "props": {
+      "texto": "CARGOS: 10 €",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching"
+    }
+   ]
+  },
+  {
+   "id": "impuestos",
+   "fondo": "oficina",
+   "animo": "comico",
+   "trans": "pan",
+   "footnote": "IVA 21 % · impuesto eléctrico 5,11 % · alquiler de contador 0,81 €/mes",
+   "lines": [
+    {
+     "text": "Y Hacienda: 17 de IVA y 4 del impuesto eléctrico.",
+     "tono": "sorpresa"
+    },
+    {
+     "text": "El euro que falta, el alquiler del contador.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@contador",
+     "plano": "medio",
+     "sobre": "hacienda",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 290,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Hacienda",
+       "take": true,
+       "cara": "susto",
+       "mira": "hacienda"
+      },
+      {
+       "at": "@17",
+       "tiembla": true
+      },
+      {
+       "at": "@eléctrico",
+       "cara": "indignado",
+       "pose": "jarras"
+      },
+      {
+       "at": "@contador",
+       "cara": "confundido",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "hacienda",
+     "id": "hacienda",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.82,
+     "at": "@Hacienda-0.2",
+     "entra": "der",
+     "dur": 0.4,
+     "cara": "burla",
+     "pose": "sostiene",
+     "objeto": {
+      "tipo": "contrato",
+      "titulo": "IVA + IEE",
+      "hojas": 1
+     },
+     "sfx": "kaching",
+     "acciones": [
+      {
+       "at": "@Hacienda+0.25",
+       "salta": true
+      }
+     ]
+    },
+    {
+     "type": "efecto",
+     "efecto": "vuelan",
+     "objeto": "billete",
+     "n": 6,
+     "x": 380,
+     "y": 1000,
+     "at": "@17",
+     "vida": 1.8
+    },
+    {
+     "type": "rotulo",
+     "text": "IVA: 17 €",
+     "x": 600,
+     "y": 470,
+     "size": 84,
+     "color": "red",
+     "at": "@17",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "IMPUESTO ELÉCTRICO: 4 €",
+     "x": 600,
+     "y": 580,
+     "size": 62,
+     "color": "amarillo",
+     "at": "@4",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "CONTADOR: 1 €",
+     "x": 600,
+     "y": 690,
+     "size": 62,
+     "color": "blanco",
+     "at": "@contador",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "primavera",
+   "fondo": "rayos",
+   "animo": "comico",
+   "musica": "corte",
+   "trans": "iris",
+   "footnote": "RDL 7/2026: IVA 10 % e IEE 0,5 % de marzo a mayo · desde junio, 21 % y 5,11 %",
+   "lines": [
+    {
+     "text": "En primavera pagabas menos: el IVA de la luz bajó al 10 %.",
+     "tono": "normal"
+    },
+    {
+     "text": "Desde junio, otra vez al 21.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@21",
+     "plano": "medio",
+     "sobre": "sarcastica",
+     "dur": 0.3,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sarcastica",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.8,
+     "at": 0,
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@10",
+       "salta": true,
+       "pose": "arriba"
+      },
+      {
+       "at": "@junio",
+       "cara": "burla"
+      },
+      {
+       "at": "@21",
+       "pose": "jarras",
+       "cara": "esceptica"
+      }
+     ],
+     "entra": "pop",
+     "id": "sarcastica"
+    },
+    {
+     "type": "rotulo",
+     "text": "MAR-MAY: IVA 10 %",
+     "x": 540,
+     "y": 480,
+     "size": 80,
+     "color": "verde",
+     "at": "@10",
+     "golpe": true,
+     "out": "@junio",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "DESDE JUNIO: 21 %",
+     "x": 540,
+     "y": 480,
+     "size": 80,
+     "color": "red",
+     "at": "@21",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¡ZAS!",
+     "x": 760,
+     "y": 820,
+     "at": "@21+0.2",
+     "scale": 0.75,
+     "vida": 0.8
+    }
+   ]
+  },
+  {
+   "id": "matiz",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "pan",
+   "footnote": "Estimación propia, no dato oficial de la CNMC · mercado libre: estructura distinta",
+   "lines": [
+    {
+     "text": "Ojo: es una factura tipo de septiembre. Cada mes cambia, porque la energía sigue al mercado.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@mercado",
+     "plano": "medio",
+     "sobre": "profe",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@septiembre",
+       "pose": "senala"
+      },
+      {
+       "at": "@cambia",
+       "mira": "grafica"
+      },
+      {
+       "at": "@mercado",
+       "pose": "pulgar",
+       "mira": "camara"
+      }
+     ],
+     "entra": "izq",
+     "pose": "senala_arriba",
+     "id": "profe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "grafica",
+     "x": 760,
+     "y": 800,
+     "scale": 0.8,
+     "at": "@cambia",
+     "props": {
+      "valores": [
+       2,
+       1.2,
+       2.6,
+       1.6,
+       2.2
+      ],
+      "color": "azul"
+     },
+     "acciones": [],
+     "id": "grafica",
+     "entra": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "CAMBIA CADA MES",
+     "x": 600,
+     "y": 480,
+     "size": 76,
+     "color": "amarillo",
+     "at": "@Ojo",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "salon",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Cálculo propio: factura tipo PVPC sep 2026 (FACUA, 104,31 €) · peajes y cargos 2026",
+   "lines": [
+    {
+     "text": "¿Miras tu factura? Te leemos.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y síguenos: la próxima, la gasolina.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@síguenos",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Miras",
+       "mira": "camara",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@leemos",
+       "pose": "senala",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@gasolina",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 790,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@factura",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@gasolina",
+       "take": true
+      }
+     ],
+     "entra": "nada",
+     "id": "pizon"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿MIRAS TU FACTURA?",
+     "x": 540,
+     "y": 470,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@Miras",
+     "golpe": true,
+     "out": "@síguenos-0.4",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 470,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@gasolina",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.2,
+  "titulo": "45 de cada 100 € no son luz",
+  "capitulo": null
+ }
+}

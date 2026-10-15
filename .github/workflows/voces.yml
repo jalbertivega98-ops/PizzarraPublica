@@ -72,7 +72,7 @@ jobs:
         run: |
           mkdir -p pipeline/voces_elevenlabs
           curl -s -H "xi-api-key: $ELEVENLABS_API_KEY" https://api.elevenlabs.io/v1/user/subscription \
-            | python3 -c 'import json,sys,datetime as d; s=json.load(sys.stdin); r=s.get("next_character_count_reset_unix"); print(json.dumps({"plan": s.get("tier"), "usados": s.get("character_count"), "limite": s.get("character_limit"), "quedan": (s.get("character_limit") or 0) - (s.get("character_count") or 0), "se_renueva": d.datetime.utcfromtimestamp(r).strftime("%Y-%m-%d") if r else None, "consultado": d.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")}, ensure_ascii=False, indent=1))' \
+            | python3 -c 'import json,sys,datetime as d; s=json.load(sys.stdin); r=s.get("next_character_count_reset_unix"); print(json.dumps({"plan": s.get("tier"), "usados": s.get("character_count"), "limite": s.get("character_limit"), "quedan": (s.get("character_limit") or 0) - (s.get("character_count") or 0), "se_renueva": d.datetime.utcfromtimestamp(r).strftime("%Y-%m-%d") if r else None, "consultado": d.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), "error": s.get("detail")}, ensure_ascii=False, indent=1))' \
             > pipeline/voces_elevenlabs/creditos.json || true
           cat pipeline/voces_elevenlabs/creditos.json
       - name: Guardar las voces en el repositorio

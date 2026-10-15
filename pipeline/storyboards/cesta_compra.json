@@ -1,0 +1,769 @@
+{
+ "slug": "cesta_compra",
+ "title": "La cesta de la compra",
+ "series_tag": "TU DINERO, CON DATOS",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "INE: IPC base 2025, alimentos y bebidas no alcohólicas y subclases (septiembre 2026)",
+  "INE: nota de prensa IPC septiembre 2026 (14/10/2026)"
+ ],
+ "caption": "🛒 Lo que hoy pagas 50 € en el súper, en enero de 2021 costaba 36,68 €\n📈 Alimentos: +36 % desde 2021 · IPC general: +27 %\n🥚 Huevos +91 % · 🫒 Aceites +56 % · 🍫 Chocolate +58 % · 🥛 Leche entera +52 %\n🍬 Azúcar: solo +26 %\n📉 Este año la comida sube un 2,7 %, menos que el resto (4,9 %)\n💬 ¿Qué notas más en tu ticket?\n➡️ Próximo: listas de espera · 🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuente: INE, IPC base 2025 (ECOICOP v2), datos definitivos de septiembre de 2026 (nota del 14/10/2026). Alimentos y bebidas no alcohólicas: índice 74,772 (ene-2021) → 101,934 (sep-2026). Subclases: huevos, aceites vegetales (incluye el de oliva, que el INE ya no separa), leche entera, chocolate y azúcar. Cálculo propio de las variaciones. El IPC mide una cesta media. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PizarraPública",
+  "#IPC",
+  "#CestaDeLaCompra",
+  "#Inflación",
+  "#INE",
+  "#TuDinero",
+  "#Supermercado"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "calle",
+   "animo": "curioso",
+   "footnote": "INE, IPC base 2025: alimentos y bebidas no alcohólicas, enero 2021 → septiembre 2026 · cálculo propio",
+   "lines": [
+    {
+     "text": "Lo que hoy pagas 50 euros en el súper, en 2021 te costaba 36.",
+     "tono": "energia"
+    },
+    {
+     "text": "¿Qué ha subido tanto?",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@2021",
+     "plano": "abierto",
+     "sobre": "piz",
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "supermercado",
+     "x": 330,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "acciones": [],
+     "id": "super",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1300,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@50",
+       "x": 800,
+       "dur": 0.9
+      },
+      {
+       "at": "@2021",
+       "take": true,
+       "cara": "susto"
+      },
+      {
+       "at": "@subido",
+       "mira": "camara",
+       "cara": "indignado",
+       "pose": "jarras",
+       "objeto": null
+      }
+     ],
+     "id": "piz",
+     "entra": "nada",
+     "objeto": "saco",
+     "pose": "sostiene"
+    },
+    {
+     "type": "rotulo",
+     "text": "HOY: 50 €",
+     "x": 540,
+     "y": 520,
+     "size": 100,
+     "color": "red",
+     "at": "@50",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "2021: 36,68 €",
+     "x": 540,
+     "y": 660,
+     "size": 90,
+     "color": "verde",
+     "at": "@2021",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "¿?",
+     "x": 800,
+     "y": 820,
+     "size": 140,
+     "color": "amarillo",
+     "at": "@subido",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "ipc",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "pan",
+   "footnote": "INE, IPC base 2025: alimentos y bebidas no alcohólicas, enero 2021 → septiembre 2026 · cálculo propio",
+   "lines": [
+    {
+     "text": "Según el INE, la comida ha subido un 36 % desde enero de 2021.",
+     "tono": "normal"
+    },
+    {
+     "text": "Nueve puntos más que el resto de precios.",
+     "tono": "sorpresa",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@Nueve",
+     "plano": "medio",
+     "sobre": "profe",
+     "dur": 0.3,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 280,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@36",
+       "pose": "senala",
+       "cara": "serio"
+      },
+      {
+       "at": "@Nueve",
+       "salta": true,
+       "cara": "sorpresa"
+      }
+     ],
+     "id": "profe",
+     "entra": "izq",
+     "pose": "senala_arriba"
+    },
+    {
+     "type": "objeto",
+     "objeto": "grafica",
+     "x": 760,
+     "y": 860,
+     "scale": 0.85,
+     "at": "@comida",
+     "props": {
+      "valores": [
+       1,
+       1.1,
+       1.5,
+       2.2,
+       2.6
+      ],
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "COMIDA: +36 %",
+     "x": 620,
+     "y": 600,
+     "size": 90,
+     "color": "red",
+     "at": "@36",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "RESTO: +27 %",
+     "x": 620,
+     "y": 720,
+     "size": 76,
+     "color": "amarillo",
+     "at": "@Nueve",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "huevos",
+   "fondo": "salon",
+   "animo": "comico",
+   "trans": "iris",
+   "footnote": "INE, subclase «Huevos» (IPC291439): 58,931 → 112,611",
+   "lines": [
+    {
+     "text": "El récord, los huevos: un 91 % más. Casi el doble.",
+     "tono": "sorpresa"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@doble",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 330,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@huevos-0.25",
+       "mira": "arriba",
+       "cara": "susto"
+      },
+      {
+       "at": "@huevos+0.23",
+       "aplasta": true
+      },
+      {
+       "at": "@huevos+0.90",
+       "cara": "confundido",
+       "mira": null
+      },
+      {
+       "at": "@doble+0.4",
+       "cara": "indignado"
+      }
+     ],
+     "id": "piz",
+     "entra": "izq"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "id": "precio_cae",
+     "x": 330,
+     "y": 1040,
+     "scale": 1.15,
+     "at": "@huevos-0.4",
+     "dur": 0.9,
+     "entra": "cae",
+     "props": {
+      "texto": "HUEVOS +91 %",
+      "color": "amarillo"
+     },
+     "rot": -3,
+     "acciones": [
+      {
+       "at": "@huevos+0.23",
+       "y": 1230,
+       "dur": 0.06
+      },
+      {
+       "at": "@huevos+0.85",
+       "y": 560,
+       "x": 370,
+       "dur": 0.45
+      }
+     ]
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¡CHOF!",
+     "x": 450,
+     "y": 1010,
+     "at": "@huevos+0.23",
+     "scale": 0.9,
+     "vida": 0.8
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 820,
+     "y": 1340,
+     "scale": 0.72,
+     "at": "@récord",
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@doble",
+       "take": true
+      }
+     ],
+     "id": "pizon",
+     "entra": "der"
+    },
+    {
+     "type": "rotulo",
+     "text": "× 1,9",
+     "x": 800,
+     "y": 520,
+     "size": 120,
+     "color": "red",
+     "at": "@doble",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "lista",
+   "fondo": "salon",
+   "animo": "tension",
+   "trans": "pan",
+   "footnote": "INE, subclases: aceites vegetales (IPC291663) · leche entera (IPC291643) · chocolate (IPC291739)",
+   "lines": [
+    {
+     "text": "El aceite, un 56 % más. La leche entera, un 52.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y el chocolate, un 58.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@chocolate",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 260,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": "@aceite",
+       "take": true
+      },
+      {
+       "at": "@leche",
+       "cara": "susto",
+       "tiembla": true
+      },
+      {
+       "at": "@chocolate",
+       "tropieza": true
+      }
+     ],
+     "id": "pizon",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 720,
+     "y": 560,
+     "scale": 0.75,
+     "at": "@aceite",
+     "props": {
+      "texto": "ACEITE +56 %",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 720,
+     "y": 760,
+     "scale": 0.75,
+     "at": "@leche",
+     "props": {
+      "texto": "LECHE +52 %",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 720,
+     "y": 960,
+     "scale": 0.75,
+     "at": "@chocolate",
+     "props": {
+      "texto": "CHOCOLATE +58 %",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching"
+    }
+   ]
+  },
+  {
+   "id": "azucar",
+   "fondo": "rayos",
+   "animo": "comico",
+   "musica": "corte",
+   "trans": "iris",
+   "footnote": "INE, subclase «Azúcar» (IPC291731): +25,9 %",
+   "lines": [
+    {
+     "text": "¿Y el azúcar? Solo un 26 %. De los que menos.",
+     "tono": "sorpresa"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@menos",
+     "plano": "medio",
+     "sobre": "sarcastica",
+     "dur": 0.3,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sarcastica",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.8,
+     "at": 0,
+     "cara": "burla",
+     "acciones": [
+      {
+       "at": "@26",
+       "pose": "pulgar",
+       "cara": "riendo"
+      },
+      {
+       "at": "@menos",
+       "salta": true
+      }
+     ],
+     "id": "sarcastica",
+     "entra": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "AZÚCAR: +26 %",
+     "x": 540,
+     "y": 560,
+     "size": 100,
+     "color": "verde",
+     "at": "@26",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "matiz",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "pan",
+   "footnote": "INE, IPC septiembre 2026: alimentos +2,7 % · general +4,9 % (tasa anual)",
+   "lines": [
+    {
+     "text": "Ojo: este año la comida sube un 2,7 %, menos que el resto, que va al 4,9.",
+     "tono": "normal"
+    },
+    {
+     "text": "Lo de antes ya no baja: se queda.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@queda",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 280,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@2,7",
+       "pose": "senala"
+      },
+      {
+       "at": "@4,9",
+       "mira": "piz"
+      },
+      {
+       "at": "@queda",
+       "cara": "serio",
+       "pose": "encoge"
+      }
+     ],
+     "id": "profe",
+     "entra": "nada",
+     "pose": "senala_arriba"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@2,7",
+       "cara": "ilusionado",
+       "salta": true
+      },
+      {
+       "at": "@baja",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@queda",
+       "take": true,
+       "cara": "triste"
+      }
+     ],
+     "id": "piz",
+     "entra": "der"
+    },
+    {
+     "type": "rotulo",
+     "text": "COMIDA HOY: +2,7 %",
+     "x": 540,
+     "y": 520,
+     "size": 72,
+     "color": "verde",
+     "at": "@2,7",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "GENERAL: +4,9 %",
+     "x": 540,
+     "y": 640,
+     "size": 72,
+     "color": "amarillo",
+     "at": "@4,9",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "El IPC mide una cesta media: tu ticket puede subir más o menos",
+   "lines": [
+    {
+     "text": "¿Qué es lo que más notas en tu ticket? Te leemos.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y síguenos: la próxima, las listas de espera.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@síguenos",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "supermercado",
+     "x": 760,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "acciones": [],
+     "id": "super",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 280,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@notas",
+       "mira": "camara",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@leemos",
+       "pose": "senala",
+       "cara": "ilusionado",
+       "objeto": null
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@espera",
+       "salta": true
+      }
+     ],
+     "id": "piz",
+     "entra": "nada",
+     "objeto": "contrato",
+     "pose": "sostiene"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿QUÉ NOTAS MÁS?",
+     "x": 540,
+     "y": 470,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@notas",
+     "golpe": true,
+     "out": "@síguenos",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 470,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@espera",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.0,
+  "titulo": "Lo que te cuesta el súper",
+  "capitulo": null
+ }
+}

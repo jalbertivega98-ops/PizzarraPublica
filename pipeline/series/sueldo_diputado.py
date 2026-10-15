@@ -57,11 +57,11 @@ scenes = [
     ], camara=[plano(0, "general", dur=0), plano("@5.530", "medio", "diputado", 0.3, aire=220)],
        elements=[
         quien("diputado", 300, 0, 0.75, "normal", entra="izq", acciones=[
-            {"at": "@3.367", "pose": "sostiene", "objeto": "fajo", "cara": "ilusionado"},
+            {"at": "@3.367", "pose": "sostiene", "objeto": "fajo", "cara": "ilusionado"}, {"at": "@todos", "mira": "camara", "cara": "riendo", "salta": True}, {"at": "@fuera", "mira": "calc", "cara": "pensativo"},
             {"at": "@Madrid", "mira": "der"}, {"at": "@2.163", "salta": True, "cara": "riendo"},
             {"at": "@5.530", "pose": "arriba", "objeto": None}]),
         obj("calculadora", 800, 860, "@asignación", 0.85, id="calc", props={"texto": "3.367"}, entra="pop", sfx="calculadora",
-            acciones=[{"at": "@2.163", "props": {"texto": "+2.163"}, "salta": True},
+            acciones=[{"at": "@mes", "salta": True}, {"at": "@2.163", "props": {"texto": "+2.163"}, "salta": True},
                       {"at": "@5.530", "props": {"texto": "5.530"}, "salta": True}]),
         rot("ASIGNACIÓN: 3.367 €", 600, 600, "@3.367", 74, "amarillo", golpe=True, out="@Madrid"),
         rot("+ GASTOS: 2.163 €", 600, 600, "@2.163", 74, "verde", golpe=True, out="@5.530"),
@@ -75,7 +75,7 @@ scenes = [
     ], camara=[plano(0, "general", dur=0), plano("@exentos", "medio", "hacienda", 0.3, aire=200)],
        elements=[
         quien("diputado", 280, 0, 0.75, "normal", entra="nada", pose="sostiene", objeto="billete", acciones=[
-            {"at": "@exentos", "pose": "pulgar", "cara": "riendo"}, {"at": "@alojamiento", "mira": "camara", "cara": "normal"}]),
+            {"at": "@gastos", "salta": True, "cara": "ilusionado"}, {"at": "@exentos", "pose": "pulgar", "cara": "riendo"}, {"at": "@alojamiento", "mira": "camara", "cara": "normal"}]),
         gags.aparece_hacienda("@Hacienda-0.3", 800, factura="IRPF"),
         dict(type="efecto", efecto="pum", text="¡NO!", x=640, y=820, at="@toca", scale=0.8, vida=0.8),
         rot("0 € DE IRPF", 600, 600, "@exentos", 100, "verde", golpe=True, out="@alojamiento"),
@@ -91,7 +91,7 @@ scenes = [
         quien("diputado", 260, "@diputado", 0.7, "normal", entra="izq", objeto="saco", pose="sostiene",
               acciones=[{"at": "@66.000", "salta": True, "cara": "ilusionado"}]),
         quien("piz", 800, 0, 0.72, "ilusionado", entra="der", objeto="hucha", pose="sostiene", acciones=[
-            {"at": "@24.497", "salta": True}, {"at": "@66.000", "mira": "diputado", "cara": "sorpresa"},
+            {"at": "@24.497", "salta": True}, {"at": "@España", "cara": "riendo", "mira": "camara"}, {"at": 3.6, "pose": "sostiene", "salta": True}, {"at": "@INE", "pose": "senala_arriba", "cara": "normal"}, {"at": "@66.000", "mira": "diputado", "cara": "sorpresa"},
             {"at": "@tres", "tropieza": True, "objeto": None}]),
         obj("reloj", 800, 600, "@cuesta", 0.7, entra="pop", velocidad=4),
         rot("24.497 €/AÑO", 800, 470, "@24.497", 74, "amarillo", golpe=True, out="@cuesta"),
@@ -114,11 +114,12 @@ scenes = [
     ], camara=[plano(0, "general", dur=0), plano("@14.000", "abierto", dur=0.4)],
        elements=[
         quien("profe", 300, 0, 0.75, "serio", entra="izq", pose="senala_arriba", acciones=[
-            {"at": "@portavoz", "pose": "senala"}, {"at": "@14.000", "take": True, "cara": "sorpresa"}]),
+            {"at": "@portavoz", "pose": "senala"}, {"at": "@presidencia", "mira": "arriba", "pose": "senala_arriba"}, {"at": "@14.000", "take": True, "cara": "sorpresa"}]),
         quien("sarcastica", 800, "@cargos", 0.72, "burla", entra="pop", acciones=[
-            {"at": "@3.197", "pose": "jarras"}, {"at": "@14.000", "salta": True, "cara": "riendo"}]),
+            {"at": "@3.197", "pose": "jarras"}, {"at": "@mes", "mira": "profe", "cara": "sorpresa"}, {"at": "@presidencia", "take": True}, {"at": "@14.000", "salta": True, "cara": "riendo"}]),
         obj("grafica", 560, 900, "@portavoz", 0.75, entra="pop", props={"valores": [1, 1.6, 4.3], "color": "verde"}),
         rot("PORTAVOZ: +3.197 €", 560, 520, "@3.197", 72, "amarillo", golpe=True, out="@presidencia"),
+        dict(type="efecto", efecto="pum", text="¡GLUP!", x=760, y=760, at="@Congreso", scale=0.7, vida=0.7),
         rot("PRESIDENCIA: 14.331 €", 560, 520, "@14.000", 72, C, golpe=True),
     ]),
     # 7 · MATIZ + FINAL

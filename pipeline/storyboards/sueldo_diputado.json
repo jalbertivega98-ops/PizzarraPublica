@@ -209,6 +209,17 @@
        "cara": "ilusionado"
       },
       {
+       "at": "@todos",
+       "mira": "camara",
+       "cara": "riendo",
+       "salta": true
+      },
+      {
+       "at": "@fuera",
+       "mira": "calc",
+       "cara": "pensativo"
+      },
+      {
        "at": "@Madrid",
        "mira": "der"
       },
@@ -237,6 +248,10 @@
       "texto": "3.367"
      },
      "acciones": [
+      {
+       "at": "@mes",
+       "salta": true
+      },
       {
        "at": "@2.163",
        "props": {
@@ -345,6 +360,11 @@
      "at": 0,
      "cara": "normal",
      "acciones": [
+      {
+       "at": "@gastos",
+       "salta": true,
+       "cara": "ilusionado"
+      },
       {
        "at": "@exentos",
        "pose": "pulgar",
@@ -502,6 +522,21 @@
       {
        "at": "@24.497",
        "salta": true
+      },
+      {
+       "at": "@España",
+       "cara": "riendo",
+       "mira": "camara"
+      },
+      {
+       "at": 3.6,
+       "pose": "sostiene",
+       "salta": true
+      },
+      {
+       "at": "@INE",
+       "pose": "senala_arriba",
+       "cara": "normal"
       },
       {
        "at": "@66.000",
@@ -725,6 +760,11 @@
        "pose": "senala"
       },
       {
+       "at": "@presidencia",
+       "mira": "arriba",
+       "pose": "senala_arriba"
+      },
+      {
        "at": "@14.000",
        "take": true,
        "cara": "sorpresa"
@@ -746,6 +786,15 @@
       {
        "at": "@3.197",
        "pose": "jarras"
+      },
+      {
+       "at": "@mes",
+       "mira": "profe",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@presidencia",
+       "take": true
       },
       {
        "at": "@14.000",
@@ -785,6 +834,16 @@
      "golpe": true,
      "out": "@presidencia",
      "hud": true
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¡GLUP!",
+     "x": 760,
+     "y": 760,
+     "at": "@Congreso",
+     "scale": 0.7,
+     "vida": 0.7
     },
     {
      "type": "rotulo",

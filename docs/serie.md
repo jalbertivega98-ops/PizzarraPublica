@@ -89,7 +89,7 @@ amarillas y @pizarrapublica (dentro del recorte 4:5 de Instagram). En el storybo
 
 Los personajes siguen siendo protagonistas, pero ahora **viven en un mundo dibujado a mano** que cuenta la historia:
 mapas que se trazan con rotulador, mares y barcos con estela, ciudades con murallas, banderas, tratados que se despliegan.
-Episodio de referencia: `pipeline/series/ceuta_otan.py` → «Si atacan Ceuta, ¿viene la OTAN?» (guion y fuentes en `docs/series/ceuta_otan/`).
+Episodios: `pipeline/series/ceuta_otan.py` y los cinco del 16/10 (`voto_nietos`, `coste_29n`, `cis_acierta`, `leyes_mueren`, `ceuta_marruecos`, ayudas en `series/_mundo.py`; guiones en `docs/series/cinco_mundo/`). Referencia: → «Si atacan Ceuta, ¿viene la OTAN?» (guion y fuentes en `docs/series/ceuta_otan/`).
 
 **Reglas**: no repetir composición; cambiar de escenario cuando avanza la historia; cámara que se mueve con motivo;
 los dibujos se **dibujan** (no aparecen sin más); humor y emoción con los personajes; continuidad entre escenas;
@@ -99,12 +99,14 @@ ninguna escena quieta más de 3 s. Datos históricos, jurídicos y de actualidad
 
 | Pieza | Uso en el storyboard |
 |---|---|
-| `mapa` (objeto) | `props: region (estrecho, atlantico), orden, colores, resalta, apaga, lineas, tropico, ambito6`; se traza en `dibujo` s. Contornos reales de Natural Earth (`universo/geo/`, nuevas regiones con `geo/preparar.py`). Líneas siempre del mismo grosor aunque la cámara haga zoom x10. |
+| `mapa` (objeto) | `props: region (estrecho, atlantico, espana: 52 provincias con Canarias en recuadro y colores por comunidad, mundo: países por ISO3), orden, colores, resalta, apaga, lineas, tropico, ambito6`; se traza en `dibujo` s. Contornos reales de Natural Earth (`universo/geo/`, nuevas regiones con `geo/preparar.py`). Líneas siempre del mismo grosor aunque la cámara haga zoom x10. |
 | `mapas.punto(region, lon, lat, x, y, escala)` | coloca barcos, personajes, banderas y rótulos en su sitio real del mapa |
 | `barco` | buque de perfil que se mece; al navegar (`acciones` con `x`, `dur`) deja estela y espuma. `props: bandera, numero, rumbo` |
-| `bandera`, `chincheta` | ondean: `espana`, `marruecos`, `otan`, `ue`, `ceuta` |
+| `bandera`, `chincheta` | ondean: `espana`, `marruecos`, `otan`, `ue`, `ceuta`, `portugal`, `castilla`, `argentina`, `uruguay`, `cuba`, `mexico`, `venezuela`, `brasil`, `onu` |
 | `documento` | pergamino que se despliega; `articulos` y `resalta` (fosforito que se pinta) |
 | `otan`, `atril`, `sello`, `prismaticos`, `faro`, `barquito` | símbolo de la OTAN, atril de partido, sello de verificación, prismáticos (pose `prismaticos`) |
+| objetos cívicos (`universo/civico.py`) | `urna` (llena), `papeleta`, `mesa_electoral`, `camion` (rueda y echa humo), `senal` (tachada), `alcoholimetro`, `contador` (corre hasta el valor), `barras` (crecen; colores de partido), `bola`, `lapida`, `papelera`, `libro`, `pasaporte`, `maleta`, `carabela` (cruz portugal/castilla), `corona`, `pergamino` |
+| fondos `carretera` (en perspectiva, `velocidad`), `colegio` (colegio electoral) | escenas de tráfico y de votación |
 | fondos `ceuta`, `mar_mapa` | paseo junto a las Murallas Reales con el Monte Hacho y la península al fondo; mar infinito bajo los mapas |
 | `"dibuja": s` en cualquier elemento | el rotulador lo traza de izquierda a derecha (con sonido) |
 | acción `brinco` | `{"x", "y", "dur", "brinco": alto}`: salto en arco (p. ej. cruzar el Estrecho) |

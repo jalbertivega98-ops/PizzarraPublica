@@ -1,0 +1,1396 @@
+{
+ "slug": "ceuta_marruecos",
+ "title": "¿Por qué Marruecos reclama Ceuta y Melilla?",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Visita de los Reyes a Ceuta (13/10) y Melilla (14/10/2026): AFP vía Emol y Ahram Online",
+  "Historia de Ceuta y Melilla: Euronews (11/09/2026), El Debate (02/08/2026)",
+  "Comité de Descolonización de la ONU, 27/01/1975: El Debate (06/08/2026), Maldita (31/07/2026)",
+  "Estatutos de Autonomía: LO 1/1995 y LO 2/1995 (BOE)",
+  "Exteriores Explica (01/08/2026): Ceuta y Melilla en la UE",
+  "Posturas: Euronews 22/08/2026 (Robles), Artículo 14 13/10/2026 (Feijóo), ESdiario 01/09/2026 (Vox)",
+  "Mapas dibujados sobre contornos de Natural Earth (dominio público)"
+ ],
+ "caption": "👑 Los Reyes visitan Ceuta y Melilla: la primera visita real desde 2007\n⛵ Ceuta: portuguesa en 1415, con España desde 1580/1640; Tratado de Lisboa, 1668\n🏰 Melilla: española desde 1497, antes que la dinastía alauí (1666)\n🇺🇳 Marruecos las reclama desde 1956; en la ONU (1975) no prosperó\n🇪🇺 Hoy: ciudades autónomas y la UE en el continente africano\n💬 ¿Dejará Marruecos de reclamarlas algún día?\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: AFP 13-14/10/2026 · Euronews 11/09 y 22/08 · El Debate 02/08 y 06/08 · Maldita 31/07 · Exteriores 01/08 · BOE (LO 1/1995 y 2/1995) · Artículo 14 13/10 · ESdiario 01/09. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#Ceuta",
+  "#Melilla",
+  "#Marruecos",
+  "#historia",
+  "#Reyes",
+  "#politica",
+  "#España",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "tension",
+   "footnote": "AFP 13-14/10/2026 · Casa Real",
+   "lines": [
+    {
+     "text": "Los Reyes acaban de visitar Ceuta y Melilla: la primera visita real desde 2007.",
+     "tono": "energia"
+    },
+    {
+     "text": "Aquella vez, Marruecos llamó a consultas a su embajador. ¿Por qué tanto lío?",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      478.7,
+      896.8
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@Ceuta",
+     "plano": "general",
+     "sobre": [
+      463.3,
+      1079.2
+     ],
+     "dur": 1.0,
+     "zoom": 2.4
+    },
+    {
+     "at": "@Marruecos",
+     "plano": "general",
+     "sobre": [
+      432.7,
+      1184.8
+     ],
+     "dur": 0.7,
+     "zoom": 2.0
+    },
+    {
+     "at": "@lío",
+     "plano": "general",
+     "sobre": [
+      486.3,
+      1127.2
+     ],
+     "dur": 0.6,
+     "zoom": 2.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "estrecho",
+      "orden": [
+       "Spain",
+       "Portugal",
+       "Gibraltar",
+       "Ceuta",
+       "Morocco",
+       "Melilla",
+       "Balearic Islands",
+       "France",
+       "Andorra",
+       "Algeria"
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@Ceuta",
+       "props": {
+        "resalta": [
+         "Ceuta"
+        ]
+       },
+       "sfx": "pop"
+      },
+      {
+       "at": "@Melilla",
+       "props": {
+        "resalta": [
+         "Ceuta",
+         "Melilla"
+        ]
+       },
+       "sfx": "pop"
+      },
+      {
+       "at": "@Marruecos",
+       "props": {
+        "resalta": [
+         "Ceuta",
+         "Melilla",
+         "Morocco"
+        ]
+       }
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.3
+    },
+    {
+     "type": "objeto",
+     "objeto": "corona",
+     "x": 532.3,
+     "y": 685.6,
+     "scale": 0.3,
+     "at": "@Reyes",
+     "props": {},
+     "acciones": [
+      {
+       "at": "@visitar",
+       "x": 413.0,
+       "y": 1078.1,
+       "dur": 1.2
+      },
+      {
+       "at": "@Melilla",
+       "x": 590.6,
+       "y": 1136.2,
+       "dur": 0.9
+      }
+     ],
+     "id": "corona",
+     "entra": "crece",
+     "sfx": "estrellitas",
+     "flota": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "bandera",
+     "x": 291.6,
+     "y": 1298.1,
+     "scale": 0.35,
+     "at": "@Marruecos-0.2",
+     "props": {
+      "diseno": "marruecos"
+     },
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 660.6,
+     "y": 1206.2,
+     "scale": 0.2,
+     "at": "@2007",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@embajador",
+       "cara": "sorpresa",
+       "take": true,
+       "mira": "izq"
+      },
+      {
+       "at": "@lío",
+       "pose": "encoge",
+       "cara": "confundido",
+       "mira": "camara"
+      }
+     ],
+     "entra": "cae",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "PRIMERA DESDE 2007",
+     "x": 540,
+     "y": 430,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@2007",
+     "golpe": true,
+     "out": "@Aquella",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "2007: MARRUECOS RETIRA",
+     "x": 540,
+     "y": 430,
+     "size": 70,
+     "color": "blanco",
+     "at": "@consultas",
+     "golpe": true,
+     "out": "@lío",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "A SU EMBAJADOR",
+     "x": 540,
+     "y": 520,
+     "size": 70,
+     "color": "blanco",
+     "at": "@embajador",
+     "golpe": true,
+     "out": "@lío",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "¿POR QUÉ?",
+     "x": 540,
+     "y": 450,
+     "size": 130,
+     "color": "amarillo",
+     "at": "@lío",
+     "golpe": true,
+     "rot": -4,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "ceuta",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "aventura",
+   "trans": "zoom",
+   "footnote": "Euronews 11/09/2026 · El Debate 02/08/2026 · Tratado de Lisboa (1668)",
+   "lines": [
+    {
+     "text": "Empecemos en 1415: Portugal conquista Ceuta.",
+     "tono": "normal"
+    },
+    {
+     "text": "En 1580 pasa a la corona española, y cuando Portugal se separa, en 1640, Ceuta se queda con España.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "El Tratado de Lisboa lo firma en 1668.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      241.0,
+      973.6
+     ],
+     "dur": 0,
+     "zoom": 1.6
+    },
+    {
+     "at": "@conquista",
+     "plano": "general",
+     "sobre": [
+      407.0,
+      1118.1
+     ],
+     "dur": 1.0,
+     "zoom": 3.6
+    },
+    {
+     "at": "@1580",
+     "plano": "general",
+     "sobre": [
+      394.3,
+      868.0
+     ],
+     "dur": 0.8,
+     "zoom": 1.2
+    },
+    {
+     "at": "@Tratado",
+     "plano": "general",
+     "sobre": [
+      394.3,
+      964.0
+     ],
+     "dur": 0.6,
+     "zoom": 1.3
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "estrecho",
+      "orden": [
+       "Spain",
+       "Portugal",
+       "Gibraltar",
+       "Ceuta",
+       "Morocco",
+       "Melilla",
+       "Balearic Islands",
+       "France",
+       "Andorra",
+       "Algeria"
+      ],
+      "progreso": 1.0
+     },
+     "acciones": [
+      {
+       "at": "@Portugal",
+       "props": {
+        "resalta": [
+         "Portugal"
+        ]
+       }
+      },
+      {
+       "at": "@conquista",
+       "props": {
+        "resalta": [
+         "Portugal",
+         "Ceuta"
+        ]
+       },
+       "sfx": "golpe"
+      },
+      {
+       "at": "@1580",
+       "props": {
+        "resalta": [
+         "Spain",
+         "Portugal",
+         "Ceuta"
+        ]
+       }
+      },
+      {
+       "at": "@separa",
+       "props": {
+        "resalta": [
+         "Spain",
+         "Ceuta"
+        ]
+       }
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 0.01
+    },
+    {
+     "type": "objeto",
+     "objeto": "carabela",
+     "x": 55.3,
+     "y": 876.9,
+     "scale": 0.3,
+     "at": 0.1,
+     "props": {
+      "cruz": "portugal"
+     },
+     "acciones": [
+      {
+       "at": 0.4,
+       "x": 95.3,
+       "y": 1050.4,
+       "dur": 1.0
+      },
+      {
+       "at": "@Ceuta",
+       "x": 367.0,
+       "y": 1114.1,
+       "dur": 1.0
+      }
+     ],
+     "id": "nave",
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 411.0,
+     "y": 1118.1,
+     "scale": 0.24,
+     "at": "@conquista",
+     "props": {
+      "diseno": "portugal"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "out": "@1580"
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 411.0,
+     "y": 1118.1,
+     "scale": 0.24,
+     "at": "@1580",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 386.7,
+     "y": 1098.4,
+     "scale": 0.06,
+     "at": 0.2,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@conquista",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@separa",
+       "pose": "senala",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "cae",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "1415 · PORTUGAL",
+     "x": 540,
+     "y": 430,
+     "size": 84,
+     "color": "blanco",
+     "at": "@1415",
+     "golpe": true,
+     "out": "@1580",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "1580 · CORONA ESPAÑOLA",
+     "x": 540,
+     "y": 430,
+     "size": 72,
+     "color": "amarillo",
+     "at": "@1580",
+     "golpe": true,
+     "out": "@1640",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "1640 · SE QUEDA CON ESPAÑA",
+     "x": 540,
+     "y": 430,
+     "size": 64,
+     "color": "amarillo",
+     "at": "@1640",
+     "golpe": true,
+     "out": "@Tratado",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "pergamino",
+     "x": 540,
+     "y": 1180,
+     "scale": 0.75,
+     "at": "@Tratado",
+     "props": {
+      "titulo": "TRATADO DE LISBOA",
+      "fecha": "1668"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "abajo",
+     "sfx": "papel"
+    }
+   ]
+  },
+  {
+   "id": "melilla",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "aventura",
+   "trans": "corte",
+   "footnote": "Melilla: 17/09/1497, Pedro de Estopiñán (duque de Medina Sidonia) · Dinastía alauí: 1666",
+   "lines": [
+    {
+     "text": "Melilla es española desde 1497.",
+     "tono": "normal"
+    },
+    {
+     "text": "La dinastía que hoy reina en Marruecos llegó casi dos siglos después, en 1666.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      463.3,
+      1088.8
+     ],
+     "dur": 0,
+     "zoom": 2.0
+    },
+    {
+     "at": "@1497",
+     "plano": "general",
+     "sobre": [
+      590.6,
+      1176.2
+     ],
+     "dur": 1.0,
+     "zoom": 3.6
+    },
+    {
+     "at": "@dinastía",
+     "plano": "general",
+     "sobre": [
+      432.7,
+      1223.2
+     ],
+     "dur": 0.8,
+     "zoom": 1.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "estrecho",
+      "orden": [
+       "Spain",
+       "Portugal",
+       "Gibraltar",
+       "Ceuta",
+       "Morocco",
+       "Melilla",
+       "Balearic Islands",
+       "France",
+       "Andorra",
+       "Algeria"
+      ],
+      "progreso": 1.0,
+      "resalta": [
+       "Ceuta"
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@1497",
+       "props": {
+        "resalta": [
+         "Ceuta",
+         "Melilla"
+        ]
+       },
+       "sfx": "golpe"
+      },
+      {
+       "at": "@dinastía",
+       "props": {
+        "resalta": [
+         "Ceuta",
+         "Melilla",
+         "Morocco"
+        ]
+       }
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 0.01
+    },
+    {
+     "type": "objeto",
+     "objeto": "carabela",
+     "x": 329.2,
+     "y": 1053.1,
+     "scale": 0.26,
+     "at": 0,
+     "props": {
+      "cruz": "castilla"
+     },
+     "acciones": [
+      {
+       "at": 0.2,
+       "x": 509.3,
+       "y": 1098.4,
+       "dur": 1.2
+      },
+      {
+       "at": "@1497-0.3",
+       "x": 550.6,
+       "y": 1166.2,
+       "dur": 0.8
+      }
+     ],
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 594.6,
+     "y": 1176.2,
+     "scale": 0.2,
+     "at": "@1497",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "corona",
+     "x": 291.6,
+     "y": 1268.1,
+     "scale": 0.16,
+     "at": "@1666",
+     "props": {},
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "estrellitas"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540.0,
+     "y": 1204.0,
+     "scale": 0.11,
+     "at": "@dinastía",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@después",
+       "pose": "senala_izq",
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "cae",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "1497 · MELILLA",
+     "x": 540,
+     "y": 430,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@1497",
+     "golpe": true,
+     "out": "@dinastía",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "1666 · DINASTÍA ALAUÍ",
+     "x": 540,
+     "y": 430,
+     "size": 76,
+     "color": "blanco",
+     "at": "@1666",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "onu",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     0,
+     110,
+     170
+    ]
+   },
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "ONU, Comité de Descolonización, 27/01/1975 · El Debate 06/08/2026 · Maldita 31/07/2026",
+   "lines": [
+    {
+     "text": "Marruecos las reclama desde su independencia, en 1956.",
+     "tono": "normal"
+    },
+    {
+     "text": "En 1975 lo llevó a la ONU, pero no prosperó: no están en su lista de territorios por descolonizar.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@ONU",
+     "plano": "general",
+     "sobre": [
+      540,
+      820
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@lista",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "bandera",
+     "x": 260,
+     "y": 1300,
+     "scale": 0.9,
+     "at": 0,
+     "props": {
+      "diseno": "marruecos"
+     },
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bandera",
+     "x": 820,
+     "y": 1300,
+     "scale": 0.9,
+     "at": "@ONU",
+     "props": {
+      "diseno": "onu"
+     },
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 540,
+     "y": 860,
+     "scale": 1.25,
+     "at": "@prosperó",
+     "props": {
+      "titulo": "TERRITORIOS NO AUTÓNOMOS",
+      "subtitulo": "Lista de la ONU",
+      "articulos": [
+       {
+        "id": "l",
+        "titulo": "EN EUROPA",
+        "lineas": [
+         "Gibraltar"
+        ]
+       },
+       {
+        "id": "n",
+        "titulo": "¿CEUTA? ¿MELILLA?",
+        "lineas": [
+         "No figuran"
+        ]
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@lista",
+       "props": {
+        "resalta": [
+         "n"
+        ]
+       }
+      }
+     ],
+     "entra": "nada",
+     "dibujo": 0.9,
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1250,
+     "y": 1560,
+     "scale": 0.45,
+     "at": "@prosperó-0.4",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@prosperó-0.4",
+       "x": 880,
+       "dur": 0.5
+      },
+      {
+       "at": "@lista",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@descolonizar",
+       "objeto": null,
+       "pose": "encoge",
+       "cara": "esceptica"
+      }
+     ],
+     "entra": "nada",
+     "objeto": "lupa",
+     "pose": "sostiene",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "1956 · INDEPENDENCIA",
+     "x": 540,
+     "y": 430,
+     "size": 76,
+     "color": "blanco",
+     "at": "@1956",
+     "golpe": true,
+     "out": "@1975",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "1975 · A LA ONU",
+     "x": 540,
+     "y": 430,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@1975",
+     "golpe": true,
+     "out": "@prosperó",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 450,
+     "scale": 1.0,
+     "at": "@prosperó",
+     "props": {
+      "texto": "NO PROSPERÓ",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "hoy",
+   "fondo": "ceuta",
+   "animo": "alegre",
+   "trans": "zoom",
+   "footnote": "LO 1/1995 y 2/1995 · Exteriores 01/08/2026",
+   "lines": [
+    {
+     "text": "Desde 1995 son ciudades autónomas, y el único trozo de la Unión Europea en el continente africano.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "abierto",
+     "sobre": [
+      400,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Unión",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.6,
+     "aire": 140
+    },
+    {
+     "at": "@africano",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": -100,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": 0,
+       "x": 420,
+       "dur": 1.4
+      },
+      {
+       "at": "@autónomas",
+       "pose": "senala_arriba",
+       "cara": "riendo"
+      },
+      {
+       "at": "@Unión",
+       "salta": true
+      },
+      {
+       "at": "@africano",
+       "pose": "pulgar"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bandera",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.7,
+     "at": "@Unión",
+     "props": {
+      "diseno": "ue"
+     },
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "papel"
+    },
+    {
+     "type": "rotulo",
+     "text": "1995 · CIUDADES AUTÓNOMAS",
+     "x": 540,
+     "y": 430,
+     "size": 64,
+     "color": "blanco",
+     "at": "@1995",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "UE EN ÁFRICA",
+     "x": 540,
+     "y": 540,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@Unión",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "posturas",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "iris",
+   "footnote": "Robles (Euronews 22/08/2026) · Feijóo (13/10/2026) · Vox (ESdiario 01/09/2026)",
+   "lines": [
+    {
+     "text": "El Gobierno del PSOE no negocia: Robles las llama «españolísimas e intocables».",
+     "tono": "normal"
+    },
+    {
+     "text": "El PP critica que Sánchez no acompañara al Rey.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Y Vox pide romper relaciones si Marruecos no reconoce que son españolas.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@PSOE",
+     "plano": "medio",
+     "sobre": "p1",
+     "dur": 0.5
+    },
+    {
+     "at": "@PP",
+     "plano": "medio",
+     "sobre": "p2",
+     "dur": 0.5
+    },
+    {
+     "at": "@Vox",
+     "plano": "medio",
+     "sobre": "p3",
+     "dur": 0.5
+    },
+    {
+     "at": "@españolas",
+     "plano": "general",
+     "sobre": null,
+     "dur": 0.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 230,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@negocia",
+       "pose": "cruzados",
+       "cara": "serio"
+      },
+      {
+       "at": "@intocables",
+       "pose": "puno",
+       "cara": "riendo"
+      }
+     ],
+     "id": "p1",
+     "entra": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0.15,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@acompañara",
+       "pose": "senala_izq",
+       "cara": "esceptica"
+      }
+     ],
+     "id": "p2",
+     "entra": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 850,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0.3,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@romper",
+       "pose": "puno",
+       "cara": "enfado"
+      }
+     ],
+     "id": "p3",
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 230,
+     "y": 1350,
+     "scale": 0.46,
+     "at": 0,
+     "props": {
+      "texto": "PSOE",
+      "color": "psoe"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 540,
+     "y": 1350,
+     "scale": 0.46,
+     "at": 0.15,
+     "props": {
+      "texto": "PP",
+      "color": "pp"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 850,
+     "y": 1350,
+     "scale": 0.46,
+     "at": 0.3,
+     "props": {
+      "texto": "VOX",
+      "color": "vox"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "rotulo",
+     "text": "PSOE: «INTOCABLES»",
+     "x": 540,
+     "y": 450,
+     "size": 70,
+     "color": "blanco",
+     "at": "@intocables",
+     "golpe": true,
+     "out": "@PP",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "PP: «NO LE HUBIERA DEJADO SOLO»",
+     "x": 540,
+     "y": 450,
+     "size": 54,
+     "color": "blanco",
+     "at": "@Rey",
+     "golpe": true,
+     "out": "@Vox",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "VOX: ROMPER RELACIONES",
+     "x": 540,
+     "y": 450,
+     "size": 66,
+     "color": "blanco",
+     "at": "@romper",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "final",
+   "trans": "zoom",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Crees que Marruecos dejará de reclamarlas algún día? Te leo.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y síguenos para el próximo viaje de Piz.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      494.0,
+      1146.4
+     ],
+     "dur": 0,
+     "zoom": 3.2
+    },
+    {
+     "at": 0.2,
+     "plano": "general",
+     "sobre": [
+      540.0,
+      896.8
+     ],
+     "dur": 2.2,
+     "zoom": 1.0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "estrecho",
+      "orden": [
+       "Spain",
+       "Portugal",
+       "Gibraltar",
+       "Ceuta",
+       "Morocco",
+       "Melilla",
+       "Balearic Islands",
+       "France",
+       "Andorra",
+       "Algeria"
+      ],
+      "progreso": 1.0,
+      "resalta": [
+       "Ceuta",
+       "Melilla"
+      ]
+     },
+     "acciones": [],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 0.01
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 790,
+     "y": 1500,
+     "scale": 0.6,
+     "at": "@Crees",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Marruecos",
+       "pose": "senala_izq"
+      },
+      {
+       "at": "@leo",
+       "mira": "camara",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@viaje",
+       "salta": true
+      }
+     ],
+     "hud": true,
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿ALGÚN DÍA?",
+     "x": 540,
+     "y": 450,
+     "size": 120,
+     "color": "amarillo",
+     "at": "@algún",
+     "golpe": true,
+     "out": "@síguenos-0.3",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 450,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@Piz",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.6,
+  "titulo": "¿Por qué Marruecos reclama Ceuta y Melilla?",
+  "capitulo": null
+ }
+}

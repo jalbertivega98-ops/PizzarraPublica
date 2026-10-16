@@ -1,0 +1,1107 @@
+{
+ "slug": "cis_acierta",
+ "title": "¿Acierta el CIS?",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "CIS, barómetro de octubre de 2026 (publicado el 14/10/2026; CMM y El Debate)",
+  "Colmena de Datos, media de encuestas de octubre de 2026 (3/10/2026)",
+  "CIS: barómetro de julio de 2023 (13/07/2023) y estudio preelectoral (05/07/2023)",
+  "Ministerio del Interior: resultados del 23J (2023)",
+  "Maldita (13/06/2025): análisis de El País sobre los errores del CIS y la defensa de Tezanos",
+  "Comisión del Senado sobre el CIS (Vozpópuli, 17/07/2024)",
+  "Mapas dibujados sobre contornos de Natural Earth (dominio público)"
+ ],
+ "caption": "📊 El CIS da al PSOE ganando por casi 12 puntos; la media de encuestas, al PP por casi 7\n⏪ En julio de 2023, el barómetro del CIS ponía al PSOE delante… y ganó el PP\n🎯 Su preelectoral sí acertó quién ganaba, pero no por cuánto\n📰 El País: sobreestimó a la izquierda en 41 de 42 elecciones; Tezanos lo defiende\n🏛️ PP y Vox: comisión en el Senado; el PP quiere reformarlo\n💬 ¿Te fías de las encuestas?\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: CIS oct. 2026 · Colmena de Datos 3/10 · CIS jul. 2023 y preelectoral · Interior 23J · Maldita 13/06/2025 · Vozpópuli 17/07/2024. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#CIS",
+  "#encuestas",
+  "#29N",
+  "#elecciones",
+  "#Tezanos",
+  "#politica",
+  "#España",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "tension",
+   "footnote": "CIS, barómetro de octubre (14/10/2026) · Colmena de Datos, media de encuestas (3/10/2026)",
+   "lines": [
+    {
+     "text": "El CIS da ganador al PSOE por casi 12 puntos.",
+     "tono": "energia"
+    },
+    {
+     "text": "La media de las demás encuestas, al PP por casi 7.",
+     "tono": "energia",
+     "pausa": 0.1
+    },
+    {
+     "text": "¿Quién acierta?",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@PSOE",
+     "plano": "general",
+     "sobre": [
+      591.0,
+      790.4
+     ],
+     "dur": 0.8,
+     "zoom": 1.25
+    },
+    {
+     "at": "@PP",
+     "plano": "general",
+     "sobre": [
+      506.0,
+      746.0
+     ],
+     "dur": 0.8,
+     "zoom": 1.25
+    },
+    {
+     "at": "@acierta",
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 0.5,
+     "zoom": 1.0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana",
+      "colores": {
+       "espana": [
+        240,
+        236,
+        226
+       ]
+      }
+     },
+     "acciones": [
+      {
+       "at": "@PSOE",
+       "props": {
+        "colores": {
+         "espana": [
+          246,
+          170,
+          168
+         ]
+        }
+       },
+       "sfx": "pop"
+      },
+      {
+       "at": "@PP",
+       "props": {
+        "colores": {
+         "espana": [
+          150,
+          196,
+          238
+         ]
+        }
+       },
+       "sfx": "pop"
+      },
+      {
+       "at": "@acierta",
+       "props": {
+        "colores": {
+         "espana": [
+          240,
+          236,
+          226
+         ]
+        }
+       }
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.4
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 820,
+     "y": 1560,
+     "scale": 0.6,
+     "at": 0.3,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@CIS",
+       "pose": "senala_izq",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@media",
+       "pose": "senala_arriba",
+       "cara": "confundido"
+      },
+      {
+       "at": "@acierta",
+       "pose": "encoge",
+       "cara": "confundido",
+       "mira": "camara"
+      }
+     ],
+     "hud": true,
+     "entra": "der",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bola",
+     "x": 240,
+     "y": 1440,
+     "scale": 0.6,
+     "at": "@acierta-0.2",
+     "props": {
+      "texto": "?"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "estrellitas"
+    },
+    {
+     "type": "rotulo",
+     "text": "CIS: PSOE +11,8",
+     "x": 540,
+     "y": 400,
+     "size": 90,
+     "color": "rojo",
+     "at": "@PSOE",
+     "golpe": true,
+     "out": "@media",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "ENCUESTAS: PP +6,9",
+     "x": 540,
+     "y": 400,
+     "size": 86,
+     "color": "azul",
+     "at": "@media",
+     "golpe": true,
+     "out": "@acierta",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "¿QUIÉN ACIERTA?",
+     "x": 540,
+     "y": 400,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@acierta",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "pronosticos",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "CIS, barómetro de octubre (14/10/2026) · Colmena de Datos, media de encuestas (3/10/2026)",
+   "lines": [
+    {
+     "text": "Barómetro del CIS de octubre: PSOE 34, PP 22,2 y Vox 17,1.",
+     "tono": "normal"
+    },
+    {
+     "text": "Media de encuestas privadas: PP 32,6, PSOE 25,7 y Vox 18,2.",
+     "tono": "normal",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Media",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.04
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "CIS · OCTUBRE 2026",
+     "x": 540,
+     "y": 420,
+     "size": 76,
+     "color": "blanco",
+     "at": 0.1,
+     "out": "@Media",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 1060,
+     "scale": 1.2,
+     "at": "@PSOE",
+     "props": {
+      "sufijo": "",
+      "decimales": 1,
+      "tope": 40,
+      "barras": [
+       {
+        "texto": "PSOE",
+        "valor": 34,
+        "color": "psoe"
+       },
+       {
+        "texto": "PP",
+        "valor": 22.2,
+        "color": "pp"
+       },
+       {
+        "texto": "VOX",
+        "valor": 17.1,
+        "color": "vox"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 1.4,
+     "out": "@Media"
+    },
+    {
+     "type": "rotulo",
+     "text": "MEDIA DE ENCUESTAS",
+     "x": 540,
+     "y": 420,
+     "size": 76,
+     "color": "blanco",
+     "at": "@Media",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 1060,
+     "scale": 1.2,
+     "at": "@PP#2",
+     "props": {
+      "sufijo": "",
+      "decimales": 1,
+      "tope": 40,
+      "barras": [
+       {
+        "texto": "PSOE",
+        "valor": 25.7,
+        "color": "psoe"
+       },
+       {
+        "texto": "PP",
+        "valor": 32.6,
+        "color": "pp"
+       },
+       {
+        "texto": "VOX",
+        "valor": 18.2,
+        "color": "vox"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 1.4
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1250,
+     "y": 1660,
+     "scale": 0.4,
+     "at": "@Vox-0.5",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Vox-0.5",
+       "x": 930,
+       "dur": 0.5
+      },
+      {
+       "at": "@Media",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@18,2",
+       "pose": "cabeza",
+       "cara": "confundido"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "2023",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "aventura",
+   "trans": "zoom",
+   "footnote": "CIS: barómetro 13/07/2023 y preelectoral 05/07/2023 · Interior: resultado del 23J",
+   "lines": [
+    {
+     "text": "Viajemos a 2023. El barómetro de julio del CIS ponía al PSOE por delante.",
+     "tono": "normal"
+    },
+    {
+     "text": "Ganó el PP, con el 33 por ciento.",
+     "tono": "remate",
+     "pausa": 0.15
+    },
+    {
+     "text": "Eso sí: su gran encuesta preelectoral acertó quién quedaba primero… pero no por cuánto.",
+     "tono": "normal",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 0,
+     "zoom": 0.9
+    },
+    {
+     "at": "@Ganó",
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 0.6,
+     "zoom": 1.1
+    },
+    {
+     "at": "@preelectoral",
+     "plano": "general",
+     "sobre": [
+      591.0,
+      797.8
+     ],
+     "dur": 0.6,
+     "zoom": 1.0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana",
+      "progreso": 1.0,
+      "colores": {
+       "espana": [
+        240,
+        226,
+        196
+       ]
+      }
+     },
+     "acciones": [
+      {
+       "at": "@PSOE",
+       "props": {
+        "colores": {
+         "espana": [
+          246,
+          190,
+          186
+         ]
+        }
+       }
+      },
+      {
+       "at": "@Ganó",
+       "props": {
+        "colores": {
+         "espana": [
+          150,
+          196,
+          238
+         ]
+        }
+       },
+       "sfx": "kaching"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 0.01
+    },
+    {
+     "type": "rotulo",
+     "text": "JULIO DE 2023",
+     "x": 540,
+     "y": 380,
+     "size": 80,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 1180,
+     "scale": 0.75,
+     "at": "@barómetro",
+     "props": {
+      "sufijo": "",
+      "decimales": 1,
+      "tope": 40,
+      "barras": [
+       {
+        "texto": "PSOE",
+        "valor": 31,
+        "color": "psoe"
+       },
+       {
+        "texto": "PP",
+        "valor": 29.6,
+        "color": "pp"
+       },
+       {
+        "texto": "VOX",
+        "valor": 11.7,
+        "color": "vox"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 1.4,
+     "out": "@Ganó"
+    },
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 1180,
+     "scale": 0.75,
+     "at": "@Ganó",
+     "props": {
+      "sufijo": "",
+      "decimales": 1,
+      "tope": 40,
+      "barras": [
+       {
+        "texto": "PSOE",
+        "valor": 31.7,
+        "color": "psoe"
+       },
+       {
+        "texto": "PP",
+        "valor": 33.1,
+        "color": "pp"
+       },
+       {
+        "texto": "VOX",
+        "valor": 12.4,
+        "color": "vox"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 1.4
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 500,
+     "scale": 1.0,
+     "at": "@barómetro",
+     "props": {
+      "texto": "CIS DE JULIO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@Ganó"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 500,
+     "scale": 1.0,
+     "at": "@Ganó",
+     "props": {
+      "texto": "RESULTADO REAL · 23J",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@preelectoral"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 500,
+     "scale": 1.0,
+     "at": "@preelectoral",
+     "props": {
+      "texto": "PREELECTORAL: PP 31,4 · PSOE 31,2",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 676.0,
+     "y": 871.8,
+     "scale": 0.26,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Viajemos",
+       "salta": true,
+       "cara": "riendo"
+      },
+      {
+       "at": "@Ganó",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@cuánto",
+       "pose": "encoge",
+       "cara": "esceptica"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "polemica",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "iris",
+   "footnote": "El País (06/2024) vía Maldita 13/06/2025 · Tezanos en el Congreso (09/2024) · Senado 17/07/2024",
+   "lines": [
+    {
+     "text": "Un análisis de El País vio que, desde 2018, el CIS sobreestimó a la izquierda en 41 de 42 elecciones.",
+     "tono": "normal"
+    },
+    {
+     "text": "Su presidente, Tezanos, responde que refleja una sociedad «moderadamente de centro-izquierda».",
+     "tono": "normal",
+     "pausa": 0.15
+    },
+    {
+     "text": "PP y Vox abrieron una comisión en el Senado, y el PP quiere reformarlo por ley.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@41",
+     "plano": "general",
+     "sobre": [
+      540,
+      760
+     ],
+     "dur": 0.5,
+     "zoom": 1.1
+    },
+    {
+     "at": "@Tezanos",
+     "plano": "medio",
+     "sobre": "profe",
+     "dur": 0.5,
+     "aire": 180
+    },
+    {
+     "at": "@Senado",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 520,
+     "scale": 0.85,
+     "at": "@análisis",
+     "props": {
+      "valor": 41,
+      "sufijo": " DE 42",
+      "ancho": 640
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@Tezanos",
+     "dibujo": 2.6
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 700,
+     "scale": 1.0,
+     "at": "@País",
+     "props": {
+      "texto": "ANÁLISIS DE EL PAÍS",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@Tezanos"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": -150,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": 0,
+       "x": 540,
+       "dur": 1.0
+      },
+      {
+       "at": "@izquierda",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@41",
+       "objeto": null,
+       "pose": "cabeza",
+       "cara": "susto"
+      }
+     ],
+     "entra": "nada",
+     "objeto": "lupa",
+     "pose": "sostiene",
+     "out": "@Tezanos-0.2",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.62,
+     "at": "@Tezanos-0.3",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@responde",
+       "pose": "senala_arriba",
+       "cara": "serio"
+      },
+      {
+       "at": "@centro-izquierda",
+       "pose": "manos_juntas"
+      }
+     ],
+     "entra": "izq",
+     "id": "profe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 520,
+     "scale": 1.0,
+     "at": "@responde",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@PP"
+    },
+    {
+     "type": "rotulo",
+     "text": "TEZANOS, PRESIDENTE DEL CIS",
+     "x": 540,
+     "y": 420,
+     "size": 56,
+     "color": "blanco",
+     "at": "@Tezanos",
+     "out": "@PP",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 650,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@PP-0.2",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@comisión",
+       "pose": "senala_arriba"
+      }
+     ],
+     "id": "p2",
+     "entra": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 900,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@Vox-0.2",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@comisión",
+       "pose": "puno"
+      }
+     ],
+     "id": "p3",
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 650,
+     "y": 1350,
+     "scale": 0.46,
+     "at": "@PP-0.2",
+     "props": {
+      "texto": "PP",
+      "color": "pp"
+     },
+     "acciones": [],
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 900,
+     "y": 1350,
+     "scale": 0.46,
+     "at": "@Vox-0.2",
+     "props": {
+      "texto": "VOX",
+      "color": "vox"
+     },
+     "acciones": [],
+     "entra": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "COMISIÓN EN EL SENADO",
+     "x": 540,
+     "y": 450,
+     "size": 66,
+     "color": "blanco",
+     "at": "@comisión",
+     "golpe": true,
+     "out": "@reformarlo",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "PP: REFORMAR EL CIS",
+     "x": 540,
+     "y": 560,
+     "size": 70,
+     "color": "blanco",
+     "at": "@reformarlo",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "final",
+   "trans": "zoom",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "La única encuesta que no falla se hace el 29 de noviembre.",
+     "tono": "normal"
+    },
+    {
+     "text": "¿Tú te fías de las encuestas? Te leo.",
+     "tono": "normal",
+     "pausa": 0.15
+    },
+    {
+     "text": "Y síguenos para el próximo viaje de Piz.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 0,
+     "zoom": 2.2
+    },
+    {
+     "at": 0.3,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 2.0,
+     "zoom": 0.95
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana",
+      "progreso": 1.0
+     },
+     "acciones": [],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 0.01
+    },
+    {
+     "type": "objeto",
+     "objeto": "urna",
+     "x": 551.3,
+     "y": 701.2,
+     "scale": 0.65,
+     "at": "@29",
+     "props": {
+      "llena": 0.6,
+      "texto": "29N"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 790,
+     "y": 1500,
+     "scale": 0.6,
+     "at": "@fías-0.3",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@encuestas",
+       "pose": "piensa"
+      },
+      {
+       "at": "@leo",
+       "mira": "camara",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@viaje",
+       "salta": true
+      }
+     ],
+     "hud": true,
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿TE FÍAS?",
+     "x": 540,
+     "y": 450,
+     "size": 120,
+     "color": "amarillo",
+     "at": "@fías",
+     "golpe": true,
+     "out": "@síguenos-0.3",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 450,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@Piz",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.4,
+  "titulo": "¿Acierta el CIS?",
+  "capitulo": null
+ }
+}

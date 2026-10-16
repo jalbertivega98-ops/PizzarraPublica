@@ -1,0 +1,1673 @@
+{
+ "slug": "voto_nietos",
+ "title": "Los 163.020 que no podrán votar el 29N",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Ley 20/2022 de Memoria Democrática, disposición adicional 8ª (BOE)",
+  "Albares: 1,2 millones de expedientes y solicitudes por consulado (El Español, 29/04/2026)",
+  "Auto del Tribunal Supremo, Sala 3ª, septiembre de 2026 (LegalToday/Europa Press 08/09; Diario Constitucional 15/09)",
+  "El Supremo rechaza el recurso de la Abogacía del Estado (RTVC, 12/10/2026)",
+  "163.020 afectados según la Abogacía del Estado (Xataka, 09/10/2026)",
+  "Reacciones: Orain 13/10/2026; Moncloa.com 12/10/2026",
+  "Mapas dibujados sobre contornos de Natural Earth (dominio público)"
+ ],
+ "caption": "🌎 163.020 españoles nuevos no podrán votar el 29N (de momento)\n📜 La ley de nietos (2022) abrió la nacionalidad a hijos y nietos de españoles nacidos fuera\n✈️ 1,2 millones de solicitudes: Argentina, Brasil, Cuba, México…\n⚖️ El Supremo suspendió su voto de forma cautelar y el 12/10 rechazó el recurso del Gobierno\n🛂 Nadie pierde la nacionalidad, y quien acredite exilio sí vota\n💬 ¿Deberían poder votar el 29N?\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Ley 20/2022 (BOE) · Albares en El Español 29/04/2026 · Supremo (LegalToday 08/09, RTVC 12/10) · Abogacía del Estado (Xataka 09/10) · Orain 13/10 · Moncloa.com 12/10. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#leydenietos",
+  "#29N",
+  "#elecciones",
+  "#nacionalidad",
+  "#Argentina",
+  "#Cuba",
+  "#politica",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "tension",
+   "footnote": "Tribunal Supremo, Sala 3ª · RTVC 12/10/2026 · Abogacía del Estado",
+   "lines": [
+    {
+     "text": "Hay 163.020 personas con pasaporte español recién estrenado que el 29N no podrán votar.",
+     "tono": "energia"
+    },
+    {
+     "text": "Al menos, de momento.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      450.0,
+      838.0
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@personas",
+     "plano": "general",
+     "sobre": [
+      284.4,
+      1221.4
+     ],
+     "dur": 1.0,
+     "zoom": 4.2
+    },
+    {
+     "at": "@29N",
+     "plano": "general",
+     "sobre": [
+      314.4,
+      1201.4
+     ],
+     "dur": 0.6,
+     "zoom": 5.5
+    },
+    {
+     "at": "@momento",
+     "plano": "general",
+     "sobre": [
+      304.4,
+      1211.4
+     ],
+     "dur": 0.6,
+     "zoom": 4.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "mundo"
+     },
+     "acciones": [
+      {
+       "at": "@personas",
+       "props": {
+        "resalta": [
+         "ARG"
+        ]
+       },
+       "sfx": "pop"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.6
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 258.4,
+     "y": 1229.4,
+     "scale": 0.1,
+     "at": "@pasaporte-0.3",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@podrán",
+       "cara": "sorpresa",
+       "take": true,
+       "mira": "urna"
+      },
+      {
+       "at": "@momento",
+       "cara": "preocupado",
+       "pose": "encoge",
+       "objeto": null,
+       "mira": "camara"
+      }
+     ],
+     "entra": "cae",
+     "objeto": "pasaporte",
+     "pose": "sostiene",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "urna",
+     "x": 334.4,
+     "y": 1209.4,
+     "scale": 0.085,
+     "at": "@29N-0.2",
+     "props": {
+      "llena": 0.3,
+      "texto": "29N"
+     },
+     "acciones": [],
+     "id": "urna",
+     "entra": "crece",
+     "sfx": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "163.020",
+     "x": 540,
+     "y": 430,
+     "size": 140,
+     "color": "amarillo",
+     "at": "@163.020",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIN VOTO EL 29N",
+     "x": 540,
+     "y": 560,
+     "size": 80,
+     "color": "blanco",
+     "at": "@votar",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 700,
+     "scale": 1.0,
+     "at": "@momento",
+     "props": {
+      "texto": "EN PAUSA",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "ley",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Ley 20/2022 de Memoria Democrática, disp. adicional 8ª",
+   "lines": [
+    {
+     "text": "En 2022, la Ley de Memoria Democrática dejó pedir la nacionalidad a hijos y nietos de españoles, nacidos fuera.",
+     "tono": "normal"
+    },
+    {
+     "text": "Se presentaron 1,2 millones de solicitudes.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      820
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@hijos",
+     "plano": "general",
+     "sobre": [
+      540,
+      760
+     ],
+     "dur": 0.6,
+     "zoom": 1.12
+    },
+    {
+     "at": "@1,2",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 540,
+     "y": 840,
+     "scale": 1.3,
+     "at": 0.2,
+     "props": {
+      "titulo": "LEY DE MEMORIA DEMOCRÁTICA",
+      "subtitulo": "Ley 20/2022 · disposición adicional 8ª",
+      "articulos": [
+       {
+        "id": "da8",
+        "titulo": "LA «LEY DE NIETOS»",
+        "lineas": [
+         "Hijos y nietos de españoles,",
+         "nacidos fuera de España,",
+         "pueden pedir la nacionalidad"
+        ]
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@hijos",
+       "props": {
+        "resalta": [
+         "da8"
+        ]
+       }
+      }
+     ],
+     "id": "doc",
+     "entra": "nada",
+     "dibujo": 1.0,
+     "sfx": "papel",
+     "out": "@1,2"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1300,
+     "y": 1560,
+     "scale": 0.45,
+     "at": "@nacionalidad-0.5",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@nacionalidad-0.5",
+       "x": 900,
+       "dur": 0.6
+      },
+      {
+       "at": "@nacionalidad",
+       "salta": true,
+       "cara": "riendo"
+      },
+      {
+       "at": "@solicitudes",
+       "cara": "sorpresa",
+       "take": true,
+       "objeto": null,
+       "pose": "cabeza"
+      }
+     ],
+     "entra": "nada",
+     "objeto": "pasaporte",
+     "pose": "sostiene",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 760,
+     "scale": 1.0,
+     "at": "@1,2",
+     "props": {
+      "valor": 1200000,
+      "sufijo": "",
+      "ancho": 820
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "rotulo",
+     "text": "SOLICITUDES",
+     "x": 540,
+     "y": 560,
+     "size": 80,
+     "color": "blanco",
+     "at": "@1,2",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "efecto",
+     "efecto": "lluvia",
+     "objeto": "papeleta",
+     "n": 12,
+     "x0": 150,
+     "x1": 930,
+     "at": "@solicitudes",
+     "vida": 1.8
+    }
+   ]
+  },
+  {
+   "id": "viaje",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "aventura",
+   "trans": "zoom",
+   "footnote": "Solicitudes por consulado a 31/3/2026 · Albares (El Español, 29/04/2026)",
+   "lines": [
+    {
+     "text": "La mayoría, desde América: casi 463.000 en Argentina, más de 150.000 en São Paulo…",
+     "tono": "normal"
+    },
+    {
+     "text": "casi 138.000 en Cuba y unas 120.000 en México.",
+     "tono": "normal",
+     "pausa": 0.05
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      360.0,
+      1045.0
+     ],
+     "dur": 0,
+     "zoom": 2.4
+    },
+    {
+     "at": "@São",
+     "plano": "general",
+     "sobre": [
+      378.0,
+      1090.0
+     ],
+     "dur": 0.7,
+     "zoom": 3.0
+    },
+    {
+     "at": "@Cuba",
+     "plano": "general",
+     "sobre": [
+      18.0,
+      712.0
+     ],
+     "dur": 0.8,
+     "zoom": 3.0
+    },
+    {
+     "at": "@México+0.6",
+     "plano": "general",
+     "sobre": [
+      405.0,
+      775.0
+     ],
+     "dur": 1.2,
+     "zoom": 1.15
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "mundo",
+      "progreso": 1.0,
+      "resalta": [
+       "ARG"
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@Argentina",
+       "props": {
+        "lineas": [
+         {
+          "id": "arg",
+          "puntos": [
+           [
+            -58.4,
+            -34.6
+           ],
+           [
+            -31.05,
+            11.899999999999999
+           ],
+           [
+            -3.7,
+            40.4
+           ]
+          ],
+          "color": "rojo",
+          "dur": 1.1,
+          "discontinua": true,
+          "ancho": 6
+         }
+        ]
+       },
+       "sfx": "rotulador"
+      },
+      {
+       "at": "@São",
+       "props": {
+        "resalta": [
+         "ARG",
+         "BRA"
+        ],
+        "lineas": [
+         {
+          "id": "arg",
+          "puntos": [
+           [
+            -58.4,
+            -34.6
+           ],
+           [
+            -31.05,
+            11.899999999999999
+           ],
+           [
+            -3.7,
+            40.4
+           ]
+          ],
+          "color": "rojo",
+          "dur": 1.1,
+          "discontinua": true,
+          "ancho": 6
+         },
+         {
+          "id": "bra",
+          "puntos": [
+           [
+            -46.6,
+            -23.5
+           ],
+           [
+            -25.150000000000002,
+            17.45
+           ],
+           [
+            -3.7,
+            40.4
+           ]
+          ],
+          "color": "rojo",
+          "dur": 1.1,
+          "discontinua": true,
+          "ancho": 6
+         }
+        ]
+       },
+       "sfx": "rotulador"
+      },
+      {
+       "at": "@Cuba",
+       "props": {
+        "resalta": [
+         "ARG",
+         "BRA",
+         "CUB"
+        ],
+        "lineas": [
+         {
+          "id": "arg",
+          "puntos": [
+           [
+            -58.4,
+            -34.6
+           ],
+           [
+            -31.05,
+            11.899999999999999
+           ],
+           [
+            -3.7,
+            40.4
+           ]
+          ],
+          "color": "rojo",
+          "dur": 1.1,
+          "discontinua": true,
+          "ancho": 6
+         },
+         {
+          "id": "bra",
+          "puntos": [
+           [
+            -46.6,
+            -23.5
+           ],
+           [
+            -25.150000000000002,
+            17.45
+           ],
+           [
+            -3.7,
+            40.4
+           ]
+          ],
+          "color": "rojo",
+          "dur": 1.1,
+          "discontinua": true,
+          "ancho": 6
+         },
+         {
+          "id": "cub",
+          "puntos": [
+           [
+            -82.4,
+            23.1
+           ],
+           [
+            -43.050000000000004,
+            40.75
+           ],
+           [
+            -3.7,
+            40.4
+           ]
+          ],
+          "color": "rojo",
+          "dur": 1.1,
+          "discontinua": true,
+          "ancho": 6
+         }
+        ]
+       },
+       "sfx": "rotulador"
+      },
+      {
+       "at": "@México",
+       "props": {
+        "resalta": [
+         "ARG",
+         "BRA",
+         "CUB",
+         "MEX",
+         "ESP"
+        ],
+        "lineas": [
+         {
+          "id": "arg",
+          "puntos": [
+           [
+            -58.4,
+            -34.6
+           ],
+           [
+            -31.05,
+            11.899999999999999
+           ],
+           [
+            -3.7,
+            40.4
+           ]
+          ],
+          "color": "rojo",
+          "dur": 1.1,
+          "discontinua": true,
+          "ancho": 6
+         },
+         {
+          "id": "bra",
+          "puntos": [
+           [
+            -46.6,
+            -23.5
+           ],
+           [
+            -25.150000000000002,
+            17.45
+           ],
+           [
+            -3.7,
+            40.4
+           ]
+          ],
+          "color": "rojo",
+          "dur": 1.1,
+          "discontinua": true,
+          "ancho": 6
+         },
+         {
+          "id": "cub",
+          "puntos": [
+           [
+            -82.4,
+            23.1
+           ],
+           [
+            -43.050000000000004,
+            40.75
+           ],
+           [
+            -3.7,
+            40.4
+           ]
+          ],
+          "color": "rojo",
+          "dur": 1.1,
+          "discontinua": true,
+          "ancho": 6
+         },
+         {
+          "id": "mex",
+          "puntos": [
+           [
+            -99.1,
+            19.4
+           ],
+           [
+            -51.4,
+            38.9
+           ],
+           [
+            -3.7,
+            40.4
+           ]
+          ],
+          "color": "rojo",
+          "dur": 1.1,
+          "discontinua": true,
+          "ancho": 6
+         }
+        ]
+       },
+       "sfx": "rotulador"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 0.01
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 284.4,
+     "y": 1221.4,
+     "scale": 0.3,
+     "at": "@Argentina",
+     "props": {
+      "diseno": "argentina"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 390.6,
+     "y": 1121.5,
+     "scale": 0.3,
+     "at": "@São",
+     "props": {
+      "diseno": "brasil"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 68.4,
+     "y": 702.1,
+     "scale": 0.3,
+     "at": "@Cuba",
+     "props": {
+      "diseno": "cuba"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": -81.9,
+     "y": 735.4,
+     "scale": 0.3,
+     "at": "@México",
+     "props": {
+      "diseno": "mexico"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 776.7,
+     "y": 546.4,
+     "scale": 0.3,
+     "at": "@México+0.4",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "avion",
+     "x": 294.4,
+     "y": 1201.4,
+     "scale": 0.1,
+     "at": "@Argentina",
+     "props": {},
+     "acciones": [
+      {
+       "at": "@Argentina+0.1",
+       "x": 420.6,
+       "y": 1081.5,
+       "dur": 1.6
+      },
+      {
+       "at": "@Cuba-0.3",
+       "x": 108.4,
+       "y": 672.1,
+       "dur": 1.2
+      },
+      {
+       "at": "@México+0.3",
+       "x": 716.7,
+       "y": 526.4,
+       "dur": 1.6
+      }
+     ],
+     "id": "avion",
+     "entra": "pop",
+     "flota": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 314.4,
+     "y": 1231.4,
+     "scale": 0.12,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@São-0.3",
+       "x": 380.6,
+       "y": 1129.5,
+       "dur": 0.6,
+       "brinco": 40,
+       "cara": "riendo"
+      },
+      {
+       "at": "@Cuba-0.2",
+       "x": 78.4,
+       "y": 710.1,
+       "dur": 0.7,
+       "brinco": 60
+      },
+      {
+       "at": "@México-0.2",
+       "x": -75.9,
+       "y": 743.4,
+       "dur": 0.5,
+       "brinco": 30,
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "ARGENTINA · 462.815",
+     "x": 540,
+     "y": 430,
+     "size": 70,
+     "color": "amarillo",
+     "at": "@Argentina",
+     "golpe": true,
+     "out": "@São",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÃO PAULO · +150.000",
+     "x": 540,
+     "y": 430,
+     "size": 70,
+     "color": "amarillo",
+     "at": "@São",
+     "golpe": true,
+     "out": "@Cuba",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "CUBA · 137.770",
+     "x": 540,
+     "y": 430,
+     "size": 70,
+     "color": "amarillo",
+     "at": "@Cuba",
+     "golpe": true,
+     "out": "@México",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "MÉXICO · ~120.000",
+     "x": 540,
+     "y": 430,
+     "size": 70,
+     "color": "amarillo",
+     "at": "@México",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "censo",
+   "fondo": "colegio",
+   "animo": "tension",
+   "trans": "iris",
+   "footnote": "CERA: 2.328.260 (2023) → 2.736.522 (1/7/2026) · auto del Supremo",
+   "lines": [
+    {
+     "text": "Y el censo de españoles que votan desde fuera se disparó: más de 400.000 electores nuevos desde 2023.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@disparó",
+     "plano": "medio",
+     "sobre": "urna",
+     "dur": 0.6,
+     "aire": 200
+    },
+    {
+     "at": "@400.000",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "urna",
+     "x": 540,
+     "y": 1120,
+     "scale": 0.9,
+     "at": 0,
+     "props": {
+      "llena": 0.25,
+      "texto": "EXTRANJERO"
+     },
+     "acciones": [
+      {
+       "at": "@disparó",
+       "props": {
+        "llena": 0.7
+       },
+       "tiembla": true
+      },
+      {
+       "at": "@400.000",
+       "props": {
+        "llena": 1.0
+       },
+       "salta": true
+      }
+     ],
+     "id": "urna",
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "efecto",
+     "efecto": "lluvia",
+     "objeto": "papeleta",
+     "n": 16,
+     "x0": 300,
+     "x1": 780,
+     "at": "@disparó",
+     "vida": 1.6
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 180,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0.2,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@disparó",
+       "cara": "sorpresa",
+       "take": true,
+       "mira": "urna"
+      }
+     ],
+     "entra": "izq",
+     "id": "pizon"
+    },
+    {
+     "type": "personaje",
+     "quien": "critica",
+     "x": 900,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0.4,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@400.000",
+       "cara": "susto",
+       "pose": "cabeza"
+      }
+     ],
+     "entra": "der",
+     "id": "critica"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 520,
+     "scale": 0.9,
+     "at": "@españoles",
+     "props": {
+      "valor": 2736522,
+      "ancho": 800
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "dibujo": 2.6
+    },
+    {
+     "type": "rotulo",
+     "text": "+408.262",
+     "x": 540,
+     "y": 700,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@400.000",
+     "golpe": true,
+     "rot": -4,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "supremo",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     110,
+     40,
+     52
+    ]
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Tribunal Supremo, Sala 3ª · RTVC 12/10/2026 · Abogacía del Estado",
+   "lines": [
+    {
+     "text": "Vox y la asociación Iustitia Europa fueron al Supremo, que en septiembre suspendió ese voto de forma cautelar.",
+     "tono": "normal"
+    },
+    {
+     "text": "El Gobierno recurrió y, el 12 de octubre, el Supremo dijo que no.",
+     "tono": "normal",
+     "pausa": 0.15
+    },
+    {
+     "text": "Ojo: nadie pierde la nacionalidad, y quien acredite exilio sí vota.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@cautelar",
+     "plano": "medio",
+     "sobre": "jueza",
+     "dur": 0.5,
+     "aire": 160
+    },
+    {
+     "at": "@Gobierno",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@Ojo",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "jueza",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.8,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@suspendió",
+       "pose": "senala_arriba",
+       "cara": "serio"
+      },
+      {
+       "at": "@no",
+       "pose": "jarras",
+       "cara": "serio"
+      }
+     ],
+     "entra": "pop",
+     "id": "jueza"
+    },
+    {
+     "type": "objeto",
+     "objeto": "pergamino",
+     "x": 790,
+     "y": 900,
+     "scale": 0.62,
+     "at": "@Supremo",
+     "props": {
+      "titulo": "AUTO DEL SUPREMO",
+      "fecha": "Sala 3ª · 2026",
+      "lineas": [
+       "Se suspende",
+       "el voto de los",
+       "nacionalizados",
+       "(cautelar)"
+      ]
+     },
+     "acciones": [],
+     "entra": "abajo",
+     "sfx": "papel",
+     "out": "@Ojo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 440,
+     "scale": 1.0,
+     "at": "@suspendió",
+     "props": {
+      "texto": "SUSPENSIÓN CAUTELAR",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@Gobierno"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 440,
+     "scale": 1.0,
+     "at": "@no",
+     "props": {
+      "texto": "RECURSO DEL GOBIERNO: NO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@Ojo"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1250,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@Ojo-0.5",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Ojo-0.5",
+       "x": 860,
+       "dur": 0.5
+      },
+      {
+       "at": "@nacionalidad",
+       "pose": "pulgar",
+       "cara": "riendo",
+       "objeto": "pasaporte"
+      },
+      {
+       "at": "@exilio",
+       "pose": "senala_arriba",
+       "cara": "idea"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 440,
+     "scale": 1.0,
+     "at": "@nacionalidad",
+     "props": {
+      "texto": "NACIONALIDAD: SE MANTIENE",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "rotulo",
+     "text": "CON EXILIO ACREDITADO, SÍ VOTA",
+     "x": 540,
+     "y": 560,
+     "size": 54,
+     "color": "blanco",
+     "at": "@exilio",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "posturas",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "iris",
+   "footnote": "PSOE: Mínguez (13/10) · PP: Feijóo (12/10) · Vox: Buxadé (12/10)",
+   "lines": [
+    {
+     "text": "El PSOE no comparte la decisión, pero la acata.",
+     "tono": "normal"
+    },
+    {
+     "text": "El PP dice que no puede haber dudas sobre el censo.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Y Vox, que el Supremo ha hecho justicia.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@PSOE",
+     "plano": "medio",
+     "sobre": "p1",
+     "dur": 0.5
+    },
+    {
+     "at": "@PP",
+     "plano": "medio",
+     "sobre": "p2",
+     "dur": 0.5
+    },
+    {
+     "at": "@Vox",
+     "plano": "medio",
+     "sobre": "p3",
+     "dur": 0.5
+    },
+    {
+     "at": "@justicia+0.4",
+     "plano": "general",
+     "sobre": null,
+     "dur": 0.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 230,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@comparte",
+       "pose": "cruzados",
+       "cara": "esceptica"
+      },
+      {
+       "at": "@acata",
+       "pose": "encoge",
+       "cara": "serio"
+      }
+     ],
+     "id": "p1",
+     "entra": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0.15,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@dudas",
+       "pose": "senala_arriba",
+       "cara": "serio"
+      }
+     ],
+     "id": "p2",
+     "entra": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 850,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0.3,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@justicia",
+       "pose": "puno",
+       "cara": "riendo"
+      }
+     ],
+     "id": "p3",
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 230,
+     "y": 1350,
+     "scale": 0.46,
+     "at": 0,
+     "props": {
+      "texto": "PSOE",
+      "color": "psoe"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 540,
+     "y": 1350,
+     "scale": 0.46,
+     "at": 0.15,
+     "props": {
+      "texto": "PP",
+      "color": "pp"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 850,
+     "y": 1350,
+     "scale": 0.46,
+     "at": 0.3,
+     "props": {
+      "texto": "VOX",
+      "color": "vox"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "rotulo",
+     "text": "PSOE: «LA ACATAMOS»",
+     "x": 540,
+     "y": 450,
+     "size": 66,
+     "color": "blanco",
+     "at": "@acata",
+     "golpe": true,
+     "out": "@PP",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "PP: «SIN DUDAS SOBRE EL CENSO»",
+     "x": 540,
+     "y": 450,
+     "size": 56,
+     "color": "blanco",
+     "at": "@censo",
+     "golpe": true,
+     "out": "@Vox",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "VOX: «SE HA HECHO JUSTICIA»",
+     "x": 540,
+     "y": 450,
+     "size": 58,
+     "color": "blanco",
+     "at": "@justicia",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "final",
+   "trans": "zoom",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Deberían poder votar el 29N? Te leo.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y síguenos para el próximo viaje de Piz.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      776.7,
+      546.4
+     ],
+     "dur": 0,
+     "zoom": 5.0
+    },
+    {
+     "at": 0.2,
+     "plano": "general",
+     "sobre": [
+      450.0,
+      838.0
+     ],
+     "dur": 2.2,
+     "zoom": 1.0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "mundo",
+      "progreso": 1.0,
+      "resalta": [
+       "ESP",
+       "ARG",
+       "BRA",
+       "CUB",
+       "MEX"
+      ],
+      "lineas": [
+       {
+        "id": "arg",
+        "puntos": [
+         [
+          -58.4,
+          -34.6
+         ],
+         [
+          -31.05,
+          11.899999999999999
+         ],
+         [
+          -3.7,
+          40.4
+         ]
+        ],
+        "color": "rojo",
+        "dur": 0.01,
+        "discontinua": true,
+        "ancho": 6
+       },
+       {
+        "id": "bra",
+        "puntos": [
+         [
+          -46.6,
+          -23.5
+         ],
+         [
+          -25.150000000000002,
+          17.45
+         ],
+         [
+          -3.7,
+          40.4
+         ]
+        ],
+        "color": "rojo",
+        "dur": 0.01,
+        "discontinua": true,
+        "ancho": 6
+       },
+       {
+        "id": "cub",
+        "puntos": [
+         [
+          -82.4,
+          23.1
+         ],
+         [
+          -43.050000000000004,
+          40.75
+         ],
+         [
+          -3.7,
+          40.4
+         ]
+        ],
+        "color": "rojo",
+        "dur": 0.01,
+        "discontinua": true,
+        "ancho": 6
+       },
+       {
+        "id": "mex",
+        "puntos": [
+         [
+          -99.1,
+          19.4
+         ],
+         [
+          -51.4,
+          38.9
+         ],
+         [
+          -3.7,
+          40.4
+         ]
+        ],
+        "color": "rojo",
+        "dur": 0.01,
+        "discontinua": true,
+        "ancho": 6
+       }
+      ]
+     },
+     "acciones": [],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 0.01
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 790,
+     "y": 1500,
+     "scale": 0.6,
+     "at": "@Deberían",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@votar",
+       "pose": "senala_izq"
+      },
+      {
+       "at": "@leo",
+       "mira": "camara",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@viaje",
+       "salta": true
+      }
+     ],
+     "hud": true,
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿SÍ O NO?",
+     "x": 540,
+     "y": 450,
+     "size": 120,
+     "color": "amarillo",
+     "at": "@29N",
+     "golpe": true,
+     "out": "@síguenos-0.3",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 450,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@Piz",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.4,
+  "titulo": "Los 163.020 que no podrán votar el 29N",
+  "capitulo": null
+ }
+}

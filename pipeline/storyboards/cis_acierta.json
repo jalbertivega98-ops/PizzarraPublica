@@ -658,6 +658,18 @@
      "sfx": "golpe"
     },
     {
+     "type": "rotulo",
+     "text": "PP: 33 %",
+     "x": 540,
+     "y": 640,
+     "size": 90,
+     "color": "azul",
+     "at": "@33",
+     "golpe": true,
+     "out": "@preelectoral",
+     "hud": true
+    },
+    {
      "type": "personaje",
      "quien": "piz",
      "x": 676.0,
@@ -675,6 +687,16 @@
        "at": "@Ganó",
        "cara": "sorpresa",
        "take": true
+      },
+      {
+       "at": "@ciento",
+       "salta": true,
+       "cara": "riendo"
+      },
+      {
+       "at": "@gran",
+       "pose": "senala_arriba",
+       "cara": "pensativo"
       },
       {
        "at": "@cuánto",

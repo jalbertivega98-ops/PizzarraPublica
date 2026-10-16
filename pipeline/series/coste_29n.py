@@ -78,8 +78,8 @@ scenes = [
             {"texto": "CORREOS", "valor": 100, "color": "amarillo"}, {"texto": "ESTADO", "valor": 80, "color": "azul"},
             {"texto": "MESAS", "valor": 22, "color": "verde"}, {"texto": "RECUENTO", "valor": 13, "color": "naranja"}]},
             acciones=[{"at": "@Correos", "props": {"resalta": [0]}}]),
-        quien("piz", 1250, "@mesas-0.6", 0.42, "pensativo", y=1640, entra="nada", acciones=[
-            {"at": "@mesas-0.6", "x": 900, "dur": 0.5}, {"at": "@mesas", "pose": "senala_izq", "mira": "izq"},
+        quien("piz", 1250, "@organizarlas", 0.42, "pensativo", y=1600, entra="nada", acciones=[
+            {"at": "@organizarlas", "x": 900, "dur": 0.5}, {"at": "@220,8", "cara": "sorpresa", "take": True}, {"at": "@mesas", "pose": "senala_izq", "mira": "izq"},
             {"at": "@recuento", "cara": "sorpresa", "pose": "cabeza"}]),
     ]),
     # 4 · LA MESA: Piz, vocal; le pagan 75 € (cinco más que antes)

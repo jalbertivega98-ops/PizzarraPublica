@@ -643,15 +643,20 @@
      "type": "personaje",
      "quien": "piz",
      "x": 1250,
-     "y": 1640,
+     "y": 1600,
      "scale": 0.42,
-     "at": "@mesas-0.6",
+     "at": "@organizarlas",
      "cara": "pensativo",
      "acciones": [
       {
-       "at": "@mesas-0.6",
+       "at": "@organizarlas",
        "x": 900,
        "dur": 0.5
+      },
+      {
+       "at": "@220,8",
+       "cara": "sorpresa",
+       "take": true
       },
       {
        "at": "@mesas",

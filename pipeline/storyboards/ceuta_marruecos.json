@@ -485,6 +485,12 @@
        "at": "@separa",
        "pose": "senala",
        "cara": "riendo"
+      },
+      {
+       "at": "@1668",
+       "salta": true,
+       "cara": "riendo",
+       "pose": "pulgar"
       }
      ],
      "entra": "cae",
@@ -537,10 +543,26 @@
       "titulo": "TRATADO DE LISBOA",
       "fecha": "1668"
      },
-     "acciones": [],
+     "acciones": [
+      {
+       "at": "@firma",
+       "salta": true
+      }
+     ],
      "hud": true,
      "entra": "abajo",
      "sfx": "papel"
+    },
+    {
+     "type": "rotulo",
+     "text": "1668 · TRATADO DE LISBOA",
+     "x": 540,
+     "y": 430,
+     "size": 70,
+     "color": "amarillo",
+     "at": "@1668",
+     "golpe": true,
+     "hud": true
     }
    ]
   },

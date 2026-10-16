@@ -1,0 +1,109 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 5.01,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.84,
+    "texto": "El 6 de octubre murieron unas 300 leyes a medio hacer."
+   },
+   {
+    "t0": 3.09,
+    "t1": 4.56,
+    "texto": "Y dos te afectaban al volante."
+   }
+  ]
+ },
+ {
+  "escena": "porque",
+  "inicio": 5.01,
+  "fin": 10.58,
+  "frases": [
+   {
+    "t0": 5.31,
+    "t1": 10.13,
+    "texto": "Al disolver las Cortes para el 29N, el Reglamento del Congreso es claro: todo lo pendiente caduca."
+   }
+  ]
+ },
+ {
+  "escena": "alcohol",
+  "inicio": 10.58,
+  "fin": 23.36,
+  "frases": [
+   {
+    "t0": 10.9,
+    "t1": 14.47,
+    "texto": "Como bajar la tasa de alcohol al volante de 0,5 a 0,2."
+   },
+   {
+    "t0": 14.62,
+    "t1": 20.17,
+    "texto": "Era una propuesta del PSOE y pasó el primer voto, 173 a 168, con PP y Vox en contra."
+   },
+   {
+    "t0": 20.37,
+    "t1": 22.91,
+    "texto": "Ahora decae: la tasa sigue en 0,5."
+   }
+  ]
+ },
+ {
+  "escena": "velocidad",
+  "inicio": 23.36,
+  "fin": 32.64,
+  "frases": [
+   {
+    "t0": 23.36,
+    "t1": 28.41,
+    "texto": "Lo mismo con la velocidad: ir 50 por encima del límite en ciudad iba a ser delito, en vez de 60."
+   },
+   {
+    "t0": 28.61,
+    "t1": 32.19,
+    "texto": "Hoy, en una calle de 50, el delito empieza en 111."
+   }
+  ]
+ },
+ {
+  "escena": "cementerio",
+  "inicio": 32.64,
+  "fin": 41.16,
+  "frases": [
+   {
+    "t0": 33.34,
+    "t1": 37.71,
+    "texto": "También caen la ley de Integridad Pública contra la corrupción, la que daba la instrucción a los fiscales,"
+   },
+   {
+    "t0": 37.81,
+    "t1": 40.71,
+    "texto": "el registro de lobbies y la condonación de deuda a las comunidades."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 41.16,
+  "fin": 50.32,
+  "frases": [
+   {
+    "t0": 41.48,
+    "t1": 45.0,
+    "texto": "Las nuevas Cortes nacen el 23 de diciembre y tendrán que empezar de cero."
+   },
+   {
+    "t0": 45.2,
+    "t1": 47.05,
+    "texto": "¿Cuál resucitarías tú? Te leo."
+   },
+   {
+    "t0": 47.25,
+    "t1": 48.97,
+    "texto": "Y síguenos para el próximo viaje de Piz."
+   }
+  ]
+ }
+]

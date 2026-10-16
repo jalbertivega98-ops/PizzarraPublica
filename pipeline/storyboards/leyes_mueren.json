@@ -315,13 +315,18 @@
      "x": 1250,
      "y": 1580,
      "scale": 0.5,
-     "at": "@claro-0.5",
+     "at": "@Cortes",
      "cara": "pensativo",
      "acciones": [
       {
-       "at": "@claro-0.5",
+       "at": "@Cortes",
        "x": 900,
        "dur": 0.5
+      },
+      {
+       "at": "@Reglamento",
+       "cara": "idea",
+       "salta": true
       },
       {
        "at": "@pendiente",
@@ -603,7 +608,12 @@
      "props": {
       "numero": 50
      },
-     "acciones": [],
+     "acciones": [
+      {
+       "at": "@límite",
+       "salta": true
+      }
+     ],
      "id": "senal",
      "entra": "crece",
      "sfx": "golpe"
@@ -620,6 +630,17 @@
       "cara": "riendo"
      },
      "acciones": [
+      {
+       "at": "@velocidad",
+       "x": 460,
+       "dur": 0.6,
+       "tiembla": true
+      },
+      {
+       "at": "@encima",
+       "x": 360,
+       "dur": 0.6
+      },
       {
        "at": "@delito",
        "tiembla": true,

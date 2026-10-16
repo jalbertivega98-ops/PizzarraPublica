@@ -297,6 +297,14 @@
          "da8"
         ]
        }
+      },
+      {
+       "at": "@nietos",
+       "tiembla": true
+      },
+      {
+       "at": "@fuera",
+       "salta": true
       }
      ],
      "id": "doc",
@@ -323,6 +331,11 @@
        "at": "@nacionalidad",
        "salta": true,
        "cara": "riendo"
+      },
+      {
+       "at": "@nacidos",
+       "mira": "camara",
+       "pose": "senala_izq"
       },
       {
        "at": "@solicitudes",
@@ -828,6 +841,16 @@
      "cara": "ilusionado",
      "acciones": [
       {
+       "at": "@mayoría",
+       "salta": true,
+       "cara": "riendo"
+      },
+      {
+       "at": "@América",
+       "pose": "senala_arriba",
+       "mira": "der"
+      },
+      {
        "at": "@São-0.3",
        "x": 380.6,
        "y": 1129.5,
@@ -1016,6 +1039,15 @@
        "at": "@400.000",
        "cara": "susto",
        "pose": "cabeza"
+      },
+      {
+       "at": "@electores",
+       "salta": true
+      },
+      {
+       "at": "@2023",
+       "pose": "senala_izq",
+       "cara": "sorpresa"
       }
      ],
      "entra": "der",

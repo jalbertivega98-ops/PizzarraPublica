@@ -54,8 +54,8 @@ scenes = [
             "articulos": [{"id": "a207", "titulo": "AL DISOLVERSE LA CÁMARA",
                            "lineas": ["quedarán caducados todos", "los asuntos pendientes"]}]},
             acciones=[{"at": "@pendiente", "props": {"resalta": ["a207"]}}]),
-        quien("piz", 1250, "@claro-0.5", 0.5, "pensativo", y=1580, entra="nada", acciones=[
-            {"at": "@claro-0.5", "x": 900, "dur": 0.5}, {"at": "@pendiente", "pose": "senala_izq"},
+        quien("piz", 1250, "@Cortes", 0.5, "pensativo", y=1580, entra="nada", acciones=[
+            {"at": "@Cortes", "x": 900, "dur": 0.5}, {"at": "@Reglamento", "cara": "idea", "salta": True}, {"at": "@pendiente", "pose": "senala_izq"},
             {"at": "@caduca", "cara": "susto", "take": True}]),
         sello("CADUCADO", "rojo", 1260, "@caduca"),
     ]),
@@ -85,9 +85,10 @@ scenes = [
     ], camara=[plano(0, "general", [540, 950], 0), plano("@delito", "general", [600, 950], 0.5, zoom=1.06),
                plano("@111", "general", [540, 950], 0.5)],
        elements=[
-        obj("senal", 820, 760, 0, 0.9, id="senal", entra="crece", sfx="golpe", props={"numero": 50}),
+        obj("senal", 820, 760, 0, 0.9, id="senal", entra="crece", sfx="golpe", props={"numero": 50},
+            acciones=[{"at": "@límite", "salta": True}]),
         obj("coche", 380, 1500, 0.2, 0.8, entra="abajo", props={"color": "verde", "cara": "riendo"},
-            acciones=[{"at": "@delito", "tiembla": True, "cara": "susto"}]),
+            acciones=[{"at": "@velocidad", "x": 460, "dur": 0.6, "tiembla": True}, {"at": "@encima", "x": 360, "dur": 0.6},{"at": "@delito", "tiembla": True, "cara": "susto"}]),
         rot("+50 = DELITO", 420, 430, "@delito", 100, "rojo", golpe=True, out="@Hoy"),
         rot("(ANTES +60)", 420, 540, "@60", 70, "blanco", out="@Hoy"),
         sello("DECAE", "rojo", 450, "@Hoy", x=400),

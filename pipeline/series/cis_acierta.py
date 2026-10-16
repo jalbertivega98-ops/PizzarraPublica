@@ -81,8 +81,9 @@ scenes = [
         sello("CIS DE JULIO", "rojo", 500, "@barómetro", out="@Ganó"),
         sello("RESULTADO REAL · 23J", "verde", 500, "@Ganó", out="@preelectoral"),
         sello("PREELECTORAL: PP 31,4 · PSOE 31,2", "azul", 500, "@preelectoral"),
+        rot("PP: 33 %", 540, 640, "@33", 90, "azul", golpe=True, out="@preelectoral"),
         quien("piz", P(R, -1.5, 38.5)[0], 0, 0.26, "normal", y=P(R, -1.5, 38.5)[1], entra="nada", acciones=[
-            {"at": "@Viajemos", "salta": True, "cara": "riendo"}, {"at": "@Ganó", "cara": "sorpresa", "take": True},
+            {"at": "@Viajemos", "salta": True, "cara": "riendo"}, {"at": "@Ganó", "cara": "sorpresa", "take": True}, {"at": "@ciento", "salta": True, "cara": "riendo"}, {"at": "@gran", "pose": "senala_arriba", "cara": "pensativo"},
             {"at": "@cuánto", "pose": "encoge", "cara": "esceptica"}]),
     ]),
     # 4 · LA POLÉMICA: el dato de El País, la defensa de Tezanos y lo que hacen PP y Vox

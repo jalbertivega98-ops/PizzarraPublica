@@ -77,12 +77,14 @@ scenes = [
         obj("chincheta", CEUTA[0] + 4, CEUTA[1], "@conquista", 0.24, props={"diseno": "portugal"}, entra="cae", out="@1580"),
         obj("chincheta", CEUTA[0] + 4, CEUTA[1], "@1580", 0.24, props={"diseno": "espana"}, entra="cae"),
         quien("piz", P(R, -5.6, 36.1)[0], 0.2, 0.06, "ilusionado", y=P(R, -5.6, 36.1)[1], entra="cae", acciones=[
-            {"at": "@conquista", "cara": "sorpresa", "take": True}, {"at": "@separa", "pose": "senala", "cara": "riendo"}]),
+            {"at": "@conquista", "cara": "sorpresa", "take": True}, {"at": "@separa", "pose": "senala", "cara": "riendo"},
+            {"at": "@1668", "salta": True, "cara": "riendo", "pose": "pulgar"}]),
         rot("1415 · PORTUGAL", 540, 430, "@1415", 84, "blanco", golpe=True, out="@1580"),
         rot("1580 · CORONA ESPAÑOLA", 540, 430, "@1580", 72, "amarillo", golpe=True, out="@1640"),
         rot("1640 · SE QUEDA CON ESPAÑA", 540, 430, "@1640", 64, "amarillo", golpe=True, out="@Tratado"),
         obj("pergamino", 540, 1180, "@Tratado", 0.75, hud=True, entra="abajo", sfx="papel",
-            props={"titulo": "TRATADO DE LISBOA", "fecha": "1668"}),
+            props={"titulo": "TRATADO DE LISBOA", "fecha": "1668"}, acciones=[{"at": "@firma", "salta": True}]),
+        rot("1668 · TRATADO DE LISBOA", 540, 430, "@1668", 70, "amarillo", golpe=True),
     ]),
     # 3 · MELILLA 1497: la nave castellana sale de Sanlúcar; la dinastía alauí llega después
     dict(id="melilla", fondo="mar_mapa", limites=LIM, animo="aventura", trans="corte",

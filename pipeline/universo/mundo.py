@@ -137,6 +137,59 @@ def tela(c, diseno, w, h, t=0.0, onda=1.0):
                        relleno((30, 30, 34)))
         c.restore()
         pieza(c, rrect(cx - h * 0.1, cy - h * 0.13, cx + h * 0.1, cy + h * 0.13, h * 0.05), "blanco", max(2, h * 0.02))
+    elif diseno == "portugal":
+        bandas([(0, h)], [(214, 30, 36)])
+        c.save(); c.clipPath(marco(), skia.ClipOp.kIntersect, True)
+        c.drawRect(skia.Rect(-10, -40, w * 0.4, h + 40), relleno((0, 102, 51)))
+        c.restore()
+        sx, sy = w * 0.4, y_of(w * 0.4, h * 0.5)
+        c.drawCircle(sx, sy, h * 0.24, relleno((255, 220, 0)))
+        pieza(c, rrect(sx - h * 0.12, sy - h * 0.14, sx + h * 0.12, sy + h * 0.14, h * 0.05), (214, 30, 36), max(2, h * 0.02))
+    elif diseno == "castilla":  # cuartelado de castillos y leones (simplificado: rojo y blanco)
+        bandas([(0, h * 0.5), (h * 0.5, h)], [(198, 11, 30), (250, 246, 236)])
+        c.save(); c.clipPath(marco(), skia.ClipOp.kIntersect, True)
+        c.drawRect(skia.Rect(w * 0.5, -40, w + 10, h * 0.5 + y_of(w * 0.75, 0)), relleno((250, 246, 236)))
+        c.drawRect(skia.Rect(w * 0.5, h * 0.5 + y_of(w * 0.75, 0), w + 10, h + 40), relleno((198, 11, 30)))
+        c.restore()
+    elif diseno in ("argentina", "uruguay"):
+        cel = (116, 172, 223)
+        if diseno == "argentina":
+            bandas([(0, h / 3), (h / 3, 2 * h / 3), (2 * h / 3, h)], [cel, "blanco", cel])
+            c.drawCircle(cx, cy, h * 0.11, relleno((246, 180, 14)))
+        else:
+            ys = [(h * i / 9, h * (i + 1) / 9) for i in range(9)]
+            bandas(ys, ["blanco" if i % 2 == 0 else (0, 56, 168) for i in range(9)])
+            c.save(); c.clipPath(marco(), skia.ClipOp.kIntersect, True)
+            c.drawRect(skia.Rect(-10, -40, w * 0.4, h * 5 / 9 + y_of(w * 0.2, 0)), relleno("blanco"))
+            c.restore()
+            c.drawCircle(w * 0.2, y_of(w * 0.2, h * 0.27), h * 0.13, relleno((252, 209, 22)))
+    elif diseno == "cuba":
+        ys = [(h * i / 5, h * (i + 1) / 5) for i in range(5)]
+        bandas(ys, [(0, 42, 143) if i % 2 == 0 else "blanco" for i in range(5)])
+        tri = poly([(0, y_of(0, 0)), (w * 0.45, y_of(w * 0.45, h * 0.5)), (0, y_of(0, h))])
+        c.drawPath(tri, relleno((207, 20, 43)))
+        c.drawPath(_estrella5(w * 0.15, y_of(w * 0.15, h * 0.5), h * 0.13), relleno("blanco"))
+    elif diseno == "mexico":
+        c.save(); c.clipPath(marco(), skia.ClipOp.kIntersect, True)
+        for i, col in enumerate(((0, 104, 71), (255, 255, 255), (206, 17, 38))):
+            c.drawRect(skia.Rect(w * i / 3, -40, w * (i + 1) / 3, h + 40), relleno(col))
+        c.restore()
+        c.drawCircle(cx, cy, h * 0.13, relleno((150, 100, 50)))
+        c.drawCircle(cx, cy, h * 0.13, trazo(max(2, h * 0.02), (0, 104, 71)))
+    elif diseno == "venezuela":
+        bandas([(0, h / 3), (h / 3, 2 * h / 3), (2 * h / 3, h)], [(255, 204, 0), (0, 36, 125), (207, 20, 43)])
+        for i in range(8):
+            a = math.radians(200 + i * 140 / 7)
+            c.drawPath(_estrella5(cx + math.cos(a) * h * 0.22, cy + h * 0.1 + math.sin(a) * h * 0.22, h * 0.035), relleno("blanco"))
+    elif diseno == "brasil":
+        bandas([(0, h)], [(0, 151, 57)])
+        c.drawPath(poly([(cx - w * 0.4, cy), (cx, cy - h * 0.38), (cx + w * 0.4, cy), (cx, cy + h * 0.38)]), relleno((254, 221, 0)))
+        c.drawCircle(cx, cy, h * 0.2, relleno((0, 39, 118)))
+    elif diseno == "onu":
+        bandas([(0, h)], [(0, 158, 219)])
+        c.drawCircle(cx, cy, h * 0.24, trazo(max(2, h * 0.035), "blanco"))
+        c.drawLine(cx - h * 0.24, cy, cx + h * 0.24, cy, trazo(max(2, h * 0.025), "blanco"))
+        c.drawLine(cx, cy - h * 0.24, cx, cy + h * 0.24, trazo(max(2, h * 0.025), "blanco"))
     else:
         bandas([(0, h)], ["blanco"])
     c.drawPath(marco(), trazo(max(3, h * 0.035)))

@@ -15,6 +15,11 @@ OTAN = {"ALB", "BEL", "BGR", "CAN", "HRV", "CZE", "DNK", "EST", "FIN", "FRA", "D
         "LTU", "LUX", "MNE", "NLD", "MKD", "NOR", "POL", "PRT", "ROU", "SVK", "SVN", "ESP", "SWE", "TUR", "GBR", "USA", "GRL"}
 
 
+CAN_DX, CAN_DY = 5.6, 6.9  # Canarias en recuadro, al suroeste de la península
+REG = {"Canary Is.": "Canarias", "Foral de Navarra": "Navarra", "Valenciana": "Comunitat Valenciana",
+       "Islas Baleares": "Illes Balears"}
+
+
 def dp(pts, tol):
     if len(pts) < 5 or tol <= 0:
         return pts
@@ -73,7 +78,37 @@ def main(src):
             atl.append({**f, "otan": True})
     json.dump({"fuente": "Natural Earth 50m admin 0 countries (dominio público)", "lat0": 40.0, "rasgos": atl},
               open(os.path.join(HERE, "atlantico.json"), "w"), separators=(",", ":"))
-    for n in ("estrecho", "atlantico"):
+    # España por provincias (las 52 circunscripciones), con Canarias en recuadro y los vecinos alrededor
+    pro = os.path.join(src, "ne_10m_admin_1_states_provinces.geojson")
+    esp = []
+    for f in json.load(open(pro))["features"]:
+        p = f["properties"]
+        if p["adm0_a3"] != "ESP":
+            continue
+        g = f["geometry"]
+        polys = g["coordinates"] if g["type"] == "MultiPolygon" else [g["coordinates"]]
+        canarias = p["region"] == "Canary Is."
+        out = []
+        for pl in polys:
+            ext = pl[0]
+            if canarias:  # recuadro: se acercan a la península (desplazamiento fijo, se dibuja un marco)
+                ext = [[x + CAN_DX, y + CAN_DY] for x, y in ext]
+            a = anillo(ext, 0.008)
+            if len(a) >= 4:
+                out.append(a)
+        if out:
+            esp.append({"id": p["name"], "grupo": REG.get(p["region"], p["region"]), "polys": out, "espana": True})
+    for f in region(sub, (-10.5, 34.6, 4.6, 44.2), 0.01, "ADM0_A3", lambda p: p["SUBUNIT"]):
+        if f["id"] in ("Portugal", "France", "Andorra", "Morocco", "Gibraltar", "Algeria"):
+            esp.append(f)
+    json.dump({"fuente": "Natural Earth 10m admin 1 (dominio público)", "lat0": 40.0,
+               "canarias": [CAN_DX, CAN_DY], "rasgos": esp},
+              open(os.path.join(HERE, "espana.json"), "w"), separators=(",", ":"))
+    # el mundo entero (para viajes largos: España, América, África…)
+    mun = region(cou, (-180, -60, 180, 84), 0.15, "ADM0_A3", lambda p: p["ADM0_A3"])
+    json.dump({"fuente": "Natural Earth 50m admin 0 countries (dominio público)", "lat0": 0.0, "rasgos": mun},
+              open(os.path.join(HERE, "mundo.json"), "w"), separators=(",", ":"))
+    for n in ("estrecho", "atlantico", "espana", "mundo"):
         print(n, os.path.getsize(os.path.join(HERE, n + ".json")) // 1024, "KB")
 
 

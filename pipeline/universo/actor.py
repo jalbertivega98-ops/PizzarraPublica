@@ -493,7 +493,7 @@ def _objeto(e, c, t, cara, paso, moviendo=False, dirx=0):
         kw["cara"] = cara
     if kw["tipo"] in objetos.DIBUJO and "progreso" not in kw:
         kw["progreso"] = min(1.0, (t - e.t0) / max(0.3, s.get("dibujo", objetos.DIBUJO[kw["tipo"]])))
-    if kw["tipo"] in ("mapa", "documento", "barco"):
+    if kw["tipo"] in ("mapa", "documento", "barco", "camion", "carabela"):
         kw.update(_cambios=cambios, _t0=e.t0, _mov=moviendo, _dir=dirx)
     if s.get("flota"):
         c.translate(0, 10 * math.sin(t * 2.6 + e.t0))

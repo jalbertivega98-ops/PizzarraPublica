@@ -422,12 +422,15 @@ APOYADOS = {"arbol", "farola"}
 
 
 # mundo dibujado (barcos, banderas, tratados, mapas…): universo/mundo.py y universo/mapas.py
-from . import mapas as _mapas, mundo as _mundo  # noqa: E402
+from . import civico as _civico, mapas as _mapas, mundo as _mundo  # noqa: E402
 
 TIPOS.update(_mundo.TIPOS, mapa=_mapas.mapa)
 TAMANO.update(_mundo.TAMANO, mapa=(1100, 1000))
 APOYADOS |= _mundo.APOYADOS
-DIBUJO = {"grafica": 1.2, "mapa": 2.0, "documento": 1.0}  # objetos que se dibujan/despliegan solos (s por defecto)
+TIPOS.update(_civico.TIPOS)  # elecciones, leyes, carreteras, viajes e historia: universo/civico.py
+TAMANO.update(_civico.TAMANO)
+APOYADOS |= _civico.APOYADOS
+DIBUJO = {"grafica": 1.2, "mapa": 2.0, "documento": 1.0, "contador": 1.4, "barras": 1.4}  # objetos que se dibujan/despliegan solos (s por defecto)
 
 
 def dibuja(c, tipo, t=0.0, **kw):

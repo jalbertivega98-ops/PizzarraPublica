@@ -2,13 +2,15 @@
 
   ceuta     paseo junto a las Murallas Reales y su foso, casas blancas, el Monte Hacho con su fortaleza y, al otro
             lado del Estrecho, la península y el Peñón. Gaviotas, ferri cruzando, banderas ondeando, palmeras.
+  carretera carretera en perspectiva entre colinas, rayas y árboles que pasan (velocidad)
+  colegio   colegio electoral por dentro (pizarra, ventanales, cartel, banderines)
   mar_mapa  mar infinito con olitas (debajo de un objeto "mapa"; la escena lleva "limites" amplios)
 """
 import math
 
 import skia
 
-from .estilo import COL, degradado, mezcla, pieza, poly, relleno, rrect, suave, trazo
+from .estilo import COL, degradado, elipse, mezcla, pieza, poly, relleno, rrect, suave, trazo
 from .fondos import X0, X1, Y0, Y1, SUELO, _nube, _pajaros, _rect
 from .mundo import tela
 
@@ -138,4 +140,75 @@ def mar_mapa(c, t=0.0, capa=lambda d: None, **kw):
     c.drawRect(skia.Rect(-20000, -20000, 20000, 20000), relleno((126, 196, 236)))
 
 
-TIPOS = {"ceuta": ceuta, "mar_mapa": mar_mapa}
+def carretera(c, t=0.0, capa=lambda d: None, suelo=SUELO, velocidad=1.0, **kw):
+    """Carretera que se pierde en el horizonte entre colinas; las rayas avanzan (velocidad 0 = parada)."""
+    horiz = 820
+    capa(0.12)
+    _rect(c, X0 - 600, Y0 - 600, X1 + 600, horiz + 10, "cielo_alto", degradado(Y0, horiz, "cielo_alto", (206, 236, 250)))
+    for i, (y, s, v) in enumerate(((180, 1.0, 14), (360, 0.7, 9))):
+        _nube(c, (i * 700 + t * v) % 2000 - 450, y, s, 215)
+    _pajaros(c, t)
+    capa(0.3)
+    for x0, h, col in ((X0 - 500, 260, (150, 196, 120)), (420, 200, (130, 186, 110)), (900, 300, (146, 200, 118))):
+        c.drawPath(suave([(x0 - 300, horiz + 4), (x0 + 200, horiz - h), (x0 + 700, horiz + 4)]), relleno(col))
+    capa(0.6)
+    _rect(c, X0 - 600, horiz, X1 + 600, Y1 + 600, (120, 186, 90), degradado(horiz, Y1, (140, 200, 100), (100, 168, 76)))
+    # asfalto en perspectiva
+    cx = 540
+    asf = poly([(cx - 30, horiz), (cx + 30, horiz), (cx + 900, Y1 + 400), (cx - 900, Y1 + 400)])
+    pieza(c, asf, (96, 100, 110), 6, shader=degradado(horiz, Y1, (120, 124, 134), (80, 84, 94)))
+    for s_ in (-1, 1):  # líneas de borde
+        c.drawLine(cx + s_ * 26, horiz + 4, cx + s_ * 820, Y1 + 400, trazo(10, "blanco"))
+    # rayas centrales que vienen hacia nosotros
+    for i in range(10):
+        k = ((i / 10) + t * 0.35 * velocidad) % 1.0
+        k2 = min(1.0, k + 0.045)
+        y0 = horiz + (Y1 + 400 - horiz) * k ** 2.2
+        y1 = horiz + (Y1 + 400 - horiz) * k2 ** 2.2
+        w0, w1 = 2 + 26 * k ** 2.2, 2 + 26 * k2 ** 2.2
+        c.drawPath(poly([(cx - w0 / 2, y0), (cx + w0 / 2, y0), (cx + w1 / 2, y1), (cx - w1 / 2, y1)]), relleno("blanco"))
+    # árboles y postes a los lados que pasan
+    for i in range(6):
+        k = ((i / 6) + t * 0.2 * velocidad) % 1.0
+        y = horiz + (Y1 - horiz) * k ** 2
+        sc = 0.1 + 1.1 * k ** 2
+        for s_ in (-1, 1):
+            x = cx + s_ * (60 + 900 * k ** 2)
+            c.save(); c.translate(x, y); c.scale(sc, sc)
+            c.drawLine(0, 0, 0, -260, trazo(26, (150, 110, 70)))
+            pieza(c, elipse(0, -330, 120, 110), (96, 170, 80), 6)
+            c.restore()
+    capa(1.0)
+
+
+def colegio(c, t=0.0, capa=lambda d: None, suelo=SUELO, **kw):
+    """Colegio electoral: gimnasio/aula con pizarra, cartel «COLEGIO ELECTORAL», banderines y ventanas con sol."""
+    capa(0.4)
+    _rect(c, X0 - 600, Y0 - 600, X1 + 600, suelo, (246, 236, 214), degradado(Y0, suelo, (250, 242, 224), (236, 222, 196)))
+    for x in (60, 760):  # ventanales
+        pieza(c, rrect(x, 260, x + 260, 640, 10), (190, 226, 248), 7)
+        c.drawLine(x + 130, 260, x + 130, 640, trazo(6)); c.drawLine(x, 450, x + 260, 450, trazo(6))
+        c.drawPath(poly([(x + 20, 280), (x + 90, 280), (x + 30, 420)]), relleno("blanco", 120))
+    pieza(c, rrect(330, 300, 750, 560, 10), (60, 96, 80), 8)  # pizarra del aula
+    pieza(c, rrect(300, 160, 780, 250, 14), "blanco", 6)
+    f = _f(52)
+    txt = "COLEGIO ELECTORAL"
+    c.drawString(txt, 540 - f.measureText(txt) / 2, 224, f, relleno((60, 90, 170)))
+    for i in range(14):  # banderines
+        x = X0 + i * 120
+        y = 30 + 20 * math.sin(i * 0.9)
+        c.drawPath(poly([(x, y), (x + 100, y + 6), (x + 50, y + 80)]), relleno(("rojo", "amarillo", "azul", "verde")[i % 4]))
+    c.drawLine(X0, 30, X1, 30, trazo(4))
+    capa(1.0)
+    _rect(c, X0 - 600, suelo - 10, X1 + 600, Y1 + 600, (214, 180, 130), degradado(suelo, Y1, (222, 190, 140), (196, 160, 112)))
+    for x in range(X0 - 600, X1 + 600, 120):
+        c.drawLine(x, suelo, x - 200, Y1 + 600, trazo(3, (180, 146, 100)))
+    c.drawLine(X0 - 600, suelo - 10, X1 + 600, suelo - 10, trazo(6))
+
+
+def _f(size, cual="sub"):
+    import wb
+    return wb.font(cual, size)
+
+
+TIPOS = {"ceuta": ceuta, "mar_mapa": mar_mapa, "carretera": carretera, "colegio": colegio}

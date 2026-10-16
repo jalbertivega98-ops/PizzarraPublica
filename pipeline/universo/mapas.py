@@ -12,6 +12,8 @@ Objeto del storyboard: {"type": "objeto", "objeto": "mapa", "props": {"region": 
   lineas     [{"id", "puntos": [[lon, lat], ...], "color", "discontinua": true, "ancho", "cierra": true}]:
              se dibujan con rotulador desde el instante en que aparecen
   tropico    true: dibuja el trópico de Cáncer (23,44° N)
+  Regiones: estrecho, atlantico, espana (52 provincias = circunscripciones, id = nombre de la provincia, colores
+  por comunidad; Canarias va en recuadro: usa canarias(lon, lat) para situar cosas allí) y mundo (países por ISO3).
 
 Los grosores de línea son constantes en pantalla aunque la cámara se acerque mucho (zoom x10 sobre Ceuta).
 punto(region, lon, lat, x, y, scale) da la posición en el mundo para colocar barcos, personajes o rótulos.
@@ -30,6 +32,16 @@ REGIONES = {
     # centro (lon, lat) y px por grado de latitud a escala 1
     "estrecho": {"archivo": "estrecho.json", "centro": (-3.6, 39.0), "k": 96.0},
     "atlantico": {"archivo": "atlantico.json", "centro": (-28.0, 45.0), "k": 9.0},
+    "espana": {"archivo": "espana.json", "centro": (-3.9, 39.2), "k": 74.0},
+    "mundo": {"archivo": "mundo.json", "centro": (-30.0, 10.0), "k": 9.0},
+}
+# comunidades autónomas (mapa "espana", por provincias): colores pastel, sin colores de partido
+CCAA = {
+    "Andalucía": (170, 214, 130), "Cataluña": (250, 200, 120), "Madrid": (240, 150, 150), "Comunitat Valenciana": (250, 228, 120),
+    "Galicia": (150, 200, 230), "Castilla y León": (232, 206, 160), "País Vasco": (190, 225, 170), "Canarias": (250, 214, 120),
+    "Castilla-La Mancha": (240, 220, 170), "Murcia": (196, 178, 230), "Aragón": (214, 190, 240), "Illes Balears": (160, 220, 210),
+    "Extremadura": (210, 230, 150), "Asturias": (170, 210, 190), "Navarra": (240, 190, 200), "Cantabria": (200, 230, 200),
+    "La Rioja": (230, 180, 210), "Ceuta": (250, 214, 120), "Melilla": (250, 214, 120),
 }
 TROPICO = 23.44
 TIERRA = {  # colores de relleno por territorio (amables, sin colores de partido)
@@ -62,14 +74,21 @@ def _datos(region):
                 lats = [lat for _, lat in pl]
                 lons = [lon for lon, _ in pl]
                 piezas.append({"id": f["id"], "iso": f.get("iso"), "otan": f.get("otan", False), "path": p,
+                               "grupo": f.get("grupo"), "espana": f.get("espana", False),
                                "largo": largo, "lat": sum(lats) / len(lats), "lon": sum(lons) / len(lons), "pts": pts})
-        _cache[region] = {"piezas": piezas, "kx": kx, "k": r["k"], "centro": r["centro"]}
+        _cache[region] = {"piezas": piezas, "kx": kx, "k": r["k"], "centro": r["centro"], "canarias": d.get("canarias")}
     return _cache[region]
 
 
 def local(region, lon, lat):
     d = _datos(region)
     return (lon - d["centro"][0]) * d["kx"], -(lat - d["centro"][1]) * d["k"]
+
+
+def canarias(lon, lat):
+    """Coordenadas de un lugar de Canarias tal como aparece en el recuadro del mapa "espana"."""
+    dx, dy = _datos("espana")["canarias"]
+    return lon + dx, lat + dy
 
 
 def punto(region, lon, lat, x=540, y=820, scale=1.0):
@@ -137,6 +156,7 @@ def mapa(c, t=0.0, region="estrecho", progreso=1.0, orden=(), colores=None, resa
     tip = None
     t_res = _primeros(t, _cambios, "resalta")
     t_apa = _primeros(t, _cambios, "apaga")
+    luego = []
     for p in piezas:
         k0, k1 = acum / total, (acum + p["largo"]) / total
         acum += p["largo"]
@@ -146,6 +166,11 @@ def mapa(c, t=0.0, region="estrecho", progreso=1.0, orden=(), colores=None, resa
         if kd <= 0:
             continue
         col = colores.get(p["id"], colores.get(p["iso"], TIERRA.get(p["id"], TIERRA_DEF)))
+        if region == "espana":
+            base = CCAA.get(p["grupo"], (250, 214, 120)) if p["espana"] else (214, 210, 200)
+            col = colores.get(p["id"], colores.get(p["grupo"], colores.get("espana" if p["espana"] else "fuera", base)))
+        elif region == "mundo":
+            col = colores.get(p["id"], colores.get("resto", TIERRA_DEF))
         if region == "atlantico":
             col = colores.get("otan", (120, 170, 235)) if p["otan"] else TIERRA_DEF
             if ambito6:
@@ -161,24 +186,31 @@ def mapa(c, t=0.0, region="estrecho", progreso=1.0, orden=(), colores=None, resa
             c.drawPath(p["path"], relleno((40, 70, 110), int(60 * kc)))
             c.restore()
             c.drawPath(p["path"], relleno(col, int(255 * kc)))
-        if p["id"] in resalta:
-            ka = _eo((t - t_res.get(p["id"], -9)) / 0.4)
-            lat = 0.5 + 0.5 * math.sin((t - t_res.get(p["id"], 0)) * 7)
-            halo = trazo((14 + 10 * lat) * w * ka + 0.01, (255, 236, 90), int(230 * ka))
-            c.drawPath(p["path"], halo)
-            c.drawPath(p["path"], relleno(mezcla(col, (255, 240, 120), 0.45), int(255 * ka * kc)))
+        if p["id"] in resalta:  # se pinta encima de todo al final (que el halo no quede tapado por los vecinos)
+            luego.append((p, col, kc))
         gro = 4.2 * w if p["largo"] * esc > 60 else 3.0 * w
         if kd < 1:
             seg, tip = _trozo(p["path"], kd)
             c.drawPath(seg, trazo(gro, TINTA))
         else:
             c.drawPath(p["path"], trazo(gro, TINTA))
+    for p, col, kc in luego:
+        ka = _eo((t - t_res.get(p["id"], -9)) / 0.4)
+        lat = 0.5 + 0.5 * math.sin((t - t_res.get(p["id"], 0)) * 7)
+        c.drawPath(p["path"], trazo((14 + 10 * lat) * w * ka + 0.01, (255, 236, 90), int(230 * ka)))
+        c.drawPath(p["path"], relleno(mezcla(col, (255, 240, 120), 0.45), int(255 * ka * kc)))
+        c.drawPath(p["path"], trazo(4.2 * w, TINTA))
     if region == "atlantico" and ambito6 and progreso >= 1:  # Ceuta y Melilla: anillo rojo que late (son diminutas)
         for p in piezas:
             if p["id"] in ("Ceuta", "Melilla"):
                 x, y = local(region, p["lon"], p["lat"])
                 r = (16 + 5 * math.sin(t * 6)) * w
                 c.drawCircle(x, y, r, trazo(5 * w, (230, 50, 40)))
+    if region == "espana" and d.get("canarias") and progreso > 0.5:  # marco del recuadro de Canarias
+        a = int(255 * min(1.0, (progreso - 0.5) / 0.3))
+        x0, y0 = local(region, -18.4 + d["canarias"][0], 29.6 + d["canarias"][1])
+        x1, y1 = local(region, -13.2 + d["canarias"][0], 27.4 + d["canarias"][1])
+        c.drawRect(skia.Rect(x0, y0, x1, y1), trazo(3.5 * w, TINTA, a))
     for ln in lineas or ():
         _linea(c, region, ln, t, w, _primeros(t, _cambios, "lineas").get(ln.get("id"), _t0))
     return tip

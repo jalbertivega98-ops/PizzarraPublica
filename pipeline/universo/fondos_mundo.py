@@ -206,9 +206,53 @@ def colegio(c, t=0.0, capa=lambda d: None, suelo=SUELO, **kw):
     c.drawLine(X0 - 600, suelo - 10, X1 + 600, suelo - 10, trazo(6))
 
 
+def estudio(c, t=0.0, capa=lambda d: None, suelo=SUELO, **kw):
+    """Estudio de podcast: pared oscura con paneles acústicos, letrero de neón «ON AIR» y estanterías."""
+    capa(0.4)
+    _rect(c, X0 - 600, Y0 - 600, X1 + 600, suelo, (40, 38, 52), degradado(Y0, suelo, (52, 48, 68), (30, 28, 40)))
+    for i in range(-3, 12):  # paneles acústicos (rombos)
+        for j in range(4):
+            x, y = 40 + i * 120 + (j % 2) * 60, 120 + j * 120
+            c.drawPath(poly([(x, y - 50), (x + 50, y), (x, y + 50), (x - 50, y)]), relleno((70, 64, 92)))
+            c.drawPath(poly([(x, y - 50), (x + 50, y), (x, y + 50), (x - 50, y)]), trazo(4, (24, 22, 32)))
+    brillo = 0.75 + 0.25 * math.sin(t * 5)
+    pieza(c, rrect(380, 40, 700, 140, 20), (60, 20, 30), 7)
+    f = _f(66)
+    txt = "ON AIR"
+    c.drawString(txt, 540 - f.measureText(txt) / 2, 114, f, relleno((255, 70, 80), int(255 * brillo)))
+    for x in (-40, 860):  # estanterías con libros
+        pieza(c, rrect(x, 560, x + 260, 600, 6), "madera", 6)
+        for k in range(6):
+            pieza(c, rrect(x + 16 + k * 40, 470 + (k % 2) * 16, x + 48 + k * 40, 560, 4), ("rojo", "amarillo", "azul", "verde")[k % 4], 4)
+    capa(1.0)
+    _rect(c, X0 - 600, suelo - 10, X1 + 600, Y1 + 600, (96, 70, 60), degradado(suelo, Y1, (110, 80, 68), (80, 58, 50)))
+    c.drawLine(X0 - 600, suelo - 10, X1 + 600, suelo - 10, trazo(6))
+
+
+def plato(c, t=0.0, capa=lambda d: None, suelo=SUELO, rotulo="DEBATE 29N", **kw):
+    """Plató de televisión: fondo azul con pantallas, focos y rótulo; suelo brillante."""
+    capa(0.4)
+    _rect(c, X0 - 600, Y0 - 600, X1 + 600, suelo, (24, 50, 110), degradado(Y0, suelo, (36, 70, 150), (16, 32, 80)))
+    for i in range(-2, 11):  # rayos de luz de los focos
+        x = i * 120
+        c.drawPath(poly([(x, 0), (x + 40, 0), (x + 160 + 40 * math.sin(t + i), suelo), (x - 80, suelo)]), relleno("blanco", 18))
+    for i in range(-3, 12):  # focos colgados
+        x = i * 120 + 60
+        pieza(c, rrect(x - 26, 10, x + 26, 60, 10), (60, 60, 70), 5)
+        c.drawCircle(x, 64, 14, relleno((255, 240, 180)))
+    pieza(c, rrect(280, 180, 800, 300, 18), (12, 20, 50), 7)
+    f = _f(64)
+    c.drawString(rotulo, 540 - f.measureText(rotulo) / 2, 262, f, relleno("amarillo"))
+    capa(1.0)
+    _rect(c, X0 - 600, suelo - 10, X1 + 600, Y1 + 600, (20, 30, 60), degradado(suelo, Y1, (40, 60, 120), (14, 22, 50)))
+    for x in range(X0 - 600, X1 + 600, 160):
+        c.drawLine(x, suelo, x - 260, Y1 + 600, trazo(3, (70, 100, 170)))
+    c.drawLine(X0 - 600, suelo - 10, X1 + 600, suelo - 10, trazo(6))
+
+
 def _f(size, cual="sub"):
     import wb
     return wb.font(cual, size)
 
 
-TIPOS = {"ceuta": ceuta, "mar_mapa": mar_mapa, "carretera": carretera, "colegio": colegio}
+TIPOS = {"ceuta": ceuta, "mar_mapa": mar_mapa, "carretera": carretera, "colegio": colegio, "estudio": estudio, "plato": plato}

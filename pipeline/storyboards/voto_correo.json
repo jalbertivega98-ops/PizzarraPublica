@@ -1,0 +1,1016 @@
+{
+ "slug": "voto_correo",
+ "title": "Voto por correo: las 3 fechas",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "La Moncloa / Ministerio del Interior: cómo solicitar el voto por correo en las elecciones generales del 29N",
+  "Infobae (18/10/2026): fechas, documentos y pasos del voto por correo",
+  "Mapas dibujados sobre contornos de Natural Earth (dominio público)"
+ ],
+ "caption": "✈️ ¿El 29N no vas a estar? Puedes votar por correo\n1️⃣ Hasta el 19 de noviembre: pídelo en Correos o por internet (DNIe o certificado)\n2️⃣ Desde el 9 de noviembre: te llegan las papeletas a casa\n3️⃣ Antes del 25 de noviembre: envíalo certificado (gratis, con tu DNI)\n⚠️ Nunca metas el DNI dentro del sobre: el voto se anula\n🌍 ¿Fuera de España temporalmente? Hasta el 31 de octubre en el consulado\n💬 ¿CORREO o COLEGIO? Te leemos 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: La Moncloa / Ministerio del Interior (voto por correo 29N) · Infobae 18/10/2026. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#29N",
+  "#VotoPorCorreo",
+  "#elecciones",
+  "#EleccionesGenerales",
+  "#Correos",
+  "#politica",
+  "#España",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "calle",
+   "animo": "aventura",
+   "footnote": "La Moncloa / Ministerio del Interior · Infobae 18/10/2026",
+   "lines": [
+    {
+     "text": "¿El 29N no vas a estar?",
+     "tono": "energia"
+    },
+    {
+     "text": "Puedes votar sin pisar el colegio… si no te saltas tres fechas.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Y al final te hago una pregunta.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0,
+     "aire": 220
+    },
+    {
+     "at": "@votar",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6
+    },
+    {
+     "at": "@tres",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    },
+    {
+     "at": "@pregunta",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 400,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": "@estar",
+       "mira": "camara"
+      },
+      {
+       "at": "@votar",
+       "cara": "ilusionado",
+       "salta": true
+      },
+      {
+       "at": "@tres",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@pregunta",
+       "pose": "senala",
+       "cara": "riendo",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "objeto": "maleta",
+     "pose": "sostiene",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 520,
+     "scale": 0.5,
+     "at": "@estar",
+     "props": {
+      "marcados": [],
+      "colores": {},
+      "tachados": [
+       29
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibuja": 0.8
+    },
+    {
+     "type": "rotulo",
+     "text": "3 FECHAS",
+     "x": 540,
+     "y": 1080,
+     "size": 120,
+     "color": "amarillo",
+     "at": "@tres",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "avion",
+     "x": 1250,
+     "y": 380,
+     "scale": 0.5,
+     "at": "@colegio",
+     "props": {},
+     "acciones": [
+      {
+       "at": "@colegio",
+       "x": -200,
+       "dur": 2.2
+      }
+     ],
+     "entra": "nada"
+    }
+   ]
+  },
+  {
+   "id": "fecha1",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "La Moncloa / Interior: plazo de solicitud",
+   "lines": [
+    {
+     "text": "Fecha uno: hasta el 19 de noviembre para pedirlo,",
+     "tono": "normal"
+    },
+    {
+     "text": "en Correos o por internet con DNI electrónico o certificado digital.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Correos",
+     "plano": "general",
+     "sobre": [
+      700,
+      1050
+     ],
+     "dur": 0.6
+    },
+    {
+     "at": "@internet",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 470,
+     "scale": 0.42,
+     "at": 0,
+     "props": {
+      "marcados": [
+       19
+      ],
+      "colores": {
+       "19": "rojo"
+      },
+      "tachados": []
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibuja": 0.8
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 800,
+     "y": 1000,
+     "scale": 1.1,
+     "at": "@Correos-0.3",
+     "props": {
+      "texto": "CORREOS",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "pop",
+     "dibuja": 0.8
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 200,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@pedirlo",
+       "x": 560,
+       "dur": 0.9
+      },
+      {
+       "at": "@Correos",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@internet",
+       "objeto": "movil",
+       "pose": "sostiene",
+       "cara": "idea"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "1 · HASTA EL 19N",
+     "x": 540,
+     "y": 760,
+     "size": 92,
+     "color": "amarillo",
+     "at": "@19",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1180,
+     "scale": 0.7,
+     "at": "@electrónico",
+     "props": {
+      "texto": "DNIe O CERTIFICADO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "fecha2",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "aventura",
+   "trans": "zoom",
+   "footnote": "La Moncloa / Interior: envío de la documentación",
+   "lines": [
+    {
+     "text": "Fecha dos: desde el 9 de noviembre te llegan a casa las papeletas y los sobres.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@llegan",
+     "plano": "general",
+     "sobre": [
+      483.3,
+      842.2
+     ],
+     "dur": 1.0,
+     "zoom": 1.6
+    },
+    {
+     "at": "@sobres",
+     "plano": "general",
+     "sobre": [
+      421.0,
+      953.2
+     ],
+     "dur": 0.6,
+     "zoom": 2.0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana"
+     },
+     "acciones": [],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.2
+    },
+    {
+     "type": "objeto",
+     "objeto": "camion",
+     "x": 551.3,
+     "y": 741.2,
+     "scale": 0.16,
+     "at": 0.3,
+     "props": {
+      "texto": "CORREOS",
+      "color": "amarillo"
+     },
+     "acciones": [
+      {
+       "at": "@llegan",
+       "x": 421.0,
+       "y": 963.2,
+       "dur": 1.6
+      }
+     ],
+     "id": "camion",
+     "entra": "pop",
+     "sfx": "bocina"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 481.0,
+     "y": 993.2,
+     "scale": 0.17,
+     "at": "@casa",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@papeletas",
+       "salta": true,
+       "cara": "riendo"
+      }
+     ],
+     "entra": "cae",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "papeleta",
+     "x": 381.0,
+     "y": 883.2,
+     "scale": 0.18,
+     "at": "@sobres",
+     "props": {},
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "papel",
+     "flota": true
+    },
+    {
+     "type": "rotulo",
+     "text": "2 · DESDE EL 9N",
+     "x": 540,
+     "y": 1180,
+     "size": 92,
+     "color": "amarillo",
+     "at": "@9",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "fecha3",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "pan",
+   "footnote": "La Moncloa / Interior: envío del voto",
+   "lines": [
+    {
+     "text": "Fecha tres: envíalo por correo certificado antes del 25 de noviembre.",
+     "tono": "normal"
+    },
+    {
+     "text": "Es gratis, y tienes que llevar tu DNI.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@gratis",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 220
+    },
+    {
+     "at": "@DNI",
+     "plano": "general",
+     "sobre": [
+      600,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 470,
+     "scale": 0.42,
+     "at": 0,
+     "props": {
+      "marcados": [
+       9,
+       19,
+       25
+      ],
+      "colores": {
+       "9": "verde",
+       "19": "verde",
+       "25": "rojo"
+      },
+      "tachados": []
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibuja": 0.8
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 800,
+     "y": 1000,
+     "scale": 1.1,
+     "at": 0,
+     "props": {
+      "texto": "CORREOS",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 420,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@certificado",
+       "x": 600,
+       "dur": 0.7
+      },
+      {
+       "at": "@gratis",
+       "cara": "riendo",
+       "salta": true
+      },
+      {
+       "at": "@DNI",
+       "pose": "senala",
+       "objeto": null,
+       "mira": "der"
+      }
+     ],
+     "entra": "nada",
+     "objeto": "papeleta",
+     "pose": "sostiene",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "3 · ANTES DEL 25N",
+     "x": 540,
+     "y": 760,
+     "size": 92,
+     "color": "amarillo",
+     "at": "@25",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 1150,
+     "scale": 0.8,
+     "at": "@gratis",
+     "props": {
+      "texto": "GRATIS",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 1150,
+     "scale": 0.8,
+     "at": "@DNI",
+     "props": {
+      "texto": "DNI",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "truco",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "comico",
+   "trans": "iris",
+   "footnote": "Infobae 18/10/2026",
+   "lines": [
+    {
+     "text": "Truco: dentro del sobre, nunca metas tu DNI…",
+     "tono": "normal"
+    },
+    {
+     "text": "o el voto se anula.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@anula",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.3,
+     "zoom": 1.1
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "papeleta",
+     "x": 540,
+     "y": 760,
+     "scale": 1.4,
+     "at": 0,
+     "props": {
+      "texto": "VOTO"
+     },
+     "acciones": [],
+     "id": "sobre",
+     "entra": "pop",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 900,
+     "y": 520,
+     "scale": 0.9,
+     "at": "@DNI",
+     "props": {
+      "texto": "DNI",
+      "color": "amarillo"
+     },
+     "acciones": [
+      {
+       "at": "@anula-0.6",
+       "x": 560,
+       "y": 740,
+       "dur": 0.5
+      }
+     ],
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "personaje",
+     "quien": "critica",
+     "x": 230,
+     "y": 1500,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "esceptica",
+     "acciones": [
+      {
+       "at": "@nunca",
+       "pose": "senala",
+       "mira": "sobre",
+       "cara": "indignado"
+      },
+      {
+       "at": "@anula",
+       "pose": "cabeza",
+       "cara": "susto"
+      }
+     ],
+     "entra": "nada",
+     "id": "critica"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1100,
+     "scale": 1.0,
+     "at": "@anula",
+     "props": {
+      "texto": "VOTO NULO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "fuera",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "tension",
+   "trans": "zoom",
+   "footnote": "La Moncloa / Interior: españoles temporalmente en el extranjero",
+   "lines": [
+    {
+     "text": "¿Estás fuera de España de forma temporal?",
+     "tono": "normal"
+    },
+    {
+     "text": "Ojo: tu plazo para pedirlo acaba el 31 de octubre, en el consulado.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      776.7,
+      546.4
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@Ojo",
+     "plano": "general",
+     "sobre": [
+      855.0,
+      478.0
+     ],
+     "dur": 1.0,
+     "zoom": 2.2
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "mundo",
+      "resalta": [
+       "ESP"
+      ]
+     },
+     "acciones": [],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.2
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 930.6,
+     "y": 457.5,
+     "scale": 0.1,
+     "at": "@fuera",
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": "@Ojo",
+       "cara": "susto",
+       "take": true
+      }
+     ],
+     "entra": "cae",
+     "objeto": "maleta",
+     "pose": "sostiene",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 930.6,
+     "y": 397.5,
+     "scale": 0.05,
+     "at": "@consulado",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "rotulo",
+     "text": "HASTA EL 31 DE OCTUBRE",
+     "x": 540,
+     "y": 1180,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@31",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "pregunta",
+   "fondo": "colegio",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Pregunta a la audiencia",
+   "lines": [
+    {
+     "text": "Y ahora tú: ¿votarías por correo, o prefieres ir al colegio en persona?",
+     "tono": "normal"
+    },
+    {
+     "text": "Escribe CORREO o COLEGIO en comentarios.",
+     "tono": "energia",
+     "pausa": 0.1
+    },
+    {
+     "text": "Compártelo con quien no vaya a estar el 29N. Y síguenos.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@CORREO",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    },
+    {
+     "at": "@Compártelo",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 220
+    },
+    {
+     "at": "@síguenos",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "urna",
+     "x": 830,
+     "y": 1080,
+     "scale": 0.75,
+     "at": 0,
+     "props": {
+      "llena": 0.4,
+      "texto": "COLEGIO"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "papeleta",
+     "x": 240,
+     "y": 1000,
+     "scale": 1.4,
+     "at": 0,
+     "props": {
+      "texto": "CORREO"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "flota": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "confundido",
+     "acciones": [
+      {
+       "at": "@correo",
+       "mira": "izq",
+       "pose": "piensa"
+      },
+      {
+       "at": "@colegio",
+       "mira": "der"
+      },
+      {
+       "at": "@Escribe",
+       "mira": "camara",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@Compártelo",
+       "cara": "riendo",
+       "pose": "saluda"
+      },
+      {
+       "at": "@29N",
+       "salta": true,
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@síguenos",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿CORREO O COLEGIO?",
+     "x": 540,
+     "y": 480,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@Escribe",
+     "golpe": true,
+     "out": "@síguenos-0.3",
+     "fx": [
+      {
+       "at": "@comentarios",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 480,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.2,
+  "titulo": "Voto por correo: las 3 fechas",
+  "capitulo": null
+ }
+}

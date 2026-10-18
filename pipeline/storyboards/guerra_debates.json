@@ -1,0 +1,1285 @@
+{
+ "slug": "guerra_debates",
+ "title": "La guerra de los debates",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Libertad Digital (05/10/2026): propuestas de RTVE, Atresmedia y Mediaset para el 29N",
+  "Alerta Siete (10/10/2026) e Infobae (09/10/2026): carta del PP con las fechas que acepta",
+  "Infobae (09/10/2026) y El Constitucional: el PSOE irá a todos los debates",
+  "Moncloa.com (09/10/2026): posición de Vox y antecedente de 2023",
+  "Personajes dibujados como pizarras, sin caricatura"
+ ],
+ "caption": "📺 Tres cadenas, seis debates propuestos… y todavía nadie sabe cuáles habrá\n🔵 RTVE: cara a cara el 17, portavoces el 23 y a cuatro el 26\n🟠 Atresmedia: a cuatro el 18 y cara a cara el 23 · 🟢 Mediaset: un cara a cara\n✍️ El PP elige: Mediaset el 16, Atresmedia el 26 y en RTVE solo portavoces\n🗣️ PSOE: «irá a todos», pero no decide Feijóo dónde · Vox: que reflejen el Congreso\n💬 ¿Verías el cara a cara (2) o el debate a cuatro (4)? Te leemos 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Libertad Digital 05/10/2026 · Alerta Siete 10/10/2026 · Infobae 09/10/2026 · El Constitucional · Moncloa.com 09/10/2026. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#29N",
+  "#debate",
+  "#DebateElectoral",
+  "#elecciones",
+  "#Sánchez",
+  "#Feijóo",
+  "#Abascal",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "plato",
+   "animo": "tension",
+   "footnote": "Libertad Digital 05/10/2026 · propuestas de las cadenas",
+   "lines": [
+    {
+     "text": "Tres cadenas, seis debates propuestos…",
+     "tono": "energia"
+    },
+    {
+     "text": "y todavía nadie sabe cuáles habrá.",
+     "tono": "remate",
+     "pausa": 0.1
+    },
+    {
+     "text": "Quédate, que al final eliges tú.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@seis",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5,
+     "zoom": 1.05
+    },
+    {
+     "at": "@nadie",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 220
+    },
+    {
+     "at": "@eliges",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "tele",
+     "x": 200,
+     "y": 800,
+     "scale": 0.42,
+     "at": 0.1,
+     "props": {
+      "texto": "RTVE",
+      "color": [
+       40,
+       90,
+       170
+      ]
+     },
+     "acciones": [],
+     "id": "t_rtve",
+     "entra": "cae",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "tele",
+     "x": 540,
+     "y": 800,
+     "scale": 0.42,
+     "at": 0.30000000000000004,
+     "props": {
+      "texto": "ATRESMEDIA",
+      "color": [
+       230,
+       120,
+       30
+      ]
+     },
+     "acciones": [],
+     "id": "t_atres",
+     "entra": "cae",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "tele",
+     "x": 880,
+     "y": 800,
+     "scale": 0.42,
+     "at": 0.5,
+     "props": {
+      "texto": "MEDIASET",
+      "color": [
+       60,
+       150,
+       90
+      ]
+     },
+     "acciones": [],
+     "id": "t_media",
+     "entra": "cae",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 1180,
+     "scale": 0.7,
+     "at": "@seis",
+     "props": {
+      "valor": 6,
+      "sufijo": " DEBATES",
+      "ancho": 760
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1560,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@cadenas",
+       "mira": "arriba"
+      },
+      {
+       "at": "@nadie",
+       "cara": "confundido",
+       "pose": "encoge",
+       "mira": "camara"
+      },
+      {
+       "at": "@eliges",
+       "pose": "senala",
+       "cara": "riendo",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "invitacion",
+     "x": 200,
+     "y": 1000,
+     "scale": 0.3,
+     "at": "@propuestos+0.0",
+     "props": {
+      "texto": "DEBATE"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "papel",
+     "flota": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "invitacion",
+     "x": 540,
+     "y": 1000,
+     "scale": 0.3,
+     "at": "@propuestos+0.2",
+     "props": {
+      "texto": "DEBATE"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "papel",
+     "flota": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "invitacion",
+     "x": 880,
+     "y": 1000,
+     "scale": 0.3,
+     "at": "@propuestos+0.4",
+     "props": {
+      "texto": "DEBATE"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "papel",
+     "flota": true
+    }
+   ]
+  },
+  {
+   "id": "rtve",
+   "fondo": "plato",
+   "animo": "curioso",
+   "trans": "corte",
+   "footnote": "Libertad Digital 05/10/2026 · propuestas de las cadenas",
+   "lines": [
+    {
+     "text": "RTVE propuso tres: cara a cara el 17, portavoces el 23 y debate a cuatro el 26 de noviembre.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@portavoces",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.6,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 620,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "marcados": [
+       17,
+       23,
+       26
+      ],
+      "colores": {
+       "17": [
+        40,
+        90,
+        170
+       ],
+       "23": [
+        40,
+        90,
+        170
+       ],
+       "26": [
+        40,
+        90,
+        170
+       ]
+      },
+      "tachados": []
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibuja": 0.8
+    },
+    {
+     "type": "objeto",
+     "objeto": "tele",
+     "x": 540,
+     "y": 1200,
+     "scale": 0.55,
+     "at": 0,
+     "props": {
+      "texto": "RTVE",
+      "color": [
+       40,
+       90,
+       170
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@17",
+       "salta": true
+      },
+      {
+       "at": "@23",
+       "salta": true
+      },
+      {
+       "at": "@26",
+       "salta": true
+      }
+     ],
+     "id": "t_rtve",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 260,
+     "y": 1560,
+     "scale": 0.55,
+     "at": "@17",
+     "props": {
+      "texto": "CARA A CARA · 17",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1660,
+     "scale": 0.55,
+     "at": "@23",
+     "props": {
+      "texto": "PORTAVOCES · 23",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 820,
+     "y": 1560,
+     "scale": 0.55,
+     "at": "@26",
+     "props": {
+      "texto": "A CUATRO · 26",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "privadas",
+   "fondo": "plato",
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Libertad Digital 05/10/2026 · propuestas de las cadenas",
+   "lines": [
+    {
+     "text": "Atresmedia, dos: debate a cuatro el 18 y cara a cara el 23.",
+     "tono": "normal"
+    },
+    {
+     "text": "Mediaset, un cara a cara.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Mediaset",
+     "plano": "general",
+     "sobre": [
+      700,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 620,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "marcados": [
+       17,
+       18,
+       23,
+       26
+      ],
+      "colores": {
+       "17": [
+        40,
+        90,
+        170
+       ],
+       "18": [
+        230,
+        120,
+        30
+       ],
+       "23": [
+        230,
+        120,
+        30
+       ],
+       "26": [
+        40,
+        90,
+        170
+       ]
+      },
+      "tachados": []
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibuja": 0.8
+    },
+    {
+     "type": "objeto",
+     "objeto": "tele",
+     "x": 300,
+     "y": 1200,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "texto": "ATRESMEDIA",
+      "color": [
+       230,
+       120,
+       30
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@18",
+       "salta": true
+      },
+      {
+       "at": "@23",
+       "salta": true
+      }
+     ],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "tele",
+     "x": 790,
+     "y": 1200,
+     "scale": 0.5,
+     "at": "@Mediaset",
+     "props": {
+      "texto": "MEDIASET",
+      "color": [
+       60,
+       150,
+       90
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@cara#2",
+       "tiembla": true
+      }
+     ],
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿FECHA?",
+     "x": 790,
+     "y": 1560,
+     "size": 80,
+     "color": "amarillo",
+     "at": "@un",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "feijoo",
+   "fondo": "oficina",
+   "animo": "tension",
+   "trans": "iris",
+   "footnote": "Alerta Siete 10/10/2026 · Infobae 09/10/2026 (carta del PP)",
+   "lines": [
+    {
+     "text": "Feijóo ha elegido: cara a cara en Mediaset el 16, debate a cuatro en Atresmedia el 26…",
+     "tono": "normal"
+    },
+    {
+     "text": "y en RTVE, solo el de portavoces.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "medio",
+     "sobre": "feijoo",
+     "dur": 0,
+     "aire": 220
+    },
+    {
+     "at": "@Mediaset",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.6
+    },
+    {
+     "at": "@RTVE",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 560,
+     "scale": 0.55,
+     "at": "@elegido",
+     "props": {
+      "marcados": [
+       16,
+       23,
+       26
+      ],
+      "colores": {
+       "16": [
+        60,
+        150,
+        90
+       ],
+       "23": [
+        40,
+        90,
+        170
+       ],
+       "26": [
+        230,
+        120,
+        30
+       ]
+      },
+      "tachados": [
+       17,
+       18
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibuja": 0.8
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 840,
+     "y": 1560,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@elegido",
+       "pose": "senala_izq",
+       "mira": "izq"
+      },
+      {
+       "at": "@16",
+       "cara": "riendo"
+      },
+      {
+       "at": "@26",
+       "pose": "pulgar"
+      },
+      {
+       "at": "@portavoces",
+       "cara": "serio",
+       "pose": "cruzados"
+      }
+     ],
+     "entra": "nada",
+     "id": "feijoo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1180,
+     "scale": 1.0,
+     "at": "@solo",
+     "props": {
+      "texto": "SOLO LO CONFIRMA EL PP",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "abascal",
+   "fondo": "plato",
+   "animo": "comico",
+   "trans": "corte",
+   "footnote": "Alerta Siete 10/10/2026 · Moncloa.com 09/10/2026",
+   "lines": [
+    {
+     "text": "Y por primera vez acepta debatir con Abascal,",
+     "tono": "normal"
+    },
+    {
+     "text": "después de no ir al debate a cuatro de 2023.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1050
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Abascal",
+     "plano": "general",
+     "sobre": [
+      700,
+      1050
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    },
+    {
+     "at": "@2023",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 360,
+     "y": 1290,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Abascal",
+       "mira": "abascal",
+       "cara": "serio"
+      }
+     ],
+     "entra": "nada",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 1300,
+     "y": 1290,
+     "scale": 0.5,
+     "at": "@debatir",
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@debatir",
+       "x": 740,
+       "dur": 0.8
+      },
+      {
+       "at": "@Abascal",
+       "mira": "feijoo",
+       "pose": "saluda"
+      }
+     ],
+     "entra": "nada",
+     "id": "abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 360,
+     "y": 1410,
+     "scale": 0.55,
+     "at": 0,
+     "props": {
+      "texto": "PP",
+      "color": "pp"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 740,
+     "y": 1410,
+     "scale": 0.55,
+     "at": "@debatir",
+     "props": {
+      "texto": "VOX",
+      "color": "vox"
+     },
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "2023: NO FUE",
+     "x": 540,
+     "y": 600,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@2023",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 760,
+     "scale": 1.0,
+     "at": "@vez",
+     "props": {
+      "texto": "PRIMERA VEZ",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "psoe",
+   "fondo": "plato",
+   "animo": "tension",
+   "trans": "pan",
+   "footnote": "Infobae 09/10/2026 · El Constitucional",
+   "lines": [
+    {
+     "text": "El PSOE dice que Sánchez irá a todos…",
+     "tono": "normal"
+    },
+    {
+     "text": "pero que dónde y con quién no lo decide Feijóo.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "medio",
+     "sobre": "sanchez",
+     "dur": 0,
+     "aire": 220
+    },
+    {
+     "at": "@dónde",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "tele",
+     "x": 200,
+     "y": 760,
+     "scale": 0.36,
+     "at": 0,
+     "props": {
+      "texto": "RTVE",
+      "color": [
+       40,
+       90,
+       170
+      ]
+     },
+     "acciones": [],
+     "id": "t_rtve",
+     "entra": "nada",
+     "sfx": null
+    },
+    {
+     "type": "objeto",
+     "objeto": "tele",
+     "x": 540,
+     "y": 760,
+     "scale": 0.36,
+     "at": 0,
+     "props": {
+      "texto": "ATRESMEDIA",
+      "color": [
+       230,
+       120,
+       30
+      ]
+     },
+     "acciones": [],
+     "id": "t_atres",
+     "entra": "nada",
+     "sfx": null
+    },
+    {
+     "type": "objeto",
+     "objeto": "tele",
+     "x": 880,
+     "y": 760,
+     "scale": 0.36,
+     "at": 0,
+     "props": {
+      "texto": "MEDIASET",
+      "color": [
+       60,
+       150,
+       90
+      ]
+     },
+     "acciones": [],
+     "id": "t_media",
+     "entra": "nada",
+     "sfx": null
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 400,
+     "y": 1500,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@todos",
+       "pose": "arriba",
+       "cara": "riendo"
+      },
+      {
+       "at": "@dónde",
+       "pose": "senala",
+       "mira": "der",
+       "cara": "serio"
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 1300,
+     "y": 1500,
+     "scale": 0.42,
+     "at": "@dónde-0.4",
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@dónde",
+       "x": 820,
+       "dur": 0.5
+      },
+      {
+       "at": "@Feijóo",
+       "take": true
+      }
+     ],
+     "entra": "nada",
+     "id": "feijoo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 980,
+     "scale": 0.7,
+     "at": "@dónde",
+     "props": {
+      "lineas": [
+       "«¿Dónde y con quién?",
+       "No lo decide Feijóo»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1180,
+     "scale": 1.0,
+     "at": "@decide",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "vox",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Moncloa.com 09/10/2026",
+   "lines": [
+    {
+     "text": "Vox pide que los debates reflejen el Congreso, donde es la tercera fuerza, con 33 diputados.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@33",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.7,
+     "at": 0,
+     "acciones": [],
+     "dibuja": 1.0
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 820,
+     "y": 1560,
+     "scale": 0.45,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@reflejen",
+       "pose": "senala_izq",
+       "mira": "izq"
+      },
+      {
+       "at": "@33",
+       "cara": "ilusionado",
+       "pose": "pulgar"
+      }
+     ],
+     "entra": "nada",
+     "id": "abascal"
+    },
+    {
+     "type": "rotulo",
+     "text": "3.ª FUERZA",
+     "x": 540,
+     "y": 500,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@tercera",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 680,
+     "scale": 0.6,
+     "at": "@33",
+     "props": {
+      "valor": 33,
+      "sufijo": " DIPUTADOS",
+      "ancho": 760
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    }
+   ]
+  },
+  {
+   "id": "pregunta",
+   "fondo": "salon",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Pregunta a la audiencia",
+   "lines": [
+    {
+     "text": "Y ahora tú: si solo pudieras ver uno, ¿cuál verías: el cara a cara o el debate a cuatro?",
+     "tono": "normal"
+    },
+    {
+     "text": "Escribe 2 o 4 en comentarios.",
+     "tono": "energia",
+     "pausa": 0.1
+    },
+    {
+     "text": "Síguenos y te contamos cuándo se cierran las fechas.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@cara",
+     "plano": "general",
+     "sobre": [
+      300,
+      950
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@cuatro",
+     "plano": "general",
+     "sobre": [
+      780,
+      950
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@Escribe",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.4
+    },
+    {
+     "at": "@Síguenos",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "tele",
+     "x": 290,
+     "y": 860,
+     "scale": 0.55,
+     "at": 0,
+     "props": {
+      "texto": "2",
+      "color": "pp"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "tele",
+     "x": 790,
+     "y": 860,
+     "scale": 0.55,
+     "at": 0,
+     "props": {
+      "texto": "4",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1640,
+     "scale": 0.62,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@cara",
+       "mira": "izq",
+       "pose": "piensa"
+      },
+      {
+       "at": "@cuatro",
+       "mira": "der"
+      },
+      {
+       "at": "@Escribe",
+       "mira": "camara",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@Síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@fechas",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿2 O 4?",
+     "x": 540,
+     "y": 480,
+     "size": 130,
+     "color": "amarillo",
+     "at": "@Escribe",
+     "golpe": true,
+     "out": "@Síguenos-0.3",
+     "fx": [
+      {
+       "at": "@comentarios",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 480,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@Síguenos",
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.4,
+  "titulo": "La guerra de los debates",
+  "capitulo": null
+ }
+}

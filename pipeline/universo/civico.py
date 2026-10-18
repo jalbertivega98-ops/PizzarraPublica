@@ -324,12 +324,93 @@ def pergamino(c, t=0.0, titulo="TRATADO", fecha="", lineas=(), **kw):
     pieza(c, poly([(150, 310), (130, 380), (160, 360), (175, 390)]), (190, 30, 40), 4)
 
 
+# ------------------------------------------------------------------ medios (podcast, tele, calendario)
+def microfono(c, t=0.0, encendido=True, **kw):
+    """Micro de podcast en brazo articulado; (0, 0) = cabeza del micro."""
+    c.drawPath(poly([(30, 60), (150, 200), (150, 330)], close=False), trazo(16, (50, 50, 60)))
+    c.drawPath(poly([(30, 60), (150, 200), (150, 330)], close=False), trazo(8, (120, 120, 135)))
+    pieza(c, rrect(-60, -130, 60, 90, 56), (60, 60, 72), 7)
+    for y in range(-100, 70, 22):
+        c.drawLine(-44, y, 44, y, trazo(3, (140, 140, 155)))
+    if encendido:
+        a = int(160 + 90 * math.sin(t * 6))
+        c.drawCircle(0, 112, 12, relleno((255, 60, 70), a))
+
+
+def silla(c, t=0.0, color="gris", vacia=True, texto="", **kw):
+    """Silla de estudio (respaldo alto); (0, 0) = suelo. color de la tapicería; texto en una chapa."""
+    col = color if not isinstance(color, str) else color
+    c.drawLine(-120, 0, 120, 0, trazo(10))
+    for x in (-110, 110):
+        c.drawLine(x * 0.8, 0, 0, -150, trazo(12, (60, 60, 70)))
+    pieza(c, rrect(-20, -240, 20, -150, 6), (60, 60, 70), 5)
+    pieza(c, rrect(-170, -300, 170, -230, 26), col, 7)  # asiento
+    pieza(c, rrect(-150, -640, 150, -290, 60), col, 7)  # respaldo
+    c.drawPath(elipse(-80, -540, 26, 70), relleno("blanco", 70))
+    if texto:
+        pieza(c, rrect(-120, -470, 120, -400, 12), "blanco", 5)
+        _texto(c, texto, 0, -418, 46, "tinta", "sub", 220)
+
+
+def tele(c, t=0.0, texto="", color="azul", pantalla=(30, 60, 140), **kw):
+    """Televisor de dibujo con antena; (0, 0) = centro de la pantalla. texto = rótulo en pantalla."""
+    for a in (-30, 30):
+        c.drawLine(0, -250, a * 4, -360, trazo(8))
+        c.drawCircle(a * 4, -360, 14, relleno("rojo"))
+    pieza(c, rrect(-300, -250, 300, 230, 40), color, 8)
+    pieza(c, rrect(-250, -200, 250, 170, 30), pantalla, 7)
+    c.drawPath(elipse(-150, -120, 60, 30), relleno("blanco", 60))
+    if texto:
+        _texto(c, texto, 0, 20, 92, "blanco", "sub", 420)
+    for x in (-120, 120):
+        c.drawLine(x, 230, x * 1.3, 300, trazo(10))
+
+
+def calendario(c, t=0.0, mes="NOVIEMBRE", inicio=6, dias=30, marcados=(), colores=None, tachados=(), **kw):
+    """Hoja de calendario mensual; (0, 0) = centro. inicio = columna (0=lunes) del día 1. marcados = días con círculo
+    (colores: {día: color}); tachados = días con aspa."""
+    colores = colores or {}
+    pieza(c, rrect(-380, -420, 380, 420, 26), "blanco", 8)
+    pieza(c, rrect(-380, -420, 380, -280, 26), "rojo", 8)
+    for x in (-200, 200):
+        pieza(c, rrect(x - 16, -460, x + 16, -390, 10), (90, 90, 100), 5)
+    _texto(c, mes, 0, -320, 76, "blanco", "sub", 600)
+    for i, d in enumerate("LMXJVSD"):
+        _texto(c, d, -300 + i * 100, -220, 40, (150, 150, 160), "sub")
+    for d in range(1, dias + 1):
+        k = inicio + d - 1
+        x, y = -300 + (k % 7) * 100, -140 + (k // 7) * 100
+        _texto(c, str(d), x, y, 46, "rojo" if k % 7 == 6 else "tinta", "sub")
+        if d in marcados:
+            col = colores.get(d, colores.get(str(d), "rojo"))
+            c.drawPath(suave([(x - 44, y - 30), (x, y - 62), (x + 46, y - 26), (x + 34, y + 20), (x - 30, y + 22)]), trazo(8, col))
+        if d in tachados:
+            c.drawLine(x - 36, y - 56, x + 36, y + 14, trazo(8, "rojo"))
+            c.drawLine(x + 36, y - 56, x - 36, y + 14, trazo(8, "rojo"))
+
+
+def invitacion(c, t=0.0, texto="INVITACIÓN", color="amarillo", abierta=False, **kw):
+    """Sobre de invitación con lacre; (0, 0) = centro."""
+    pieza(c, rrect(-200, -130, 200, 130, 14), (252, 246, 228), 7)
+    if abierta:
+        pieza(c, poly([(-198, -128), (0, -260), (198, -128)]), (240, 230, 200), 6)
+    else:
+        c.drawPath(poly([(-198, -128), (0, 20), (198, -128)], close=False), trazo(6, (170, 150, 110)))
+    pieza(c, elipse(0, 20, 40, 38), "rojo", 5)
+    c.drawPath(_estrella5(0, 20, 18), relleno((255, 160, 160)))
+    if texto:
+        pieza(c, rrect(-170, 60, 170, 116, 10), color, 4)
+        _texto(c, texto, 0, 104, 40, "tinta", "sub", 320)
+
+
 TIPOS = {"papeleta": papeleta, "urna": urna, "mesa_electoral": mesa_electoral, "camion": camion, "senal": senal,
          "alcoholimetro": alcoholimetro, "contador": contador, "barras": barras, "bola": bola, "lapida": lapida,
          "papelera": papelera, "libro": libro, "pasaporte": pasaporte, "maleta": maleta, "carabela": carabela,
-         "corona": corona, "pergamino": pergamino}
+         "corona": corona, "pergamino": pergamino, "microfono": microfono, "silla": silla, "tele": tele,
+         "calendario": calendario, "invitacion": invitacion}
 TAMANO = {"papeleta": (240, 160), "urna": (430, 400), "mesa_electoral": (720, 270), "camion": (700, 380),
           "senal": (300, 820), "alcoholimetro": (200, 440), "contador": (800, 240), "barras": (900, 700), "bola": (320, 320),
           "lapida": (360, 420), "papelera": (300, 340), "libro": (340, 420), "pasaporte": (240, 340), "maleta": (340, 360),
-          "carabela": (680, 520), "corona": (360, 260), "pergamino": (600, 760)}
-APOYADOS = {"mesa_electoral", "lapida"}
+          "carabela": (680, 520), "corona": (360, 260), "pergamino": (600, 760), "microfono": (340, 480),
+          "silla": (360, 660), "tele": (620, 680), "calendario": (780, 900), "invitacion": (420, 280)}
+APOYADOS = {"mesa_electoral", "lapida", "silla"}

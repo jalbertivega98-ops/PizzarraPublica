@@ -1,0 +1,114 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 5.03,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.47,
+    "texto": "Un youtuber ha puesto a los candidatos contra las cuerdas:"
+   },
+   {
+    "t0": 2.67,
+    "t1": 4.58,
+    "texto": "o vienen todos… o no viene nadie."
+   }
+  ]
+ },
+ {
+  "escena": "condiciones",
+  "inicio": 5.03,
+  "fin": 14.46,
+  "frases": [
+   {
+    "t0": 5.33,
+    "t1": 8.37,
+    "texto": "Jordi Wild ha invitado a los cuatro candidatos a The Wild Project."
+   },
+   {
+    "t0": 8.52,
+    "t1": 11.45,
+    "texto": "Tres condiciones: sin preguntas pactadas, sin sustitutos…"
+   },
+   {
+    "t0": 11.6,
+    "t1": 14.01,
+    "texto": "y si uno dice que no, no hay entrevistas para nadie."
+   }
+  ]
+ },
+ {
+  "escena": "si",
+  "inicio": 14.46,
+  "fin": 20.22,
+  "frases": [
+   {
+    "t0": 15.16,
+    "t1": 17.54,
+    "texto": "Feijóo contestó a las pocas horas: «cuando quiera»."
+   },
+   {
+    "t0": 17.74,
+    "t1": 19.77,
+    "texto": "Abascal, en X: «Cuenta conmigo»."
+   }
+  ]
+ },
+ {
+  "escena": "sanchez",
+  "inicio": 20.22,
+  "fin": 29.59,
+  "frases": [
+   {
+    "t0": 20.22,
+    "t1": 23.62,
+    "texto": "¿Y Sánchez? Su entorno dice que lo está estudiando con el equipo de campaña."
+   },
+   {
+    "t0": 23.82,
+    "t1": 26.97,
+    "texto": "Según El Confidencial Digital, Wild le da unos diez días."
+   },
+   {
+    "t0": 27.17,
+    "t1": 29.14,
+    "texto": "Y avisa: no será una entrevista-masaje."
+   }
+  ]
+ },
+ {
+  "escena": "fecha",
+  "inicio": 29.59,
+  "fin": 36.89,
+  "frases": [
+   {
+    "t0": 29.89,
+    "t1": 32.66,
+    "texto": "La cuarta silla, la de la izquierda, tampoco está cerrada."
+   },
+   {
+    "t0": 32.86,
+    "t1": 36.44,
+    "texto": "Si sale adelante, las entrevistas se emitirían a partir del 9 de noviembre."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 36.89,
+  "fin": 43.16,
+  "frases": [
+   {
+    "t0": 37.21,
+    "t1": 39.81,
+    "texto": "¿Crees que Sánchez irá? Escribe SÍ o NO, te leo."
+   },
+   {
+    "t0": 40.01,
+    "t1": 41.81,
+    "texto": "Y síguenos para saber si la silla se llena."
+   }
+  ]
+ }
+]

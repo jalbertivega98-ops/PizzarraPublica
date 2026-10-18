@@ -1,0 +1,1110 @@
+{
+ "slug": "guerra_senado",
+ "title": "La guerra del Senado",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Infobae (17/10/2026): PSOE y Frente Amplio, «Senado de Progreso», en 47 circunscripciones; resultados de 2023",
+  "El Español (18/10/2026): cómo se vota al Senado, decisión de Vox y tres quintos",
+  "Vozpópuli: simulación de listas conjuntas PP-Vox con los votos de 2023",
+  "Mapas dibujados sobre contornos de Natural Earth (dominio público)"
+ ],
+ "caption": "🏛️ Por primera vez, PSOE y Frente Amplio van juntos… pero solo al Senado\n🗳️ Cada provincia elige 4 senadores y tú marcas hasta 3: el primero suele llevarse 3\n📊 2023: PP 120 de 208 senadores elegidos; PSOE 72\n🤝 «Senado de Progreso» en 47 circunscripciones\n🔄 PP y Vox estudian su respuesta; con los votos de 2023 podrían quitar hasta 15 senadores (simulación)\n⚖️ En juego: los tres quintos para renovar el Constitucional y el CGPJ\n💬 ¿Juntos o por separado? Te leemos 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Infobae 17/10/2026 · El Español 18/10/2026 · Vozpópuli (simulación). ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#29N",
+  "#Senado",
+  "#elecciones",
+  "#PSOE",
+  "#PP",
+  "#Vox",
+  "#politica",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "calle",
+   "animo": "tension",
+   "footnote": "Infobae 17/10/2026",
+   "lines": [
+    {
+     "text": "Por primera vez, el PSOE y el Frente Amplio van juntos…",
+     "tono": "energia"
+    },
+    {
+     "text": "pero solo al Senado. ¿Por qué?",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "medio",
+     "sobre": "sanchez",
+     "dur": 0,
+     "aire": 220
+    },
+    {
+     "at": "@juntos",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@Senado",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    },
+    {
+     "at": "@Por",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.4,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@Senado",
+     "acciones": [],
+     "dibuja": 0.9
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": -200,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": 0.1,
+       "x": 380,
+       "dur": 0.8
+      },
+      {
+       "at": "@juntos",
+       "pose": "saluda",
+       "mira": "der"
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 1300,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": 0.1,
+       "x": 700,
+       "dur": 0.8
+      },
+      {
+       "at": "@juntos",
+       "pose": "saluda",
+       "mira": "izq"
+      }
+     ],
+     "entra": "nada",
+     "id": "fa"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 700,
+     "y": 1520,
+     "scale": 0.6,
+     "at": "@Frente",
+     "props": {
+      "texto": "FRENTE AMPLIO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "rotulo",
+     "text": "SOLO AL SENADO",
+     "x": 540,
+     "y": 520,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@Senado",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1700,
+     "scale": 0.4,
+     "at": "@Por-0.3",
+     "cara": "confundido",
+     "acciones": [
+      {
+       "at": "@qué",
+       "pose": "encoge"
+      }
+     ],
+     "hud": true,
+     "entra": "abajo",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "reglas",
+   "fondo": "colegio",
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "El Español 18/10/2026",
+   "lines": [
+    {
+     "text": "Porque en el Senado casi todas las provincias eligen cuatro senadores,",
+     "tono": "normal"
+    },
+    {
+     "text": "tú marcas hasta tres,",
+     "tono": "normal",
+     "pausa": 0.05
+    },
+    {
+     "text": "y lo normal es que el primero se lleve tres y el segundo, uno.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@tres",
+     "plano": "general",
+     "sobre": [
+      540,
+      820
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@primero",
+     "plano": "general",
+     "sobre": [
+      540,
+      1200
+     ],
+     "dur": 0.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 760,
+     "scale": 0.85,
+     "at": "@marcas",
+     "props": {
+      "lineas": [
+       "SENADO",
+       "X  CANDIDATO A",
+       "X  CANDIDATO B",
+       "X  CANDIDATO C",
+       "    CANDIDATO D"
+      ],
+      "color": [
+       236,
+       214,
+       176
+      ]
+     },
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "papel",
+     "dibuja": 1.0
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 460,
+     "scale": 0.6,
+     "at": "@cuatro",
+     "props": {
+      "valor": 4,
+      "sufijo": " SENADORES",
+      "ancho": 760
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@marcas"
+    },
+    {
+     "type": "rotulo",
+     "text": "MARCAS 3",
+     "x": 540,
+     "y": 460,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@marcas",
+     "golpe": true,
+     "out": "@primero",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 330,
+     "y": 1420,
+     "scale": 0.32,
+     "at": "@primero+0.00",
+     "props": {
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 470,
+     "y": 1420,
+     "scale": 0.32,
+     "at": "@primero+0.15",
+     "props": {
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 610,
+     "y": 1420,
+     "scale": 0.32,
+     "at": "@primero+0.30",
+     "props": {
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 750,
+     "y": 1420,
+     "scale": 0.32,
+     "at": "@primero+0.45",
+     "props": {
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "rotulo",
+     "text": "3 + 1",
+     "x": 540,
+     "y": 460,
+     "size": 120,
+     "color": "amarillo",
+     "at": "@segundo",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 120,
+     "y": 1640,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@tres",
+       "pose": "senala",
+       "cara": "idea"
+      },
+      {
+       "at": "@segundo",
+       "cara": "sorpresa",
+       "take": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "2023",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Infobae 17/10/2026",
+   "lines": [
+    {
+     "text": "Si la izquierda se divide, el primero suele ser el PP.",
+     "tono": "normal"
+    },
+    {
+     "text": "En 2023 sacó 120 de los 208 senadores que se votan; el PSOE, 72.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@120",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 980,
+     "scale": 1.0,
+     "at": "@2023-0.2",
+     "props": {
+      "tope": 208,
+      "decimales": 0,
+      "barras": [
+       {
+        "texto": "PP",
+        "valor": 120,
+        "color": "pp"
+       },
+       {
+        "texto": "PSOE",
+        "valor": 72,
+        "color": "psoe"
+       }
+      ]
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 1.6
+    },
+    {
+     "type": "rotulo",
+     "text": "DE 208",
+     "x": 540,
+     "y": 420,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@208",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "critica",
+     "x": 900,
+     "y": 1640,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "esceptica",
+     "acciones": [
+      {
+       "at": "@divide",
+       "pose": "cruzados"
+      },
+      {
+       "at": "@PP",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@72",
+       "mira": "izq",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "nada",
+     "id": "critica"
+    }
+   ]
+  },
+  {
+   "id": "mapa",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "aventura",
+   "trans": "zoom",
+   "footnote": "Infobae 17/10/2026",
+   "lines": [
+    {
+     "text": "Por eso ahora van juntos con el nombre de «Senado de Progreso», en 47 provincias.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      760.8
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@47",
+     "plano": "general",
+     "sobre": [
+      551.3,
+      760.8
+     ],
+     "dur": 0.8,
+     "zoom": 1.12
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana"
+     },
+     "acciones": [
+      {
+       "at": "@juntos",
+       "props": {
+        "resalta": [
+         "Albacete",
+         "Alicante",
+         "Almería",
+         "Asturias",
+         "Badajoz",
+         "Baleares",
+         "Bizkaia",
+         "Burgos",
+         "Cantabria",
+         "Castellón",
+         "Ceuta",
+         "Ciudad Real",
+         "Cuenca",
+         "Cáceres",
+         "Cádiz",
+         "Córdoba",
+         "Gipuzkoa",
+         "Granada",
+         "Guadalajara",
+         "Huelva"
+        ]
+       },
+       "sfx": "pop"
+      },
+      {
+       "at": "@Progreso",
+       "props": {
+        "resalta": [
+         "Albacete",
+         "Alicante",
+         "Almería",
+         "Asturias",
+         "Badajoz",
+         "Baleares",
+         "Bizkaia",
+         "Burgos",
+         "Cantabria",
+         "Castellón",
+         "Ceuta",
+         "Ciudad Real",
+         "Cuenca",
+         "Cáceres",
+         "Cádiz",
+         "Córdoba",
+         "Gipuzkoa",
+         "Granada",
+         "Guadalajara",
+         "Huelva",
+         "Huesca",
+         "Jaén",
+         "La Coruña",
+         "La Rioja",
+         "León",
+         "Lugo",
+         "Madrid",
+         "Melilla",
+         "Murcia",
+         "Málaga",
+         "Navarra",
+         "Orense",
+         "Palencia",
+         "Pontevedra",
+         "Salamanca",
+         "Segovia",
+         "Sevilla",
+         "Soria",
+         "Teruel",
+         "Toledo",
+         "Valencia",
+         "Valladolid",
+         "Zamora",
+         "Zaragoza",
+         "Álava",
+         "Ávila"
+        ]
+       },
+       "sfx": "kaching"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.0
+    },
+    {
+     "type": "rotulo",
+     "text": "«SENADO DE PROGRESO»",
+     "x": 540,
+     "y": 330,
+     "size": 80,
+     "color": "amarillo",
+     "at": "@nombre",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 1200,
+     "scale": 0.6,
+     "at": "@47",
+     "props": {
+      "valor": 47,
+      "sufijo": " CIRCUNSCRIPCIONES",
+      "ancho": 860
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    }
+   ]
+  },
+  {
+   "id": "vox",
+   "fondo": "calle",
+   "animo": "tension",
+   "trans": "pan",
+   "footnote": "El Español 18/10/2026",
+   "lines": [
+    {
+     "text": "Y el lunes, Vox decidía si negocia con el PP retirarse en algunas provincias a cambio de ir en sus listas.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@PP",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.6,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 330,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Vox",
+       "mira": "abascal"
+      },
+      {
+       "at": "@listas",
+       "pose": "pulgar"
+      }
+     ],
+     "entra": "nada",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 760,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Vox",
+       "pose": "piensa"
+      },
+      {
+       "at": "@listas",
+       "mira": "feijoo"
+      }
+     ],
+     "entra": "nada",
+     "id": "abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 600,
+     "scale": 1.0,
+     "at": "@decidía",
+     "props": {
+      "texto": "PENDIENTE",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "simulacion",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "tension",
+   "trans": "zoom",
+   "footnote": "Vozpópuli (simulación con los votos de 2023)",
+   "lines": [
+    {
+     "text": "Con los votos de 2023, juntos podrían quitarle a la izquierda hasta 15 senadores.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      426.6,
+      953.2
+     ],
+     "dur": 0,
+     "zoom": 2.2
+    },
+    {
+     "at": "@15",
+     "plano": "general",
+     "sobre": [
+      551.3,
+      760.8
+     ],
+     "dur": 1.2,
+     "zoom": 1.0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana",
+      "progreso": 1.0
+     },
+     "acciones": [
+      {
+       "at": "@juntos",
+       "props": {
+        "resalta": [
+         "Sevilla",
+         "Badajoz",
+         "Cáceres",
+         "Huelva",
+         "Valencia",
+         "Santa Cruz de Tenerife",
+         "Las Palmas",
+         "Baleares",
+         "Barcelona",
+         "Tarragona",
+         "Álava",
+         "Navarra"
+        ]
+       },
+       "sfx": "pop"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 0.01
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 1200,
+     "scale": 0.6,
+     "at": "@15",
+     "props": {
+      "valor": 15,
+      "prefijo": "HASTA ",
+      "sufijo": " SENADORES",
+      "ancho": 860
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1400,
+     "scale": 1.0,
+     "at": "@senadores",
+     "props": {
+      "texto": "SIMULACIÓN",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "juego",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "tension",
+   "trans": "papel",
+   "footnote": "El Español 18/10/2026",
+   "lines": [
+    {
+     "text": "¿Qué está en juego? Los tres quintos del Senado,",
+     "tono": "normal"
+    },
+    {
+     "text": "necesarios para renovar el Constitucional y el CGPJ sin el otro bloque.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Constitucional",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "3/5",
+     "x": 540,
+     "y": 520,
+     "size": 200,
+     "color": "amarillo",
+     "at": "@quintos",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "libro",
+     "x": 330,
+     "y": 1050,
+     "scale": 0.8,
+     "at": "@Constitucional",
+     "props": {
+      "titulo": "CONSTITUCIONAL",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "libro",
+     "x": 750,
+     "y": 1050,
+     "scale": 0.8,
+     "at": "@CGPJ",
+     "props": {
+      "titulo": "CGPJ",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 540,
+     "y": 1660,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "confundido",
+     "acciones": [
+      {
+       "at": "@juego",
+       "pose": "encoge"
+      },
+      {
+       "at": "@Constitucional",
+       "mira": "izq"
+      },
+      {
+       "at": "@CGPJ",
+       "mira": "der",
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "nada",
+     "id": "pizon"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "colegio",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Pregunta a la audiencia",
+   "lines": [
+    {
+     "text": "¿Juntos o por separado? Te leo.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y síguenos.",
+     "tono": "energia",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@síguenos",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.4,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "papeleta",
+     "x": 540,
+     "y": 900,
+     "scale": 1.3,
+     "at": 0,
+     "props": {
+      "color": "sepia",
+      "texto": "SENADO"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "flota": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1640,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@separado",
+       "mira": "camara",
+       "pose": "piensa"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿JUNTOS O SEPARADOS?",
+     "x": 540,
+     "y": 480,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@Juntos",
+     "golpe": true,
+     "out": "@síguenos-0.2",
+     "fx": [
+      {
+       "at": "@leo",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 480,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.0,
+  "titulo": "La guerra del Senado",
+  "capitulo": null
+ }
+}

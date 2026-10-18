@@ -51,6 +51,8 @@ scenes = [
        elements=[
         quien("piz", -200, 0, 0.55, "ilusionado", entra="nada", objeto="papeleta", pose="sostiene", acciones=[
             {"at": 0.2, "x": 300, "dur": 0.9, "corre": True}, {"at": "@Project", "pose": "saluda", "cara": "riendo"},
+            {"at": "@Tres", "cara": "pensativo", "pose": "piensa", "mira": "arriba"}, {"at": "@pactadas", "salta": True, "cara": "sorpresa"},
+            {"at": "@sustitutos", "pose": "cruzados", "cara": "serio", "mira": "camara"},
             {"at": "@dice", "cara": "susto", "take": True}, {"at": "@nadie", "tropieza": True}]),
         *[obj("invitacion", 160 + i * 250, 520 - (i % 2) * 60, "@cuatro+%.2f" % (i * 0.15), 0.5, id=f"inv{i}", entra="cae",
               sfx="papel", props={"texto": "INVITACIÓN"}, flota=True) for i in range(4)],
@@ -85,7 +87,8 @@ scenes = [
                plano("@diez", "general", [540, 900], 0.5, zoom=1.06), plano("@será", "medio", "wild", 0.4, aire=200)],
        elements=[
         quien("sanchez", 360, 0, 0.55, "pensativo", entra="nada", acciones=[
-            {"at": 0.1, "pose": "piensa"}, {"at": "@estudiando", "mira": "invitacion"},
+            {"at": 0.1, "pose": "piensa"}, {"at": "@entorno", "mira": "invitacion", "cara": "confundido"}, {"at": "@estudiando", "mira": "invitacion"},
+            {"at": "@equipo", "pose": "encoge", "cara": "pensativo"}, {"at": "@campaña", "gira": True}, {"at": "@campaña+1.1", "mira": "camara", "cara": "preocupado"}, {"at": "@campaña+2.1", "tiembla": True},
             {"at": "@diez", "cara": "preocupado", "mira": "reloj"}, {"at": "@será", "cara": "susto", "take": True}]),
         obj("invitacion", 620, 900, 0.2, 0.5, id="invitacion", entra="pop", sfx="papel", props={"texto": "INVITACIÓN"}, flota=True),
         sello("PENDIENTE", "naranja", 560, "@estudiando", x=380),

@@ -129,14 +129,15 @@ scenes = [
         V("Y ahora tú: si solo pudieras ver uno, ¿cuál verías: el cara a cara o el debate a cuatro?", "normal"),
         V("Escribe 2 o 4 en comentarios.", "energia", 0.1),
         V("Síguenos y te contamos cuándo se cierran las fechas.", "normal", 0.15),
-    ], camara=[plano(0, "general", [540, 1000], 0), plano("@cara", "general", [300, 950], 0.5, zoom=1.08),
+    ], camara=[plano(0, "general", [540, 1000], 0), plano("@pudieras", "medio", "piz", 0.5, aire=220), plano("@cara", "general", [300, 950], 0.5, zoom=1.08),
                plano("@cuatro", "general", [780, 950], 0.5, zoom=1.08), plano("@Escribe", "general", [540, 1000], 0.4),
                plano("@Síguenos", "medio", "piz", 0.5, aire=220)],
        elements=[
         obj("tele", 290, 860, 0, 0.55, entra="nada", props={"texto": "2", "color": "pp"}),
         obj("tele", 790, 860, 0, 0.55, entra="nada", props={"texto": "4", "color": "naranja"}),
         quien("piz", 540, 0, 0.62, "pensativo", y=1640, entra="nada", acciones=[
-            {"at": "@cara", "mira": "izq", "pose": "piensa"}, {"at": "@cuatro", "mira": "der"},
+            {"at": "@ahora", "salta": True, "cara": "ilusionado", "mira": "camara"}, {"at": "@pudieras", "pose": "senala", "mira": "camara"},
+            {"at": "@uno", "cara": "pensativo"}, {"at": "@cara", "mira": "izq", "pose": "piensa"}, {"at": "@cuatro", "mira": "der"},
             {"at": "@Escribe", "mira": "camara", "cara": "ilusionado", "pose": "senala"},
             {"at": "@Síguenos", "pose": "saluda", "cara": "riendo"}, {"at": "@fechas", "salta": True}]),
         rot("¿2 O 4?", 540, 480, "@Escribe", 130, "amarillo", golpe=True, out="@Síguenos-0.3", fx=[{"at": "@comentarios", "do": "latir"}]),

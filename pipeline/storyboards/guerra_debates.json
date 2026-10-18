@@ -1142,6 +1142,13 @@
      "dur": 0
     },
     {
+     "at": "@pudieras",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 220
+    },
+    {
      "at": "@cara",
      "plano": "general",
      "sobre": [
@@ -1216,6 +1223,21 @@
      "at": 0,
      "cara": "pensativo",
      "acciones": [
+      {
+       "at": "@ahora",
+       "salta": true,
+       "cara": "ilusionado",
+       "mira": "camara"
+      },
+      {
+       "at": "@pudieras",
+       "pose": "senala",
+       "mira": "camara"
+      },
+      {
+       "at": "@uno",
+       "cara": "pensativo"
+      },
       {
        "at": "@cara",
        "mira": "izq",

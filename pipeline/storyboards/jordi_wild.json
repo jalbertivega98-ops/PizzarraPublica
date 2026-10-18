@@ -285,6 +285,23 @@
        "cara": "riendo"
       },
       {
+       "at": "@Tres",
+       "cara": "pensativo",
+       "pose": "piensa",
+       "mira": "arriba"
+      },
+      {
+       "at": "@pactadas",
+       "salta": true,
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@sustitutos",
+       "pose": "cruzados",
+       "cara": "serio",
+       "mira": "camara"
+      },
+      {
        "at": "@dice",
        "cara": "susto",
        "take": true
@@ -701,8 +718,31 @@
        "pose": "piensa"
       },
       {
+       "at": "@entorno",
+       "mira": "invitacion",
+       "cara": "confundido"
+      },
+      {
        "at": "@estudiando",
        "mira": "invitacion"
+      },
+      {
+       "at": "@equipo",
+       "pose": "encoge",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@campaña",
+       "gira": true
+      },
+      {
+       "at": "@campaña+1.1",
+       "mira": "camara",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@campaña+2.1",
+       "tiembla": true
       },
       {
        "at": "@diez",

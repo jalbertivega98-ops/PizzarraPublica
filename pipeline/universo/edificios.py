@@ -234,11 +234,69 @@ def fabrica(c, est, t=0.0):
     pieza(c, rrect(-90, -180, 90, 0, 6), "madera", 6)
 
 
+# ------------------------------------------------------------------ ayuntamiento, edificio abandonado
+def ayuntamiento(c, est, t=0.0):
+    """Casa consistorial con balcón, reloj y banderas; est["texto"] = rótulo."""
+    w, h = 900, 720
+    sombra_suelo(c, 0, 6, 480)
+    pieza(c, rrect(-w / 2, -h, w / 2, 0, 8), "fachada", 7, shader=degradado(-h, 0, (250, 222, 190), (232, 196, 158)))
+    pieza(c, rrect(-w / 2 - 20, -h - 30, w / 2 + 20, -h + 20, 8), "teja", 6)
+    pieza(c, rrect(-120, -h - 190, 120, -h - 20, 10), "piedra", 6)  # torreta del reloj
+    c.drawCircle(0, -h - 105, 62, relleno("blanco")); c.drawCircle(0, -h - 105, 62, trazo(6))
+    a = t * 0.5
+    c.drawLine(0, -h - 105, 40 * math.sin(a), -h - 105 - 40 * math.cos(a), trazo(6))
+    c.drawLine(0, -h - 105, 0, -h - 150, trazo(6))
+    for x, rayas in ((-170, ("rojo", "amarillo", "amarillo", "rojo")), (170, ("amarillo", "rojo") * 4 + ("amarillo",))):
+        c.drawLine(x, -h - 20, x, -h - 240, trazo(6))  # mástiles con las banderas de España y de Cataluña
+        d = 1 if x > 0 else -1
+        ola = 6 * math.sin(t * 5 + x)
+        for i, col in enumerate(rayas):
+            a = 64 / len(rayas)
+            y0 = -h - 236 + i * a
+            pieza(c, suave([(x, y0), (x + 70 * d, y0 + ola), (x + 120 * d, y0), (x + 120 * d, y0 + a), (x + 70 * d, y0 + a + ola), (x, y0 + a)]), col, 0)
+        c.drawPath(suave([(x, -h - 236), (x + 70 * d, -h - 236 + ola), (x + 120 * d, -h - 236), (x + 120 * d, -h - 172), (x + 70 * d, -h - 172 + ola), (x, -h - 172)]), trazo(5))
+    texto_cartoon(c, est.get("texto", "AYUNTAMIENTO"), 0, -h + 110, 66, color="tinta", fuente="sub", borde=2)
+    cara(c, 0, -h + 250, 1.0, est.get("cara", "normal"), est.get("mira", (0, 0)), est.get("parpadeo", 0), est.get("habla", 0), t)
+    for x in (-330, -200, 200, 330):
+        ventana(c, x - 40, -h + 220, 80, 110, luz=True)
+    pieza(c, rrect(-170, -h + 450, 170, -h + 474, 6), "tinta", 0)  # balcón
+    for i in range(9):
+        x = -160 + i * 40
+        c.drawLine(x, -h + 450, x, -h + 400, trazo(5))
+    c.drawLine(-170, -h + 400, 170, -h + 400, trazo(6))
+    pieza(c, rrect(-90, -200, 90, 0, 40), "madera", 6)
+    maceta(c, -w / 2 - 30, 0, 0.9)
+    maceta(c, w / 2 + 30, 0, 0.9)
+
+
+def abandonado(c, est, t=0.0):
+    """Edificio viejo cerrado: ventanas tapiadas con tablas; est["texto"] = rótulo."""
+    w, h = 900, 640
+    sombra_suelo(c, 0, 6, 480)
+    pieza(c, rrect(-w / 2, -h, w / 2, 0, 6), (206, 198, 186), 7, shader=degradado(-h, 0, (214, 206, 194), (180, 170, 156)))
+    for x, y in ((-300, -h + 60), (240, -h + 380), (-80, -120)):  # grietas
+        c.drawPath(suave([(x, y), (x + 20, y + 30), (x + 6, y + 60), (x + 30, y + 90)], close=False), trazo(4, (110, 100, 90)))
+    texto_cartoon(c, est.get("texto", "B9"), 0, -h + 100, 90, color=(120, 40, 40), fuente="sub", borde=3)
+    cara(c, 0, -h + 280, 0.9, est.get("cara", "triste"), est.get("mira", (0, 0)), est.get("parpadeo", 0), est.get("habla", 0), t)
+    for r in range(2):
+        for x in (-330, -190, 110, 250):
+            y = -h + 200 + r * 210
+            pieza(c, rrect(x, y, x + 90, y + 110, 4), (60, 60, 70), 5)
+            for k in (25, 70):  # tablas cruzadas
+                c.save(); c.translate(x + 45, y + k); c.rotate(-12 if k < 50 else 10)
+                pieza(c, rrect(-58, -10, 58, 10, 3), "madera", 4)
+                c.restore()
+    pieza(c, rrect(-90, -200, 90, 0, 6), (90, 80, 72), 6)
+    pieza(c, rrect(-110, -110, 110, -70, 4), "madera", 4)
+
+
 TIPOS = {"casa": casa, "piso": piso, "banco": banco, "hacienda": hacienda, "congreso": congreso, "hospital": hospital,
-         "supermercado": supermercado, "fabrica": fabrica}
+         "supermercado": supermercado, "fabrica": fabrica,
+         "ayuntamiento": ayuntamiento, "abandonado": abandonado}
 # tamaño aproximado (ancho, alto) para la cámara
 TAMANO = {"casa": (520, 560), "piso": (450, 680), "banco": (1000, 900), "hacienda": (880, 760), "congreso": (1120, 760),
-          "hospital": (800, 760), "supermercado": (900, 560), "fabrica": (940, 780)}
+          "hospital": (800, 760), "supermercado": (900, 560), "fabrica": (940, 780),
+          "ayuntamiento": (960, 1000), "abandonado": (940, 700)}
 
 
 def dibuja(c, tipo, est=None, t=0.0, **kw):

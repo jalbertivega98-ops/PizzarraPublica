@@ -64,6 +64,10 @@ PERSONAJES = {
     "gallardo": dict(nombre="Miguel Ángel Gallardo", papel="Expresidente de la Diputación de Badajoz", cara="normal", marco="marco_oscuro",
                      acento="gris", pelo=((222, 222, 226), "canoso"), corbata="tinta", chapa=("GALLARDO", "gris"), zapatilla="negro",
                      garabatos=()),
+    # fichaje del PP por Barcelona (oct. 2026): misma regla, pelo rapado a los lados y chapa con el apellido
+    "albiol": dict(nombre="Xavier García Albiol", papel="Alcalde de Badalona y candidato del PP por Barcelona", cara="normal",
+                   marco="marco", acento="pp", pelo=((96, 90, 92), "rapado"), chapa=("ALBIOL", "pp"), zapatilla="azul",
+                   garabatos=()),
     "jueza": dict(nombre="La jueza", papel="Instruye la causa", cara="serio", marco="marco_oscuro", acento="gris", gafas="cuadradas",
                   melena=True, chapa=("JUEZA", "tinta"), zapatilla="negro", garabatos=()),
     "estafador": dict(nombre="El estafador", papel="Se hace pasar por tu banco", cara="burla", marco="marco_oscuro",
@@ -471,6 +475,9 @@ def accesorios_cuerpo(c, ficha):
             for sx in (-1, 1):
                 pieza(c, suave([(sx * 40, 0), (sx * 70, -40), (sx * 130, -36), (sx * 158, 10), (sx * 120, 6)]), col, 5)
             pieza(c, suave([(-46, -4), (0, -30), (46, -4), (0, 4)]), col, 4)
+        elif estilo == "rapado":  # cabeza despejada: solo una franja corta a los lados
+            for sx in (-1, 1):
+                pieza(c, suave([(sx * 70, 6), (sx * 92, -8), (sx * 148, -12), (sx * 160, 6)]), col, 4)
         else:
             pts = [(-156, 14), (-152, -34)]
             for k in range(7):  # mechones

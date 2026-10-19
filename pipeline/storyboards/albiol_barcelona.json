@@ -1,0 +1,1651 @@
+{
+ "slug": "albiol_barcelona",
+ "title": "Alcalde y diputado a la vez",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "El Independiente (17/10/2026): el PP anuncia a Albiol como candidato por Barcelona",
+  "pp.es, Infobae y El Debate (18/10/2026): número 1 y ponente de la ley antiokupación",
+  "Servimedia / Diario Siglo XXI y Pressdigital (18/10/2026): «No me voy de Badalona»",
+  "ElNacional: estatutos del PP, art. 12.1.c y 12.2; resultado de 2023",
+  "Artículo14 (06/10/2026): 32 escaños en Barcelona, 38 en Madrid",
+  "Agencias (17/12/2025) y Ara: desalojo del B9",
+  "Metrópoli Abierta (19/10/2026): el PSC de Badalona pide un alcalde accidental",
+  "Personajes dibujados como pizarras, sin caricatura"
+ ],
+ "caption": "🧢 ¿Se puede ser alcalde y diputado a la vez? Albiol dice que sí\n🗳️ Feijóo le ficha como número 1 del PP por Barcelona para el 29N\n📜 Y le encarga ser el ponente de la ley antiokupación (aún sin texto)\n🏛️ Promete: «No me voy de Badalona»\n⚖️ Los estatutos del PP lo ven incompatible, salvo excepción\n💬 ¿Alcalde y diputado a la vez: suma o resta? Te leemos 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: El Independiente 17/10/2026 · pp.es, Infobae y El Debate 18/10/2026 · Servimedia 18/10/2026 · ElNacional · Artículo14 06/10/2026 · Metrópoli Abierta 19/10/2026. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#29N",
+  "#Albiol",
+  "#Badalona",
+  "#Barcelona",
+  "#Feijóo",
+  "#PP",
+  "#elecciones",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "calle",
+   "animo": "comico",
+   "footnote": "El Independiente 17/10/2026 · Infobae 18/10/2026",
+   "lines": [
+    {
+     "text": "¿Se puede ser alcalde y diputado a la vez?",
+     "tono": "energia"
+    },
+    {
+     "text": "Xavier García Albiol dice que sí.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Y Feijóo acaba de ficharle.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0,
+     "aire": 260
+    },
+    {
+     "at": "@Albiol",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@ficharle",
+     "plano": "general",
+     "sobre": [
+      540,
+      1020
+     ],
+     "dur": 0.4,
+     "zoom": 1.05
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@alcalde",
+       "mira": "arriba"
+      },
+      {
+       "at": "@diputado",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@vez",
+       "cara": "confundido",
+       "pose": "encoge",
+       "mira": "camara"
+      },
+      {
+       "at": "@Albiol",
+       "x": 300,
+       "dur": 0.5
+      },
+      {
+       "at": "@sí",
+       "mira": "der",
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "gorra",
+     "x": 540,
+     "y": 1018.0,
+     "scale": 0.45,
+     "at": "@alcalde",
+     "props": {
+      "texto": "ALCALDE",
+      "color": "naranja"
+     },
+     "acciones": [
+      {
+       "at": "@Albiol",
+       "x": 300,
+       "dur": 0.5
+      }
+     ],
+     "id": "g_alc",
+     "entra": "cae",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "gorra",
+     "x": 540,
+     "y": 948.0,
+     "scale": 0.45,
+     "at": "@diputado",
+     "props": {
+      "texto": "DIPUTADO",
+      "color": "azul"
+     },
+     "acciones": [
+      {
+       "at": "@Albiol",
+       "x": 300,
+       "dur": 0.5
+      },
+      {
+       "at": "@vez",
+       "tiembla": true
+      }
+     ],
+     "id": "g_dip",
+     "entra": "cae",
+     "sfx": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "albiol",
+     "x": 1300,
+     "y": 1340,
+     "scale": 0.66,
+     "at": "@García",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@García",
+       "x": 760,
+       "dur": 0.7
+      },
+      {
+       "at": "@sí",
+       "pose": "pulgar",
+       "cara": "riendo",
+       "mira": "camara"
+      },
+      {
+       "at": "@ficharle",
+       "mira": "izq"
+      }
+     ],
+     "entra": "nada",
+     "id": "albiol"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 760,
+     "y": 1650,
+     "scale": 0.42,
+     "at": "@Feijóo",
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@ficharle",
+       "pose": "pulgar"
+      }
+     ],
+     "entra": "abajo",
+     "hud": true,
+     "id": "feijoo"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿LAS DOS A LA VEZ?",
+     "x": 540,
+     "y": 430,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@vez",
+     "golpe": true,
+     "out": "@ficharle",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "FICHAJE DEL PP",
+     "x": 540,
+     "y": 430,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@ficharle",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "mapa",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "aventura",
+   "trans": "zoom",
+   "footnote": "El Independiente 17/10/2026 · Artículo14 06/10/2026 (BOE)",
+   "lines": [
+    {
+     "text": "El sábado, el PP le anunció como número uno por Barcelona para el 29 de noviembre.",
+     "tono": "normal"
+    },
+    {
+     "text": "Barcelona reparte 32 escaños: la segunda provincia con más, tras Madrid.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@Barcelona",
+     "plano": "general",
+     "sobre": [
+      884.1,
+      657.9
+     ],
+     "dur": 1.0,
+     "zoom": 2.6
+    },
+    {
+     "at": "@segunda",
+     "plano": "general",
+     "sobre": [
+      720,
+      700
+     ],
+     "dur": 0.8,
+     "zoom": 1.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana",
+      "orden": [
+       "Barcelona"
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@Barcelona",
+       "props": {
+        "resalta": [
+         "Barcelona"
+        ]
+       },
+       "sfx": "pop"
+      },
+      {
+       "at": "@Madrid",
+       "props": {
+        "resalta": [
+         "Barcelona",
+         "Madrid"
+        ]
+       },
+       "sfx": "pop"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.4
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 890.1,
+     "y": 657.9,
+     "scale": 0.12,
+     "at": "@Barcelona+0.3",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "personaje",
+     "quien": "albiol",
+     "x": 862.1,
+     "y": 671.9,
+     "scale": 0.07,
+     "at": "@Barcelona+0.5",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@noviembre",
+       "salta": true
+      },
+      {
+       "at": "@Madrid",
+       "mira": "izq",
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "cae",
+     "id": "albiol"
+    },
+    {
+     "type": "rotulo",
+     "text": "Nº 1 POR BARCELONA",
+     "x": 540,
+     "y": 430,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@número",
+     "golpe": true,
+     "out": "@32",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 470,
+     "scale": 0.8,
+     "at": "@32",
+     "props": {
+      "valor": 32,
+      "sufijo": " ESCAÑOS",
+      "ancho": 760
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1560,
+     "scale": 0.8,
+     "at": "@Madrid",
+     "props": {
+      "texto": "MADRID: 38",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "encargo",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "tension",
+   "trans": "iris",
+   "footnote": "pp.es · Infobae · El Debate (18/10/2026)",
+   "lines": [
+    {
+     "text": "Y el domingo, en Barcelona, Feijóo le hizo un encargo:",
+     "tono": "normal"
+    },
+    {
+     "text": "«Vas a ser el ponente de la ley. La vamos a aprobar contigo».",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Es decir, el que la defiende en el Congreso. Del texto, aún no hay detalles.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@ponente",
+     "plano": "medio",
+     "sobre": [
+      600,
+      1050
+     ],
+     "dur": 0.5,
+     "aire": 240
+    },
+    {
+     "at": "@Congreso",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.6
+    },
+    {
+     "at": "@detalles",
+     "plano": "general",
+     "sobre": [
+      540,
+      980
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.6,
+     "at": "@defiende-0.3",
+     "acciones": [
+      {
+       "at": "@detalles",
+       "cara": "confundido"
+      }
+     ],
+     "entra": "crece",
+     "sfx": "pop",
+     "dibuja": 0.8
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 280,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@encargo",
+       "pose": "senala",
+       "mira": "der",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@aprobar",
+       "pose": "pulgar",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "nada",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "albiol",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@encargo",
+       "mira": "izq"
+      },
+      {
+       "at": "@ponente",
+       "cara": "ilusionado",
+       "salta": true
+      },
+      {
+       "at": "@defiende",
+       "pose": "sostiene"
+      },
+      {
+       "at": "@detalles",
+       "cara": "pensativo",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "id": "albiol"
+    },
+    {
+     "type": "objeto",
+     "objeto": "pergamino",
+     "x": 330,
+     "y": 900,
+     "scale": 0.42,
+     "at": "@encargo",
+     "props": {
+      "titulo": "LEY ANTIOKUPACIÓN",
+      "lineas": [
+       "…",
+       "…"
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@ponente",
+       "x": 760,
+       "y": 880,
+       "dur": 0.6
+      },
+      {
+       "at": "@detalles",
+       "tiembla": true
+      }
+     ],
+     "id": "ley",
+     "entra": "pop",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 520,
+     "scale": 0.8,
+     "at": "@Vas",
+     "props": {
+      "lineas": [
+       "«Vas a ser el ponente.",
+       "La vamos a aprobar contigo»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "out": "@decir"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 560,
+     "scale": 1.0,
+     "at": "@decir",
+     "props": {
+      "texto": "PONENTE",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@texto"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 560,
+     "scale": 1.0,
+     "at": "@texto",
+     "props": {
+      "texto": "TEXTO: SIN DETALLES",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "quien",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Infobae 18/10/2026 · ElNacional (resultado de 2023)",
+   "lines": [
+    {
+     "text": "¿Por qué él? Es alcalde de Badalona, la cuarta ciudad de Cataluña.",
+     "tono": "normal"
+    },
+    {
+     "text": "En 2023 ganó con mayoría absoluta: 18 de 27 concejales.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@alcalde",
+     "plano": "medio",
+     "sobre": "albiol",
+     "dur": 0.5,
+     "aire": 260
+    },
+    {
+     "at": "@2023",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@18",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "ayuntamiento",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "acciones": [
+      {
+       "at": "@absoluta",
+       "cara": "ilusionado"
+      }
+     ],
+     "texto": "BADALONA",
+     "entra": "nada",
+     "dibuja": 0.8
+    },
+    {
+     "type": "personaje",
+     "quien": "albiol",
+     "x": 1250,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0.1,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": 0.1,
+       "x": 760,
+       "dur": 0.8
+      },
+      {
+       "at": "@alcalde",
+       "pose": "senala_izq",
+       "mira": "izq",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@absoluta",
+       "salta": true,
+       "cara": "riendo",
+       "pose": "arriba"
+      }
+     ],
+     "entra": "nada",
+     "id": "albiol"
+    },
+    {
+     "type": "objeto",
+     "objeto": "gorra",
+     "x": 1250,
+     "y": 1018.0,
+     "scale": 0.45,
+     "at": 0.1,
+     "props": {
+      "texto": "ALCALDE",
+      "color": "naranja"
+     },
+     "acciones": [
+      {
+       "at": 0.1,
+       "x": 760,
+       "dur": 0.8
+      },
+      {
+       "at": "@absoluta",
+       "salta": true
+      }
+     ],
+     "entra": "nada"
+    },
+    {
+     "type": "rotulo",
+     "text": "4.ª CIUDAD DE CATALUÑA",
+     "x": 540,
+     "y": 430,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@cuarta",
+     "golpe": true,
+     "out": "@2023",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 460,
+     "scale": 0.8,
+     "at": "@18",
+     "props": {
+      "valor": 18,
+      "sufijo": " DE 27",
+      "ancho": 640
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 620,
+     "scale": 0.8,
+     "at": "@absoluta",
+     "props": {
+      "texto": "MAYORÍA ABSOLUTA",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "b9",
+   "fondo": "calle",
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Agencias 17/12/2025 · Ara · Infobae 18/10/2026",
+   "lines": [
+    {
+     "text": "Y en diciembre de 2025 pidió y logró el desalojo del antiguo instituto B9, donde vivían unas 400 personas.",
+     "tono": "normal"
+    },
+    {
+     "text": "Feijóo le llama «el político peatonal de Cataluña».",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@400",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    },
+    {
+     "at": "@Feijóo",
+     "plano": "general",
+     "sobre": [
+      540,
+      1050
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "abandonado",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "acciones": [],
+     "texto": "B9",
+     "entra": "nada",
+     "dibuja": 0.8
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 450,
+     "scale": 0.8,
+     "at": "@400",
+     "props": {
+      "valor": 400,
+      "prefijo": "~",
+      "sufijo": " PERSONAS",
+      "ancho": 760
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 610,
+     "scale": 1.0,
+     "at": "@personas",
+     "props": {
+      "texto": "CONFIRMADO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "albiol",
+     "x": -200,
+     "y": 1500,
+     "scale": 0.5,
+     "at": "@peatonal-0.6",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@peatonal-0.6",
+       "x": 1300,
+       "dur": 2.4
+      }
+     ],
+     "entra": "nada",
+     "id": "albiol"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 860,
+     "y": 1650,
+     "scale": 0.42,
+     "at": "@Feijóo",
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@peatonal",
+       "pose": "senala_izq",
+       "mira": "izq"
+      }
+     ],
+     "entra": "abajo",
+     "hud": true,
+     "id": "feijoo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 820,
+     "scale": 0.75,
+     "at": "@llama",
+     "props": {
+      "lineas": [
+       "«El político peatonal",
+       "de Cataluña»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop"
+    }
+   ]
+  },
+  {
+   "id": "lio",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     34,
+     40,
+     60
+    ]
+   },
+   "animo": "comico",
+   "trans": "iris",
+   "footnote": "Servimedia / Diario Siglo XXI · Pressdigital (18/10/2026)",
+   "lines": [
+    {
+     "text": "Ahora, el lío. Albiol promete: «No me voy de Badalona».",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@promete",
+     "plano": "medio",
+     "sobre": [
+      300,
+      1050
+     ],
+     "dur": 0.5,
+     "aire": 260
+    },
+    {
+     "at": "@Badalona",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "ayuntamiento",
+     "x": 260,
+     "y": 1340,
+     "scale": 0.36,
+     "at": 0,
+     "acciones": [
+      {
+       "at": "@Badalona",
+       "cara": "ilusionado"
+      }
+     ],
+     "texto": "BADALONA",
+     "entra": "nada"
+    },
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 820,
+     "y": 1340,
+     "scale": 0.34,
+     "at": 0,
+     "acciones": [
+      {
+       "at": "@Badalona+0.5",
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "albiol",
+     "x": 300,
+     "y": 1560,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@lío",
+       "x": 780,
+       "dur": 0.6,
+       "corre": true
+      },
+      {
+       "at": "@promete",
+       "x": 320,
+       "dur": 0.6,
+       "corre": true
+      },
+      {
+       "at": "@Badalona",
+       "mira": "camara",
+       "pose": "senala_izq",
+       "cara": "serio"
+      }
+     ],
+     "entra": "nada",
+     "id": "albiol"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 520,
+     "scale": 0.8,
+     "at": "@No",
+     "props": {
+      "lineas": [
+       "«No me voy de Badalona»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 680,
+     "scale": 1.0,
+     "at": "@Badalona",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "estatutos",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "tension",
+   "trans": "papel",
+   "footnote": "Estatutos del PP, art. 12 (citados por ElNacional y Diario Siglo XXI)",
+   "lines": [
+    {
+     "text": "Pero los estatutos de su propio partido dicen que ser diputado es incompatible con ser alcalde de una ciudad de más de 20.000 habitantes.",
+     "tono": "normal"
+    },
+    {
+     "text": "Hay una salida: el comité nacional del PP puede aprobar una excepción.",
+     "tono": "normal",
+     "pausa": 0.15
+    },
+    {
+     "text": "Si la ha aprobado, no se ha hecho público. La ley sí permite tener las dos cosas.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      860
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@incompatible",
+     "plano": "general",
+     "sobre": [
+      540,
+      760
+     ],
+     "dur": 0.6,
+     "zoom": 1.1
+    },
+    {
+     "at": "@excepción",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.6,
+     "zoom": 1.1
+    },
+    {
+     "at": "@ley",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 540,
+     "y": 840,
+     "scale": 1.05,
+     "at": 0.2,
+     "props": {
+      "titulo": "ESTATUTOS DEL PP",
+      "subtitulo": "Artículo 12",
+      "articulos": [
+       {
+        "id": "a121",
+        "titulo": "12.1.c",
+        "lineas": [
+         "diputado: incompatible con",
+         "alcalde de más de 20.000 hab."
+        ]
+       },
+       {
+        "id": "a122",
+        "titulo": "12.2",
+        "lineas": [
+         "excepciones: las aprueba",
+         "el Comité Ejecutivo Nacional"
+        ]
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@incompatible",
+       "props": {
+        "resalta": [
+         "a121"
+        ]
+       }
+      },
+      {
+       "at": "@excepción",
+       "props": {
+        "resalta": [
+         "a121",
+         "a122"
+        ]
+       }
+      }
+     ],
+     "id": "doc",
+     "entra": "nada",
+     "dibujo": 1.0,
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "albiol",
+     "x": 1250,
+     "y": 1640,
+     "scale": 0.42,
+     "at": "@diputado",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@diputado",
+       "x": 880,
+       "dur": 0.6
+      },
+      {
+       "at": "@incompatible",
+       "cara": "susto",
+       "take": true
+      },
+      {
+       "at": "@excepción",
+       "cara": "pensativo",
+       "pose": "piensa"
+      },
+      {
+       "at": "@permite",
+       "cara": "riendo",
+       "pose": "pulgar"
+      }
+     ],
+     "entra": "nada",
+     "hud": true,
+     "id": "albiol"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1480,
+     "scale": 1.0,
+     "at": "@público",
+     "props": {
+      "texto": "¿EXCEPCIÓN? SIN CONFIRMAR",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@ley"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1480,
+     "scale": 1.0,
+     "at": "@permite",
+     "props": {
+      "texto": "LA LEY: SÍ",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "posturas",
+   "fondo": "plato",
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Metrópoli Abierta 19/10/2026 · Pressdigital 18/10/2026",
+   "lines": [
+    {
+     "text": "El PSC de Badalona le pide que deje un alcalde en funciones durante la campaña: «La ciudad necesita plena dedicación».",
+     "tono": "normal"
+    },
+    {
+     "text": "Albiol responde que no va al Congreso «a calentar ninguna silla».",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@dedicación",
+     "plano": "general",
+     "sobre": [
+      300,
+      1000
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    },
+    {
+     "at": "@Albiol",
+     "plano": "general",
+     "sobre": [
+      760,
+      1000
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    },
+    {
+     "at": "@silla",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 280,
+     "y": 1350,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "texto": "PSC",
+      "color": "psoe"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "albiol",
+     "x": 790,
+     "y": 1290,
+     "scale": 0.5,
+     "at": "@Albiol-0.3",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@responde",
+       "mira": "camara",
+       "pose": "senala",
+       "cara": "serio"
+      },
+      {
+       "at": "@calentar",
+       "pose": "cruzados",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "pop",
+     "id": "albiol"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 790,
+     "y": 1350,
+     "scale": 0.5,
+     "at": "@Albiol-0.3",
+     "props": {
+      "texto": "PP",
+      "color": "pp"
+     },
+     "acciones": [],
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 300,
+     "y": 640,
+     "scale": 0.7,
+     "at": "@pide",
+     "props": {
+      "lineas": [
+       "«La ciudad necesita",
+       "plena dedicación»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "out": "@Albiol"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 760,
+     "y": 640,
+     "scale": 0.7,
+     "at": "@Congreso",
+     "props": {
+      "lineas": [
+       "«No voy a calentar",
+       "ninguna silla»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 540,
+     "y": 1700,
+     "scale": 0.3,
+     "at": "@silla",
+     "props": {
+      "color": "azul",
+      "texto": "ESCAÑO"
+     },
+     "acciones": [
+      {
+       "at": "@silla+0.3",
+       "tiembla": true
+      }
+     ],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1000,
+     "scale": 1.0,
+     "at": "@dedicación",
+     "props": {
+      "texto": "DECLARACIONES",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@Albiol"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "salon",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Pregunta a la audiencia",
+   "lines": [
+    {
+     "text": "¿Alcalde y diputado a la vez: suma o resta? Te leo.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y síguenos, que hasta el 29N quedan muchos fichajes.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0,
+     "aire": 260
+    },
+    {
+     "at": "@suma",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@síguenos",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 260
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Alcalde",
+       "pose": "arriba",
+       "mira": "izq"
+      },
+      {
+       "at": "@diputado",
+       "mira": "der"
+      },
+      {
+       "at": "@suma",
+       "cara": "pensativo",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@fichajes",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "gorra",
+     "x": 300,
+     "y": 760,
+     "scale": 0.55,
+     "at": "@Alcalde",
+     "props": {
+      "texto": "ALCALDE",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "pop",
+     "flota": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "gorra",
+     "x": 780,
+     "y": 760,
+     "scale": 0.55,
+     "at": "@diputado",
+     "props": {
+      "texto": "DIPUTADO",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "pop",
+     "flota": true
+    },
+    {
+     "type": "rotulo",
+     "text": "¿SUMA O RESTA?",
+     "x": 540,
+     "y": 440,
+     "size": 120,
+     "color": "amarillo",
+     "at": "@suma",
+     "golpe": true,
+     "out": "@síguenos-0.3",
+     "fx": [
+      {
+       "at": "@leo",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 440,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.0,
+  "titulo": "Alcalde y diputado a la vez",
+  "capitulo": null
+ }
+}

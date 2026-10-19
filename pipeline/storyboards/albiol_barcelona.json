@@ -408,7 +408,7 @@
      "type": "objeto",
      "objeto": "etiqueta",
      "x": 540,
-     "y": 1560,
+     "y": 640,
      "scale": 0.8,
      "at": "@Madrid",
      "props": {
@@ -460,6 +460,22 @@
       1000
      ],
      "dur": 0
+    },
+    {
+     "at": "@Barcelona",
+     "plano": "medio",
+     "sobre": "feijoo",
+     "dur": 0.6,
+     "aire": 260
+    },
+    {
+     "at": "@encargo",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
     },
     {
      "at": "@ponente",
@@ -519,6 +535,16 @@
      "cara": "normal",
      "acciones": [
       {
+       "at": "@domingo",
+       "pose": "saluda",
+       "cara": "riendo",
+       "mira": "camara"
+      },
+      {
+       "at": "@Barcelona",
+       "salta": true
+      },
+      {
        "at": "@encargo",
        "pose": "senala",
        "mira": "der",
@@ -543,8 +569,13 @@
      "cara": "normal",
      "acciones": [
       {
-       "at": "@encargo",
+       "at": "@domingo",
        "mira": "izq"
+      },
+      {
+       "at": "@hizo",
+       "cara": "sorpresa",
+       "take": true
       },
       {
        "at": "@ponente",
@@ -778,7 +809,7 @@
      "text": "4.ª CIUDAD DE CATALUÑA",
      "x": 540,
      "y": 430,
-     "size": 84,
+     "size": 64,
      "color": "amarillo",
      "at": "@cuarta",
      "golpe": true,
@@ -848,6 +879,16 @@
      "dur": 0
     },
     {
+     "at": "@desalojo",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.6,
+     "zoom": 1.12
+    },
+    {
      "at": "@400",
      "plano": "general",
      "sobre": [
@@ -875,10 +916,49 @@
      "y": 1340,
      "scale": 0.62,
      "at": 0,
-     "acciones": [],
+     "acciones": [
+      {
+       "at": "@desalojo",
+       "cara": "susto",
+       "tiembla": true
+      },
+      {
+       "at": "@instituto",
+       "cara": "triste"
+      }
+     ],
      "texto": "B9",
      "entra": "nada",
      "dibuja": 0.8
+    },
+    {
+     "type": "rotulo",
+     "text": "DIC. 2025",
+     "x": 540,
+     "y": 430,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@diciembre",
+     "golpe": true,
+     "out": "@400",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 780,
+     "scale": 0.8,
+     "at": "@instituto",
+     "props": {
+      "texto": "ANTIGUO INSTITUTO",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@Feijóo"
     },
     {
      "type": "objeto",
@@ -1023,9 +1103,9 @@
     {
      "type": "edificio",
      "edificio": "ayuntamiento",
-     "x": 260,
+     "x": 270,
      "y": 1340,
-     "scale": 0.36,
+     "scale": 0.5,
      "at": 0,
      "acciones": [
       {
@@ -1041,7 +1121,7 @@
      "edificio": "congreso",
      "x": 820,
      "y": 1340,
-     "scale": 0.34,
+     "scale": 0.46,
      "at": 0,
      "acciones": [
       {
@@ -1055,8 +1135,8 @@
      "type": "personaje",
      "quien": "albiol",
      "x": 300,
-     "y": 1560,
-     "scale": 0.42,
+     "y": 1440,
+     "scale": 0.5,
      "at": 0,
      "cara": "normal",
      "acciones": [
@@ -1166,6 +1246,25 @@
      "zoom": 1.1
     },
     {
+     "at": "@20.000",
+     "plano": "general",
+     "sobre": [
+      540,
+      720
+     ],
+     "dur": 0.6,
+     "zoom": 1.16
+    },
+    {
+     "at": "@salida",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5
+    },
+    {
      "at": "@excepción",
      "plano": "general",
      "sobre": [
@@ -1243,8 +1342,8 @@
      "type": "personaje",
      "quien": "albiol",
      "x": 1250,
-     "y": 1640,
-     "scale": 0.42,
+     "y": 1420,
+     "scale": 0.45,
      "at": "@diputado",
      "cara": "normal",
      "acciones": [
@@ -1257,6 +1356,20 @@
        "at": "@incompatible",
        "cara": "susto",
        "take": true
+      },
+      {
+       "at": "@alcalde",
+       "pose": "cabeza"
+      },
+      {
+       "at": "@20.000",
+       "cara": "preocupado",
+       "mira": "arriba"
+      },
+      {
+       "at": "@salida",
+       "cara": "idea",
+       "salta": true
       },
       {
        "at": "@excepción",
@@ -1272,6 +1385,18 @@
      "entra": "nada",
      "hud": true,
      "id": "albiol"
+    },
+    {
+     "type": "rotulo",
+     "text": "+20.000 HABITANTES",
+     "x": 540,
+     "y": 330,
+     "size": 80,
+     "color": "amarillo",
+     "at": "@20.000",
+     "golpe": true,
+     "out": "@salida",
+     "hud": true
     },
     {
      "type": "objeto",
@@ -1310,7 +1435,7 @@
   },
   {
    "id": "posturas",
-   "fondo": "plato",
+   "fondo": "calle",
    "animo": "tension",
    "trans": "corte",
    "footnote": "Metrópoli Abierta 19/10/2026 · Pressdigital 18/10/2026",
@@ -1334,6 +1459,25 @@
       1000
      ],
      "dur": 0
+    },
+    {
+     "at": "@alcalde",
+     "plano": "general",
+     "sobre": [
+      300,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 1.1
+    },
+    {
+     "at": "@campaña",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
     },
     {
      "at": "@dedicación",
@@ -1371,7 +1515,7 @@
      "objeto": "atril",
      "x": 280,
      "y": 1350,
-     "scale": 0.5,
+     "scale": 0.75,
      "at": 0,
      "props": {
       "texto": "PSC",
@@ -1384,8 +1528,8 @@
      "type": "personaje",
      "quien": "albiol",
      "x": 790,
-     "y": 1290,
-     "scale": 0.5,
+     "y": 1260,
+     "scale": 0.7,
      "at": "@Albiol-0.3",
      "cara": "normal",
      "acciones": [
@@ -1409,7 +1553,7 @@
      "objeto": "atril",
      "x": 790,
      "y": 1350,
-     "scale": 0.5,
+     "scale": 0.75,
      "at": "@Albiol-0.3",
      "props": {
       "texto": "PP",
@@ -1420,11 +1564,28 @@
     },
     {
      "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 420,
+     "scale": 0.8,
+     "at": "@funciones",
+     "props": {
+      "texto": "¿ALCALDE EN FUNCIONES?",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@ciudad"
+    },
+    {
+     "type": "objeto",
      "objeto": "bocadillo",
      "x": 300,
-     "y": 640,
+     "y": 560,
      "scale": 0.7,
-     "at": "@pide",
+     "at": "@ciudad",
      "props": {
       "lineas": [
        "«La ciudad necesita",
@@ -1440,7 +1601,7 @@
      "type": "objeto",
      "objeto": "bocadillo",
      "x": 760,
-     "y": 640,
+     "y": 560,
      "scale": 0.7,
      "at": "@Congreso",
      "props": {
@@ -1581,8 +1742,8 @@
     {
      "type": "objeto",
      "objeto": "gorra",
-     "x": 300,
-     "y": 760,
+     "x": 230,
+     "y": 1050,
      "scale": 0.55,
      "at": "@Alcalde",
      "props": {
@@ -1597,8 +1758,8 @@
     {
      "type": "objeto",
      "objeto": "gorra",
-     "x": 780,
-     "y": 760,
+     "x": 850,
+     "y": 1050,
      "scale": 0.55,
      "at": "@diputado",
      "props": {
@@ -1644,7 +1805,7 @@
  "banda": true,
  "sfx_volume": 1.0,
  "portada": {
-  "t": 2.0,
+  "t": 3.8,
   "titulo": "Alcalde y diputado a la vez",
   "capitulo": null
  }

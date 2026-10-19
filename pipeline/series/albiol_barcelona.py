@@ -67,21 +67,23 @@ scenes = [
             {"at": "@noviembre", "salta": True}, {"at": "@Madrid", "mira": "izq", "cara": "sorpresa"}]),
         rot("Nº 1 POR BARCELONA", 540, 430, "@número", 96, "amarillo", golpe=True, out="@32"),
         obj("contador", 540, 470, "@32", 0.8, hud=True, entra="pop", sfx="kaching", props={"valor": 32, "sufijo": " ESCAÑOS", "ancho": 760}),
-        etq("MADRID: 38", 540, 1560, "@Madrid", "azul", 0.8, hud=True),
+        etq("MADRID: 38", 540, 640, "@Madrid", "azul", 0.8, hud=True),
     ]),
     # 3 · EL ENCARGO: Feijóo le pasa el pergamino de la ley; sello PONENTE
     dict(id="encargo", fondo={"tipo": "plano", "color": (28, 52, 110)}, animo="tension", trans="iris", footnote=F18, lines=[
         V("Y el domingo, en Barcelona, Feijóo le hizo un encargo:", "normal"),
         V("«Vas a ser el ponente de la ley. La vamos a aprobar contigo».", "normal", 0.1),
         V("Es decir, el que la defiende en el Congreso. Del texto, aún no hay detalles.", "normal", 0.15),
-    ], camara=[plano(0, "general", [540, 1000], 0), plano("@ponente", "medio", [600, 1050], 0.5, aire=240),
+    ], camara=[plano(0, "general", [540, 1000], 0), plano("@Barcelona", "medio", "feijoo", 0.6, aire=260), plano("@encargo", "general", [540, 1000], 0.5),
+               plano("@ponente", "medio", [600, 1050], 0.5, aire=240),
                plano("@Congreso", "general", [540, 950], 0.6), plano("@detalles", "general", [540, 980], 0.4, zoom=1.06)],
        elements=[
         edif("congreso", 540, "@defiende-0.3", 0.6, entra="crece", sfx="pop", dibuja=0.8, acciones=[{"at": "@detalles", "cara": "confundido"}]),
         quien("feijoo", 280, 0, 0.55, "normal", entra="nada", acciones=[
+            {"at": "@domingo", "pose": "saluda", "cara": "riendo", "mira": "camara"}, {"at": "@Barcelona", "salta": True},
             {"at": "@encargo", "pose": "senala", "mira": "der", "cara": "ilusionado"}, {"at": "@aprobar", "pose": "pulgar", "cara": "riendo"}]),
         quien("albiol", 800, 0, 0.62, "normal", entra="nada", acciones=[
-            {"at": "@encargo", "mira": "izq"}, {"at": "@ponente", "cara": "ilusionado", "salta": True},
+            {"at": "@domingo", "mira": "izq"}, {"at": "@hizo", "cara": "sorpresa", "take": True}, {"at": "@ponente", "cara": "ilusionado", "salta": True},
             {"at": "@defiende", "pose": "sostiene"}, {"at": "@detalles", "cara": "pensativo", "mira": "camara"}]),
         obj("pergamino", 330, 900, "@encargo", 0.42, id="ley", entra="pop", sfx="papel", props={"titulo": "LEY ANTIOKUPACIÓN", "lineas": ["…", "…"]},
             acciones=[{"at": "@ponente", "x": 760, "y": 880, "dur": 0.6}, {"at": "@detalles", "tiembla": True}]),
@@ -103,7 +105,7 @@ scenes = [
             {"at": "@absoluta", "salta": True, "cara": "riendo", "pose": "arriba"}]),
         obj("gorra", 1250, 1340 - CAB * 0.6 - 10, 0.1, 0.45, entra="nada", props={"texto": "ALCALDE", "color": "naranja"},
             acciones=[{"at": 0.1, "x": 760, "dur": 0.8}, {"at": "@absoluta", "salta": True}]),
-        rot("4.ª CIUDAD DE CATALUÑA", 540, 430, "@cuarta", 84, "amarillo", golpe=True, out="@2023"),
+        rot("4.ª CIUDAD DE CATALUÑA", 540, 430, "@cuarta", 64, "amarillo", golpe=True, out="@2023"),
         obj("contador", 540, 460, "@18", 0.8, hud=True, entra="pop", sfx="kaching", props={"valor": 18, "sufijo": " DE 27", "ancho": 640}),
         etq("MAYORÍA ABSOLUTA", 540, 620, "@absoluta", "verde", 0.8, hud=True),
     ]),
@@ -111,10 +113,14 @@ scenes = [
     dict(id="b9", fondo="calle", animo="tension", trans="corte", footnote="Agencias 17/12/2025 · Ara · Infobae 18/10/2026", lines=[
         V("Y en diciembre de 2025 pidió y logró el desalojo del antiguo instituto B9, donde vivían unas 400 personas.", "normal"),
         V("Feijóo le llama «el político peatonal de Cataluña».", "remate", 0.15),
-    ], camara=[plano(0, "general", [540, 1000], 0), plano("@400", "general", [540, 950], 0.5, zoom=1.06),
+    ], camara=[plano(0, "general", [540, 1000], 0), plano("@desalojo", "general", [540, 900], 0.6, zoom=1.12),
+               plano("@400", "general", [540, 950], 0.5, zoom=1.06),
                plano("@Feijóo", "general", [540, 1050], 0.5)],
        elements=[
-        edif("abandonado", 540, 0, 0.62, texto="B9", entra="nada", dibuja=0.8),
+        edif("abandonado", 540, 0, 0.62, texto="B9", entra="nada", dibuja=0.8, acciones=[
+            {"at": "@desalojo", "cara": "susto", "tiembla": True}, {"at": "@instituto", "cara": "triste"}]),
+        rot("DIC. 2025", 540, 430, "@diciembre", 100, "amarillo", golpe=True, out="@400"),
+        etq("ANTIGUO INSTITUTO", 540, 780, "@instituto", "naranja", 0.8, hud=True, out="@Feijóo"),
         obj("contador", 540, 450, "@400", 0.8, hud=True, entra="pop", sfx="golpe", props={"valor": 400, "prefijo": "~", "sufijo": " PERSONAS", "ancho": 760}),
         sello("CONFIRMADO", "verde", 610, "@personas"),
         quien("albiol", -200, "@peatonal-0.6", 0.5, "ilusionado", y=1500, entra="nada", acciones=[
@@ -129,9 +135,9 @@ scenes = [
     ], camara=[plano(0, "general", [540, 1000], 0), plano("@promete", "medio", [300, 1050], 0.5, aire=260),
                plano("@Badalona", "general", [540, 1000], 0.5)],
        elements=[
-        edif("ayuntamiento", 260, 0, 0.36, texto="BADALONA", entra="nada", acciones=[{"at": "@Badalona", "cara": "ilusionado"}]),
-        edif("congreso", 820, 0, 0.34, entra="nada", acciones=[{"at": "@Badalona+0.5", "cara": "sorpresa"}]),
-        quien("albiol", 300, 0, 0.42, "normal", y=1560, entra="nada", acciones=[
+        edif("ayuntamiento", 270, 0, 0.5, texto="BADALONA", entra="nada", acciones=[{"at": "@Badalona", "cara": "ilusionado"}]),
+        edif("congreso", 820, 0, 0.46, entra="nada", acciones=[{"at": "@Badalona+0.5", "cara": "sorpresa"}]),
+        quien("albiol", 300, 0, 0.5, "normal", y=1440, entra="nada", acciones=[
             {"at": "@lío", "x": 780, "dur": 0.6, "corre": True}, {"at": "@promete", "x": 320, "dur": 0.6, "corre": True},
             {"at": "@Badalona", "mira": "camara", "pose": "senala_izq", "cara": "serio"}]),
         obj("bocadillo", 540, 520, "@No", 0.8, hud=True, entra="pop", props={"lineas": ["«No me voy de Badalona»"]}),
@@ -144,6 +150,7 @@ scenes = [
         V("Hay una salida: el comité nacional del PP puede aprobar una excepción.", "normal", 0.15),
         V("Si la ha aprobado, no se ha hecho público. La ley sí permite tener las dos cosas.", "remate", 0.15),
     ], camara=[plano(0, "general", [540, 860], 0), plano("@incompatible", "general", [540, 760], 0.6, zoom=1.1),
+               plano("@20.000", "general", [540, 720], 0.6, zoom=1.16), plano("@salida", "general", [540, 900], 0.5),
                plano("@excepción", "general", [540, 960], 0.6, zoom=1.1), plano("@ley", "general", [540, 900], 0.5)],
        elements=[
         obj("documento", 540, 840, 0.2, 1.05, id="doc", entra="nada", dibujo=1.0, sfx="papel", props={
@@ -151,26 +158,31 @@ scenes = [
             "articulos": [{"id": "a121", "titulo": "12.1.c", "lineas": ["diputado: incompatible con", "alcalde de más de 20.000 hab."]},
                           {"id": "a122", "titulo": "12.2", "lineas": ["excepciones: las aprueba", "el Comité Ejecutivo Nacional"]}]},
             acciones=[{"at": "@incompatible", "props": {"resalta": ["a121"]}}, {"at": "@excepción", "props": {"resalta": ["a121", "a122"]}}]),
-        quien("albiol", 1250, "@diputado", 0.42, "normal", y=1640, entra="nada", hud=True, acciones=[
+        quien("albiol", 1250, "@diputado", 0.45, "normal", y=1420, entra="nada", hud=True, acciones=[
             {"at": "@diputado", "x": 880, "dur": 0.6}, {"at": "@incompatible", "cara": "susto", "take": True},
+            {"at": "@alcalde", "pose": "cabeza"}, {"at": "@20.000", "cara": "preocupado", "mira": "arriba"},
+            {"at": "@salida", "cara": "idea", "salta": True},
             {"at": "@excepción", "cara": "pensativo", "pose": "piensa"}, {"at": "@permite", "cara": "riendo", "pose": "pulgar"}]),
+        rot("+20.000 HABITANTES", 540, 330, "@20.000", 80, "amarillo", golpe=True, out="@salida"),
         sello("¿EXCEPCIÓN? SIN CONFIRMAR", "naranja", 1480, "@público", out="@ley"),
         sello("LA LEY: SÍ", "verde", 1480, "@permite"),
     ]),
     # 8 · LAS POSTURAS: el PSC pide un alcalde en funciones; Albiol, que no va a «calentar ninguna silla»
-    dict(id="posturas", fondo="plato", animo="tension", trans="corte",
+    dict(id="posturas", fondo="calle", animo="tension", trans="corte",
          footnote="Metrópoli Abierta 19/10/2026 · Pressdigital 18/10/2026", lines=[
         V("El PSC de Badalona le pide que deje un alcalde en funciones durante la campaña: «La ciudad necesita plena dedicación».", "normal"),
         V("Albiol responde que no va al Congreso «a calentar ninguna silla».", "normal", 0.15),
-    ], camara=[plano(0, "general", [540, 1000], 0), plano("@dedicación", "general", [300, 1000], 0.5, zoom=1.06),
+    ], camara=[plano(0, "general", [540, 1000], 0), plano("@alcalde", "general", [300, 1000], 0.6, zoom=1.1),
+               plano("@campaña", "general", [540, 1000], 0.5), plano("@dedicación", "general", [300, 1000], 0.5, zoom=1.06),
                plano("@Albiol", "general", [760, 1000], 0.5, zoom=1.06), plano("@silla", "general", [540, 1000], 0.4)],
        elements=[
-        obj("atril", 280, SUELO_ATRIL, 0, 0.5, entra="nada", props={"texto": "PSC", "color": "psoe"}),
-        quien("albiol", 790, "@Albiol-0.3", 0.5, "normal", y=1290, entra="pop", acciones=[
+        obj("atril", 280, SUELO_ATRIL, 0, 0.75, entra="nada", props={"texto": "PSC", "color": "psoe"}),
+        quien("albiol", 790, "@Albiol-0.3", 0.7, "normal", y=1260, entra="pop", acciones=[
             {"at": "@responde", "mira": "camara", "pose": "senala", "cara": "serio"}, {"at": "@calentar", "pose": "cruzados", "cara": "riendo"}]),
-        obj("atril", 790, SUELO_ATRIL, "@Albiol-0.3", 0.5, entra="pop", props={"texto": "PP", "color": "pp"}),
-        obj("bocadillo", 300, 640, "@pide", 0.7, hud=True, entra="pop", props={"lineas": ["«La ciudad necesita", "plena dedicación»"]}, out="@Albiol"),
-        obj("bocadillo", 760, 640, "@Congreso", 0.7, hud=True, entra="pop", props={"lineas": ["«No voy a calentar", "ninguna silla»"]}),
+        obj("atril", 790, SUELO_ATRIL, "@Albiol-0.3", 0.75, entra="pop", props={"texto": "PP", "color": "pp"}),
+        etq("¿ALCALDE EN FUNCIONES?", 540, 420, "@funciones", "naranja", 0.8, hud=True, out="@ciudad"),
+        obj("bocadillo", 300, 560, "@ciudad", 0.7, hud=True, entra="pop", props={"lineas": ["«La ciudad necesita", "plena dedicación»"]}, out="@Albiol"),
+        obj("bocadillo", 760, 560, "@Congreso", 0.7, hud=True, entra="pop", props={"lineas": ["«No voy a calentar", "ninguna silla»"]}),
         obj("silla", 540, 1700, "@silla", 0.3, hud=True, entra="cae", sfx="golpe", props={"color": "azul", "texto": "ESCAÑO"},
             acciones=[{"at": "@silla+0.3", "tiembla": True}]),
         sello("DECLARACIONES", "azul", 1000, "@dedicación", out="@Albiol"),
@@ -186,8 +198,8 @@ scenes = [
             {"at": "@Alcalde", "pose": "arriba", "mira": "izq"}, {"at": "@diputado", "mira": "der"},
             {"at": "@suma", "cara": "pensativo", "pose": "piensa", "mira": "camara"}, {"at": "@leo", "cara": "ilusionado", "pose": "senala"},
             {"at": "@síguenos", "pose": "saluda", "cara": "riendo"}, {"at": "@fichajes", "salta": True}]),
-        obj("gorra", 300, 760, "@Alcalde", 0.55, entra="pop", sfx="pop", flota=True, props={"texto": "ALCALDE", "color": "naranja"}),
-        obj("gorra", 780, 760, "@diputado", 0.55, entra="pop", sfx="pop", flota=True, props={"texto": "DIPUTADO", "color": "azul"}),
+        obj("gorra", 230, 1050, "@Alcalde", 0.55, entra="pop", sfx="pop", flota=True, props={"texto": "ALCALDE", "color": "naranja"}),
+        obj("gorra", 850, 1050, "@diputado", 0.55, entra="pop", sfx="pop", flota=True, props={"texto": "DIPUTADO", "color": "azul"}),
         rot("¿SUMA O RESTA?", 540, 440, "@suma", 120, "amarillo", golpe=True, out="@síguenos-0.3", fx=[{"at": "@leo", "do": "latir"}]),
         rot("SÍGUENOS", 540, 440, "@síguenos", 110, "amarillo"),
     ]),
@@ -195,7 +207,7 @@ scenes = [
 
 if __name__ == "__main__":
     episodio("albiol_barcelona", "Alcalde y diputado a la vez", scenes,
-             {"t": 2.0, "titulo": "Alcalde y diputado a la vez", "capitulo": None},
+             {"t": 3.8, "titulo": "Alcalde y diputado a la vez", "capitulo": None},
              ["El Independiente (17/10/2026): el PP anuncia a Albiol como candidato por Barcelona",
               "pp.es, Infobae y El Debate (18/10/2026): número 1 y ponente de la ley antiokupación",
               "Servimedia / Diario Siglo XXI y Pressdigital (18/10/2026): «No me voy de Badalona»",

@@ -1,0 +1,128 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 4.73,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.59,
+    "texto": "Por primera vez, el PSOE y el Frente Amplio van juntos…"
+   },
+   {
+    "t0": 2.74,
+    "t1": 4.28,
+    "texto": "pero solo al Senado. ¿Por qué?"
+   }
+  ]
+ },
+ {
+  "escena": "reglas",
+  "inicio": 4.73,
+  "fin": 11.7,
+  "frases": [
+   {
+    "t0": 5.03,
+    "t1": 7.41,
+    "texto": "En el Senado, cada provincia elige cuatro senadores."
+   },
+   {
+    "t0": 7.51,
+    "t1": 8.31,
+    "texto": "Tú marcas tres,"
+   },
+   {
+    "t0": 8.46,
+    "t1": 11.25,
+    "texto": "y el primero suele llevarse tres; el segundo, uno."
+   }
+  ]
+ },
+ {
+  "escena": "2023",
+  "inicio": 11.7,
+  "fin": 17.93,
+  "frases": [
+   {
+    "t0": 11.96,
+    "t1": 14.09,
+    "texto": "Si la izquierda va dividida, gana el PP:"
+   },
+   {
+    "t0": 14.24,
+    "t1": 17.48,
+    "texto": "en 2023 sacó 120 senadores; el PSOE, 72."
+   }
+  ]
+ },
+ {
+  "escena": "mapa",
+  "inicio": 17.93,
+  "fin": 22.58,
+  "frases": [
+   {
+    "t0": 18.25,
+    "t1": 22.13,
+    "texto": "Por eso ahora van juntos con el nombre de «Senado de Progreso», en 47 provincias."
+   }
+  ]
+ },
+ {
+  "escena": "vox",
+  "inicio": 22.58,
+  "fin": 30.62,
+  "frases": [
+   {
+    "t0": 23.03,
+    "t1": 30.17,
+    "texto": "El lunes, Abascal le ofreció al PP un entendimiento y pidió sacrificios, sin concretar. El PP no ha respondido; hay hasta el 26 de octubre."
+   }
+  ]
+ },
+ {
+  "escena": "simulacion",
+  "inicio": 30.62,
+  "fin": 36.08,
+  "frases": [
+   {
+    "t0": 30.94,
+    "t1": 35.63,
+    "texto": "Con los votos de 2023, PP y Vox juntos podrían quitarle a la izquierda hasta 15 senadores."
+   }
+  ]
+ },
+ {
+  "escena": "juego",
+  "inicio": 36.08,
+  "fin": 40.88,
+  "frases": [
+   {
+    "t0": 36.38,
+    "t1": 37.84,
+    "texto": "En juego: los tres quintos,"
+   },
+   {
+    "t0": 37.99,
+    "t1": 40.43,
+    "texto": "para renovar el Constitucional y el CGPJ."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 40.88,
+  "fin": 45.22,
+  "frases": [
+   {
+    "t0": 41.58,
+    "t1": 43.14,
+    "texto": "¿Juntos o por separado? Te leo."
+   },
+   {
+    "t0": 43.29,
+    "t1": 43.87,
+    "texto": "Y síguenos."
+   }
+  ]
+ }
+]

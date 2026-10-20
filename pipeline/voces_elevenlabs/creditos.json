@@ -4,12 +4,12 @@
  "limite": null,
  "quedan": 0,
  "se_renueva": null,
- "consultado": "2026-10-18 11:40 UTC",
+ "consultado": "2026-10-20 06:26 UTC",
  "error": {
   "type": "authentication_error",
   "code": "unauthorized",
   "message": "The API key you used is missing the permission user_read to execute this operation.",
   "status": "missing_permissions",
-  "request_id": "8bbe7e8412f3003adf507b48a2344da1"
+  "request_id": "3fc5371c1a8a09a651a0be5cfca66036"
  }
 }

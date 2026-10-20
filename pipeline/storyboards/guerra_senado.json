@@ -18,12 +18,13 @@
  "end_hold": 0.9,
  "sources": [
   "Infobae (17/10/2026): PSOE y Frente Amplio, «Senado de Progreso», en 47 circunscripciones; resultados de 2023",
-  "El Español (18/10/2026): cómo se vota al Senado, decisión de Vox y tres quintos",
+  "El Español (18/10/2026): cómo se vota al Senado y tres quintos",
+  "Público y elDiario.es (19/10/2026): Abascal ofrece al PP un entendimiento y pide sacrificios sin concretar; Moncloa.com (19/10/2026): listas hasta el 26-O",
   "Vozpópuli: simulación de listas conjuntas PP-Vox con los votos de 2023",
   "Mapas dibujados sobre contornos de Natural Earth (dominio público)"
  ],
- "caption": "🏛️ Por primera vez, PSOE y Frente Amplio van juntos… pero solo al Senado\n🗳️ Cada provincia elige 4 senadores y tú marcas hasta 3: el primero suele llevarse 3\n📊 2023: PP 120 de 208 senadores elegidos; PSOE 72\n🤝 «Senado de Progreso» en 47 circunscripciones\n🔄 PP y Vox estudian su respuesta; con los votos de 2023 podrían quitar hasta 15 senadores (simulación)\n⚖️ En juego: los tres quintos para renovar el Constitucional y el CGPJ\n💬 ¿Juntos o por separado? Te leemos 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
- "pinned_comment": "📚 Fuentes: Infobae 17/10/2026 · El Español 18/10/2026 · Vozpópuli (simulación). ¿Ves un error? Dínoslo.",
+ "caption": "🏛️ Por primera vez, PSOE y Frente Amplio van juntos… pero solo al Senado\n🗳️ Cada provincia elige 4 senadores y tú marcas hasta 3: el primero suele llevarse 3\n📊 2023: PP 120 de 208 senadores elegidos; PSOE 72\n🤝 «Senado de Progreso» en 47 circunscripciones\n🤝 Abascal ofrece al PP un «entendimiento» sin concretar; el PP no ha respondido (listas hasta el 26 de octubre)\n🔄 Con los votos de 2023, PP y Vox juntos podrían quitar hasta 15 senadores (simulación)\n⚖️ En juego: los tres quintos para renovar el Constitucional y el CGPJ\n💬 ¿Juntos o por separado? Te leemos 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Infobae 17/10/2026 · El Español 18/10/2026 · Público 19/10/2026 · elDiario.es 19/10/2026 · Moncloa.com 19/10/2026 · Vozpópuli (simulación). ¿Ves un error? Dínoslo.",
  "hashtags": [
   "#29N",
   "#Senado",
@@ -197,16 +198,16 @@
    "footnote": "El Español 18/10/2026",
    "lines": [
     {
-     "text": "Porque en el Senado casi todas las provincias eligen cuatro senadores,",
+     "text": "En el Senado, cada provincia elige cuatro senadores.",
      "tono": "normal"
     },
     {
-     "text": "tú marcas hasta tres,",
+     "text": "Tú marcas tres,",
      "tono": "normal",
      "pausa": 0.05
     },
     {
-     "text": "y lo normal es que el primero se lleve tres y el segundo, uno.",
+     "text": "y el primero suele llevarse tres; el segundo, uno.",
      "tono": "normal",
      "pausa": 0.1
     }
@@ -220,6 +221,16 @@
       960
      ],
      "dur": 0
+    },
+    {
+     "at": "@provincia",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.6,
+     "zoom": 1.05
     },
     {
      "at": "@tres",
@@ -358,7 +369,7 @@
      "type": "rotulo",
      "text": "3 + 1",
      "x": 540,
-     "y": 460,
+     "y": 1180,
      "size": 120,
      "color": "amarillo",
      "at": "@segundo",
@@ -368,12 +379,21 @@
     {
      "type": "personaje",
      "quien": "piz",
-     "x": 120,
-     "y": 1640,
-     "scale": 0.42,
+     "x": 140,
+     "y": 1700,
+     "scale": 0.55,
      "at": 0,
      "cara": "pensativo",
      "acciones": [
+      {
+       "at": "@Senado",
+       "pose": "senala"
+      },
+      {
+       "at": "@provincia",
+       "salta": true,
+       "cara": "idea"
+      },
       {
        "at": "@tres",
        "pose": "senala",
@@ -405,11 +425,11 @@
    "footnote": "Infobae 17/10/2026",
    "lines": [
     {
-     "text": "Si la izquierda se divide, el primero suele ser el PP.",
+     "text": "Si la izquierda va dividida, gana el PP:",
      "tono": "normal"
     },
     {
-     "text": "En 2023 sacó 120 de los 208 senadores que se votan; el PSOE, 72.",
+     "text": "en 2023 sacó 120 senadores; el PSOE, 72.",
      "tono": "normal",
      "pausa": 0.1
     }
@@ -442,7 +462,7 @@
      "x": 540,
      "y": 980,
      "scale": 1.0,
-     "at": "@2023-0.2",
+     "at": "@izquierda",
      "props": {
       "tope": 208,
       "decimales": 0,
@@ -465,26 +485,26 @@
     },
     {
      "type": "rotulo",
-     "text": "DE 208",
+     "text": "2023",
      "x": 540,
      "y": 420,
-     "size": 100,
+     "size": 110,
      "color": "amarillo",
-     "at": "@208",
+     "at": "@2023",
      "golpe": true,
      "hud": true
     },
     {
      "type": "personaje",
      "quien": "critica",
-     "x": 900,
-     "y": 1640,
-     "scale": 0.42,
+     "x": 880,
+     "y": 1700,
+     "scale": 0.55,
      "at": 0,
      "cara": "esceptica",
      "acciones": [
       {
-       "at": "@divide",
+       "at": "@dividida",
        "pose": "cruzados"
       },
       {
@@ -676,10 +696,10 @@
    "fondo": "calle",
    "animo": "tension",
    "trans": "pan",
-   "footnote": "El Español 18/10/2026",
+   "footnote": "Público y elDiario.es 19/10/2026",
    "lines": [
     {
-     "text": "Y el lunes, Vox decidía si negocia con el PP retirarse en algunas provincias a cambio de ir en sus listas.",
+     "text": "El lunes, Abascal le ofreció al PP un entendimiento y pidió sacrificios, sin concretar. El PP no ha respondido; hay hasta el 26 de octubre.",
      "tono": "normal"
     }
    ],
@@ -694,33 +714,51 @@
      "dur": 0
     },
     {
-     "at": "@PP",
+     "at": "@sacrificios",
+     "plano": "medio",
+     "sobre": "abascal",
+     "dur": 0.5,
+     "aire": 220
+    },
+    {
+     "at": "@PP#2",
+     "plano": "medio",
+     "sobre": "feijoo",
+     "dur": 0.5,
+     "aire": 220
+    },
+    {
+     "at": "@26",
      "plano": "general",
      "sobre": [
       540,
       950
      ],
-     "dur": 0.6,
-     "zoom": 1.06
+     "dur": 0.5
     }
    ],
    "elements": [
     {
      "type": "personaje",
      "quien": "feijoo",
-     "x": 330,
+     "x": 300,
      "y": 1340,
      "scale": 0.5,
      "at": 0,
      "cara": "pensativo",
      "acciones": [
       {
-       "at": "@Vox",
+       "at": "@ofreció",
        "mira": "abascal"
       },
       {
-       "at": "@listas",
-       "pose": "pulgar"
+       "at": "@concretar",
+       "pose": "cruzados",
+       "cara": "esceptica"
+      },
+      {
+       "at": "@respondido",
+       "mira": "camara"
       }
      ],
      "entra": "nada",
@@ -729,23 +767,52 @@
     {
      "type": "personaje",
      "quien": "abascal",
-     "x": 760,
+     "x": 780,
      "y": 1340,
      "scale": 0.5,
      "at": 0,
-     "cara": "pensativo",
+     "cara": "ilusionado",
      "acciones": [
       {
-       "at": "@Vox",
-       "pose": "piensa"
+       "at": "@entendimiento",
+       "pose": "saluda",
+       "mira": "feijoo"
       },
       {
-       "at": "@listas",
-       "mira": "feijoo"
+       "at": "@sacrificios",
+       "pose": "senala"
+      },
+      {
+       "at": "@concretar",
+       "pose": "encoge"
       }
      ],
      "entra": "nada",
      "id": "abascal"
+    },
+    {
+     "type": "rotulo",
+     "text": "«ENTENDIMIENTO»",
+     "x": 540,
+     "y": 430,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@entendimiento",
+     "golpe": true,
+     "out": "@concretar",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIN CONCRETAR",
+     "x": 540,
+     "y": 430,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@concretar",
+     "golpe": true,
+     "out": "@26-0.3",
+     "hud": true
     },
     {
      "type": "objeto",
@@ -753,7 +820,47 @@
      "x": 540,
      "y": 600,
      "scale": 1.0,
-     "at": "@decidía",
+     "at": "@sacrificios",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@respondido"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 760,
+     "scale": 0.55,
+     "at": "@26-0.3",
+     "props": {
+      "mes": "OCTUBRE",
+      "inicio": 3,
+      "dias": 31,
+      "marcados": [
+       26
+      ],
+      "colores": {
+       "26": "rojo"
+      }
+     },
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "papel",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1250,
+     "scale": 1.0,
+     "at": "@respondido",
      "props": {
       "texto": "PENDIENTE",
       "color": "naranja"
@@ -779,7 +886,7 @@
    "footnote": "Vozpópuli (simulación con los votos de 2023)",
    "lines": [
     {
-     "text": "Con los votos de 2023, juntos podrían quitarle a la izquierda hasta 15 senadores.",
+     "text": "Con los votos de 2023, PP y Vox juntos podrían quitarle a la izquierda hasta 15 senadores.",
      "tono": "normal"
     }
    ],
@@ -795,13 +902,23 @@
      "zoom": 2.2
     },
     {
+     "at": "@izquierda",
+     "plano": "general",
+     "sobre": [
+      704.4,
+      686.8
+     ],
+     "dur": 0.8,
+     "zoom": 1.6
+    },
+    {
      "at": "@15",
      "plano": "general",
      "sobre": [
       551.3,
       760.8
      ],
-     "dur": 1.2,
+     "dur": 1.0,
      "zoom": 1.0
     }
    ],
@@ -894,11 +1011,11 @@
    "footnote": "El Español 18/10/2026",
    "lines": [
     {
-     "text": "¿Qué está en juego? Los tres quintos del Senado,",
+     "text": "En juego: los tres quintos,",
      "tono": "normal"
     },
     {
-     "text": "necesarios para renovar el Constitucional y el CGPJ sin el otro bloque.",
+     "text": "para renovar el Constitucional y el CGPJ.",
      "tono": "normal",
      "pausa": 0.1
     }
@@ -970,8 +1087,8 @@
      "type": "personaje",
      "quien": "pizon",
      "x": 540,
-     "y": 1660,
-     "scale": 0.42,
+     "y": 1700,
+     "scale": 0.55,
      "at": 0,
      "cara": "confundido",
      "acciones": [
@@ -1073,8 +1190,8 @@
      "type": "rotulo",
      "text": "¿JUNTOS O SEPARADOS?",
      "x": 540,
-     "y": 480,
-     "size": 90,
+     "y": 1180,
+     "size": 68,
      "color": "amarillo",
      "at": "@Juntos",
      "golpe": true,

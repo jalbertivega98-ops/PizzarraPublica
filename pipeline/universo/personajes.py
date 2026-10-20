@@ -56,6 +56,8 @@ PERSONAJES = {
     # creadores de contenido (oct. 2026): misma regla, chapa con el nombre y sin caricatura
     "wild": dict(nombre="Jordi Wild", papel="Presentador de The Wild Project", cara="normal", marco="marco", acento="gris",
                  pelo=((40, 36, 36), "corto"), barba=(46, 40, 40), chapa=("JORDI WILD", "tinta"), zapatilla="negro", garabatos=()),
+    "colau": dict(nombre="Ada Colau", papel="Candidata del Frente Amplio", cara="normal", marco="marco", acento="gris",
+                  melena=(70, 50, 40), pelo=((70, 50, 40), "corto"), chapa=("COLAU", "gris"), zapatilla="negro", garabatos=()),
     "diputado": dict(nombre="Pizarra diputada", papel="Un diputado cualquiera (sin partido)", cara="normal", marco="marco_oscuro",
                      acento="gris", corbata="tinta", chapa=("DIPUTADO", "gris"), zapatilla="negro", garabatos=("euro",)),
     # caso Diputación de Badajoz (2026): sin caricatura, solo la chapa con el nombre y sin colores de partido
@@ -410,7 +412,7 @@ def cuerpo(c, ficha):
     if ficha.get("melena"):  # melena pelirroja de Piza Indignada
         for sx in (-1, 1):
             p = suave([(sx * 100, -H2 - 10), (sx * 175, -110), (sx * 190, 20), (sx * 160, 90), (sx * 150, -60)])
-            pieza(c, p, "naranja", 5)
+            pieza(c, p, ficha["melena"] if isinstance(ficha["melena"], tuple) else "naranja", 5)
 
 
 def accesorios_cara(c, ficha):

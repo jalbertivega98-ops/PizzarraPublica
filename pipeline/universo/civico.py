@@ -155,9 +155,9 @@ def alcoholimetro(c, t=0.0, texto="0,5", **kw):
 
 # ------------------------------------------------------------------ datos
 def contador(c, t=0.0, valor=100, prefijo="", sufijo="", decimales=0, progreso=1.0, color=(40, 44, 56), ancho=760,
-             miles=".", **kw):
-    """Marcador que corre hasta el valor (progreso 0-1, con frenada)."""
-    v = valor * _eo(progreso) if progreso < 1 else valor
+             miles=".", desde=0, **kw):
+    """Marcador que corre desde «desde» hasta el valor (progreso 0-1, con frenada)."""
+    v = desde + (valor - desde) * _eo(progreso) if progreso < 1 else valor
     s = f"{v:,.{decimales}f}".replace(",", "#").replace(".", ",").replace("#", miles)
     txt = f"{prefijo}{s}{sufijo}"
     pieza(c, rrect(-ancho / 2, -110, ancho / 2, 110, 30), color, 8)

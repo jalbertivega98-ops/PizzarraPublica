@@ -132,7 +132,7 @@ scenes = [
 
 if __name__ == "__main__":
     episodio("espana2036", "España en 2036, si seguimos así", scenes,
-             {"t": 2.0, "titulo": "España en 2036, si seguimos así", "capitulo": None},
+             {"t": 13.8, "titulo": "España en 2036, si seguimos así", "capitulo": None},
              ["Fotocasa / InfoJobs (Euronews, 10/06/2026): 8,4 años de sueldo bruto para un piso de 80 m² en 2025; 7,1 en 2024",
               "Funcas (29/12/2025): la vivienda subió un 12,1 % en el tercer trimestre de 2025, la mayor subida en 20 años",
               "INE, Proyecciones de población 2026-2076 (17/06/2026): 53,1 millones en 2036; 369.900 nacimientos y 510.400 defunciones",

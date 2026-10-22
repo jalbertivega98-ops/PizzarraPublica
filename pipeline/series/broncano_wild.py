@@ -34,10 +34,10 @@ scenes = [
     ], camara=[plano(0, "general", [540, 1100], 0), plano("@Broncano", "general", [540, 1050], 0.5, zoom=1.08),
                plano("@Wild", "medio", "wild", 0.4, aire=220), plano("@respuesta", "general", [540, 1000], 0.5)],
        elements=[
-        quien("broncano", 760, 0, 0.55, "riendo", entra="nada", acciones=[
+        quien("broncano", 770, 0, 0.75, "riendo", entra="nada", acciones=[
             {"at": 0.3, "pose": "saluda"}, {"at": "@sienta", "mira": "izq", "cara": "ilusionado"}, {"at": "@Broncano", "salta": True},
             {"at": "@Revuelta", "pose": "pulgar"}]),
-        quien("sanchez", -200, 0.1, 0.55, "ilusionado", entra="nada", acciones=[
+        quien("sanchez", -200, 0.1, 0.75, "ilusionado", entra="nada", acciones=[
             {"at": 0.2, "x": 340, "dur": 1.0}, {"at": "@sienta", "pose": "saluda", "cara": "riendo"},
             {"at": "@Revuelta", "mira": "der"}, {"at": "@Wild", "mira": "camara", "cara": "pensativo"}]),
         rot("ESTA NOCHE · LA 1", 540, 520, "@noche", 84, "amarillo", golpe=True, out="@Wild"),
@@ -54,7 +54,7 @@ scenes = [
     ], camara=[plano(0, "general", [540, 900], 0), plano("@cortes", "general", [540, 850], 0.5, zoom=1.05),
                plano("@Feijóo", "general", [700, 1150], 0.6), plano("@sí", "general", [560, 1150], 0.4, zoom=1.06)],
        elements=[
-        obj("cartel", 540, 620, 0, 1.4, hud=True, entra="crece", sfx="papel", dibuja=2.4, out="@Feijóo",
+        obj("cartel", 540, 620, 0, 1.12, hud=True, entra="crece", sfx="papel", dibuja=2.4, out="@Feijóo",
             props={"lineas": ["HASTA 90 MINUTOS", "SIN CORTES", "SIN PREGUNTAS PACTADAS"]}),
         *sillas(0),
         quien("feijoo", 680, "@Feijóo-0.3", 0.42, "ilusionado", y=FONDO_Y + 60, entra="cae", acciones=[{"at": "@Abascal", "pose": "pulgar"}, {"at": "@sí", "salta": True}]),
@@ -72,10 +72,10 @@ scenes = [
     ], camara=[plano(0, "general", [540, 1050], 0), plano("@pública", "general", [540, 950], 0.5, zoom=1.05),
                plano("@cuánto", "general", [540, 1000], 0.5, zoom=1.1)],
        elements=[
-        quien("broncano", 760, 0, 0.55, "riendo", entra="nada", acciones=[
+        quien("broncano", 770, 0, 0.75, "riendo", entra="nada", acciones=[
             {"at": "@humor", "salta": True, "cara": "riendo"}, {"at": "@pública", "pose": "senala_izq"},
             {"at": "@clásico", "cara": "burla", "pose": "jarras"}, {"at": "@cuánto", "pose": "senala_izq", "mira": "izq"}]),
-        quien("sanchez", 320, 0, 0.55, "ilusionado", entra="nada", acciones=[
+        quien("sanchez", 310, 0, 0.75, "ilusionado", entra="nada", acciones=[
             {"at": "@humor", "cara": "riendo"}, {"at": "@La#2", "mira": "der"}, {"at": "@pregunta", "pose": "piensa"},
             {"at": "@dinero", "cara": "susto", "take": True}, {"at": "@banco", "tiembla": True}]),
         rot("HUMOR · LA 1", 540, 480, "@humor", 92, "amarillo", golpe=True, out="@clásico"),
@@ -105,13 +105,13 @@ scenes = [
     ], camara=[plano(0, "general", [540, 1050], 0), plano("@Feijóo", "general", [700, 1050], 0.6, zoom=1.05),
                plano("@tampoco", "general", [540, 1000], 0.4, zoom=1.1)],
        elements=[
-        quien("broncano", 300, 0, 0.55, "ilusionado", entra="nada", acciones=[
+        quien("broncano", 260, 0, 0.75, "ilusionado", entra="nada", acciones=[
             {"at": "@ojo", "pose": "senala", "mira": "camara"}, {"at": "@invitado", "pose": "saluda", "mira": "der"},
             {"at": "@tampoco", "cara": "burla", "pose": "jarras"}, {"at": "@contestado", "salta": True}]),
-        quien("feijoo", 1300, "@Feijóo-0.4", 0.5, "normal", entra="nada", acciones=[
-            {"at": "@Feijóo", "x": 680, "dur": 0.7}, {"at": "@tampoco", "mira": "arriba", "pose": "encoge"}]),
-        quien("abascal", 1400, "@Abascal-0.4", 0.5, "normal", entra="nada", acciones=[
-            {"at": "@Abascal", "x": 900, "dur": 0.7}, {"at": "@tampoco", "mira": "izq", "pose": "encoge"}]),
+        quien("feijoo", 1300, "@Feijóo-0.4", 0.68, "normal", entra="nada", acciones=[
+            {"at": "@Feijóo", "x": 640, "dur": 0.7}, {"at": "@tampoco", "mira": "arriba", "pose": "encoge"}]),
+        quien("abascal", 1400, "@Abascal-0.4", 0.68, "normal", entra="nada", acciones=[
+            {"at": "@Abascal", "x": 890, "dur": 0.7}, {"at": "@tampoco", "mira": "izq", "pose": "encoge"}]),
         sello("SIN RESPUESTA", "naranja", 560, "@contestado"),
     ]),
     # 6 · FINAL: la pregunta que divide
@@ -121,12 +121,12 @@ scenes = [
     ], camara=[plano(0, "general", [540, 1000], 0), plano("@Broncano", "general", [540, 900], 0.5, zoom=1.08),
                plano("@síguenos", "general", [540, 1000], 0.5)],
        elements=[
-        rot("¿CÓMODA O VALIENTE?", 540, 480, 0.2, 92, "rojo", golpe=True, out="@Broncano"),
-        rot("¿BRONCANO O WILD?", 540, 480, "@Broncano", 100, "rojo", golpe=True, out="@síguenos-0.3"),
+        rot("¿CÓMODA O VALIENTE?", 540, 480, 0.2, 78, "rojo", golpe=True, out="@Broncano"),
+        rot("¿BRONCANO O WILD?", 540, 480, "@Broncano", 88, "rojo", golpe=True, out="@síguenos-0.3"),
         rot("SÍGUENOS", 540, 480, "@síguenos", 110, "rojo"),
-        quien("broncano", 280, 0, 0.5, "riendo", entra="nada", acciones=[
+        quien("broncano", 280, 0, 0.65, "riendo", entra="nada", acciones=[
             {"at": "@cómoda", "pose": "saluda"}, {"at": "@Broncano", "salta": True}, {"at": "@comentarios", "mira": "camara"}]),
-        quien("wild", 800, 0, 0.5, "serio", entra="nada", acciones=[
+        quien("wild", 800, 0, 0.65, "serio", entra="nada", acciones=[
             {"at": "@valiente", "pose": "jarras"}, {"at": "@Wild", "salta": True}, {"at": "@comentarios", "mira": "camara"}]),
         quien("piz", 540, 0, 0.45, "pensativo", y=1660, entra="nada", acciones=[
             {"at": "@Entrevista", "mira": "izq"}, {"at": "@valiente", "mira": "der"}, {"at": "@leo", "pose": "senala", "cara": "riendo"},

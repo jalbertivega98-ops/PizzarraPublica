@@ -96,9 +96,9 @@
     {
      "type": "personaje",
      "quien": "broncano",
-     "x": 760,
+     "x": 770,
      "y": 1340,
-     "scale": 0.55,
+     "scale": 0.75,
      "at": 0,
      "cara": "riendo",
      "acciones": [
@@ -128,7 +128,7 @@
      "quien": "sanchez",
      "x": -200,
      "y": 1340,
-     "scale": 0.55,
+     "scale": 0.75,
      "at": 0.1,
      "cara": "ilusionado",
      "acciones": [
@@ -289,7 +289,7 @@
      "objeto": "cartel",
      "x": 540,
      "y": 620,
-     "scale": 1.4,
+     "scale": 1.12,
      "at": 0,
      "props": {
       "lineas": [
@@ -523,9 +523,9 @@
     {
      "type": "personaje",
      "quien": "broncano",
-     "x": 760,
+     "x": 770,
      "y": 1340,
-     "scale": 0.55,
+     "scale": 0.75,
      "at": 0,
      "cara": "riendo",
      "acciones": [
@@ -555,9 +555,9 @@
     {
      "type": "personaje",
      "quien": "sanchez",
-     "x": 320,
+     "x": 310,
      "y": 1340,
-     "scale": 0.55,
+     "scale": 0.75,
      "at": 0,
      "cara": "ilusionado",
      "acciones": [
@@ -822,9 +822,9 @@
     {
      "type": "personaje",
      "quien": "broncano",
-     "x": 300,
+     "x": 260,
      "y": 1340,
-     "scale": 0.55,
+     "scale": 0.75,
      "at": 0,
      "cara": "ilusionado",
      "acciones": [
@@ -856,13 +856,13 @@
      "quien": "feijoo",
      "x": 1300,
      "y": 1340,
-     "scale": 0.5,
+     "scale": 0.68,
      "at": "@Feijóo-0.4",
      "cara": "normal",
      "acciones": [
       {
        "at": "@Feijóo",
-       "x": 680,
+       "x": 640,
        "dur": 0.7
       },
       {
@@ -879,13 +879,13 @@
      "quien": "abascal",
      "x": 1400,
      "y": 1340,
-     "scale": 0.5,
+     "scale": 0.68,
      "at": "@Abascal-0.4",
      "cara": "normal",
      "acciones": [
       {
        "at": "@Abascal",
-       "x": 900,
+       "x": 890,
        "dur": 0.7
       },
       {
@@ -971,7 +971,7 @@
      "text": "¿CÓMODA O VALIENTE?",
      "x": 540,
      "y": 480,
-     "size": 92,
+     "size": 78,
      "color": "rojo",
      "at": 0.2,
      "golpe": true,
@@ -983,7 +983,7 @@
      "text": "¿BRONCANO O WILD?",
      "x": 540,
      "y": 480,
-     "size": 100,
+     "size": 88,
      "color": "rojo",
      "at": "@Broncano",
      "golpe": true,
@@ -1005,7 +1005,7 @@
      "quien": "broncano",
      "x": 280,
      "y": 1340,
-     "scale": 0.5,
+     "scale": 0.65,
      "at": 0,
      "cara": "riendo",
      "acciones": [
@@ -1030,7 +1030,7 @@
      "quien": "wild",
      "x": 800,
      "y": 1340,
-     "scale": 0.5,
+     "scale": 0.65,
      "at": 0,
      "cara": "serio",
      "acciones": [

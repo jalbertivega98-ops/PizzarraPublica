@@ -56,6 +56,8 @@ PERSONAJES = {
     # creadores de contenido (oct. 2026): misma regla, chapa con el nombre y sin caricatura
     "wild": dict(nombre="Jordi Wild", papel="Presentador de The Wild Project", cara="normal", marco="marco", acento="gris",
                  pelo=((40, 36, 36), "corto"), barba=(46, 40, 40), chapa=("JORDI WILD", "tinta"), zapatilla="negro", garabatos=()),
+    "broncano": dict(nombre="David Broncano", papel="Presentador de La Revuelta (La 1)", cara="normal", marco="marco", acento="gris",
+                     pelo=((62, 46, 36), "corto"), barba=(78, 60, 48), chapa=("BRONCANO", "rojo"), zapatilla="blanco", garabatos=()),
     "colau": dict(nombre="Ada Colau", papel="Candidata del Frente Amplio", cara="normal", marco="marco", acento="gris",
                   melena=(70, 50, 40), pelo=((70, 50, 40), "corto"), chapa=("COLAU", "gris"), zapatilla="negro", garabatos=()),
     "diputado": dict(nombre="Pizarra diputada", papel="Un diputado cualquiera (sin partido)", cara="normal", marco="marco_oscuro",

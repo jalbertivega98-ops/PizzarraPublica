@@ -227,7 +227,7 @@ if __name__ == "__main__":
               "👵 «Se acuerdan de mi madre…»: el salario mínimo ha subido un 66 %, sí. El piso usado, un 74 %\n"
               "🏠 Pide 176 escaños para la vivienda tras 8 años en Moncloa; un joven que alquila solo se deja el 98,7 % del sueldo\n"
               "🥶 Ábalos: «te quedas helado». Condenado por el Supremo a 24 años. Cerdán, casi 5 meses en prisión provisional\n"
-              "⚖️ «Son inocentes»: su hermano está condenado (sentencia no firme)\n"
+              "⚖️ «Dos personas que son inocentes»: su hermano está condenado (sentencia no firme)\n"
               "🌊 Ceuta: «podríamos haberlo gestionado mejor»\n"
               "🎙️ ¿Y Jordi Wild? «Ya responderé»\n"
               "💬 ¿Entrevista valiente o paseo? Te leo 👇\n"

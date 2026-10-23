@@ -1,0 +1,1079 @@
+{
+ "slug": "cambio_hora",
+ "title": "Cambia la hora… ¿la última vez?",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Vandal / El Español (21/10/2026): domingo 25/10, a las 3:00 vuelven a ser las 2:00; el día dura 25 horas",
+  "Comisión Europea, consulta de 2018: 4,6 millones de respuestas, 84 % a favor de acabar con el cambio",
+  "Menorca.info / Última Hora (20/10/2025): Sánchez propone a la UE acabar con el cambio de hora en 2026",
+  "DOUE 2026/1660 (18/03/2026): calendario del horario de verano 2027-2031, con dos cambios al año"
+ ],
+ "caption": "⏰ Este domingo 25, a las 3:00 vuelven a ser las 2:00: el día tendrá 25 horas\n😴 Una hora más de sueño… pero anochecerá una hora antes\n🗳️ En 2018, el 84 % de 4,6 millones de europeos pidió acabar con el cambio de hora\n🇪🇸 En 2025 el Gobierno pidió quitarlo ya en 2026\n📅 Pero la UE publicó el calendario hasta 2031: seguimos con dos cambios al año\n💬 ¿VERANO o INVIERNO para siempre? Te leo 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Vandal/El Español 21/10/2026 · Comisión Europea (consulta 2018) · Última Hora 20/10/2025 · DOUE 2026/1660 (18/03/2026). ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#CambioDeHora",
+  "#HorarioDeInvierno",
+  "#25Octubre",
+  "#UE",
+  "#España",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "salon",
+   "animo": "tension",
+   "footnote": "Vandal / El Español 21/10/2026",
+   "lines": [
+    {
+     "text": "Este domingo, a las tres de la madrugada… vuelven a ser las dos.",
+     "tono": "energia"
+    },
+    {
+     "text": "Ese día tendrá veinticinco horas.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@tres",
+     "plano": "general",
+     "sobre": [
+      700,
+      800
+     ],
+     "dur": 0.5,
+     "zoom": 1.1
+    },
+    {
+     "at": "@dos",
+     "plano": "general",
+     "sobre": [
+      700,
+      800
+     ],
+     "dur": 0.4,
+     "zoom": 1.15
+    },
+    {
+     "at": "@veinticinco",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 720,
+     "y": 760,
+     "scale": 1.3,
+     "at": 0,
+     "props": {
+      "velocidad": -8
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "3:00",
+     "x": 720,
+     "y": 480,
+     "size": 110,
+     "color": "rojo",
+     "at": "@tres",
+     "golpe": true,
+     "out": "@dos",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "2:00",
+     "x": 720,
+     "y": 480,
+     "size": 110,
+     "color": "verde",
+     "at": "@dos",
+     "golpe": true,
+     "out": "@veinticinco",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 480,
+     "scale": 0.85,
+     "at": "@veinticinco",
+     "props": {
+      "valor": 25,
+      "desde": 24,
+      "sufijo": " HORAS",
+      "ancho": 620
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "dibujo": 1.0
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 280,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@domingo",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@madrugada",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@vuelven",
+       "take": true,
+       "cara": "susto"
+      },
+      {
+       "at": "@dos",
+       "pose": "piensa",
+       "cara": "confundido"
+      },
+      {
+       "at": "@veinticinco",
+       "salta": true,
+       "cara": "riendo"
+      },
+      {
+       "at": "@horas",
+       "pose": "pulgar"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "notas",
+   "fondo": {
+    "tipo": "calle",
+    "hora": "tarde"
+   },
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Vandal / El Español 21/10/2026",
+   "lines": [
+    {
+     "text": "Una hora más en la cama… pero por la tarde anochecerá una hora antes.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y hay quien lo nota: cansancio, peor sueño, menos concentración.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@tarde",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.6,
+     "zoom": 1.06
+    },
+    {
+     "at": "@cansancio",
+     "plano": "medio",
+     "sobre": "pizon",
+     "dur": 0.5,
+     "aire": 240
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 520,
+     "scale": 0.9,
+     "at": "@cama",
+     "props": {
+      "texto": "+1 HORA DE SUEÑO",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@tarde"
+    },
+    {
+     "type": "rotulo",
+     "text": "ANOCHECE ANTES",
+     "x": 540,
+     "y": 520,
+     "size": 92,
+     "color": "naranja",
+     "at": "@anochecerá",
+     "golpe": true,
+     "out": "@nota",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@hora",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@cama",
+       "salta": true
+      },
+      {
+       "at": "@tarde",
+       "mira": "arriba",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@antes",
+       "pose": "encoge"
+      },
+      {
+       "at": "@cansancio",
+       "cara": "triste",
+       "pose": "caidos"
+      },
+      {
+       "at": "@sueño",
+       "tiembla": true
+      },
+      {
+       "at": "@concentración",
+       "cara": "confundido",
+       "pose": "piensa"
+      }
+     ],
+     "entra": "nada",
+     "id": "pizon"
+    },
+    {
+     "type": "rotulo",
+     "text": "CANSANCIO · PEOR SUEÑO",
+     "x": 540,
+     "y": 520,
+     "size": 76,
+     "color": "rojo",
+     "at": "@cansancio",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "consulta",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Comisión Europea, consulta pública de 2018",
+   "lines": [
+    {
+     "text": "En 2018, la Unión Europea preguntó: respondieron 4,6 millones de personas.",
+     "tono": "normal"
+    },
+    {
+     "text": "El 84 % pidió acabar con el cambio de hora.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      900.0,
+      460.0
+     ],
+     "dur": 0,
+     "zoom": 2.6
+    },
+    {
+     "at": "@preguntó",
+     "plano": "general",
+     "sobre": [
+      900.0,
+      460.0
+     ],
+     "dur": 0.9,
+     "zoom": 3.4
+    },
+    {
+     "at": "@84",
+     "plano": "general",
+     "sobre": [
+      900.0,
+      460.0
+     ],
+     "dur": 0.6,
+     "zoom": 3.0
+    },
+    {
+     "at": "@acabar",
+     "plano": "general",
+     "sobre": [
+      776.7,
+      546.4
+     ],
+     "dur": 1.2,
+     "zoom": 4.2
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "mundo"
+     },
+     "acciones": [
+      {
+       "at": "@preguntó",
+       "props": {
+        "resalta": [
+         "AUT",
+         "BEL",
+         "BGR",
+         "HRV",
+         "CYP",
+         "CZE",
+         "DNK",
+         "EST",
+         "FIN",
+         "FRA",
+         "DEU",
+         "GRC",
+         "HUN",
+         "IRL",
+         "ITA",
+         "LVA",
+         "LTU",
+         "LUX",
+         "MLT",
+         "NLD",
+         "POL",
+         "PRT",
+         "ROU",
+         "SVK",
+         "SVN",
+         "ESP",
+         "SWE"
+        ]
+       },
+       "sfx": "pop"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.4
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 480,
+     "scale": 0.8,
+     "at": "@respondieron",
+     "props": {
+      "valor": 4.6,
+      "decimales": 1,
+      "sufijo": " MILLONES",
+      "ancho": 700
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "dibujo": 1.2,
+     "out": "@84"
+    },
+    {
+     "type": "rotulo",
+     "text": "84 % : QUE SE ACABE",
+     "x": 540,
+     "y": 480,
+     "size": 92,
+     "color": "amarillo",
+     "at": "@84",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 840,
+     "y": 1580,
+     "scale": 0.5,
+     "at": 0.2,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@preguntó",
+       "pose": "senala_izq"
+      },
+      {
+       "at": "@millones",
+       "cara": "sorpresa",
+       "salta": true
+      },
+      {
+       "at": "@84",
+       "pose": "pulgar",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@pidió",
+       "salta": true
+      },
+      {
+       "at": "@acabar",
+       "pose": "senala_izq"
+      },
+      {
+       "at": "@cambio",
+       "cara": "riendo"
+      },
+      {
+       "at": "@hora",
+       "mira": "camara",
+       "pose": "saluda"
+      }
+     ],
+     "hud": true,
+     "entra": "der",
+     "id": "profe"
+    }
+   ]
+  },
+  {
+   "id": "espana",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "corte",
+   "footnote": "Menorca.info / Última Hora 20/10/2025 · eldiario.es",
+   "lines": [
+    {
+     "text": "En octubre de 2025, el Gobierno pidió a la UE quitarlo ya en 2026: dice que afecta a la salud.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@UE",
+     "plano": "general",
+     "sobre": [
+      700,
+      950
+     ],
+     "dur": 0.6,
+     "zoom": 1.06
+    },
+    {
+     "at": "@2026",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.1
+    },
+    {
+     "at": "@salud",
+     "plano": "medio",
+     "sobre": "sanchez",
+     "dur": 0.5,
+     "aire": 240
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "bandera",
+     "x": 820,
+     "y": 1340,
+     "scale": 0.8,
+     "at": "@UE-0.2",
+     "props": {
+      "diseno": "ue"
+     },
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 360,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@octubre",
+       "mira": "camara"
+      },
+      {
+       "at": "@Gobierno",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@UE",
+       "x": 420,
+       "dur": 0.6
+      },
+      {
+       "at": "@quitarlo",
+       "pose": "puno"
+      },
+      {
+       "at": "@ya",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@2026",
+       "salta": true
+      },
+      {
+       "at": "@dice",
+       "pose": "piensa"
+      },
+      {
+       "at": "@afecta",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@salud",
+       "mira": "camara",
+       "pose": "manos_juntas"
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "rotulo",
+     "text": "FIN EN 2026",
+     "x": 540,
+     "y": 480,
+     "size": 104,
+     "color": "amarillo",
+     "at": "@quitarlo",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 640,
+     "scale": 1.0,
+     "at": "@salud",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "giro",
+   "fondo": "oficina",
+   "animo": "tension",
+   "musica": "corte",
+   "trans": "iris",
+   "footnote": "DOUE 2026/1660 (Comisión Europea, 18/03/2026) · El Demócrata",
+   "lines": [
+    {
+     "text": "Pero en marzo, Bruselas publicó el calendario hasta 2031… con dos cambios de hora cada año.",
+     "tono": "normal"
+    },
+    {
+     "text": "¿Por qué? Los países no se ponen de acuerdo en qué horario dejar.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Bruselas",
+     "plano": "general",
+     "sobre": [
+      600,
+      900
+     ],
+     "dur": 0.6,
+     "zoom": 1.04
+    },
+    {
+     "at": "@2031",
+     "plano": "general",
+     "sobre": [
+      540,
+      800
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@acuerdo",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 540,
+     "y": 760,
+     "scale": 0.9,
+     "at": 0,
+     "props": {
+      "titulo": "HORARIO DE VERANO",
+      "subtitulo": "Comisión Europea · 2027-2031",
+      "articulos": [
+       {
+        "id": "a",
+        "titulo": "2027 · 2028 · 2029",
+        "lineas": [
+         "marzo: se adelanta",
+         "octubre: se atrasa"
+        ]
+       },
+       {
+        "id": "b",
+        "titulo": "2030 · 2031",
+        "lineas": [
+         "marzo: se adelanta",
+         "octubre: se atrasa"
+        ]
+       }
+      ]
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "papel",
+     "dibuja": 1.0,
+     "out": "@Por"
+    },
+    {
+     "type": "rotulo",
+     "text": "HASTA 2031",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "rojo",
+     "at": "@2031",
+     "golpe": true,
+     "out": "@Por",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 880,
+     "y": 1660,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@marzo",
+       "mira": "izq",
+       "pose": "senala_izq"
+      },
+      {
+       "at": "@Bruselas",
+       "salta": true
+      },
+      {
+       "at": "@calendario",
+       "cara": "sorpresa",
+       "pose": "piensa"
+      },
+      {
+       "at": "@2031",
+       "take": true,
+       "cara": "susto"
+      },
+      {
+       "at": "@dos",
+       "tiembla": true
+      },
+      {
+       "at": "@año",
+       "cara": "indignado",
+       "pose": "jarras"
+      }
+     ],
+     "entra": "nada",
+     "out": "@Por",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1180,
+     "scale": 1.0,
+     "at": "@cambios",
+     "props": {
+      "texto": "CONFIRMADO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "critica",
+     "x": 220,
+     "y": 1340,
+     "scale": 0.45,
+     "at": "@Por-0.2",
+     "cara": "enfado",
+     "acciones": [
+      {
+       "at": "@países",
+       "pose": "jarras",
+       "mira": "der"
+      },
+      {
+       "at": "@acuerdo",
+       "salta": true,
+       "cara": "indignado"
+      }
+     ],
+     "entra": "nada",
+     "id": "critica"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.45,
+     "at": "@Por-0.2",
+     "cara": "enfado",
+     "acciones": [
+      {
+       "at": "@países",
+       "pose": "encoge",
+       "mira": "camara"
+      },
+      {
+       "at": "@acuerdo",
+       "salta": true,
+       "cara": "indignado"
+      }
+     ],
+     "entra": "nada",
+     "id": "pizon"
+    },
+    {
+     "type": "personaje",
+     "quien": "sarcastica",
+     "x": 860,
+     "y": 1340,
+     "scale": 0.45,
+     "at": "@Por-0.2",
+     "cara": "enfado",
+     "acciones": [
+      {
+       "at": "@países",
+       "pose": "cruzados",
+       "mira": "izq"
+      },
+      {
+       "at": "@acuerdo",
+       "salta": true,
+       "cara": "indignado"
+      }
+     ],
+     "entra": "nada",
+     "id": "sarcastica"
+    },
+    {
+     "type": "rotulo",
+     "text": "SIN ACUERDO",
+     "x": 540,
+     "y": 480,
+     "size": 104,
+     "color": "rojo",
+     "at": "@acuerdo",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": {
+    "tipo": "rayos",
+    "color": "amarillo"
+   },
+   "animo": "final",
+   "trans": "zoom",
+   "footnote": "Pregunta a la audiencia",
+   "lines": [
+    {
+     "text": "¿Y tú qué prefieres para siempre: horario de verano o de invierno?",
+     "tono": "energia"
+    },
+    {
+     "text": "Te leo en comentarios. Y síguenos.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@verano",
+     "plano": "general",
+     "sobre": [
+      300,
+      950
+     ],
+     "dur": 0.4,
+     "zoom": 1.08
+    },
+    {
+     "at": "@invierno",
+     "plano": "general",
+     "sobre": [
+      780,
+      950
+     ],
+     "dur": 0.4,
+     "zoom": 1.08
+    },
+    {
+     "at": "@síguenos",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "sol",
+     "x": 280,
+     "y": 820,
+     "scale": 0.8,
+     "at": "@verano-0.2",
+     "props": {},
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "nube",
+     "x": 800,
+     "y": 820,
+     "scale": 1.0,
+     "at": "@invierno-0.2",
+     "props": {},
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿VERANO O INVIERNO?",
+     "x": 540,
+     "y": 480,
+     "size": 88,
+     "color": "rojo",
+     "at": "@prefieres",
+     "golpe": true,
+     "out": "@síguenos-0.3",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 480,
+     "size": 110,
+     "color": "rojo",
+     "at": "@síguenos",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@prefieres",
+       "pose": "piensa"
+      },
+      {
+       "at": "@verano",
+       "mira": "izq",
+       "pose": "senala_izq",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@invierno",
+       "mira": "der",
+       "pose": "senala",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@leo",
+       "mira": "camara",
+       "cara": "riendo"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 1.2,
+  "titulo": "Cambia la hora… ¿la última vez?",
+  "capitulo": null
+ }
+}

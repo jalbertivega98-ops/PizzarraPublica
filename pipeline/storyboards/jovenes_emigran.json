@@ -1,0 +1,749 @@
+{
+ "slug": "jovenes_emigran",
+ "title": "Los jóvenes que se van",
+ "series_tag": "TU DINERO, CON DATOS",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "INE: Estadística de Migraciones y Cambios de Residencia 2024 (11/12/2025)"
+ ],
+ "caption": "✈️ En 2024 se fueron casi 50.000 españoles de 20 a 39 años\n🌍 Destinos: Francia 16.353 · Reino Unido 15.349 · EE. UU. 13.185 · Alemania 12.509\n🔎 Ojo: 1 de cada 3 españoles que se van nació fuera\n🇪🇸 Nacidos en España: se fueron 88.243 y el saldo fue −25.521\n🎒 El grupo que más se va: 25-34 años (17.792 nacidos aquí)\n📋 Seguramente son más: muchos no se dan de baja en el padrón\n💬 ¿Tienes a alguien fuera?\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuente: INE, Estadística de Migraciones y Cambios de Residencia 2024, definitiva (11/12/2025): 137.719 emigraciones de españoles, 88.243 de nacidos en España; saldo de españoles +6.616 y de nacidos en España −25.521. 20-39 años: 49.942 (suma propia de edades). Destinos de todas las edades. Parte del Padrón, que infravalora las salidas. Los datos de 2025 salen en diciembre de 2026. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PizarraPública",
+  "#Emigración",
+  "#Jóvenes",
+  "#INE",
+  "#Datos",
+  "#España",
+  "#Trabajo"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "calle",
+   "animo": "curioso",
+   "footnote": "INE, Estadística de Migraciones 2024 · españoles de 20 a 39 años",
+   "lines": [
+    {
+     "text": "En 2024 se fueron de España casi 50.000 españoles de entre 20 y 39 años.",
+     "tono": "energia"
+    },
+    {
+     "text": "¿Adónde?",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@Adónde",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@fueron",
+       "mira": "avion",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@50.000",
+       "take": true
+      },
+      {
+       "at": "@Adónde",
+       "mira": "camara",
+       "pose": "encoge",
+       "cara": "pensativo",
+       "objeto": null
+      }
+     ],
+     "entra": "izq",
+     "objeto": "saco",
+     "pose": "sostiene",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "avion",
+     "x": 1300,
+     "y": 560,
+     "scale": 0.65,
+     "at": "@fueron",
+     "props": {},
+     "acciones": [
+      {
+       "at": "@fueron",
+       "x": 760,
+       "dur": 1.2
+      },
+      {
+       "at": "@Adónde",
+       "x": -400,
+       "dur": 1.6
+      }
+     ],
+     "id": "avion",
+     "entra": "nada"
+    },
+    {
+     "type": "rotulo",
+     "text": "≈ 50.000",
+     "x": 600,
+     "y": 480,
+     "size": 120,
+     "color": "red",
+     "at": "@50.000",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "20-39 AÑOS",
+     "x": 600,
+     "y": 620,
+     "size": 80,
+     "color": "amarillo",
+     "at": "@39",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "destinos",
+   "fondo": {
+    "tipo": "playa",
+    "variante": "montana"
+   },
+   "animo": "alegre",
+   "trans": "pan",
+   "footnote": "INE, Estadística de Migraciones 2024 · destinos, todas las edades",
+   "lines": [
+    {
+     "text": "Primero, Francia: 16.353. Después, Reino Unido, Estados Unidos y Alemania.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@Alemania",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 280,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": 0.9,
+       "mira": "der"
+      },
+      {
+       "at": "@Francia",
+       "salta": true,
+       "cara": "riendo"
+      },
+      {
+       "at": "@16.353",
+       "pose": "arriba"
+      },
+      {
+       "at": "@Reino",
+       "mira": "der"
+      },
+      {
+       "at": "@Unidos",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@Alemania",
+       "pose": "arriba",
+       "objeto": null
+      }
+     ],
+     "entra": "izq",
+     "objeto": "saco",
+     "pose": "sostiene",
+     "id": "pizon"
+    },
+    {
+     "type": "rotulo",
+     "text": "1. FRANCIA: 16.353",
+     "x": 600,
+     "y": 460,
+     "size": 66,
+     "color": "blanco",
+     "at": "@Francia",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "2. REINO UNIDO: 15.349",
+     "x": 600,
+     "y": 550,
+     "size": 66,
+     "color": "amarillo",
+     "at": "@Reino",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "3. EE. UU.: 13.185",
+     "x": 600,
+     "y": 640,
+     "size": 66,
+     "color": "blanco",
+     "at": "@Unidos",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "4. ALEMANIA: 12.509",
+     "x": 600,
+     "y": 730,
+     "size": 66,
+     "color": "amarillo",
+     "at": "@Alemania",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "nacidos",
+   "fondo": "rayos",
+   "animo": "comico",
+   "musica": "corte",
+   "trans": "iris",
+   "footnote": "INE 2024 · 49.476 de 137.719 nacieron fuera",
+   "lines": [
+    {
+     "text": "Pero ojo: un tercio de los que se van nacieron fuera.",
+     "tono": "sorpresa"
+    },
+    {
+     "text": "Españoles nacionalizados que vuelven a su país o se mudan a otro.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@tercio",
+     "plano": "medio",
+     "sobre": "profe",
+     "dur": 0.3,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 320,
+     "y": 1340,
+     "scale": 0.78,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@tercio",
+       "take": true,
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@nacionalizados",
+       "pose": "senala",
+       "cara": "normal"
+      },
+      {
+       "at": "@vuelven",
+       "mira": "camara"
+      }
+     ],
+     "entra": "pop",
+     "pose": "senala_arriba",
+     "id": "profe"
+    },
+    {
+     "type": "personaje",
+     "quien": "critica",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": "@nacieron",
+     "cara": "esceptica",
+     "acciones": [
+      {
+       "at": "@país",
+       "cara": "pensativo",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "der",
+     "id": "critica"
+    },
+    {
+     "type": "rotulo",
+     "text": "1 DE CADA 3 NACIÓ FUERA",
+     "x": 540,
+     "y": 480,
+     "size": 66,
+     "color": "amarillo",
+     "at": "@tercio",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "saldo",
+   "fondo": "calle",
+   "animo": "tension",
+   "trans": "pan",
+   "footnote": "INE, Estadística de Migraciones 2024 · saldo de españoles nacidos en España",
+   "lines": [
+    {
+     "text": "Solo los nacidos aquí: se fueron 88.243 y volvieron muchos menos.",
+     "tono": "normal"
+    },
+    {
+     "text": "Perdimos 25.521 en un año.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@25.521",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.3,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@88.243",
+       "mira": "izq",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@volvieron",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@25.521",
+       "take": true,
+       "cara": "triste"
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.62,
+     "at": "@fueron",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@fueron",
+       "x": -300,
+       "dur": 1.4,
+       "corre": true
+      }
+     ],
+     "entra": "nada",
+     "id": "pizon"
+    },
+    {
+     "type": "rotulo",
+     "text": "SE VAN: 88.243",
+     "x": 540,
+     "y": 480,
+     "size": 80,
+     "color": "amarillo",
+     "at": "@88.243",
+     "golpe": true,
+     "out": "@Perdimos",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "− 25.521",
+     "x": 540,
+     "y": 480,
+     "size": 120,
+     "color": "red",
+     "at": "@25.521",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "edad",
+   "fondo": "salon",
+   "animo": "triste",
+   "trans": "iris",
+   "footnote": "INE, Estadística de Migraciones 2024 · nacidos en España de 25 a 34 años",
+   "lines": [
+    {
+     "text": "El grupo que más se va: de 25 a 34 años. 17.792 nacidos en España.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@17.792",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 320,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@25",
+       "mira": "camara"
+      },
+      {
+       "at": "@34",
+       "salta": true
+      },
+      {
+       "at": "@nacidos",
+       "mira": "camara",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@España",
+       "tiembla": true
+      },
+      {
+       "at": "@17.792",
+       "cara": "triste",
+       "pose": "caidos",
+       "objeto": null
+      }
+     ],
+     "entra": "nada",
+     "objeto": "saco",
+     "pose": "sostiene",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "25-34 AÑOS",
+     "x": 600,
+     "y": 480,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@25",
+     "golpe": true,
+     "out": "@17.792",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "17.792",
+     "x": 600,
+     "y": 480,
+     "size": 120,
+     "color": "red",
+     "at": "@17.792",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "padron",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "pan",
+   "footnote": "El Padrón infravalora las salidas · datos de 2024",
+   "lines": [
+    {
+     "text": "Y seguramente son más: muchos no se dan de baja en el padrón.",
+     "tono": "sorpresa"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@padrón",
+     "plano": "medio",
+     "sobre": "sarcastica",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sarcastica",
+     "x": 320,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "burla",
+     "acciones": [
+      {
+       "at": "@más",
+       "pose": "jarras"
+      },
+      {
+       "at": "@baja",
+       "take": true,
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@padrón",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "izq",
+     "id": "sarcastica"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contrato",
+     "x": 780,
+     "y": 800,
+     "scale": 0.7,
+     "at": "@baja",
+     "props": {
+      "titulo": "PADRÓN",
+      "hojas": 1
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "papel"
+    },
+    {
+     "type": "rotulo",
+     "text": "PROBABLEMENTE MÁS",
+     "x": 600,
+     "y": 480,
+     "size": 76,
+     "color": "amarillo",
+     "at": "@más",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "INE, Estadística de Migraciones 2024",
+   "lines": [
+    {
+     "text": "¿Tienes a alguien fuera? Te leemos.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y síguenos: cada semana, datos que te tocan.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@síguenos",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@alguien",
+       "mira": "camara",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@leemos",
+       "pose": "senala",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@tocan",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "avion",
+     "x": -300,
+     "y": 560,
+     "scale": 0.5,
+     "at": "@alguien",
+     "props": {},
+     "acciones": [
+      {
+       "at": "@alguien",
+       "x": 1400,
+       "dur": 3.0
+      }
+     ],
+     "entra": "nada"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿ALGUIEN FUERA?",
+     "x": 540,
+     "y": 470,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@alguien",
+     "golpe": true,
+     "out": "@síguenos-0.4",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 470,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@tocan",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.4,
+  "titulo": "Los jóvenes que se van",
+  "capitulo": null
+ }
+}

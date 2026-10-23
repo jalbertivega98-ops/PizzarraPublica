@@ -1,0 +1,124 @@
+{
+ "duracion": 47.52,
+ "voz_real": true,
+ "planos": [
+  {
+   "i": 0,
+   "ini": 0.0,
+   "fin": 2.72,
+   "dur": 2.72,
+   "voz": [
+    "Llegas a casa. La llave no entra. Hay alguien dentro."
+   ]
+  },
+  {
+   "i": 1,
+   "ini": 2.72,
+   "fin": 4.85,
+   "dur": 2.14,
+   "voz": [
+    "¿Qué pasa de verdad si te okupan la casa?"
+   ]
+  },
+  {
+   "i": 2,
+   "ini": 4.85,
+   "fin": 10.13,
+   "dur": 5.27,
+   "voz": [
+    "En 2025 hubo 14.875 denuncias por allanamiento o usurpación."
+   ]
+  },
+  {
+   "i": 3,
+   "ini": 10.13,
+   "fin": 12.85,
+   "dur": 2.72,
+   "voz": [
+    "Un 9,4 % menos que el año anterior."
+   ]
+  },
+  {
+   "i": 4,
+   "ini": 12.85,
+   "fin": 15.21,
+   "dur": 2.37,
+   "voz": [
+    "Y casi el 40 %, en Cataluña."
+   ]
+  },
+  {
+   "i": 5,
+   "ini": 15.21,
+   "fin": 18.16,
+   "dur": 2.94,
+   "voz": [
+    "Pero esa cifra mezcla dos delitos muy distintos."
+   ]
+  },
+  {
+   "i": 6,
+   "ini": 18.16,
+   "fin": 23.38,
+   "dur": 5.22,
+   "voz": [
+    "Si es tu casa, la de siempre o tu segunda residencia, es allanamiento de morada. Cárcel de seis meses a dos años."
+   ]
+  },
+  {
+   "i": 7,
+   "ini": 23.38,
+   "fin": 25.31,
+   "dur": 1.93,
+   "voz": [
+    "La policía puede actuar al momento."
+   ]
+  },
+  {
+   "i": 8,
+   "ini": 25.31,
+   "fin": 31.12,
+   "dur": 5.81,
+   "voz": [
+    "Si es un piso vacío, es usurpación. Se castiga con multa, y si ya llevan tiempo dentro, suele hacer falta un juez."
+   ]
+  },
+  {
+   "i": 9,
+   "ini": 31.12,
+   "fin": 34.04,
+   "dur": 2.93,
+   "voz": [
+    "Desde dos mil veinticinco, los dos van por juicio rápido."
+   ]
+  },
+  {
+   "i": 10,
+   "ini": 34.04,
+   "fin": 37.14,
+   "dur": 3.1,
+   "voz": [
+    "Si te pasa: denuncia ya, y lleva escrituras o contrato."
+   ]
+  },
+  {
+   "i": 11,
+   "ini": 37.14,
+   "fin": 40.83,
+   "dur": 3.68,
+   "voz": [
+    "Y no les cortes la luz ni el agua por tu cuenta: podrías acabar denunciado tú."
+   ]
+  },
+  {
+   "i": 12,
+   "ini": 40.83,
+   "fin": 47.52,
+   "dur": 6.69,
+   "voz": [
+    "¿Crees que la ley protege lo suficiente a los propietarios? A: sí. B: no.",
+    "Comenta A o B."
+   ]
+  }
+ ]
+}

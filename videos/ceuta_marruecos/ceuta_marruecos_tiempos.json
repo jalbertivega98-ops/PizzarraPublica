@@ -1,0 +1,126 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 8.37,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 3.9,
+    "texto": "Los Reyes acaban de visitar Ceuta y Melilla: la primera visita real desde 2007."
+   },
+   {
+    "t0": 4.1,
+    "t1": 7.92,
+    "texto": "Aquella vez, Marruecos llamó a consultas a su embajador. ¿Por qué tanto lío?"
+   }
+  ]
+ },
+ {
+  "escena": "ceuta",
+  "inicio": 8.37,
+  "fin": 21.51,
+  "frases": [
+   {
+    "t0": 8.69,
+    "t1": 11.71,
+    "texto": "Empecemos en 1415: Portugal conquista Ceuta."
+   },
+   {
+    "t0": 11.86,
+    "t1": 17.85,
+    "texto": "En 1580 pasa a la corona española, y cuando Portugal se separa, en 1640, Ceuta se queda con España."
+   },
+   {
+    "t0": 18.0,
+    "t1": 21.06,
+    "texto": "El Tratado de Lisboa lo firma en 1668."
+   }
+  ]
+ },
+ {
+  "escena": "melilla",
+  "inicio": 21.51,
+  "fin": 29.84,
+  "frases": [
+   {
+    "t0": 21.51,
+    "t1": 24.2,
+    "texto": "Melilla es española desde 1497."
+   },
+   {
+    "t0": 24.4,
+    "t1": 29.39,
+    "texto": "La dinastía que hoy reina en Marruecos llegó casi dos siglos después, en 1666."
+   }
+  ]
+ },
+ {
+  "escena": "onu",
+  "inicio": 29.84,
+  "fin": 39.49,
+  "frases": [
+   {
+    "t0": 30.14,
+    "t1": 33.65,
+    "texto": "Marruecos las reclama desde su independencia, en 1956."
+   },
+   {
+    "t0": 33.85,
+    "t1": 39.04,
+    "texto": "En 1975 lo llevó a la ONU, pero no prosperó: no están en su lista de territorios por descolonizar."
+   }
+  ]
+ },
+ {
+  "escena": "hoy",
+  "inicio": 39.49,
+  "fin": 45.78,
+  "frases": [
+   {
+    "t0": 39.81,
+    "t1": 45.33,
+    "texto": "Desde 1995 son ciudades autónomas, y el único trozo de la Unión Europea en el continente africano."
+   }
+  ]
+ },
+ {
+  "escena": "posturas",
+  "inicio": 45.78,
+  "fin": 57.3,
+  "frases": [
+   {
+    "t0": 46.48,
+    "t1": 50.69,
+    "texto": "El Gobierno del PSOE no negocia: Robles las llama «españolísimas e intocables»."
+   },
+   {
+    "t0": 50.84,
+    "t1": 53.3,
+    "texto": "El PP critica que Sánchez no acompañara al Rey."
+   },
+   {
+    "t0": 53.45,
+    "t1": 56.85,
+    "texto": "Y Vox pide romper relaciones si Marruecos no reconoce que son españolas."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 57.3,
+  "fin": 63.57,
+  "frases": [
+   {
+    "t0": 57.62,
+    "t1": 60.3,
+    "texto": "¿Crees que Marruecos dejará de reclamarlas algún día? Te leo."
+   },
+   {
+    "t0": 60.5,
+    "t1": 62.22,
+    "texto": "Y síguenos para el próximo viaje de Piz."
+   }
+  ]
+ }
+]

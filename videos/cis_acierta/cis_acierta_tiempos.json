@@ -1,0 +1,107 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 6.87,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.46,
+    "texto": "El CIS da ganador al PSOE por casi 12 puntos."
+   },
+   {
+    "t0": 2.61,
+    "t1": 5.34,
+    "texto": "La media de las demás encuestas, al PP por casi 7."
+   },
+   {
+    "t0": 5.54,
+    "t1": 6.42,
+    "texto": "¿Quién acierta?"
+   }
+  ]
+ },
+ {
+  "escena": "pronosticos",
+  "inicio": 6.87,
+  "fin": 17.64,
+  "frases": [
+   {
+    "t0": 7.17,
+    "t1": 11.94,
+    "texto": "Barómetro del CIS de octubre: PSOE 34, PP 22,2 y Vox 17,1."
+   },
+   {
+    "t0": 12.19,
+    "t1": 17.19,
+    "texto": "Media de encuestas privadas: PP 32,6, PSOE 25,7 y Vox 18,2."
+   }
+  ]
+ },
+ {
+  "escena": "2023",
+  "inicio": 17.64,
+  "fin": 29.75,
+  "frases": [
+   {
+    "t0": 17.96,
+    "t1": 22.1,
+    "texto": "Viajemos a 2023. El barómetro de julio del CIS ponía al PSOE por delante."
+   },
+   {
+    "t0": 22.3,
+    "t1": 24.8,
+    "texto": "Ganó el PP, con el 33 por ciento."
+   },
+   {
+    "t0": 25.05,
+    "t1": 29.3,
+    "texto": "Eso sí: su gran encuesta preelectoral acertó quién quedaba primero… pero no por cuánto."
+   }
+  ]
+ },
+ {
+  "escena": "polemica",
+  "inicio": 29.75,
+  "fin": 45.57,
+  "frases": [
+   {
+    "t0": 30.45,
+    "t1": 36.37,
+    "texto": "Un análisis de El País vio que, desde 2018, el CIS sobreestimó a la izquierda en 41 de 42 elecciones."
+   },
+   {
+    "t0": 36.57,
+    "t1": 40.98,
+    "texto": "Su presidente, Tezanos, responde que refleja una sociedad «moderadamente de centro-izquierda»."
+   },
+   {
+    "t0": 41.18,
+    "t1": 45.12,
+    "texto": "PP y Vox abrieron una comisión en el Senado, y el PP quiere reformarlo por ley."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 45.57,
+  "fin": 54.25,
+  "frases": [
+   {
+    "t0": 45.89,
+    "t1": 48.77,
+    "texto": "La única encuesta que no falla se hace el 29 de noviembre."
+   },
+   {
+    "t0": 48.97,
+    "t1": 50.98,
+    "texto": "¿Tú te fías de las encuestas? Te leo."
+   },
+   {
+    "t0": 51.18,
+    "t1": 52.9,
+    "texto": "Y síguenos para el próximo viaje de Piz."
+   }
+  ]
+ }
+]

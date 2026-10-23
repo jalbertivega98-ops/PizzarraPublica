@@ -1,0 +1,121 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 7.69,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.86,
+    "texto": "Diez millones de visualizaciones en menos de veinticuatro horas."
+   },
+   {
+    "t0": 3.06,
+    "t1": 7.24,
+    "texto": "Eso logró la entrevista de Joe Rogan a Trump… y Jordi Wild quiere repetirlo en España."
+   }
+  ]
+ },
+ {
+  "escena": "tamano",
+  "inicio": 7.69,
+  "fin": 15.84,
+  "frases": [
+   {
+    "t0": 7.95,
+    "t1": 10.3,
+    "texto": "Su canal tiene casi siete millones de suscriptores."
+   },
+   {
+    "t0": 10.5,
+    "t1": 15.39,
+    "texto": "Y el último cara a cara en la tele lo vieron 5,9 millones: el debate menos visto de la historia."
+   }
+  ]
+ },
+ {
+  "escena": "reglas",
+  "inicio": 15.84,
+  "fin": 21.13,
+  "frases": [
+   {
+    "t0": 16.14,
+    "t1": 19.31,
+    "texto": "Y Wild acaba de cambiar las reglas: ya no hace falta que vayan todos."
+   },
+   {
+    "t0": 19.46,
+    "t1": 20.68,
+    "texto": "Se lo pidieron sus seguidores."
+   }
+  ]
+ },
+ {
+  "escena": "si",
+  "inicio": 21.13,
+  "fin": 26.28,
+  "frases": [
+   {
+    "t0": 21.83,
+    "t1": 23.41,
+    "texto": "Feijóo y Abascal siguen dentro."
+   },
+   {
+    "t0": 23.56,
+    "t1": 25.83,
+    "texto": "Y hoy ha aceptado Ada Colau, del Frente Amplio."
+   }
+  ]
+ },
+ {
+  "escena": "sanchez",
+  "inicio": 26.28,
+  "fin": 32.51,
+  "frases": [
+   {
+    "t0": 26.28,
+    "t1": 27.92,
+    "texto": "¿Y Sánchez? Sigue sin responder."
+   },
+   {
+    "t0": 28.12,
+    "t1": 32.06,
+    "texto": "Wild le pone fecha: hasta este viernes 23. Si no contesta, se queda fuera."
+   }
+  ]
+ },
+ {
+  "escena": "formato",
+  "inicio": 32.51,
+  "fin": 38.46,
+  "frases": [
+   {
+    "t0": 32.81,
+    "t1": 36.03,
+    "texto": "Hasta hora y media, sin cortes y con dos periodistas verificando datos."
+   },
+   {
+    "t0": 36.18,
+    "t1": 38.01,
+    "texto": "Se emitirán desde el 9 de noviembre."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 38.46,
+  "fin": 43.74,
+  "frases": [
+   {
+    "t0": 38.78,
+    "t1": 41.61,
+    "texto": "¿Llenará Sánchez su silla? Escribe SÍ o NO, te leo."
+   },
+   {
+    "t0": 41.81,
+    "t1": 42.39,
+    "texto": "Y síguenos."
+   }
+  ]
+ }
+]

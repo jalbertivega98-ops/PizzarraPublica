@@ -1,0 +1,126 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 6.81,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 1.53,
+    "texto": "¿El 29N no vas a estar?"
+   },
+   {
+    "t0": 1.68,
+    "t1": 4.71,
+    "texto": "Puedes votar sin pisar el colegio… si no te saltas tres fechas."
+   },
+   {
+    "t0": 4.86,
+    "t1": 6.36,
+    "texto": "Y al final te hago una pregunta."
+   }
+  ]
+ },
+ {
+  "escena": "fecha1",
+  "inicio": 6.81,
+  "fin": 13.82,
+  "frases": [
+   {
+    "t0": 7.07,
+    "t1": 9.69,
+    "texto": "Fecha uno: hasta el 19 de noviembre para pedirlo,"
+   },
+   {
+    "t0": 9.84,
+    "t1": 13.37,
+    "texto": "en Correos o por internet con DNI electrónico o certificado digital."
+   }
+  ]
+ },
+ {
+  "escena": "fecha2",
+  "inicio": 13.82,
+  "fin": 18.15,
+  "frases": [
+   {
+    "t0": 14.14,
+    "t1": 17.7,
+    "texto": "Fecha dos: desde el 9 de noviembre te llegan a casa las papeletas y los sobres."
+   }
+  ]
+ },
+ {
+  "escena": "fecha3",
+  "inicio": 18.15,
+  "fin": 24.79,
+  "frases": [
+   {
+    "t0": 18.6,
+    "t1": 22.29,
+    "texto": "Fecha tres: envíalo por correo certificado antes del 25 de noviembre."
+   },
+   {
+    "t0": 22.49,
+    "t1": 24.34,
+    "texto": "Es gratis, y tienes que llevar tu DNI."
+   }
+  ]
+ },
+ {
+  "escena": "truco",
+  "inicio": 24.79,
+  "fin": 29.5,
+  "frases": [
+   {
+    "t0": 25.49,
+    "t1": 27.99,
+    "texto": "Truco: dentro del sobre, nunca metas tu DNI…"
+   },
+   {
+    "t0": 28.14,
+    "t1": 29.05,
+    "texto": "o el voto se anula."
+   }
+  ]
+ },
+ {
+  "escena": "fuera",
+  "inicio": 29.5,
+  "fin": 36.09,
+  "frases": [
+   {
+    "t0": 29.82,
+    "t1": 31.77,
+    "texto": "¿Estás fuera de España de forma temporal?"
+   },
+   {
+    "t0": 31.92,
+    "t1": 35.64,
+    "texto": "Ojo: tu plazo para pedirlo acaba el 31 de octubre, en el consulado."
+   }
+  ]
+ },
+ {
+  "escena": "pregunta",
+  "inicio": 36.09,
+  "fin": 46.91,
+  "frases": [
+   {
+    "t0": 36.79,
+    "t1": 40.21,
+    "texto": "Y ahora tú: ¿votarías por correo, o prefieres ir al colegio en persona?"
+   },
+   {
+    "t0": 40.36,
+    "t1": 42.41,
+    "texto": "Escribe CORREO o COLEGIO en comentarios."
+   },
+   {
+    "t0": 42.61,
+    "t1": 45.56,
+    "texto": "Compártelo con quien no vaya a estar el 29N. Y síguenos."
+   }
+  ]
+ }
+]

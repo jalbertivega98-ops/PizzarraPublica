@@ -1,0 +1,750 @@
+{
+ "slug": "factura_luz",
+ "title": "La hora de la lavadora",
+ "series_tag": "TU DINERO, CON DATOS",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "REE/OMIE: precios PVPC por horas (13/10/2026 y 11/10/2026)",
+  "Aurora Energy Research: vertidos 1.er semestre 2026",
+  "FACUA: factura media PVPC septiembre 2026"
+ ],
+ "caption": "🧺 Poner la lavadora a las 20:00 cuesta 11 veces más que a las 15:00\n💶 Martes 13/10: 0,49 € frente a 0,04 €\n🔥 Horno: 0,97 € o 0,09 € · ❄️ 4 h de aire: 1,74 € o 0,31 €\n🌙 De noche ya no es barato: la madrugada, 6 veces más que la siesta\n☀️ El domingo, de 12 a 17 h, la luz costó menos que cero\n🗑️ En seis meses se tiraron 2,5 TWh de renovables: la luz de 570.000 casas un año\n🧾 Aun así, septiembre (104 €) fue más caro que en 2021\n💬 ¿A qué hora pones la lavadora?\n➡️ Próximo: la gasolina · 🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Precios PVPC por horas de REE/OMIE: martes 13/10/2026, 0,3818 €/kWh de 20 a 21 h y 0,0338 €/kWh de 15 a 16 h; domingo 11/10/2026, negativo de 12 a 17 h. Consumos (lavadora 1 kWh, horno 2 kWh, aire 4 h) e impuestos (IVA 21 % e impuesto eléctrico): cálculo propio. Vertidos de renovables del 1.er semestre de 2026: Aurora Energy Research. Factura media: FACUA (4,4 kW, 366 kWh). Los precios cambian cada hora y cada día. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PizarraPública",
+  "#FacturaDeLaLuz",
+  "#PrecioLuz",
+  "#PVPC",
+  "#Ahorro",
+  "#TuDinero",
+  "#Energía"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "salon",
+   "animo": "curioso",
+   "footnote": "PVPC 13/10/2026 (REE) · con impuestos, cálculo propio",
+   "lines": [
+    {
+     "text": "Poner la lavadora a las ocho de la tarde te cuesta once veces más que a las tres.",
+     "tono": "energia"
+    },
+    {
+     "text": "Mismo día. Misma lavadora.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@once",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.3,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 320,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@lavadora",
+       "mira": "reloj"
+      },
+      {
+       "at": "@once",
+       "take": true,
+       "cara": "susto",
+       "objeto": null
+      },
+      {
+       "at": "@tres",
+       "mira": "camara",
+       "cara": "indignado"
+      },
+      {
+       "at": "@Misma",
+       "pose": "jarras"
+      }
+     ],
+     "entra": "izq",
+     "objeto": "saco",
+     "pose": "sostiene",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 790,
+     "y": 760,
+     "scale": 0.75,
+     "at": "@ocho",
+     "props": {},
+     "acciones": [],
+     "id": "reloj",
+     "entra": "pop",
+     "velocidad": 5
+    },
+    {
+     "type": "rotulo",
+     "text": "× 11",
+     "x": 600,
+     "y": 480,
+     "size": 160,
+     "color": "red",
+     "at": "@once",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "precios",
+   "fondo": "salon",
+   "animo": "tension",
+   "trans": "pan",
+   "footnote": "PVPC 13/10/2026 (REE) · con impuestos, cálculo propio",
+   "lines": [
+    {
+     "text": "El martes: una lavadora a las ocho, 49 céntimos. A las tres, 4.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@4",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@martes",
+       "mira": "camara"
+      },
+      {
+       "at": "@49",
+       "take": true,
+       "cara": "susto"
+      },
+      {
+       "at": "@4",
+       "salta": true,
+       "cara": "riendo"
+      }
+     ],
+     "entra": "izq",
+     "id": "pizon"
+    },
+    {
+     "type": "objeto",
+     "objeto": "moneda",
+     "x": 780,
+     "y": 700,
+     "scale": 0.9,
+     "at": "@49",
+     "props": {},
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "rotulo",
+     "text": "20:00: 0,49 €",
+     "x": 600,
+     "y": 470,
+     "size": 90,
+     "color": "red",
+     "at": "@49",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "15:00: 0,04 €",
+     "x": 600,
+     "y": 590,
+     "size": 90,
+     "color": "verde",
+     "at": "@4",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "mas",
+   "fondo": "salon",
+   "animo": "comico",
+   "trans": "iris",
+   "footnote": "PVPC 13/10/2026 (REE) · horno 2 kWh · cálculo propio",
+   "lines": [
+    {
+     "text": "El horno: 97 céntimos o 9. Cuatro horas de aire: 1,74 euros o 31 céntimos.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@aire",
+     "plano": "medio",
+     "sobre": "sarcastica",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sarcastica",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "burla",
+     "acciones": [
+      {
+       "at": "@horno",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@97",
+       "take": true
+      },
+      {
+       "at": "@aire",
+       "pose": "jarras"
+      },
+      {
+       "at": "@1,74",
+       "tiembla": true
+      },
+      {
+       "at": "@31",
+       "cara": "riendo",
+       "salta": true
+      }
+     ],
+     "entra": "izq",
+     "id": "sarcastica"
+    },
+    {
+     "type": "rotulo",
+     "text": "HORNO: 0,97 € / 0,09 €",
+     "x": 600,
+     "y": 470,
+     "size": 70,
+     "color": "amarillo",
+     "at": "@97",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "AIRE 4 H: 1,74 € / 0,31 €",
+     "x": 600,
+     "y": 580,
+     "size": 66,
+     "color": "amarillo",
+     "at": "@1,74",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "noche",
+   "fondo": "rayos",
+   "animo": "tension",
+   "musica": "corte",
+   "trans": "iris",
+   "footnote": "PVPC 13/10/2026 (REE) · madrugada ≈ 0,20 €/kWh",
+   "lines": [
+    {
+     "text": "Y lo de que de noche es barato ya no vale.",
+     "tono": "sorpresa"
+    },
+    {
+     "text": "La madrugada cuesta seis veces más que la siesta.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@siesta",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.3,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.8,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@noche",
+       "cara": "pensativo",
+       "pose": "encoge"
+      },
+      {
+       "at": "@vale",
+       "take": true,
+       "cara": "susto"
+      },
+      {
+       "at": "@seis",
+       "tropieza": true
+      }
+     ],
+     "entra": "pop",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "NOCHE ≠ BARATO",
+     "x": 540,
+     "y": 480,
+     "size": 96,
+     "color": "red",
+     "at": "@vale",
+     "golpe": true,
+     "out": "@seis",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "MADRUGADA × 6",
+     "x": 540,
+     "y": 480,
+     "size": 110,
+     "color": "red",
+     "at": "@seis",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "negativo",
+   "fondo": "calle",
+   "animo": "comico",
+   "trans": "pan",
+   "footnote": "PVPC 11/10/2026 (REE) · vertidos: Aurora, 1.er semestre",
+   "lines": [
+    {
+     "text": "Pero el domingo, de doce a cinco de la tarde, la luz costó menos que cero.",
+     "tono": "sorpresa"
+    },
+    {
+     "text": "Sobra tanta solar que en seis meses se tiraron 2,5 teravatios: la luz de 570.000 casas durante un año.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@570.000",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "sol",
+     "x": 790,
+     "y": 560,
+     "scale": 0.7,
+     "at": "@domingo",
+     "props": {},
+     "acciones": [],
+     "entra": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@domingo",
+       "mira": "arriba"
+      },
+      {
+       "at": 1.9,
+       "cara": "sorpresa",
+       "pose": "senala_arriba"
+      },
+      {
+       "at": "@cero",
+       "salta": true,
+       "cara": "riendo",
+       "pose": "arriba"
+      },
+      {
+       "at": "@solar",
+       "mira": "camara"
+      },
+      {
+       "at": "@tiraron",
+       "take": true,
+       "cara": "indignado"
+      },
+      {
+       "at": "@570.000",
+       "pose": "jarras"
+      },
+      {
+       "at": "@casas",
+       "tiembla": true
+      },
+      {
+       "at": "@año",
+       "mira": "camara",
+       "cara": "triste"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "< 0 €",
+     "x": 540,
+     "y": 480,
+     "size": 150,
+     "color": "verde",
+     "at": "@cero",
+     "golpe": true,
+     "out": "@tiraron",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "2,5 TWh TIRADOS",
+     "x": 540,
+     "y": 480,
+     "size": 90,
+     "color": "red",
+     "at": "@tiraron",
+     "golpe": true,
+     "out": "@570.000",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "= 570.000 CASAS",
+     "x": 540,
+     "y": 480,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@570.000",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "efecto",
+     "efecto": "lluvia",
+     "objeto": "moneda",
+     "n": 8,
+     "x0": 200,
+     "x1": 900,
+     "at": "@cero",
+     "vida": 1.8
+    }
+   ]
+  },
+  {
+   "id": "factura",
+   "fondo": "oficina",
+   "animo": "tension",
+   "trans": "iris",
+   "footnote": "FACUA, usuario medio PVPC (4,4 kW, 366 kWh)",
+   "lines": [
+    {
+     "text": "Y aun así, la factura media de septiembre fue más cara que en 2021: 104 euros.",
+     "tono": "remate"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@104",
+     "plano": "medio",
+     "sobre": "pizon",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@septiembre",
+       "mira": "camara"
+      },
+      {
+       "at": "@2021",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@104",
+       "take": true,
+       "cara": "susto",
+       "objeto": null
+      }
+     ],
+     "entra": "izq",
+     "objeto": {
+      "tipo": "contrato",
+      "titulo": "FACTURA LUZ",
+      "hojas": 1
+     },
+     "pose": "sostiene",
+     "id": "pizon"
+    },
+    {
+     "type": "efecto",
+     "efecto": "vuelan",
+     "objeto": "billete",
+     "n": 6,
+     "x": 360,
+     "y": 1000,
+     "at": "@104",
+     "vida": 1.8
+    },
+    {
+     "type": "rotulo",
+     "text": "SEP 2021: 102,71 €",
+     "x": 600,
+     "y": 470,
+     "size": 72,
+     "color": "blanco",
+     "at": "@2021",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SEP 2026: 104,31 €",
+     "x": 600,
+     "y": 580,
+     "size": 72,
+     "color": "red",
+     "at": "@104",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "salon",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Precios PVPC por horas: ree.es",
+   "lines": [
+    {
+     "text": "¿A qué hora pones tú la lavadora? Te leemos.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y síguenos: la próxima, la gasolina.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@síguenos",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@hora",
+       "mira": "camara",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@leemos",
+       "pose": "senala",
+       "cara": "ilusionado",
+       "objeto": null
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@gasolina",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "objeto": "saco",
+     "pose": "sostiene",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 790,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@lavadora",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@gasolina",
+       "take": true
+      }
+     ],
+     "entra": "nada",
+     "id": "pizon"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿A QUÉ HORA LA PONES?",
+     "x": 540,
+     "y": 470,
+     "size": 80,
+     "color": "amarillo",
+     "at": "@hora",
+     "golpe": true,
+     "out": "@síguenos-0.4",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 470,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@gasolina",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.0,
+  "titulo": "La lavadora: 11 veces más cara a las 20:00",
+  "capitulo": null
+ }
+}

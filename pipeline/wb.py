@@ -280,6 +280,9 @@ ICONS = {
 
 
 # ---------------------------------------------------------------- elementos
+UNIVERSO = ("personaje", "edificio", "objeto", "rotulo", "efecto")
+
+
 class Element:
     """Un elemento del storyboard con su ventana de tiempo dentro de la escena."""
 
@@ -288,6 +291,9 @@ class Element:
         self.kind = spec["type"]
         self.t0 = t0
         self.dur = float(spec.get("dur", 0.8))
+        if self.kind in UNIVERSO:  # pizarras-personaje, edificios y objetos cartoon (universo/actor.py)
+            from universo import actor
+            self.dur = float(spec.get("dur", actor.DUR_ENTRA[self.kind] if spec.get("entra") != "nada" else 0.0))
         self.out = spec.get("out_t")
         self.strokes, self.fills = [], []
         self.compile(rng)
@@ -342,7 +348,15 @@ class Element:
             rot = lambda pts: [(x + px * math.cos(a) - py * math.sin(a), y + px * math.sin(a) + py * math.cos(a)) for px, py in pts]
             self.strokes.append(Stroke(wobble(rot(rect_pts(-w / 2, -h / 2, w, h)), rng, 1.2), col, 8))
             self.strokes.append(Stroke(wobble(rot(rect_pts(-w / 2 + 12, -h / 2 + 12, w - 24, h - 24)), rng, 1.0), col, 3))
-        # text / bars / counter se dibujan con su propia rutina
+        elif k == "tu":
+            # personaje «TÚ»: monigote a lápiz; la cara y los brazos cambian con el tiempo (ver _draw_tu)
+            sc, x, y = s.get("scale", 1.0), s["x"], s["y"]
+            body = [Stroke(ellipse_pts(0, -150, 58, 62), col, 8),
+                    Stroke([(0, -88), (0, 60)], col, 8),
+                    Stroke([(0, 60), (-48, 175)], col, 8), Stroke([(0, 60), (48, 175)], col, 8)]
+            for o in body:
+                self.strokes.append(Stroke(wobble(o.pts * sc + [x, y], rng, 1.2), o.color, o.width * max(0.7, sc ** 0.5)))
+        # text / bars / counter / cara se dibujan con su propia rutina
 
     @staticmethod
     def _hemi_dots(s):
@@ -372,8 +386,141 @@ class Element:
             return 1.0
         return max(0.0, 1 - (t - self.out) / 0.25)
 
+    # -- vida después de dibujarse (estilo «viva»): fx = [(t0, dur, spec)]
+    fx = ()
+    golpe_t = None
+
+    def hidden(self, t):
+        return any(f["do"] == "borrar" and t >= t0 + d for t0, d, f in self.fx)
+
+    def transform(self, c, t):
+        """Aplica latir / temblar / mover / golpe alrededor del centro del elemento."""
+        x0, y0, x1, y1 = self.bbox()
+        cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+        dx = dy = 0.0
+        sc = 1.0
+        if self.spec.get("golpe") and t >= self.t0:
+            k = (t - self.t0) / 0.24
+            if k < 1:
+                sc *= 1 + 0.22 * (1 - ease_out(k))
+        for t0, d, f in self.fx:
+            if t < t0:
+                continue
+            k = min(1.0, (t - t0) / max(d, 1e-3))
+            if f["do"] == "golpe" and k < 1:
+                sc *= 1 + 0.2 * (1 - ease_out(k))
+            elif f["do"] == "latir" and k < 1:
+                sc *= 1 + f.get("fuerza", 0.14) * math.sin(math.pi * k)
+            elif f["do"] == "temblar" and k < 1:
+                dx += f.get("fuerza", 12) * math.sin((t - t0) * 75) * (1 - k)
+            elif f["do"] == "mover":
+                e = ease(k)
+                dx += (f.get("x", cx) - cx) * e
+                dy += (f.get("y", cy) - cy) * e
+                sc *= 1 + (f.get("scale", 1.0) - 1) * e
+        if sc == 1.0 and dx == 0 and dy == 0:
+            return False
+        c.save()
+        c.translate(cx + dx, cy + dy)
+        c.scale(sc, sc)
+        c.translate(-cx, -cy)
+        return True
+
     def draw(self, c, t):
-        """Dibuja el elemento; devuelve la posición de la punta del rotulador si está dibujando."""
+        """Dibuja el elemento con su vida (fx); devuelve la punta del rotulador si está dibujando."""
+        if self.hidden(t):
+            return None
+        erase = next(((t0, d) for t0, d, f in self.fx if f["do"] == "borrar" and t0 <= t < t0 + d), None)
+        pushed = self.transform(c, t) if (self.fx or self.spec.get("golpe")) else False
+        if erase:
+            x0, y0, x1, y1 = self.bbox()
+            k = (t - erase[0]) / erase[1]
+            c.save()
+            c.clipRect(skia.Rect(x0 - 40 + (x1 - x0 + 80) * ease(k), y0 - 60, x1 + 60, y1 + 60))
+        tip = self._draw(c, t)
+        if erase:
+            c.restore()
+        for t0, d, f in self.fx:
+            if t >= t0 and f["do"] in ("tachar", "rodear", "subrayar"):
+                self._draw_mark(c, f, min(1.0, (t - t0) / max(d, 1e-3)))
+        if pushed:
+            c.restore()
+        if erase:
+            x0, y0, x1, y1 = self.bbox()
+            k = ease((t - erase[0]) / erase[1])
+            ex = x0 - 40 + (x1 - x0 + 80) * k
+            draw_eraser(c, ex, (y0 + y1) / 2 + 25 * math.sin(k * 14))
+        return tip
+
+    def _draw_mark(self, c, f, k):
+        x0, y0, x1, y1 = self.bbox()
+        col, w = f.get("color", "red"), f.get("width", 11)
+        rng = np.random.default_rng(int(x0 + y0) % 997)
+        if f["do"] == "tachar":
+            pts = []
+            n = 5
+            for i in range(n + 1):
+                yy = y0 + (y1 - y0) * (0.25 + 0.5 * (i % 2))
+                pts.append((x0 - 20 + (x1 - x0 + 40) * i / n, yy))
+            pts = wobble(pts, rng, 2.5)
+        elif f["do"] == "rodear":
+            pad = f.get("pad", 30)
+            pts = wobble(ellipse_pts((x0 + x1) / 2, (y0 + y1) / 2, (x1 - x0) / 2 + pad, (y1 - y0) / 2 + pad,
+                                     a0=-140, sweep=385), rng, 2.5)
+        else:
+            pts = wobble([(x0, y1 + 18), (x1, y1 + 12)], rng, 2)
+        m = max(2, int(len(pts) * ease_out(k)))
+        draw_poly(c, pts[:m], col, w, 235)
+
+    def bbox(self):
+        """Caja aproximada (x0, y0, x1, y1) del elemento, para la cámara y los efectos."""
+        if self.kind in UNIVERSO:
+            from universo import actor
+            return actor.bbox(self)
+        if getattr(self, "_bbox", None):
+            return self._bbox
+        s, k = self.spec, self.kind
+        if k == "text":
+            f = font(s.get("font", "hand"), s.get("size", 80))
+            lines = s["text"].split("\n")
+            w = max(f.measureText(l) for l in lines)
+            h = s.get("size", 80) * s.get("line_height", 1.15) * len(lines)
+            al = s.get("align", "center")
+            x0 = s["x"] - (w / 2 if al == "center" else (w if al == "right" else 0))
+            b = (x0, s["y"] - s.get("size", 80) * 0.8, x0 + w, s["y"] - s.get("size", 80) * 0.8 + h)
+        elif k == "counter":
+            f = font(s.get("font", "hand"), s.get("size", 120))
+            w = f.measureText(s.get("prefix", "") + str(s["to"]) + s.get("suffix", ""))
+            b = (s["x"] - w / 2, s["y"] - s.get("size", 120) * 0.8, s["x"] + w / 2, s["y"] + 10)
+        elif k == "bars":
+            n = len(s["bars"])
+            b = (s["x"] - 30, s["y"] - s.get("h", 500) - 60, s["x"] + n * (s.get("bar_w", 160) + s.get("gap", 80)), s["y"] + 80)
+        elif k == "gauge":
+            x, y, w, h = s["box"]
+            b = (x, y, x + w, y + h)
+        elif k == "hemicycle":
+            d = np.array(self.dots)
+            b = (d[:, 0].min(), d[:, 1].min(), d[:, 0].max(), d[:, 1].max())
+        elif k == "cara":
+            r = 60 * s.get("scale", 1.0)
+            b = (s["x"] - r, s["y"] - r, s["x"] + r, s["y"] + r)
+        elif k == "stamp":
+            b = (s["x"] - s.get("w", 520) / 2, s["y"] - s.get("h", 130) / 2, s["x"] + s.get("w", 520) / 2, s["y"] + s.get("h", 130) / 2)
+        elif self.strokes:
+            pts = np.vstack([st.pts for st in self.strokes])
+            b = (pts[:, 0].min(), pts[:, 1].min(), pts[:, 0].max(), pts[:, 1].max())
+            if k == "tu":
+                sc = s.get("scale", 1.0)
+                b = (b[0] - 90 * sc, b[1], b[2] + 90 * sc, b[3])
+        else:
+            b = (s.get("x", 540) - 50, s.get("y", 800) - 50, s.get("x", 540) + 50, s.get("y", 800) + 50)
+        self._bbox = tuple(float(v) for v in b)
+        return self._bbox
+
+    def _draw(self, c, t):
+        if self.kind in UNIVERSO:
+            from universo import actor
+            return actor.dibujar(self, c, t, self.alpha_mult(t))
         p = self.progress(t)
         am = self.alpha_mult(t)
         if p <= 0 or am <= 0:
@@ -389,6 +536,16 @@ class Element:
             return self._draw_counter(c, p, am)
         if k == "gauge":
             return self._draw_gauge(c, p, am)
+        if k == "cara":
+            return self._draw_cara(c, t, p, am)
+        if k == "tu":
+            tip = self._draw_strokes(c, p, am)
+            self._draw_tu(c, t, p, am)
+            return tip
+        return self._draw_strokes(c, p, am)
+
+    def _draw_strokes(self, c, p, am):
+        k = self.kind
         # rellenos (aparecen al final del contorno)
         fp = ease(min(1.0, (p - 0.75) / 0.25)) if self.fills else 0
         for f in self.fills:
@@ -419,6 +576,56 @@ class Element:
         if k == "stamp":
             self._draw_stamp_text(c, p, am)
         return tip if p < 1 else None
+
+    def estado(self, t, campo, defecto):
+        """Valor vigente de una línea de tiempo [{"t": s, campo: valor}] (caras del personaje)."""
+        v, t_cambio = defecto, self.t0
+        for ch in getattr(self, "cambios", []):
+            if ch["t"] <= t and campo in ch:
+                v, t_cambio = ch[campo], ch["t"]
+        return v, t_cambio
+
+    def _draw_cara(self, c, t, p, am):
+        s = self.spec
+        cara, tc = self.estado(t, "cara", s.get("cara", "normal"))
+        sc = s.get("scale", 1.0)
+        pop = 1 + 0.18 * (1 - ease_out((t - tc) / 0.18)) if t - tc < 0.18 else 1.0
+        c.save()
+        c.translate(s["x"], s["y"])
+        c.scale(sc * pop * min(1.0, 0.4 + p), sc * pop * min(1.0, 0.4 + p))
+        draw_face(c, cara, s.get("color", "ink"), int(255 * am))
+        c.restore()
+        return None
+
+    def _draw_tu(self, c, t, p, am):
+        s = self.spec
+        if p < 0.55:
+            return
+        sc, x, y = s.get("scale", 1.0), s["x"], s["y"]
+        cara, tc = self.estado(t, "cara", s.get("cara", "normal"))
+        # los brazos siguen a la cara salvo que se fijen («brazos» en el elemento o en un cambio)
+        brazos, tb = self.estado(t, "brazos", s.get("brazos"))
+        if brazos is None or tc > tb:
+            brazos = BRAZOS_DE.get(cara, "normal")
+        a = int(255 * am * min(1.0, (p - 0.55) / 0.25))
+        pop = 1 + 0.12 * (1 - ease_out((t - tc) / 0.2)) if 0 <= t - tc < 0.2 else 1.0
+        c.save()
+        c.translate(x, y)
+        c.scale(sc, sc)
+        col = s.get("color", "ink")
+        rng = np.random.default_rng(11)
+        for arm in ARMS[brazos]:
+            draw_poly(c, wobble(arm, rng, 1.0), col, 8, a)
+        c.save()
+        c.translate(0, -150)
+        c.scale(pop, pop)
+        draw_face(c, cara, col, a, head=58)
+        c.restore()
+        if s.get("etiqueta", "TÚ"):
+            f = font("hand", 64)
+            lab = s.get("etiqueta", "TÚ")
+            c.drawString(lab, -f.measureText(lab) / 2, -235, f, skia.Paint(Color=rgb(s.get("color_etiqueta", "red"), a), AntiAlias=True))
+        c.restore()
 
     def _draw_stamp_text(self, c, p, am):
         s = self.spec
@@ -529,6 +736,81 @@ class Element:
         f = font(s.get("font", "hand"), s.get("size", 120))
         c.drawString(txt, s["x"] - f.measureText(txt) / 2, s["y"], f, skia.Paint(Color=rgb(s.get("color", "ink"), int(255 * am)), AntiAlias=True))
         return None
+
+
+# ---------------------------------------------------------------- personaje y caras
+# brazos del monigote (coordenadas locales: hombros en (0, -60))
+ARMS = {
+    "normal": [[(0, -60), (-55, 20)], [(0, -60), (55, 20)]],
+    "arriba": [[(0, -60), (-70, -150)], [(0, -60), (70, -150)]],
+    "cabeza": [[(0, -60), (-75, -110), (-50, -175)], [(0, -60), (75, -110), (50, -175)]],
+    "senala": [[(0, -60), (-55, 20)], [(0, -60), (90, -80), (130, -95)]],
+    "jarras": [[(0, -60), (-60, -10), (-10, 30)], [(0, -60), (60, -10), (10, 30)]],
+    "bolsillos": [[(0, -60), (-35, 0), (-60, 50), (-90, 20)], [(0, -60), (35, 0), (60, 50), (90, 20)]],
+}
+BRAZOS_DE = {"sorpresa": "arriba", "susto": "cabeza", "enfado": "jarras", "duda": "normal", "risa": "normal",
+             "triste": "normal", "normal": "normal", "vacio": "bolsillos"}
+CARAS = ("normal", "sorpresa", "susto", "enfado", "duda", "risa", "triste", "vacio")
+
+
+def draw_face(c, cara, col="ink", a=255, head=0):
+    """Ojos y boca a lápiz centrados en (0, 0). head>0 dibuja también el contorno de la cabeza (ya lo trae el monigote)."""
+    rng = np.random.default_rng(5)
+    P = lambda pts, w=7: draw_poly(c, wobble(pts, rng, 0.6, 6), col, w, a)
+    dot = lambda x, y, r=7: c.drawCircle(x, y, r, skia.Paint(Color=rgb(col, a), AntiAlias=True))
+    if cara in ("sorpresa", "susto"):
+        P(ellipse_pts(-20, -10, 11, 13, n=24), 5); P(ellipse_pts(20, -10, 11, 13, n=24), 5)
+        dot(-20, -8, 4); dot(20, -8, 4)
+        P(arc_pts(-20, -30, 14, 200, 340, 12), 5); P(arc_pts(20, -30, 14, 200, 340, 12), 5)
+        if cara == "sorpresa":
+            P(ellipse_pts(0, 25, 12, 15, n=24), 6)
+        else:
+            P([(-22, 28), (-12, 20), (-4, 28), (4, 20), (12, 28), (22, 20)], 5)
+            for dx in (66, 80):  # gotas de sudor
+                c.drawPath(_drop(dx, -40 + (dx - 66) * 2.5, 9), skia.Paint(Color=rgb("blue", a), AntiAlias=True))
+    elif cara == "enfado":
+        P([(-34, -32), (-8, -20)], 6); P([(34, -32), (8, -20)], 6)
+        dot(-18, -8); dot(18, -8)
+        P(arc_pts(0, 42, 18, 215, 325, 14), 6)
+        for sx in (-1, 1):
+            P([(sx * 70, -60), (sx * 82, -78)], 5); P([(sx * 80, -50), (sx * 96, -60)], 5)
+    elif cara == "duda":
+        P([(-32, -26), (-8, -30)], 5); P(arc_pts(20, -22, 14, 200, 340, 12), 5)
+        dot(-20, -8); dot(20, -8)
+        P([(-16, 28), (18, 20)], 6)
+    elif cara == "risa":
+        P(arc_pts(-20, -4, 11, 200, 340, 12), 6); P(arc_pts(20, -4, 11, 200, 340, 12), 6)
+        P(list(arc_pts(0, 14, 24, 10, 170, 20)) + [(24 * math.cos(math.radians(10)), 14 + 24 * math.sin(math.radians(10)))], 6)
+    elif cara == "triste":
+        P([(-32, -22), (-10, -30)], 5); P([(32, -22), (10, -30)], 5)
+        dot(-20, -8); dot(20, -8)
+        P(arc_pts(0, 40, 16, 215, 325, 14), 6)
+        c.drawPath(_drop(-24, 14, 7), skia.Paint(Color=rgb("blue", a), AntiAlias=True))
+    elif cara == "vacio":
+        P([(-28, -8), (-12, -8)], 6); P([(12, -8), (28, -8)], 6)
+        P([(-14, 26), (14, 26)], 6)
+    else:
+        dot(-20, -8); dot(20, -8)
+        P(arc_pts(0, 6, 20, 30, 150, 16), 6)
+
+
+def _drop(x, y, r):
+    p = skia.Path()
+    p.moveTo(x, y - r * 2.2)
+    p.quadTo(x + r * 1.3, y, x, y + r)
+    p.quadTo(x - r * 1.3, y, x, y - r * 2.2)
+    return p
+
+
+def draw_eraser(c, x, y):
+    """Borrador de pizarra (cuando un dibujo se borra)."""
+    c.save()
+    c.translate(x, y)
+    c.rotate(-12)
+    c.drawRRect(skia.RRect.MakeRectXY(skia.Rect(-55, -40, 75, 40), 12, 12), skia.Paint(Color=skia.Color(0, 0, 0, 35), AntiAlias=True))
+    c.drawRRect(skia.RRect.MakeRectXY(skia.Rect(-60, -46, 70, 10), 10, 10), skia.Paint(Color=rgb((176, 122, 74)), AntiAlias=True))
+    c.drawRRect(skia.RRect.MakeRectXY(skia.Rect(-60, 4, 70, 40), 8, 8), skia.Paint(Color=rgb((92, 96, 110)), AntiAlias=True))
+    c.restore()
 
 
 def draw_poly(c, pts, color, width, alpha=255):

@@ -1,0 +1,889 @@
+{
+ "slug": "compensa_cobrar",
+ "title": "¿Compensa cobrar más?",
+ "series_tag": "TU DINERO, CON DATOS",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "SMI 2026: Real Decreto 126/2026 (BOE 19/02/2026)",
+  "IMV: Real Decreto 240/2026 (BOE 26/03/2026)",
+  "Cuantías IMV 2026: 733,60 €/mes un adulto"
+ ],
+ "caption": "💶 Pizón cobra el SMI. Piz, 7.000 € más al año. A final de mes: casi lo mismo\n🧾 SMI 2026: 1.221 € × 14 → unos 1.330 € netos al mes\n🤝 Si ya cobrabas el IMV y empiezas a trabajar, conservas parte: unos 300 €/mes\n📜 Desde marzo, los primeros 6.000 € de sueldo no cuentan y del resto, solo la mitad\n💬 ¿Te parece justo?\n➡️ Próximo: lo que cobra un diputado · 🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: SMI 2026 (RD 126/2026, BOE 19/02/2026) · IMV 2026 733,60 €/mes un adulto · incentivo al empleo (RD 240/2026, BOE 26/03/2026). Cálculo propio y aproximado: cotización ≈ 6,5 %, escala general de IRPF; el IMV que se conserva va de unos 270 a 400 €/mes según cómo se compute la renta. Solo si ya se cobraba el IMV. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PizarraPública",
+  "#SMI",
+  "#IngresoMínimoVital",
+  "#Sueldo",
+  "#IRPF",
+  "#TuDinero",
+  "#Economía"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "calle",
+   "animo": "curioso",
+   "footnote": "SMI: RD 126/2026 · IMV: RD 240/2026 · cálculo propio (IRPF y SS aprox.)",
+   "lines": [
+    {
+     "text": "Pizón cobra el sueldo mínimo. Piz, 7.000 euros más al año.",
+     "tono": "energia"
+    },
+    {
+     "text": "Y a final de mes… tienen casi lo mismo.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@mes",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 280,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Piz",
+       "mira": "piz"
+      },
+      {
+       "at": "@mismo",
+       "take": true,
+       "cara": "sorpresa"
+      }
+     ],
+     "id": "pizon",
+     "entra": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": "@Piz-0.2",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@7.000",
+       "salta": true,
+       "pose": "arriba"
+      },
+      {
+       "at": "@mismo",
+       "take": true,
+       "cara": "susto",
+       "pose": "cabeza"
+      }
+     ],
+     "id": "piz",
+     "entra": "der"
+    },
+    {
+     "type": "rotulo",
+     "text": "SMI",
+     "x": 280,
+     "y": 560,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@mínimo",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "+7.000 €",
+     "x": 800,
+     "y": 560,
+     "size": 100,
+     "color": "verde",
+     "at": "@7.000",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "=",
+     "x": 540,
+     "y": 760,
+     "size": 200,
+     "color": "red",
+     "at": "@mismo",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "pizon",
+   "fondo": "salon",
+   "animo": "curioso",
+   "trans": "pan",
+   "footnote": "SMI 2026: RD 126/2026 · neto con cotización ≈ 6,5 % e IRPF 0 €",
+   "lines": [
+    {
+     "text": "Pizón: 1.221 euros en 14 pagas. Neto, unos 1.330 al mes.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@1.330",
+     "plano": "medio",
+     "sobre": "pizon",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 360,
+     "y": 1340,
+     "scale": 0.8,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@1.221",
+       "salta": true
+      },
+      {
+       "at": "@Neto",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@1.330",
+       "cara": "ilusionado"
+      }
+     ],
+     "id": "pizon",
+     "entra": "nada",
+     "pose": "sostiene",
+     "objeto": "hucha"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calculadora",
+     "x": 800,
+     "y": 860,
+     "scale": 0.85,
+     "at": "@pagas",
+     "props": {
+      "texto": "1.221"
+     },
+     "acciones": [
+      {
+       "at": "@1.330",
+       "props": {
+        "texto": "1.330"
+       },
+       "salta": true
+      }
+     ],
+     "id": "calc",
+     "entra": "pop",
+     "sfx": "calculadora"
+    },
+    {
+     "type": "rotulo",
+     "text": "1.221 € × 14",
+     "x": 540,
+     "y": 470,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@1.221",
+     "golpe": true,
+     "out": "@Neto",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "1.330 €",
+     "x": 540,
+     "y": 470,
+     "size": 110,
+     "color": "verde",
+     "at": "@1.330",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "ayuda",
+   "fondo": "oficina",
+   "animo": "tension",
+   "trans": "iris",
+   "footnote": "IMV 2026: 733,60 €/mes (1 adulto) · RD 240/2026 · estimación 270-400 €",
+   "lines": [
+    {
+     "text": "Pero antes cobraba el Ingreso Mínimo Vital. Y al ponerse a trabajar, no lo pierde entero:",
+     "tono": "intriga"
+    },
+    {
+     "text": "conserva unos 300 euros al mes.",
+     "tono": "sorpresa",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@conserva",
+     "plano": "medio",
+     "sobre": "pizon",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.78,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Vital",
+       "mira": "der"
+      },
+      {
+       "at": "@trabajar",
+       "cara": "preocupado",
+       "pose": "manos_juntas"
+      },
+      {
+       "at": "@entero",
+       "take": true
+      },
+      {
+       "at": "@300",
+       "cara": "riendo",
+       "pose": "arriba",
+       "salta": true
+      }
+     ],
+     "id": "pizon",
+     "entra": "izq"
+    },
+    {
+     "type": "personaje",
+     "quien": "hacienda",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.75,
+     "at": "@Vital-0.3",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@entero",
+       "cara": "riendo",
+       "pose": "pulgar"
+      }
+     ],
+     "id": "hacienda",
+     "entra": "der",
+     "pose": "sostiene",
+     "objeto": {
+      "tipo": "contrato",
+      "titulo": "IMV",
+      "hojas": 1
+     }
+    },
+    {
+     "type": "rotulo",
+     "text": "IMV: 733,60 €",
+     "x": 600,
+     "y": 600,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@Vital",
+     "golpe": true,
+     "out": "@conserva",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "+300 €/mes",
+     "x": 600,
+     "y": 600,
+     "size": 120,
+     "color": "verde",
+     "at": "@300",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "efecto",
+     "efecto": "lluvia",
+     "objeto": "moneda",
+     "n": 10,
+     "x0": 200,
+     "x1": 500,
+     "at": "@300",
+     "vida": 1.8
+    }
+   ]
+  },
+  {
+   "id": "piz",
+   "fondo": "calle",
+   "animo": "comico",
+   "trans": "pan",
+   "footnote": "SMI: RD 126/2026 · IMV: RD 240/2026 · cálculo propio (IRPF y SS aprox.)",
+   "lines": [
+    {
+     "text": "Total: unos 1.630. Piz cobra 24.500 brutos, sin ayuda.",
+     "tono": "normal"
+    },
+    {
+     "text": "Tras IRPF y Seguridad Social: unos 1.630 al mes.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@IRPF",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 260,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@Total",
+       "salta": true
+      },
+      {
+       "at": "@IRPF",
+       "mira": "piz"
+      },
+      {
+       "at": "@1.630#2",
+       "cara": "burla",
+       "pose": "jarras"
+      }
+     ],
+     "id": "pizon",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1300,
+     "y": 1340,
+     "scale": 0.72,
+     "at": "@Piz",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@Piz",
+       "x": 800,
+       "dur": 0.9
+      },
+      {
+       "at": "@24.500",
+       "salta": true
+      },
+      {
+       "at": "@IRPF",
+       "objeto": null,
+       "pose": "cabeza",
+       "cara": "susto",
+       "tiembla": true
+      },
+      {
+       "at": "@1.630#2",
+       "take": true,
+       "cara": "confundido"
+      }
+     ],
+     "id": "piz",
+     "entra": "nada",
+     "objeto": "fajo",
+     "pose": "sostiene"
+    },
+    {
+     "type": "efecto",
+     "efecto": "vuelan",
+     "objeto": "billete",
+     "n": 7,
+     "x": 820,
+     "y": 1000,
+     "at": "@IRPF",
+     "vida": 1.8
+    },
+    {
+     "type": "rotulo",
+     "text": "1.630 €",
+     "x": 260,
+     "y": 560,
+     "size": 90,
+     "color": "verde",
+     "at": "@Total",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "24.500 € brutos",
+     "x": 700,
+     "y": 470,
+     "size": 70,
+     "color": "amarillo",
+     "at": "@24.500",
+     "golpe": true,
+     "out": "@1.630#2",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "1.630 €",
+     "x": 800,
+     "y": 560,
+     "size": 90,
+     "color": "verde",
+     "at": "@1.630#2",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "giro",
+   "fondo": "rayos",
+   "animo": "comico",
+   "musica": "corte",
+   "trans": "iris",
+   "footnote": "Real Decreto 240/2026 (BOE 26/03/2026)",
+   "lines": [
+    {
+     "text": "¿Un error? No: es a propósito.",
+     "tono": "remate"
+    },
+    {
+     "text": "Desde marzo, al empezar a trabajar, los primeros 6.000 euros de sueldo no cuentan para el IMV. Y del resto, solo la mitad.",
+     "tono": "normal",
+     "pausa": 0.25
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@6.000",
+     "plano": "medio",
+     "sobre": "profe",
+     "dur": 0.3,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sarcastica",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "burla",
+     "acciones": [
+      {
+       "at": "@propósito",
+       "take": true,
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@marzo",
+       "sale": "der"
+      }
+     ],
+     "id": "sarcastica",
+     "entra": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.78,
+     "at": "@propósito-0.2",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@6.000",
+       "pose": "senala",
+       "cara": "normal"
+      },
+      {
+       "at": "@cuentan",
+       "salta": true,
+       "cara": "riendo"
+      },
+      {
+       "at": "@resto",
+       "mira": "camara",
+       "pose": "senala_arriba"
+      },
+      {
+       "at": "@mitad",
+       "pose": "pulgar",
+       "cara": "ilusionado"
+      }
+     ],
+     "id": "profe",
+     "entra": "izq",
+     "pose": "senala_arriba"
+    },
+    {
+     "type": "rotulo",
+     "text": "6.000 €: NO CUENTAN",
+     "x": 600,
+     "y": 480,
+     "size": 72,
+     "color": "amarillo",
+     "at": "@6.000",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¡0 €!",
+     "x": 760,
+     "y": 820,
+     "at": "@cuentan",
+     "scale": 0.8,
+     "vida": 0.8
+    },
+    {
+     "type": "rotulo",
+     "text": "EL RESTO: SOLO LA MITAD",
+     "x": 600,
+     "y": 600,
+     "size": 64,
+     "color": "blanco",
+     "at": "@mitad",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "porque",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "pan",
+   "footnote": "El IMV completa la renta hasta un mínimo garantizado",
+   "lines": [
+    {
+     "text": "Sin esta regla, cada euro que ganas te quitaría un euro de ayuda. Y trabajar no compensaría.",
+     "tono": "intriga"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@compensaría",
+     "plano": "medio",
+     "sobre": "pizon",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.78,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@ganas",
+       "pose": "sostiene",
+       "objeto": "billete",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@quitaría",
+       "objeto": null,
+       "take": true,
+       "cara": "susto"
+      },
+      {
+       "at": "@compensaría",
+       "cara": "triste",
+       "pose": "caidos"
+      }
+     ],
+     "id": "pizon",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "billete",
+     "x": 760,
+     "y": 760,
+     "scale": 0.9,
+     "at": "@ganas",
+     "props": {},
+     "acciones": [
+      {
+       "at": "@quitaría",
+       "sale": "der"
+      }
+     ],
+     "entra": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "+1 € SUELDO",
+     "x": 600,
+     "y": 600,
+     "size": 90,
+     "color": "verde",
+     "at": "@ganas",
+     "golpe": true,
+     "out": "@quitaría",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "-1 € AYUDA",
+     "x": 600,
+     "y": 600,
+     "size": 90,
+     "color": "red",
+     "at": "@quitaría",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Solo si ya se cobraba el IMV · se revisa cada año",
+   "lines": [
+    {
+     "text": "Ojo: solo vale si ya cobrabas el IMV, y se revisa cada año.",
+     "tono": "normal"
+    },
+    {
+     "text": "¿Te parece justo? Te leemos. Y síguenos: la próxima, lo que cobra un diputado.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@síguenos",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Ojo",
+       "pose": "senala_arriba",
+       "cara": "serio"
+      },
+      {
+       "at": "@cobrabas",
+       "mira": "piz"
+      },
+      {
+       "at": "@justo",
+       "mira": "camara",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "id": "pizon",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 780,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@cobrabas",
+       "mira": "pizon",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@revisa",
+       "tiembla": true,
+       "cara": "preocupado"
+      },
+      {
+       "at": "@año",
+       "pose": "encoge"
+      },
+      {
+       "at": "@leemos",
+       "pose": "senala",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@diputado",
+       "salta": true,
+       "cara": "sorpresa"
+      }
+     ],
+     "id": "piz",
+     "entra": "nada"
+    },
+    {
+     "type": "rotulo",
+     "text": "SOLO SI YA COBRABAS EL IMV",
+     "x": 540,
+     "y": 470,
+     "size": 64,
+     "color": "amarillo",
+     "at": "@Ojo",
+     "golpe": true,
+     "out": "@justo",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "¿JUSTO?",
+     "x": 540,
+     "y": 470,
+     "size": 120,
+     "color": "amarillo",
+     "at": "@justo",
+     "golpe": true,
+     "out": "@síguenos",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 470,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@diputado",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.2,
+  "titulo": "¿Compensa cobrar más?",
+  "capitulo": null
+ }
+}

@@ -1,0 +1,786 @@
+{
+ "slug": "gasolina_impuestos",
+ "title": "¿Cuánto de tu gasolina son impuestos?",
+ "series_tag": "TU DINERO, CON DATOS",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Comisión Europea: Weekly Oil Bulletin, 05/10/2026",
+  "Real Decreto-ley 25/2026 (BOE 30/09/2026)"
+ ],
+ "caption": "⛽ De 60 € de gasolina, 19 € son impuestos… y eso con rebaja\n🧾 Litro: 1,85 € · impuesto especial 0,27 € · IVA 0,32 €\n🔁 El IVA se cobra también sobre el impuesto\n📉 Octubre: −20 cts de rebaja · sin ella, unos 24 € de cada 60\n🇫🇷 Francia 28,73 € · 🇵🇹 Portugal 28,14 € · 🇩🇪 Alemania 27,68 €\n📅 Noviembre −13 cts, diciembre −6\n💬 ¿Cuánto te gastas al mes?\n➡️ Próximo: cuánto cuesta un hijo · 🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuente: Comisión Europea, Weekly Oil Bulletin del 05/10/2026 (gasolina 95: 1,849 €/l; sin impuestos 1,255; impuesto especial 0,273; IVA 0,321). Cálculo propio para 60 € y para Francia, Alemania y Portugal con el mismo boletín. Rebaja: RDL 25/2026 (BOE 30/09/2026), −20 cts/l en octubre, −13 en noviembre y −6 en diciembre salvo salvaguarda. «Sin rebaja» es una estimación con el tipo ordinario y el mismo precio antes de impuestos. Media nacional; Canarias, Ceuta y Melilla tienen otros tributos. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PizarraPública",
+  "#Gasolina",
+  "#Impuestos",
+  "#Carburantes",
+  "#IVA",
+  "#TuDinero",
+  "#Hacienda"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "calle",
+   "animo": "curioso",
+   "footnote": "Weekly Oil Bulletin (CE) 05/10/2026 · gasolina 95 · cálculo propio",
+   "lines": [
+    {
+     "text": "Echas 60 euros de gasolina: 19 se los queda Hacienda.",
+     "tono": "energia"
+    },
+    {
+     "text": "Y eso, con rebaja.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@Hacienda",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "coche",
+     "x": 330,
+     "y": 1230,
+     "scale": 0.9,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "id": "coche",
+     "entra": "izq"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 760,
+     "y": 1340,
+     "scale": 0.7,
+     "at": "@gasolina",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@Hacienda",
+       "take": true,
+       "cara": "susto",
+       "objeto": null
+      },
+      {
+       "at": "@rebaja",
+       "cara": "indignado",
+       "pose": "jarras"
+      }
+     ],
+     "entra": "der",
+     "objeto": "fajo",
+     "pose": "sostiene",
+     "id": "piz"
+    },
+    {
+     "type": "efecto",
+     "efecto": "vuelan",
+     "objeto": "billete",
+     "n": 6,
+     "x": 760,
+     "y": 1000,
+     "at": "@19",
+     "vida": 1.8
+    },
+    {
+     "type": "rotulo",
+     "text": "60 €",
+     "x": 540,
+     "y": 500,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@60",
+     "golpe": true,
+     "out": "@19",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "19 € IMPUESTOS",
+     "x": 540,
+     "y": 500,
+     "size": 90,
+     "color": "red",
+     "at": "@19",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "¡CON REBAJA!",
+     "x": 540,
+     "y": 640,
+     "size": 80,
+     "color": "amarillo",
+     "at": "@rebaja",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "litro",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "pan",
+   "footnote": "Weekly Oil Bulletin (CE) 05/10/2026 · gasolina 95 · cálculo propio",
+   "lines": [
+    {
+     "text": "El litro, 1,85. De eso, 27 céntimos son impuesto especial y 32, IVA.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@IVA",
+     "plano": "medio",
+     "sobre": "profe",
+     "dur": 0.3,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@1,85",
+       "pose": "senala"
+      },
+      {
+       "at": "@especial",
+       "mira": "camara",
+       "cara": "serio"
+      },
+      {
+       "at": "@IVA",
+       "salta": true
+      }
+     ],
+     "entra": "izq",
+     "pose": "senala_arriba",
+     "id": "profe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calculadora",
+     "x": 800,
+     "y": 860,
+     "scale": 0.8,
+     "at": "@litro",
+     "props": {
+      "texto": "1,85"
+     },
+     "acciones": [
+      {
+       "at": "@27",
+       "props": {
+        "texto": "-0,27"
+       },
+       "salta": true
+      },
+      {
+       "at": "@IVA",
+       "props": {
+        "texto": "-0,32"
+       },
+       "salta": true
+      }
+     ],
+     "id": "calc",
+     "entra": "pop",
+     "sfx": "calculadora"
+    },
+    {
+     "type": "rotulo",
+     "text": "1,85 €/LITRO",
+     "x": 600,
+     "y": 470,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@1,85",
+     "golpe": true,
+     "out": "@27",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "ESPECIAL: 0,27 €",
+     "x": 540,
+     "y": 450,
+     "size": 76,
+     "color": "red",
+     "at": "@27",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "IVA: 0,32 €",
+     "x": 540,
+     "y": 560,
+     "size": 76,
+     "color": "red",
+     "at": "@IVA",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "doble",
+   "fondo": "rayos",
+   "animo": "comico",
+   "musica": "corte",
+   "trans": "iris",
+   "footnote": "Ley del IVA: la base incluye los impuestos especiales",
+   "lines": [
+    {
+     "text": "Y sí: el IVA se cobra también sobre el impuesto.",
+     "tono": "sorpresa"
+    },
+    {
+     "text": "Impuesto sobre impuesto.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@Impuesto",
+     "plano": "medio",
+     "sobre": "sarcastica",
+     "dur": 0.3,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sarcastica",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.8,
+     "at": 0,
+     "cara": "burla",
+     "acciones": [
+      {
+       "at": "@también",
+       "take": true,
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@Impuesto",
+       "pose": "jarras",
+       "cara": "esceptica"
+      },
+      {
+       "at": "@impuesto#2",
+       "salta": true,
+       "cara": "riendo"
+      }
+     ],
+     "entra": "pop",
+     "id": "sarcastica"
+    },
+    {
+     "type": "rotulo",
+     "text": "IVA SOBRE IMPUESTO",
+     "x": 540,
+     "y": 470,
+     "size": 80,
+     "color": "red",
+     "at": "@también",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¡DOBLE!",
+     "x": 800,
+     "y": 1150,
+     "at": "@impuesto#2",
+     "scale": 0.75,
+     "vida": 0.8
+    }
+   ]
+  },
+  {
+   "id": "rebaja",
+   "fondo": "calle",
+   "animo": "tension",
+   "trans": "pan",
+   "footnote": "RDL 25/2026: −20 cts/l en octubre · sin rebaja: estimación",
+   "lines": [
+    {
+     "text": "En octubre, el impuesto especial baja 20 céntimos.",
+     "tono": "normal"
+    },
+    {
+     "text": "Sin esa rebaja, serían unos 24 euros de cada 60.",
+     "tono": "sorpresa",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@24",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "coche",
+     "x": 780,
+     "y": 1230,
+     "scale": 0.8,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "id": "coche",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@baja",
+       "salta": true,
+       "cara": "riendo"
+      },
+      {
+       "at": "@Sin",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@24",
+       "take": true,
+       "cara": "susto"
+      }
+     ],
+     "entra": "izq",
+     "id": "pizon"
+    },
+    {
+     "type": "rotulo",
+     "text": "OCTUBRE: −20 CTS",
+     "x": 540,
+     "y": 480,
+     "size": 84,
+     "color": "verde",
+     "at": "@20",
+     "golpe": true,
+     "out": "@Sin",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIN REBAJA: 24 €",
+     "x": 540,
+     "y": 480,
+     "size": 84,
+     "color": "red",
+     "at": "@24",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "europa",
+   "fondo": {
+    "tipo": "playa",
+    "variante": "montana"
+   },
+   "animo": "alegre",
+   "trans": "iris",
+   "footnote": "Weekly Oil Bulletin 05/10/2026 · impuestos en 60 € · cálculo propio",
+   "lines": [
+    {
+     "text": "En Francia, de esos 60, casi 29 son impuestos. En Alemania o Portugal, unos 28.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@Portugal",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "avion",
+     "x": 1300,
+     "y": 600,
+     "scale": 0.6,
+     "at": 0,
+     "props": {},
+     "acciones": [
+      {
+       "at": "@Francia",
+       "x": -300,
+       "dur": 3.0
+      }
+     ],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Francia",
+       "mira": "arriba",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@29",
+       "take": true
+      },
+      {
+       "at": "@Alemania",
+       "mira": "camara",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "izq",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 760,
+     "y": 640,
+     "scale": 0.75,
+     "at": "@Francia",
+     "props": {
+      "texto": "FRANCIA: 28,73 €",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 760,
+     "y": 820,
+     "scale": 0.75,
+     "at": "@Alemania",
+     "props": {
+      "texto": "ALEMANIA: 27,68 €",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 760,
+     "y": 1000,
+     "scale": 0.75,
+     "at": "@Portugal",
+     "props": {
+      "texto": "PORTUGAL: 28,14 €",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching"
+    }
+   ]
+  },
+  {
+   "id": "matiz",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "pan",
+   "footnote": "RDL 25/2026: −13 cts en noviembre y −6 en diciembre",
+   "lines": [
+    {
+     "text": "Ojo: en noviembre la rebaja es de 13 céntimos, y en diciembre de 6.",
+     "tono": "normal"
+    },
+    {
+     "text": "En Canarias, Ceuta y Melilla, el sistema es otro.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@Canarias",
+     "plano": "medio",
+     "sobre": "profe",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@noviembre",
+       "pose": "senala"
+      },
+      {
+       "at": "@diciembre",
+       "mira": "camara"
+      },
+      {
+       "at": "@Canarias",
+       "pose": "pulgar",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@Melilla",
+       "salta": true
+      },
+      {
+       "at": "@otro",
+       "mira": "camara",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "izq",
+     "pose": "senala_arriba",
+     "id": "profe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "grafica",
+     "x": 760,
+     "y": 800,
+     "scale": 0.8,
+     "at": "@noviembre",
+     "props": {
+      "valores": [
+       3.3,
+       2.2,
+       1.0
+      ],
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "NOV: −13 · DIC: −6",
+     "x": 600,
+     "y": 480,
+     "size": 76,
+     "color": "amarillo",
+     "at": "@noviembre",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Weekly Oil Bulletin (CE) 05/10/2026 · gasolina 95 · cálculo propio",
+   "lines": [
+    {
+     "text": "¿Cuánto te gastas al mes? Te leemos.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y síguenos: la próxima, cuánto cuesta un hijo.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@síguenos",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "coche",
+     "x": 780,
+     "y": 1230,
+     "scale": 0.75,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@gastas",
+       "mira": "camara",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@leemos",
+       "pose": "senala",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@hijo",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿CUÁNTO GASTAS?",
+     "x": 540,
+     "y": 470,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@gastas",
+     "golpe": true,
+     "out": "@síguenos-0.4",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 470,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@hijo",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.4,
+  "titulo": "De 60 € de gasolina, 19 son impuestos",
+  "capitulo": null
+ }
+}

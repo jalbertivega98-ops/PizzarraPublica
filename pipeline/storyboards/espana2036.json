@@ -1,0 +1,1019 @@
+{
+ "slug": "espana2036",
+ "title": "España en 2036, si seguimos así",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Fotocasa / InfoJobs (Euronews, 10/06/2026): 8,4 años de sueldo bruto para un piso de 80 m² en 2025; 7,1 en 2024",
+  "Funcas (29/12/2025): la vivienda subió un 12,1 % en el tercer trimestre de 2025, la mayor subida en 20 años",
+  "INE, Proyecciones de población 2026-2076 (17/06/2026): 53,1 millones en 2036; 369.900 nacimientos y 510.400 defunciones",
+  "INE: 38,3 millones nacidos en España en 2036 (cálculo propio: ~28 % nacidos fuera)",
+  "Cálculo propio: 8,4 + 10 × 1,3 ≈ 21 años de sueldo en 2036 si se mantiene el ritmo de 2024-2025"
+ ],
+ "caption": "🔮 Viajamos a 2036: así sería España si todo sigue como hoy\n🏠 Hoy un piso cuesta 8,4 años de sueldo íntegro; a este ritmo, en 2036 serían más de 20 (cálculo)\n👥 Seremos 53,1 millones, según el INE\n📉 Pero morirán 140.000 personas más de las que nacen cada año\n🧳 Crecemos por la gente que llega: más de 1 de cada 4 habrá nacido fuera\n🗳️ Nada está escrito: depende de lo que votemos el 29N\n💬 ¿Qué te preocupa más de 2036? Te leo 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: INE, Proyecciones de población 2026-2076 (17/06/2026) · Fotocasa/InfoJobs (Euronews 10/06/2026) · Funcas 29/12/2025. Las cifras de vivienda 2036 y nacidos fuera son cálculos propios con esos datos. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#España2036",
+  "#29N",
+  "#elecciones",
+  "#vivienda",
+  "#INE",
+  "#demografía",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "rayos",
+    "color": "amarillo",
+    "color2": [
+     120,
+     200,
+     255
+    ]
+   },
+   "animo": "tension",
+   "footnote": "Proyecciones oficiales y cálculos con datos de hoy",
+   "lines": [
+    {
+     "text": "Viajamos diez años al futuro: España, 2036.",
+     "tono": "energia"
+    },
+    {
+     "text": "¿Cómo será tu vida si todo sigue como hoy?",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@España",
+     "plano": "general",
+     "sobre": [
+      540,
+      700
+     ],
+     "dur": 0.5,
+     "zoom": 1.1
+    },
+    {
+     "at": "@vida",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 600,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "valor": 2036,
+      "miles": "",
+      "desde": 2026,
+      "prefijo": "AÑO ",
+      "ancho": 760
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "dibujo": 1.6
+    },
+    {
+     "type": "rotulo",
+     "text": "¿Y SI SEGUIMOS ASÍ?",
+     "x": 540,
+     "y": 860,
+     "size": 92,
+     "color": "rojo",
+     "at": "@vida",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1600,
+     "scale": 0.62,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": 0.3,
+       "salta": true,
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@futuro",
+       "pose": "senala_arriba",
+       "mira": "arriba"
+      },
+      {
+       "at": "@España",
+       "salta": true,
+       "cara": "riendo"
+      },
+      {
+       "at": "@2036",
+       "tiembla": true
+      },
+      {
+       "at": "@Cómo",
+       "pose": "piensa",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@vida",
+       "mira": "camara",
+       "pose": "senala"
+      },
+      {
+       "at": "@hoy",
+       "pose": "encoge",
+       "cara": "confundido"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1180,
+     "scale": 1.0,
+     "at": "@sigue",
+     "props": {
+      "texto": "PROYECCIÓN",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "vivienda",
+   "fondo": "calle",
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "Fotocasa/InfoJobs (Euronews 10/06/2026) · Cálculo: +1,3 años de sueldo cada año, como de 2024 a 2025",
+   "lines": [
+    {
+     "text": "Hoy, comprar un piso cuesta 8,4 años de sueldo íntegro. Hace un año, 7,1.",
+     "tono": "normal"
+    },
+    {
+     "text": "A ese ritmo, en 2036 harían falta más de veinte años de sueldo.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@8,4",
+     "plano": "general",
+     "sobre": [
+      540,
+      800
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    },
+    {
+     "at": "@ritmo",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@veinte",
+     "plano": "general",
+     "sobre": [
+      700,
+      1000
+     ],
+     "dur": 0.5,
+     "zoom": 1.12
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "casa",
+     "x": 790,
+     "y": 1340,
+     "scale": 0.9,
+     "at": 0,
+     "acciones": [],
+     "entra": "crece"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 520,
+     "scale": 0.85,
+     "at": "@piso",
+     "props": {
+      "valor": 8.4,
+      "decimales": 1,
+      "sufijo": " AÑOS",
+      "ancho": 620
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "dibujo": 1.2,
+     "out": "@ritmo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 700,
+     "scale": 0.85,
+     "at": "@Hace",
+     "props": {
+      "texto": "2025: 7,1 AÑOS",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@ritmo"
+    },
+    {
+     "type": "rotulo",
+     "text": "MÁS DE 20 AÑOS",
+     "x": 540,
+     "y": 520,
+     "size": 104,
+     "color": "rojo",
+     "at": "@veinte",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 720,
+     "scale": 1.0,
+     "at": "@harían",
+     "props": {
+      "texto": "CÁLCULO",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@comprar",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@cuesta",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@íntegro",
+       "pose": "piensa",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@Hace",
+       "mira": "arriba"
+      },
+      {
+       "at": "@ritmo",
+       "x": 420,
+       "dur": 0.6
+      },
+      {
+       "at": "@2036",
+       "cara": "preocupado",
+       "mira": "der"
+      },
+      {
+       "at": "@veinte",
+       "cara": "susto",
+       "salta": true
+      },
+      {
+       "at": "@sueldo#2",
+       "tiembla": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "poblacion",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "INE, Proyecciones de población 2026-2076 (17/06/2026), escenario central",
+   "lines": [
+    {
+     "text": "Según el INE, en 2036 seremos 53 millones de personas.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@INE",
+     "plano": "general",
+     "sobre": [
+      562.7,
+      760.8
+     ],
+     "dur": 0.8,
+     "zoom": 1.15
+    },
+    {
+     "at": "@millones",
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 0.6,
+     "zoom": 1.0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana",
+      "colores": {
+       "espana": [
+        240,
+        236,
+        226
+       ]
+      }
+     },
+     "acciones": [
+      {
+       "at": "@seremos",
+       "props": {
+        "colores": {
+         "espana": [
+          250,
+          214,
+          140
+         ]
+        }
+       },
+       "sfx": "pop"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.4
+    },
+    {
+     "type": "rotulo",
+     "text": "53,1 MILLONES",
+     "x": 540,
+     "y": 400,
+     "size": 104,
+     "color": "amarillo",
+     "at": "@53",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 560,
+     "scale": 1.0,
+     "at": "@personas",
+     "props": {
+      "texto": "PROYECCIÓN",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 830,
+     "y": 1580,
+     "scale": 0.55,
+     "at": 0.2,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@INE",
+       "pose": "senala_izq"
+      },
+      {
+       "at": "@2036",
+       "mira": "camara",
+       "cara": "idea"
+      },
+      {
+       "at": "@53",
+       "salta": true
+      },
+      {
+       "at": "@personas",
+       "pose": "pulgar"
+      }
+     ],
+     "hud": true,
+     "entra": "der",
+     "id": "profe"
+    }
+   ]
+  },
+  {
+   "id": "nacen",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     246,
+     236,
+     214
+    ]
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "INE, Proyecciones de población 2026-2076 (17/06/2026), escenario central",
+   "lines": [
+    {
+     "text": "Pero ese año nacerán unos 370.000 bebés… y morirán 510.000 personas.",
+     "tono": "normal"
+    },
+    {
+     "text": "Cada año, 140.000 menos.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@morirán",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.6,
+     "zoom": 1.05
+    },
+    {
+     "at": "@140.000",
+     "plano": "general",
+     "sobre": [
+      540,
+      800
+     ],
+     "dur": 0.4,
+     "zoom": 1.1
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 960,
+     "scale": 1.1,
+     "at": "@nacerán-0.2",
+     "props": {
+      "sufijo": ".000",
+      "decimales": 0,
+      "tope": 600,
+      "barras": [
+       {
+        "texto": "NACEN",
+        "valor": 370,
+        "color": "verde"
+       },
+       {
+        "texto": "MUEREN",
+        "valor": 510,
+        "color": "rojo"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 2.6
+    },
+    {
+     "type": "rotulo",
+     "text": "−140.000 AL AÑO",
+     "x": 540,
+     "y": 420,
+     "size": 100,
+     "color": "rojo",
+     "at": "@140.000",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 880,
+     "y": 1640,
+     "scale": 0.45,
+     "at": 0,
+     "cara": "confundido",
+     "acciones": [
+      {
+       "at": "@nacerán",
+       "mira": "arriba",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@bebés",
+       "salta": true
+      },
+      {
+       "at": "@morirán",
+       "cara": "preocupado",
+       "pose": "piensa"
+      },
+      {
+       "at": "@510.000",
+       "take": true,
+       "cara": "susto"
+      },
+      {
+       "at": "@Cada",
+       "mira": "camara"
+      },
+      {
+       "at": "@menos",
+       "pose": "encoge",
+       "tiembla": true
+      }
+     ],
+     "entra": "nada",
+     "id": "pizon"
+    }
+   ]
+  },
+  {
+   "id": "llegan",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "iris",
+   "footnote": "INE 2026-2076: 38,3 M nacidos en España de 53,1 M en 2036 (cálculo: ~28 % nacidos fuera)",
+   "lines": [
+    {
+     "text": "Entonces, ¿por qué crecemos? Por la gente que llega de fuera.",
+     "tono": "normal"
+    },
+    {
+     "text": "En 2036, más de uno de cada cuatro habitantes habrá nacido en otro país.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@llega",
+     "plano": "general",
+     "sobre": [
+      700,
+      1050
+     ],
+     "dur": 0.6
+    },
+    {
+     "at": "@cuatro",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 260,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Entonces",
+       "pose": "piensa"
+      },
+      {
+       "at": "@crecemos",
+       "mira": "camara",
+       "cara": "confundido"
+      },
+      {
+       "at": "@llega",
+       "mira": "der",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@fuera",
+       "pose": "saluda",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@cuatro",
+       "pose": "senala_arriba",
+       "mira": "arriba"
+      },
+      {
+       "at": "@nacido",
+       "salta": true
+      },
+      {
+       "at": "@país",
+       "cara": "idea"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "critica",
+     "x": 1300,
+     "y": 1340,
+     "scale": 0.45,
+     "at": "@llega-0.3",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@llega",
+       "x": 560,
+       "dur": 0.9
+      },
+      {
+       "at": "@habitantes",
+       "mira": "camara"
+      },
+      {
+       "at": "@país",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "objeto": "maleta",
+     "pose": "sostiene",
+     "id": "critica"
+    },
+    {
+     "type": "personaje",
+     "quien": "sarcastica",
+     "x": 1300,
+     "y": 1340,
+     "scale": 0.45,
+     "at": "@llega-0.3",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@llega",
+       "x": 740,
+       "dur": 0.9
+      },
+      {
+       "at": "@habitantes",
+       "mira": "camara"
+      },
+      {
+       "at": "@país",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "objeto": "maleta",
+     "pose": "sostiene",
+     "id": "sarcastica"
+    },
+    {
+     "type": "personaje",
+     "quien": "indignada",
+     "x": 1300,
+     "y": 1340,
+     "scale": 0.45,
+     "at": "@llega-0.3",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@llega",
+       "x": 920,
+       "dur": 0.9
+      },
+      {
+       "at": "@habitantes",
+       "mira": "camara"
+      },
+      {
+       "at": "@país",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "objeto": "maleta",
+     "pose": "sostiene",
+     "id": "indignada"
+    },
+    {
+     "type": "rotulo",
+     "text": "MÁS DE 1 DE CADA 4",
+     "x": 540,
+     "y": 520,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@cuatro",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 700,
+     "scale": 1.0,
+     "at": "@habitantes",
+     "props": {
+      "texto": "CÁLCULO",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": {
+    "tipo": "rayos",
+    "color": "amarillo"
+   },
+   "animo": "final",
+   "trans": "zoom",
+   "footnote": "Pregunta a la audiencia",
+   "lines": [
+    {
+     "text": "Nada de esto está escrito: depende de lo que hagamos… y de lo que votemos el 29N.",
+     "tono": "normal"
+    },
+    {
+     "text": "¿Qué te preocupa más de 2036? Te leo. Y síguenos.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@votemos",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@síguenos",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "urna",
+     "x": 780,
+     "y": 1300,
+     "scale": 0.6,
+     "at": "@votemos-0.3",
+     "props": {},
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "rotulo",
+     "text": "29N",
+     "x": 780,
+     "y": 820,
+     "size": 120,
+     "color": "rojo",
+     "at": "@29N",
+     "golpe": true,
+     "out": "@preocupa",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "¿QUÉ TE PREOCUPA MÁS?",
+     "x": 540,
+     "y": 520,
+     "size": 86,
+     "color": "rojo",
+     "at": "@preocupa",
+     "golpe": true,
+     "out": "@síguenos-0.3",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 520,
+     "size": 110,
+     "color": "rojo",
+     "at": "@síguenos",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 330,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@escrito",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@hagamos",
+       "pose": "senala"
+      },
+      {
+       "at": "@votemos",
+       "mira": "der",
+       "pose": "senala"
+      },
+      {
+       "at": "@29N",
+       "salta": true,
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@preocupa",
+       "pose": "piensa",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@leo",
+       "cara": "riendo"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 13.8,
+  "titulo": "España en 2036, si seguimos así",
+  "capitulo": null
+ }
+}

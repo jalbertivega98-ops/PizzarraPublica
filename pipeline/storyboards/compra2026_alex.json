@@ -1,0 +1,902 @@
+{
+ "slug": "compra2026_alex",
+ "title": "Álex quiere comprarse una casa",
+ "series_tag": "COMPRAR CASA EN 2026",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.12,
+ "scribble_volume": 0.05,
+ "end_hold": 1.0,
+ "sources": [
+  "Consejo de la Juventud de España, Observatorio de Emancipación (nota 22/05/2026): https://www.cje.org/en/observatorio_2025/",
+  "Ministerio de Vivienda, valor tasado de la vivienda libre, 2.º trimestre 2026 (17/09/2026)",
+  "INE, Estadística de hipotecas, julio 2026 (28/09/2026): https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736170236&menu=ultiDatos&idp=1254735576757"
+ ],
+ "caption": "🏠 Álex tiene trabajo fijo y 5 años ahorrando. El banco le dice que no.\n💶 Piso medio: 223.000 € · entrada + impuestos: 66.900 €\n📈 El piso sube un 12,5 % en un año: casi 25.000 € más\n🤯 Su hipoteca: 753 €/mes. Su alquiler: 1.176 €\n💬 ¿Te ha pasado algo parecido? Cuéntanoslo\n➡️ Próximo: qué proponen PSOE, PP y Vox · 🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Consejo de la Juventud, Observatorio de Emancipación (mayo 2026): sueldo joven 1.191 €/mes, alquiler 1.176 €, precio medio 223.000 €, entrada 66.900 € · Ministerio de Vivienda 2T 2026: +12,5 % · INE hipotecas jul. 2026: tipo medio 3,01 % · Cuota calculada al 80 % y 30 años. Álex es un personaje; los datos son reales. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PizarraPública",
+  "#Vivienda",
+  "#Hipoteca",
+  "#ComprarCasa",
+  "#Jóvenes",
+  "#Alquiler",
+  "#España"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "lines": [
+    {
+     "text": "Álex tiene trabajo fijo y cinco años ahorrando.",
+     "tono": "energia"
+    },
+    {
+     "text": "Y aun así, el banco le va a decir que no.",
+     "tono": "remate",
+     "pausa": 0.2
+    },
+    {
+     "text": "Síguenos, que esto te sonará."
+    }
+   ],
+   "elements": [
+    {
+     "type": "tu",
+     "etiqueta": "ÁLEX",
+     "x": 300,
+     "y": 980,
+     "scale": 1.45,
+     "at": 0,
+     "dur": 0.6,
+     "cara": "normal",
+     "caras": [
+      {
+       "at": "@no",
+       "cara": "susto"
+      },
+      {
+       "at": "@sonara",
+       "cara": "duda"
+      }
+     ]
+    },
+    {
+     "type": "check",
+     "x": 560,
+     "y": 560,
+     "r": 40,
+     "color": "green",
+     "width": 12,
+     "at": "@trabajo",
+     "dur": 0.25
+    },
+    {
+     "type": "text",
+     "text": "trabajo fijo",
+     "x": 615,
+     "y": 585,
+     "size": 70,
+     "color": "ink",
+     "at": "@trabajo",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "check",
+     "x": 560,
+     "y": 730,
+     "r": 40,
+     "color": "green",
+     "width": 12,
+     "at": "@ahorrando",
+     "dur": 0.25
+    },
+    {
+     "type": "text",
+     "text": "5 años ahorrando",
+     "x": 615,
+     "y": 755,
+     "size": 54,
+     "color": "ink",
+     "at": "@cinco",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "EL BANCO…",
+     "x": 760,
+     "y": 930,
+     "size": 70,
+     "color": "gray",
+     "at": "@banco",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "DENEGADA",
+     "sub": "hipoteca",
+     "x": 760,
+     "y": 1060,
+     "w": 440,
+     "h": 140,
+     "size": 64,
+     "rotate": -5,
+     "at": "@no",
+     "dur": 0.55,
+     "color": "red",
+     "golpe": true
+    },
+    {
+     "type": "stamp",
+     "text": "SÍGUENOS",
+     "sub": "@pizarrapublica",
+     "x": 760,
+     "y": 1300,
+     "w": 420,
+     "h": 120,
+     "size": 54,
+     "rotate": -5,
+     "at": "@síguenos",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "precio",
+   "footnote": "Consejo de la Juventud · Observatorio de Emancipación (mayo 2026)",
+   "lines": [
+    {
+     "text": "Piso medio en España: 223.000 euros.",
+     "tono": "normal"
+    },
+    {
+     "text": "El banco presta el 80 %. El resto, lo pone él.",
+     "tono": "intriga"
+    }
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "house",
+     "x": 540,
+     "y": 600,
+     "scale": 1.7,
+     "at": 0.05,
+     "dur": 0.6
+    },
+    {
+     "type": "cara",
+     "x": 540,
+     "y": 640,
+     "scale": 1.1,
+     "cara": "normal",
+     "at": "@medio",
+     "dur": 0.25,
+     "caras": [
+      {
+       "at": "@banco",
+       "cara": "risa"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "223.000 €",
+     "x": 540,
+     "y": 1010,
+     "size": 190,
+     "color": "red",
+     "at": "@223.000",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center",
+     "golpe": true,
+     "fx": [
+      {
+       "at": "@banco",
+       "do": "mover",
+       "y": 860,
+       "scale": 0.75
+      }
+     ]
+    },
+    {
+     "type": "gauge",
+     "box": [
+      140,
+      1000,
+      800,
+      90
+     ],
+     "value": 80,
+     "max": 100,
+     "color": "blue",
+     "at": "@80",
+     "dur": 0.9
+    },
+    {
+     "type": "text",
+     "text": "el banco: 80 %",
+     "x": 460.0,
+     "y": 1160,
+     "size": 56,
+     "color": "blue",
+     "at": "@80",
+     "dur": 0.3,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "ÁLEX: 20 % + gastos",
+     "x": 540,
+     "y": 1290,
+     "size": 76,
+     "color": "red",
+     "at": "@resto",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "entrada",
+   "footnote": "Consejo de la Juventud · Observatorio de Emancipación (mayo 2026)",
+   "lines": [
+    {
+     "text": "Entrada, impuestos y notaría: 66.900 euros.",
+     "tono": "sorpresa"
+    },
+    {
+     "text": "Álex tiene 20.000.",
+     "tono": "remate",
+     "pausa": 0.3
+    },
+    {
+     "text": "Le faltan casi 47.000.",
+     "tono": "remate"
+    }
+   ],
+   "elements": [
+    {
+     "type": "text",
+     "text": "entrada",
+     "x": 200,
+     "y": 470,
+     "size": 64,
+     "color": "ink",
+     "at": "@entrada",
+     "dur": 0.25,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "+ impuestos",
+     "x": 520,
+     "y": 470,
+     "size": 64,
+     "color": "ink",
+     "at": "@impuestos",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "+ notaría",
+     "x": 860,
+     "y": 470,
+     "size": 64,
+     "color": "ink",
+     "at": "@notaría",
+     "dur": 0.25,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "66.900 €",
+     "x": 540,
+     "y": 650,
+     "size": 170,
+     "color": "red",
+     "at": "@66.900",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center",
+     "golpe": true
+    },
+    {
+     "type": "bars",
+     "x": 170,
+     "y": 1220,
+     "h": 430,
+     "bar_w": 170,
+     "gap": 90,
+     "max": 70,
+     "bars": [
+      {
+       "label": "NECESITA",
+       "value": 66.9,
+       "value_label": "66.900",
+       "color": "red"
+      }
+     ],
+     "at": "@66.900+0.3",
+     "dur": 0.7
+    },
+    {
+     "type": "bars",
+     "x": 430,
+     "y": 1220,
+     "h": 430,
+     "bar_w": 170,
+     "gap": 90,
+     "max": 70,
+     "bars": [
+      {
+       "label": "TIENE",
+       "value": 20,
+       "value_label": "20.000",
+       "color": "green"
+      }
+     ],
+     "at": "@20.000",
+     "dur": 0.6
+    },
+    {
+     "type": "tu",
+     "etiqueta": "ÁLEX",
+     "x": 830,
+     "y": 1010,
+     "scale": 1.15,
+     "at": "@tiene",
+     "dur": 0.6,
+     "cara": "normal",
+     "caras": [
+      {
+       "at": "@faltan",
+       "cara": "susto"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "faltan 46.900 €",
+     "x": 540,
+     "y": 1340,
+     "size": 74,
+     "color": "red",
+     "at": "@faltan",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center",
+     "fx": [
+      {
+       "at": "@47.000",
+       "do": "latir"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sube",
+   "footnote": "Ministerio de Vivienda, 2.º trim. 2026 (+12,5 % anual) · cálculo sobre 223.000 €",
+   "lines": [
+    {
+     "text": "Pero lo peor no es eso.",
+     "tono": "intriga"
+    },
+    {
+     "text": "Mientras ahorra, el piso sube un 12,5 % en un año.",
+     "tono": "normal"
+    },
+    {
+     "text": "Casi 25.000 euros más. Más que todo lo que ahorró.",
+     "tono": "sorpresa"
+    }
+   ],
+   "elements": [
+    {
+     "type": "text",
+     "text": "…Y LO PEOR",
+     "x": 540,
+     "y": 470,
+     "size": 96,
+     "color": "ink",
+     "at": 0.05,
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "house",
+     "x": 430,
+     "y": 700,
+     "scale": 1.0,
+     "at": "@ahorra",
+     "dur": 0.5,
+     "fx": [
+      {
+       "at": "@sube",
+       "do": "mover",
+       "y": 640,
+       "scale": 1.1
+      },
+      {
+       "at": "@12,5",
+       "do": "temblar"
+      }
+     ]
+    },
+    {
+     "type": "arrow",
+     "from": [
+      620,
+      820
+     ],
+     "to": [
+      790,
+      560
+     ],
+     "color": "red",
+     "width": 10,
+     "at": "@sube",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "+12,5 %",
+     "x": 540,
+     "y": 990,
+     "size": 180,
+     "color": "red",
+     "at": "@12,5",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center",
+     "golpe": true
+    },
+    {
+     "type": "text",
+     "text": "+25.000 € el piso",
+     "x": 540,
+     "y": 1140,
+     "size": 96,
+     "color": "red",
+     "at": "@25.000",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center",
+     "fx": [
+      {
+       "at": "@todo",
+       "do": "rodear"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "20.000 € sus ahorros",
+     "x": 540,
+     "y": 1280,
+     "size": 72,
+     "color": "gray",
+     "at": "@ahorró",
+     "dur": 0.35,
+     "font": "body",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "absurdo",
+   "musica": "corte",
+   "trans": "borrador",
+   "footnote": "INE, julio 2026: tipo medio 3,01 % · 80 % a 30 años · alquiler: CJE",
+   "lines": [
+    {
+     "text": "Y lo más absurdo:",
+     "tono": "intriga",
+     "pausa": 0.5
+    },
+    {
+     "text": "su hipoteca serían 753 euros al mes.",
+     "tono": "sorpresa"
+    },
+    {
+     "text": "Menos que un alquiler medio: 1.176.",
+     "tono": "remate"
+    }
+   ],
+   "elements": [
+    {
+     "type": "text",
+     "text": "LO MÁS ABSURDO",
+     "x": 540,
+     "y": 480,
+     "size": 96,
+     "color": "ink",
+     "at": 0.05,
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center",
+     "fx": [
+      {
+       "at": "@absurdo",
+       "do": "temblar"
+      },
+      {
+       "at": "@753",
+       "do": "subrayar"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "HIPOTECA",
+     "x": 290,
+     "y": 690,
+     "size": 70,
+     "color": "ink",
+     "at": "@hipoteca",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "753 €",
+     "x": 290,
+     "y": 850,
+     "size": 160,
+     "color": "green",
+     "at": "@753",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center",
+     "golpe": true
+    },
+    {
+     "type": "text",
+     "text": "al mes",
+     "x": 290,
+     "y": 950,
+     "size": 56,
+     "color": "ink",
+     "at": "@mes",
+     "dur": 0.25,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "ALQUILER",
+     "x": 790,
+     "y": 690,
+     "size": 70,
+     "color": "ink",
+     "at": "@alquiler",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "1.176 €",
+     "x": 790,
+     "y": 850,
+     "size": 160,
+     "color": "red",
+     "at": "@1.176",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center",
+     "golpe": true
+    },
+    {
+     "type": "text",
+     "text": "<",
+     "x": 540,
+     "y": 860,
+     "size": 150,
+     "color": "ink",
+     "at": "@menos",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center",
+     "golpe": true
+    },
+    {
+     "type": "cara",
+     "x": 540,
+     "y": 1170,
+     "scale": 1.6,
+     "cara": "duda",
+     "at": "@menos",
+     "dur": 0.3,
+     "caras": [
+      {
+       "at": "@1.176",
+       "cara": "enfado"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "motivo",
+   "trans": "papel",
+   "footnote": "Criterio habitual de los bancos: cuota ≤ 30-35 % del sueldo · sueldo joven: CJE",
+   "lines": [
+    {
+     "text": "¿Y por qué se la niegan?",
+     "tono": "intriga"
+    },
+    {
+     "text": "El banco no acepta cuotas de más del 35 % del sueldo.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y la de Álex sería el 63 %.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "question",
+     "x": 540,
+     "y": 560,
+     "scale": 0.9,
+     "at": 0.05,
+     "dur": 0.4,
+     "fx": [
+      {
+       "at": "@banco",
+       "do": "borrar"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "MÁXIMO 35 %",
+     "x": 540,
+     "y": 560,
+     "size": 110,
+     "color": "ink",
+     "at": "@35",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "gauge",
+     "box": [
+      140,
+      760,
+      800,
+      100
+     ],
+     "value": 63,
+     "max": 100,
+     "mark": 35,
+     "color": "red",
+     "at": "@sueldo",
+     "dur": 1.2
+    },
+    {
+     "type": "text",
+     "text": "35 %",
+     "x": 420.0,
+     "y": 730,
+     "size": 50,
+     "color": "ink",
+     "at": "@sueldo",
+     "dur": 0.2,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "63 %",
+     "x": 540,
+     "y": 1110,
+     "size": 220,
+     "color": "red",
+     "at": "@63",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center",
+     "golpe": true
+    },
+    {
+     "type": "tu",
+     "etiqueta": "ÁLEX",
+     "x": 860,
+     "y": 1190,
+     "scale": 0.85,
+     "at": "@niegan",
+     "dur": 0.6,
+     "cara": "enfado",
+     "caras": [
+      {
+       "at": "@63",
+       "cara": "triste"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "conclusion",
+   "trans": "zoom",
+   "lines": [
+    {
+     "text": "Así que Álex paga 1.176 de alquiler… por no poder pagar 753 de hipoteca.",
+     "tono": "remate"
+    }
+   ],
+   "elements": [
+    {
+     "type": "tu",
+     "etiqueta": "ÁLEX",
+     "x": 540,
+     "y": 1060,
+     "scale": 1.35,
+     "at": 0.05,
+     "dur": 0.6,
+     "cara": "triste",
+     "caras": []
+    },
+    {
+     "type": "text",
+     "text": "paga 1.176 €",
+     "x": 270,
+     "y": 470,
+     "size": 76,
+     "color": "red",
+     "at": "@1.176",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center",
+     "golpe": true,
+     "fx": [
+      {
+       "at": "@poder",
+       "do": "temblar"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "753 €",
+     "x": 810,
+     "y": 470,
+     "size": 90,
+     "color": "green",
+     "at": "@753",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center",
+     "fx": [
+      {
+       "at": "@hipoteca",
+       "do": "tachar"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "trans": "barrido",
+   "lines": [
+    {
+     "text": "¿Y qué proponen PSOE, PP y Vox para Álex? En el próximo vídeo.",
+     "tono": "energia"
+    },
+    {
+     "text": "Síguenos para no perdértelo.",
+     "tono": "energia"
+    }
+   ],
+   "elements": [
+    {
+     "type": "tu",
+     "etiqueta": "ÁLEX",
+     "x": 540,
+     "y": 800,
+     "scale": 1.3,
+     "at": 0.05,
+     "dur": 0.6,
+     "cara": "duda",
+     "caras": [
+      {
+       "at": "@síguenos",
+       "cara": "risa"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "PSOE",
+     "x": 230,
+     "y": 1180,
+     "size": 96,
+     "color": "psoe",
+     "at": "@psoe",
+     "dur": 0.25,
+     "font": "hand",
+     "align": "center",
+     "golpe": true
+    },
+    {
+     "type": "text",
+     "text": "PP",
+     "x": 540,
+     "y": 1180,
+     "size": 96,
+     "color": "pp",
+     "at": "@pp",
+     "dur": 0.2,
+     "font": "hand",
+     "align": "center",
+     "golpe": true
+    },
+    {
+     "type": "text",
+     "text": "VOX",
+     "x": 850,
+     "y": 1180,
+     "size": 96,
+     "color": "vox",
+     "at": "@vox",
+     "dur": 0.25,
+     "font": "hand",
+     "align": "center",
+     "golpe": true
+    },
+    {
+     "type": "stamp",
+     "text": "SÍGUENOS",
+     "sub": "@pizarrapublica",
+     "x": 540,
+     "y": 1330,
+     "w": 480,
+     "h": 120,
+     "size": 56,
+     "rotate": -5,
+     "at": "@síguenos",
+     "dur": 0.55,
+     "fx": [
+      {
+       "at": "@perdértelo",
+       "do": "latir"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

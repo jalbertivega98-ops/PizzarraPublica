@@ -1,0 +1,1064 @@
+{
+ "slug": "compra2026_piz",
+ "title": "Piz quiere comprarse una casa",
+ "series_tag": "COMPRAR CASA EN 2026",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.12,
+ "scribble_volume": 0.05,
+ "end_hold": 1.0,
+ "sources": [
+  "Consejo de la Juventud de España, Observatorio de Emancipación (nota 22/05/2026): https://www.cje.org/en/observatorio_2025/",
+  "Ministerio de Vivienda, valor tasado de la vivienda libre, 2.º trimestre 2026 (17/09/2026)",
+  "INE, Estadística de hipotecas, julio 2026 (28/09/2026): https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736170236&menu=ultiDatos&idp=1254735576757"
+ ],
+ "caption": "🏠 Piz tiene trabajo fijo y 5 años ahorrando. El banco le dice que no.\n💶 Piso medio: 223.000 € · entrada + impuestos: 66.900 €\n📈 El piso sube un 12,5 % en un año: casi 25.000 € más\n🤯 Su hipoteca: 753 €/mes. Su alquiler: 1.176 €\n💬 ¿Te ha pasado algo parecido? Cuéntanoslo\n➡️ Próximo: qué proponen PSOE, PP y Vox · 🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Consejo de la Juventud, Observatorio de Emancipación (mayo 2026): sueldo joven 1.191 €/mes, alquiler 1.176 €, precio medio 223.000 €, entrada 66.900 € · Ministerio de Vivienda 2T 2026: +12,5 % · INE hipotecas jul. 2026: tipo medio 3,01 % · Cuota calculada al 80 % y 30 años. Piz es un personaje; los datos son reales. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PizarraPública",
+  "#Vivienda",
+  "#Hipoteca",
+  "#ComprarCasa",
+  "#Jóvenes",
+  "#Alquiler",
+  "#España"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "calle",
+   "lines": [
+    {
+     "text": "Piz tiene trabajo fijo y cinco años ahorrando.",
+     "tono": "energia"
+    },
+    {
+     "text": "Y aun así, el banco le va a decir que no.",
+     "tono": "remate",
+     "pausa": 0.2
+    },
+    {
+     "text": "Síguenos, que esto te sonará."
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 290,
+     "y": 1340,
+     "scale": 1.0,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@fijo",
+       "pose": "pulgar"
+      },
+      {
+       "at": "@ahorrando",
+       "salta": true,
+       "cara": "riendo",
+       "pose": "arriba"
+      },
+      {
+       "at": "@banco",
+       "cara": "preocupado",
+       "pose": null
+      },
+      {
+       "at": "@no",
+       "cara": "susto",
+       "tiembla": true
+      },
+      {
+       "at": "@síguenos",
+       "cara": "normal",
+       "pose": "saluda"
+      }
+     ]
+    },
+    {
+     "type": "edificio",
+     "edificio": "casa",
+     "x": 810,
+     "y": 1340,
+     "scale": 0.7,
+     "at": "@trabajo-0.3",
+     "acciones": [
+      {
+       "at": "@banco",
+       "sale": "pop"
+      }
+     ],
+     "cara": "ilusionado"
+    },
+    {
+     "type": "objeto",
+     "objeto": "checklist",
+     "x": 720,
+     "y": 560,
+     "scale": 1.15,
+     "at": "@trabajo",
+     "props": {
+      "items": [
+       "Trabajo fijo",
+       "5 años ahorrando"
+      ],
+      "marcas": []
+     },
+     "acciones": [
+      {
+       "at": "@fijo",
+       "props": {
+        "marcas": [
+         "si"
+        ]
+       }
+      },
+      {
+       "at": "@ahorrando",
+       "props": {
+        "marcas": [
+         "si",
+         "si"
+        ]
+       }
+      }
+     ],
+     "out": "@aun"
+    },
+    {
+     "type": "edificio",
+     "edificio": "banco",
+     "x": 770,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@banco",
+     "acciones": [],
+     "cara": "burla",
+     "entra": "cae"
+    },
+    {
+     "type": "rotulo",
+     "text": "¡DENEGADA!",
+     "x": 560,
+     "y": 620,
+     "size": 130,
+     "color": "red",
+     "at": "@no",
+     "golpe": true,
+     "rot": -6
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 560,
+     "y": 440,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@sonará",
+       "do": "latir"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "precio",
+   "fondo": "calle",
+   "footnote": "Consejo de la Juventud · Observatorio de Emancipación (mayo 2026)",
+   "lines": [
+    {
+     "text": "Piso medio en España: 223.000 euros.",
+     "tono": "normal"
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "casa",
+     "x": 690,
+     "y": 1340,
+     "scale": 1.0,
+     "at": 0.0,
+     "acciones": [
+      {
+       "at": "@223.000",
+       "cara": "riendo"
+      }
+     ],
+     "cara": "ilusionado",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 210,
+     "y": 1340,
+     "scale": 0.85,
+     "at": 0.0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@223.000",
+       "cara": "susto",
+       "salta": true
+      }
+     ],
+     "entra": "izq"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 680,
+     "y": 560,
+     "scale": 1.2,
+     "at": "@223.000",
+     "props": {
+      "texto": "223.000 €"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "golpe": true,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "id": "banco",
+   "fondo": "calle",
+   "trans": "barrido",
+   "footnote": "Consejo de la Juventud · Observatorio de Emancipación (mayo 2026)",
+   "lines": [
+    {
+     "text": "El banco presta el 80 %. El resto, lo pone él.",
+     "tono": "intriga"
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "banco",
+     "x": 600,
+     "y": 1340,
+     "scale": 0.85,
+     "at": 0.0,
+     "acciones": [
+      {
+       "at": "@80",
+       "cara": "riendo"
+      },
+      {
+       "at": "@resto",
+       "cara": "burla",
+       "caras_dentro": {
+        "0": "burla",
+        "1": "esceptica",
+        "2": "riendo",
+        "3": "serio"
+       }
+      }
+     ],
+     "cara": "ilusionado"
+    },
+    {
+     "type": "rotulo",
+     "text": "BANCO: 80 %",
+     "x": 560,
+     "y": 450,
+     "size": 100,
+     "color": "azul_claro",
+     "at": "@80",
+     "golpe": true,
+     "out": "@resto"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 150,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@resto-0.4",
+     "cara": "confundido",
+     "acciones": [
+      {
+       "at": "@él",
+       "cara": "susto",
+       "tiembla": true
+      }
+     ],
+     "entra": "izq"
+    },
+    {
+     "type": "rotulo",
+     "text": "TÚ: 20 % + GASTOS",
+     "x": 560,
+     "y": 450,
+     "size": 84,
+     "color": "red",
+     "at": "@resto",
+     "golpe": true
+    }
+   ]
+  },
+  {
+   "id": "entrada",
+   "fondo": "banco_dentro",
+   "trans": "zoom",
+   "footnote": "Consejo de la Juventud · Observatorio de Emancipación (mayo 2026)",
+   "lines": [
+    {
+     "text": "Entrada, impuestos y notaría: 66.900 euros.",
+     "tono": "sorpresa"
+    },
+    {
+     "text": "Piz tiene 20.000.",
+     "tono": "remate",
+     "pausa": 0.3
+    },
+    {
+     "text": "Le faltan casi 47.000.",
+     "tono": "remate"
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "banquero",
+     "x": 250,
+     "y": 1340,
+     "scale": 0.88,
+     "at": 0.0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@impuestos",
+       "cara": "burla"
+      },
+      {
+       "at": "@faltan",
+       "cara": "esceptica",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "nada",
+     "pose": "senala"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 820,
+     "y": 1340,
+     "scale": 0.85,
+     "at": 0.0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@impuestos",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@66.900",
+       "cara": "susto",
+       "salta": true
+      },
+      {
+       "at": "@tiene",
+       "cara": "triste",
+       "objeto": "hucha",
+       "pose": "sostiene"
+      },
+      {
+       "at": "@faltan",
+       "cara": "susto",
+       "tiembla": true,
+       "objeto": null,
+       "pose": "cabeza"
+      }
+     ],
+     "entra": "der"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 220,
+     "y": 420,
+     "scale": 0.7,
+     "at": "@entrada",
+     "props": {
+      "texto": "ENTRADA"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 420,
+     "scale": 0.7,
+     "at": "@impuestos",
+     "props": {
+      "texto": "+ IMPUESTOS",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 860,
+     "y": 420,
+     "scale": 0.7,
+     "at": "@notaría",
+     "props": {
+      "texto": "+ NOTARÍA"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "rotulo",
+     "text": "66.900 €",
+     "x": 540,
+     "y": 610,
+     "size": 150,
+     "color": "red",
+     "at": "@66.900",
+     "golpe": true,
+     "out": "@tiene"
+    },
+    {
+     "type": "rotulo",
+     "text": "TIENE 20.000 €",
+     "x": 540,
+     "y": 600,
+     "size": 96,
+     "color": "verde",
+     "at": "@20.000",
+     "golpe": true,
+     "out": "@faltan"
+    },
+    {
+     "type": "rotulo",
+     "text": "FALTAN 46.900 €",
+     "x": 540,
+     "y": 600,
+     "size": 104,
+     "color": "red",
+     "at": "@faltan",
+     "golpe": true,
+     "fx": [
+      {
+       "at": "@47.000",
+       "do": "latir"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sube",
+   "fondo": "calle",
+   "trans": "barrido",
+   "footnote": "Ministerio de Vivienda, 2.º trim. 2026 (+12,5 % anual) · cálculo sobre 223.000 €",
+   "lines": [
+    {
+     "text": "Pero lo peor no es eso.",
+     "tono": "intriga"
+    },
+    {
+     "text": "Mientras ahorra, el piso sube un 12,5 % en un año.",
+     "tono": "normal"
+    },
+    {
+     "text": "Casi 25.000 euros más. Más que todo lo que ahorró.",
+     "tono": "sorpresa"
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "…Y LO PEOR",
+     "x": 540,
+     "y": 470,
+     "size": 110,
+     "color": "amarillo",
+     "at": 0.05,
+     "out": "@sube"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 230,
+     "y": 1340,
+     "scale": 0.85,
+     "at": 0.0,
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": "@peor",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@ahorra",
+       "cara": "ilusionado",
+       "pose": "sostiene2"
+      },
+      {
+       "at": "@sube",
+       "cara": "susto",
+       "pose": "sostiene"
+      },
+      {
+       "at": "@25.000",
+       "cara": "indignado",
+       "tiembla": true
+      },
+      {
+       "at": "@ahorró",
+       "cara": "triste",
+       "objeto": null,
+       "pose": "caidos"
+      }
+     ],
+     "entra": "nada",
+     "objeto": "hucha",
+     "pose": "sostiene"
+    },
+    {
+     "type": "edificio",
+     "edificio": "casa",
+     "x": 770,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0.0,
+     "acciones": [
+      {
+       "at": "@12,5",
+       "salta": true
+      }
+     ],
+     "cara": "riendo",
+     "entra": "nada",
+     "fx": [
+      {
+       "at": "@sube",
+       "do": "mover",
+       "x": 740,
+       "y": 1060,
+       "scale": 1.3,
+       "dur": 0.9
+      }
+     ]
+    },
+    {
+     "type": "objeto",
+     "objeto": "grafica",
+     "x": 760,
+     "y": 520,
+     "scale": 0.8,
+     "at": "@sube",
+     "props": {
+      "valores": [
+       1,
+       1.03,
+       1.06,
+       1.09,
+       1.125
+      ]
+     },
+     "acciones": [],
+     "dibujo": 1.6,
+     "out": "@25.000"
+    },
+    {
+     "type": "rotulo",
+     "text": "+12,5 %",
+     "x": 290,
+     "y": 520,
+     "size": 110,
+     "color": "red",
+     "at": "@12,5",
+     "golpe": true,
+     "out": "@25.000"
+    },
+    {
+     "type": "rotulo",
+     "text": "+25.000 €",
+     "x": 560,
+     "y": 470,
+     "size": 140,
+     "color": "red",
+     "at": "@25.000",
+     "golpe": true,
+     "fx": [
+      {
+       "at": "@todo",
+       "do": "rodear"
+      }
+     ]
+    },
+    {
+     "type": "rotulo",
+     "text": "sus ahorros: 20.000 €",
+     "x": 330,
+     "y": 620,
+     "size": 56,
+     "color": "blanco",
+     "at": "@ahorró"
+    }
+   ]
+  },
+  {
+   "id": "absurdo",
+   "fondo": "salon",
+   "musica": "corte",
+   "trans": "borrador",
+   "footnote": "INE, julio 2026: tipo medio 3,01 % · 80 % a 30 años · alquiler: CJE",
+   "lines": [
+    {
+     "text": "Y lo más absurdo:",
+     "tono": "intriga",
+     "pausa": 0.5
+    },
+    {
+     "text": "su hipoteca serían 753 euros al mes.",
+     "tono": "sorpresa"
+    },
+    {
+     "text": "Menos que un alquiler medio: 1.176.",
+     "tono": "remate"
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.9,
+     "at": 0.0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@753",
+       "cara": "sorpresa",
+       "pose": null
+      },
+      {
+       "at": "@menos",
+       "cara": "confundido"
+      },
+      {
+       "at": "@1.176",
+       "cara": "indignado",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "pose": "piensa"
+    },
+    {
+     "type": "rotulo",
+     "text": "LO MÁS ABSURDO",
+     "x": 540,
+     "y": 420,
+     "size": 92,
+     "color": "amarillo",
+     "at": 0.05,
+     "fx": [
+      {
+       "at": "@absurdo",
+       "do": "temblar"
+      }
+     ]
+    },
+    {
+     "type": "rotulo",
+     "text": "HIPOTECA",
+     "x": 250,
+     "y": 540,
+     "size": 56,
+     "color": "verde",
+     "at": "@hipoteca"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calculadora",
+     "x": 250,
+     "y": 720,
+     "scale": 0.85,
+     "at": "@hipoteca",
+     "props": {
+      "texto": "753"
+     },
+     "acciones": []
+    },
+    {
+     "type": "rotulo",
+     "text": "753 €",
+     "x": 250,
+     "y": 930,
+     "size": 84,
+     "color": "verde",
+     "at": "@753",
+     "golpe": true
+    },
+    {
+     "type": "rotulo",
+     "text": "ALQUILER",
+     "x": 830,
+     "y": 540,
+     "size": 56,
+     "color": "red",
+     "at": "@alquiler"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 830,
+     "y": 660,
+     "scale": 0.7,
+     "at": "@1.176",
+     "props": {
+      "texto": "1.176 €",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "golpe": true,
+     "rot": 6
+    },
+    {
+     "type": "personaje",
+     "quien": "sarcastica",
+     "x": 940,
+     "y": 1340,
+     "scale": 0.45,
+     "at": "@1.176+0.3",
+     "cara": "burla",
+     "acciones": [],
+     "entra": "pop"
+    }
+   ]
+  },
+  {
+   "id": "motivo",
+   "fondo": "banco_dentro",
+   "trans": "papel",
+   "footnote": "Criterio habitual de los bancos: cuota ≤ 30-35 % del sueldo · sueldo joven: CJE",
+   "lines": [
+    {
+     "text": "¿Y por qué se la niegan?",
+     "tono": "intriga"
+    },
+    {
+     "text": "El banco no acepta cuotas de más del 35 % del sueldo.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y la de Piz sería el 63 %.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "banquera_seria",
+     "x": 230,
+     "y": 1340,
+     "scale": 0.85,
+     "at": 0.0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@banco",
+       "pose": "senala"
+      },
+      {
+       "at": "@sueldo",
+       "pose": "senala_arriba",
+       "cara": "burla"
+      },
+      {
+       "at": "@63",
+       "cara": "esceptica",
+       "pose": "cruzados"
+      }
+     ],
+     "entra": "izq"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 850,
+     "y": 1340,
+     "scale": 0.8,
+     "at": 0.0,
+     "cara": "confundido",
+     "acciones": [
+      {
+       "at": "@35",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@Piz",
+       "cara": "susto",
+       "salta": true
+      },
+      {
+       "at": "@63",
+       "cara": "triste",
+       "pose": "caidos"
+      }
+     ],
+     "entra": "der"
+    },
+    {
+     "type": "objeto",
+     "objeto": "checklist",
+     "x": 540,
+     "y": 520,
+     "scale": 1.1,
+     "at": "@banco",
+     "props": {
+      "items": [
+       "Trabajo fijo",
+       "Ahorros",
+       "Cuota < 35 %"
+      ],
+      "marcas": [
+       "si",
+       "si"
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@63",
+       "props": {
+        "marcas": [
+         "si",
+         "si",
+         "no"
+        ]
+       },
+       "sfx": "error"
+      }
+     ],
+     "fx": [
+      {
+       "at": "@sueldo",
+       "do": "latir"
+      }
+     ]
+    },
+    {
+     "type": "rotulo",
+     "text": "63 %",
+     "x": 540,
+     "y": 820,
+     "size": 170,
+     "color": "red",
+     "at": "@63",
+     "golpe": true
+    }
+   ]
+  },
+  {
+   "id": "conclusion",
+   "fondo": "calle",
+   "trans": "zoom",
+   "lines": [
+    {
+     "text": "Así que Piz paga 1.176 de alquiler… por no poder pagar 753 de hipoteca.",
+     "tono": "remate"
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1340,
+     "scale": 1.0,
+     "at": 0.0,
+     "cara": "triste",
+     "acciones": [
+      {
+       "at": "@1.176",
+       "objeto": {
+        "tipo": "fajo"
+       },
+       "pose": "sostiene"
+      },
+      {
+       "at": "@poder",
+       "cara": "preocupado",
+       "mira": "der"
+      },
+      {
+       "at": "@hipoteca",
+       "cara": "indignado",
+       "objeto": null,
+       "pose": "punos",
+       "tiembla": true
+      }
+     ],
+     "entra": "nada",
+     "pose": "caidos"
+    },
+    {
+     "type": "rotulo",
+     "text": "PAGA 1.176 €",
+     "x": 310,
+     "y": 470,
+     "size": 70,
+     "color": "red",
+     "at": "@1.176",
+     "golpe": true,
+     "fx": [
+      {
+       "at": "@alquiler",
+       "do": "latir"
+      }
+     ]
+    },
+    {
+     "type": "rotulo",
+     "text": "753 €",
+     "x": 790,
+     "y": 470,
+     "size": 100,
+     "color": "verde",
+     "at": "@753",
+     "fx": [
+      {
+       "at": "@hipoteca",
+       "do": "tachar"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": {
+    "tipo": "rayos",
+    "color": "amarillo"
+   },
+   "trans": "barrido",
+   "lines": [
+    {
+     "text": "¿Y qué proponen PSOE, PP y Vox para Piz? En el próximo vídeo.",
+     "tono": "energia"
+    },
+    {
+     "text": "Síguenos para no perdértelo.",
+     "tono": "energia"
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.95,
+     "at": 0.0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@próximo",
+       "cara": "idea",
+       "pose": "senala_arriba"
+      },
+      {
+       "at": "@síguenos",
+       "cara": "riendo",
+       "pose": "saluda",
+       "salta": true
+      }
+     ],
+     "entra": "pop",
+     "pose": "piensa"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 220,
+     "y": 420,
+     "scale": 0.9,
+     "at": "@psoe",
+     "props": {
+      "texto": "PSOE",
+      "color": "psoe",
+      "tinta": "blanco"
+     },
+     "acciones": [],
+     "golpe": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 390,
+     "scale": 0.9,
+     "at": "@pp",
+     "props": {
+      "texto": "PP",
+      "color": "pp",
+      "tinta": "blanco"
+     },
+     "acciones": [],
+     "golpe": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 860,
+     "y": 420,
+     "scale": 0.9,
+     "at": "@vox",
+     "props": {
+      "texto": "VOX",
+      "color": "vox",
+      "tinta": "blanco"
+     },
+     "acciones": [],
+     "golpe": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 560,
+     "size": 110,
+     "color": "blanco",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@perdértelo",
+       "do": "latir"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

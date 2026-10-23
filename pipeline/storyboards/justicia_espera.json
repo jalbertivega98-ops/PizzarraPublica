@@ -1,0 +1,792 @@
+{
+ "slug": "justicia_espera",
+ "title": "¿Cuánto tarda la justicia?",
+ "series_tag": "TU DINERO, CON DATOS",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "CGPJ: situación de los órganos judiciales 2025 (nota del 30/03/2026)",
+  "CEPEJ (Consejo de Europa): indicador «disposition time»"
+ ],
+ "caption": "⚖️ 4,7 millones de casos esperan en los juzgados de España\n📂 Civil 2,7 M · penal 1,3 M · social 526.000 · contencioso 219.000\n⏳ Al ritmo de 2025: lo social tardaría 13,6 meses en ponerse al día; el penal, 4,4\n📈 La pila crece un 3,4 % (lo social, un 9,4 %)\n⚠️ No es lo que dura un juicio: es lo que tardarían en vaciar la mesa\n💬 ¿Has esperado un juicio?\n➡️ Próximo: los jóvenes que se van · 🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuente: CGPJ, «Situación de los órganos judiciales 2025» (nota del 30/03/2026): 4.673.596 asuntos pendientes a 31/12/2025; civil 2.672.464, penal 1.255.950, social 525.652, contencioso 219.492. Los meses son cálculo propio con el indicador del CEPEJ (pendientes ÷ resueltos en 2025 × 12): no es la duración oficial de un juicio, que el CGPJ publica por tipo de juzgado. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PizarraPública",
+  "#Justicia",
+  "#Juzgados",
+  "#CGPJ",
+  "#Datos",
+  "#España"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "footnote": "CGPJ, órganos judiciales 2025 (nota 30/03/2026)",
+   "lines": [
+    {
+     "text": "Hay 4,7 millones de casos esperando en los juzgados de España.",
+     "tono": "energia"
+    },
+    {
+     "text": "Una montaña de papeles.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@montaña",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 330,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@millones-0.35",
+       "mira": "arriba",
+       "cara": "susto"
+      },
+      {
+       "at": "@millones+0.13",
+       "aplasta": true
+      },
+      {
+       "at": "@millones+0.80",
+       "cara": "confundido",
+       "mira": null
+      },
+      {
+       "at": "@papeles",
+       "cara": "confundido"
+      }
+     ],
+     "entra": "izq",
+     "id": "pizon"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "id": "precio_cae",
+     "x": 330,
+     "y": 1040,
+     "scale": 1.1,
+     "at": "@millones-0.5",
+     "dur": 0.9,
+     "entra": "cae",
+     "props": {
+      "texto": "4,7 MILLONES",
+      "color": "amarillo"
+     },
+     "rot": -3,
+     "acciones": [
+      {
+       "at": "@millones+0.13",
+       "y": 1230,
+       "dur": 0.06
+      },
+      {
+       "at": "@millones+0.75",
+       "y": 820,
+       "x": 370,
+       "dur": 0.45
+      }
+     ]
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¡PATAPLAF!",
+     "x": 450,
+     "y": 1010,
+     "at": "@millones+0.13",
+     "scale": 0.9,
+     "vida": 0.8
+    },
+    {
+     "type": "efecto",
+     "efecto": "lluvia",
+     "objeto": "contrato",
+     "n": 9,
+     "x0": 520,
+     "x1": 960,
+     "at": "@montaña",
+     "vida": 2.0
+    },
+    {
+     "type": "rotulo",
+     "text": "4.673.596 CASOS",
+     "x": 600,
+     "y": 560,
+     "size": 84,
+     "color": "red",
+     "at": "@millones",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "tipos",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "pan",
+   "footnote": "CGPJ, órganos judiciales 2025 (nota 30/03/2026)",
+   "lines": [
+    {
+     "text": "En lo civil, 2,7 millones. En lo penal, 1,3.",
+     "tono": "normal"
+    },
+    {
+     "text": "En lo social, que son despidos, bajas o pensiones, 526.000.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@526.000",
+     "plano": "medio",
+     "sobre": "profe",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 280,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@civil",
+       "pose": "senala"
+      },
+      {
+       "at": "@penal",
+       "mira": "camara"
+      },
+      {
+       "at": "@social",
+       "salta": true
+      },
+      {
+       "at": "@despidos",
+       "cara": "serio"
+      },
+      {
+       "at": "@526.000",
+       "pose": "pulgar"
+      }
+     ],
+     "entra": "izq",
+     "pose": "senala_arriba",
+     "id": "profe"
+    },
+    {
+     "type": "rotulo",
+     "text": "CIVIL: 2,7 M",
+     "x": 600,
+     "y": 460,
+     "size": 76,
+     "color": "amarillo",
+     "at": "@civil",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "PENAL: 1,3 M",
+     "x": 600,
+     "y": 560,
+     "size": 76,
+     "color": "blanco",
+     "at": "@penal",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SOCIAL: 526.000",
+     "x": 600,
+     "y": 660,
+     "size": 76,
+     "color": "red",
+     "at": "@social",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "ritmo",
+   "fondo": "rayos",
+   "animo": "tension",
+   "musica": "corte",
+   "trans": "iris",
+   "footnote": "Cálculo propio: pendientes ÷ resueltos 2025 (CEPEJ)",
+   "lines": [
+    {
+     "text": "Al ritmo de 2025, lo social tardaría casi 14 meses en ponerse al día.",
+     "tono": "sorpresa"
+    },
+    {
+     "text": "Lo contencioso, 12. Lo penal, 4.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@14",
+     "plano": "medio",
+     "sobre": "pizon",
+     "dur": 0.3,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.78,
+     "at": 0,
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": "@social",
+       "mira": "reloj"
+      },
+      {
+       "at": "@14",
+       "take": true,
+       "cara": "susto"
+      },
+      {
+       "at": "@contencioso",
+       "tiembla": true
+      },
+      {
+       "at": "@4",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "pop",
+     "id": "pizon"
+    },
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 790,
+     "y": 1000,
+     "scale": 0.7,
+     "at": "@ritmo",
+     "props": {},
+     "acciones": [],
+     "id": "reloj",
+     "entra": "pop",
+     "velocidad": 8
+    },
+    {
+     "type": "rotulo",
+     "text": "SOCIAL: 13,6 MESES",
+     "x": 600,
+     "y": 480,
+     "size": 76,
+     "color": "red",
+     "at": "@14",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "CONTENCIOSO: 12,4",
+     "x": 600,
+     "y": 590,
+     "size": 64,
+     "color": "amarillo",
+     "at": "@contencioso",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "PENAL: 4,4",
+     "x": 600,
+     "y": 690,
+     "size": 64,
+     "color": "verde",
+     "at": "@penal",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "pizon",
+   "fondo": "calle",
+   "animo": "triste",
+   "trans": "pan",
+   "footnote": "Cálculo propio (CEPEJ) · jurisdicción social",
+   "lines": [
+    {
+     "text": "Si a Pizón le despiden y reclama, la cola que tiene delante es la más larga.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@larga",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 820,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@despiden",
+       "take": true,
+       "cara": "susto"
+      },
+      {
+       "at": "@reclama",
+       "cara": "indignado"
+      },
+      {
+       "at": "@cola",
+       "mira": "izq",
+       "cara": "triste"
+      },
+      {
+       "at": "@larga",
+       "tropieza": true
+      }
+     ],
+     "entra": "der",
+     "objeto": {
+      "tipo": "contrato",
+      "titulo": "DEMANDA",
+      "hojas": 1
+     },
+     "pose": "sostiene",
+     "id": "pizon"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 200,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@cola",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@larga",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "izq",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "sarcastica",
+     "x": 420,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@cola+0.2",
+     "cara": "burla",
+     "acciones": [],
+     "entra": "izq",
+     "id": "sarcastica"
+    },
+    {
+     "type": "rotulo",
+     "text": "LA COLA MÁS LARGA",
+     "x": 540,
+     "y": 480,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@cola",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "crece",
+   "fondo": "oficina",
+   "animo": "tension",
+   "trans": "iris",
+   "footnote": "CGPJ 2025 · pendientes +3,4 % (social +9,4 %)",
+   "lines": [
+    {
+     "text": "Y la pila crece: un 3,4 % más que el año anterior. Lo social, un 9,4.",
+     "tono": "sorpresa"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@9,4",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@crece",
+       "mira": "grafica",
+       "pose": "senala"
+      },
+      {
+       "at": "@3,4",
+       "take": true
+      },
+      {
+       "at": "@anterior",
+       "pose": "senala_arriba",
+       "mira": "camara"
+      },
+      {
+       "at": "@social",
+       "salta": true
+      },
+      {
+       "at": "@9,4",
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "izq",
+     "id": "profe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "grafica",
+     "x": 760,
+     "y": 800,
+     "scale": 0.85,
+     "at": "@pila",
+     "props": {
+      "valores": [
+       1,
+       1.2,
+       1.5,
+       1.9
+      ],
+      "color": "rojo"
+     },
+     "acciones": [],
+     "id": "grafica",
+     "entra": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "+3,4 %",
+     "x": 600,
+     "y": 480,
+     "size": 110,
+     "color": "red",
+     "at": "@3,4",
+     "golpe": true,
+     "out": "@9,4",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SOCIAL: +9,4 %",
+     "x": 600,
+     "y": 480,
+     "size": 90,
+     "color": "red",
+     "at": "@9,4",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "matiz",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "pan",
+   "footnote": "No es la duración oficial de un juicio",
+   "lines": [
+    {
+     "text": "Ojo: no es lo que dura un juicio. Es lo que tardarían en vaciar la mesa sin que entrara nada nuevo.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@nuevo",
+     "plano": "medio",
+     "sobre": "profe",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@juicio",
+       "pose": "senala",
+       "cara": "serio"
+      },
+      {
+       "at": "@vaciar",
+       "mira": "camara"
+      },
+      {
+       "at": "@nuevo",
+       "pose": "pulgar",
+       "cara": "normal"
+      }
+     ],
+     "entra": "nada",
+     "pose": "senala_arriba",
+     "id": "profe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contrato",
+     "x": 780,
+     "y": 800,
+     "scale": 0.7,
+     "at": "@mesa",
+     "props": {
+      "titulo": "PENDIENTES",
+      "hojas": 3
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "papel"
+    },
+    {
+     "type": "rotulo",
+     "text": "≠ DURACIÓN DE UN JUICIO",
+     "x": 600,
+     "y": 480,
+     "size": 64,
+     "color": "amarillo",
+     "at": "@Ojo",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "CGPJ, órganos judiciales 2025 (nota 30/03/2026)",
+   "lines": [
+    {
+     "text": "¿Has esperado un juicio? Te leemos.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y síguenos: la próxima, los jóvenes que se van de España.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@síguenos",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@esperado",
+       "mira": "camara",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@leemos",
+       "pose": "senala",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@España",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 790,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@juicio",
+       "cara": "triste"
+      },
+      {
+       "at": "@España",
+       "take": true
+      }
+     ],
+     "entra": "nada",
+     "id": "pizon"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿HAS ESPERADO?",
+     "x": 540,
+     "y": 470,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@esperado",
+     "golpe": true,
+     "out": "@síguenos-0.4",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 470,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@España",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.4,
+  "titulo": "4,7 millones de casos esperando",
+  "capitulo": null
+ }
+}

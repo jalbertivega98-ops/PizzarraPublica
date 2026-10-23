@@ -1,0 +1,138 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 5.89,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 1.81,
+    "texto": "Tres cadenas, seis debates propuestos…"
+   },
+   {
+    "t0": 1.96,
+    "t1": 3.56,
+    "texto": "y todavía nadie sabe cuáles habrá."
+   },
+   {
+    "t0": 3.76,
+    "t1": 5.44,
+    "texto": "Quédate, que al final eliges tú."
+   }
+  ]
+ },
+ {
+  "escena": "rtve",
+  "inicio": 5.89,
+  "fin": 11.87,
+  "frases": [
+   {
+    "t0": 5.89,
+    "t1": 11.42,
+    "texto": "RTVE propuso tres: cara a cara el 17, portavoces el 23 y debate a cuatro el 26 de noviembre."
+   }
+  ]
+ },
+ {
+  "escena": "privadas",
+  "inicio": 11.87,
+  "fin": 17.79,
+  "frases": [
+   {
+    "t0": 12.13,
+    "t1": 15.78,
+    "texto": "Atresmedia, dos: debate a cuatro el 18 y cara a cara el 23."
+   },
+   {
+    "t0": 15.93,
+    "t1": 17.34,
+    "texto": "Mediaset, un cara a cara."
+   }
+  ]
+ },
+ {
+  "escena": "feijoo",
+  "inicio": 17.79,
+  "fin": 26.46,
+  "frases": [
+   {
+    "t0": 18.49,
+    "t1": 23.67,
+    "texto": "Feijóo ha elegido: cara a cara en Mediaset el 16, debate a cuatro en Atresmedia el 26…"
+   },
+   {
+    "t0": 23.82,
+    "t1": 26.01,
+    "texto": "y en RTVE, solo el de portavoces."
+   }
+  ]
+ },
+ {
+  "escena": "abascal",
+  "inicio": 26.46,
+  "fin": 31.76,
+  "frases": [
+   {
+    "t0": 26.46,
+    "t1": 28.64,
+    "texto": "Y por primera vez acepta debatir con Abascal,"
+   },
+   {
+    "t0": 28.79,
+    "t1": 31.31,
+    "texto": "después de no ir al debate a cuatro de 2023."
+   }
+  ]
+ },
+ {
+  "escena": "psoe",
+  "inicio": 31.76,
+  "fin": 36.83,
+  "frases": [
+   {
+    "t0": 32.21,
+    "t1": 34.09,
+    "texto": "El PSOE dice que Sánchez irá a todos…"
+   },
+   {
+    "t0": 34.24,
+    "t1": 36.38,
+    "texto": "pero que dónde y con quién no lo decide Feijóo."
+   }
+  ]
+ },
+ {
+  "escena": "vox",
+  "inicio": 36.83,
+  "fin": 42.17,
+  "frases": [
+   {
+    "t0": 37.13,
+    "t1": 41.72,
+    "texto": "Vox pide que los debates reflejen el Congreso, donde es la tercera fuerza, con 33 diputados."
+   }
+  ]
+ },
+ {
+  "escena": "pregunta",
+  "inicio": 42.17,
+  "fin": 52.61,
+  "frases": [
+   {
+    "t0": 42.87,
+    "t1": 46.9,
+    "texto": "Y ahora tú: si solo pudieras ver uno, ¿cuál verías: el cara a cara o el debate a cuatro?"
+   },
+   {
+    "t0": 47.05,
+    "t1": 48.72,
+    "texto": "Escribe 2 o 4 en comentarios."
+   },
+   {
+    "t0": 48.92,
+    "t1": 51.26,
+    "texto": "Síguenos y te contamos cuándo se cierran las fechas."
+   }
+  ]
+ }
+]

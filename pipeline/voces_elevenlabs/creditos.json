@@ -1,0 +1,15 @@
+{
+ "plan": null,
+ "usados": null,
+ "limite": null,
+ "quedan": 0,
+ "se_renueva": null,
+ "consultado": "2026-10-23 17:31 UTC",
+ "error": {
+  "type": "authentication_error",
+  "code": "unauthorized",
+  "message": "The API key you used is missing the permission user_read to execute this operation.",
+  "status": "missing_permissions",
+  "request_id": "52b10f1ce290dd447c5485e8afde22ff"
+ }
+}

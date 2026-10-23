@@ -8,7 +8,7 @@ on:
         required: false
         default: ""
       motor:
-        description: "elevenlabs o edge (voces gratis de Microsoft)"
+        description: "elevenlabs, edge (voces gratis de Microsoft) o v2 (motor v2: Álvaro con tiempos por palabra)"
         required: false
         default: "elevenlabs"
       biblioteca:
@@ -23,6 +23,10 @@ on:
         description: "voice_id de ElevenLabs (vacío = el del storyboard)"
         required: false
         default: ""
+      sistema:
+        description: "Máquina de GitHub: ubuntu-latest, macos-latest o windows-latest (otra IP si Microsoft bloquea una)"
+        required: false
+        default: "ubuntu-latest"
 
 permissions:
   contents: write
@@ -33,13 +37,17 @@ concurrency:
 
 jobs:
   voces:
-    runs-on: ubuntu-latest
+    runs-on: ${{ inputs.sistema || 'ubuntu-latest' }}
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - name: Instalar edge-tts
-        run: pip install edge-tts==7.2.8
+        run: python3 -m pip install edge-tts==7.2.8
       - name: Generar voces
+        shell: bash
         working-directory: pipeline
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
@@ -49,17 +57,31 @@ jobs:
           BIBLIOTECA: ${{ inputs.biblioteca }}
           MOTOR: ${{ inputs.motor }}
         run: |
-          if [ -n "$MUESTRAS" ]; then
+          if [ "$MOTOR" = "v2" ]; then
+            cd .. && python3 pipeline/v2/voz.py $STORYBOARDS
+          elif [ -n "$MUESTRAS" ]; then
             python3 tts_elevenlabs.py --muestras "$MUESTRAS" --biblioteca "${BIBLIOTECA:-0}" --motor "${MOTOR:-elevenlabs}"
           else
             python3 tts_elevenlabs.py $STORYBOARDS ${VOICE:+--voice "$VOICE"} --motor "${MOTOR:-elevenlabs}"
           fi
-      - name: Guardar las voces en el repositorio
+      - name: Créditos de ElevenLabs que quedan
+        if: always()
+        shell: bash
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         run: |
-          git add pipeline/voces_elevenlabs
+          mkdir -p pipeline/voces_elevenlabs
+          curl -s -H "xi-api-key: $ELEVENLABS_API_KEY" https://api.elevenlabs.io/v1/user/subscription \
+            | python3 -c 'import json,sys,datetime as d; s=json.load(sys.stdin); r=s.get("next_character_count_reset_unix"); print(json.dumps({"plan": s.get("tier"), "usados": s.get("character_count"), "limite": s.get("character_limit"), "quedan": (s.get("character_limit") or 0) - (s.get("character_count") or 0), "se_renueva": d.datetime.utcfromtimestamp(r).strftime("%Y-%m-%d") if r else None, "consultado": d.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"), "error": s.get("detail")}, ensure_ascii=False, indent=1))' \
+            > pipeline/voces_elevenlabs/creditos.json || true
+          cat pipeline/voces_elevenlabs/creditos.json
+      - name: Guardar las voces en el repositorio
+        shell: bash
+        run: |
+          git add pipeline/voces_elevenlabs pipeline/v2/voces 2>/dev/null || git add pipeline/voces_elevenlabs
           if ! git diff --cached --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git commit -m "Voces de ElevenLabs"
-            git push
+            for i in 1 2 3; do git pull --rebase origin "${{ github.ref_name }}" && git push && break; sleep 5; done
           fi

@@ -1,0 +1,99 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 5.29,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.74,
+    "texto": "Viajamos diez años al futuro: España, 2036."
+   },
+   {
+    "t0": 2.94,
+    "t1": 4.84,
+    "texto": "¿Cómo será tu vida si todo sigue como hoy?"
+   }
+  ]
+ },
+ {
+  "escena": "vivienda",
+  "inicio": 5.29,
+  "fin": 14.32,
+  "frases": [
+   {
+    "t0": 5.55,
+    "t1": 10.06,
+    "texto": "Hoy, comprar un piso cuesta 8,4 años de sueldo íntegro. Hace un año, 7,1."
+   },
+   {
+    "t0": 10.26,
+    "t1": 13.87,
+    "texto": "A ese ritmo, en 2036 harían falta más de veinte años de sueldo."
+   }
+  ]
+ },
+ {
+  "escena": "poblacion",
+  "inicio": 14.32,
+  "fin": 18.78,
+  "frases": [
+   {
+    "t0": 14.62,
+    "t1": 18.33,
+    "texto": "Según el INE, en 2036 seremos 53 millones de personas."
+   }
+  ]
+ },
+ {
+  "escena": "nacen",
+  "inicio": 18.78,
+  "fin": 25.74,
+  "frases": [
+   {
+    "t0": 18.78,
+    "t1": 23.3,
+    "texto": "Pero ese año nacerán unos 370.000 bebés… y morirán 510.000 personas."
+   },
+   {
+    "t0": 23.5,
+    "t1": 25.29,
+    "texto": "Cada año, 140.000 menos."
+   }
+  ]
+ },
+ {
+  "escena": "llegan",
+  "inicio": 25.74,
+  "fin": 33.64,
+  "frases": [
+   {
+    "t0": 26.44,
+    "t1": 29.2,
+    "texto": "Entonces, ¿por qué crecemos? Por la gente que llega de fuera."
+   },
+   {
+    "t0": 29.4,
+    "t1": 33.19,
+    "texto": "En 2036, más de uno de cada cuatro habitantes habrá nacido en otro país."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 33.64,
+  "fin": 42.17,
+  "frases": [
+   {
+    "t0": 33.96,
+    "t1": 37.79,
+    "texto": "Nada de esto está escrito: depende de lo que hagamos… y de lo que votemos el 29N."
+   },
+   {
+    "t0": 37.99,
+    "t1": 40.82,
+    "texto": "¿Qué te preocupa más de 2036? Te leo. Y síguenos."
+   }
+  ]
+ }
+]

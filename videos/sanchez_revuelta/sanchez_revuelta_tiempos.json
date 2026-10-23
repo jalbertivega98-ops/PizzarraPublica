@@ -19,160 +19,210 @@
  {
   "escena": "tele",
   "inicio": 4.65,
-  "fin": 9.94,
+  "fin": 10.01,
   "frases": [
    {
     "t0": 4.65,
-    "t1": 7.41,
-    "texto": "Nada más entrar: «Luego me dicen que esta televisión es mía»."
+    "t1": 5.43,
+    "texto": "Nada más entrar:"
    },
    {
-    "t0": 7.61,
-    "t1": 9.49,
+    "t0": 5.53,
+    "t1": 7.48,
+    "texto": "«Luego me dicen que esta televisión es mía»."
+   },
+   {
+    "t0": 7.68,
+    "t1": 9.56,
     "texto": "Lo dijo en La 1. La tele pública."
    }
   ]
  },
  {
   "escena": "clasicas",
-  "inicio": 9.94,
-  "fin": 17.99,
+  "inicio": 10.01,
+  "fin": 17.96,
   "frases": [
    {
-    "t0": 10.2,
-    "t1": 12.75,
-    "texto": "Sexo: «Tenemos una vida sexual activa y sana»."
+    "t0": 10.27,
+    "t1": 10.74,
+    "texto": "Sexo:"
    },
    {
-    "t0": 12.9,
-    "t1": 14.92,
+    "t0": 10.84,
+    "t1": 12.71,
+    "texto": "«Tenemos una vida sexual activa y sana»."
+   },
+   {
+    "t0": 12.86,
+    "t1": 14.88,
     "texto": "¿Y su dinero? Al Portal de Transparencia."
    },
    {
-    "t0": 15.17,
-    "t1": 17.54,
+    "t0": 15.13,
+    "t1": 17.51,
     "texto": "De sexo, todo. De dinero, al portal."
    }
   ]
  },
  {
   "escena": "madre",
-  "inicio": 17.99,
-  "fin": 29.09,
+  "inicio": 17.96,
+  "fin": 28.74,
   "frases": [
    {
-    "t0": 18.31,
-    "t1": 23.26,
-    "texto": "El madrazo: «Se acuerdan de mi madre, yo también de las suyas cuando subo las pensiones o el salario mínimo»."
+    "t0": 18.28,
+    "t1": 18.85,
+    "texto": "El madrazo:"
    },
    {
-    "t0": 23.41,
-    "t1": 26.43,
+    "t0": 18.95,
+    "t1": 22.91,
+    "texto": "«Se acuerdan de mi madre, yo también de las suyas cuando subo las pensiones o el salario mínimo»."
+   },
+   {
+    "t0": 23.06,
+    "t1": 26.08,
     "texto": "El salario mínimo ha subido un sesenta y seis por ciento. Verdad."
    },
    {
-    "t0": 26.63,
-    "t1": 28.64,
+    "t0": 26.28,
+    "t1": 28.29,
     "texto": "Pero el piso usado, un setenta y cuatro."
    }
   ]
  },
  {
   "escena": "vivienda",
-  "inicio": 29.09,
-  "fin": 40.42,
+  "inicio": 28.74,
+  "fin": 40.16,
   "frases": [
    {
-    "t0": 29.35,
-    "t1": 34.19,
-    "texto": "Vivienda: «Comparto la preocupación, pero necesito herramientas». Pide ciento setenta y seis escaños."
+    "t0": 29.0,
+    "t1": 29.56,
+    "texto": "Vivienda:"
    },
    {
-    "t0": 34.34,
-    "t1": 35.79,
+    "t0": 29.66,
+    "t1": 32.12,
+    "texto": "«Comparto la preocupación, pero necesito herramientas»."
+   },
+   {
+    "t0": 32.27,
+    "t1": 33.93,
+    "texto": "Pide ciento setenta y seis escaños."
+   },
+   {
+    "t0": 34.08,
+    "t1": 35.53,
     "texto": "Lleva ocho años en Moncloa."
    },
    {
-    "t0": 35.99,
-    "t1": 39.97,
+    "t0": 35.73,
+    "t1": 39.71,
     "texto": "Hoy, un joven que alquila solo se deja el noventa y ocho coma siete por ciento del sueldo."
    }
   ]
  },
  {
   "escena": "abalos",
-  "inicio": 40.42,
-  "fin": 51.75,
+  "inicio": 40.16,
+  "fin": 51.31,
   "frases": [
    {
-    "t0": 40.42,
-    "t1": 43.05,
-    "texto": "Ábalos: «Crees conocer a la gente… y te quedas helado»."
+    "t0": 40.16,
+    "t1": 40.66,
+    "texto": "Ábalos:"
    },
    {
-    "t0": 43.2,
-    "t1": 44.94,
-    "texto": "¿No lo vio venir? «De verdad que no»."
+    "t0": 40.76,
+    "t1": 42.79,
+    "texto": "«Crees conocer a la gente… y te quedas helado»."
    },
    {
-    "t0": 45.09,
-    "t1": 47.97,
+    "t0": 42.94,
+    "t1": 43.63,
+    "texto": "¿No lo vio venir?"
+   },
+   {
+    "t0": 43.73,
+    "t1": 44.5,
+    "texto": "«De verdad que no»."
+   },
+   {
+    "t0": 44.65,
+    "t1": 47.53,
     "texto": "Su secretario de Organización: veinticuatro años de cárcel."
    },
    {
-    "t0": 48.12,
-    "t1": 51.3,
+    "t0": 47.68,
+    "t1": 50.86,
     "texto": "Y Cerdán, el siguiente: casi cinco meses en prisión provisional."
    }
   ]
  },
  {
   "escena": "familia",
-  "inicio": 51.75,
-  "fin": 58.67,
+  "inicio": 51.31,
+  "fin": 58.25,
   "frases": [
    {
-    "t0": 52.05,
-    "t1": 54.79,
-    "texto": "Su hermano y su mujer: «Dos personas que son inocentes»."
+    "t0": 51.61,
+    "t1": 52.67,
+    "texto": "Su hermano y su mujer:"
    },
    {
-    "t0": 54.99,
-    "t1": 58.22,
+    "t0": 52.77,
+    "t1": 54.37,
+    "texto": "«Dos personas que son inocentes»."
+   },
+   {
+    "t0": 54.57,
+    "t1": 57.8,
     "texto": "Su hermano está condenado. Eso sí, la sentencia no es firme."
    }
   ]
  },
  {
   "escena": "ceuta",
-  "inicio": 58.67,
-  "fin": 65.15,
+  "inicio": 58.25,
+  "fin": 64.71,
   "frases": [
    {
-    "t0": 59.12,
-    "t1": 62.26,
-    "texto": "Ceuta: «Sin duda alguna, podríamos haberlo gestionado mejor»."
+    "t0": 58.7,
+    "t1": 59.18,
+    "texto": "Ceuta:"
    },
    {
-    "t0": 62.46,
-    "t1": 64.7,
+    "t0": 59.28,
+    "t1": 61.81,
+    "texto": "«Sin duda alguna, podríamos haberlo gestionado mejor»."
+   },
+   {
+    "t0": 62.01,
+    "t1": 64.26,
     "texto": "Por fin, algo en lo que estamos todos de acuerdo."
    }
   ]
  },
  {
   "escena": "final",
-  "inicio": 65.15,
-  "fin": 71.65,
+  "inicio": 64.71,
+  "fin": 71.05,
   "frases": [
    {
-    "t0": 65.85,
-    "t1": 67.67,
-    "texto": "¿Y Jordi Wild? «Ya responderé»."
+    "t0": 65.41,
+    "t1": 66.2,
+    "texto": "¿Y Jordi Wild?"
    },
    {
-    "t0": 67.92,
-    "t1": 70.3,
+    "t0": 66.3,
+    "t1": 67.07,
+    "texto": "«Ya responderé»."
+   },
+   {
+    "t0": 67.32,
+    "t1": 69.7,
     "texto": "¿Entrevista valiente o paseo? Te leo. Y síguenos."
    }
   ]

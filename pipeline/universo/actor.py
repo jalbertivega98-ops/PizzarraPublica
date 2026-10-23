@@ -471,6 +471,8 @@ def _edificio(e, c, t, cara, paso):
            "caras_dentro": {int(k): v for k, v in (dentro or {}).items()}}
     if cara is None:
         est.pop("cara")
+    if "texto" in s:  # rótulo propio (ayuntamiento, abandonado)
+        est["texto"] = s["texto"]
     kw = {k: s[k] for k in ("variante", "trabajadores") if k in s}
     if s.get("piernas"):
         w, _ = edificios.TAMANO.get(s["edificio"], (500, 500))

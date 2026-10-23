@@ -403,14 +403,24 @@ def invitacion(c, t=0.0, texto="INVITACIÓN", color="amarillo", abierta=False, *
         _texto(c, texto, 0, 104, 40, "tinta", "sub", 320)
 
 
+def gorra(c, t=0.0, texto="", color="azul", **kw):
+    """Gorra de visera con rótulo en el frontal (dos cargos = dos gorras); (0, 0) = centro."""
+    pieza(c, suave([(-150, 30), (-140, -60), (-60, -110), (60, -110), (140, -60), (150, 30)]), color, 7)
+    pieza(c, suave([(60, 26), (190, 20), (250, 44), (180, 62), (60, 54)]), mezcla(color, "tinta", 0.25), 6)
+    c.drawCircle(0, -112, 14, relleno(mezcla(color, "tinta", 0.3))); c.drawCircle(0, -112, 14, trazo(4))
+    if texto:
+        pieza(c, rrect(-118, -60, 118, 4, 10), "blanco", 4)
+        _texto(c, texto, 0, -14, 40, "tinta", "sub", 220)
+
+
 TIPOS = {"papeleta": papeleta, "urna": urna, "mesa_electoral": mesa_electoral, "camion": camion, "senal": senal,
          "alcoholimetro": alcoholimetro, "contador": contador, "barras": barras, "bola": bola, "lapida": lapida,
          "papelera": papelera, "libro": libro, "pasaporte": pasaporte, "maleta": maleta, "carabela": carabela,
          "corona": corona, "pergamino": pergamino, "microfono": microfono, "silla": silla, "tele": tele,
-         "calendario": calendario, "invitacion": invitacion}
+         "calendario": calendario, "invitacion": invitacion, "gorra": gorra}
 TAMANO = {"papeleta": (240, 160), "urna": (430, 400), "mesa_electoral": (720, 270), "camion": (700, 380),
           "senal": (300, 820), "alcoholimetro": (200, 440), "contador": (800, 240), "barras": (900, 700), "bola": (320, 320),
           "lapida": (360, 420), "papelera": (300, 340), "libro": (340, 420), "pasaporte": (240, 340), "maleta": (340, 360),
           "carabela": (680, 520), "corona": (360, 260), "pergamino": (600, 760), "microfono": (340, 480),
-          "silla": (360, 660), "tele": (620, 680), "calendario": (780, 900), "invitacion": (420, 280)}
+          "silla": (360, 660), "tele": (620, 680), "calendario": (780, 900), "invitacion": (420, 280), "gorra": (520, 200)}
 APOYADOS = {"mesa_electoral", "lapida", "silla"}

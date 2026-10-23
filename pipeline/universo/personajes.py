@@ -47,7 +47,8 @@ PERSONAJES = {
                      acento="amarillo", corbata="rojo", visera=True, garabatos=("porcentaje",), zapatilla="negro"),
     # candidatos (verano 2026): pizarras reconocibles por el pelo, la barba y la chapa con el nombre; sin caricatura
     "sanchez": dict(nombre="Pedro Sánchez", papel="Candidato del PSOE", cara="normal", marco="marco", acento="psoe",
-                    pelo=((105, 100, 106), "corto"), chapa=("SÁNCHEZ", "psoe"), zapatilla="blanco", garabatos=()),
+                    pelo=((70, 66, 72), "tupe"), chapa=("SÁNCHEZ", "psoe"), zapatilla="negro", garabatos=(),
+                    traje=((38, 62, 124), "psoe"), logo="PSOE"),  # diseño de joel (23/10/2026): traje azul, corbata roja y logo
     "feijoo": dict(nombre="Alberto Núñez Feijóo", papel="Candidato del PP", cara="normal", marco="marco", acento="pp",
                    pelo=((222, 222, 226), "canoso"), chapa=("FEIJÓO", "pp"), zapatilla="azul", garabatos=()),
     "abascal": dict(nombre="Santiago Abascal", papel="Candidato de Vox", cara="normal", marco="marco", acento="vox",
@@ -98,6 +99,7 @@ EXPRESIONES = {
     "burla":       dict(ojo=1.0, parpado=0.3, pupila=1.0, cejas=(-4, 12, -2), boca="burla"),
     "serio":       dict(ojo=0.95, parpado=0.4, pupila=0.9, cejas=(4, -10, 10), boca="plana"),
     "vacio":       dict(ojo=0.95, parpado=0.25, pupila=0.6, cejas=(0, 0, 0), boca="plana"),
+    "helado":      dict(ojo=1.12, parpado=0.0, pupila=0.5, cejas=(-20, 16, -16), boca="dientes", extra="escarcha"),
 }
 # pose de brazos que acompaña a cada cara si no se elige otra
 BRAZOS_DE = {"sorpresa": "arriba", "pensativo": "piensa", "ilusionado": "puno", "preocupado": "manos_juntas",
@@ -331,6 +333,18 @@ def adornos(c, extra, t):
             k = (t * 2) % 1
             c.drawPath(elipse(sx * (150 + 30 * k), -200 - 50 * k, 16 + 14 * k, 12 + 10 * k),
                        relleno("gris_claro", int(220 * (1 - k))))
+    elif extra == "escarcha":  # se queda helado: capa de hielo, carámbanos y copos
+        c.drawPath(rrect(-W2 + 18, -H2 + 18, W2 - 18, H2 - 18, 6), relleno("azul_claro", 110))
+        for i in range(9):
+            x = -W2 + 24 + i * 32
+            h = 26 + 18 * ((i * 7) % 3)
+            pieza(c, poly([(x - 11, -H2 + 4), (x + 11, -H2 + 4), (x, -H2 + 4 + h)]), (200, 232, 255), 3)
+        for i, (dx, dy) in enumerate(((-190, -150), (190, -60), (-200, 40), (175, -210))):
+            r = 18 + 4 * math.sin(t * 5 + i)
+            for a in range(3):
+                ang = math.radians(a * 60 + t * 40)
+                c.drawLine(dx - r * math.cos(ang), dy - r * math.sin(ang), dx + r * math.cos(ang), dy + r * math.sin(ang),
+                           trazo(4, "azul"))
     elif extra == "bombilla":
         c.save(); c.translate(150, -250)
         c.drawCircle(0, 0, 44, relleno("amarillo", 90))
@@ -458,7 +472,33 @@ def accesorios_cara(c, ficha):
         pieza(c, p, "madera", 4.5)
 
 
+def traje(c, ficha):
+    """Chaqueta, camisa y corbata dibujadas en la parte baja del tablero (y logo del partido en la solapa)."""
+    col, corb = ficha["traje"]
+    x0, x1, y1 = -W2 + 18, W2 - 18, H2 - 18
+    c.save()
+    c.clipPath(rrect(x0, -H2 + 18, x1, y1, 6), skia.ClipOp.kIntersect, True)
+    pieza(c, poly([(-70, 104), (70, 104), (0, y1 + 6)]), "blanco", 4)  # camisa
+    for sx in (-1, 1):  # solapas
+        pieza(c, poly([(sx * (x1 + 10), 96), (sx * 70, 98), (sx * 4, y1 + 8), (sx * (x1 + 10), y1 + 8)]), col, 5)
+        c.drawPath(poly([(sx * 70, 98), (sx * 48, 136), (sx * 30, 132)], False), trazo(4))
+    pieza(c, poly([(-13, 108), (13, 108), (9, 122), (22, y1 - 6), (0, y1 + 10), (-22, y1 - 6), (-9, 122)]), corb, 4.5)
+    c.restore()
+    if ficha.get("logo"):  # logo del partido en la solapa: rectángulo rojo con el nombre y la rosa
+        import wb
+        f = wb.font("sub", 22)
+        txt = ficha["logo"]
+        w = f.measureText(txt)
+        lx, ly = 54, 126
+        pieza(c, rrect(lx, ly, lx + w + 44, ly + 34, 5), "psoe", 3.5)
+        c.drawString(txt, lx + 7, ly + 26, f, relleno("blanco"))
+        c.drawCircle(lx + w + 26, ly + 13, 7, relleno("blanco"))
+        c.drawLine(lx + w + 26, ly + 20, lx + w + 26, ly + 30, trazo(3, "blanco"))
+
+
 def accesorios_cuerpo(c, ficha):
+    if ficha.get("traje"):
+        traje(c, ficha)
     if ficha.get("pajarita"):
         col = ficha["pajarita"]
         pieza(c, poly([(0, 150), (-40, 128), (-40, 172), (0, 150), (40, 128), (40, 172)]), col, 5)
@@ -479,6 +519,12 @@ def accesorios_cuerpo(c, ficha):
             for sx in (-1, 1):
                 pieza(c, suave([(sx * 40, 0), (sx * 70, -40), (sx * 130, -36), (sx * 158, 10), (sx * 120, 6)]), col, 5)
             pieza(c, suave([(-46, -4), (0, -30), (46, -4), (0, 4)]), col, 4)
+        elif estilo == "tupe":  # pelo abundante peinado hacia atrás con tupé y raya marcada
+            pieza(c, suave([(-160, 22), (-158, -40), (-110, -82), (-20, -104), (70, -100), (138, -70), (164, -20),
+                            (160, 26), (110, -10), (20, -24), (-70, -14), (-130, 6)]), col, 5)
+            for x0, x1 in ((-120, -40), (-60, 30), (0, 90), (60, 140)):  # mechones
+                c.drawPath(suave([(x0, -30), ((x0 + x1) / 2, -80), (x1 + 10, -70)], close=False), trazo(4, "gris_claro"))
+            pieza(c, suave([(-40, -96), (30, -126), (110, -104), (60, -86)]), col, 4)  # tupé
         elif estilo == "rapado":  # cabeza despejada: solo una franja corta a los lados
             for sx in (-1, 1):
                 pieza(c, suave([(sx * 70, 6), (sx * 92, -8), (sx * 148, -12), (sx * 160, 6)]), col, 4)

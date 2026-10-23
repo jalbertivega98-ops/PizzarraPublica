@@ -1,0 +1,1717 @@
+{
+ "slug": "sanchez_revuelta",
+ "title": "Sánchez en La Revuelta: lo mejor… con datos",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "eldiario.es/Vertele (23/10/2026): 4,4 millones de espectadores y 33,9 % de cuota",
+  "Infobae (22/10/2026), Última Hora y Diario de Pontevedra (23/10/2026), El Independiente (22/10/2026): frases literales de Sánchez",
+  "BOE: SMI 735,90 € en 2018 (RD 1077/2017) y 1.221 € en 2026 (RD 126/2026), +66 %",
+  "Idealista vía ESdiario (06/10/2026): vivienda usada +74,4 % desde junio de 2018",
+  "Consejo de la Juventud de España, Observatorio de Emancipación (Euronews 22/05/2026): alquiler en solitario = 98,7 % del sueldo joven",
+  "eldiario.es (22/06/2026) e Infobae (14/10/2026): el Supremo condena a Ábalos a 24 años y 3 meses",
+  "Europa Press / Wikipedia: Cerdán en prisión provisional del 30/06 al 19/11/2025",
+  "Audiencia de Badajoz (14/07/2026): David Sánchez, 9 años de inhabilitación; sentencia recurrida, no firme",
+  "Frases reales de la entrevista; personajes dibujados como pizarras"
+ ],
+ "caption": "📺 Sánchez en La Revuelta: 4,4 millones de personas, récord del programa\n😏 «Luego me dicen que esta televisión es mía»… dicho en La 1, la tele pública\n🛏️ Sexo: «vida sexual activa y sana». Dinero: al Portal de Transparencia\n👵 «Se acuerdan de mi madre…»: el salario mínimo ha subido un 66 %, sí. El piso usado, un 74 %\n🏠 Pide 176 escaños para la vivienda tras 8 años en Moncloa; un joven que alquila solo se deja el 98,7 % del sueldo\n🥶 Ábalos: «te quedas helado». Condenado por el Supremo a 24 años. Cerdán, casi 5 meses en prisión provisional\n⚖️ «Son inocentes»: su hermano está condenado (sentencia no firme)\n🌊 Ceuta: «podríamos haberlo gestionado mejor»\n🎙️ ¿Y Jordi Wild? «Ya responderé»\n💬 ¿Entrevista valiente o paseo? Te leo 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: eldiario.es/Vertele 23/10/2026 · Infobae 22/10/2026 · Última Hora 23/10/2026 · El Independiente 22/10/2026 · BOE (RD 1077/2017 y RD 126/2026) · Idealista (ESdiario 06/10/2026) · CJE Observatorio de Emancipación (Euronews 22/05/2026) · eldiario.es 22/06/2026 · Infobae 14/10/2026 · Audiencia de Badajoz 14/07/2026. Frases literales publicadas por la prensa. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PedroSánchez",
+  "#LaRevuelta",
+  "#Broncano",
+  "#29N",
+  "#elecciones",
+  "#vivienda",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plato",
+    "rotulo": "LA REVUELTA"
+   },
+   "animo": "alegre",
+   "footnote": "eldiario.es/Vertele 23/10/2026",
+   "lines": [
+    {
+     "text": "Más de cuatro millones vieron a Sánchez en La Revuelta.",
+     "tono": "energia"
+    },
+    {
+     "text": "Te lo resumo… con datos.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0,
+     "zoom": 1.15
+    },
+    {
+     "at": "@Sánchez",
+     "plano": "general",
+     "sobre": [
+      440,
+      980
+     ],
+     "dur": 0.5,
+     "zoom": 1.25
+    },
+    {
+     "at": "@resumo",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5,
+     "zoom": 1.15
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "broncano",
+     "x": 790,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": 0.3,
+       "pose": "saluda",
+       "mira": "izq"
+      },
+      {
+       "at": "@Revuelta",
+       "salta": true
+      },
+      {
+       "at": "@resumo",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "id": "broncano"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": -220,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0.05,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": 0.1,
+       "x": 330,
+       "dur": 1.1
+      },
+      {
+       "at": "@Sánchez",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@resumo",
+       "mira": "camara",
+       "cara": "burla",
+       "pose": "senala_arriba"
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "rotulo",
+     "text": "4,4 MILLONES",
+     "x": 540,
+     "y": 470,
+     "size": 120,
+     "color": "amarillo",
+     "at": 0.3,
+     "golpe": true,
+     "out": "@resumo",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 650,
+     "scale": 1.0,
+     "at": "@millones",
+     "props": {
+      "texto": "RÉCORD",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@resumo"
+    },
+    {
+     "type": "rotulo",
+     "text": "CON DATOS",
+     "x": 540,
+     "y": 470,
+     "size": 110,
+     "color": "rojo",
+     "at": "@datos",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "tele",
+   "fondo": {
+    "tipo": "plato",
+    "rotulo": "LA REVUELTA"
+   },
+   "animo": "comico",
+   "trans": "corte",
+   "footnote": "Infobae 22/10 · Última Hora 23/10 · El Independiente 22/10/2026",
+   "lines": [
+    {
+     "text": "Nada más entrar: «Luego me dicen que esta televisión es mía».",
+     "tono": "normal"
+    },
+    {
+     "text": "Lo dijo en La 1. La tele pública.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0,
+     "zoom": 1.15
+    },
+    {
+     "at": "@televisión",
+     "plano": "medio",
+     "sobre": "sanchez",
+     "dur": 0.5,
+     "aire": 260
+    },
+    {
+     "at": "@pública",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5,
+     "zoom": 1.15
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 330,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "burla",
+     "acciones": [
+      {
+       "at": "@Luego",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@mía",
+       "mira": "camara",
+       "cara": "riendo"
+      },
+      {
+       "at": "@pública",
+       "cara": "burla",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "personaje",
+     "quien": "broncano",
+     "x": 790,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@mía",
+       "salta": true
+      },
+      {
+       "at": "@pública",
+       "mira": "izq",
+       "pose": "jarras"
+      }
+     ],
+     "entra": "nada",
+     "id": "broncano"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 560,
+     "y": 560,
+     "scale": 1.0,
+     "at": "@Luego-0.1",
+     "props": {
+      "lineas": [
+       "«LUEGO ME DICEN QUE ESTA",
+       "TELEVISIÓN ES MÍA»"
+      ],
+      "cola": [
+       -1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Lo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "tele",
+     "x": 560,
+     "y": 560,
+     "scale": 0.6,
+     "at": "@La#1",
+     "props": {
+      "texto": "LA 1"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "pop",
+     "out": "@pública"
+    },
+    {
+     "type": "rotulo",
+     "text": "TELE PÚBLICA",
+     "x": 540,
+     "y": 560,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@pública",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "clasicas",
+   "fondo": {
+    "tipo": "plato",
+    "rotulo": "LA REVUELTA"
+   },
+   "animo": "comico",
+   "trans": "barrido",
+   "footnote": "Infobae 22/10 · Última Hora 23/10 · El Independiente 22/10/2026",
+   "lines": [
+    {
+     "text": "Sexo: «Tenemos una vida sexual activa y sana».",
+     "tono": "normal"
+    },
+    {
+     "text": "¿Y su dinero? Al Portal de Transparencia.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "De sexo, todo. De dinero, al portal.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0,
+     "zoom": 1.15
+    },
+    {
+     "at": "@sana",
+     "plano": "medio",
+     "sobre": "sanchez",
+     "dur": 0.5,
+     "aire": 260
+    },
+    {
+     "at": "@dinero",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5,
+     "zoom": 1.15
+    },
+    {
+     "at": "@todo",
+     "plano": "general",
+     "sobre": [
+      540,
+      980
+     ],
+     "dur": 0.4,
+     "zoom": 1.22
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "broncano",
+     "x": 790,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "burla",
+     "acciones": [
+      {
+       "at": "@Sexo",
+       "pose": "senala_izq",
+       "mira": "izq"
+      },
+      {
+       "at": "@dinero",
+       "pose": "senala_izq",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@todo",
+       "cara": "riendo",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "broncano"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 330,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Sexo",
+       "cara": "ilusionado",
+       "pose": "pulgar"
+      },
+      {
+       "at": "@sana",
+       "salta": true
+      },
+      {
+       "at": "@dinero",
+       "cara": "susto",
+       "take": true
+      },
+      {
+       "at": "@Portal",
+       "cara": "pensativo",
+       "pose": "empuja",
+       "mira": "der"
+      },
+      {
+       "at": "@todo",
+       "cara": "burla",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 560,
+     "y": 560,
+     "scale": 1.0,
+     "at": "@Tenemos-0.1",
+     "props": {
+      "lineas": [
+       "«TENEMOS UNA VIDA",
+       "SEXUAL ACTIVA Y SANA»"
+      ],
+      "cola": [
+       -1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@dinero"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 640,
+     "y": 620,
+     "scale": 0.9,
+     "at": "@Portal-0.2",
+     "props": {
+      "lineas": [
+       "PORTAL DE",
+       "TRANSPARENCIA"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "papel",
+     "out": "@todo"
+    },
+    {
+     "type": "rotulo",
+     "text": "SEXO: TODO",
+     "x": 540,
+     "y": 480,
+     "size": 96,
+     "color": "verde",
+     "at": "@todo",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "DINERO: AL PORTAL",
+     "x": 540,
+     "y": 610,
+     "size": 86,
+     "color": "rojo",
+     "at": "@portal#2",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "madre",
+   "fondo": {
+    "tipo": "rayos",
+    "color": "rojo"
+   },
+   "animo": "tension",
+   "trans": "zoom",
+   "footnote": "SMI: RD 1077/2017 y RD 126/2026 · Vivienda usada: Idealista (ESdiario 06/10/2026)",
+   "lines": [
+    {
+     "text": "El madrazo: «Se acuerdan de mi madre, yo también de las suyas cuando subo las pensiones o el salario mínimo».",
+     "tono": "energia"
+    },
+    {
+     "text": "El salario mínimo ha subido un sesenta y seis por ciento. Verdad.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Pero el piso usado, un setenta y cuatro.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@madre",
+     "plano": "general",
+     "sobre": [
+      400,
+      1000
+     ],
+     "dur": 0.5,
+     "zoom": 1.1
+    },
+    {
+     "at": "@salario#2",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6
+    },
+    {
+     "at": "@piso",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.3,
+     "zoom": 1.04
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "bandera",
+     "x": 110,
+     "y": 1160,
+     "scale": 0.8,
+     "at": 0,
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 260,
+     "y": 1200,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "burla",
+     "acciones": [
+      {
+       "at": 0.2,
+       "pose": "senala_arriba"
+      },
+      {
+       "at": "@madre",
+       "cara": "enfado"
+      },
+      {
+       "at": "@suyas",
+       "cara": "burla",
+       "pose": "senala_arriba"
+      },
+      {
+       "at": "@pensiones",
+       "cara": "ilusionado",
+       "pose": "punos"
+      },
+      {
+       "at": "@verdad",
+       "pose": "pulgar",
+       "cara": "riendo"
+      },
+      {
+       "at": "@piso",
+       "cara": "preocupado",
+       "tiembla": true
+      },
+      {
+       "at": "@cuatro",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 260,
+     "y": 1420,
+     "scale": 0.62,
+     "at": 0,
+     "props": {
+      "texto": "PSOE",
+      "color": "psoe"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 560,
+     "y": 430,
+     "scale": 1.0,
+     "at": "@Se-0.1",
+     "props": {
+      "lineas": [
+       "«SE ACUERDAN DE MI MADRE,",
+       "YO TAMBIÉN DE LAS SUYAS…»"
+      ],
+      "cola": [
+       -1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@salario#2"
+    },
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 720,
+     "y": 640,
+     "scale": 0.62,
+     "at": "@salario#2",
+     "props": {
+      "barras": [
+       {
+        "valor": 66,
+        "texto": "SALARIO MÍN.",
+        "color": "verde"
+       },
+       {
+        "valor": 74,
+        "texto": "PISO USADO",
+        "color": "rojo"
+       }
+      ],
+      "sufijo": " %",
+      "decimales": 0,
+      "tope": 90,
+      "resalta": [
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 620,
+     "y": 1000,
+     "scale": 1.0,
+     "at": "@verdad",
+     "props": {
+      "texto": "CIERTO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@piso"
+    },
+    {
+     "type": "rotulo",
+     "text": "DESDE 2018",
+     "x": 720,
+     "y": 1000,
+     "size": 72,
+     "color": "amarillo",
+     "at": "@piso",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "vivienda",
+   "fondo": "calle",
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "El Independiente 22/10 · Infobae 22/10 · CJE (Euronews 22/05/2026)",
+   "lines": [
+    {
+     "text": "Vivienda: «Comparto la preocupación, pero necesito herramientas». Pide ciento setenta y seis escaños.",
+     "tono": "normal"
+    },
+    {
+     "text": "Lleva ocho años en Moncloa.",
+     "tono": "remate",
+     "pausa": 0.1
+    },
+    {
+     "text": "Hoy, un joven que alquila solo se deja el noventa y ocho coma siete por ciento del sueldo.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1050
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@escaños",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@joven",
+     "plano": "general",
+     "sobre": [
+      700,
+      1100
+     ],
+     "dur": 0.6
+    },
+    {
+     "at": "@sueldo",
+     "plano": "general",
+     "sobre": [
+      600,
+      1050
+     ],
+     "dur": 0.4,
+     "zoom": 1.1
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 320,
+     "y": 1340,
+     "scale": 0.7,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Comparto",
+       "pose": "manos_juntas",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@herramientas",
+       "pose": "ruega",
+       "mira": "camara"
+      },
+      {
+       "at": "@escaños",
+       "cara": "ilusionado",
+       "pose": "arriba"
+      },
+      {
+       "at": "@ocho",
+       "cara": "susto",
+       "take": true
+      },
+      {
+       "at": "@sueldo",
+       "cara": "preocupado",
+       "mira": "der"
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 480,
+     "scale": 0.75,
+     "at": "@Pide",
+     "props": {
+      "valor": 176,
+      "sufijo": " ESCAÑOS"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "calculadora",
+     "out": "@ocho"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 540,
+     "scale": 0.45,
+     "at": "@ocho-0.1",
+     "props": {
+      "mes": "8 AÑOS",
+      "inicio": 1,
+      "dias": 31,
+      "marcados": [],
+      "colores": {}
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe",
+     "out": "@joven"
+    },
+    {
+     "type": "rotulo",
+     "text": "8 AÑOS EN LA MONCLOA",
+     "x": 540,
+     "y": 880,
+     "size": 76,
+     "color": "rojo",
+     "at": "@ocho",
+     "golpe": true,
+     "out": "@joven",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1250,
+     "y": 1640,
+     "scale": 0.55,
+     "at": "@joven-0.4",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@joven",
+       "x": 760,
+       "dur": 0.7
+      },
+      {
+       "at": "@alquila",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@noventa",
+       "cara": "susto",
+       "aplasta": true
+      },
+      {
+       "at": "@sueldo",
+       "tiembla": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 480,
+     "scale": 0.75,
+     "at": "@noventa",
+     "props": {
+      "valor": 98.7,
+      "decimales": 1,
+      "sufijo": " %"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "calculadora"
+    },
+    {
+     "type": "rotulo",
+     "text": "DEL SUELDO, EN ALQUILER",
+     "x": 540,
+     "y": 640,
+     "size": 66,
+     "color": "amarillo",
+     "at": "@sueldo-0.2",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "abalos",
+   "fondo": "oficina",
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Última Hora 23/10 · El Independiente 22/10 · eldiario.es 22/06/2026 · Infobae 14/10/2026",
+   "lines": [
+    {
+     "text": "Ábalos: «Crees conocer a la gente… y te quedas helado».",
+     "tono": "normal"
+    },
+    {
+     "text": "¿No lo vio venir? «De verdad que no».",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Su secretario de Organización: veinticuatro años de cárcel.",
+     "tono": "energia",
+     "pausa": 0.1
+    },
+    {
+     "text": "Y Cerdán, el siguiente: casi cinco meses en prisión provisional.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1050
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@helado",
+     "plano": "primero",
+     "sobre": "sanchez",
+     "dur": 0.4
+    },
+    {
+     "at": "@secretario",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@Cerdán",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.05
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 330,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@conocer",
+       "cara": "triste"
+      },
+      {
+       "at": "@helado",
+       "cara": "helado",
+       "tiembla": true,
+       "pose": "cabeza"
+      },
+      {
+       "at": "@vio",
+       "cara": "normal",
+       "pose": "normal"
+      },
+      {
+       "at": "@verdad",
+       "cara": "serio",
+       "pose": "cruzados"
+      },
+      {
+       "at": "@veinticuatro",
+       "cara": "susto",
+       "take": true
+      },
+      {
+       "at": "@Cerdán",
+       "cara": "preocupado",
+       "mira": "der"
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 560,
+     "y": 480,
+     "scale": 1.0,
+     "at": "@Crees-0.1",
+     "props": {
+      "lineas": [
+       "«CREES CONOCER A LA GENTE…",
+       "Y TE QUEDAS HELADO»"
+      ],
+      "cola": [
+       -1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@No"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 520,
+     "y": 520,
+     "scale": 1.0,
+     "at": "@De-0.1",
+     "props": {
+      "lineas": [
+       "«DE VERDAD",
+       "QUE NO»"
+      ],
+      "cola": [
+       -1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@secretario"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 760,
+     "y": 560,
+     "scale": 0.72,
+     "at": "@secretario",
+     "props": {
+      "lineas": [
+       "ÁBALOS",
+       "SECRETARIO DE",
+       "ORGANIZACIÓN"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 760,
+     "y": 760,
+     "scale": 1.0,
+     "at": "@veinticuatro",
+     "props": {
+      "texto": "24 AÑOS DE CÁRCEL",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 760,
+     "y": 1030,
+     "scale": 0.72,
+     "at": "@Cerdán",
+     "props": {
+      "lineas": [
+       "CERDÁN",
+       "EL SIGUIENTE"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 760,
+     "y": 1210,
+     "scale": 1.0,
+     "at": "@provisional",
+     "props": {
+      "texto": "PRISIÓN PROVISIONAL 2025",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "critica",
+     "x": 120,
+     "y": 1640,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "esceptica",
+     "acciones": [
+      {
+       "at": "@vio",
+       "mira": "der"
+      },
+      {
+       "at": "@verdad",
+       "cara": "esceptica",
+       "pose": "cruzados"
+      },
+      {
+       "at": "@veinticuatro",
+       "cara": "sorpresa",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "critica"
+    }
+   ]
+  },
+  {
+   "id": "familia",
+   "fondo": "salon",
+   "animo": "triste",
+   "trans": "papel",
+   "footnote": "Última Hora 23/10/2026 · Audiencia de Badajoz 14/07/2026 (recurrida)",
+   "lines": [
+    {
+     "text": "Su hermano y su mujer: «Dos personas que son inocentes».",
+     "tono": "normal"
+    },
+    {
+     "text": "Su hermano está condenado. Eso sí, la sentencia no es firme.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1050
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@inocentes",
+     "plano": "medio",
+     "sobre": "sanchez",
+     "dur": 0.4,
+     "aire": 260
+    },
+    {
+     "at": "@condenado",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 330,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@hermano",
+       "pose": "sostiene2"
+      },
+      {
+       "at": "@inocentes",
+       "cara": "indignado",
+       "pose": "punos"
+      },
+      {
+       "at": "@condenado",
+       "cara": "preocupado",
+       "pose": "manos_juntas"
+      },
+      {
+       "at": "@firme",
+       "cara": "normal",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 560,
+     "y": 520,
+     "scale": 1.0,
+     "at": "@Dos-0.1",
+     "props": {
+      "lineas": [
+       "«DOS PERSONAS QUE",
+       "SON INOCENTES»"
+      ],
+      "cola": [
+       -1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Su"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 700,
+     "y": 560,
+     "scale": 1.0,
+     "at": "@condenado",
+     "props": {
+      "texto": "CONDENADO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 700,
+     "y": 760,
+     "scale": 1.0,
+     "at": "@firme",
+     "props": {
+      "texto": "NO FIRME",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "ceuta",
+   "fondo": "ceuta",
+   "animo": "comico",
+   "trans": "pan",
+   "footnote": "Infobae 22/10 · Última Hora 23/10 · El Independiente 22/10/2026",
+   "lines": [
+    {
+     "text": "Ceuta: «Sin duda alguna, podríamos haberlo gestionado mejor».",
+     "tono": "normal"
+    },
+    {
+     "text": "Por fin, algo en lo que estamos todos de acuerdo.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1050
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@mejor",
+     "plano": "general",
+     "sobre": [
+      400,
+      1050
+     ],
+     "dur": 0.4,
+     "zoom": 1.1
+    },
+    {
+     "at": "@acuerdo",
+     "plano": "general",
+     "sobre": [
+      540,
+      1100
+     ],
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 230,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": "@duda",
+       "pose": "encoge"
+      },
+      {
+       "at": "@mejor",
+       "cara": "triste",
+       "pose": "caidos"
+      },
+      {
+       "at": "@acuerdo",
+       "mira": "der",
+       "cara": "confundido"
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 560,
+     "y": 520,
+     "scale": 1.0,
+     "at": "@Sin-0.1",
+     "props": {
+      "lineas": [
+       "«PODRÍAMOS HABERLO",
+       "GESTIONADO MEJOR»"
+      ],
+      "cola": [
+       -1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Por"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 470,
+     "y": 1640,
+     "scale": 0.5,
+     "at": "@Por-0.3",
+     "cara": "esceptica",
+     "acciones": [
+      {
+       "at": "@todos",
+       "salta": true,
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "critica",
+     "x": 670,
+     "y": 1640,
+     "scale": 0.5,
+     "at": "@Por-0.2",
+     "cara": "esceptica",
+     "acciones": [
+      {
+       "at": "@todos",
+       "salta": true,
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "critica"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 870,
+     "y": 1640,
+     "scale": 0.5,
+     "at": "@Por-0.1",
+     "cara": "confundido",
+     "acciones": [
+      {
+       "at": "@todos",
+       "salta": true,
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "pizon"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 700,
+     "scale": 1.0,
+     "at": "@acuerdo",
+     "props": {
+      "texto": "DE ACUERDO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": {
+    "tipo": "plato",
+    "rotulo": "LA REVUELTA"
+   },
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Infobae 22/10 · Última Hora 23/10 · El Independiente 22/10/2026",
+   "lines": [
+    {
+     "text": "¿Y Jordi Wild? «Ya responderé».",
+     "tono": "normal"
+    },
+    {
+     "text": "¿Entrevista valiente o paseo? Te leo. Y síguenos.",
+     "tono": "energia",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0,
+     "zoom": 1.15
+    },
+    {
+     "at": "@responderé",
+     "plano": "general",
+     "sobre": [
+      640,
+      980
+     ],
+     "dur": 0.4,
+     "zoom": 1.22
+    },
+    {
+     "at": "@valiente",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5,
+     "zoom": 1.1
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 330,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "burla",
+     "acciones": [
+      {
+       "at": "@Wild",
+       "cara": "susto",
+       "take": true
+      },
+      {
+       "at": "@responderé",
+       "cara": "burla",
+       "pose": "saluda"
+      },
+      {
+       "at": "@responderé+0.5",
+       "x": 1350,
+       "dur": 1.4,
+       "corre": true
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "personaje",
+     "quien": "wild",
+     "x": 1300,
+     "y": 1640,
+     "scale": 0.55,
+     "at": "@Wild-0.4",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Wild",
+       "x": 760,
+       "dur": 0.6
+      },
+      {
+       "at": "@responderé",
+       "cara": "esceptica",
+       "mira": "izq"
+      },
+      {
+       "at": "@paseo",
+       "pose": "encoge",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "objeto": "movil",
+     "pose": "sostiene",
+     "id": "wild"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 520,
+     "y": 560,
+     "scale": 1.0,
+     "at": "@Ya-0.1",
+     "props": {
+      "lineas": [
+       "«YA RESPONDERÉ»"
+      ],
+      "cola": [
+       -1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Entrevista"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿VALIENTE O PASEO?",
+     "x": 540,
+     "y": 480,
+     "size": 90,
+     "color": "rojo",
+     "at": "@valiente",
+     "golpe": true,
+     "out": "@síguenos-0.3",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 480,
+     "size": 110,
+     "color": "rojo",
+     "at": "@síguenos",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1640,
+     "scale": 0.5,
+     "at": "@leo-0.4",
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@leo",
+       "pose": "senala",
+       "mira": "camara"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "salta": true
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.4,
+  "titulo": "Sánchez en La Revuelta: lo mejor… con datos",
+  "capitulo": null
+ }
+}

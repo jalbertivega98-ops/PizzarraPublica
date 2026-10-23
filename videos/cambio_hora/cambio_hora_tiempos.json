@@ -1,0 +1,99 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 5.12,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.79,
+    "texto": "Este domingo, a las tres de la madrugada… vuelven a ser las dos."
+   },
+   {
+    "t0": 2.99,
+    "t1": 4.67,
+    "texto": "Ese día tendrá veinticinco horas."
+   }
+  ]
+ },
+ {
+  "escena": "notas",
+  "inicio": 5.12,
+  "fin": 12.64,
+  "frases": [
+   {
+    "t0": 5.38,
+    "t1": 8.62,
+    "texto": "Una hora más en la cama… pero por la tarde anochecerá una hora antes."
+   },
+   {
+    "t0": 8.77,
+    "t1": 12.19,
+    "texto": "Y hay quien lo nota: cansancio, peor sueño, menos concentración."
+   }
+  ]
+ },
+ {
+  "escena": "consulta",
+  "inicio": 12.64,
+  "fin": 21.2,
+  "frases": [
+   {
+    "t0": 12.94,
+    "t1": 17.56,
+    "texto": "En 2018, la Unión Europea preguntó: respondieron 4,6 millones de personas."
+   },
+   {
+    "t0": 17.76,
+    "t1": 20.75,
+    "texto": "El 84 % pidió acabar con el cambio de hora."
+   }
+  ]
+ },
+ {
+  "escena": "espana",
+  "inicio": 21.2,
+  "fin": 27.0,
+  "frases": [
+   {
+    "t0": 21.2,
+    "t1": 26.55,
+    "texto": "En octubre de 2025, el Gobierno pidió a la UE quitarlo ya en 2026: dice que afecta a la salud."
+   }
+  ]
+ },
+ {
+  "escena": "giro",
+  "inicio": 27.0,
+  "fin": 36.03,
+  "frases": [
+   {
+    "t0": 27.7,
+    "t1": 32.28,
+    "texto": "Pero en marzo, Bruselas publicó el calendario hasta 2031… con dos cambios de hora cada año."
+   },
+   {
+    "t0": 32.48,
+    "t1": 35.58,
+    "texto": "¿Por qué? Los países no se ponen de acuerdo en qué horario dejar."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 36.03,
+  "fin": 42.37,
+  "frases": [
+   {
+    "t0": 36.35,
+    "t1": 39.06,
+    "texto": "¿Y tú qué prefieres para siempre: horario de verano o de invierno?"
+   },
+   {
+    "t0": 39.26,
+    "t1": 41.02,
+    "texto": "Te leo en comentarios. Y síguenos."
+   }
+  ]
+ }
+]

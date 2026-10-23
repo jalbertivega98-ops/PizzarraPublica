@@ -34,6 +34,14 @@ TRANSITION = 0.3
 
 
 # ------------------------------------------------------------------ voz
+# "efecto_voz" por frase: distingue a un segundo personaje sin gastar otra voz (misma duración, así no cambian los tiempos)
+EFECTOS_VOZ = {
+    # más grave (-2,5 semitonos) y con banda de televisión: frases literales de políticos citadas en el vídeo
+    "tele": "asetrate=44100*0.865,aresample=44100,atempo=1.156,highpass=f=220,lowpass=f=4200,"
+            "equalizer=f=1800:t=q:w=1.2:g=4,acompressor=threshold=0.1:ratio=3,volume=1.15",
+}
+
+
 def tts_elevenlabs(story, workdir):
     """Frases ya generadas con ElevenLabs (tts_elevenlabs.py, en GitHub Actions) y guardadas en voces_elevenlabs/."""
     import subprocess
@@ -45,11 +53,14 @@ def tts_elevenlabs(story, workdir):
         for li, line in enumerate(sc["lines"]):
             text = line_text(line)
             model = vcfg.get("model") or (edge_model() if vcfg["engine"] == "edge" else MODEL)
-            path = os.path.join(CACHE, key(vcfg["voice_id"], model, text, line_tono(story, line)) + ".mp3")
+            vid = (line.get("voice_id") if isinstance(line, dict) else None) or vcfg["voice_id"]
+            path = os.path.join(CACHE, key(vid, model, text, line_tono(story, line)) + ".mp3")
             if not os.path.exists(path):
                 missing.append(text)
                 continue
-            raw = subprocess.run(["ffmpeg", "-v", "error", "-i", path, "-f", "s16le", "-ac", "1", "-ar", str(sr), "-"],
+            fx = EFECTOS_VOZ.get(line.get("efecto_voz") if isinstance(line, dict) else None)
+            raw = subprocess.run(["ffmpeg", "-v", "error", "-i", path, *(["-af", fx] if fx else []),
+                                  "-f", "s16le", "-ac", "1", "-ar", str(sr), "-"],
                                  capture_output=True, check=True).stdout
             pcm = np.frombuffer(raw, dtype=np.int16).astype(np.float32) / 32768
             nz = np.where(np.abs(pcm) > 0.01)[0]

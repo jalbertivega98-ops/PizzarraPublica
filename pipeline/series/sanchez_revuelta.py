@@ -22,6 +22,12 @@ F_FRASES = "Infobae 22/10 · Última Hora 23/10 · El Independiente 22/10/2026"
 REV = {"tipo": "plato", "rotulo": "LA REVUELTA"}
 
 
+def S(text, pausa=None):
+    """Frase literal de Sánchez: otra voz (más grave y con sonido de tele), para distinguirla del narrador.
+    No imita su voz: es la voz del canal procesada."""
+    return dict(V(text, "normal", pausa), efecto_voz="tele")
+
+
 def bocadillo(lineas, x, y, at, cola=(-1, 1), out=None, scale=1.0):
     d = obj("bocadillo", x, y, at, scale, hud=True, entra="pop", sfx="pop", props={"lineas": lineas, "cola": cola})
     if out:
@@ -48,7 +54,8 @@ scenes = [
     ]),
     # 2 · MOMENTO 1: «esta televisión es mía»… en la tele pública
     dict(id="tele", fondo=REV, animo="comico", trans="corte", footnote=F_FRASES, lines=[
-        V("Nada más entrar: «Luego me dicen que esta televisión es mía».", "normal"),
+        V("Nada más entrar:", "normal"),
+        S("«Luego me dicen que esta televisión es mía».", 0.05),
         V("Lo dijo en La 1. La tele pública.", "remate", 0.15),
     ], camara=[plano(0, "general", [540, 950], 0, zoom=1.15), plano("@televisión", "medio", "sanchez", 0.5, aire=260),
                plano("@pública", "general", [540, 950], 0.5, zoom=1.15)],
@@ -64,7 +71,8 @@ scenes = [
     ]),
     # 3 · MOMENTO 2: las preguntas clásicas
     dict(id="clasicas", fondo=REV, animo="comico", trans="barrido", footnote=F_FRASES, lines=[
-        V("Sexo: «Tenemos una vida sexual activa y sana».", "normal"),
+        V("Sexo:", "normal"),
+        S("«Tenemos una vida sexual activa y sana».", 0.05),
         V("¿Y su dinero? Al Portal de Transparencia.", "normal", 0.1),
         V("De sexo, todo. De dinero, al portal.", "remate", 0.2),
     ], camara=[plano(0, "general", [540, 950], 0, zoom=1.15), plano("@sana", "medio", "sanchez", 0.5, aire=260),
@@ -86,7 +94,8 @@ scenes = [
     # 4 · MOMENTO 3: el madrazo (pose del diseño de joel: dedo arriba tras el atril)
     dict(id="madre", fondo={"tipo": "rayos", "color": "rojo"}, animo="tension", trans="zoom",
          footnote="SMI: RD 1077/2017 y RD 126/2026 · Vivienda usada: Idealista (ESdiario 06/10/2026)", lines=[
-        V("El madrazo: «Se acuerdan de mi madre, yo también de las suyas cuando subo las pensiones o el salario mínimo».", "energia"),
+        V("El madrazo:", "energia"),
+        S("«Se acuerdan de mi madre, yo también de las suyas cuando subo las pensiones o el salario mínimo».", 0.05),
         V("El salario mínimo ha subido un sesenta y seis por ciento. Verdad.", "normal", 0.1),
         V("Pero el piso usado, un setenta y cuatro.", "remate", 0.15),
     ], camara=[plano(0, "general", [540, 1000], 0), plano("@madre", "general", [400, 1000], 0.5, zoom=1.1),
@@ -109,7 +118,9 @@ scenes = [
     # 5 · MOMENTO 4: la vivienda y los 176 escaños
     dict(id="vivienda", fondo="calle", animo="tension", trans="barrido",
          footnote="El Independiente 22/10 · Infobae 22/10 · CJE (Euronews 22/05/2026)", lines=[
-        V("Vivienda: «Comparto la preocupación, pero necesito herramientas». Pide ciento setenta y seis escaños.", "normal"),
+        V("Vivienda:", "normal"),
+        S("«Comparto la preocupación, pero necesito herramientas».", 0.05),
+        V("Pide ciento setenta y seis escaños.", "normal", 0.1),
         V("Lleva ocho años en Moncloa.", "remate", 0.1),
         V("Hoy, un joven que alquila solo se deja el noventa y ocho coma siete por ciento del sueldo.", "energia", 0.15),
     ], camara=[plano(0, "general", [540, 1050], 0), plano("@escaños", "general", [540, 900], 0.5),
@@ -134,8 +145,10 @@ scenes = [
     # 6 · MOMENTO 5: Ábalos y Cerdán (se queda helado)
     dict(id="abalos", fondo="oficina", animo="tension", trans="corte",
          footnote="Última Hora 23/10 · El Independiente 22/10 · eldiario.es 22/06/2026 · Infobae 14/10/2026", lines=[
-        V("Ábalos: «Crees conocer a la gente… y te quedas helado».", "normal"),
-        V("¿No lo vio venir? «De verdad que no».", "normal", 0.1),
+        V("Ábalos:", "normal"),
+        S("«Crees conocer a la gente… y te quedas helado».", 0.05),
+        V("¿No lo vio venir?", "normal", 0.1),
+        S("«De verdad que no».", 0.05),
         V("Su secretario de Organización: veinticuatro años de cárcel.", "energia", 0.1),
         V("Y Cerdán, el siguiente: casi cinco meses en prisión provisional.", "remate", 0.1),
     ], camara=[plano(0, "general", [540, 1050], 0), plano("@helado", "primero", "sanchez", 0.4),
@@ -160,7 +173,8 @@ scenes = [
     # 7 · MOMENTO 6: su familia
     dict(id="familia", fondo="salon", animo="triste", trans="papel",
          footnote="Última Hora 23/10/2026 · Audiencia de Badajoz 14/07/2026 (recurrida)", lines=[
-        V("Su hermano y su mujer: «Dos personas que son inocentes».", "normal"),
+        V("Su hermano y su mujer:", "normal"),
+        S("«Dos personas que son inocentes».", 0.05),
         V("Su hermano está condenado. Eso sí, la sentencia no es firme.", "remate", 0.15),
     ], camara=[plano(0, "general", [540, 1050], 0), plano("@inocentes", "medio", "sanchez", 0.4, aire=260),
                plano("@condenado", "general", [540, 950], 0.5)],
@@ -174,7 +188,8 @@ scenes = [
     ]),
     # 8 · MOMENTO 7: Ceuta
     dict(id="ceuta", fondo="ceuta", animo="comico", trans="pan", footnote=F_FRASES, lines=[
-        V("Ceuta: «Sin duda alguna, podríamos haberlo gestionado mejor».", "normal"),
+        V("Ceuta:", "normal"),
+        S("«Sin duda alguna, podríamos haberlo gestionado mejor».", 0.05),
         V("Por fin, algo en lo que estamos todos de acuerdo.", "remate", 0.15),
     ], camara=[plano(0, "general", [540, 1050], 0), plano("@mejor", "general", [400, 1050], 0.4, zoom=1.1),
                plano("@acuerdo", "general", [540, 1100], 0.4)],
@@ -190,7 +205,8 @@ scenes = [
     ]),
     # 9 · FINAL: ¿y Jordi Wild? «Ya responderé»
     dict(id="final", fondo=REV, animo="final", trans="iris", footnote=F_FRASES, lines=[
-        V("¿Y Jordi Wild? «Ya responderé».", "normal"),
+        V("¿Y Jordi Wild?", "normal"),
+        S("«Ya responderé».", 0.05),
         V("¿Entrevista valiente o paseo? Te leo. Y síguenos.", "energia", 0.2),
     ], camara=[plano(0, "general", [540, 950], 0, zoom=1.15), plano("@responderé", "general", [640, 980], 0.4, zoom=1.22),
                plano("@valiente", "general", [540, 950], 0.5, zoom=1.1)],

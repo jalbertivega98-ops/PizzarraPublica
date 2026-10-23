@@ -242,15 +242,16 @@ def main():
             for line in sc["lines"]:
                 text = line_text(line)
                 tono = line_tono(story, line)
-                path = os.path.join(CACHE, key(voice, model, text, tono) + ".mp3")
+                vid = (line.get("voice_id") if isinstance(line, dict) else None) or voice
+                path = os.path.join(CACHE, key(vid, model, text, tono) + ".mp3")
                 if os.path.exists(path):
                     continue
                 if tono and not model.startswith("edge"):
-                    audio, words = synth_tiempos(text, voice, model, api_key, tono)
+                    audio, words = synth_tiempos(text, vid, model, api_key, tono)
                     open(path, "wb").write(audio)
                     json.dump(words, open(path[:-4] + ".json", "w", encoding="utf-8"), ensure_ascii=False)
                 else:
-                    open(path, "wb").write(synth(text, voice, model, api_key))
+                    open(path, "wb").write(synth(text, vid, model, api_key))
                 n += len(text)
         print("✓", os.path.relpath(f, HERE))
     print(f"{n} caracteres enviados a ElevenLabs")

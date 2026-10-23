@@ -199,8 +199,14 @@
    "footnote": "Infobae 22/10 · Última Hora 23/10 · El Independiente 22/10/2026",
    "lines": [
     {
-     "text": "Nada más entrar: «Luego me dicen que esta televisión es mía».",
+     "text": "Nada más entrar:",
      "tono": "normal"
+    },
+    {
+     "text": "«Luego me dicen que esta televisión es mía».",
+     "tono": "normal",
+     "pausa": 0.05,
+     "efecto_voz": "tele"
     },
     {
      "text": "Lo dijo en La 1. La tele pública.",
@@ -351,8 +357,14 @@
    "footnote": "Infobae 22/10 · Última Hora 23/10 · El Independiente 22/10/2026",
    "lines": [
     {
-     "text": "Sexo: «Tenemos una vida sexual activa y sana».",
+     "text": "Sexo:",
      "tono": "normal"
+    },
+    {
+     "text": "«Tenemos una vida sexual activa y sana».",
+     "tono": "normal",
+     "pausa": 0.05,
+     "efecto_voz": "tele"
     },
     {
      "text": "¿Y su dinero? Al Portal de Transparencia.",
@@ -548,8 +560,14 @@
    "footnote": "SMI: RD 1077/2017 y RD 126/2026 · Vivienda usada: Idealista (ESdiario 06/10/2026)",
    "lines": [
     {
-     "text": "El madrazo: «Se acuerdan de mi madre, yo también de las suyas cuando subo las pensiones o el salario mínimo».",
+     "text": "El madrazo:",
      "tono": "energia"
+    },
+    {
+     "text": "«Se acuerdan de mi madre, yo también de las suyas cuando subo las pensiones o el salario mínimo».",
+     "tono": "normal",
+     "pausa": 0.05,
+     "efecto_voz": "tele"
     },
     {
      "text": "El salario mínimo ha subido un sesenta y seis por ciento. Verdad.",
@@ -768,8 +786,19 @@
    "footnote": "El Independiente 22/10 · Infobae 22/10 · CJE (Euronews 22/05/2026)",
    "lines": [
     {
-     "text": "Vivienda: «Comparto la preocupación, pero necesito herramientas». Pide ciento setenta y seis escaños.",
+     "text": "Vivienda:",
      "tono": "normal"
+    },
+    {
+     "text": "«Comparto la preocupación, pero necesito herramientas».",
+     "tono": "normal",
+     "pausa": 0.05,
+     "efecto_voz": "tele"
+    },
+    {
+     "text": "Pide ciento setenta y seis escaños.",
+     "tono": "normal",
+     "pausa": 0.1
     },
     {
      "text": "Lleva ocho años en Moncloa.",
@@ -978,13 +1007,25 @@
    "footnote": "Última Hora 23/10 · El Independiente 22/10 · eldiario.es 22/06/2026 · Infobae 14/10/2026",
    "lines": [
     {
-     "text": "Ábalos: «Crees conocer a la gente… y te quedas helado».",
+     "text": "Ábalos:",
      "tono": "normal"
     },
     {
-     "text": "¿No lo vio venir? «De verdad que no».",
+     "text": "«Crees conocer a la gente… y te quedas helado».",
+     "tono": "normal",
+     "pausa": 0.05,
+     "efecto_voz": "tele"
+    },
+    {
+     "text": "¿No lo vio venir?",
      "tono": "normal",
      "pausa": 0.1
+    },
+    {
+     "text": "«De verdad que no».",
+     "tono": "normal",
+     "pausa": 0.05,
+     "efecto_voz": "tele"
     },
     {
      "text": "Su secretario de Organización: veinticuatro años de cárcel.",
@@ -1229,8 +1270,14 @@
    "footnote": "Última Hora 23/10/2026 · Audiencia de Badajoz 14/07/2026 (recurrida)",
    "lines": [
     {
-     "text": "Su hermano y su mujer: «Dos personas que son inocentes».",
+     "text": "Su hermano y su mujer:",
      "tono": "normal"
+    },
+    {
+     "text": "«Dos personas que son inocentes».",
+     "tono": "normal",
+     "pausa": 0.05,
+     "efecto_voz": "tele"
     },
     {
      "text": "Su hermano está condenado. Eso sí, la sentencia no es firme.",
@@ -1363,8 +1410,14 @@
    "footnote": "Infobae 22/10 · Última Hora 23/10 · El Independiente 22/10/2026",
    "lines": [
     {
-     "text": "Ceuta: «Sin duda alguna, podríamos haberlo gestionado mejor».",
+     "text": "Ceuta:",
      "tono": "normal"
+    },
+    {
+     "text": "«Sin duda alguna, podríamos haberlo gestionado mejor».",
+     "tono": "normal",
+     "pausa": 0.05,
+     "efecto_voz": "tele"
     },
     {
      "text": "Por fin, algo en lo que estamos todos de acuerdo.",
@@ -1536,8 +1589,14 @@
    "footnote": "Infobae 22/10 · Última Hora 23/10 · El Independiente 22/10/2026",
    "lines": [
     {
-     "text": "¿Y Jordi Wild? «Ya responderé».",
+     "text": "¿Y Jordi Wild?",
      "tono": "normal"
+    },
+    {
+     "text": "«Ya responderé».",
+     "tono": "normal",
+     "pausa": 0.05,
+     "efecto_voz": "tele"
     },
     {
      "text": "¿Entrevista valiente o paseo? Te leo. Y síguenos.",

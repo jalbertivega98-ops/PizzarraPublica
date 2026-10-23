@@ -20,10 +20,12 @@
   "Vandal / El Español (21/10/2026): domingo 25/10, a las 3:00 vuelven a ser las 2:00; el día dura 25 horas",
   "Comisión Europea, consulta de 2018: 4,6 millones de respuestas, 84 % a favor de acabar con el cambio",
   "Menorca.info / Última Hora (20/10/2025): Sánchez propone a la UE acabar con el cambio de hora en 2026",
-  "DOUE 2026/1660 (18/03/2026): calendario del horario de verano 2027-2031, con dos cambios al año"
+  "DOUE 2026/1660 (18/03/2026): calendario del horario de verano 2027-2031, con dos cambios al año",
+  "Diari de Tarragona (20/10/2025): Groizard, secretario de Estado de Energía: ahorro de unos 6 € al año por persona",
+  "Reuters (14/09/2018): Šefčovič: «el ahorro de energía es actualmente marginal»"
  ],
- "caption": "⏰ Este domingo 25, a las 3:00 vuelven a ser las 2:00: el día tendrá 25 horas\n😴 Una hora más de sueño… pero anochecerá una hora antes\n🗳️ En 2018, el 84 % de 4,6 millones de europeos pidió acabar con el cambio de hora\n🇪🇸 En 2025 el Gobierno pidió quitarlo ya en 2026\n📅 Pero la UE publicó el calendario hasta 2031: seguimos con dos cambios al año\n💬 ¿VERANO o INVIERNO para siempre? Te leo 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
- "pinned_comment": "📚 Fuentes: Vandal/El Español 21/10/2026 · Comisión Europea (consulta 2018) · Última Hora 20/10/2025 · DOUE 2026/1660 (18/03/2026). ¿Ves un error? Dínoslo.",
+ "caption": "⏰ Este domingo 25, a las 3:00 vuelven a ser las 2:00: el día tendrá 25 horas\n😴 Una hora más de sueño… pero anochecerá una hora antes\n🗳️ En 2018, el 84 % de 4,6 millones de europeos pidió acabar con el cambio de hora\n🇪🇸 En 2025 el Gobierno pidió quitarlo ya en 2026\n📅 Pero la UE publicó el calendario hasta 2031: seguimos con dos cambios al año\n💡 ¿Y el ahorro de luz? El propio Gobierno lo calcula en unos 6 € al año por persona\n🤔 Entonces… ¿a quién le interesa seguir cambiando la hora?\n💬 ¿VERANO o INVIERNO para siempre? Te leo 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Vandal/El Español 21/10/2026 · Comisión Europea (consulta 2018) · Última Hora 20/10/2025 · DOUE 2026/1660 (18/03/2026) · Diari de Tarragona 20/10/2025 (Groizard, 6 €/año). ¿Ves un error? Dínoslo.",
  "hashtags": [
   "#CambioDeHora",
   "#HorarioDeInvierno",
@@ -917,6 +919,173 @@
      "at": "@acuerdo",
      "golpe": true,
      "hud": true
+    }
+   ]
+  },
+  {
+   "id": "ahorro",
+   "fondo": "salon",
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Joan Groizard, secretario de Estado de Energía (Diari de Tarragona 20/10/2025) · Šefčovič, Comisión Europea (Reuters 14/09/2018)",
+   "lines": [
+    {
+     "text": "¿Y el ahorro de luz, que era la excusa? El propio Gobierno lo calcula en unos seis euros al año por persona.",
+     "tono": "normal"
+    },
+    {
+     "text": "Entonces… ¿a quién le interesa seguir cambiando la hora?",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@seis",
+     "plano": "general",
+     "sobre": [
+      540,
+      800
+     ],
+     "dur": 0.5,
+     "zoom": 1.1
+    },
+    {
+     "at": "@interesa",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "hucha",
+     "x": 760,
+     "y": 1250,
+     "scale": 0.8,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 480,
+     "scale": 0.8,
+     "at": "@seis",
+     "props": {
+      "valor": 6,
+      "sufijo": " € AL AÑO",
+      "ancho": 640
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "dibujo": 1.0,
+     "out": "@Entonces"
+    },
+    {
+     "type": "efecto",
+     "efecto": "lluvia",
+     "objeto": "moneda",
+     "n": 3,
+     "x0": 600,
+     "x1": 900,
+     "at": "@seis",
+     "vida": 1.8
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 660,
+     "scale": 1.0,
+     "at": "@persona",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿A QUIÉN LE INTERESA?",
+     "x": 540,
+     "y": 480,
+     "size": 84,
+     "color": "rojo",
+     "at": "@Entonces",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 330,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@ahorro",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@excusa",
+       "cara": "esceptica"
+      },
+      {
+       "at": "@Gobierno",
+       "pose": "piensa"
+      },
+      {
+       "at": "@seis",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@persona",
+       "pose": "encoge",
+       "cara": "burla"
+      },
+      {
+       "at": "@Entonces",
+       "mira": "camara",
+       "cara": "esceptica"
+      },
+      {
+       "at": "@interesa",
+       "pose": "jarras"
+      },
+      {
+       "at": "@hora",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "pizon"
     }
    ]
   },

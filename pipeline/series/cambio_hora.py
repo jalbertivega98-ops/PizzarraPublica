@@ -107,6 +107,26 @@ scenes = [
           for q, x, pose, mira in (("critica", 220, "jarras", "der"), ("pizon", 540, "encoge", "camara"), ("sarcastica", 860, "cruzados", "izq"))],
         rot("SIN ACUERDO", 540, 480, "@acuerdo", 104, "rojo", golpe=True),
     ]),
+    # 5b · EL AHORRO: la excusa de la luz, en 6 € al año
+    dict(id="ahorro", fondo="salon", animo="tension", trans="corte",
+         footnote="Joan Groizard, secretario de Estado de Energía (Diari de Tarragona 20/10/2025) · Šefčovič, Comisión Europea (Reuters 14/09/2018)", lines=[
+        V("¿Y el ahorro de luz, que era la excusa? El propio Gobierno lo calcula en unos seis euros al año por persona.", "normal"),
+        V("Entonces… ¿a quién le interesa seguir cambiando la hora?", "remate", 0.15),
+    ], camara=[plano(0, "general", [540, 1000], 0), plano("@seis", "general", [540, 800], 0.5, zoom=1.1),
+               plano("@interesa", "general", [540, 1000], 0.5)],
+       elements=[
+        obj("hucha", 760, 1250, 0, 0.8, entra="pop", sfx="pop"),
+        obj("contador", 540, 480, "@seis", 0.8, hud=True, entra="pop", sfx="kaching", dibujo=1.0, out="@Entonces",
+            props={"valor": 6, "sufijo": " € AL AÑO", "ancho": 640}),
+        monedas("@seis", 600, 900, 3),
+        sello("DECLARACIÓN", "naranja", 660, "@persona"),
+        rot("¿A QUIÉN LE INTERESA?", 540, 480, "@Entonces", 84, "rojo", golpe=True),
+        quien("pizon", 330, 0, 0.6, "pensativo", entra="nada", acciones=[
+            {"at": "@ahorro", "pose": "senala", "mira": "der"}, {"at": "@excusa", "cara": "esceptica"},
+            {"at": "@Gobierno", "pose": "piensa"}, {"at": "@seis", "cara": "sorpresa", "take": True},
+            {"at": "@persona", "pose": "encoge", "cara": "burla"}, {"at": "@Entonces", "mira": "camara", "cara": "esceptica"},
+            {"at": "@interesa", "pose": "jarras"}, {"at": "@hora", "salta": True}]),
+    ]),
     # 6 · FINAL: verano o invierno para siempre
     dict(id="final", fondo={"tipo": "rayos", "color": "amarillo"}, animo="final", trans="zoom", footnote="Pregunta a la audiencia", lines=[
         V("¿Y tú qué prefieres para siempre: horario de verano o de invierno?", "energia"),
@@ -131,15 +151,19 @@ if __name__ == "__main__":
              ["Vandal / El Español (21/10/2026): domingo 25/10, a las 3:00 vuelven a ser las 2:00; el día dura 25 horas",
               "Comisión Europea, consulta de 2018: 4,6 millones de respuestas, 84 % a favor de acabar con el cambio",
               "Menorca.info / Última Hora (20/10/2025): Sánchez propone a la UE acabar con el cambio de hora en 2026",
-              "DOUE 2026/1660 (18/03/2026): calendario del horario de verano 2027-2031, con dos cambios al año"],
+              "DOUE 2026/1660 (18/03/2026): calendario del horario de verano 2027-2031, con dos cambios al año",
+              "Diari de Tarragona (20/10/2025): Groizard, secretario de Estado de Energía: ahorro de unos 6 € al año por persona",
+              "Reuters (14/09/2018): Šefčovič: «el ahorro de energía es actualmente marginal»"],
              ("⏰ Este domingo 25, a las 3:00 vuelven a ser las 2:00: el día tendrá 25 horas\n"
               "😴 Una hora más de sueño… pero anochecerá una hora antes\n"
               "🗳️ En 2018, el 84 % de 4,6 millones de europeos pidió acabar con el cambio de hora\n"
               "🇪🇸 En 2025 el Gobierno pidió quitarlo ya en 2026\n"
               "📅 Pero la UE publicó el calendario hasta 2031: seguimos con dos cambios al año\n"
+              "💡 ¿Y el ahorro de luz? El propio Gobierno lo calcula en unos 6 € al año por persona\n"
+              "🤔 Entonces… ¿a quién le interesa seguir cambiando la hora?\n"
               "💬 ¿VERANO o INVIERNO para siempre? Te leo 👇\n"
               "🔔 Síguenos · 📚 Fuentes en comentarios"),
              "📚 Fuentes: Vandal/El Español 21/10/2026 · Comisión Europea (consulta 2018) · Última Hora 20/10/2025 · "
-             "DOUE 2026/1660 (18/03/2026). ¿Ves un error? Dínoslo.",
+             "DOUE 2026/1660 (18/03/2026) · Diari de Tarragona 20/10/2025 (Groizard, 6 €/año). ¿Ves un error? Dínoslo.",
              ["#CambioDeHora", "#HorarioDeInvierno", "#25Octubre", "#UE", "#España", "#pizarrapublica"],
              series_tag="EXPLICADO FÁCIL")

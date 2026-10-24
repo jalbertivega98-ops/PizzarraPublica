@@ -1,0 +1,1232 @@
+{
+ "slug": "jordi_wild",
+ "title": "Jordi Wild invita a los candidatos",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Libertad Digital (09/10/2026): Feijóo y Abascal aceptan la invitación de Jordi Wild; condiciones del formato",
+  "El Confidencial Digital (15/10/2026): plazo de unos diez días a Sánchez y emisión desde el 9 de noviembre",
+  "Extradigital (15/10/2026): el entorno de Sánchez lo estudia; «no será una entrevista-masaje»",
+  "ActualTV (15/10/2026): el candidato del espacio a la izquierda del PSOE, sin cerrar",
+  "Personajes dibujados como pizarras, sin caricatura"
+ ],
+ "caption": "🎙️ Jordi Wild ha invitado a los candidatos a The Wild Project\n📜 Sus condiciones: sin preguntas pactadas, sin sustitutos… y o vienen todos o no viene nadie\n✅ Feijóo: «cuando quiera» · ✅ Abascal: «Cuenta conmigo»\n⏳ Sánchez: su entorno lo estudia; Wild le da unos 10 días\n📅 Si sale adelante, desde el 9 de noviembre\n💬 ¿Irá Sánchez? SÍ o NO 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Libertad Digital 09/10/2026 · El Confidencial Digital 15/10/2026 · Extradigital 15/10/2026 · ActualTV 15/10/2026. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#JordiWild",
+  "#TheWildProject",
+  "#29N",
+  "#elecciones",
+  "#Sánchez",
+  "#Feijóo",
+  "#Abascal",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "estudio",
+   "animo": "tension",
+   "footnote": "Libertad Digital 09/10/2026",
+   "lines": [
+    {
+     "text": "Un youtuber ha puesto a los candidatos contra las cuerdas:",
+     "tono": "energia"
+    },
+    {
+     "text": "o vienen todos… o no viene nadie.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "medio",
+     "sobre": "wild",
+     "dur": 0,
+     "aire": 200
+    },
+    {
+     "at": "@cuerdas",
+     "plano": "general",
+     "sobre": [
+      540,
+      1150
+     ],
+     "dur": 0.7
+    },
+    {
+     "at": "@todos",
+     "plano": "general",
+     "sobre": [
+      540,
+      1150
+     ],
+     "dur": 0.4,
+     "zoom": 1.08
+    },
+    {
+     "at": "@nadie",
+     "plano": "medio",
+     "sobre": "wild",
+     "dur": 0.4,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 150,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0.3,
+     "props": {
+      "color": "gris",
+      "texto": "?"
+     },
+     "acciones": [],
+     "id": "s_izq",
+     "entra": "crece"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 400,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0.42,
+     "props": {
+      "color": [
+       225,
+       30,
+       40
+      ],
+      "texto": "SÁNCHEZ"
+     },
+     "acciones": [],
+     "id": "s_psoe",
+     "entra": "crece"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 680,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0.54,
+     "props": {
+      "color": [
+       0,
+       104,
+       180
+      ],
+      "texto": "FEIJÓO"
+     },
+     "acciones": [],
+     "id": "s_pp",
+     "entra": "crece"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 930,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0.6599999999999999,
+     "props": {
+      "color": [
+       90,
+       175,
+       40
+      ],
+      "texto": "ABASCAL"
+     },
+     "acciones": [],
+     "id": "s_vox",
+     "entra": "crece"
+    },
+    {
+     "type": "objeto",
+     "objeto": "microfono",
+     "x": 700,
+     "y": 1330,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "encendido": true
+     },
+     "acciones": [],
+     "id": "micro",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "wild",
+     "x": 540,
+     "y": 1640,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "burla",
+     "acciones": [
+      {
+       "at": "@candidatos",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@todos",
+       "pose": "jarras",
+       "cara": "serio"
+      },
+      {
+       "at": "@nadie",
+       "pose": "encoge",
+       "cara": "burla",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "id": "wild"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿TODOS O NADIE?",
+     "x": 540,
+     "y": 420,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@todos",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "condiciones",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Libertad Digital 09/10/2026",
+   "lines": [
+    {
+     "text": "Jordi Wild ha invitado a los cuatro candidatos a The Wild Project.",
+     "tono": "normal"
+    },
+    {
+     "text": "Tres condiciones: sin preguntas pactadas, sin sustitutos…",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "y si uno dice que no, no hay entrevistas para nadie.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@condiciones",
+     "plano": "general",
+     "sobre": [
+      540,
+      760
+     ],
+     "dur": 0.6,
+     "zoom": 1.05
+    },
+    {
+     "at": "@dice",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": -200,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": 0.2,
+       "x": 300,
+       "dur": 0.9,
+       "corre": true
+      },
+      {
+       "at": "@Project",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@Tres",
+       "cara": "pensativo",
+       "pose": "piensa",
+       "mira": "arriba"
+      },
+      {
+       "at": "@pactadas",
+       "salta": true,
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@sustitutos",
+       "pose": "cruzados",
+       "cara": "serio",
+       "mira": "camara"
+      },
+      {
+       "at": "@dice",
+       "cara": "susto",
+       "take": true
+      },
+      {
+       "at": "@nadie",
+       "tropieza": true
+      }
+     ],
+     "entra": "nada",
+     "objeto": "papeleta",
+     "pose": "sostiene",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "invitacion",
+     "x": 160,
+     "y": 520,
+     "scale": 0.5,
+     "at": "@cuatro+0.00",
+     "props": {
+      "texto": "INVITACIÓN"
+     },
+     "acciones": [],
+     "id": "inv0",
+     "entra": "cae",
+     "sfx": "papel",
+     "flota": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "invitacion",
+     "x": 410,
+     "y": 460,
+     "scale": 0.5,
+     "at": "@cuatro+0.15",
+     "props": {
+      "texto": "INVITACIÓN"
+     },
+     "acciones": [],
+     "id": "inv1",
+     "entra": "cae",
+     "sfx": "papel",
+     "flota": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "invitacion",
+     "x": 660,
+     "y": 520,
+     "scale": 0.5,
+     "at": "@cuatro+0.30",
+     "props": {
+      "texto": "INVITACIÓN"
+     },
+     "acciones": [],
+     "id": "inv2",
+     "entra": "cae",
+     "sfx": "papel",
+     "flota": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "invitacion",
+     "x": 910,
+     "y": 460,
+     "scale": 0.5,
+     "at": "@cuatro+0.45",
+     "props": {
+      "texto": "INVITACIÓN"
+     },
+     "acciones": [],
+     "id": "inv3",
+     "entra": "cae",
+     "sfx": "papel",
+     "flota": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 760,
+     "scale": 0.8,
+     "at": "@condiciones",
+     "props": {
+      "lineas": [
+       "SIN PREGUNTAS PACTADAS",
+       "SIN SUSTITUTOS",
+       "O TODOS O NADIE"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "pop",
+     "dibuja": 1.4
+    }
+   ]
+  },
+  {
+   "id": "si",
+   "fondo": "estudio",
+   "animo": "alegre",
+   "trans": "iris",
+   "footnote": "Libertad Digital 09/10/2026",
+   "lines": [
+    {
+     "text": "Feijóo contestó a las pocas horas: «cuando quiera».",
+     "tono": "normal"
+    },
+    {
+     "text": "Abascal, en X: «Cuenta conmigo».",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      600,
+      1150
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@quiera",
+     "plano": "medio",
+     "sobre": "feijoo",
+     "dur": 0.5,
+     "aire": 220
+    },
+    {
+     "at": "@Abascal",
+     "plano": "general",
+     "sobre": [
+      700,
+      1150
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@conmigo",
+     "plano": "medio",
+     "sobre": "abascal",
+     "dur": 0.4,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 150,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": "gris",
+      "texto": "?"
+     },
+     "acciones": [],
+     "id": "s_izq",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 400,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       225,
+       30,
+       40
+      ],
+      "texto": "SÁNCHEZ"
+     },
+     "acciones": [],
+     "id": "s_psoe",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 680,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       0,
+       104,
+       180
+      ],
+      "texto": "FEIJÓO"
+     },
+     "acciones": [],
+     "id": "s_pp",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 930,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       90,
+       175,
+       40
+      ],
+      "texto": "ABASCAL"
+     },
+     "acciones": [],
+     "id": "s_vox",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 1300,
+     "y": 1310,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": 0.1,
+       "x": 680,
+       "y": 1310,
+       "dur": 1.0,
+       "corre": true
+      },
+      {
+       "at": "@quiera",
+       "pose": "pulgar",
+       "cara": "riendo"
+      },
+      {
+       "at": "@Abascal",
+       "mira": "der"
+      }
+     ],
+     "entra": "nada",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 1300,
+     "y": 1310,
+     "scale": 0.42,
+     "at": "@Abascal-0.3",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Abascal",
+       "x": 930,
+       "dur": 0.9,
+       "corre": true
+      },
+      {
+       "at": "@Cuenta",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@conmigo",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 680,
+     "y": 1450,
+     "scale": 1.0,
+     "at": "@quiera",
+     "props": {
+      "texto": "ACEPTA",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 900,
+     "y": 1560,
+     "scale": 1.0,
+     "at": "@conmigo",
+     "props": {
+      "texto": "ACEPTA",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 700,
+     "y": 420,
+     "scale": 0.7,
+     "at": "@contestó",
+     "props": {
+      "texto": "«Cuando quiera»"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "out": "@Abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 760,
+     "y": 420,
+     "scale": 0.7,
+     "at": "@Cuenta",
+     "props": {
+      "texto": "«Cuenta conmigo»"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop"
+    }
+   ]
+  },
+  {
+   "id": "sanchez",
+   "fondo": "oficina",
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "El Confidencial Digital 15/10/2026 · Extradigital 15/10/2026",
+   "lines": [
+    {
+     "text": "¿Y Sánchez? Su entorno dice que lo está estudiando con el equipo de campaña.",
+     "tono": "normal"
+    },
+    {
+     "text": "Según El Confidencial Digital, Wild le da unos diez días.",
+     "tono": "normal",
+     "pausa": 0.15
+    },
+    {
+     "text": "Y avisa: no será una entrevista-masaje.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "medio",
+     "sobre": "sanchez",
+     "dur": 0,
+     "aire": 220
+    },
+    {
+     "at": "@estudiando",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6
+    },
+    {
+     "at": "@diez",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    },
+    {
+     "at": "@será",
+     "plano": "medio",
+     "sobre": "wild",
+     "dur": 0.4,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 360,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": 0.1,
+       "pose": "piensa"
+      },
+      {
+       "at": "@entorno",
+       "mira": "invitacion",
+       "cara": "confundido"
+      },
+      {
+       "at": "@estudiando",
+       "mira": "invitacion"
+      },
+      {
+       "at": "@equipo",
+       "pose": "encoge",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@campaña",
+       "gira": true
+      },
+      {
+       "at": "@campaña+1.1",
+       "mira": "camara",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@campaña+2.1",
+       "tiembla": true
+      },
+      {
+       "at": "@diez",
+       "cara": "preocupado",
+       "mira": "reloj"
+      },
+      {
+       "at": "@será",
+       "cara": "susto",
+       "take": true
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "invitacion",
+     "x": 620,
+     "y": 900,
+     "scale": 0.5,
+     "at": 0.2,
+     "props": {
+      "texto": "INVITACIÓN"
+     },
+     "acciones": [],
+     "id": "invitacion",
+     "entra": "pop",
+     "sfx": "papel",
+     "flota": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 380,
+     "y": 560,
+     "scale": 1.0,
+     "at": "@estudiando",
+     "props": {
+      "texto": "PENDIENTE",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 800,
+     "y": 600,
+     "scale": 0.8,
+     "at": "@diez",
+     "props": {
+      "velocidad": 4
+     },
+     "acciones": [],
+     "id": "reloj",
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 800,
+     "y": 340,
+     "scale": 0.9,
+     "at": "@días",
+     "props": {
+      "texto": "~10 DÍAS",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "wild",
+     "x": 1300,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@avisa-0.4",
+     "cara": "burla",
+     "acciones": [
+      {
+       "at": "@avisa",
+       "x": 860,
+       "dur": 0.6
+      },
+      {
+       "at": "@será",
+       "pose": "senala_izq",
+       "mira": "sanchez"
+      }
+     ],
+     "entra": "nada",
+     "id": "wild"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 760,
+     "y": 760,
+     "scale": 1.0,
+     "at": "@será",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "fecha",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "ActualTV 15/10/2026 · El Confidencial Digital 15/10/2026",
+   "lines": [
+    {
+     "text": "La cuarta silla, la de la izquierda, tampoco está cerrada.",
+     "tono": "normal"
+    },
+    {
+     "text": "Si sale adelante, las entrevistas se emitirían a partir del 9 de noviembre.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1100
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@emitirían",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.7
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 300,
+     "y": 1560,
+     "scale": 0.55,
+     "at": 0,
+     "props": {
+      "color": "gris",
+      "texto": "?"
+     },
+     "acciones": [
+      {
+       "at": "@cerrada",
+       "tiembla": true
+      }
+     ],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 700,
+     "y": 1560,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "confundido",
+     "acciones": [
+      {
+       "at": "@cuarta",
+       "mira": "izq",
+       "pose": "encoge"
+      },
+      {
+       "at": "@emitirían",
+       "mira": "arriba",
+       "cara": "ilusionado"
+      }
+     ],
+     "entra": "nada",
+     "id": "pizon"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 760,
+     "scale": 0.62,
+     "at": "@Si",
+     "props": {
+      "marcados": [
+       9
+      ],
+      "colores": {
+       "9": "rojo"
+      }
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 1.0
+    },
+    {
+     "type": "rotulo",
+     "text": "DESDE EL 9N",
+     "x": 540,
+     "y": 1130,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@9",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1420,
+     "scale": 1.0,
+     "at": "@adelante",
+     "props": {
+      "texto": "SI SALE ADELANTE",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "estudio",
+   "animo": "final",
+   "trans": "zoom",
+   "footnote": "Pregunta a la audiencia",
+   "lines": [
+    {
+     "text": "¿Crees que Sánchez irá? Escribe SÍ o NO, te leo.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y síguenos para saber si la silla se llena.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1150
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@SÍ",
+     "plano": "general",
+     "sobre": [
+      450,
+      1100
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@síguenos",
+     "plano": "general",
+     "sobre": [
+      540,
+      1150
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 150,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": "gris",
+      "texto": "?"
+     },
+     "acciones": [],
+     "id": "s_izq",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 400,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       225,
+       30,
+       40
+      ],
+      "texto": "SÁNCHEZ"
+     },
+     "acciones": [],
+     "id": "s_psoe",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 680,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       0,
+       104,
+       180
+      ],
+      "texto": "FEIJÓO"
+     },
+     "acciones": [],
+     "id": "s_pp",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 930,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       90,
+       175,
+       40
+      ],
+      "texto": "ABASCAL"
+     },
+     "acciones": [],
+     "id": "s_vox",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 680,
+     "y": 1310,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Sánchez",
+       "mira": "izq"
+      }
+     ],
+     "entra": "nada",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 930,
+     "y": 1310,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Sánchez",
+       "mira": "izq"
+      }
+     ],
+     "entra": "nada",
+     "id": "abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "microfono",
+     "x": 720,
+     "y": 1330,
+     "scale": 0.5,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "wild",
+     "x": 520,
+     "y": 1640,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@irá",
+       "mira": "camara",
+       "pose": "piensa"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "nada",
+     "id": "wild"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿SÍ O NO?",
+     "x": 540,
+     "y": 560,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@SÍ",
+     "golpe": true,
+     "out": "@síguenos-0.3",
+     "fx": [
+      {
+       "at": "@leo",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 560,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@silla",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.0,
+  "titulo": "Jordi Wild invita a los candidatos",
+  "capitulo": null
+ }
+}

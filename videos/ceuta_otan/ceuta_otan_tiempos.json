@@ -1,0 +1,165 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 4.91,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.63,
+    "texto": "Si alguien atacara Ceuta, ¿vendría la OTAN a defenderla?"
+   },
+   {
+    "t0": 2.88,
+    "t1": 4.46,
+    "texto": "Spoiler: no es automático."
+   }
+  ]
+ },
+ {
+  "escena": "donde",
+  "inicio": 4.91,
+  "fin": 9.74,
+  "frases": [
+   {
+    "t0": 4.91,
+    "t1": 7.0,
+    "texto": "Ceuta es una ciudad española… en África."
+   },
+   {
+    "t0": 7.15,
+    "t1": 9.29,
+    "texto": "Al otro lado del Estrecho, pegada a Marruecos."
+   }
+  ]
+ },
+ {
+  "escena": "ciudad",
+  "inicio": 9.74,
+  "fin": 15.54,
+  "frases": [
+   {
+    "t0": 10.06,
+    "t1": 13.76,
+    "texto": "Portuguesa desde 1415. Española desde 1668."
+   },
+   {
+    "t0": 13.96,
+    "t1": 15.09,
+    "texto": "Murallas incluidas."
+   }
+  ]
+ },
+ {
+  "escena": "tratado",
+  "inicio": 15.54,
+  "fin": 24.21,
+  "frases": [
+   {
+    "t0": 15.84,
+    "t1": 19.29,
+    "texto": "La OTAN funciona con el artículo 5: si atacan a uno, atacan a todos."
+   },
+   {
+    "t0": 19.49,
+    "t1": 23.76,
+    "texto": "Pero el artículo 6 dice dónde: Europa, Norteamérica e islas del Atlántico norte."
+   }
+  ]
+ },
+ {
+  "escena": "ambito",
+  "inicio": 24.21,
+  "fin": 29.33,
+  "frases": [
+   {
+    "t0": 24.53,
+    "t1": 27.34,
+    "texto": "Ceuta y Melilla están en África, y el tratado no las nombra."
+   },
+   {
+    "t0": 27.59,
+    "t1": 28.88,
+    "texto": "Ni siquiera Hawái entra."
+   }
+  ]
+ },
+ {
+  "escena": "matiz",
+  "inicio": 29.33,
+  "fin": 35.85,
+  "frases": [
+   {
+    "t0": 29.33,
+    "t1": 30.84,
+    "texto": "¿Nadie ayudaría? Tampoco."
+   },
+   {
+    "t0": 31.04,
+    "t1": 35.4,
+    "texto": "España puede pedir consultas a los aliados, y la Unión Europea tiene su propia ayuda mutua."
+   }
+  ]
+ },
+ {
+  "escena": "buques",
+  "inicio": 35.85,
+  "fin": 47.91,
+  "frases": [
+   {
+    "t0": 36.17,
+    "t1": 40.9,
+    "texto": "¿Por qué se habla ahora? Sánchez confirmó que buques militares marroquíes entraron en aguas de Ceuta en julio."
+   },
+   {
+    "t0": 41.1,
+    "t1": 44.72,
+    "texto": "El Gobierno dice que fue puntual. Si se repitió en agosto, no está confirmado."
+   },
+   {
+    "t0": 44.92,
+    "t1": 47.46,
+    "texto": "Y Marruecos no reconoce esas aguas como españolas."
+   }
+  ]
+ },
+ {
+  "escena": "posturas",
+  "inicio": 47.91,
+  "fin": 58.51,
+  "frases": [
+   {
+    "t0": 48.61,
+    "t1": 52.05,
+    "texto": "El PSOE dijo en el Senado, en 2022, que ya están amparadas."
+   },
+   {
+    "t0": 52.2,
+    "t1": 54.78,
+    "texto": "El PP ha llevado lo de los buques a la Audiencia Nacional."
+   },
+   {
+    "t0": 54.93,
+    "t1": 58.06,
+    "texto": "Y Vox pidió cambiar el tratado para nombrarlas; el Senado dijo no."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 58.51,
+  "fin": 64.61,
+  "frases": [
+   {
+    "t0": 58.83,
+    "t1": 61.34,
+    "texto": "¿Debería el tratado nombrar a Ceuta y Melilla? Te leo."
+   },
+   {
+    "t0": 61.54,
+    "t1": 63.26,
+    "texto": "Y síguenos para el próximo viaje de Piz."
+   }
+  ]
+ }
+]

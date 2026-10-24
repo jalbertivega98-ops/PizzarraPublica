@@ -1,0 +1,1102 @@
+{
+ "slug": "caso_hermano",
+ "title": "El caso del hermano de Sánchez",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Audiencia Provincial de Badajoz: sentencia de 14/07/2026 (no firme), vía EFE y Europa Press",
+  "Recursos ante el TSJ de Extremadura (EFE, 8, 9 y 13/10/2026)"
+ ],
+ "caption": "⚖️ El caso del hermano de Pedro Sánchez, explicado fácil\n🎻 2017: la Diputación de Badajoz le contrata para los conservatorios\n📄 2024: denuncia de Manos Limpias y una jueza investiga\n🏛️ Julio 2026: 9 años de inhabilitación por prevaricación, sin prisión · Gallardo, 18\n🔎 2017 prescrito · condena por el cambio de puesto de 2022 · absueltos de tráfico de influencias\n⏳ No es firme: han recurrido él, Gallardo y la Fiscalía\n💬 ¿Qué opinas?\n🔔 Síguenos para saber qué decide el tribunal · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Audiencia Provincial de Badajoz, sentencia del 14/07/2026 (no firme): 9 años de inhabilitación especial por prevaricación como cooperador necesario; Gallardo, 18; absolución por tráfico de influencias; el nombramiento de 2017 está prescrito. Recursos ante el TSJ de Extremadura de David Sánchez (08/10), la Fiscalía (09/10) y Gallardo (13/10), según EFE. Delito fiscal descartado y archivado. Rige la presunción de inocencia hasta sentencia firme. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PizarraPública",
+  "#DavidSánchez",
+  "#Justicia",
+  "#Badajoz",
+  "#ExplicadoFácil",
+  "#Política"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "calle",
+   "animo": "curioso",
+   "footnote": "Sentencia no firme: está recurrida",
+   "lines": [
+    {
+     "text": "¿Qué ha pasado con el hermano de Pedro Sánchez?",
+     "tono": "energia"
+    },
+    {
+     "text": "En un minuto y fácil.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@fácil",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@hermano",
+       "mira": "david",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@minuto",
+       "mira": "camara",
+       "pose": "senala_arriba"
+      },
+      {
+       "at": "@fácil",
+       "pose": "pulgar",
+       "cara": "riendo",
+       "salta": true
+      }
+     ],
+     "entra": "izq",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "david",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": "@hermano",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@minuto",
+       "mira": "piz"
+      }
+     ],
+     "entra": "pop",
+     "id": "david"
+    },
+    {
+     "type": "rotulo",
+     "text": "EL CASO DAVID SÁNCHEZ",
+     "x": 540,
+     "y": 480,
+     "size": 72,
+     "color": "amarillo",
+     "at": "@hermano",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "EN 1 MINUTO",
+     "x": 540,
+     "y": 590,
+     "size": 84,
+     "color": "blanco",
+     "at": "@minuto",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "contrato",
+   "fondo": "oficina",
+   "animo": "alegre",
+   "trans": "pan",
+   "footnote": "Diputación de Badajoz, 2017",
+   "lines": [
+    {
+     "text": "2017. La Diputación de Badajoz le contrata para la música de sus conservatorios.",
+     "tono": "normal"
+    },
+    {
+     "text": "La preside Miguel Ángel Gallardo.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@Gallardo",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "gallardo",
+     "x": 290,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@contrata",
+       "salta": true,
+       "cara": "riendo"
+      },
+      {
+       "at": "@conservatorios",
+       "objeto": null,
+       "pose": "pulgar"
+      },
+      {
+       "at": "@Gallardo",
+       "mira": "camara"
+      }
+     ],
+     "entra": "izq",
+     "pose": "sostiene",
+     "objeto": {
+      "tipo": "contrato",
+      "titulo": "CONTRATO",
+      "hojas": 1
+     },
+     "id": "gallardo"
+    },
+    {
+     "type": "personaje",
+     "quien": "david",
+     "x": 790,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@contrata",
+       "pose": "arriba",
+       "cara": "riendo"
+      },
+      {
+       "at": "@música",
+       "salta": true
+      }
+     ],
+     "entra": "der",
+     "id": "david"
+    },
+    {
+     "type": "rotulo",
+     "text": "2017",
+     "x": 540,
+     "y": 470,
+     "size": 120,
+     "color": "amarillo",
+     "at": "@2017",
+     "golpe": true,
+     "out": "@Gallardo",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "PRESIDENTE: GALLARDO",
+     "x": 540,
+     "y": 470,
+     "size": 70,
+     "color": "blanco",
+     "at": "@Gallardo",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "denuncia",
+   "fondo": "oficina",
+   "animo": "tension",
+   "trans": "iris",
+   "footnote": "Denuncia de 2024 · jueza Beatriz Biedma",
+   "lines": [
+    {
+     "text": "2024. Manos Limpias le denuncia: dice que la plaza se hizo a dedo para él.",
+     "tono": "sorpresa"
+    },
+    {
+     "text": "Una jueza empieza a investigar.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@jueza",
+     "plano": "medio",
+     "sobre": "jueza",
+     "dur": 0.3,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "david",
+     "x": 290,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@denuncia",
+       "take": true,
+       "cara": "susto"
+      },
+      {
+       "at": "@dedo",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@investigar",
+       "tiembla": true
+      }
+     ],
+     "entra": "nada",
+     "id": "david"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contrato",
+     "x": 780,
+     "y": 760,
+     "scale": 0.7,
+     "at": "@denuncia",
+     "props": {
+      "titulo": "DENUNCIA",
+      "hojas": 1
+     },
+     "acciones": [
+      {
+       "at": "@jueza",
+       "sale": "der"
+      }
+     ],
+     "entra": "cae",
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "jueza",
+     "x": 1300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": "@jueza-0.3",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@jueza",
+       "x": 790,
+       "dur": 0.7
+      },
+      {
+       "at": "@investigar",
+       "pose": "senala"
+      }
+     ],
+     "entra": "nada",
+     "id": "jueza"
+    },
+    {
+     "type": "rotulo",
+     "text": "«A DEDO»",
+     "x": 600,
+     "y": 480,
+     "size": 110,
+     "color": "red",
+     "at": "@dedo",
+     "golpe": true,
+     "out": "@jueza",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "INVESTIGACIÓN",
+     "x": 600,
+     "y": 480,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@jueza",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "portugal",
+   "fondo": {
+    "tipo": "playa",
+    "variante": "ria"
+   },
+   "animo": "comico",
+   "trans": "pan",
+   "footnote": "Audiencia Provincial de Badajoz, 14/07/2026 (no firme)",
+   "lines": [
+    {
+     "text": "El juicio da por probado que vivía en Portugal y pasó más de un año sin despacho fijo.",
+     "tono": "normal"
+    },
+    {
+     "text": "Lo de Hacienda se archivó.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@despacho",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "david",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Portugal",
+       "mira": "der",
+       "cara": "normal"
+      },
+      {
+       "at": "@despacho",
+       "pose": "encoge",
+       "cara": "confundido"
+      },
+      {
+       "at": "@Hacienda",
+       "mira": "camara"
+      },
+      {
+       "at": "@archivó",
+       "salta": true,
+       "cara": "riendo"
+      }
+     ],
+     "entra": "izq",
+     "id": "david"
+    },
+    {
+     "type": "rotulo",
+     "text": "VIVÍA EN PORTUGAL",
+     "x": 540,
+     "y": 470,
+     "size": 80,
+     "color": "amarillo",
+     "at": "@Portugal",
+     "golpe": true,
+     "out": "@Hacienda",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "+1 AÑO SIN DESPACHO",
+     "x": 540,
+     "y": 580,
+     "size": 70,
+     "color": "blanco",
+     "at": "@despacho",
+     "golpe": true,
+     "out": "@Hacienda",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "HACIENDA: ARCHIVADO",
+     "x": 540,
+     "y": 470,
+     "size": 76,
+     "color": "verde",
+     "at": "@archivó",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "sentencia",
+   "fondo": "rayos",
+   "animo": "tension",
+   "musica": "corte",
+   "trans": "iris",
+   "footnote": "Audiencia Provincial de Badajoz, 14/07/2026 (no firme)",
+   "lines": [
+    {
+     "text": "Julio de 2026: condenado a nueve años sin poder ocupar un cargo público.",
+     "tono": "sorpresa"
+    },
+    {
+     "text": "No entra en prisión. Gallardo, 18 años.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@prisión",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "david",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@condenado",
+       "take": true,
+       "cara": "susto"
+      },
+      {
+       "at": "@público",
+       "cara": "triste",
+       "pose": "caidos"
+      },
+      {
+       "at": "@prisión",
+       "mira": "camara",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "pop",
+     "id": "david"
+    },
+    {
+     "type": "personaje",
+     "quien": "gallardo",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": "@Gallardo-0.2",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@18",
+       "take": true,
+       "cara": "triste"
+      }
+     ],
+     "entra": "pop",
+     "id": "gallardo"
+    },
+    {
+     "type": "rotulo",
+     "text": "9 AÑOS INHABILITADO",
+     "x": 540,
+     "y": 470,
+     "size": 76,
+     "color": "red",
+     "at": "@nueve",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIN PRISIÓN",
+     "x": 540,
+     "y": 580,
+     "size": 80,
+     "color": "blanco",
+     "at": "@prisión",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "GALLARDO: 18 AÑOS",
+     "x": 540,
+     "y": 690,
+     "size": 70,
+     "color": "red",
+     "at": "@18",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "porque",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "pan",
+   "footnote": "Condena por prevaricación · Audiencia Provincial de Badajoz, 14/07/2026 (no firme)",
+   "lines": [
+    {
+     "text": "¿Por el contrato de 2017? No, eso prescribió.",
+     "tono": "normal"
+    },
+    {
+     "text": "Por cambiarle el nombre al puesto en 2022 sin funciones nuevas. Del tráfico de influencias, absueltos.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@absueltos",
+     "plano": "medio",
+     "sobre": "profe",
+     "dur": 0.3,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": 0.9,
+       "mira": "camara",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@2017",
+       "salta": true
+      },
+      {
+       "at": "@prescribió",
+       "pose": "senala",
+       "cara": "serio"
+      },
+      {
+       "at": "@nombre",
+       "mira": "contrato"
+      },
+      {
+       "at": "@nuevas",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@absueltos",
+       "pose": "pulgar",
+       "mira": "camara"
+      }
+     ],
+     "entra": "izq",
+     "pose": "senala_arriba",
+     "id": "profe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contrato",
+     "x": 780,
+     "y": 780,
+     "scale": 0.7,
+     "at": "@nombre",
+     "props": {
+      "titulo": "NUEVO NOMBRE",
+      "hojas": 1
+     },
+     "acciones": [],
+     "id": "contrato",
+     "entra": "pop",
+     "sfx": "papel"
+    },
+    {
+     "type": "rotulo",
+     "text": "2017: PRESCRITO",
+     "x": 600,
+     "y": 470,
+     "size": 80,
+     "color": "blanco",
+     "at": "@prescribió",
+     "golpe": true,
+     "out": "@nombre",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "2022: CAMBIO DE NOMBRE",
+     "x": 600,
+     "y": 470,
+     "size": 70,
+     "color": "amarillo",
+     "at": "@nombre",
+     "golpe": true,
+     "out": "@absueltos",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "TRÁFICO DE INFLUENCIAS:",
+     "x": 600,
+     "y": 460,
+     "size": 60,
+     "color": "verde",
+     "at": "@absueltos",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "ABSUELTOS",
+     "x": 600,
+     "y": 560,
+     "size": 90,
+     "color": "verde",
+     "at": "@absueltos",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "recurso",
+   "fondo": "oficina",
+   "animo": "tension",
+   "trans": "iris",
+   "footnote": "Recursos al TSJ de Extremadura, octubre de 2026 (EFE)",
+   "lines": [
+    {
+     "text": "Ojo: no es firme. Han recurrido él, Gallardo y la Fiscalía, que pidió la absolución.",
+     "tono": "normal"
+    },
+    {
+     "text": "Decide el Tribunal Superior de Extremadura.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@Extremadura",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "david",
+     "x": 250,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@recurrido",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "objeto": {
+      "tipo": "contrato",
+      "titulo": "RECURSO",
+      "hojas": 1
+     },
+     "pose": "sostiene",
+     "id": "david"
+    },
+    {
+     "type": "personaje",
+     "quien": "gallardo",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.62,
+     "at": "@Gallardo",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@recurrido",
+       "salta": true
+      }
+     ],
+     "entra": "pop",
+     "id": "gallardo"
+    },
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 830,
+     "y": 1340,
+     "scale": 0.62,
+     "at": "@Fiscalía",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@absolución",
+       "pose": "senala_arriba"
+      },
+      {
+       "at": "@recurrido",
+       "salta": true
+      }
+     ],
+     "entra": "pop",
+     "id": "profe"
+    },
+    {
+     "type": "rotulo",
+     "text": "NO ES FIRME",
+     "x": 540,
+     "y": 470,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@firme",
+     "golpe": true,
+     "out": "@Decide",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "DECIDE EL TSJ",
+     "x": 540,
+     "y": 470,
+     "size": 90,
+     "color": "blanco",
+     "at": "@Tribunal",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "partidos",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "pan",
+   "footnote": "Elma Saiz (Gobierno) · Feijóo (PP) · Vox en el juicio",
+   "lines": [
+    {
+     "text": "El Gobierno confía en su inocencia.",
+     "tono": "normal"
+    },
+    {
+     "text": "El PP: «el tiempo pone las cosas en su sitio». Vox, que acusaba, pedía seis años de cárcel.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@cárcel",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 230,
+     "y": 1340,
+     "scale": 0.6,
+     "at": "@Gobierno",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@inocencia",
+       "pose": "pulgar"
+      }
+     ],
+     "entra": "pop",
+     "id": "sanchez"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.6,
+     "at": "@PP",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@sitio",
+       "pose": "senala_arriba"
+      }
+     ],
+     "entra": "pop",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 850,
+     "y": 1340,
+     "scale": 0.6,
+     "at": "@Vox",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@cárcel",
+       "pose": "senala"
+      }
+     ],
+     "entra": "pop",
+     "id": "abascal"
+    },
+    {
+     "type": "rotulo",
+     "text": "GOBIERNO: «INOCENCIA»",
+     "x": 540,
+     "y": 470,
+     "size": 66,
+     "color": "blanco",
+     "at": "@Gobierno",
+     "golpe": true,
+     "out": "@PP",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "PP: «EL TIEMPO PONE",
+     "x": 540,
+     "y": 460,
+     "size": 62,
+     "color": "blanco",
+     "at": "@PP",
+     "golpe": true,
+     "out": "@Vox",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "LAS COSAS EN SU SITIO»",
+     "x": 540,
+     "y": 550,
+     "size": 62,
+     "color": "blanco",
+     "at": "@PP",
+     "golpe": true,
+     "out": "@Vox",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "VOX PEDÍA 6 AÑOS DE CÁRCEL",
+     "x": 540,
+     "y": 470,
+     "size": 56,
+     "color": "blanco",
+     "at": "@Vox",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Presunción de inocencia hasta sentencia firme",
+   "lines": [
+    {
+     "text": "¿Qué opinas? Te leemos.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y síguenos para saber qué decide el tribunal.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@síguenos",
+     "plano": "abierto",
+     "sobre": null,
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@opinas",
+       "mira": "camara",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@leemos",
+       "pose": "senala",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@tribunal",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 790,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@opinas",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@tribunal",
+       "take": true
+      }
+     ],
+     "entra": "nada",
+     "id": "pizon"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿QUÉ OPINAS?",
+     "x": 540,
+     "y": 470,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@opinas",
+     "golpe": true,
+     "out": "@síguenos-0.4",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 470,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@tribunal",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.0,
+  "titulo": "El caso del hermano de Sánchez",
+  "capitulo": null
+ }
+}

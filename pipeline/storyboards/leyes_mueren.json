@@ -1,0 +1,1032 @@
+{
+ "slug": "leyes_mueren",
+ "title": "Las leyes que mueren el 29N",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Real Decreto 806/2026, de 5 de octubre (BOE 06/10/2026)",
+  "Reglamento del Congreso, art. 207 (congreso.es)",
+  "Civio: 309 iniciativas decaídas (LegalToday, 12/10/2026)",
+  "Tasa de alcohol y delito de velocidad: Motor16 (11/10/2026), Carwow (08/10/2026)",
+  "Otras leyes decaídas: LegalToday 12/10, Voz de la Verdad 05/10, Gaceta del Opositor 05/10/2026"
+ ],
+ "caption": "🪦 El 6 de octubre murieron unas 300 leyes a medio hacer\n📜 Al disolverse las Cortes, todo lo pendiente caduca (art. 207 del Reglamento)\n🍷 La tasa de alcohol iba a bajar de 0,5 a 0,2: sigue en 0,5\n🚗 El delito por velocidad en ciudad iba a empezar en +50: sigue en +60\n⚖️ También caen Integridad Pública, la nueva LECrim, los lobbies y la deuda autonómica\n💬 ¿Cuál resucitarías tú?\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: RD 806/2026 (BOE 06/10) · Reglamento del Congreso art. 207 · Civio (LegalToday 12/10) · Motor16 11/10 · Carwow 08/10. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#29N",
+  "#leyes",
+  "#DGT",
+  "#alcohol",
+  "#Congreso",
+  "#politica",
+  "#España",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "calle",
+   "animo": "tension",
+   "footnote": "Real Decreto 806/2026 (BOE 06/10/2026) · Civio vía LegalToday 12/10/2026",
+   "lines": [
+    {
+     "text": "El 6 de octubre murieron unas 300 leyes a medio hacer.",
+     "tono": "energia"
+    },
+    {
+     "text": "Y dos te afectaban al volante.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@murieron",
+     "plano": "general",
+     "sobre": [
+      540,
+      1050
+     ],
+     "dur": 0.5,
+     "zoom": 1.12
+    },
+    {
+     "at": "@volante",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 180
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.8,
+     "at": 0,
+     "acciones": [
+      {
+       "at": "@murieron",
+       "cara": "triste"
+      }
+     ],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lapida",
+     "x": 170,
+     "y": 1360,
+     "scale": 0.48,
+     "at": "@murieron",
+     "props": {
+      "texto": "R.I.P.",
+      "lineas": [
+       "LEY"
+      ]
+     },
+     "acciones": [],
+     "entra": "abajo",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lapida",
+     "x": 400,
+     "y": 1360,
+     "scale": 0.48,
+     "at": "@unas",
+     "props": {
+      "texto": "R.I.P.",
+      "lineas": [
+       "LEY"
+      ]
+     },
+     "acciones": [],
+     "entra": "abajo",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lapida",
+     "x": 680,
+     "y": 1360,
+     "scale": 0.48,
+     "at": "@300",
+     "props": {
+      "texto": "R.I.P.",
+      "lineas": [
+       "LEY"
+      ]
+     },
+     "acciones": [],
+     "entra": "abajo",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lapida",
+     "x": 910,
+     "y": 1360,
+     "scale": 0.48,
+     "at": "@leyes",
+     "props": {
+      "texto": "R.I.P.",
+      "lineas": [
+       "LEY"
+      ]
+     },
+     "acciones": [],
+     "entra": "abajo",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": -150,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": 0.2,
+       "x": 260,
+       "dur": 1.0
+      },
+      {
+       "at": "@murieron",
+       "cara": "susto",
+       "take": true,
+       "mira": "der"
+      },
+      {
+       "at": "@volante",
+       "pose": "senala",
+       "mira": "camara",
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "~300 LEYES",
+     "x": 540,
+     "y": 420,
+     "size": 120,
+     "color": "amarillo",
+     "at": "@300",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "A MEDIO HACER",
+     "x": 540,
+     "y": 540,
+     "size": 80,
+     "color": "blanco",
+     "at": "@medio",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "coche",
+     "x": 860,
+     "y": 1250,
+     "scale": 0.6,
+     "at": "@volante",
+     "props": {
+      "color": "azul",
+      "cara": "susto"
+     },
+     "acciones": [],
+     "entra": "der",
+     "sfx": "bocina"
+    }
+   ]
+  },
+  {
+   "id": "porque",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Reglamento del Congreso, art. 207 · RD 806/2026",
+   "lines": [
+    {
+     "text": "Al disolver las Cortes para el 29N, el Reglamento del Congreso es claro: todo lo pendiente caduca.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      820
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@caduca",
+     "plano": "general",
+     "sobre": [
+      540,
+      760
+     ],
+     "dur": 0.5,
+     "zoom": 1.12
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 540,
+     "y": 800,
+     "scale": 1.35,
+     "at": 0.2,
+     "props": {
+      "titulo": "REGLAMENTO DEL CONGRESO",
+      "subtitulo": "Artículo 207",
+      "articulos": [
+       {
+        "id": "a207",
+        "titulo": "AL DISOLVERSE LA CÁMARA",
+        "lineas": [
+         "quedarán caducados todos",
+         "los asuntos pendientes"
+        ]
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@pendiente",
+       "props": {
+        "resalta": [
+         "a207"
+        ]
+       }
+      }
+     ],
+     "entra": "nada",
+     "dibujo": 1.0,
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1250,
+     "y": 1580,
+     "scale": 0.5,
+     "at": "@Cortes",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Cortes",
+       "x": 900,
+       "dur": 0.5
+      },
+      {
+       "at": "@Reglamento",
+       "cara": "idea",
+       "salta": true
+      },
+      {
+       "at": "@pendiente",
+       "pose": "senala_izq"
+      },
+      {
+       "at": "@caduca",
+       "cara": "susto",
+       "take": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1260,
+     "scale": 1.0,
+     "at": "@caduca",
+     "props": {
+      "texto": "CADUCADO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "alcohol",
+   "fondo": "carretera",
+   "animo": "aventura",
+   "trans": "zoom",
+   "footnote": "Proposición de ley del PSOE · Motor16 11/10/2026 · Carwow 08/10/2026",
+   "lines": [
+    {
+     "text": "Como bajar la tasa de alcohol al volante de 0,5 a 0,2.",
+     "tono": "normal"
+    },
+    {
+     "text": "Era una propuesta del PSOE y pasó el primer voto, 173 a 168, con PP y Vox en contra.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Ahora decae: la tasa sigue en 0,5.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@0,2",
+     "plano": "general",
+     "sobre": [
+      540,
+      1050
+     ],
+     "dur": 0.5,
+     "zoom": 1.1
+    },
+    {
+     "at": "@173",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@decae",
+     "plano": "general",
+     "sobre": [
+      540,
+      1050
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "coche",
+     "x": 540,
+     "y": 1450,
+     "scale": 0.9,
+     "at": 0,
+     "props": {
+      "color": "rojo",
+      "cara": "ilusionado"
+     },
+     "acciones": [
+      {
+       "at": "@decae",
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "abajo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "alcoholimetro",
+     "x": 210,
+     "y": 950,
+     "scale": 1.0,
+     "at": "@tasa",
+     "props": {
+      "texto": "0,5"
+     },
+     "acciones": [
+      {
+       "at": "@0,2",
+       "props": {
+        "texto": "0,2"
+       },
+       "tiembla": true
+      },
+      {
+       "at": "@decae",
+       "props": {
+        "texto": "0,5"
+       },
+       "salta": true
+      }
+     ],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "DE 0,5 A 0,2 g/l",
+     "x": 600,
+     "y": 430,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@0,2",
+     "golpe": true,
+     "out": "@PSOE",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "PSOE PROPONE",
+     "x": 540,
+     "y": 430,
+     "size": 90,
+     "color": "blanco",
+     "at": "@PSOE",
+     "golpe": true,
+     "out": "@173",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "173 SÍ · 168 NO",
+     "x": 540,
+     "y": 430,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@173",
+     "golpe": true,
+     "out": "@decae",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "PP Y VOX: EN CONTRA",
+     "x": 540,
+     "y": 540,
+     "size": 66,
+     "color": "blanco",
+     "at": "@contra",
+     "out": "@decae",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 450,
+     "scale": 1.0,
+     "at": "@decae",
+     "props": {
+      "texto": "DECAE",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE EN 0,5",
+     "x": 540,
+     "y": 600,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@sigue",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "velocidad",
+   "fondo": {
+    "tipo": "carretera",
+    "velocidad": 2.0
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Carwow 08/10/2026",
+   "lines": [
+    {
+     "text": "Lo mismo con la velocidad: ir 50 por encima del límite en ciudad iba a ser delito, en vez de 60.",
+     "tono": "normal"
+    },
+    {
+     "text": "Hoy, en una calle de 50, el delito empieza en 111.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@delito",
+     "plano": "general",
+     "sobre": [
+      600,
+      950
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    },
+    {
+     "at": "@111",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "senal",
+     "x": 820,
+     "y": 760,
+     "scale": 0.9,
+     "at": 0,
+     "props": {
+      "numero": 50
+     },
+     "acciones": [
+      {
+       "at": "@límite",
+       "salta": true
+      }
+     ],
+     "id": "senal",
+     "entra": "crece",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "coche",
+     "x": 380,
+     "y": 1500,
+     "scale": 0.8,
+     "at": 0.2,
+     "props": {
+      "color": "verde",
+      "cara": "riendo"
+     },
+     "acciones": [
+      {
+       "at": "@velocidad",
+       "x": 460,
+       "dur": 0.6,
+       "tiembla": true
+      },
+      {
+       "at": "@encima",
+       "x": 360,
+       "dur": 0.6
+      },
+      {
+       "at": "@delito",
+       "tiembla": true,
+       "cara": "susto"
+      }
+     ],
+     "entra": "abajo"
+    },
+    {
+     "type": "rotulo",
+     "text": "+50 = DELITO",
+     "x": 420,
+     "y": 430,
+     "size": 100,
+     "color": "rojo",
+     "at": "@delito",
+     "golpe": true,
+     "out": "@Hoy",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "(ANTES +60)",
+     "x": 420,
+     "y": 540,
+     "size": 70,
+     "color": "blanco",
+     "at": "@60",
+     "out": "@Hoy",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 400,
+     "y": 450,
+     "scale": 1.0,
+     "at": "@Hoy",
+     "props": {
+      "texto": "DECAE",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "rotulo",
+     "text": "DELITO DESDE 111",
+     "x": 420,
+     "y": 600,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@111",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "cementerio",
+   "fondo": {
+    "tipo": "calle",
+    "hora": "tarde"
+   },
+   "animo": "triste",
+   "trans": "iris",
+   "footnote": "LegalToday 12/10/2026 · Voz de la Verdad 05/10/2026 · Gaceta del Opositor 05/10/2026",
+   "lines": [
+    {
+     "text": "También caen la ley de Integridad Pública contra la corrupción, la que daba la instrucción a los fiscales,",
+     "tono": "normal"
+    },
+    {
+     "text": "el registro de lobbies y la condonación de deuda a las comunidades.",
+     "tono": "normal",
+     "pausa": 0.05
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@fiscales",
+     "plano": "general",
+     "sobre": [
+      540,
+      1050
+     ],
+     "dur": 0.6,
+     "zoom": 1.08
+    },
+    {
+     "at": "@condonación",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.7,
+     "at": 0,
+     "acciones": [
+      {
+       "at": 0.1,
+       "cara": "triste"
+      }
+     ],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lapida",
+     "x": 150,
+     "y": 1360,
+     "scale": 0.6,
+     "at": "@Integridad",
+     "props": {
+      "texto": "R.I.P.",
+      "lineas": [
+       "INTEGRIDAD",
+       "PÚBLICA"
+      ]
+     },
+     "acciones": [],
+     "entra": "abajo",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lapida",
+     "x": 400,
+     "y": 1360,
+     "scale": 0.6,
+     "at": "@fiscales",
+     "props": {
+      "texto": "R.I.P.",
+      "lineas": [
+       "LEY DE",
+       "ENJUICIAMIENTO"
+      ]
+     },
+     "acciones": [],
+     "entra": "abajo",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lapida",
+     "x": 660,
+     "y": 1360,
+     "scale": 0.6,
+     "at": "@lobbies",
+     "props": {
+      "texto": "R.I.P.",
+      "lineas": [
+       "REGISTRO DE",
+       "LOBBIES"
+      ]
+     },
+     "acciones": [],
+     "entra": "abajo",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lapida",
+     "x": 920,
+     "y": 1360,
+     "scale": 0.6,
+     "at": "@condonación",
+     "props": {
+      "texto": "R.I.P.",
+      "lineas": [
+       "DEUDA",
+       "AUTONÓMICA"
+      ]
+     },
+     "acciones": [],
+     "entra": "abajo",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1560,
+     "scale": 0.5,
+     "at": "@caen",
+     "cara": "triste",
+     "acciones": [
+      {
+       "at": "@fiscales",
+       "pose": "manos_juntas"
+      },
+      {
+       "at": "@comunidades",
+       "pose": "cabeza",
+       "cara": "preocupado"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "CORRUPCIÓN: PRESCRIPCIÓN DE 5 A 7 AÑOS",
+     "x": 540,
+     "y": 420,
+     "size": 46,
+     "color": "blanco",
+     "at": "@corrupción",
+     "out": "@fiscales",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "zoom",
+   "footnote": "Las nuevas Cortes se constituyen el 23/12/2026",
+   "lines": [
+    {
+     "text": "Las nuevas Cortes nacen el 23 de diciembre y tendrán que empezar de cero.",
+     "tono": "normal"
+    },
+    {
+     "text": "¿Cuál resucitarías tú? Te leo.",
+     "tono": "normal",
+     "pausa": 0.15
+    },
+    {
+     "text": "Y síguenos para el próximo viaje de Piz.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@cero",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@resucitarías",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.8,
+     "at": 0,
+     "acciones": [
+      {
+       "at": "@nacen",
+       "cara": "ilusionado"
+      }
+     ],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 420,
+     "scale": 0.9,
+     "at": "@23",
+     "props": {
+      "texto": "23 DE DICIEMBRE",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe",
+     "out": "@resucitarías"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 790,
+     "y": 1500,
+     "scale": 0.6,
+     "at": "@resucitarías",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@resucitarías+0.2",
+       "pose": "piensa"
+      },
+      {
+       "at": "@leo",
+       "mira": "camara",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@viaje",
+       "salta": true
+      }
+     ],
+     "hud": true,
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿CUÁL RESUCITARÍAS?",
+     "x": 540,
+     "y": 450,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@resucitarías",
+     "golpe": true,
+     "out": "@síguenos-0.3",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 450,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@Piz",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.0,
+  "titulo": "Las leyes que mueren el 29N",
+  "capitulo": null
+ }
+}

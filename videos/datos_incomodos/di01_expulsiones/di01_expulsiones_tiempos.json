@@ -1,0 +1,137 @@
+{
+ "duracion": 51.6,
+ "voz_real": true,
+ "planos": [
+  {
+   "i": 0,
+   "ini": 0.0,
+   "fin": 2.87,
+   "dur": 2.87,
+   "voz": [
+    "53.700 órdenes de salir de España."
+   ]
+  },
+  {
+   "i": 1,
+   "ini": 2.87,
+   "fin": 4.36,
+   "dur": 1.48,
+   "voz": [
+    "¿Sabes cuántas se cumplieron?"
+   ]
+  },
+  {
+   "i": 2,
+   "ini": 4.36,
+   "fin": 6.07,
+   "dur": 1.71,
+   "voz": [
+    "5.705."
+   ]
+  },
+  {
+   "i": 3,
+   "ini": 6.07,
+   "fin": 8.07,
+   "dur": 2.0,
+   "voz": [
+    "Una de cada diez."
+   ]
+  },
+  {
+   "i": 4,
+   "ini": 8.07,
+   "fin": 11.74,
+   "dur": 3.67,
+   "voz": [
+    "Son extranjeros de fuera de la Unión Europea a los que el Estado ordena irse."
+   ]
+  },
+  {
+   "i": 5,
+   "ini": 11.74,
+   "fin": 16.03,
+   "dur": 4.29,
+   "voz": [
+    "Casi siempre, por estar sin papeles: una falta administrativa, no un delito."
+   ]
+  },
+  {
+   "i": 6,
+   "ini": 16.03,
+   "fin": 18.47,
+   "dur": 2.44,
+   "voz": [
+    "La orden se firma…",
+    "y la persona sigue aquí."
+   ]
+  },
+  {
+   "i": 7,
+   "ini": 18.47,
+   "fin": 22.88,
+   "dur": 4.41,
+   "voz": [
+    "España ejecuta el 10,6 %.",
+    "La media europea: el 32 %."
+   ]
+  },
+  {
+   "i": 8,
+   "ini": 22.88,
+   "fin": 29.11,
+   "dur": 6.23,
+   "voz": [
+    "Y antes no era así: en 2011 se devolvió a 23.350 personas.",
+    "En 2025, a menos de 6.000."
+   ]
+  },
+  {
+   "i": 9,
+   "ini": 29.11,
+   "fin": 31.93,
+   "dur": 2.82,
+   "voz": [
+    "La caída empezó con el PP… y siguió con el PSOE."
+   ]
+  },
+  {
+   "i": 10,
+   "ini": 31.93,
+   "fin": 37.55,
+   "dur": 5.63,
+   "voz": [
+    "¿Por qué? Para devolver a alguien, su país tiene que aceptarlo.",
+    "Y muchos no colaboran."
+   ]
+  },
+  {
+   "i": 11,
+   "ini": 37.55,
+   "fin": 43.09,
+   "dur": 5.54,
+   "voz": [
+    "Mientras, en 2026, se abrió una regularización: 1.174.978 solicitudes."
+   ]
+  },
+  {
+   "i": 12,
+   "ini": 43.09,
+   "fin": 47.83,
+   "dur": 4.74,
+   "voz": [
+    "Para unos, es sentido común. Para otros, premiar saltarse la ley."
+   ]
+  },
+  {
+   "i": 13,
+   "ini": 47.83,
+   "fin": 51.6,
+   "dur": 3.77,
+   "voz": [
+    "Una ley que casi nunca se cumple…",
+    "¿hay que cumplirla, o hay que cambiarla?"
+   ]
+  }
+ ]
+}

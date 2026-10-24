@@ -1,0 +1,673 @@
+{
+ "slug": "escenarios29n_ep3_vox",
+ "title": "29N · ¿Qué tiene que pasar para que gobierne Vox?",
+ "series_tag": "29N · ¿GOBIERNA? · EP. 3/3",
+ "accent": "vox",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.12,
+ "scribble_volume": 0.05,
+ "end_hold": 0.8,
+ "line_gap": 0.08,
+ "sources": [
+  "Ara (09-12/10/2026), recopilación de encuestas del 29N: GESOP, Sigma Dos, 40dB, SocioMétrica, GAD3, CIS: https://en.ara.cat/politics/what-do-the-polls-for-the-spanish-elections-of-november-29-say_1_5874100.html",
+  "El Liberal (09/10/2026): Imop/El Confidencial, 40dB y DYM: https://www.elliberal.cat/2026/10/09/la-derecha-lograria-201-escanos-y-vox-duplicaria-su-representacion-el-29n/",
+  "Constitución Española, art. 99 (investidura)",
+  "Resultados de las generales del 23/07/2023 (Ministerio del Interior)",
+  "El Independiente (11/07/2024): Vox rompe cinco gobiernos autonómicos con el PP",
+  "Vox, programa económico y de vivienda (voxespana.es, págs. 36-37 y 44-47); El Independiente (11/10/2026), mitin de Estepona"
+ ],
+ "caption": "🤯 Ninguna encuesta da ganador a Vox. Pero puede decidir quién gobierna\n🗳️ Hacen falta 176 diputados de 350\n📊 Encuestas de octubre: 66 de media (en 2023, 33)\n🔑 El PP no llega solo: con Vox, unos 200\n⚠️ En 2024 dejó 5 gobiernos autonómicos con el PP\n💬 ¿Vox debería entrar en el Gobierno? Sí o no\n➡️ 29N · Ep. 3/3 · 🔔 Síguenos para no perderte el siguiente · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: media de 6 encuestas de octubre (GESOP, Sigma Dos, 40dB, SocioMétrica, Imop, DYM); El Independiente 11/07/2024 (salida de 5 gobiernos autonómicos); programa económico y de vivienda de Vox. Las encuestas no son resultados. ¿Ves un error? Dínoslo y lo corregimos.",
+ "hashtags": [
+  "#PizarraPública",
+  "#PolíticaEspañola",
+  "#Elecciones29N",
+  "#Encuestas",
+  "#Vox"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "lines": [
+    {
+     "tts": "Ninguna encuesta da ganador a Vox el veintinueve de noviembre. Pero puede decidir quién gobierna. Te cuento cómo.",
+     "text": "Ninguna encuesta da ganador a Vox el 29 de noviembre. Pero puede decidir quién gobierna. Te cuento cómo."
+    },
+    {
+     "tts": "Síguenos para entender el veintinueve ene sin líos.",
+     "text": "Síguenos para entender el 29 de noviembre sin líos."
+    }
+   ],
+   "tail": 0.2,
+   "elements": [
+    {
+     "type": "text",
+     "text": "LAS ENCUESTAS NO LE DAN GANADOR",
+     "x": 540,
+     "y": 450,
+     "size": 54,
+     "color": "ink",
+     "at": 0,
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "PERO VOX PUEDE DECIDIR",
+     "x": 540,
+     "y": 640,
+     "size": 76,
+     "color": "vox",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "quién gobierna",
+     "x": 540,
+     "y": 760,
+     "size": 80,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.45,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "icon",
+     "name": "ballot_box",
+     "x": 540,
+     "y": 1010,
+     "scale": 1.2,
+     "at": "+0.05",
+     "dur": 0.7
+    },
+    {
+     "type": "stamp",
+     "text": "SÍGUENOS",
+     "sub": "@pizarrapublica",
+     "x": 540,
+     "y": 1260,
+     "w": 520,
+     "h": 140,
+     "size": 64,
+     "rotate": -5,
+     "at": "L1",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "regla",
+   "lines": [
+    {
+     "tts": "La regla: para gobernar hacen falta ciento setenta y seis diputados de trescientos cincuenta. Da igual quién quede primero.",
+     "text": "La regla: para gobernar hacen falta 176 diputados de 350. Da igual quién quede primero."
+    }
+   ],
+   "footnote": "Constitución, art. 99",
+   "elements": [
+    {
+     "type": "hemicycle",
+     "x": 540,
+     "y": 930,
+     "r_in": 150,
+     "r_out": 380,
+     "rows": 9,
+     "dot": 10,
+     "count": 350,
+     "highlight": 176,
+     "hl_color": "vox",
+     "at": "L0",
+     "dur": 1.6
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 176,
+     "x": 540,
+     "y": 905,
+     "size": 105,
+     "color": "vox",
+     "at": "L0@0.25",
+     "dur": 1.2
+    },
+    {
+     "type": "text",
+     "text": "de 350",
+     "x": 540,
+     "y": 990,
+     "size": 60,
+     "color": "gray",
+     "at": "+0.05",
+     "dur": 0.3,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "highlight",
+     "x0": 200,
+     "x1": 880,
+     "y": 1150,
+     "width": 72,
+     "at": "L0@0.7",
+     "dur": 0.35
+    },
+    {
+     "type": "text",
+     "text": "ganar ≠ gobernar",
+     "x": 540,
+     "y": 1170,
+     "size": 80,
+     "color": "ink",
+     "at": "+0",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "hoy",
+   "lines": [
+    {
+     "tts": "Las seis encuestas de octubre le dan de media sesenta y seis diputados. El doble que en dos mil veintitrés, cuando sacó treinta y tres.",
+     "text": "Las seis encuestas de octubre le dan de media 66 diputados. El doble que en 2023, cuando sacó 33."
+    }
+   ],
+   "footnote": "Media de 6 encuestas (1-11 oct. 2026)",
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿DÓNDE ESTÁ HOY?",
+     "x": 540,
+     "y": 470,
+     "size": 82,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "bars",
+     "x": 300,
+     "y": 1180,
+     "h": 520,
+     "bar_w": 170,
+     "gap": 130,
+     "max": 145,
+     "bars": [
+      {
+       "label": "2023",
+       "value": 33,
+       "color": "gray"
+      },
+      {
+       "label": "ENCUESTAS",
+       "value": 66,
+       "color": "vox"
+      }
+     ],
+     "at": "L0@0.2",
+     "dur": 1.4
+    }
+   ]
+  },
+  {
+   "id": "camino",
+   "lines": [
+    {
+     "tts": "¿Ser el más votado? Tendría que ganar unos catorce puntos. Pero el pepé no llega solo, y con Vox sumaría unos doscientos.",
+     "text": "¿Ser el más votado? Tendría que ganar unos 14 puntos. Pero el PP no llega solo, y con Vox sumaría unos 200."
+    }
+   ],
+   "footnote": "Media de 6 encuestas (1-11 oct. 2026)",
+   "elements": [
+    {
+     "type": "text",
+     "text": "PP + VOX",
+     "x": 540,
+     "y": 470,
+     "size": 80,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "gauge",
+     "box": [
+      140,
+      640,
+      800,
+      90
+     ],
+     "value": 200,
+     "max": 230,
+     "mark": 176,
+     "color": "vox",
+     "at": "L0@0.2",
+     "dur": 1.4
+    },
+    {
+     "type": "text",
+     "text": "176",
+     "x": 752.1739130434783,
+     "y": 610,
+     "size": 52,
+     "color": "ink",
+     "at": "L0@0.3",
+     "dur": 0.3,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "200",
+     "x": 540,
+     "y": 930,
+     "size": 170,
+     "color": "vox",
+     "at": "L0@0.45",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "por encima de 176",
+     "x": 540,
+     "y": 1080,
+     "size": 74,
+     "color": "ink",
+     "at": "L0@0.6",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "LA LLAVE",
+     "sub": "sin Vox, el PP no llega",
+     "x": 540,
+     "y": 1225,
+     "w": 560,
+     "h": 140,
+     "size": 56,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "pasar",
+   "lines": [
+    "Tendría dos caminos: entrar en el Gobierno con el PP, o apoyarle desde fuera.",
+    "Y el precio de ese apoyo lo pone Vox."
+   ],
+   "footnote": "Media de 6 encuestas (1-11 oct. 2026)",
+   "elements": [
+    {
+     "type": "text",
+     "text": "¿QUÉ TENDRÍA QUE PASAR?",
+     "x": 540,
+     "y": 470,
+     "size": 77,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 655,
+     "rx": 48,
+     "color": "vox",
+     "width": 8,
+     "at": "L0@0.25",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "1",
+     "x": 150,
+     "y": 680,
+     "size": 70,
+     "color": "vox",
+     "at": "+0",
+     "dur": 0.15,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Entrar en el Gobierno con el PP",
+     "x": 230,
+     "y": 680,
+     "size": 57,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "circle",
+     "x": 150,
+     "y": 855,
+     "rx": 48,
+     "color": "vox",
+     "width": 8,
+     "at": "L0@0.55",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "2",
+     "x": 150,
+     "y": 880,
+     "size": 70,
+     "color": "vox",
+     "at": "+0",
+     "dur": 0.15,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "Apoyar desde fuera o abstenerse",
+     "x": 230,
+     "y": 880,
+     "size": 54,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "text",
+     "text": "Vox decide el precio de su apoyo",
+     "x": 540,
+     "y": 1250,
+     "size": 66,
+     "color": "ink",
+     "at": "L1",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    }
+   ]
+  },
+  {
+   "id": "precedente",
+   "lines": [
+    {
+     "tts": "Ojo: en dos mil veintitrés entró en cinco gobiernos autonómicos con el pepé. Los dejó en julio de dos mil veinticuatro por el reparto de menores migrantes.",
+     "text": "Ojo: en 2023 entró en cinco gobiernos autonómicos con el PP. Los dejó en julio de 2024 por el reparto de menores migrantes."
+    }
+   ],
+   "footnote": "El Independiente (11/07/2024)",
+   "elements": [
+    {
+     "type": "highlight",
+     "x0": 390,
+     "x1": 690,
+     "y": 500,
+     "width": 90,
+     "at": "L0",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "¡OJO!",
+     "x": 540,
+     "y": 540,
+     "size": 140,
+     "color": "ink",
+     "at": "+0",
+     "dur": 0.35,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "2023",
+     "x": 540,
+     "y": 760,
+     "size": 150,
+     "color": "gray",
+     "at": "L0@0.15",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "entró en 5 gobiernos autonómicos con el PP",
+     "x": 540,
+     "y": 930,
+     "size": 49,
+     "color": "ink",
+     "at": "L0@0.35",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "y los dejó en julio de 2024",
+     "x": 540,
+     "y": 1001,
+     "size": 56,
+     "color": "ink",
+     "at": "+0.1",
+     "dur": 0.5,
+     "font": "body",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "SALIÓ",
+     "sub": "11/07/2024 · reparto de menores",
+     "x": 540,
+     "y": 1225,
+     "w": 600,
+     "h": 140,
+     "size": 56,
+     "rotate": -5,
+     "at": "L0@0.8",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "promesas",
+   "lines": [
+    {
+     "tts": "Lo que pide: prioridad nacional en la vivienda protegida, devolver a quien entró de forma irregular y nada de IRPF hasta veintidós mil euros.",
+     "text": "Lo que pide: prioridad nacional en la vivienda protegida, devolver a quien entró de forma irregular y nada de IRPF hasta 22.000 euros."
+    }
+   ],
+   "footnote": "Programa económico y de vivienda de Vox · mitin de Estepona (11/10/2026)",
+   "elements": [
+    {
+     "type": "text",
+     "text": "LO QUE PIDE EN SU PROGRAMA",
+     "x": 540,
+     "y": 470,
+     "size": 68,
+     "color": "ink",
+     "at": "L0",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "check",
+     "x": 150,
+     "y": 635,
+     "r": 40,
+     "color": "vox",
+     "width": 12,
+     "at": "L0@0.20",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "Prioridad nacional en vivienda",
+     "x": 230,
+     "y": 660,
+     "size": 61,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "check",
+     "x": 150,
+     "y": 815,
+     "r": 40,
+     "color": "vox",
+     "width": 12,
+     "at": "L0@0.45",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "Devolver a quien entró irregular",
+     "x": 230,
+     "y": 840,
+     "size": 58,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "check",
+     "x": 150,
+     "y": 995,
+     "r": 40,
+     "color": "vox",
+     "width": 12,
+     "at": "L0@0.70",
+     "dur": 0.3
+    },
+    {
+     "type": "text",
+     "text": "0 € de IRPF hasta 22.000 €",
+     "x": 230,
+     "y": 1020,
+     "size": 64,
+     "color": "ink",
+     "at": "+0.05",
+     "dur": 0.5,
+     "font": "hand",
+     "align": "left"
+    },
+    {
+     "type": "stamp",
+     "text": "PROMESA",
+     "sub": "aún sin programa del 29N",
+     "x": 540,
+     "y": 1225,
+     "w": 520,
+     "h": 140,
+     "size": 58,
+     "rotate": -5,
+     "at": "L0@0.85",
+     "dur": 0.55
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "lines": [
+    "¿Vox debería entrar en el Gobierno?",
+    "Comenta sí o no.",
+    "Y síguenos para no perderte nada del 29 de noviembre."
+   ],
+   "elements": [
+    {
+     "type": "icon",
+     "name": "question",
+     "x": 540,
+     "y": 560,
+     "scale": 1.0,
+     "at": "L0",
+     "dur": 0.5
+    },
+    {
+     "type": "text",
+     "text": "¿VOX DEBERÍA ENTRAR\nEN EL GOBIERNO?",
+     "x": 540,
+     "y": 800,
+     "size": 84,
+     "color": "ink",
+     "at": "L0@0.2",
+     "dur": 0.6,
+     "font": "hand",
+     "align": "center",
+     "line_height": 1.08
+    },
+    {
+     "type": "text",
+     "text": "COMENTA",
+     "x": 540,
+     "y": 1000,
+     "size": 70,
+     "color": "gray",
+     "at": "L1",
+     "dur": 0.3,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "text",
+     "text": "SÍ  o  NO",
+     "x": 540,
+     "y": 1100,
+     "size": 88,
+     "color": "vox",
+     "at": "+0.05",
+     "dur": 0.4,
+     "font": "hand",
+     "align": "center"
+    },
+    {
+     "type": "stamp",
+     "text": "SÍGUENOS",
+     "sub": "no te pierdas el 29N",
+     "x": 540,
+     "y": 1270,
+     "w": 560,
+     "h": 140,
+     "size": 64,
+     "rotate": -5,
+     "at": "L2",
+     "dur": 0.55
+    }
+   ]
+  }
+ ]
+}

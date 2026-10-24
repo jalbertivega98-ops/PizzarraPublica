@@ -1,0 +1,1094 @@
+{
+ "slug": "broncano_wild",
+ "title": "Sí a Broncano… y a Wild, silencio",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "The Objective (21/10/2026): Sánchez estará el jueves 22 en La Revuelta",
+  "OKdiario (22/10/2026): 21:45 en La 1; preguntas clásicas del programa",
+  "Hispanidad (22/10/2026): Sánchez aún no ha contestado a Wild; formato sin cortes ni preguntas pactadas",
+  "Infobae / Europa Press (20/10/2026): Feijóo y Abascal aceptan a Wild; plazo hasta el viernes 23",
+  "BilbaoHiria (22/10/2026): en 2023 Wild se quedó sin Sánchez; Feijóo y Abascal no han respondido a La Revuelta",
+  "Personajes dibujados como pizarras, sin caricatura"
+ ],
+ "caption": "📺 Esta noche Sánchez se sienta con Broncano en La Revuelta (21:45, La 1)\n🎙️ ¿Y Jordi Wild? Sigue sin respuesta: tiene hasta mañana, viernes 23\n⏱️ Wild ofrece hasta 90 minutos, sin cortes y sin preguntas pactadas; Feijóo y Abascal ya dijeron que sí\n😂 La Revuelta: humor en la tele pública y la pregunta clásica, ¿cuánto dinero tienes en el banco?\n👀 Pero ojo: Feijóo y Abascal tampoco han contestado a Broncano\n💬 ¿Entrevista cómoda o valiente? ¿BRONCANO o WILD? Te leo 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: The Objective 21/10/2026 · OKdiario 22/10/2026 · Hispanidad 22/10/2026 · Infobae/Europa Press 20/10/2026 · BilbaoHiria 22/10/2026. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#Broncano",
+  "#LaRevuelta",
+  "#JordiWild",
+  "#Sánchez",
+  "#29N",
+  "#elecciones",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plato",
+    "rotulo": "LA REVUELTA"
+   },
+   "animo": "tension",
+   "footnote": "The Objective 21/10/2026 · OKdiario 22/10/2026",
+   "lines": [
+    {
+     "text": "Esta noche, Pedro Sánchez se sienta con Broncano en La Revuelta.",
+     "tono": "energia"
+    },
+    {
+     "text": "¿Y Jordi Wild? Sigue esperando su respuesta.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1100
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Broncano",
+     "plano": "general",
+     "sobre": [
+      540,
+      1050
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@Wild",
+     "plano": "medio",
+     "sobre": "wild",
+     "dur": 0.4,
+     "aire": 220
+    },
+    {
+     "at": "@respuesta",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "broncano",
+     "x": 770,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": 0.3,
+       "pose": "saluda"
+      },
+      {
+       "at": "@sienta",
+       "mira": "izq",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@Broncano",
+       "salta": true
+      },
+      {
+       "at": "@Revuelta",
+       "pose": "pulgar"
+      }
+     ],
+     "entra": "nada",
+     "id": "broncano"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": -200,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0.1,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": 0.2,
+       "x": 340,
+       "dur": 1.0
+      },
+      {
+       "at": "@sienta",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@Revuelta",
+       "mira": "der"
+      },
+      {
+       "at": "@Wild",
+       "mira": "camara",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "rotulo",
+     "text": "ESTA NOCHE · LA 1",
+     "x": 540,
+     "y": 520,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@noche",
+     "golpe": true,
+     "out": "@Wild",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "wild",
+     "x": 1300,
+     "y": 1640,
+     "scale": 0.5,
+     "at": "@Wild-0.3",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Wild",
+       "x": 540,
+       "dur": 0.6,
+       "corre": true
+      },
+      {
+       "at": "@esperando",
+       "cara": "preocupado",
+       "mira": "arriba"
+      },
+      {
+       "at": "@respuesta",
+       "tiembla": true
+      }
+     ],
+     "entra": "nada",
+     "objeto": "movil",
+     "pose": "sostiene",
+     "id": "wild"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿Y WILD?",
+     "x": 540,
+     "y": 520,
+     "size": 110,
+     "color": "rojo",
+     "at": "@Wild",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 720,
+     "scale": 1.0,
+     "at": "@respuesta",
+     "props": {
+      "texto": "SIN RESPUESTA",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "wild",
+   "fondo": "estudio",
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "Hispanidad 22/10/2026 · Infobae/Europa Press 20/10/2026",
+   "lines": [
+    {
+     "text": "En The Wild Project: hasta noventa minutos, sin cortes y sin preguntas pactadas.",
+     "tono": "normal"
+    },
+    {
+     "text": "Feijóo y Abascal ya han dicho que sí.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@cortes",
+     "plano": "general",
+     "sobre": [
+      540,
+      850
+     ],
+     "dur": 0.5,
+     "zoom": 1.05
+    },
+    {
+     "at": "@Feijóo",
+     "plano": "general",
+     "sobre": [
+      700,
+      1150
+     ],
+     "dur": 0.6
+    },
+    {
+     "at": "@sí",
+     "plano": "general",
+     "sobre": [
+      560,
+      1150
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 620,
+     "scale": 1.12,
+     "at": 0,
+     "props": {
+      "lineas": [
+       "HASTA 90 MINUTOS",
+       "SIN CORTES",
+       "SIN PREGUNTAS PACTADAS"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "papel",
+     "dibuja": 2.4,
+     "out": "@Feijóo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 400,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       225,
+       30,
+       40
+      ],
+      "texto": "SÁNCHEZ"
+     },
+     "acciones": [],
+     "id": "s0",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 680,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       0,
+       104,
+       180
+      ],
+      "texto": "FEIJÓO"
+     },
+     "acciones": [],
+     "id": "s1",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 930,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       90,
+       175,
+       40
+      ],
+      "texto": "ABASCAL"
+     },
+     "acciones": [],
+     "id": "s2",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 680,
+     "y": 1310,
+     "scale": 0.42,
+     "at": "@Feijóo-0.3",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@Abascal",
+       "pose": "pulgar"
+      },
+      {
+       "at": "@sí",
+       "salta": true
+      }
+     ],
+     "entra": "cae",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 930,
+     "y": 1310,
+     "scale": 0.42,
+     "at": "@Abascal-0.3",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@dicho",
+       "pose": "saluda"
+      },
+      {
+       "at": "@sí",
+       "salta": true
+      }
+     ],
+     "entra": "cae",
+     "id": "abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 800,
+     "y": 1450,
+     "scale": 1.0,
+     "at": "@sí",
+     "props": {
+      "texto": "DENTRO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "rotulo",
+     "text": "?",
+     "x": 400,
+     "y": 1080,
+     "size": 150,
+     "color": "rojo",
+     "at": "@sí",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 130,
+     "y": 1660,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "confundido",
+     "acciones": [
+      {
+       "at": "@noventa",
+       "cara": "sorpresa",
+       "mira": "arriba"
+      },
+      {
+       "at": "@cortes",
+       "pose": "piensa"
+      },
+      {
+       "at": "@pactadas",
+       "cara": "idea",
+       "salta": true
+      },
+      {
+       "at": "@Feijóo",
+       "mira": "der"
+      },
+      {
+       "at": "@sí",
+       "pose": "senala"
+      }
+     ],
+     "entra": "nada",
+     "id": "pizon"
+    }
+   ]
+  },
+  {
+   "id": "revuelta",
+   "fondo": {
+    "tipo": "plato",
+    "rotulo": "LA REVUELTA"
+   },
+   "animo": "comico",
+   "trans": "papel",
+   "footnote": "The Objective 21/10/2026 · OKdiario 22/10/2026",
+   "lines": [
+    {
+     "text": "En La Revuelta: humor, en La 1, la tele pública.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y una pregunta que es un clásico: ¿cuánto dinero tienes en el banco?",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1050
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@pública",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5,
+     "zoom": 1.05
+    },
+    {
+     "at": "@cuánto",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5,
+     "zoom": 1.1
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "broncano",
+     "x": 770,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@humor",
+       "salta": true,
+       "cara": "riendo"
+      },
+      {
+       "at": "@pública",
+       "pose": "senala_izq"
+      },
+      {
+       "at": "@clásico",
+       "cara": "burla",
+       "pose": "jarras"
+      },
+      {
+       "at": "@cuánto",
+       "pose": "senala_izq",
+       "mira": "izq"
+      }
+     ],
+     "entra": "nada",
+     "id": "broncano"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 310,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@humor",
+       "cara": "riendo"
+      },
+      {
+       "at": "@La#2",
+       "mira": "der"
+      },
+      {
+       "at": "@pregunta",
+       "pose": "piensa"
+      },
+      {
+       "at": "@dinero",
+       "cara": "susto",
+       "take": true
+      },
+      {
+       "at": "@banco",
+       "tiembla": true
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "rotulo",
+     "text": "HUMOR · LA 1",
+     "x": 540,
+     "y": 480,
+     "size": 92,
+     "color": "amarillo",
+     "at": "@humor",
+     "golpe": true,
+     "out": "@clásico",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 700,
+     "y": 620,
+     "scale": 0.9,
+     "at": "@cuánto-0.2",
+     "props": {
+      "lineas": [
+       "¿CUÁNTO DINERO",
+       "TIENES EN EL BANCO?"
+      ],
+      "cola": [
+       1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "id": "plazo",
+   "fondo": "oficina",
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Infobae/Europa Press 20/10/2026 · BilbaoHiria 22/10/2026",
+   "lines": [
+    {
+     "text": "Wild le da hasta mañana, viernes 23.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y en 2023 ya se quedó sin él.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@viernes",
+     "plano": "general",
+     "sobre": [
+      700,
+      800
+     ],
+     "dur": 0.4,
+     "zoom": 1.08
+    },
+    {
+     "at": "@2023",
+     "plano": "medio",
+     "sobre": "wild",
+     "dur": 0.5,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 760,
+     "y": 760,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "mes": "OCTUBRE",
+      "inicio": 3,
+      "dias": 31,
+      "marcados": [
+       23
+      ],
+      "colores": {
+       "23": "rojo"
+      }
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "rotulo",
+     "text": "VIERNES 23",
+     "x": 760,
+     "y": 1180,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@23",
+     "golpe": true,
+     "out": "@2023",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 220,
+     "y": 700,
+     "scale": 0.6,
+     "at": "@mañana",
+     "props": {
+      "velocidad": 6
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "wild",
+     "x": 340,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@hasta",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@viernes",
+       "mira": "calendario"
+      },
+      {
+       "at": "@2023",
+       "cara": "triste",
+       "pose": "encoge"
+      },
+      {
+       "at": "@él",
+       "mira": "camara",
+       "cara": "burla"
+      }
+     ],
+     "entra": "nada",
+     "id": "wild"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 760,
+     "y": 1180,
+     "scale": 1.0,
+     "at": "@2023",
+     "props": {
+      "texto": "2023: NO FUE",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "giro",
+   "fondo": {
+    "tipo": "plato",
+    "rotulo": "LA REVUELTA"
+   },
+   "animo": "comico",
+   "musica": "corte",
+   "trans": "iris",
+   "footnote": "BilbaoHiria 22/10/2026",
+   "lines": [
+    {
+     "text": "Pero ojo: Broncano también ha invitado a Feijóo y a Abascal…",
+     "tono": "normal"
+    },
+    {
+     "text": "y ellos tampoco le han contestado.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1050
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Feijóo",
+     "plano": "general",
+     "sobre": [
+      700,
+      1050
+     ],
+     "dur": 0.6,
+     "zoom": 1.05
+    },
+    {
+     "at": "@tampoco",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.4,
+     "zoom": 1.1
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "broncano",
+     "x": 260,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@ojo",
+       "pose": "senala",
+       "mira": "camara"
+      },
+      {
+       "at": "@invitado",
+       "pose": "saluda",
+       "mira": "der"
+      },
+      {
+       "at": "@tampoco",
+       "cara": "burla",
+       "pose": "jarras"
+      },
+      {
+       "at": "@contestado",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "broncano"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 1300,
+     "y": 1340,
+     "scale": 0.68,
+     "at": "@Feijóo-0.4",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Feijóo",
+       "x": 640,
+       "dur": 0.7
+      },
+      {
+       "at": "@tampoco",
+       "mira": "arriba",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "nada",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 1400,
+     "y": 1340,
+     "scale": 0.68,
+     "at": "@Abascal-0.4",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Abascal",
+       "x": 890,
+       "dur": 0.7
+      },
+      {
+       "at": "@tampoco",
+       "mira": "izq",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "nada",
+     "id": "abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 560,
+     "scale": 1.0,
+     "at": "@contestado",
+     "props": {
+      "texto": "SIN RESPUESTA",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": {
+    "tipo": "rayos",
+    "color": "amarillo"
+   },
+   "animo": "final",
+   "trans": "zoom",
+   "footnote": "Pregunta a la audiencia",
+   "lines": [
+    {
+     "text": "¿Entrevista cómoda o valiente? ¿Broncano o Wild?",
+     "tono": "energia"
+    },
+    {
+     "text": "Te leo en comentarios. Y síguenos.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Broncano",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@síguenos",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "¿CÓMODA O VALIENTE?",
+     "x": 540,
+     "y": 480,
+     "size": 78,
+     "color": "rojo",
+     "at": 0.2,
+     "golpe": true,
+     "out": "@Broncano",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "¿BRONCANO O WILD?",
+     "x": 540,
+     "y": 480,
+     "size": 88,
+     "color": "rojo",
+     "at": "@Broncano",
+     "golpe": true,
+     "out": "@síguenos-0.3",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 480,
+     "size": 110,
+     "color": "rojo",
+     "at": "@síguenos",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "broncano",
+     "x": 280,
+     "y": 1340,
+     "scale": 0.65,
+     "at": 0,
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@cómoda",
+       "pose": "saluda"
+      },
+      {
+       "at": "@Broncano",
+       "salta": true
+      },
+      {
+       "at": "@comentarios",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "id": "broncano"
+    },
+    {
+     "type": "personaje",
+     "quien": "wild",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.65,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@valiente",
+       "pose": "jarras"
+      },
+      {
+       "at": "@Wild",
+       "salta": true
+      },
+      {
+       "at": "@comentarios",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "id": "wild"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1660,
+     "scale": 0.45,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Entrevista",
+       "mira": "izq"
+      },
+      {
+       "at": "@valiente",
+       "mira": "der"
+      },
+      {
+       "at": "@leo",
+       "pose": "senala",
+       "cara": "riendo"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.6,
+  "titulo": "Sí a Broncano… y a Wild, silencio",
+  "capitulo": null
+ }
+}

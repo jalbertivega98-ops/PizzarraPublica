@@ -1,0 +1,1331 @@
+{
+ "slug": "jordi_wild2",
+ "title": "Jordi Wild cambia las reglas",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Infobae / Europa Press (20/10/2026): Wild retira el «o todos o ninguno»; aceptan Feijóo, Abascal y Colau; plazo hasta el 23",
+  "Nació Digital (20/10/2026): entrevistas de 50 a 90 minutos sin edición; emisión desde el 9 de noviembre",
+  "Just the News (29/10/2024): Rogan-Trump, 10 millones de visualizaciones en menos de 24 horas",
+  "Xataka (17/09/2025): The Wild Project, cerca de 7 millones de suscriptores",
+  "Espinof (11/07/2023): cara a cara de 2023, 5,91 millones, el debate menos visto",
+  "Personajes dibujados como pizarras, sin caricatura"
+ ],
+ "caption": "📈 10 millones de visualizaciones en 24 horas: eso hizo la entrevista de Joe Rogan a Trump\n🎙️ Jordi Wild quiere repetirlo: su canal tiene casi 7 millones de suscriptores (el cara a cara de 2023 lo vieron 5,9 millones)\n🔄 Cambia las reglas: ya no hace falta que vayan todos\n✅ Feijóo, Abascal y Colau aceptan\n⏳ Sánchez no responde: tiene hasta el viernes 23\n🎥 Hasta 90 minutos, sin cortes y con verificadores; desde el 9 de noviembre\n💬 ¿Llenará Sánchez su silla? SÍ o NO 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Infobae/Europa Press 20/10/2026 · Nació Digital 20/10/2026 · Just the News 29/10/2024 · Xataka 17/09/2025 · Espinof 11/07/2023. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#JordiWild",
+  "#TheWildProject",
+  "#29N",
+  "#elecciones",
+  "#Sánchez",
+  "#Feijóo",
+  "#Abascal",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "estudio",
+   "animo": "tension",
+   "footnote": "Just the News 29/10/2024",
+   "lines": [
+    {
+     "text": "Diez millones de visualizaciones en menos de veinticuatro horas.",
+     "tono": "energia"
+    },
+    {
+     "text": "Eso logró la entrevista de Joe Rogan a Trump… y Jordi Wild quiere repetirlo en España.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@veinticuatro",
+     "plano": "general",
+     "sobre": [
+      540,
+      800
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@Rogan",
+     "plano": "general",
+     "sobre": [
+      540,
+      1100
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@Wild",
+     "plano": "medio",
+     "sobre": "wild",
+     "dur": 0.4,
+     "aire": 200
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 640,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "valor": 10000000,
+      "ancho": 860
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "dibuja": 1.6,
+     "out": "@Rogan"
+    },
+    {
+     "type": "rotulo",
+     "text": "EN 24 HORAS",
+     "x": 540,
+     "y": 860,
+     "size": 92,
+     "color": "amarillo",
+     "at": "@veinticuatro",
+     "golpe": true,
+     "out": "@Rogan",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 560,
+     "scale": 0.9,
+     "at": "@Rogan",
+     "props": {
+      "texto": "JOE ROGAN × TRUMP",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "microfono",
+     "x": 760,
+     "y": 1330,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "encendido": true
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "wild",
+     "x": 540,
+     "y": 1640,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": 0.4,
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@millones",
+       "salta": true
+      },
+      {
+       "at": "@visualizaciones",
+       "mira": "arriba"
+      },
+      {
+       "at": "@menos",
+       "pose": "piensa"
+      },
+      {
+       "at": "@veinticuatro",
+       "pose": "senala",
+       "mira": "arriba"
+      },
+      {
+       "at": "@entrevista",
+       "mira": "izq"
+      },
+      {
+       "at": "@Rogan",
+       "pose": "senala_izq"
+      },
+      {
+       "at": "@Trump",
+       "pose": "jarras",
+       "cara": "burla"
+      },
+      {
+       "at": "@Wild",
+       "salta": true,
+       "cara": "riendo"
+      },
+      {
+       "at": "@España",
+       "pose": "senala",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "id": "wild"
+    }
+   ]
+  },
+  {
+   "id": "tamano",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Xataka 17/09/2025 · Espinof 11/07/2023",
+   "lines": [
+    {
+     "text": "Su canal tiene casi siete millones de suscriptores.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y el último cara a cara en la tele lo vieron 5,9 millones: el debate menos visto de la historia.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@siete",
+     "plano": "general",
+     "sobre": [
+      540,
+      700
+     ],
+     "dur": 0.6,
+     "zoom": 1.08
+    },
+    {
+     "at": "@cara",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 1.04
+    },
+    {
+     "at": "@historia",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "CASI 7 MILLONES",
+     "x": 540,
+     "y": 430,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@canal",
+     "golpe": true,
+     "out": "@cara",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 600,
+     "scale": 0.9,
+     "at": "@suscriptores",
+     "props": {
+      "texto": "DE SUSCRIPTORES",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@cara"
+    },
+    {
+     "type": "objeto",
+     "objeto": "tele",
+     "x": 540,
+     "y": 980,
+     "scale": 1.05,
+     "at": "@cara",
+     "props": {
+      "texto": "CARA A CARA 2023"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "rotulo",
+     "text": "5,9 MILLONES",
+     "x": 540,
+     "y": 430,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@vieron",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1460,
+     "scale": 1.0,
+     "at": "@menos",
+     "props": {
+      "texto": "EL MENOS VISTO",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 900,
+     "y": 1660,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "confundido",
+     "acciones": [
+      {
+       "at": "@canal",
+       "mira": "arriba",
+       "pose": "senala"
+      },
+      {
+       "at": "@suscriptores",
+       "cara": "sorpresa",
+       "salta": true
+      },
+      {
+       "at": "@tele",
+       "mira": "izq",
+       "pose": "piensa"
+      },
+      {
+       "at": "@último",
+       "mira": "izq"
+      },
+      {
+       "at": "@vieron",
+       "pose": "senala_izq"
+      },
+      {
+       "at": "@menos",
+       "tiembla": true
+      },
+      {
+       "at": "@historia",
+       "cara": "susto",
+       "take": true
+      }
+     ],
+     "entra": "nada",
+     "id": "pizon"
+    }
+   ]
+  },
+  {
+   "id": "reglas",
+   "fondo": "calle",
+   "animo": "tension",
+   "trans": "papel",
+   "footnote": "Infobae / Europa Press 20/10/2026",
+   "lines": [
+    {
+     "text": "Y Wild acaba de cambiar las reglas: ya no hace falta que vayan todos.",
+     "tono": "normal"
+    },
+    {
+     "text": "Se lo pidieron sus seguidores.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@reglas",
+     "plano": "general",
+     "sobre": [
+      540,
+      800
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    },
+    {
+     "at": "@todos",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.1
+    },
+    {
+     "at": "@seguidores",
+     "plano": "general",
+     "sobre": [
+      540,
+      1050
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 700,
+     "scale": 1.6,
+     "at": 0,
+     "props": {
+      "lineas": [
+       "O TODOS",
+       "O NADIE"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "papel",
+     "dibuja": 0.8,
+     "out": "@ya"
+    },
+    {
+     "type": "rotulo",
+     "text": "YA NO",
+     "x": 540,
+     "y": 700,
+     "size": 160,
+     "color": "rojo",
+     "at": "@ya",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "wild",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@cambiar",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@ya",
+       "pose": "encoge",
+       "cara": "riendo"
+      },
+      {
+       "at": "@falta",
+       "x": 380,
+       "dur": 0.5
+      },
+      {
+       "at": "@todos",
+       "salta": true,
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "id": "wild"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1300,
+     "y": 1600,
+     "scale": 0.4,
+     "at": "@seguidores-0.2",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@seguidores",
+       "x": 620,
+       "dur": 0.8,
+       "corre": true
+      },
+      {
+       "at": "@seguidores+0.4",
+       "pose": "saluda",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "critica",
+     "x": 1300,
+     "y": 1600,
+     "scale": 0.4,
+     "at": "@seguidores-0.2",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@seguidores",
+       "x": 780,
+       "dur": 0.8,
+       "corre": true
+      },
+      {
+       "at": "@seguidores+0.4",
+       "pose": "saluda",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "critica"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 1300,
+     "y": 1600,
+     "scale": 0.4,
+     "at": "@seguidores-0.2",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@seguidores",
+       "x": 940,
+       "dur": 0.8,
+       "corre": true
+      },
+      {
+       "at": "@seguidores+0.4",
+       "pose": "saluda",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "pizon"
+    }
+   ]
+  },
+  {
+   "id": "si",
+   "fondo": "estudio",
+   "animo": "alegre",
+   "trans": "iris",
+   "footnote": "Infobae / Europa Press 20/10/2026",
+   "lines": [
+    {
+     "text": "Feijóo y Abascal siguen dentro.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y hoy ha aceptado Ada Colau, del Frente Amplio.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      700,
+      1150
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Abascal",
+     "plano": "general",
+     "sobre": [
+      760,
+      1150
+     ],
+     "dur": 0.5,
+     "zoom": 1.05
+    },
+    {
+     "at": "@hoy",
+     "plano": "general",
+     "sobre": [
+      540,
+      1150
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@Colau",
+     "plano": "general",
+     "sobre": [
+      300,
+      1150
+     ],
+     "dur": 0.6,
+     "zoom": 1.05
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 150,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": "gris",
+      "texto": "COLAU"
+     },
+     "acciones": [],
+     "id": "s0",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 400,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       225,
+       30,
+       40
+      ],
+      "texto": "SÁNCHEZ"
+     },
+     "acciones": [],
+     "id": "s1",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 680,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       0,
+       104,
+       180
+      ],
+      "texto": "FEIJÓO"
+     },
+     "acciones": [],
+     "id": "s2",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 930,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       90,
+       175,
+       40
+      ],
+      "texto": "ABASCAL"
+     },
+     "acciones": [],
+     "id": "s3",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 680,
+     "y": 1310,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@Feijóo",
+       "pose": "pulgar"
+      },
+      {
+       "at": "@siguen",
+       "salta": true
+      },
+      {
+       "at": "@hoy",
+       "mira": "izq"
+      }
+     ],
+     "entra": "nada",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 930,
+     "y": 1310,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@Abascal",
+       "pose": "saluda"
+      },
+      {
+       "at": "@dentro",
+       "salta": true
+      },
+      {
+       "at": "@hoy",
+       "mira": "izq"
+      }
+     ],
+     "entra": "nada",
+     "id": "abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 800,
+     "y": 1450,
+     "scale": 1.0,
+     "at": "@dentro",
+     "props": {
+      "texto": "DENTRO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "colau",
+     "x": -200,
+     "y": 1310,
+     "scale": 0.42,
+     "at": "@aceptado-0.4",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@aceptado",
+       "x": 150,
+       "dur": 0.8,
+       "corre": true
+      },
+      {
+       "at": "@Frente",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "nada",
+     "id": "colau"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 220,
+     "y": 1450,
+     "scale": 1.0,
+     "at": "@Colau",
+     "props": {
+      "texto": "ACEPTA",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "sanchez",
+   "fondo": "oficina",
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Infobae / Europa Press 20/10/2026",
+   "lines": [
+    {
+     "text": "¿Y Sánchez? Sigue sin responder.",
+     "tono": "normal"
+    },
+    {
+     "text": "Wild le pone fecha: hasta este viernes 23. Si no contesta, se queda fuera.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "medio",
+     "sobre": "sanchez",
+     "dur": 0,
+     "aire": 220
+    },
+    {
+     "at": "@fecha",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@fuera",
+     "plano": "medio",
+     "sobre": "sanchez",
+     "dur": 0.4,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 340,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Sánchez",
+       "pose": "piensa"
+      },
+      {
+       "at": "@responder",
+       "mira": "camara",
+       "pose": "encoge"
+      },
+      {
+       "at": "@viernes",
+       "mira": "calendario",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@fuera",
+       "cara": "susto",
+       "take": true
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 380,
+     "y": 520,
+     "scale": 1.0,
+     "at": "@responder",
+     "props": {
+      "texto": "PENDIENTE",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 760,
+     "y": 760,
+     "scale": 0.5,
+     "at": "@fecha",
+     "props": {
+      "mes": "OCTUBRE",
+      "inicio": 3,
+      "dias": 31,
+      "marcados": [
+       23
+      ],
+      "colores": {
+       "23": "rojo"
+      }
+     },
+     "acciones": [],
+     "id": "calendario",
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "rotulo",
+     "text": "VIERNES 23",
+     "x": 760,
+     "y": 1180,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@23",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 220,
+     "y": 1100,
+     "scale": 0.6,
+     "at": "@contesta",
+     "props": {
+      "velocidad": 6
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "id": "formato",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Nació Digital 20/10/2026 · Infobae 20/10/2026",
+   "lines": [
+    {
+     "text": "Hasta hora y media, sin cortes y con dos periodistas verificando datos.",
+     "tono": "normal"
+    },
+    {
+     "text": "Se emitirán desde el 9 de noviembre.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@periodistas",
+     "plano": "general",
+     "sobre": [
+      540,
+      850
+     ],
+     "dur": 0.6,
+     "zoom": 1.05
+    },
+    {
+     "at": "@9",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 700,
+     "scale": 1.5,
+     "at": 0,
+     "props": {
+      "lineas": [
+       "HASTA 90 MINUTOS",
+       "SIN CORTES",
+       "2 PERIODISTAS VERIFICAN"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "papel",
+     "dibuja": 2.4
+    },
+    {
+     "type": "rotulo",
+     "text": "DESDE EL 9N",
+     "x": 400,
+     "y": 1180,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@noviembre-0.3",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 850,
+     "y": 1560,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@hora",
+       "pose": "senala",
+       "mira": "arriba"
+      },
+      {
+       "at": "@cortes",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@periodistas",
+       "pose": "piensa"
+      },
+      {
+       "at": "@verificando",
+       "cara": "idea",
+       "mira": "camara"
+      },
+      {
+       "at": "@emitirán",
+       "pose": "senala"
+      },
+      {
+       "at": "@noviembre",
+       "salta": true,
+       "cara": "riendo"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "estudio",
+   "animo": "final",
+   "trans": "zoom",
+   "footnote": "Pregunta a la audiencia",
+   "lines": [
+    {
+     "text": "¿Llenará Sánchez su silla? Escribe SÍ o NO, te leo.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y síguenos.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1150
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@SÍ",
+     "plano": "general",
+     "sobre": [
+      400,
+      1100
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@síguenos",
+     "plano": "general",
+     "sobre": [
+      540,
+      1150
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 150,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": "gris",
+      "texto": "COLAU"
+     },
+     "acciones": [],
+     "id": "s0",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 400,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       225,
+       30,
+       40
+      ],
+      "texto": "SÁNCHEZ"
+     },
+     "acciones": [],
+     "id": "s1",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 680,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       0,
+       104,
+       180
+      ],
+      "texto": "FEIJÓO"
+     },
+     "acciones": [],
+     "id": "s2",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 930,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       90,
+       175,
+       40
+      ],
+      "texto": "ABASCAL"
+     },
+     "acciones": [],
+     "id": "s3",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "colau",
+     "x": 150,
+     "y": 1310,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Sánchez",
+       "mira": "der"
+      }
+     ],
+     "entra": "nada",
+     "id": "colau"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 680,
+     "y": 1310,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Sánchez",
+       "mira": "izq"
+      }
+     ],
+     "entra": "nada",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 930,
+     "y": 1310,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Sánchez",
+       "mira": "izq"
+      }
+     ],
+     "entra": "nada",
+     "id": "abascal"
+    },
+    {
+     "type": "personaje",
+     "quien": "wild",
+     "x": 520,
+     "y": 1640,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@silla",
+       "mira": "camara",
+       "pose": "piensa"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "nada",
+     "id": "wild"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿SÍ O NO?",
+     "x": 540,
+     "y": 560,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@SÍ",
+     "golpe": true,
+     "out": "@síguenos-0.3",
+     "fx": [
+      {
+       "at": "@leo",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 560,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.0,
+  "titulo": "Jordi Wild cambia las reglas",
+  "capitulo": null
+ }
+}

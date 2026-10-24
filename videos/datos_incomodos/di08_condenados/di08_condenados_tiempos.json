@@ -1,0 +1,124 @@
+{
+ "duracion": 50.65,
+ "voz_real": true,
+ "planos": [
+  {
+   "i": 0,
+   "ini": 0.0,
+   "fin": 3.62,
+   "dur": 3.62,
+   "voz": [
+    "2,5 veces. Es lo que dice el INE de los condenados extranjeros."
+   ]
+  },
+  {
+   "i": 1,
+   "ini": 3.62,
+   "fin": 7.37,
+   "dur": 3.75,
+   "voz": [
+    "En 2025 condenaron a más de 306.000 adultos en España."
+   ]
+  },
+  {
+   "i": 2,
+   "ini": 7.37,
+   "fin": 11.63,
+   "dur": 4.26,
+   "voz": [
+    "Por cada 1.000 habitantes: 6,1 españoles… y 15,3 extranjeros."
+   ]
+  },
+  {
+   "i": 3,
+   "ini": 11.63,
+   "fin": 14.97,
+   "dur": 3.34,
+   "voz": [
+    "Pero ojo: siete de cada diez condenados son españoles."
+   ]
+  },
+  {
+   "i": 4,
+   "ini": 14.97,
+   "fin": 18.82,
+   "dur": 3.86,
+   "voz": [
+    "Hay más condenados españoles. Pero, en proporción, los extranjeros salen más."
+   ]
+  },
+  {
+   "i": 5,
+   "ini": 18.82,
+   "fin": 20.73,
+   "dur": 1.9,
+   "voz": [
+    "¿Por qué? Primero: edad y sexo."
+   ]
+  },
+  {
+   "i": 6,
+   "ini": 20.73,
+   "fin": 25.28,
+   "dur": 4.56,
+   "voz": [
+    "Ocho de cada diez condenados son hombres. Y la población extranjera es más joven y más masculina."
+   ]
+  },
+  {
+   "i": 7,
+   "ini": 25.28,
+   "fin": 29.49,
+   "dur": 4.2,
+   "voz": [
+    "Comparando a igual edad y sexo, la diferencia baja de 2,7 a 1,9."
+   ]
+  },
+  {
+   "i": 8,
+   "ini": 29.49,
+   "fin": 32.49,
+   "dur": 3.0,
+   "voz": [
+    "La brecha existe. Pero casi la mitad se explica por eso."
+   ]
+  },
+  {
+   "i": 9,
+   "ini": 32.49,
+   "fin": 35.29,
+   "dur": 2.8,
+   "voz": [
+    "Segundo: extranjero no significa irregular."
+   ]
+  },
+  {
+   "i": 10,
+   "ini": 35.29,
+   "fin": 39.06,
+   "dur": 3.76,
+   "voz": [
+    "Un alemán, un residente legal o un turista también cuentan como extranjeros."
+   ]
+  },
+  {
+   "i": 11,
+   "ini": 39.06,
+   "fin": 42.48,
+   "dur": 3.42,
+   "voz": [
+    "¿Y qué delitos? Sobre todo seguridad vial, lesiones y hurtos."
+   ]
+  },
+  {
+   "i": 12,
+   "ini": 42.48,
+   "fin": 50.65,
+   "dur": 8.17,
+   "voz": [
+    "¿Qué debería hacer España para bajar estas cifras? A: más integración y empleo. B: más control y expulsiones.",
+    "Comenta A o B."
+   ]
+  }
+ ]
+}

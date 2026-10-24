@@ -1,0 +1,104 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 6.48,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 1.79,
+    "texto": "Meter este sobre en la urna parece gratis…"
+   },
+   {
+    "t0": 1.99,
+    "t1": 6.03,
+    "texto": "pero las elecciones del 29N costarán más de 270 millones de euros."
+   }
+  ]
+ },
+ {
+  "escena": "viaje",
+  "inicio": 6.48,
+  "fin": 15.67,
+  "frases": [
+   {
+    "t0": 6.8,
+    "t1": 12.15,
+    "texto": "Hay que llevar papeletas a 38,7 millones de electores, en 52 provincias y en el extranjero."
+   },
+   {
+    "t0": 12.35,
+    "t1": 15.22,
+    "texto": "Solo Correos se llevó más de 100 millones en 2023."
+   }
+  ]
+ },
+ {
+  "escena": "factura",
+  "inicio": 15.67,
+  "fin": 22.69,
+  "frases": [
+   {
+    "t0": 15.97,
+    "t1": 22.24,
+    "texto": "En 2023, organizarlas costó 220,8 millones: Correos, la Administración, las mesas y el recuento."
+   }
+  ]
+ },
+ {
+  "escena": "mesa",
+  "inicio": 22.69,
+  "fin": 30.52,
+  "frases": [
+   {
+    "t0": 23.39,
+    "t1": 27.96,
+    "texto": "A cada miembro de mesa le pagan 75 euros por ese día. Desde junio, cinco más que antes."
+   },
+   {
+    "t0": 28.21,
+    "t1": 30.07,
+    "texto": "Ya no hay excusa para poner mala cara."
+   }
+  ]
+ },
+ {
+  "escena": "partidos",
+  "inicio": 30.52,
+  "fin": 39.93,
+  "frases": [
+   {
+    "t0": 30.52,
+    "t1": 36.28,
+    "texto": "Y los partidos cobran: 21.167 euros por cada escaño y 81 céntimos por cada voto al Congreso."
+   },
+   {
+    "t0": 36.48,
+    "t1": 39.48,
+    "texto": "En 2023, unos 58 millones en subvenciones."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 39.93,
+  "fin": 48.23,
+  "frases": [
+   {
+    "t0": 40.25,
+    "t1": 42.33,
+    "texto": "Total: unos 7 euros por cada elector."
+   },
+   {
+    "t0": 42.53,
+    "t1": 44.95,
+    "texto": "¿Caro o barato para elegir quién gobierna? Te leo."
+   },
+   {
+    "t0": 45.15,
+    "t1": 46.88,
+    "texto": "Y síguenos para el próximo viaje de Piz."
+   }
+  ]
+ }
+]

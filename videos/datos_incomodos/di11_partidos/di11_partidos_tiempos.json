@@ -1,0 +1,143 @@
+{
+ "duracion": 57.32,
+ "voz_real": true,
+ "planos": [
+  {
+   "i": 0,
+   "ini": 0.0,
+   "fin": 2.03,
+   "dur": 2.03,
+   "voz": [
+    "Aunque no les votes… les pagas."
+   ]
+  },
+  {
+   "i": 1,
+   "ini": 2.03,
+   "fin": 6.86,
+   "dur": 4.84,
+   "voz": [
+    "PSOE, PP y Vox recibieron 104 millones de euros de dinero público en un solo año."
+   ]
+  },
+  {
+   "i": 2,
+   "ini": 6.86,
+   "fin": 8.97,
+   "dur": 2.11,
+   "voz": [
+    "Síguenos: esto casi nadie te lo cuenta."
+   ]
+  },
+  {
+   "i": 3,
+   "ini": 8.97,
+   "fin": 12.5,
+   "dur": 3.53,
+   "voz": [
+    "El PSOE vende lotería de Navidad. El año pasado le dejó 3,2 millones."
+   ]
+  },
+  {
+   "i": 4,
+   "ini": 12.5,
+   "fin": 17.46,
+   "dur": 4.95,
+   "voz": [
+    "Y sus diputados y alcaldes le devuelven parte del sueldo: 10 millones al año. Más que todas sus cuotas."
+   ]
+  },
+  {
+   "i": 5,
+   "ini": 17.46,
+   "fin": 20.81,
+   "dur": 3.35,
+   "voz": [
+    "Aun así, de cada diez euros que ingresa, más de seis son públicos."
+   ]
+  },
+  {
+   "i": 6,
+   "ini": 20.81,
+   "fin": 23.47,
+   "dur": 2.66,
+   "voz": [
+    "El PP dice tener 807.792 afiliados."
+   ]
+  },
+  {
+   "i": 7,
+   "ini": 23.47,
+   "fin": 28.01,
+   "dur": 4.55,
+   "voz": [
+    "Pero en cuotas recauda 3,5 millones. Unos 4 € por afiliado… al año."
+   ]
+  },
+  {
+   "i": 8,
+   "ini": 28.01,
+   "fin": 31.02,
+   "dur": 3.0,
+   "voz": [
+    "Y de cada diez euros que ingresa, más de ocho son públicos."
+   ]
+  },
+  {
+   "i": 9,
+   "ini": 31.02,
+   "fin": 33.45,
+   "dur": 2.44,
+   "voz": [
+    "¿Y Vox? Los bancos españoles no le prestaban."
+   ]
+  },
+  {
+   "i": 10,
+   "ini": 33.45,
+   "fin": 38.1,
+   "dur": 4.65,
+   "voz": [
+    "Así que pidió más de 9 millones a un banco de Hungría. Su dueño: un amigo de la infancia de Orbán."
+   ]
+  },
+  {
+   "i": 11,
+   "ini": 38.1,
+   "fin": 41.26,
+   "dur": 3.16,
+   "voz": [
+    "Y de cada diez euros que ingresa, 7,5 son públicos."
+   ]
+  },
+  {
+   "i": 12,
+   "ini": 41.26,
+   "fin": 46.25,
+   "dur": 4.99,
+   "voz": [
+    "Y el giro: Vox tiene 11 veces menos afiliados que el PP… y recauda más en cuotas."
+   ]
+  },
+  {
+   "i": 13,
+   "ini": 46.25,
+   "fin": 50.21,
+   "dur": 3.95,
+   "voz": [
+    "Ojo: que los partidos reciban dinero público es legal. La pregunta es cuánto."
+   ]
+  },
+  {
+   "i": 14,
+   "ini": 50.21,
+   "fin": 57.32,
+   "dur": 7.12,
+   "voz": [
+    "¿Los partidos deberían vivir solo de sus afiliados?",
+    "Comenta A o B.",
+    "Y síguenos para no perderte el siguiente."
+   ]
+  }
+ ]
+}

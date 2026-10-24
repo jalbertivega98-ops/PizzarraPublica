@@ -1,0 +1,6 @@
+Duración 63.6 s · 119 cambios visuales · uno cada 0.53 s de media · hueco máximo 2.94 s
+⚠ RITMO: 2.9 s sin cambios visuales entre 12.0 y 14.9 s
+⚠ RITMO: 2.6 s sin cambios visuales entre 15.5 y 18.2 s
+⚠ RITMO: 2.8 s sin cambios visuales entre 24.6 y 27.3 s
+⚠ RITMO: 2.6 s sin cambios visuales entre 29.8 y 32.4 s
+⚠ DURACIÓN: 63.6 s (objetivo 30-45 s)

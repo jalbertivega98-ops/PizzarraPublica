@@ -1,0 +1,1287 @@
+{
+ "slug": "coste_29n",
+ "title": "El 29N lo pagas tú",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Euronews (08/10/2026): el 29N superará los 270 M€; desglose de 2023 con datos de Interior y del Tribunal de Cuentas",
+  "INE (09/10/2026): censo electoral del 29N, 38.728.356 electores",
+  "Orden INT/650/2026, BOE 27/06/2026: dieta de 75 € por miembro de mesa",
+  "Orden HAC/1062/2026: subvenciones electorales (RTVC, 08/10/2026)",
+  "Coste por elector: cálculo propio de Pizarra Pública",
+  "Mapas dibujados sobre contornos de Natural Earth (dominio público)"
+ ],
+ "caption": "🗳️ Votar parece gratis… pero el 29N costará más de 270 M€ (estimación)\n🚚 Papeletas para 38,7 millones de electores en 52 provincias y el extranjero\n📮 En 2023, solo Correos se llevó más de 100 M€\n💶 Cada miembro de mesa cobra 75 € (5 más que antes)\n🏛️ Partidos: 21.167 € por escaño y 0,81 € por voto\n💬 Unos 7 € por elector: ¿caro o barato?\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Euronews 08/10/2026 · INE 09/10/2026 · BOE 27/06/2026 (Orden INT/650/2026) · Orden HAC/1062/2026 (RTVC 08/10) · 7 €/elector: cálculo propio. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#29N",
+  "#elecciones",
+  "#EleccionesGenerales",
+  "#dinero",
+  "#impuestos",
+  "#politica",
+  "#España",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "colegio",
+   "animo": "tension",
+   "footnote": "Euronews 08/10/2026 (estimación basada en 2023) · Interior · Tribunal de Cuentas",
+   "lines": [
+    {
+     "text": "Meter este sobre en la urna parece gratis…",
+     "tono": "energia"
+    },
+    {
+     "text": "pero las elecciones del 29N costarán más de 270 millones de euros.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0,
+     "aire": 220
+    },
+    {
+     "at": "@urna",
+     "plano": "medio",
+     "sobre": "urna",
+     "dur": 0.5,
+     "aire": 180
+    },
+    {
+     "at": "@costarán",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@euros",
+     "plano": "general",
+     "sobre": [
+      540,
+      880
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mesa_electoral",
+     "x": 760,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "props": {
+      "texto": "MESA 1"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "urna",
+     "x": 760,
+     "y": 1020,
+     "scale": 0.55,
+     "at": 0,
+     "props": {
+      "llena": 0.35,
+      "texto": "CONGRESO"
+     },
+     "acciones": [],
+     "id": "urna",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@sobre",
+       "x": 520,
+       "dur": 0.8
+      },
+      {
+       "at": "@urna",
+       "pose": "senala",
+       "objeto": null,
+       "cara": "riendo"
+      },
+      {
+       "at": "@costarán",
+       "cara": "susto",
+       "take": true,
+       "mira": "arriba"
+      },
+      {
+       "at": "@euros",
+       "tropieza": true
+      }
+     ],
+     "entra": "nada",
+     "objeto": "papeleta",
+     "pose": "sostiene",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 520,
+     "scale": 1.0,
+     "at": "@costarán",
+     "props": {
+      "valor": 270,
+      "prefijo": "+",
+      "sufijo": " M€",
+      "ancho": 760
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe",
+     "dibujo": 1.6
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 700,
+     "scale": 1.0,
+     "at": "@euros",
+     "props": {
+      "texto": "ESTIMACIÓN",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "viaje",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "aventura",
+   "trans": "zoom",
+   "footnote": "INE 09/10/2026: 38.728.356 electores · Euronews: Correos, más de 100 M€ en 2023",
+   "lines": [
+    {
+     "text": "Hay que llevar papeletas a 38,7 millones de electores, en 52 provincias y en el extranjero.",
+     "tono": "normal"
+    },
+    {
+     "text": "Solo Correos se llevó más de 100 millones en 2023.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@electores",
+     "plano": "general",
+     "sobre": [
+      534.3,
+      760.8
+     ],
+     "dur": 1.0,
+     "zoom": 1.5
+    },
+    {
+     "at": "@extranjero",
+     "plano": "general",
+     "sobre": [
+      421.0,
+      908.8
+     ],
+     "dur": 0.8,
+     "zoom": 0.8
+    },
+    {
+     "at": "@Correos",
+     "plano": "general",
+     "sobre": [
+      557.0,
+      790.4
+     ],
+     "dur": 0.7,
+     "zoom": 1.3
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana",
+      "orden": [
+       "Madrid"
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@electores",
+       "props": {
+        "resalta": [
+         "Madrid",
+         "Barcelona",
+         "Valencia",
+         "Sevilla",
+         "La Coruña",
+         "Bizkaia"
+        ]
+       },
+       "sfx": "pop"
+      },
+      {
+       "at": "@52",
+       "props": {
+        "resalta": [
+         "Madrid",
+         "Barcelona",
+         "Valencia",
+         "Sevilla",
+         "La Coruña",
+         "Bizkaia",
+         "Málaga",
+         "Zaragoza",
+         "Murcia",
+         "Baleares",
+         "Las Palmas",
+         "Santa Cruz de Tenerife",
+         "Asturias",
+         "Badajoz",
+         "Cáceres",
+         "León",
+         "Granada",
+         "Toledo"
+        ]
+       },
+       "sfx": "pop"
+      },
+      {
+       "at": "@provincias",
+       "props": {
+        "resalta": [
+         "Madrid",
+         "Barcelona",
+         "Valencia",
+         "Sevilla",
+         "La Coruña",
+         "Bizkaia",
+         "Málaga",
+         "Zaragoza",
+         "Murcia",
+         "Baleares",
+         "Las Palmas",
+         "Santa Cruz de Tenerife",
+         "Asturias",
+         "Badajoz",
+         "Cáceres",
+         "León",
+         "Granada",
+         "Toledo",
+         "Alicante",
+         "Cádiz",
+         "Pontevedra",
+         "Lugo",
+         "Orense",
+         "Cantabria",
+         "Gipuzkoa",
+         "Álava",
+         "Navarra",
+         "La Rioja",
+         "Burgos",
+         "Palencia",
+         "Valladolid",
+         "Zamora",
+         "Salamanca",
+         "Ávila",
+         "Segovia",
+         "Soria",
+         "Guadalajara",
+         "Cuenca",
+         "Ciudad Real",
+         "Albacete",
+         "Jaén",
+         "Córdoba",
+         "Huelva",
+         "Almería",
+         "Teruel",
+         "Huesca",
+         "Lérida",
+         "Gerona",
+         "Tarragona",
+         "Castellón",
+         "Ceuta",
+         "Melilla"
+        ]
+       },
+       "sfx": "kaching"
+      },
+      {
+       "at": "@extranjero",
+       "props": {
+        "lineas": [
+         {
+          "id": "fuera",
+          "puntos": [
+           [
+            -9.0,
+            38.5
+           ],
+           [
+            -13.5,
+            39.0
+           ],
+           [
+            -18.0,
+            39.5
+           ]
+          ],
+          "color": "azul",
+          "dur": 0.8,
+          "discontinua": true
+         }
+        ]
+       }
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.5
+    },
+    {
+     "type": "objeto",
+     "objeto": "camion",
+     "x": 551.3,
+     "y": 741.2,
+     "scale": 0.16,
+     "at": 0.3,
+     "props": {
+      "texto": "ELECCIONES"
+     },
+     "acciones": [
+      {
+       "at": 0.5,
+       "x": 738.4,
+       "y": 807.8,
+       "dur": 0.5
+      },
+      {
+       "at": 1.05,
+       "x": 880.1,
+       "y": 667.2,
+       "dur": 0.5
+      },
+      {
+       "at": 1.6,
+       "x": 710.1,
+       "y": 652.4,
+       "dur": 0.5
+      },
+      {
+       "at": 2.1500000000000004,
+       "x": 596.7,
+       "y": 534.0,
+       "dur": 0.5
+      },
+      {
+       "at": 2.7,
+       "x": 284.9,
+       "y": 526.6,
+       "dur": 0.5
+      },
+      {
+       "at": 3.25,
+       "x": 443.6,
+       "y": 578.4,
+       "dur": 0.5
+      },
+      {
+       "at": 3.8000000000000003,
+       "x": 421.0,
+       "y": 963.2,
+       "dur": 0.5
+      },
+      {
+       "at": 4.3500000000000005,
+       "x": 511.7,
+       "y": 1015.0,
+       "dur": 0.5
+      }
+     ],
+     "id": "camion",
+     "entra": "pop",
+     "sfx": "bocina"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 676.0,
+     "y": 864.4,
+     "scale": 0.17,
+     "at": 0.4,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@electores",
+       "salta": true,
+       "cara": "riendo"
+      },
+      {
+       "at": "@Correos",
+       "cara": "sorpresa",
+       "take": true
+      }
+     ],
+     "entra": "cae",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "38,7 MILLONES",
+     "x": 540,
+     "y": 430,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@38,7",
+     "golpe": true,
+     "out": "@Correos",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "CORREOS: +100 M€",
+     "x": 540,
+     "y": 430,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@Correos",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "(2023)",
+     "x": 540,
+     "y": 530,
+     "size": 64,
+     "color": "blanco",
+     "at": "@2023",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "factura",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Elecciones de 2023 · Euronews 08/10/2026, con datos de Interior",
+   "lines": [
+    {
+     "text": "En 2023, organizarlas costó 220,8 millones: Correos, la Administración, las mesas y el recuento.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      860
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Correos",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.6,
+     "zoom": 1.08
+    },
+    {
+     "at": "@recuento",
+     "plano": "general",
+     "sobre": [
+      540,
+      860
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 480,
+     "scale": 0.8,
+     "at": 0,
+     "props": {
+      "valor": 220.8,
+      "decimales": 1,
+      "sufijo": " M€",
+      "ancho": 760
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "dibujo": 1.2
+    },
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 980,
+     "scale": 1.05,
+     "at": "@Correos-0.2",
+     "props": {
+      "sufijo": " M€",
+      "decimales": 0,
+      "barras": [
+       {
+        "texto": "CORREOS",
+        "valor": 100,
+        "color": "amarillo"
+       },
+       {
+        "texto": "ESTADO",
+        "valor": 80,
+        "color": "azul"
+       },
+       {
+        "texto": "MESAS",
+        "valor": 22,
+        "color": "verde"
+       },
+       {
+        "texto": "RECUENTO",
+        "valor": 13,
+        "color": "naranja"
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@Correos",
+       "props": {
+        "resalta": [
+         0
+        ]
+       }
+      }
+     ],
+     "entra": "nada",
+     "dibujo": 2.2
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1250,
+     "y": 1600,
+     "scale": 0.42,
+     "at": "@organizarlas",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@organizarlas",
+       "x": 900,
+       "dur": 0.5
+      },
+      {
+       "at": "@220,8",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@mesas",
+       "pose": "senala_izq",
+       "mira": "izq"
+      },
+      {
+       "at": "@recuento",
+       "cara": "sorpresa",
+       "pose": "cabeza"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "mesa",
+   "fondo": "colegio",
+   "animo": "comico",
+   "trans": "iris",
+   "footnote": "Orden INT/650/2026 (BOE 27/06/2026)",
+   "lines": [
+    {
+     "text": "A cada miembro de mesa le pagan 75 euros por ese día. Desde junio, cinco más que antes.",
+     "tono": "normal"
+    },
+    {
+     "text": "Ya no hay excusa para poner mala cara.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@75",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 200
+    },
+    {
+     "at": "@cinco",
+     "plano": "medio",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@excusa",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 270,
+     "y": 1230,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "triste",
+     "acciones": [
+      {
+       "at": "@excusa",
+       "cara": "riendo",
+       "pose": "pulgar"
+      }
+     ],
+     "entra": "nada",
+     "id": "pizon"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1230,
+     "scale": 0.52,
+     "at": 0,
+     "cara": "vacio",
+     "acciones": [
+      {
+       "at": "@75",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@cinco",
+       "cara": "riendo",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "critica",
+     "x": 810,
+     "y": 1230,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "esceptica",
+     "acciones": [
+      {
+       "at": "@mala",
+       "cara": "burla",
+       "pose": "cruzados"
+      }
+     ],
+     "entra": "nada",
+     "id": "critica"
+    },
+    {
+     "type": "objeto",
+     "objeto": "mesa_electoral",
+     "x": 540,
+     "y": 1380,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "texto": "MESA 1"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "billete",
+     "x": 540,
+     "y": 600,
+     "scale": 1.2,
+     "at": "@75",
+     "props": {
+      "valor": "75"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "kaching",
+     "flota": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 400,
+     "scale": 1.0,
+     "at": "@pagan",
+     "props": {
+      "texto": "75 € DE DIETA",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "+5 €",
+     "x": 820,
+     "y": 640,
+     "size": 110,
+     "color": "verde",
+     "at": "@cinco",
+     "golpe": true,
+     "rot": 6,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "partidos",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "corte",
+   "footnote": "Orden HAC/1062/2026 · RTVC 08/10/2026 · Tribunal de Cuentas (2023)",
+   "lines": [
+    {
+     "text": "Y los partidos cobran: 21.167 euros por cada escaño y 81 céntimos por cada voto al Congreso.",
+     "tono": "normal"
+    },
+    {
+     "text": "En 2023, unos 58 millones en subvenciones.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": null,
+     "dur": 0
+    },
+    {
+     "at": "@escaño",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5,
+     "zoom": 1.1
+    },
+    {
+     "at": "@81",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@58",
+     "plano": "general",
+     "sobre": null,
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 230,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@escaño",
+       "cara": "ilusionado",
+       "mira": "arriba"
+      }
+     ],
+     "id": "p1",
+     "entra": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0.15,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@81",
+       "cara": "ilusionado",
+       "salta": true
+      }
+     ],
+     "id": "p2",
+     "entra": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 850,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0.3,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@voto",
+       "cara": "riendo",
+       "pose": "pulgar"
+      }
+     ],
+     "id": "p3",
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 230,
+     "y": 1350,
+     "scale": 0.46,
+     "at": 0,
+     "props": {
+      "texto": "PSOE",
+      "color": "psoe"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 540,
+     "y": 1350,
+     "scale": 0.46,
+     "at": 0.15,
+     "props": {
+      "texto": "PP",
+      "color": "pp"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 850,
+     "y": 1350,
+     "scale": 0.46,
+     "at": 0.3,
+     "props": {
+      "texto": "VOX",
+      "color": "vox"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "efecto",
+     "efecto": "lluvia",
+     "objeto": "moneda",
+     "n": 12,
+     "x0": 150,
+     "x1": 930,
+     "at": "@escaño",
+     "vida": 1.8
+    },
+    {
+     "type": "efecto",
+     "efecto": "lluvia",
+     "objeto": "moneda",
+     "n": 10,
+     "x0": 150,
+     "x1": 930,
+     "at": "@céntimos",
+     "vida": 1.8
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 420,
+     "scale": 1.0,
+     "at": "@escaño",
+     "props": {
+      "texto": "21.167 € / ESCAÑO",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@58"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 560,
+     "scale": 1.0,
+     "at": "@81",
+     "props": {
+      "texto": "0,81 € / VOTO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@58"
+    },
+    {
+     "type": "rotulo",
+     "text": "2023: ~58 M€",
+     "x": 540,
+     "y": 480,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@58",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "final",
+   "trans": "zoom",
+   "footnote": "Cálculo propio: 270 M€ / 38,7 millones de electores",
+   "lines": [
+    {
+     "text": "Total: unos 7 euros por cada elector.",
+     "tono": "normal"
+    },
+    {
+     "text": "¿Caro o barato para elegir quién gobierna? Te leo.",
+     "tono": "normal",
+     "pausa": 0.15
+    },
+    {
+     "text": "Y síguenos para el próximo viaje de Piz.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 0,
+     "zoom": 2.6
+    },
+    {
+     "at": 0.3,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 2.2,
+     "zoom": 0.95
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana",
+      "progreso": 1.0,
+      "resalta": [
+       "Madrid",
+       "Barcelona",
+       "Valencia",
+       "Sevilla",
+       "La Coruña",
+       "Bizkaia",
+       "Málaga",
+       "Zaragoza",
+       "Murcia",
+       "Baleares",
+       "Las Palmas",
+       "Santa Cruz de Tenerife",
+       "Asturias",
+       "Badajoz",
+       "Cáceres",
+       "León",
+       "Granada",
+       "Toledo",
+       "Alicante",
+       "Cádiz",
+       "Pontevedra",
+       "Lugo",
+       "Orense",
+       "Cantabria",
+       "Gipuzkoa",
+       "Álava",
+       "Navarra",
+       "La Rioja",
+       "Burgos",
+       "Palencia",
+       "Valladolid",
+       "Zamora",
+       "Salamanca",
+       "Ávila",
+       "Segovia",
+       "Soria",
+       "Guadalajara",
+       "Cuenca",
+       "Ciudad Real",
+       "Albacete",
+       "Jaén",
+       "Córdoba",
+       "Huelva",
+       "Almería",
+       "Teruel",
+       "Huesca",
+       "Lérida",
+       "Gerona",
+       "Tarragona",
+       "Castellón",
+       "Ceuta",
+       "Melilla"
+      ]
+     },
+     "acciones": [],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 0.01
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 520,
+     "scale": 0.9,
+     "at": "@7",
+     "props": {
+      "valor": 7,
+      "prefijo": "~",
+      "sufijo": " €",
+      "ancho": 520
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 700,
+     "scale": 1.0,
+     "at": "@elector",
+     "props": {
+      "texto": "CÁLCULO PROPIO",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 790,
+     "y": 1500,
+     "scale": 0.6,
+     "at": "@Caro",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@barato",
+       "pose": "piensa"
+      },
+      {
+       "at": "@leo",
+       "mira": "camara",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@viaje",
+       "salta": true
+      }
+     ],
+     "hud": true,
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿CARO O BARATO?",
+     "x": 540,
+     "y": 1000,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@Caro",
+     "golpe": true,
+     "out": "@síguenos-0.3",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 1000,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "fx": [
+      {
+       "at": "@Piz",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.6,
+  "titulo": "El 29N lo pagas tú",
+  "capitulo": null
+ }
+}

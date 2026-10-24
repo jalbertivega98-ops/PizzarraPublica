@@ -80,18 +80,35 @@
   ]
  },
  {
-  "escena": "final",
+  "escena": "ahorro",
   "inicio": 36.03,
-  "fin": 42.37,
+  "fin": 44.24,
   "frases": [
    {
-    "t0": 36.35,
-    "t1": 39.06,
+    "t0": 36.03,
+    "t1": 40.72,
+    "texto": "¿Y el ahorro de luz, que era la excusa? El propio Gobierno lo calcula en unos seis euros al año por persona."
+   },
+   {
+    "t0": 40.92,
+    "t1": 43.79,
+    "texto": "Entonces… ¿a quién le interesa seguir cambiando la hora?"
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 44.24,
+  "fin": 50.58,
+  "frases": [
+   {
+    "t0": 44.56,
+    "t1": 47.26,
     "texto": "¿Y tú qué prefieres para siempre: horario de verano o de invierno?"
    },
    {
-    "t0": 39.26,
-    "t1": 41.02,
+    "t0": 47.46,
+    "t1": 49.23,
     "texto": "Te leo en comentarios. Y síguenos."
    }
   ]

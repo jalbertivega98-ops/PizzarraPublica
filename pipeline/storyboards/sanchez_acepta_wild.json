@@ -1,0 +1,1535 @@
+{
+ "slug": "sanchez_acepta_wild",
+ "title": "Y Sánchez dijo sí",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "The Objective (23/10/2026): Sánchez acepta el último día; «Ahí estaré»; Wild: «4/4»; orden de aceptación",
+  "El Debate (23/10/2026): «Acuérdate de que mi lado bueno es el izquierdo»",
+  "elDiario.es (23/10/2026, act. 24/10) y Extradigital: emisión el 13/11, una cada hora, 50-90 min, sin edición, dos verificadores",
+  "elDiario.es (22/10/2026): cara a cara en Mediaset el 16/11; debate a cuatro el 26/11 sin cadena acordada",
+  "Corrige la fecha «desde el 9 de noviembre» de los capítulos anteriores",
+  "Personajes dibujados como pizarras, sin caricatura; las frases de Sánchez son literales y con otra voz"
+ ],
+ "caption": "✅ Último día del plazo y Sánchez dice SÍ: «Gracias por la invitación. Ahí estaré»\n😂 Y al realizador: «Acuérdate de que mi lado bueno es el izquierdo»\n🎙️ Jordi Wild: «Pues ya estaría: 4/4» (Feijóo, Abascal, Colau y Sánchez)\n📅 Las cuatro entrevistas, el 13 de noviembre, una cada hora (ojo: no el 9)\n⏱️ Hasta 90 minutos, sin cortes y con 2 periodistas verificando datos\n🗓️ 16N cara a cara en Mediaset · 26N debate a cuatro (¿RTVE o Atresmedia?) · 29N votas tú\n💬 ¿Quién saldrá mejor parado sin cortes? Te leo 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: The Objective 23/10/2026 · El Debate 23/10/2026 · elDiario.es 22 y 24/10/2026 · Extradigital. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#JordiWild",
+  "#TheWildProject",
+  "#Sánchez",
+  "#29N",
+  "#elecciones",
+  "#debate",
+  "#Feijóo",
+  "#Abascal",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "estudio",
+   "animo": "tension",
+   "footnote": "The Objective · El Debate 23/10/2026",
+   "lines": [
+    {
+     "text": "Viernes 23. Último día del plazo… y la silla de Sánchez seguía vacía.",
+     "tono": "energia"
+    },
+    {
+     "text": "Hasta que llegó el mensaje.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1150
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@silla",
+     "plano": "general",
+     "sobre": [
+      400,
+      1150
+     ],
+     "dur": 0.5,
+     "zoom": 1.12
+    },
+    {
+     "at": "@mensaje",
+     "plano": "medio",
+     "sobre": "wild",
+     "dur": 0.4,
+     "aire": 220
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 150,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": "gris",
+      "texto": "COLAU"
+     },
+     "acciones": [],
+     "id": "s0",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 400,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       225,
+       30,
+       40
+      ],
+      "texto": "SÁNCHEZ"
+     },
+     "acciones": [],
+     "id": "s1",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 680,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       0,
+       104,
+       180
+      ],
+      "texto": "FEIJÓO"
+     },
+     "acciones": [],
+     "id": "s2",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 930,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       90,
+       175,
+       40
+      ],
+      "texto": "ABASCAL"
+     },
+     "acciones": [],
+     "id": "s3",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "colau",
+     "x": 150,
+     "y": 1310,
+     "scale": 0.42,
+     "at": 0.0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@vacía",
+       "mira": "der"
+      }
+     ],
+     "entra": "nada",
+     "id": "colau"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 680,
+     "y": 1310,
+     "scale": 0.42,
+     "at": 0.0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@vacía",
+       "mira": "izq"
+      }
+     ],
+     "entra": "nada",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 930,
+     "y": 1310,
+     "scale": 0.42,
+     "at": 0.0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@vacía",
+       "mira": "izq"
+      }
+     ],
+     "entra": "nada",
+     "id": "abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 400,
+     "y": 1000,
+     "scale": 0.55,
+     "at": 0.2,
+     "props": {
+      "velocidad": 8
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@mensaje"
+    },
+    {
+     "type": "rotulo",
+     "text": "ÚLTIMO DÍA",
+     "x": 540,
+     "y": 560,
+     "size": 100,
+     "color": "rojo",
+     "at": "@Último",
+     "golpe": true,
+     "out": "@mensaje",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "microfono",
+     "x": 760,
+     "y": 1330,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "encendido": true
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "wild",
+     "x": 540,
+     "y": 1640,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": "@plazo",
+       "mira": "arriba",
+       "pose": "manos_juntas"
+      },
+      {
+       "at": "@vacía",
+       "mira": "izq",
+       "cara": "triste"
+      },
+      {
+       "at": "@mensaje",
+       "cara": "sorpresa",
+       "take": true,
+       "objeto": {
+        "tipo": "movil",
+        "pantalla": "sms",
+        "suena": true,
+        "remite": "SÁNCHEZ",
+        "texto": "…"
+       }
+      }
+     ],
+     "entra": "nada",
+     "id": "wild"
+    }
+   ]
+  },
+  {
+   "id": "si",
+   "fondo": "oficina",
+   "animo": "comico",
+   "trans": "corte",
+   "footnote": "The Objective · El Debate 23/10/2026",
+   "lines": [
+    {
+     "text": "Sánchez contestó en X:",
+     "tono": "normal"
+    },
+    {
+     "text": "«Gracias por la invitación. Ahí estaré».",
+     "tono": "normal",
+     "pausa": 0.05,
+     "efecto_voz": "tele"
+    },
+    {
+     "text": "Y al realizador le dejó un recado:",
+     "tono": "normal",
+     "pausa": 0.15
+    },
+    {
+     "text": "«Acuérdate de que mi lado bueno es el izquierdo».",
+     "tono": "normal",
+     "pausa": 0.05,
+     "efecto_voz": "tele"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "medio",
+     "sobre": "sanchez",
+     "dur": 0,
+     "aire": 240
+    },
+    {
+     "at": "@realizador",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@izquierdo",
+     "plano": "primero",
+     "sobre": "sanchez",
+     "dur": 0.4,
+     "aire": 160
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 420,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": 0.1,
+       "objeto": {
+        "tipo": "movil",
+        "pantalla": "sms",
+        "remite": "SÁNCHEZ",
+        "lineas": [
+         "Gracias por la",
+         "invitación.",
+         "Ahí estaré"
+        ]
+       }
+      },
+      {
+       "at": "@Gracias",
+       "mira": "camara"
+      },
+      {
+       "at": "@estaré",
+       "pose": "pulgar",
+       "cara": "riendo",
+       "objeto": null
+      },
+      {
+       "at": "@recado",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@bueno",
+       "giro": -0.8,
+       "cara": "burla"
+      },
+      {
+       "at": "@izquierdo",
+       "pose": "jarras",
+       "salta": true
+      }
+     ],
+     "id": "sanchez",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 760,
+     "y": 640,
+     "scale": 0.9,
+     "at": "@estaré-0.3",
+     "props": {
+      "lineas": [
+       "AHÍ ESTARÉ"
+      ],
+      "cola": [
+       -1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@recado"
+    },
+    {
+     "type": "personaje",
+     "quien": "wild",
+     "x": 1300,
+     "y": 1660,
+     "scale": 0.5,
+     "at": "@realizador-0.3",
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@realizador",
+       "x": 880,
+       "dur": 0.7
+      },
+      {
+       "at": "@bueno",
+       "cara": "burla",
+       "pose": "encoge"
+      },
+      {
+       "at": "@izquierdo",
+       "cara": "riendo",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "wild"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 420,
+     "y": 1480,
+     "scale": 1.0,
+     "at": "@izquierdo",
+     "props": {
+      "texto": "SU LADO BUENO",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "cuatro",
+   "fondo": "estudio",
+   "animo": "alegre",
+   "trans": "iris",
+   "footnote": "The Objective · El Debate 23/10/2026",
+   "lines": [
+    {
+     "text": "Wild lo celebró: «Pues ya estaría. Cuatro de cuatro».",
+     "tono": "energia"
+    },
+    {
+     "text": "Primero dijo sí Feijóo, luego Abascal, luego Colau… y Sánchez, el último.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "medio",
+     "sobre": "wild",
+     "dur": 0,
+     "aire": 220
+    },
+    {
+     "at": "@Primero",
+     "plano": "general",
+     "sobre": [
+      540,
+      1150
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@último",
+     "plano": "general",
+     "sobre": [
+      400,
+      1150
+     ],
+     "dur": 0.4,
+     "zoom": 1.12
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 150,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": "gris",
+      "texto": "COLAU"
+     },
+     "acciones": [],
+     "id": "s0",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 400,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       225,
+       30,
+       40
+      ],
+      "texto": "SÁNCHEZ"
+     },
+     "acciones": [],
+     "id": "s1",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 680,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       0,
+       104,
+       180
+      ],
+      "texto": "FEIJÓO"
+     },
+     "acciones": [],
+     "id": "s2",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 930,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       90,
+       175,
+       40
+      ],
+      "texto": "ABASCAL"
+     },
+     "acciones": [],
+     "id": "s3",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 680,
+     "y": 1310,
+     "scale": 0.42,
+     "at": "@Feijóo-0.1",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@Feijóo",
+       "pose": "saluda"
+      }
+     ],
+     "entra": "pop",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 930,
+     "y": 1310,
+     "scale": 0.42,
+     "at": "@Abascal-0.1",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@Abascal",
+       "pose": "pulgar"
+      }
+     ],
+     "entra": "pop",
+     "id": "abascal"
+    },
+    {
+     "type": "personaje",
+     "quien": "colau",
+     "x": 150,
+     "y": 1310,
+     "scale": 0.42,
+     "at": "@Colau-0.1",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@Colau",
+       "pose": "saluda"
+      }
+     ],
+     "entra": "pop",
+     "id": "colau"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 400,
+     "y": 1310,
+     "scale": 0.42,
+     "at": "@Sánchez-0.1",
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@último",
+       "pose": "saluda",
+       "salta": true
+      }
+     ],
+     "entra": "cae",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 680,
+     "y": 1000,
+     "scale": 0.6,
+     "at": "@Feijóo",
+     "props": {
+      "texto": "1º",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 930,
+     "y": 1000,
+     "scale": 0.6,
+     "at": "@Abascal",
+     "props": {
+      "texto": "2º",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 150,
+     "y": 1000,
+     "scale": 0.6,
+     "at": "@Colau",
+     "props": {
+      "texto": "3º",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 400,
+     "y": 1000,
+     "scale": 0.6,
+     "at": "@Sánchez",
+     "props": {
+      "texto": "4º",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¡4/4!",
+     "x": 540,
+     "y": 1250,
+     "at": "@celebró",
+     "scale": 0.8,
+     "vida": 0.8
+    },
+    {
+     "type": "rotulo",
+     "text": "4/4",
+     "x": 540,
+     "y": 520,
+     "size": 170,
+     "color": "amarillo",
+     "at": "@Cuatro",
+     "golpe": true,
+     "fx": [
+      {
+       "at": "@último",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "wild",
+     "x": 540,
+     "y": 1640,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": 0.1,
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@celebró",
+       "salta": true,
+       "pose": "arriba",
+       "cara": "riendo"
+      },
+      {
+       "at": "@estaría",
+       "pose": "pulgar",
+       "mira": "camara"
+      },
+      {
+       "at": "@Primero",
+       "mira": "arriba",
+       "pose": "normal"
+      },
+      {
+       "at": "@último",
+       "cara": "burla",
+       "pose": "senala_izq"
+      }
+     ],
+     "entra": "nada",
+     "id": "wild"
+    }
+   ]
+  },
+  {
+   "id": "reglas",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "elDiario.es 24/10/2026 · Extradigital",
+   "lines": [
+    {
+     "text": "Las cuatro saldrán el mismo día: el 13 de noviembre, una cada hora.",
+     "tono": "normal"
+    },
+    {
+     "text": "Ojo: no el 9, como se dijo al principio.",
+     "tono": "remate",
+     "pausa": 0.1
+    },
+    {
+     "text": "Hasta noventa minutos, sin cortes y con dos periodistas verificando datos.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Ojo",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    },
+    {
+     "at": "@noventa",
+     "plano": "general",
+     "sobre": [
+      540,
+      850
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "LAS 4, EL MISMO DÍA",
+     "x": 540,
+     "y": 460,
+     "size": 84,
+     "color": "blanco",
+     "at": 0.15,
+     "golpe": true,
+     "out": "@13-0.1",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "13 DE NOVIEMBRE",
+     "x": 540,
+     "y": 460,
+     "size": 104,
+     "color": "amarillo",
+     "at": "@13",
+     "golpe": true,
+     "out": "@noventa-0.2",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 640,
+     "scale": 0.85,
+     "at": "@hora",
+     "props": {
+      "texto": "UNA CADA HORA",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@noventa-0.2"
+    },
+    {
+     "type": "rotulo",
+     "text": "EL 9",
+     "x": 300,
+     "y": 900,
+     "size": 120,
+     "color": "blanco",
+     "at": "@9",
+     "golpe": true,
+     "out": "@noventa-0.2",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 300,
+     "y": 1000,
+     "scale": 1.0,
+     "at": "@principio",
+     "props": {
+      "texto": "CORREGIDO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@noventa-0.2"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 700,
+     "scale": 1.5,
+     "at": "@noventa-0.1",
+     "props": {
+      "lineas": [
+       "HASTA 90 MINUTOS",
+       "SIN CORTES",
+       "2 PERIODISTAS VERIFICAN"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "papel",
+     "dibuja": 2.2
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 820,
+     "y": 1600,
+     "scale": 0.62,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": 0.2,
+       "pose": "saluda",
+       "mira": "camara"
+      },
+      {
+       "at": "@mismo",
+       "pose": "senala_arriba",
+       "mira": "arriba"
+      },
+      {
+       "at": "@13",
+       "salta": true,
+       "pose": "senala",
+       "mira": "arriba"
+      },
+      {
+       "at": "@Ojo",
+       "cara": "pensativo",
+       "pose": "senala_izq",
+       "mira": "izq"
+      },
+      {
+       "at": "@principio",
+       "cara": "burla"
+      },
+      {
+       "at": "@noventa",
+       "cara": "sorpresa",
+       "mira": "arriba"
+      },
+      {
+       "at": "@verificando",
+       "cara": "idea",
+       "objeto": "lupa",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "calendario",
+   "fondo": "oficina",
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "elDiario.es 22/10/2026",
+   "lines": [
+    {
+     "text": "Y no es lo único que ha aceptado esta semana.",
+     "tono": "normal"
+    },
+    {
+     "text": "El 16, cara a cara con Feijóo en Telecinco y Cuatro.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "El 26, el debate a cuatro… que aún no tiene cadena: el PSOE quiere RTVE y el PP, Atresmedia.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Y el 29, votas tú.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@16",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.05
+    },
+    {
+     "at": "@26",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5,
+     "zoom": 1.05
+    },
+    {
+     "at": "@29",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 760,
+     "scale": 0.55,
+     "at": 0.2,
+     "props": {
+      "mes": "NOVIEMBRE",
+      "inicio": 6,
+      "dias": 30,
+      "marcados": [
+       13
+      ],
+      "colores": {
+       "13": "amarillo"
+      }
+     },
+     "acciones": [],
+     "id": "calendario",
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 760,
+     "scale": 0.55,
+     "at": "@16",
+     "props": {
+      "mes": "NOVIEMBRE",
+      "inicio": 6,
+      "dias": 30,
+      "marcados": [
+       13,
+       16
+      ],
+      "colores": {
+       "13": "amarillo",
+       "16": "rojo"
+      }
+     },
+     "acciones": [],
+     "entra": "nada",
+     "out": "@26"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 760,
+     "scale": 0.55,
+     "at": "@26",
+     "props": {
+      "mes": "NOVIEMBRE",
+      "inicio": 6,
+      "dias": 30,
+      "marcados": [
+       13,
+       16,
+       26
+      ],
+      "colores": {
+       "13": "amarillo",
+       "16": "rojo",
+       "26": "naranja"
+      }
+     },
+     "acciones": [],
+     "entra": "nada",
+     "out": "@29"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 760,
+     "scale": 0.55,
+     "at": "@29",
+     "props": {
+      "mes": "NOVIEMBRE",
+      "inicio": 6,
+      "dias": 30,
+      "marcados": [
+       13,
+       16,
+       26,
+       29
+      ],
+      "colores": {
+       "13": "amarillo",
+       "16": "rojo",
+       "26": "naranja",
+       "29": "verde"
+      }
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1160,
+     "scale": 0.75,
+     "at": "@16",
+     "props": {
+      "texto": "16 · CARA A CARA",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@26"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1160,
+     "scale": 0.75,
+     "at": "@26",
+     "props": {
+      "texto": "26 · ¿RTVE O ATRESMEDIA?",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@29"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1160,
+     "scale": 0.85,
+     "at": "@29",
+     "props": {
+      "texto": "29 · VOTAS TÚ",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 250,
+     "y": 1640,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": 0.2,
+       "pose": "senala_arriba",
+       "mira": "arriba"
+      },
+      {
+       "at": "@aceptado",
+       "pose": "pulgar",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@Feijóo",
+       "mira": "der",
+       "pose": "jarras"
+      },
+      {
+       "at": "@cadena",
+       "cara": "pensativo",
+       "pose": "encoge"
+      },
+      {
+       "at": "@29",
+       "cara": "sorpresa",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 1300,
+     "y": 1640,
+     "scale": 0.55,
+     "at": "@Feijóo-0.4",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@Feijóo",
+       "x": 830,
+       "dur": 0.6
+      },
+      {
+       "at": "@Telecinco",
+       "mira": "izq",
+       "pose": "jarras"
+      },
+      {
+       "at": "@Atresmedia",
+       "pose": "senala",
+       "cara": "burla"
+      },
+      {
+       "at": "@29",
+       "mira": "camara",
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "nada",
+     "id": "feijoo"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "estudio",
+   "animo": "final",
+   "trans": "zoom",
+   "footnote": "Pregunta a la audiencia",
+   "lines": [
+    {
+     "text": "Noventa minutos sin cortes y con verificadores. ¿Quién saldrá mejor parado? Te leo.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y síguenos: el 13, te lo contamos con datos.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1150
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@parado",
+     "plano": "general",
+     "sobre": [
+      540,
+      1100
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    },
+    {
+     "at": "@síguenos",
+     "plano": "medio",
+     "sobre": "wild",
+     "dur": 0.5,
+     "aire": 240
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 150,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": "gris",
+      "texto": "COLAU"
+     },
+     "acciones": [],
+     "id": "s0",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 400,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       225,
+       30,
+       40
+      ],
+      "texto": "SÁNCHEZ"
+     },
+     "acciones": [],
+     "id": "s1",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 680,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       0,
+       104,
+       180
+      ],
+      "texto": "FEIJÓO"
+     },
+     "acciones": [],
+     "id": "s2",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 930,
+     "y": 1250,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "color": [
+       90,
+       175,
+       40
+      ],
+      "texto": "ABASCAL"
+     },
+     "acciones": [],
+     "id": "s3",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "colau",
+     "x": 150,
+     "y": 1310,
+     "scale": 0.42,
+     "at": 0.0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@parado",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "nada",
+     "id": "colau"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 400,
+     "y": 1310,
+     "scale": 0.42,
+     "at": 0.0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@parado",
+       "cara": "burla",
+       "giro": -0.8
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 680,
+     "y": 1310,
+     "scale": 0.42,
+     "at": 0.0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@parado",
+       "cara": "serio"
+      }
+     ],
+     "entra": "nada",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 930,
+     "y": 1310,
+     "scale": 0.42,
+     "at": 0.0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@parado",
+       "cara": "esceptica"
+      }
+     ],
+     "entra": "nada",
+     "id": "abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "microfono",
+     "x": 760,
+     "y": 1330,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "encendido": true
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "wild",
+     "x": 540,
+     "y": 1640,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@verificadores",
+       "pose": "senala",
+       "mira": "arriba"
+      },
+      {
+       "at": "@parado",
+       "mira": "camara",
+       "pose": "piensa"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@datos",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "wild"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿QUIÉN GANA?",
+     "x": 540,
+     "y": 560,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@parado",
+     "golpe": true,
+     "out": "@síguenos-0.3",
+     "fx": [
+      {
+       "at": "@leo",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 560,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.6,
+  "titulo": "Y Sánchez dijo sí",
+  "capitulo": null
+ }
+}

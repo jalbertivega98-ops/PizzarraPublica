@@ -174,7 +174,7 @@ scenes = [
 
 if __name__ == "__main__":
     episodio("sanchez_acepta_wild", "Y Sánchez dijo sí", scenes,
-             {"t": 3.6, "titulo": "Y Sánchez dijo sí", "capitulo": None},
+             {"t": 9.1, "titulo": "Y Sánchez dijo sí", "capitulo": None},
              ["The Objective (23/10/2026): Sánchez acepta el último día; «Ahí estaré»; Wild: «4/4»; orden de aceptación",
               "El Debate (23/10/2026): «Acuérdate de que mi lado bueno es el izquierdo»",
               "elDiario.es (23/10/2026, act. 24/10) y Extradigital: emisión el 13/11, una cada hora, 50-90 min, sin edición, dos verificadores",

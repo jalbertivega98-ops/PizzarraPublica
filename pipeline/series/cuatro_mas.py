@@ -127,11 +127,11 @@ scenes = [
         corredor("piz", -800, 0, "normal", trota=False, acciones=[
             {"at": 0.4, "x": 140, "corre": True, "dur": 0.9}, {"at": "@paro", "mira": "arriba"}, {"at": "@millones", "cara": "sorpresa"},
             {"at": "@cuesta", "cara": "riendo", "salta": True, "pose": "pulgar", "mira": "camara"}]),
-        rot("PARO", 540, 400, "@paro", 104, "blanco", golpe=True),
-        obj("barras", 540, 690, "@Del", 0.7, hud=True, entra="pop", sfx="pop", props={
+        rot("PARO", 540, 380, "@paro", 104, "blanco", golpe=True, out="@millones-0.05"),
+        obj("barras", 540, 640, "@Del", 0.62, hud=True, entra="pop", sfx="pop", props={
             "barras": [{"texto": "2018", "valor": 15.3, "color": "gris"}, {"texto": "2026", "valor": 9.9, "color": "verde"}],
             "sufijo": " %", "tope": 18, "resalta": [1]}),
-        etq("+3,4 MILLONES TRABAJANDO", 540, 1010, "@millones", "verde", 0.72, hud=True),
+        etq("+3,4 MILLONES TRABAJANDO", 540, 380, "@millones", "verde", 0.66, hud=True),
     ]),
     # 5 · LA CUESTA: la vivienda
     dict(id="cuesta", fondo={"tipo": "parque", "velocidad": 120}, animo="tension", trans="corte", footnote=F_VIV, lines=[
@@ -142,11 +142,13 @@ scenes = [
                plano("@aliento", "medio", "piz", 0.5, aire=240, inclina=-7)],
        elements=[
         corredor("sanchez_corre", 760, 0, "normal", trota="anda", acciones=[
-            {"at": "@cuesta", "cara": "preocupado"}, {"at": "@74", "mira": "arriba"}]),
-        corredor("cuerpo", 980, 0, "normal", trota="anda", acciones=[{"at": "@cuesta", "cara": "preocupado"}]),
+            {"at": "@cuesta", "cara": "preocupado"}, {"at": "@piso", "mira": "izq"}, {"at": "@hoy", "cara": "susto"}, {"at": "@74", "mira": "arriba"},
+            {"at": "@45", "cara": "preocupado", "mira": "izq"}, {"at": "@gente", "mira": "piz", "cara": "triste"}]),
+        corredor("cuerpo", 980, 0, "normal", trota="anda", acciones=[{"at": "@cuesta", "cara": "preocupado"}, {"at": "@usado", "mira": "izq", "cara": "sorpresa"},
+                                                                     {"at": "@alquiler", "cara": "preocupado", "mira": "arriba"}]),
         corredor("piz", 200, 0, "preocupado", trota="anda", acciones=[
             {"at": "@cuesta", "pose": "empuja", "cara": "preocupado"}, {"at": "@74", "cara": "susto"},
-            {"at": "@alquiler", "cara": "indignado"}, {"at": "@aliento", "cara": "triste", "pose": "caidos", "trota": False}]),
+            {"at": "@alquiler", "cara": "indignado"}, {"at": "@45", "tiembla": True}, {"at": "@mucha", "cara": "preocupado", "pose": "caidos"}, {"at": "@aliento", "cara": "triste", "pose": "caidos", "trota": False}]),
         edif("casa", 470, 0, 0.32, cara="preocupado", acciones=[{"at": "@74", "cara": "susto"}, {"at": "@aliento", "cara": "triste"}]),
         rot("VIVIENDA", 540, 410, "@vivienda", 104, "blanco", golpe=True),
         etq("PISO +74 %", 300, 580, "@74", "rojo", 0.78, hud=True),
@@ -166,11 +168,12 @@ scenes = [
         obj("piedra", 740, SUELO, 0, 0.62, entra="nada", dibuja=0.7, props={"texto": "ÁBALOS"}),
         corredor("sanchez_corre", -300, 0, "ilusionado", trota=False, acciones=[
             {"at": 0.05, "x": 470, "corre": True, "dur": 1.0}, {"at": "@piedra", "tropieza": True}, {"at": "@exministro", "mira": "der", "cara": "susto"},
-            {"at": "@condenado", "cara": "preocupado", "mira": "der"}, {"at": "@País", "cara": "triste", "pose": "cabeza"},
+            {"at": "@condenado", "cara": "preocupado", "mira": "der"}, {"at": "@24", "tiembla": True}, {"at": "@País", "cara": "triste", "pose": "cabeza"},
             {"at": "@corrupción", "cara": "serio", "pose": "manos_juntas", "mira": "camara"}]),
         corredor("piz", -600, 0, "normal", trota=False, acciones=[
             {"at": 0.3, "x": 180, "corre": True, "dur": 1.0}, {"at": "@piedra", "cara": "sorpresa", "take": True},
-            {"at": "@condenado", "cara": "serio", "mira": "der"}, {"at": "@error", "cara": "pensativo", "pose": "piensa"},
+            {"at": "@condenado", "cara": "serio", "mira": "der"}, {"at": "@Supremo", "pose": "cabeza", "cara": "susto"},
+            {"at": "@años", "pose": "normal", "cara": "serio"}, {"at": "@error", "cara": "pensativo", "pose": "piensa"},
             {"at": "@Lo", "mira": "camara", "pose": "senala", "cara": "esceptica"}]),
         rot("CONDENADO A 24 AÑOS", 540, 440, "@condenado", 78, "rojo", golpe=True, out="@País-0.1"),
         obj("bocadillo", 540, 470, "@corrupción-0.2", 0.95, hud=True, entra="pop", sfx="pop",
@@ -187,6 +190,9 @@ scenes = [
        elements=[
         obj("arco", 540, SUELO - 20, 0, 0.92, entra="nada", dibuja=1.0, sfx="rotulador",
             props={"texto": "META", "sub": "29 DE NOVIEMBRE", "color": "verde", "cuadros": True}),
+        corredor("sanchez_corre", -300, 0, "sorpresa", trota=False, scale=0.5, acciones=[
+            {"at": "@fondo", "x": 110, "corre": True, "dur": 0.7}, {"at": "@meta", "pose": "senala", "mira": "der"},
+            {"at": "@calentando", "cara": "preocupado"}, {"at": "@Quedan", "cara": "serio", "mira": "camara"}]),
         corredor("feijoo", 380, "@Allí-0.2", "serio", trota=False, entra="pop", acciones=[
             {"at": "@Feijóo", "pose": "arriba", "salta": True}, {"at": "@Abascal", "pose": "jarras", "mira": "izq"},
             {"at": "@calentando", "salta": True, "pose": "punos"}, {"at": "@Quedan", "mira": "camara", "cara": "burla"}]),

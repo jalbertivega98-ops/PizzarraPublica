@@ -821,19 +821,20 @@
      "type": "rotulo",
      "text": "PARO",
      "x": 540,
-     "y": 400,
+     "y": 380,
      "size": 104,
      "color": "blanco",
      "at": "@paro",
      "golpe": true,
+     "out": "@millones-0.05",
      "hud": true
     },
     {
      "type": "objeto",
      "objeto": "barras",
      "x": 540,
-     "y": 690,
-     "scale": 0.7,
+     "y": 640,
+     "scale": 0.62,
      "at": "@Del",
      "props": {
       "barras": [
@@ -863,8 +864,8 @@
      "type": "objeto",
      "objeto": "etiqueta",
      "x": 540,
-     "y": 1010,
-     "scale": 0.72,
+     "y": 380,
+     "scale": 0.66,
      "at": "@millones",
      "props": {
       "texto": "+3,4 MILLONES TRABAJANDO",
@@ -946,8 +947,26 @@
        "cara": "preocupado"
       },
       {
+       "at": "@piso",
+       "mira": "izq"
+      },
+      {
+       "at": "@hoy",
+       "cara": "susto"
+      },
+      {
        "at": "@74",
        "mira": "arriba"
+      },
+      {
+       "at": "@45",
+       "cara": "preocupado",
+       "mira": "izq"
+      },
+      {
+       "at": "@gente",
+       "mira": "piz",
+       "cara": "triste"
       }
      ],
      "entra": "nada",
@@ -966,6 +985,16 @@
       {
        "at": "@cuesta",
        "cara": "preocupado"
+      },
+      {
+       "at": "@usado",
+       "mira": "izq",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@alquiler",
+       "cara": "preocupado",
+       "mira": "arriba"
       }
      ],
      "entra": "nada",
@@ -993,6 +1022,15 @@
       {
        "at": "@alquiler",
        "cara": "indignado"
+      },
+      {
+       "at": "@45",
+       "tiembla": true
+      },
+      {
+       "at": "@mucha",
+       "cara": "preocupado",
+       "pose": "caidos"
       },
       {
        "at": "@aliento",
@@ -1202,6 +1240,10 @@
        "mira": "der"
       },
       {
+       "at": "@24",
+       "tiembla": true
+      },
+      {
        "at": "@País",
        "cara": "triste",
        "pose": "cabeza"
@@ -1241,6 +1283,16 @@
        "at": "@condenado",
        "cara": "serio",
        "mira": "der"
+      },
+      {
+       "at": "@Supremo",
+       "pose": "cabeza",
+       "cara": "susto"
+      },
+      {
+       "at": "@años",
+       "pose": "normal",
+       "cara": "serio"
       },
       {
        "at": "@error",
@@ -1382,6 +1434,40 @@
      "entra": "nada",
      "dibuja": 1.0,
      "sfx": "rotulador"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez_corre",
+     "x": -300,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@fondo",
+       "x": 110,
+       "corre": true,
+       "dur": 0.7
+      },
+      {
+       "at": "@meta",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@calentando",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@Quedan",
+       "cara": "serio",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "trota": false,
+     "id": "sanchez_corre"
     },
     {
      "type": "personaje",

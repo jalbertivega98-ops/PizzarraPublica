@@ -1,0 +1,178 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 8.75,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.77,
+    "texto": "Pedro Sánchez ha salido a correr… y lo ha subido a sus redes."
+   },
+   {
+    "t0": 2.87,
+    "t1": 5.18,
+    "texto": "«Todavía nos queda carrera. ¿Qué hacemos? ¿Cuatro más?»"
+   },
+   {
+    "t0": 5.33,
+    "t1": 8.3,
+    "texto": "¡Para, para! Antes de cuatro más… ¿cómo han ido los ocho?"
+   }
+  ]
+ },
+ {
+  "escena": "salida",
+  "inicio": 8.75,
+  "fin": 17.29,
+  "frases": [
+   {
+    "t0": 8.75,
+    "t1": 10.79,
+    "texto": "Va con Carlos Cuerpo, su vicepresidente."
+   },
+   {
+    "t0": 10.89,
+    "t1": 12.81,
+    "texto": "«Yo creo que sí. Estamos preparados»."
+   },
+   {
+    "t0": 12.96,
+    "t1": 16.84,
+    "texto": "Y bromean: «Llevamos ocho ya». Ocho kilómetros… y ocho años en la Moncloa."
+   }
+  ]
+ },
+ {
+  "escena": "smi",
+  "inicio": 17.29,
+  "fin": 27.42,
+  "frases": [
+   {
+    "t0": 17.55,
+    "t1": 19.32,
+    "texto": "Primer poste: el salario mínimo."
+   },
+   {
+    "t0": 19.47,
+    "t1": 24.51,
+    "texto": "En 2018, 736 euros al mes. Hoy, 1.221. Un 66 % más."
+   },
+   {
+    "t0": 24.66,
+    "t1": 26.97,
+    "texto": "Y promete otra subida antes del 29N."
+   }
+  ]
+ },
+ {
+  "escena": "paro",
+  "inicio": 27.42,
+  "fin": 36.65,
+  "frases": [
+   {
+    "t0": 27.68,
+    "t1": 29.05,
+    "texto": "Segundo poste: el paro."
+   },
+   {
+    "t0": 29.2,
+    "t1": 34.29,
+    "texto": "Del 15,3 % al 9,9 %. Y 3,4 millones de personas más trabajando."
+   },
+   {
+    "t0": 34.44,
+    "t1": 36.2,
+    "texto": "Este tramo… cuesta abajo."
+   }
+  ]
+ },
+ {
+  "escena": "cuesta",
+  "inicio": 36.65,
+  "fin": 46.67,
+  "frases": [
+   {
+    "t0": 36.65,
+    "t1": 38.63,
+    "texto": "Pero entonces llega la cuesta: la vivienda."
+   },
+   {
+    "t0": 38.78,
+    "t1": 44.12,
+    "texto": "Un piso usado cuesta hoy un 74 % más que en 2018. El alquiler, un 45 % más."
+   },
+   {
+    "t0": 44.27,
+    "t1": 46.22,
+    "texto": "Y aquí mucha gente se ha quedado sin aliento."
+   }
+  ]
+ },
+ {
+  "escena": "piedra",
+  "inicio": 46.67,
+  "fin": 58.39,
+  "frases": [
+   {
+    "t0": 46.93,
+    "t1": 51.86,
+    "texto": "Y en el camino, una piedra: Ábalos. Su exministro, condenado por el Supremo a 24 años."
+   },
+   {
+    "t0": 52.01,
+    "t1": 55.5,
+    "texto": "Hoy, en El País, Sánchez dice que su mayor error en estos ocho años fue…"
+   },
+   {
+    "t0": 55.6,
+    "t1": 57.05,
+    "texto": "«no ver la corrupción de Ábalos»."
+   },
+   {
+    "t0": 57.2,
+    "t1": 57.94,
+    "texto": "Lo dice él."
+   }
+  ]
+ },
+ {
+  "escena": "meta",
+  "inicio": 58.39,
+  "fin": 66.39,
+  "frases": [
+   {
+    "t0": 59.09,
+    "t1": 61.44,
+    "texto": "Y al fondo, la meta: el 29 de noviembre."
+   },
+   {
+    "t0": 61.59,
+    "t1": 64.09,
+    "texto": "Allí ya esperan Feijóo y Abascal… calentando."
+   },
+   {
+    "t0": 64.24,
+    "t1": 65.94,
+    "texto": "Quedan 35 días de carrera."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 66.39,
+  "fin": 74.07,
+  "frases": [
+   {
+    "t0": 66.71,
+    "t1": 69.64,
+    "texto": "Él pide cuatro años más. ¿Se los das… o toca relevo? Te leo."
+   },
+   {
+    "t0": 69.84,
+    "t1": 72.72,
+    "texto": "Y síguenos: hasta el 29N, te lo contamos con datos."
+   }
+  ]
+ }
+]

@@ -56,7 +56,8 @@ PERSONAJES = {
                     garabatos=()),
     # creadores de contenido (oct. 2026): misma regla, chapa con el nombre y sin caricatura
     "wild": dict(nombre="Jordi Wild", papel="Presentador de The Wild Project", cara="normal", marco="marco", acento="gris",
-                 pelo=((40, 36, 36), "corto"), barba=(46, 40, 40), chapa=("JORDI WILD", "tinta"), zapatilla="negro", garabatos=()),
+                 pelo=((46, 38, 34), "atras"), barba=((116, 84, 60), "corta"), chapa=("JORDI WILD", "tinta"), zapatilla="negro",
+                 garabatos=(), traje=((36, 62, 120), None), chaleco=(120, 124, 132)),  # foto de joel (25/10/2026): americana azul, chaleco gris, camisa abierta
     "broncano": dict(nombre="David Broncano", papel="Presentador de La Revuelta (La 1)", cara="normal", marco="marco", acento="gris",
                      pelo=((62, 46, 36), "corto"), barba=(78, 60, 48), chapa=("BRONCANO", "rojo"), zapatilla="blanco", garabatos=()),
     "colau": dict(nombre="Ada Colau", papel="Candidata del Frente Amplio", cara="normal", marco="marco", acento="gris",
@@ -456,7 +457,22 @@ def accesorios_cara(c, ficha):
                    (-100, BOCA_Y - 10)])
         p.addPath(elipse(0, BOCA_Y + 14, 62, 38))
         p.setFillType(skia.PathFillType.kEvenOdd)
-        pieza(c, p, ficha["barba"], 4)
+        barba = ficha["barba"]
+        if isinstance(barba[0], tuple):  # (color, "corta"): barba de pocos días, más fina y con puntitos
+            col, _ = barba
+            p = suave([(-122, BOCA_Y - 14), (-112, BOCA_Y + 50), (-60, BOCA_Y + 88), (0, BOCA_Y + 96), (60, BOCA_Y + 88),
+                       (112, BOCA_Y + 50), (122, BOCA_Y - 14), (96, BOCA_Y + 6), (66, BOCA_Y - 26), (0, BOCA_Y - 34),
+                       (-66, BOCA_Y - 26), (-96, BOCA_Y + 6)])
+            p.addPath(elipse(0, BOCA_Y + 14, 66, 42))
+            p.setFillType(skia.PathFillType.kEvenOdd)
+            pieza(c, p, col, 0, alpha=150)
+            rng = np.random.default_rng(7)
+            for _ in range(60):
+                x, y = rng.uniform(-110, 110), rng.uniform(BOCA_Y - 20, BOCA_Y + 96)
+                if abs(x) < 120 - max(0, y - BOCA_Y) * 0.6 and (x / 62) ** 2 + ((y - BOCA_Y - 14) / 38) ** 2 > 1.15:
+                    c.drawCircle(x, y, 2.2, relleno((60, 46, 38)))
+        else:
+            pieza(c, p, barba, 4)
     if ficha.get("antifaz"):  # antifaz de ladrón con agujeros para los ojos
         p = suave([(-125, OJOS_Y - 40), (0, OJOS_Y - 50), (125, OJOS_Y - 40), (120, OJOS_Y + 38), (0, OJOS_Y + 30),
                    (-120, OJOS_Y + 38)])
@@ -479,10 +495,21 @@ def traje(c, ficha):
     c.save()
     c.clipPath(rrect(x0, -H2 + 18, x1, y1, 6), skia.ClipOp.kIntersect, True)
     pieza(c, poly([(-70, 104), (70, 104), (0, y1 + 6)]), "blanco", 4)  # camisa
+    if ficha.get("chaleco"):  # chaleco entre la camisa y la chaqueta, con botones
+        for sx in (-1, 1):
+            pieza(c, poly([(sx * 62, 110), (sx * 8, y1 + 8), (sx * 70, y1 + 8)]), ficha["chaleco"], 4)
+        for yb in (150, 168):
+            c.drawCircle(-12 + (yb - 150) * 0.1, yb, 3.5, relleno("tinta"))
+    if corb is None:  # sin corbata: camisa abierta con el cuello hacia fuera
+        for sx in (-1, 1):
+            pieza(c, poly([(sx * 6, 108), (sx * 58, 100), (sx * 46, 130)]), "blanco", 4)
+        c.drawPath(poly([(-16, 110), (0, 138), (16, 110)], False), trazo(3.5))
     for sx in (-1, 1):  # solapas
-        pieza(c, poly([(sx * (x1 + 10), 96), (sx * 70, 98), (sx * 4, y1 + 8), (sx * (x1 + 10), y1 + 8)]), col, 5)
+        bajo = 40 if ficha.get("chaleco") else 4  # con chaleco la chaqueta va abierta y se ve el chaleco
+        pieza(c, poly([(sx * (x1 + 10), 96), (sx * 70, 98), (sx * bajo, y1 + 8), (sx * (x1 + 10), y1 + 8)]), col, 5)
         c.drawPath(poly([(sx * 70, 98), (sx * 48, 136), (sx * 30, 132)], False), trazo(4))
-    pieza(c, poly([(-13, 108), (13, 108), (9, 122), (22, y1 - 6), (0, y1 + 10), (-22, y1 - 6), (-9, 122)]), corb, 4.5)
+    if corb is not None:
+        pieza(c, poly([(-13, 108), (13, 108), (9, 122), (22, y1 - 6), (0, y1 + 10), (-22, y1 - 6), (-9, 122)]), corb, 4.5)
     c.restore()
     if ficha.get("logo"):  # logo del partido en la solapa: rectángulo rojo con el nombre y la rosa
         import wb
@@ -525,6 +552,11 @@ def accesorios_cuerpo(c, ficha):
             for x0, x1 in ((-120, -40), (-60, 30), (0, 90), (60, 140)):  # mechones
                 c.drawPath(suave([(x0, -30), ((x0 + x1) / 2, -80), (x1 + 10, -70)], close=False), trazo(4, "gris_claro"))
             pieza(c, suave([(-40, -96), (30, -126), (110, -104), (60, -86)]), col, 4)  # tupé
+        elif estilo == "atras":  # pelo oscuro con volumen peinado hacia atrás, entradas y patillas
+            pieza(c, suave([(-160, 40), (-162, -30), (-120, -78), (-40, -100), (40, -104), (116, -84), (160, -36),
+                            (162, 40), (138, 10), (110, -22), (40, -30), (0, -18), (-40, -30), (-110, -22), (-138, 10)]), col, 5)
+            for x0, x1 in ((-130, -50), (-80, 10), (-20, 70), (40, 130)):  # mechones hacia atrás
+                c.drawPath(suave([(x0, -24), ((x0 + x1) / 2, -74), (x1 + 14, -78)], close=False), trazo(4, "gris"))
         elif estilo == "rapado":  # cabeza despejada: solo una franja corta a los lados
             for sx in (-1, 1):
                 pieza(c, suave([(sx * 70, 6), (sx * 92, -8), (sx * 148, -12), (sx * 160, 6)]), col, 4)

@@ -39,6 +39,9 @@ EFECTOS_VOZ = {
     # más grave (-2,5 semitonos) y con banda de televisión: frases literales de políticos citadas en el vídeo
     "tele": "asetrate=44100*0.865,aresample=44100,atempo=1.156,highpass=f=220,lowpass=f=4200,"
             "equalizer=f=1800:t=q:w=1.2:g=4,acompressor=threshold=0.1:ratio=3,volume=1.15",
+    # segunda voz citada (+1,5 semitonos, misma banda de tele) para que no se confunda con la primera
+    "tele2": "asetrate=44100*1.09,aresample=44100,atempo=0.917,highpass=f=260,lowpass=f=3800,"
+             "equalizer=f=2200:t=q:w=1.2:g=4,acompressor=threshold=0.1:ratio=3,volume=1.15",
 }
 
 

@@ -1,0 +1,1645 @@
+{
+ "slug": "cuatro_mas",
+ "title": "¿Cuatro más?",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Vídeo electoral de Sánchez con Carlos Cuerpo (elDiario.es, 25/10/2026): «¿Cuatro más?», «Estamos preparados», «Llevamos ocho ya»",
+  "Entrevista de Sánchez en El País (Europa Press, 25/10/2026): SMI antes del 29N y su mayor error, «no ver la corrupción de Ábalos»",
+  "Consejo de Ministros (feb. 2026): SMI 2026 1.221 €/mes, +66 % desde 2018 (735,90 €)",
+  "INE, EPA 2T 2018 y 2T 2026: paro 15,28 % → 9,87 %; ocupados 19,34 M → 22,78 M",
+  "Idealista vía ESdiario (6/10/2026): vivienda usada +74,4 % y alquiler +45,2 % desde junio de 2018",
+  "Tribunal Supremo (22/06/2026): Ábalos, 24 años y 3 meses",
+  "Personajes dibujados como pizarras, sin caricatura; las frases de Sánchez y Cuerpo son literales y con otra voz"
+ ],
+ "caption": "🏃 Sánchez sale a correr con Cuerpo: «¿Qué hacemos? ¿Cuatro más?»\n💶 Km 1, salario mínimo: de 736 € a 1.221 € (+66 %)\n📉 Km 2, paro: del 15,3 % al 9,9 % y 3,4 millones más trabajando\n🏠 La cuesta: piso +74 % y alquiler +45 % desde 2018\n🪨 La piedra: Ábalos, condenado a 24 años; Sánchez: su mayor error, «no ver la corrupción de Ábalos»\n🏁 En la meta del 29N esperan Feijóo y Abascal\n💬 ¿Cuatro más o relevo? Te leo 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: elDiario.es 25/10/2026 · El País/Europa Press 25/10/2026 · Consejo de Ministros (SMI 2026) · INE EPA · Idealista (vía ESdiario 6/10/2026) · Tribunal Supremo. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#Sánchez",
+  "#CarlosCuerpo",
+  "#29N",
+  "#elecciones",
+  "#salariominimo",
+  "#vivienda",
+  "#Feijóo",
+  "#Abascal",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "parque",
+    "velocidad": 340
+   },
+   "animo": "alegre",
+   "footnote": "Vídeo de Sánchez en redes · elDiario.es 25/10/2026",
+   "lines": [
+    {
+     "text": "Pedro Sánchez ha salido a correr… y lo ha subido a sus redes.",
+     "tono": "energia"
+    },
+    {
+     "text": "«Todavía nos queda carrera. ¿Qué hacemos? ¿Cuatro más?»",
+     "tono": "normal",
+     "pausa": 0.05,
+     "efecto_voz": "tele"
+    },
+    {
+     "text": "¡Para, para! Antes de cuatro más… ¿cómo han ido los ocho?",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      640,
+      1120
+     ],
+     "dur": 0,
+     "zoom": 1.3
+    },
+    {
+     "at": "@Todavía",
+     "plano": "general",
+     "sobre": [
+      600,
+      1100
+     ],
+     "dur": 0.6,
+     "zoom": 1.2
+    },
+    {
+     "at": "@Para",
+     "plano": "general",
+     "sobre": [
+      480,
+      1050
+     ],
+     "dur": 0.4,
+     "zoom": 1.05
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sanchez_corre",
+     "x": 640,
+     "y": 1340,
+     "scale": 0.56,
+     "at": 0,
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@correr",
+       "salta": true
+      },
+      {
+       "at": "@subido",
+       "pose": "saluda",
+       "mira": "camara"
+      },
+      {
+       "at": "@redes",
+       "pose": "normal"
+      },
+      {
+       "at": "@Todavía",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@Cuatro",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@Para",
+       "trota": false,
+       "cara": "sorpresa",
+       "take": true,
+       "mira": "izq"
+      },
+      {
+       "at": "@ocho",
+       "pose": "encoge",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "nada",
+     "trota": true,
+     "id": "sanchez_corre"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 250,
+     "y": 1340,
+     "scale": 0.56,
+     "at": 0,
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": 0.1,
+       "objeto": "reloj"
+      },
+      {
+       "at": "@correr",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@redes",
+       "cara": "preocupado",
+       "mira": "der"
+      },
+      {
+       "at": "@Cuatro",
+       "cara": "susto"
+      },
+      {
+       "at": "@Para",
+       "trota": false,
+       "pose": "arriba",
+       "cara": "indignado",
+       "salta": true,
+       "objeto": null
+      },
+      {
+       "at": "@Antes",
+       "pose": "senala",
+       "cara": "pensativo",
+       "mira": "der"
+      },
+      {
+       "at": "@ocho",
+       "mira": "camara",
+       "pose": "jarras"
+      }
+     ],
+     "entra": "nada",
+     "trota": true,
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿CUATRO MÁS?",
+     "x": 540,
+     "y": 470,
+     "size": 124,
+     "color": "amarillo",
+     "at": "@Cuatro",
+     "golpe": true,
+     "out": "@Para-0.1",
+     "hud": true
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¡STOP!",
+     "x": 330,
+     "y": 820,
+     "at": "@Para",
+     "scale": 0.9,
+     "vida": 0.8
+    },
+    {
+     "type": "rotulo",
+     "text": "¿Y LOS OCHO?",
+     "x": 540,
+     "y": 470,
+     "size": 112,
+     "color": "blanco",
+     "at": "@ocho-0.2",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "salida",
+   "fondo": "parque",
+   "animo": "comico",
+   "trans": "corte",
+   "footnote": "Vídeo de Sánchez en redes · elDiario.es 25/10/2026",
+   "lines": [
+    {
+     "text": "Va con Carlos Cuerpo, su vicepresidente.",
+     "tono": "normal"
+    },
+    {
+     "text": "«Yo creo que sí. Estamos preparados».",
+     "tono": "normal",
+     "pausa": 0.05,
+     "efecto_voz": "tele2"
+    },
+    {
+     "text": "Y bromean: «Llevamos ocho ya». Ocho kilómetros… y ocho años en la Moncloa.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Yo",
+     "plano": "medio",
+     "sobre": "cuerpo",
+     "dur": 0.5,
+     "aire": 240
+    },
+    {
+     "at": "@bromean",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@Moncloa",
+     "plano": "general",
+     "sobre": [
+      700,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 1.05
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "arco",
+     "x": 540,
+     "y": 1320,
+     "scale": 0.92,
+     "at": 0,
+     "props": {
+      "texto": "SALIDA",
+      "sub": "JUNIO DE 2018",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 1.2,
+     "sfx": "rotulador"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez_corre",
+     "x": 420,
+     "y": 1340,
+     "scale": 0.56,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@Cuerpo",
+       "mira": "der"
+      },
+      {
+       "at": "@preparados",
+       "pose": "pulgar",
+       "cara": "riendo"
+      },
+      {
+       "at": "@ocho",
+       "pose": "saluda",
+       "mira": "camara"
+      },
+      {
+       "at": "@Moncloa",
+       "x": 1500,
+       "corre": true,
+       "dur": 1.1
+      }
+     ],
+     "entra": "nada",
+     "trota": false,
+     "id": "sanchez_corre"
+    },
+    {
+     "type": "personaje",
+     "quien": "cuerpo",
+     "x": 1400,
+     "y": 1340,
+     "scale": 0.56,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Cuerpo",
+       "x": 680,
+       "corre": true,
+       "dur": 0.7
+      },
+      {
+       "at": "@Yo",
+       "pose": "pulgar",
+       "mira": "camara",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@bromean",
+       "cara": "riendo",
+       "mira": "izq"
+      },
+      {
+       "at": "@Moncloa",
+       "x": 1700,
+       "corre": true,
+       "dur": 1.1
+      }
+     ],
+     "entra": "nada",
+     "trota": false,
+     "id": "cuerpo"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 160,
+     "y": 1340,
+     "scale": 0.56,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Cuerpo",
+       "mira": "der"
+      },
+      {
+       "at": "@kilómetros",
+       "pose": "piensa"
+      },
+      {
+       "at": "@años",
+       "cara": "idea",
+       "salta": true
+      },
+      {
+       "at": "@Moncloa",
+       "x": 1300,
+       "corre": true,
+       "dur": 1.4,
+       "cara": "preocupado"
+      }
+     ],
+     "entra": "nada",
+     "trota": false,
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "8 KM = 8 AÑOS",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@kilómetros",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "smi",
+   "fondo": "parque",
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Consejo de Ministros (feb. 2026) · El País 25/10/2026",
+   "lines": [
+    {
+     "text": "Primer poste: el salario mínimo.",
+     "tono": "normal"
+    },
+    {
+     "text": "En 2018, 736 euros al mes. Hoy, 1.221. Un 66 % más.",
+     "tono": "energia",
+     "pausa": 0.1
+    },
+    {
+     "text": "Y promete otra subida antes del 29N.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Hoy",
+     "plano": "general",
+     "sobre": [
+      560,
+      950
+     ],
+     "dur": 0.5,
+     "zoom": 1.04
+    },
+    {
+     "at": "@promete",
+     "plano": "medio",
+     "sobre": "sanchez_corre",
+     "dur": 0.5,
+     "aire": 280
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 860,
+     "y": 1340,
+     "scale": 0.7,
+     "at": 0,
+     "props": {
+      "texto": "SUELDO",
+      "numero": "KM 1"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.8
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez_corre",
+     "x": -300,
+     "y": 1340,
+     "scale": 0.56,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": 0.05,
+       "x": 520,
+       "corre": true,
+       "dur": 0.8
+      },
+      {
+       "at": "@poste",
+       "mira": "der"
+      },
+      {
+       "at": "@Hoy",
+       "objeto": "billete",
+       "pose": "sostiene",
+       "cara": "riendo"
+      },
+      {
+       "at": "@66",
+       "pose": "arriba",
+       "salta": true
+      },
+      {
+       "at": "@promete",
+       "objeto": null,
+       "pose": "senala_arriba",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "trota": false,
+     "id": "sanchez_corre"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": -500,
+     "y": 1340,
+     "scale": 0.56,
+     "at": 0,
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": 0.3,
+       "x": 190,
+       "corre": true,
+       "dur": 0.9
+      },
+      {
+       "at": "@salario",
+       "pose": "caidos",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@2018",
+       "mira": "arriba",
+       "cara": "normal",
+       "pose": "normal"
+      },
+      {
+       "at": "@66",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@promete",
+       "cara": "pensativo",
+       "mira": "der"
+      }
+     ],
+     "entra": "nada",
+     "trota": false,
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "SALARIO MÍNIMO",
+     "x": 540,
+     "y": 420,
+     "size": 96,
+     "color": "blanco",
+     "at": "@salario",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 600,
+     "scale": 0.95,
+     "at": "@2018",
+     "props": {
+      "texto": "2018: 736 €",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@Hoy-0.05"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 600,
+     "scale": 0.95,
+     "at": "@Hoy",
+     "props": {
+      "valor": 1221,
+      "desde": 736,
+      "sufijo": " €",
+      "ancho": 640
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "dibujo": 1.3
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 800,
+     "scale": 0.9,
+     "at": "@66",
+     "props": {
+      "texto": "+66 %",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 960,
+     "scale": 1.0,
+     "at": "@29N",
+     "props": {
+      "texto": "PROMESA",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "paro",
+   "fondo": "parque",
+   "animo": "alegre",
+   "trans": "barrido",
+   "footnote": "INE · EPA 2º trimestre 2018 y 2026",
+   "lines": [
+    {
+     "text": "Segundo poste: el paro.",
+     "tono": "normal"
+    },
+    {
+     "text": "Del 15,3 % al 9,9 %. Y 3,4 millones de personas más trabajando.",
+     "tono": "energia",
+     "pausa": 0.1
+    },
+    {
+     "text": "Este tramo… cuesta abajo.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@millones",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.5,
+     "zoom": 1.04
+    },
+    {
+     "at": "@cuesta",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.4,
+     "aire": 260
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 880,
+     "y": 1340,
+     "scale": 0.7,
+     "at": 0,
+     "props": {
+      "texto": "EMPLEO",
+      "numero": "KM 2",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.8
+    },
+    {
+     "type": "personaje",
+     "quien": "cuerpo",
+     "x": -300,
+     "y": 1340,
+     "scale": 0.56,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": 0.05,
+       "x": 600,
+       "corre": true,
+       "dur": 0.9
+      },
+      {
+       "at": "@paro",
+       "pose": "senala_arriba",
+       "mira": "arriba"
+      },
+      {
+       "at": "@9,9",
+       "cara": "ilusionado",
+       "pose": "pulgar"
+      },
+      {
+       "at": "@trabajando",
+       "mira": "camara",
+       "pose": "saluda"
+      }
+     ],
+     "entra": "nada",
+     "trota": false,
+     "id": "cuerpo"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez_corre",
+     "x": -600,
+     "y": 1340,
+     "scale": 0.56,
+     "at": 0,
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": 0.2,
+       "x": 370,
+       "corre": true,
+       "dur": 0.9
+      },
+      {
+       "at": "@millones",
+       "pose": "arriba",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "trota": false,
+     "id": "sanchez_corre"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": -800,
+     "y": 1340,
+     "scale": 0.56,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": 0.4,
+       "x": 140,
+       "corre": true,
+       "dur": 0.9
+      },
+      {
+       "at": "@paro",
+       "mira": "arriba"
+      },
+      {
+       "at": "@millones",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@cuesta",
+       "cara": "riendo",
+       "salta": true,
+       "pose": "pulgar",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "trota": false,
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "PARO",
+     "x": 540,
+     "y": 400,
+     "size": 104,
+     "color": "blanco",
+     "at": "@paro",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 690,
+     "scale": 0.7,
+     "at": "@Del",
+     "props": {
+      "barras": [
+       {
+        "texto": "2018",
+        "valor": 15.3,
+        "color": "gris"
+       },
+       {
+        "texto": "2026",
+        "valor": 9.9,
+        "color": "verde"
+       }
+      ],
+      "sufijo": " %",
+      "tope": 18,
+      "resalta": [
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1010,
+     "scale": 0.72,
+     "at": "@millones",
+     "props": {
+      "texto": "+3,4 MILLONES TRABAJANDO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "cuesta",
+   "fondo": {
+    "tipo": "parque",
+    "velocidad": 120
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Idealista (vía ESdiario 6/10/2026) · jun. 2018 - sep. 2026",
+   "lines": [
+    {
+     "text": "Pero entonces llega la cuesta: la vivienda.",
+     "tono": "tension"
+    },
+    {
+     "text": "Un piso usado cuesta hoy un 74 % más que en 2018. El alquiler, un 45 % más.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Y aquí mucha gente se ha quedado sin aliento.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@cuesta",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.7,
+     "inclina": -7
+    },
+    {
+     "at": "@aliento",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 240,
+     "inclina": -7
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sanchez_corre",
+     "x": 760,
+     "y": 1340,
+     "scale": 0.56,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@cuesta",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@74",
+       "mira": "arriba"
+      }
+     ],
+     "entra": "nada",
+     "trota": "anda",
+     "id": "sanchez_corre"
+    },
+    {
+     "type": "personaje",
+     "quien": "cuerpo",
+     "x": 980,
+     "y": 1340,
+     "scale": 0.56,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@cuesta",
+       "cara": "preocupado"
+      }
+     ],
+     "entra": "nada",
+     "trota": "anda",
+     "id": "cuerpo"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 200,
+     "y": 1340,
+     "scale": 0.56,
+     "at": 0,
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": "@cuesta",
+       "pose": "empuja",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@74",
+       "cara": "susto"
+      },
+      {
+       "at": "@alquiler",
+       "cara": "indignado"
+      },
+      {
+       "at": "@aliento",
+       "cara": "triste",
+       "pose": "caidos",
+       "trota": false
+      }
+     ],
+     "entra": "nada",
+     "trota": "anda",
+     "id": "piz"
+    },
+    {
+     "type": "edificio",
+     "edificio": "casa",
+     "x": 470,
+     "y": 1340,
+     "scale": 0.32,
+     "at": 0,
+     "acciones": [
+      {
+       "at": "@74",
+       "cara": "susto"
+      },
+      {
+       "at": "@aliento",
+       "cara": "triste"
+      }
+     ],
+     "cara": "preocupado"
+    },
+    {
+     "type": "rotulo",
+     "text": "VIVIENDA",
+     "x": 540,
+     "y": 410,
+     "size": 104,
+     "color": "blanco",
+     "at": "@vivienda",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 580,
+     "scale": 0.78,
+     "at": "@74",
+     "props": {
+      "texto": "PISO +74 %",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 740,
+     "scale": 0.78,
+     "at": "@45",
+     "props": {
+      "texto": "ALQUILER +45 %",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "grafica",
+     "x": 820,
+     "y": 660,
+     "scale": 0.85,
+     "at": "@usado",
+     "props": {
+      "valores": [
+       1,
+       1.15,
+       1.3,
+       1.55,
+       1.74
+      ],
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "dibujo": 2.2
+    }
+   ]
+  },
+  {
+   "id": "piedra",
+   "fondo": "parque",
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "Tribunal Supremo 22/06/2026 · El País / Europa Press 25/10/2026",
+   "lines": [
+    {
+     "text": "Y en el camino, una piedra: Ábalos. Su exministro, condenado por el Supremo a 24 años.",
+     "tono": "tension"
+    },
+    {
+     "text": "Hoy, en El País, Sánchez dice que su mayor error en estos ocho años fue…",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "«no ver la corrupción de Ábalos».",
+     "tono": "normal",
+     "pausa": 0.05,
+     "efecto_voz": "tele"
+    },
+    {
+     "text": "Lo dice él.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@condenado",
+     "plano": "general",
+     "sobre": [
+      600,
+      1050
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@corrupción",
+     "plano": "medio",
+     "sobre": "sanchez_corre",
+     "dur": 0.5,
+     "aire": 260
+    },
+    {
+     "at": "@Lo",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "piedra",
+     "x": 740,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "props": {
+      "texto": "ÁBALOS"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez_corre",
+     "x": -300,
+     "y": 1340,
+     "scale": 0.56,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": 0.05,
+       "x": 470,
+       "corre": true,
+       "dur": 1.0
+      },
+      {
+       "at": "@piedra",
+       "tropieza": true
+      },
+      {
+       "at": "@exministro",
+       "mira": "der",
+       "cara": "susto"
+      },
+      {
+       "at": "@condenado",
+       "cara": "preocupado",
+       "mira": "der"
+      },
+      {
+       "at": "@País",
+       "cara": "triste",
+       "pose": "cabeza"
+      },
+      {
+       "at": "@corrupción",
+       "cara": "serio",
+       "pose": "manos_juntas",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "trota": false,
+     "id": "sanchez_corre"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": -600,
+     "y": 1340,
+     "scale": 0.56,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": 0.3,
+       "x": 180,
+       "corre": true,
+       "dur": 1.0
+      },
+      {
+       "at": "@piedra",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@condenado",
+       "cara": "serio",
+       "mira": "der"
+      },
+      {
+       "at": "@error",
+       "cara": "pensativo",
+       "pose": "piensa"
+      },
+      {
+       "at": "@Lo",
+       "mira": "camara",
+       "pose": "senala",
+       "cara": "esceptica"
+      }
+     ],
+     "entra": "nada",
+     "trota": false,
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "CONDENADO A 24 AÑOS",
+     "x": 540,
+     "y": 440,
+     "size": 78,
+     "color": "rojo",
+     "at": "@condenado",
+     "golpe": true,
+     "out": "@País-0.1",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 470,
+     "scale": 0.95,
+     "at": "@corrupción-0.2",
+     "props": {
+      "lineas": [
+       "MI MAYOR ERROR:",
+       "NO VER LA CORRUPCIÓN",
+       "DE ÁBALOS"
+      ],
+      "cola": [
+       0,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 720,
+     "scale": 1.0,
+     "at": "@Lo",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "meta",
+   "fondo": "parque",
+   "animo": "tension",
+   "trans": "iris",
+   "footnote": "Elecciones generales: 29 de noviembre de 2026",
+   "lines": [
+    {
+     "text": "Y al fondo, la meta: el 29 de noviembre.",
+     "tono": "normal"
+    },
+    {
+     "text": "Allí ya esperan Feijóo y Abascal… calentando.",
+     "tono": "comico",
+     "pausa": 0.1
+    },
+    {
+     "text": "Quedan 35 días de carrera.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0,
+     "zoom": 0.9
+    },
+    {
+     "at": "@Allí",
+     "plano": "general",
+     "sobre": [
+      540,
+      1050
+     ],
+     "dur": 0.6,
+     "zoom": 1.08
+    },
+    {
+     "at": "@Quedan",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "arco",
+     "x": 540,
+     "y": 1320,
+     "scale": 0.92,
+     "at": 0,
+     "props": {
+      "texto": "META",
+      "sub": "29 DE NOVIEMBRE",
+      "color": "verde",
+      "cuadros": true
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 1.0,
+     "sfx": "rotulador"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 380,
+     "y": 1340,
+     "scale": 0.56,
+     "at": "@Allí-0.2",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@Feijóo",
+       "pose": "arriba",
+       "salta": true
+      },
+      {
+       "at": "@Abascal",
+       "pose": "jarras",
+       "mira": "izq"
+      },
+      {
+       "at": "@calentando",
+       "salta": true,
+       "pose": "punos"
+      },
+      {
+       "at": "@Quedan",
+       "mira": "camara",
+       "cara": "burla"
+      }
+     ],
+     "entra": "pop",
+     "trota": false,
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 700,
+     "y": 1340,
+     "scale": 0.56,
+     "at": "@Abascal-0.2",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@Abascal",
+       "pose": "punos",
+       "salta": true
+      },
+      {
+       "at": "@calentando",
+       "pose": "arriba",
+       "salta": true
+      },
+      {
+       "at": "@Quedan",
+       "mira": "camara",
+       "pose": "jarras",
+       "cara": "burla"
+      }
+     ],
+     "entra": "pop",
+     "trota": false,
+     "id": "abascal"
+    },
+    {
+     "type": "rotulo",
+     "text": "29N",
+     "x": 540,
+     "y": 440,
+     "size": 150,
+     "color": "amarillo",
+     "at": "@noviembre",
+     "golpe": true,
+     "out": "@Allí",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 440,
+     "scale": 0.8,
+     "at": "@Quedan-0.1",
+     "props": {
+      "valor": 35,
+      "desde": 0,
+      "sufijo": " DÍAS",
+      "ancho": 640
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "dibujo": 1.0
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": {
+    "tipo": "parque",
+    "velocidad": 340
+   },
+   "animo": "final",
+   "trans": "zoom",
+   "footnote": "Pregunta a la audiencia",
+   "lines": [
+    {
+     "text": "Él pide cuatro años más. ¿Se los das… o toca relevo? Te leo.",
+     "tono": "energia"
+    },
+    {
+     "text": "Y síguenos: hasta el 29N, te lo contamos con datos.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1050
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@relevo",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    },
+    {
+     "at": "@síguenos",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 260
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sanchez_corre",
+     "x": 520,
+     "y": 1340,
+     "scale": 0.56,
+     "at": 0,
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@cuatro",
+       "pose": "saluda"
+      },
+      {
+       "at": "@relevo",
+       "mira": "izq",
+       "cara": "burla"
+      }
+     ],
+     "entra": "nada",
+     "trota": true,
+     "id": "sanchez_corre"
+    },
+    {
+     "type": "personaje",
+     "quien": "cuerpo",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.56,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@relevo",
+       "mira": "izq",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "nada",
+     "trota": true,
+     "id": "cuerpo"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 220,
+     "y": 1340,
+     "scale": 0.56,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": 0.1,
+       "objeto": "reloj"
+      },
+      {
+       "at": "@relevo",
+       "cara": "idea",
+       "mira": "camara"
+      },
+      {
+       "at": "@síguenos",
+       "objeto": null,
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@datos",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "trota": true,
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿CUATRO MÁS…",
+     "x": 540,
+     "y": 430,
+     "size": 108,
+     "color": "amarillo",
+     "at": "@cuatro",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "…O RELEVO?",
+     "x": 540,
+     "y": 570,
+     "size": 108,
+     "color": "blanco",
+     "at": "@relevo",
+     "golpe": true,
+     "fx": [
+      {
+       "at": "@leo",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.6,
+  "titulo": "¿Cuatro más?",
+  "capitulo": null
+ }
+}

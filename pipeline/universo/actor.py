@@ -14,6 +14,7 @@ Línea de tiempo «acciones» (también vale «caras»): [{"at": "@palabra", ...
   cara, pose, mira (izq/der/arriba/abajo o el id de otro elemento), giro, habla, objeto, props, caras_dentro, flip,
   x / y (+ "dur"; "corre": true = corre): anda o corre hasta ahí, mirando hacia donde va,
   sigue: id (+ "offset", "lag"): persigue a otro elemento (null = deja de seguir),
+  trota: true | "anda" | false: corre o anda sin moverse del sitio (el fondo pasa por detrás),
   salta, take (reacción cartoon: se estira y se le salen los ojos), aplasta (queda plano como una tortita),
   tropieza (cae de bruces, ve estrellas y se levanta), gira (se da la vuelta; con "flip"), tiembla,
   sale: izq|der|pop|abajo, sfx.
@@ -348,6 +349,10 @@ def dibujar(e, c, t, am):
     for ch in e.cambios:
         if "flip" in ch and ch["t"] + (0.15 if ch.get("gira") else 0) <= t:
             flip = ch["flip"]
+    # «trota»: corre (o anda, "anda") sin moverse del sitio; el fondo es el que pasa (fondo "parque" con velocidad)
+    trota, _, _ = _vigente(e, t, "trota", s.get("trota", False))
+    if trota and not moviendo and e.kind == "personaje" and not tropezando:
+        moviendo, corre, dirx = True, trota != "anda", (-1 if flip else 1)
     # andar / correr: paso, inclinación hacia delante y cara hacia donde va
     if moviendo and (e.kind == "personaje" or s.get("piernas")):
         paso = (t - e.t0) * (FREC_CORRE if corre else FREC_ANDA)

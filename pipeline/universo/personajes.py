@@ -11,7 +11,7 @@ import math
 import numpy as np
 import skia
 
-from .estilo import (COL, TINTA, degradado, elipse, manguera, pieza, poly, relleno, rgb, rrect, sombra_suelo,
+from .estilo import (COL, TINTA, degradado, elipse, manguera, mezcla, pieza, poly, relleno, rgb, rrect, sombra_suelo,
                      suave, trazo)
 
 W2, H2 = 150, 190  # media anchura / altura de la pizarra
@@ -54,6 +54,13 @@ PERSONAJES = {
     "abascal": dict(nombre="Santiago Abascal", papel="Candidato de Vox", cara="normal", marco="marco", acento="vox",
                     pelo=((50, 44, 44), "corto"), barba=(60, 52, 52), chapa=("ABASCAL", "vox"), zapatilla="verde_osc",
                     garabatos=()),
+    # «¿Cuatro más?» (25/10/2026): el vídeo electoral en el que Sánchez sale a correr con Carlos Cuerpo
+    "sanchez_corre": dict(nombre="Pedro Sánchez (corriendo)", papel="Candidato del PSOE", cara="normal", marco="marco",
+                          acento="psoe", pelo=((70, 66, 72), "tupe"), chapa=("SÁNCHEZ", "psoe"), zapatilla="rojo", garabatos=(),
+                          chandal=((38, 62, 124), "psoe"), logo="PSOE"),
+    "cuerpo": dict(nombre="Carlos Cuerpo", papel="Vicepresidente primero y ministro de Economía", cara="normal", marco="marco",
+                   acento="gris", pelo=((52, 46, 44), "corto"), chapa=("CUERPO", "gris"), zapatilla="azul", garabatos=(),
+                   chandal=((96, 102, 116), "blanco")),
     # creadores de contenido (oct. 2026): misma regla, chapa con el nombre y sin caricatura
     "wild": dict(nombre="Jordi Wild", papel="Presentador de The Wild Project", cara="normal", marco="marco", acento="gris",
                  pelo=((46, 38, 34), "atras"), barba=((116, 84, 60), "corta"), chapa=("JORDI WILD", "tinta"), zapatilla="negro",
@@ -511,6 +518,29 @@ def traje(c, ficha):
     if corb is not None:
         pieza(c, poly([(-13, 108), (13, 108), (9, 122), (22, y1 - 6), (0, y1 + 10), (-22, y1 - 6), (-9, 122)]), corb, 4.5)
     c.restore()
+    _logo(c, ficha)
+
+
+def chandal(c, ficha):
+    """Chaqueta de chándal con cremallera, cuello alto y dos rayas por manga (y logo si lo lleva)."""
+    col, raya = ficha["chandal"]
+    x0, x1, y1 = -W2 + 18, W2 - 18, H2 - 18
+    c.save()
+    c.clipPath(rrect(x0, -H2 + 18, x1, y1, 6), skia.ClipOp.kIntersect, True)
+    pieza(c, poly([(x0 - 10, 100), (-40, 92), (40, 92), (x1 + 10, 100), (x1 + 10, y1 + 8), (x0 - 10, y1 + 8)]), col, 5)
+    for sx in (-1, 1):  # rayas laterales
+        xr = sx * (x1 - 34)
+        c.drawLine(xr, 104, xr, y1 + 8, trazo(14, raya))
+        pieza(c, poly([(sx * 4, 92), (sx * 44, 90), (sx * 50, 120), (sx * 6, 118)]), mezcla(col, "blanco", 0.15), 4)  # cuello
+    c.drawLine(0, 104, 0, y1 + 8, trazo(4))  # cremallera
+    for yz in range(116, int(y1), 14):
+        c.drawLine(-5, yz, 5, yz, trazo(2.5, "gris_claro"))
+    pieza(c, rrect(-8, 118, 8, 142, 4), "gris_claro", 3)  # tirador
+    c.restore()
+    _logo(c, ficha)
+
+
+def _logo(c, ficha):
     if ficha.get("logo"):  # logo del partido en la solapa: rectángulo rojo con el nombre y la rosa
         import wb
         f = wb.font("sub", 22)
@@ -526,6 +556,8 @@ def traje(c, ficha):
 def accesorios_cuerpo(c, ficha):
     if ficha.get("traje"):
         traje(c, ficha)
+    if ficha.get("chandal"):
+        chandal(c, ficha)
     if ficha.get("pajarita"):
         col = ficha["pajarita"]
         pieza(c, poly([(0, 150), (-40, 128), (-40, 172), (0, 150), (40, 128), (40, 172)]), col, 5)

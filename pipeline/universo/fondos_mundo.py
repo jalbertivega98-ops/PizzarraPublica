@@ -4,6 +4,7 @@
             lado del Estrecho, la península y el Peñón. Gaviotas, ferri cruzando, banderas ondeando, palmeras.
   carretera carretera en perspectiva entre colinas, rayas y árboles que pasan (velocidad)
   colegio   colegio electoral por dentro (pizarra, ventanales, cartel, banderines)
+  parque    parque al amanecer con camino de tierra para correr; árboles, farolas y piedrecitas pasan (velocidad px/s)
   mar_mapa  mar infinito con olitas (debajo de un objeto "mapa"; la escena lleva "limites" amplios)
 """
 import math
@@ -250,9 +251,65 @@ def plato(c, t=0.0, capa=lambda d: None, suelo=SUELO, rotulo="DEBATE 29N", **kw)
     c.drawLine(X0 - 600, suelo - 10, X1 + 600, suelo - 10, trazo(6))
 
 
+def _envuelve(x, v, t, ancho=2200, x0=X0 - 500):
+    """Posición x de algo que pasa hacia la izquierda a v px/s y vuelve a entrar por la derecha."""
+    return (x - v * t - x0) % ancho + x0
+
+
+def parque(c, t=0.0, capa=lambda d: None, suelo=SUELO, velocidad=0.0, **kw):
+    """Parque al amanecer con un camino de tierra; con velocidad > 0 todo pasa hacia la izquierda (los que trotan
+    se quedan en su sitio y parece que avanzan)."""
+    v = velocidad
+    capa(0.12)
+    _rect(c, X0 - 600, Y0 - 600, X1 + 600, suelo, (150, 200, 240), degradado(Y0, suelo, (140, 196, 240), (255, 222, 172)))
+    c.drawCircle(830, 470, 150, relleno((255, 236, 170), 90))
+    pieza(c, elipse(830, 470, 92, 92), (255, 214, 90), 6)
+    for i, (y, sc, vn) in enumerate(((170, 1.0, 12), (330, 0.7, 8), (90, 0.55, 5))):
+        _nube(c, _envuelve(i * 640, vn + v * 0.05, t), y, sc, 210)
+    _pajaros(c, t)
+    capa(0.35)
+    for i in range(6):  # colinas lejanas
+        x = _envuelve(i * 380, v * 0.15, t, ancho=2280)
+        c.drawPath(suave([(x - 320, suelo - 60), (x, suelo - 330 - 60 * (i % 2)), (x + 320, suelo - 60)]),
+                   relleno((150, 200, 130) if i % 2 else (132, 190, 116)))
+    capa(0.6)
+    for i in range(9):  # fila de árboles
+        x = _envuelve(i * 245, v * 0.45, t)
+        c.drawLine(x, suelo - 40, x, suelo - 180, trazo(20, (140, 100, 64)))
+        pieza(c, elipse(x, suelo - 250, 96 + 12 * (i % 3), 100), (88, 164, 76) if i % 2 else (104, 178, 84), 6)
+    capa(1.0)
+    _rect(c, X0 - 600, suelo - 60, X1 + 600, Y1 + 600, (120, 190, 86), degradado(suelo - 60, Y1, (128, 196, 92), (96, 164, 70)))
+    c.drawLine(X0 - 600, suelo - 60, X1 + 600, suelo - 60, trazo(5, (70, 130, 56)))
+    # camino de tierra
+    _rect(c, X0 - 600, suelo - 36, X1 + 600, suelo + 110, (226, 196, 142), degradado(suelo - 36, suelo + 110, (236, 208, 156), (210, 176, 120)))
+    c.drawLine(X0 - 600, suelo - 36, X1 + 600, suelo - 36, trazo(5, (150, 116, 70)))
+    c.drawLine(X0 - 600, suelo + 110, X1 + 600, suelo + 110, trazo(5, (150, 116, 70)))
+    for i in range(16):  # piedrecitas y rayas del camino
+        x = _envuelve(i * 137, v, t)
+        y = suelo + 10 + (i * 37) % 80
+        c.drawPath(elipse(x, y, 10 + (i % 3) * 4, 6), relleno((176, 140, 94)))
+        if i % 3 == 0:
+            c.drawLine(x - 40, y + 20, x + 10, y + 20, trazo(3, (196, 160, 110)))
+    for i in range(4):  # farolas y bancos en el borde
+        x = _envuelve(i * 550 + 200, v, t)
+        if i % 2:
+            pieza(c, rrect(x - 8, suelo - 460, x + 8, suelo - 50, 5), (70, 76, 92), 5)
+            pieza(c, poly([(x - 34, suelo - 460), (x + 34, suelo - 460), (x + 20, suelo - 500), (x - 20, suelo - 500)]), (70, 76, 92), 5)
+            c.drawCircle(x, suelo - 456, 14, relleno("amarillo"))
+        else:
+            pieza(c, rrect(x - 90, suelo - 120, x + 90, suelo - 96, 6), "madera", 5)
+            pieza(c, rrect(x - 90, suelo - 170, x + 90, suelo - 146, 6), "madera", 5)
+            for sx in (-1, 1):
+                c.drawLine(x + sx * 70, suelo - 96, x + sx * 76, suelo - 50, trazo(8, (70, 76, 92)))
+    for i in range(5):  # matorrales delanteros
+        x = _envuelve(i * 470 + 90, v * 1.25, t)
+        pieza(c, suave([(x - 110, suelo + 300), (x - 90, suelo + 210), (x - 20, suelo + 180), (x + 60, suelo + 200),
+                        (x + 110, suelo + 300)]), (84, 150, 66), 6)
+
+
 def _f(size, cual="sub"):
     import wb
     return wb.font(cual, size)
 
 
-TIPOS = {"ceuta": ceuta, "mar_mapa": mar_mapa, "carretera": carretera, "colegio": colegio, "estudio": estudio, "plato": plato}
+TIPOS = {"ceuta": ceuta, "mar_mapa": mar_mapa, "carretera": carretera, "colegio": colegio, "estudio": estudio, "plato": plato, "parque": parque}

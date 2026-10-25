@@ -20,6 +20,9 @@ objetos.TIPOS como los de mundo.py:
   corona      corona dorada (la Corona, sin caras de personas reales)
   pergamino   hoja de tratado antigua con sello de lacre; props: titulo, fecha, lineas
   bola        bola de cristal de adivino (encuestas: «predecir»); props: texto
+  poste       poste de kilómetro de un camino (tablilla con texto y número); (0, 0) = suelo; props: texto, numero, color
+  arco        arco de salida / meta con pancarta y banderines; (0, 0) = suelo; props: texto, sub, color, cuadros (bool)
+  piedra      pedrusco en el camino con una chapa; (0, 0) = suelo; props: texto
   libro       libro grueso cerrado con título en el lomo; props: titulo, color
 """
 import math
@@ -413,14 +416,71 @@ def gorra(c, t=0.0, texto="", color="azul", **kw):
         _texto(c, texto, 0, -14, 40, "tinta", "sub", 220)
 
 
+# ------------------------------------------------------------------ carrera
+def poste(c, t=0.0, texto="", numero="", color="rojo", **kw):
+    """Poste de kilómetro: palo de madera con tablilla blanca, franja de color y el texto; (0, 0) = suelo."""
+    sombra_suelo(c, 0, 0, 70)
+    pieza(c, rrect(-18, -420, 18, 0, 8), "madera", 6)
+    pieza(c, rrect(-190, -560, 190, -330, 22), "blanco", 7, shader=degradado(-560, -330, "blanco", (232, 236, 242)))
+    c.save(); c.clipPath(rrect(-190, -560, 190, -330, 22), skia.ClipOp.kIntersect, True)
+    c.drawRect(skia.Rect(-200, -570, 200, -500), relleno(color))
+    c.restore()
+    c.drawPath(rrect(-190, -560, 190, -330, 22), trazo(7))
+    if numero:
+        _texto(c, numero, 0, -514, 50, "blanco", "sub", 340)
+    if texto:
+        _texto(c, texto, 0, -390, 76, "tinta", "sub", 340)
+
+
+def arco(c, t=0.0, texto="SALIDA", sub="", color="rojo", cuadros=False, **kw):
+    """Arco de carrera hinchable con pancarta; (0, 0) = suelo, 860 de ancho."""
+    for sx in (-1, 1):  # patas hinchables
+        sombra_suelo(c, sx * 400, 0, 70)
+        pieza(c, rrect(sx * 400 - 48, -760, sx * 400 + 48, 0, 46), color, 7,
+              shader=degradado(-760, 0, mezcla(color, "blanco", 0.25), color))
+    pieza(c, rrect(-448, -860, 448, -660, 70), color, 7, shader=degradado(-860, -660, mezcla(color, "blanco", 0.3), color))
+    pieza(c, rrect(-330, -830, 330, -690, 16), "blanco", 6)
+    if cuadros:  # bandera de cuadros a los lados de la pancarta
+        for sx in (-1, 1):
+            for i in range(3):
+                for j in range(3):
+                    if (i + j) % 2 == 0:
+                        x = sx * 300 - 30 + i * 20 if sx < 0 else sx * 300 - 30 + i * 20
+                        c.drawRect(skia.Rect(x, -820 + j * 20, x + 20, -800 + j * 20), relleno("tinta"))
+    _texto(c, texto, 0, -748 if sub else -735, 84 if sub else 96, "tinta", "sub", 560)
+    if sub:
+        _texto(c, sub, 0, -702, 40, mezcla(color, "tinta", 0.3), "sub", 560)
+    for i in range(9):  # banderines que ondean bajo la pancarta
+        x = -360 + i * 90
+        y = -650 + 6 * math.sin(t * 4 + i)
+        pieza(c, poly([(x - 28, y - 14), (x + 28, y - 14), (x, y + 40)]), ("amarillo", "azul", "verde", "blanco")[i % 4], 3.5)
+    c.drawLine(-400, -664, 400, -664, trazo(4))
+
+
+def piedra(c, t=0.0, texto="", **kw):
+    """Pedrusco gris en el camino; (0, 0) = suelo. texto = chapa clavada encima."""
+    sombra_suelo(c, 0, 0, 200)
+    pieza(c, suave([(-210, 0), (-200, -110), (-120, -200), (10, -230), (140, -190), (210, -90), (220, 0)]), (150, 150, 160), 7,
+          shader=degradado(-230, 0, (186, 186, 196), (120, 120, 132)))
+    for p in (((-120, -120), (-60, -150)), ((40, -90), (120, -120)), ((-30, -40), (40, -50))):  # grietas
+        c.drawPath(suave(list(p), close=False), trazo(4, (100, 100, 112)))
+    if texto:
+        f = 60
+        pieza(c, rrect(-170, -330, 170, -240, 14), "rojo", 6)
+        c.drawLine(0, -240, 0, -190, trazo(10, "madera"))
+        _texto(c, texto, 0, -268, f, "blanco", "sub", 310)
+
+
 TIPOS = {"papeleta": papeleta, "urna": urna, "mesa_electoral": mesa_electoral, "camion": camion, "senal": senal,
          "alcoholimetro": alcoholimetro, "contador": contador, "barras": barras, "bola": bola, "lapida": lapida,
          "papelera": papelera, "libro": libro, "pasaporte": pasaporte, "maleta": maleta, "carabela": carabela,
          "corona": corona, "pergamino": pergamino, "microfono": microfono, "silla": silla, "tele": tele,
-         "calendario": calendario, "invitacion": invitacion, "gorra": gorra}
+         "calendario": calendario, "invitacion": invitacion, "gorra": gorra,
+         "poste": poste, "arco": arco, "piedra": piedra}
 TAMANO = {"papeleta": (240, 160), "urna": (430, 400), "mesa_electoral": (720, 270), "camion": (700, 380),
           "senal": (300, 820), "alcoholimetro": (200, 440), "contador": (800, 240), "barras": (900, 700), "bola": (320, 320),
           "lapida": (360, 420), "papelera": (300, 340), "libro": (340, 420), "pasaporte": (240, 340), "maleta": (340, 360),
           "carabela": (680, 520), "corona": (360, 260), "pergamino": (600, 760), "microfono": (340, 480),
-          "silla": (360, 660), "tele": (620, 680), "calendario": (780, 900), "invitacion": (420, 280), "gorra": (520, 200)}
-APOYADOS = {"mesa_electoral", "lapida", "silla"}
+          "silla": (360, 660), "tele": (620, 680), "calendario": (780, 900), "invitacion": (420, 280), "gorra": (520, 200),
+          "poste": (400, 580), "arco": (920, 880), "piedra": (460, 340)}
+APOYADOS = {"mesa_electoral", "lapida", "silla", "poste", "arco", "piedra"}

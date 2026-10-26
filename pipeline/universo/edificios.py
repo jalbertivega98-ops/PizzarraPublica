@@ -179,7 +179,7 @@ def congreso(c, est, t=0.0):
         pieza(c, rrect(x - 70, -160, x + 70, -100, 8), "piedra_osc", 6)
         pieza(c, elipse(x, -190, 56, 48), "oro", 6)
         cara(c, x, -170, 0.38, "serio", (0, 0), 0, 0, t)
-    texto_cartoon(c, "CONGRESO", 0, base - h + 250, 70, color="tinta", fuente="sub", borde=2)
+    texto_cartoon(c, est.get("texto") or "CONGRESO", 0, base - h + 250, 70, color="tinta", fuente="sub", borde=2)
 
 
 # ------------------------------------------------------------------ hospital, súper, fábrica

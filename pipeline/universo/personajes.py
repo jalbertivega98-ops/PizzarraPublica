@@ -81,6 +81,10 @@ PERSONAJES = {
     "albiol": dict(nombre="Xavier García Albiol", papel="Alcalde de Badalona y candidato del PP por Barcelona", cara="normal",
                    marco="marco", acento="pp", pelo=((96, 90, 92), "rapado"), chapa=("ALBIOL", "pp"), zapatilla="azul",
                    garabatos=()),
+    # SALF (oct. 2026): misma regla, pelo corto oscuro, barba corta, traje oscuro sin corbata y chapa con el nombre
+    "alvise": dict(nombre="Alvise Pérez", papel="Eurodiputado y líder de Se Acabó La Fiesta (SALF)", cara="normal", marco="marco",
+                   acento="gris", pelo=((40, 34, 32), "corto"), barba=((48, 40, 36), "corta"), chapa=("ALVISE", "tinta"),
+                   zapatilla="negro", garabatos=(), traje=((40, 42, 52), None)),
     "jueza": dict(nombre="La jueza", papel="Instruye la causa", cara="serio", marco="marco_oscuro", acento="gris", gafas="cuadradas",
                   melena=True, chapa=("JUEZA", "tinta"), zapatilla="negro", garabatos=()),
     "estafador": dict(nombre="El estafador", papel="Se hace pasar por tu banco", cara="burla", marco="marco_oscuro",

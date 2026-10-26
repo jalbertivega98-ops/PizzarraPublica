@@ -1,0 +1,1501 @@
+{
+ "slug": "alvise_renuncia",
+ "title": "El hombre que siempre renuncia",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Diario Crítico (18/11/2025): Alvise renuncia a Extremadura",
+  "El Diario de Madrid (18/03/2026): las cinco condiciones para no ir en Andalucía",
+  "The Objective (17/05/2026): SALF en las andaluzas, 105.671 votos, 2,53 %, 0 escaños",
+  "The Objective (09/10/2026): renuncia al Senado si PP y Vox pactan",
+  "The Objective (26/10/2026): pacto PP-Vox para el Senado",
+  "Libertad Digital (05/10/2026): cabeza de lista de SALF por Madrid",
+  "El Español (21/10/2026): «Gano 60.000 euros al mes de vuestro dinero»",
+  "EFE vía Público (09/10/2026): el Supremo confirma la segunda condena por el honor de Ábalos",
+  "Europa Press vía Público (14/09/2026): cuarto suplicatorio en la Eurocámara",
+  "Personajes dibujados como pizarras, sin caricatura; la frase de Alvise es literal y con otra voz"
+ ],
+ "caption": "🙋 Alvise acaba de decir «renuncio»… y ya van tres\n🗺️ Extremadura (2025): se retira para no «regalar escaños» al PSOE\n🗳️ Andalucía (2026): «renuncio»… pero se presentó: 2,5 % y 0 escaños\n🏛️ Senado: lo promete si PP y Vox pactan; hoy han pactado\n📍 Pero al Congreso sí va: nº 1 por Madrid\n💶 «Gano 60.000 euros al mes de vuestro dinero»\n💬 ¿Estratega que une a la derecha o candidato que divide el voto? Te leemos 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Diario Crítico 18/11/2025 · El Diario de Madrid 18/03/2026 · The Objective 17/05, 09/10 y 26/10/2026 · Libertad Digital 05/10/2026 · El Español 21/10/2026 · EFE y Europa Press vía Público. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#Alvise",
+  "#SALF",
+  "#SeAcabóLaFiesta",
+  "#29N",
+  "#Senado",
+  "#elecciones",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "calle",
+   "animo": "comico",
+   "footnote": "Diario Crítico 18/11/2025 · El Diario de Madrid 18/03/2026 · The Objective 09/10/2026",
+   "lines": [
+    {
+     "text": "Alvise acaba de decir «renuncio»… otra vez.",
+     "tono": "energia"
+    },
+    {
+     "text": "Y ya van tres.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "medio",
+     "sobre": "alvise",
+     "dur": 0,
+     "aire": 260
+    },
+    {
+     "at": "@otra",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@tres",
+     "plano": "general",
+     "sobre": [
+      540,
+      1020
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "alvise",
+     "x": 700,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@renuncio",
+       "pose": "arriba",
+       "cara": "riendo",
+       "mira": "camara"
+      },
+      {
+       "at": "@otra",
+       "salta": true
+      },
+      {
+       "at": "@tres",
+       "pose": "pulgar",
+       "cara": "burla"
+      }
+     ],
+     "entra": "nada",
+     "id": "alvise"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": -200,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@otra-0.4",
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@otra-0.4",
+       "x": 260,
+       "dur": 0.6
+      },
+      {
+       "at": "@Y",
+       "cara": "confundido",
+       "pose": "encoge",
+       "mira": "der"
+      },
+      {
+       "at": "@tres",
+       "cara": "susto",
+       "take": true,
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 700,
+     "y": 560,
+     "scale": 0.85,
+     "at": "@renuncio",
+     "props": {
+      "texto": "RENUNCIO"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "rotulo",
+     "text": "3 VECES",
+     "x": 540,
+     "y": 380,
+     "size": 120,
+     "color": "amarillo",
+     "at": "@tres",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "extremadura",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "curioso",
+   "trans": "zoom",
+   "footnote": "Diario Crítico 18/11/2025 (mensaje de Alvise en Telegram)",
+   "lines": [
+    {
+     "text": "Primera: noviembre de 2025. Renuncia a presentarse en Extremadura…",
+     "tono": "normal"
+    },
+    {
+     "text": "para no «regalar escaños» al PSOE.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@Extremadura",
+     "plano": "general",
+     "sobre": [
+      409.6,
+      820.0
+     ],
+     "dur": 1.0,
+     "zoom": 2.4
+    },
+    {
+     "at": "@PSOE",
+     "plano": "general",
+     "sobre": [
+      409.6,
+      820.0
+     ],
+     "dur": 0.6,
+     "zoom": 2.0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana"
+     },
+     "acciones": [
+      {
+       "at": "@Extremadura",
+       "props": {
+        "resalta": [
+         "Badajoz",
+         "Cáceres"
+        ]
+       },
+       "sfx": "pop"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.4
+    },
+    {
+     "type": "personaje",
+     "quien": "alvise",
+     "x": 409.6,
+     "y": 840.0,
+     "scale": 0.07,
+     "at": "@Extremadura+0.3",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@regalar",
+       "x": 529.6,
+       "dur": 0.8
+      },
+      {
+       "at": "@PSOE",
+       "cara": "serio",
+       "mira": "camara"
+      }
+     ],
+     "entra": "cae",
+     "id": "alvise"
+    },
+    {
+     "type": "rotulo",
+     "text": "1 · EXTREMADURA",
+     "x": 540,
+     "y": 430,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@Primera",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.0,
+     "at": "@regalar",
+     "props": {
+      "texto": "SE RETIRA",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "andalucia",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "El Diario de Madrid 18/03/2026 · The Objective 17/05/2026",
+   "lines": [
+    {
+     "text": "Segunda: marzo de 2026. «Renuncio a Andalucía»… si PP o Vox le firmaban cinco medidas.",
+     "tono": "normal"
+    },
+    {
+     "text": "No firmaron. Se presentó: 105.671 votos, un 2,5 %…",
+     "tono": "normal",
+     "pausa": 0.15
+    },
+    {
+     "text": "y cero escaños.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      489.0,
+      945.8
+     ],
+     "dur": 0,
+     "zoom": 2.0
+    },
+    {
+     "at": "@cinco",
+     "plano": "general",
+     "sobre": [
+      489.0,
+      945.8
+     ],
+     "dur": 0.6,
+     "zoom": 2.4
+    },
+    {
+     "at": "@presentó",
+     "plano": "general",
+     "sobre": [
+      489.0,
+      945.8
+     ],
+     "dur": 0.6,
+     "zoom": 1.8
+    },
+    {
+     "at": "@cero",
+     "plano": "general",
+     "sobre": [
+      489.0,
+      945.8
+     ],
+     "dur": 0.5,
+     "zoom": 2.2
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana"
+     },
+     "acciones": [
+      {
+       "at": 0,
+       "props": {
+        "resalta": [
+         "Huelva",
+         "Sevilla",
+         "Cádiz",
+         "Málaga",
+         "Córdoba",
+         "Jaén",
+         "Granada",
+         "Almería"
+        ]
+       }
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 0.01
+    },
+    {
+     "type": "rotulo",
+     "text": "2 · ANDALUCÍA",
+     "x": 540,
+     "y": 430,
+     "size": 90,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@cinco",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "alvise",
+     "x": 429.0,
+     "y": 965.8,
+     "scale": 0.07,
+     "at": 0.2,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@Renuncio",
+       "pose": "arriba"
+      },
+      {
+       "at": "@firmaron",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@presentó",
+       "salta": true,
+       "cara": "riendo"
+      },
+      {
+       "at": "@cero",
+       "cara": "triste",
+       "pose": "caidos"
+      }
+     ],
+     "entra": "cae",
+     "id": "alvise"
+    },
+    {
+     "type": "objeto",
+     "objeto": "checklist",
+     "x": 540,
+     "y": 560,
+     "scale": 0.6,
+     "at": "@cinco",
+     "props": {
+      "items": [
+       "5 medidas: ¿firma PP?",
+       "5 medidas: ¿firma Vox?"
+      ],
+      "marcas": [
+       null,
+       null
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@firmaron",
+       "props": {
+        "marcas": [
+         "no",
+         "no"
+        ]
+       }
+      }
+     ],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel",
+     "out": "@presentó"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1480,
+     "scale": 1.0,
+     "at": "@firmaron",
+     "props": {
+      "texto": "NO FIRMARON",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@presentó"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 470,
+     "scale": 0.8,
+     "at": "@105.671",
+     "props": {
+      "valor": 105671,
+      "sufijo": " VOTOS",
+      "ancho": 820
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@cero"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 640,
+     "scale": 0.8,
+     "at": "@2,5",
+     "props": {
+      "texto": "2,5 %",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@cero"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 470,
+     "scale": 0.9,
+     "at": "@cero",
+     "props": {
+      "valor": 0,
+      "sufijo": " ESCAÑOS",
+      "ancho": 820
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1480,
+     "scale": 1.0,
+     "at": "@escaños",
+     "props": {
+      "texto": "CONFIRMADO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "senado",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     110,
+     34,
+     40
+    ]
+   },
+   "animo": "tension",
+   "trans": "iris",
+   "footnote": "The Objective 09/10/2026 y 26/10/2026",
+   "lines": [
+    {
+     "text": "Tercera: en octubre promete no ir al Senado si PP y Vox van juntos.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y hoy, PP y Vox han cerrado su pacto para el Senado.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Senado",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.6,
+     "zoom": 1.08
+    },
+    {
+     "at": "@hoy",
+     "plano": "general",
+     "sobre": [
+      540,
+      1050
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@pacto",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.4,
+     "zoom": 1.05
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "acciones": [
+      {
+       "at": "@juntos",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@pacto",
+       "cara": "sorpresa"
+      }
+     ],
+     "texto": "SENADO",
+     "entra": "nada",
+     "dibuja": 0.8
+    },
+    {
+     "type": "personaje",
+     "quien": "alvise",
+     "x": 540,
+     "y": 1640,
+     "scale": 0.42,
+     "at": 0.2,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@promete",
+       "pose": "manos_juntas",
+       "cara": "ilusionado",
+       "mira": "camara"
+      },
+      {
+       "at": "@juntos",
+       "pose": "senala_arriba"
+      }
+     ],
+     "entra": "abajo",
+     "hud": true,
+     "out": "@hoy",
+     "id": "alvise"
+    },
+    {
+     "type": "rotulo",
+     "text": "3 · EL SENADO",
+     "x": 540,
+     "y": 380,
+     "size": 90,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@hoy",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": -200,
+     "y": 1500,
+     "scale": 0.5,
+     "at": "@hoy",
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@hoy",
+       "x": 330,
+       "dur": 0.7
+      },
+      {
+       "at": "@pacto",
+       "pose": "pulgar",
+       "mira": "der"
+      }
+     ],
+     "entra": "nada",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 1280,
+     "y": 1500,
+     "scale": 0.5,
+     "at": "@hoy",
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@hoy",
+       "x": 750,
+       "dur": 0.7
+      },
+      {
+       "at": "@pacto",
+       "pose": "pulgar",
+       "mira": "izq"
+      }
+     ],
+     "entra": "nada",
+     "id": "abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 520,
+     "scale": 1.0,
+     "at": "@juntos",
+     "props": {
+      "texto": "PROMESA",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@hoy"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 520,
+     "scale": 1.0,
+     "at": "@pacto",
+     "props": {
+      "texto": "PACTO PP-VOX: CONFIRMADO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "giro",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "comico",
+   "trans": "zoom",
+   "footnote": "Libertad Digital 05/10/2026",
+   "lines": [
+    {
+     "text": "Pero al Congreso sí va: número uno de SALF por Madrid.",
+     "tono": "normal"
+    },
+    {
+     "text": "Entonces… ¿renuncia o no renuncia?",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 0,
+     "zoom": 1.2
+    },
+    {
+     "at": "@Madrid",
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 0.8,
+     "zoom": 2.8
+    },
+    {
+     "at": "@Entonces",
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 0.5,
+     "zoom": 2.2
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana"
+     },
+     "acciones": [
+      {
+       "at": "@Madrid",
+       "props": {
+        "resalta": [
+         "Madrid"
+        ]
+       },
+       "sfx": "pop"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 0.01
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 557.3,
+     "y": 731.2,
+     "scale": 0.12,
+     "at": "@Madrid",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "personaje",
+     "quien": "alvise",
+     "x": 527.3,
+     "y": 745.2,
+     "scale": 0.07,
+     "at": "@uno",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@Madrid",
+       "salta": true
+      }
+     ],
+     "entra": "cae",
+     "id": "alvise"
+    },
+    {
+     "type": "rotulo",
+     "text": "Nº 1 POR MADRID",
+     "x": 540,
+     "y": 430,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@número",
+     "golpe": true,
+     "out": "@Entonces",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1700,
+     "scale": 0.45,
+     "at": "@Entonces",
+     "cara": "confundido",
+     "acciones": [
+      {
+       "at": "@renuncia",
+       "pose": "encoge",
+       "mira": "camara"
+      },
+      {
+       "at": "@no",
+       "cara": "pensativo",
+       "pose": "piensa"
+      }
+     ],
+     "entra": "abajo",
+     "hud": true,
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 640,
+     "scale": 1.0,
+     "at": "@Entonces",
+     "props": {
+      "texto": "SENADO: SIN CONFIRMAR",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "sueldo",
+   "fondo": "calle",
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "El Español 21/10/2026 (acto de recogida de avales en Valladolid)",
+   "lines": [
+    {
+     "text": "Y hay más. Hace cinco días, recogiendo firmas en Valladolid, soltó esto:",
+     "tono": "normal"
+    },
+    {
+     "text": "«Gano 60.000 euros al mes de vuestro dinero».",
+     "tono": "normal",
+     "pausa": 0.1,
+     "efecto_voz": "tele"
+    },
+    {
+     "text": "Las cuentas que dio después suman unos 10.000.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Gano",
+     "plano": "medio",
+     "sobre": "alvise",
+     "dur": 0.5,
+     "aire": 260
+    },
+    {
+     "at": "@cuentas",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@10.000",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "alvise",
+     "x": 360,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Valladolid",
+       "pose": "saluda",
+       "mira": "camara"
+      },
+      {
+       "at": "@Gano",
+       "pose": "senala",
+       "cara": "burla"
+      },
+      {
+       "at": "@dinero",
+       "pose": "jarras",
+       "cara": "riendo"
+      },
+      {
+       "at": "@10.000",
+       "cara": "sorpresa",
+       "mira": "der"
+      }
+     ],
+     "entra": "nada",
+     "id": "alvise"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 520,
+     "scale": 0.75,
+     "at": "@Gano",
+     "props": {
+      "lineas": [
+       "«Gano 60.000 euros al mes",
+       "de vuestro dinero»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@cuentas"
+    },
+    {
+     "type": "efecto",
+     "efecto": "lluvia",
+     "objeto": "moneda",
+     "n": 12,
+     "x0": 120,
+     "x1": 960,
+     "at": "@euros",
+     "vida": 1.8
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1300,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@cuentas",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@cuentas",
+       "x": 800,
+       "dur": 0.6
+      },
+      {
+       "at": "@suman",
+       "pose": "sostiene",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@10.000",
+       "cara": "confundido",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calculadora",
+     "x": 800,
+     "y": 880,
+     "scale": 0.7,
+     "at": "@suman",
+     "props": {
+      "texto": "10.350"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "calculadora"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 420,
+     "scale": 0.7,
+     "at": "@suman",
+     "props": {
+      "texto": "DIETAS + ASISTENCIA + 350 €",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.0,
+     "at": "@dinero",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@cuentas"
+    }
+   ]
+  },
+  {
+   "id": "tribunales",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "tension",
+   "trans": "papel",
+   "footnote": "EFE vía Público 09/10/2026 · Europa Press vía Público 14/09/2026",
+   "lines": [
+    {
+     "text": "En los tribunales: el Supremo ha confirmado su segunda condena por vulnerar el honor de Ábalos. Es una condena civil.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y la Eurocámara tramita un cuarto suplicatorio para quitarle la inmunidad. Eso es una investigación, no una condena.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      880
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@segunda",
+     "plano": "general",
+     "sobre": [
+      540,
+      760
+     ],
+     "dur": 0.6,
+     "zoom": 1.1
+    },
+    {
+     "at": "@cuarto",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.6,
+     "zoom": 1.1
+    },
+    {
+     "at": "@investigación",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 540,
+     "y": 840,
+     "scale": 1.0,
+     "at": 0.2,
+     "props": {
+      "titulo": "TRIBUNALES",
+      "subtitulo": "Alvise Pérez",
+      "articulos": [
+       {
+        "id": "hon",
+        "titulo": "Supremo",
+        "lineas": [
+         "2.ª condena: honor de Ábalos",
+         "(vía civil)"
+        ]
+       },
+       {
+        "id": "sup",
+        "titulo": "Eurocámara",
+        "lineas": [
+         "4.º suplicatorio:",
+         "pedir quitar la inmunidad"
+        ]
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@Supremo",
+       "props": {
+        "resalta": [
+         "hon"
+        ]
+       }
+      },
+      {
+       "at": "@Eurocámara",
+       "props": {
+        "resalta": [
+         "sup"
+        ]
+       }
+      }
+     ],
+     "id": "doc",
+     "entra": "nada",
+     "dibujo": 1.0,
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "jueza",
+     "x": -200,
+     "y": 1660,
+     "scale": 0.42,
+     "at": "@Supremo",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@Supremo",
+       "x": 220,
+       "dur": 0.6
+      }
+     ],
+     "entra": "nada",
+     "hud": true,
+     "id": "jueza"
+    },
+    {
+     "type": "personaje",
+     "quien": "alvise",
+     "x": 1300,
+     "y": 1660,
+     "scale": 0.45,
+     "at": "@honor",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@honor",
+       "x": 860,
+       "dur": 0.6
+      },
+      {
+       "at": "@civil",
+       "cara": "serio",
+       "pose": "cruzados"
+      },
+      {
+       "at": "@inmunidad",
+       "cara": "preocupado",
+       "mira": "arriba"
+      },
+      {
+       "at": "@condena+0.3",
+       "cara": "normal",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "hud": true,
+     "id": "alvise"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1440,
+     "scale": 1.0,
+     "at": "@civil",
+     "props": {
+      "texto": "CONDENA CIVIL",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@Eurocámara"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1440,
+     "scale": 1.0,
+     "at": "@investigación",
+     "props": {
+      "texto": "INVESTIGACIÓN",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "salon",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Pregunta a la audiencia",
+   "lines": [
+    {
+     "text": "¿Estratega que une a la derecha… o candidato que divide el voto?",
+     "tono": "normal"
+    },
+    {
+     "text": "Te leo en comentarios. Y síguenos: el 29N saldremos de dudas.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0,
+     "aire": 260
+    },
+    {
+     "at": "@candidato",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@síguenos",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 260
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Estratega",
+       "pose": "senala_izq",
+       "mira": "izq"
+      },
+      {
+       "at": "@candidato",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@voto",
+       "cara": "pensativo",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@dudas",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 230,
+     "y": 1000,
+     "scale": 0.8,
+     "at": "@Estratega",
+     "props": {
+      "texto": "¿UNE?",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 850,
+     "y": 1000,
+     "scale": 0.8,
+     "at": "@candidato",
+     "props": {
+      "texto": "¿DIVIDE?",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿TÚ QUÉ CREES?",
+     "x": 540,
+     "y": 440,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@voto",
+     "golpe": true,
+     "out": "@síguenos-0.3",
+     "fx": [
+      {
+       "at": "@leo",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 440,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.2,
+  "titulo": "El hombre que siempre renuncia",
+  "capitulo": null
+ }
+}

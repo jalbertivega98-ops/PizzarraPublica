@@ -41,7 +41,7 @@ scenes = [
         quien("piz", -200, "@otra-0.4", 0.55, "sorpresa", entra="nada", acciones=[
             {"at": "@otra-0.4", "x": 260, "dur": 0.6}, {"at": "@Y", "cara": "confundido", "pose": "encoge", "mira": "der"},
             {"at": "@tres", "cara": "susto", "take": True, "mira": "camara"}]),
-        obj("cartel", 700, 560, "@renuncio", 0.85, entra="cae", sfx="golpe", props={"texto": "RENUNCIO"}),
+        obj("cartel", 700, 760, "@renuncio", 1.0, entra="cae", sfx="golpe", props={"texto": "RENUNCIO"}),
         rot("3 VECES", 540, 380, "@tres", 120, "amarillo", golpe=True),
     ]),
     # 2 · EXTREMADURA: se ilumina en el mapa; sello CONFIRMADO
@@ -51,9 +51,10 @@ scenes = [
     ], camara=[zoom(0, MAD, 1.0, 0), zoom("@Extremadura", EXT, 2.4, 1.0), zoom("@PSOE", EXT, 2.0, 0.6)],
        elements=[
         mapa(R, 0, 1.4, acciones=[{"at": "@Extremadura", "props": {"resalta": ["Badajoz", "Cáceres"]}, "sfx": "pop"}]),
-        quien("alvise", EXT[0], "@Extremadura+0.3", 0.07, "normal", y=EXT[1] + 20, entra="cae", acciones=[
+        quien("alvise", EXT[0], "@Extremadura+0.3", 0.11, "normal", y=EXT[1] + 20, entra="cae", acciones=[
             {"at": "@regalar", "x": EXT[0] + 120, "dur": 0.8}, {"at": "@PSOE", "cara": "serio", "mira": "camara"}]),
         rot("1 · EXTREMADURA", 540, 430, "@Primera", 90, "amarillo", golpe=True),
+        etq("NOV. 2025", 540, 600, "@noviembre", "azul", 0.7, hud=True, out="@regalar"),
         sello("SE RETIRA", "verde", 1500, "@regalar"),
     ]),
     # 3 · ANDALUCÍA: «renuncio»… con condiciones; no firman; se presenta; contador a cero
@@ -67,8 +68,9 @@ scenes = [
        elements=[
         mapa(R, 0, 0.01, acciones=[{"at": 0, "props": {"resalta": ANDALUCIA}}]),
         rot("2 · ANDALUCÍA", 540, 430, 0, 90, "amarillo", golpe=True, out="@cinco"),
-        quien("alvise", AND[0] - 60, 0.2, 0.07, "ilusionado", y=AND[1] + 20, entra="cae", acciones=[
-            {"at": "@Renuncio", "pose": "arriba"}, {"at": "@firmaron", "cara": "sorpresa", "take": True},
+        etq("MAR. 2026", 540, 600, "@marzo", "azul", 0.7, hud=True, out="@cinco"),
+        quien("alvise", AND[0] - 60, 0.2, 0.11, "ilusionado", y=AND[1] + 20, entra="cae", acciones=[
+            {"at": "@Renuncio", "pose": "arriba"}, {"at": "@Andalucía", "salta": True, "cara": "riendo"}, {"at": "@si", "pose": "senala", "cara": "burla"}, {"at": "@firmaron", "cara": "sorpresa", "take": True},
             {"at": "@presentó", "salta": True, "cara": "riendo"}, {"at": "@cero", "cara": "triste", "pose": "caidos"}]),
         obj("checklist", 540, 560, "@cinco", 0.6, hud=True, entra="pop", sfx="papel", out="@presentó",
             props={"items": ["5 medidas: ¿firma PP?", "5 medidas: ¿firma Vox?"], "marcas": [None, None]},
@@ -90,13 +92,15 @@ scenes = [
        elements=[
         edif("congreso", 540, 0, 0.62, texto="SENADO", entra="nada", dibuja=0.8, acciones=[
             {"at": "@juntos", "cara": "pensativo"}, {"at": "@pacto", "cara": "sorpresa"}]),
-        quien("alvise", 540, 0.2, 0.42, "normal", y=1640, entra="abajo", hud=True, out="@hoy", acciones=[
-            {"at": "@promete", "pose": "manos_juntas", "cara": "ilusionado", "mira": "camara"}, {"at": "@juntos", "pose": "senala_arriba"}]),
+        quien("alvise", 540, 0.2, 0.42, "normal", y=1420, entra="pop", acciones=[
+            {"at": "@promete", "pose": "manos_juntas", "cara": "ilusionado", "mira": "camara"}, {"at": "@juntos", "pose": "senala_arriba"},
+            {"at": "@hoy", "mira": "izq", "cara": "sorpresa", "take": True}, {"at": "@pacto", "mira": "der"},
+            {"at": "@Senado.", "mira": "camara", "cara": "pensativo", "pose": "piensa"}]),
         rot("3 · EL SENADO", 540, 380, 0, 90, "amarillo", golpe=True, out="@hoy"),
-        quien("feijoo", -200, "@hoy", 0.5, "riendo", y=1500, entra="nada", acciones=[
-            {"at": "@hoy", "x": 330, "dur": 0.7}, {"at": "@pacto", "pose": "pulgar", "mira": "der"}]),
-        quien("abascal", 1280, "@hoy", 0.5, "riendo", y=1500, entra="nada", acciones=[
-            {"at": "@hoy", "x": 750, "dur": 0.7}, {"at": "@pacto", "pose": "pulgar", "mira": "izq"}]),
+        quien("feijoo", -200, "@hoy", 0.5, "riendo", y=1460, entra="nada", acciones=[
+            {"at": "@hoy", "x": 250, "dur": 0.7}, {"at": "@pacto", "pose": "pulgar", "mira": "der"}]),
+        quien("abascal", 1280, "@hoy", 0.5, "riendo", y=1460, entra="nada", acciones=[
+            {"at": "@hoy", "x": 830, "dur": 0.7}, {"at": "@pacto", "pose": "pulgar", "mira": "izq"}]),
         sello("PROMESA", "azul", 520, "@juntos", out="@hoy"),
         sello("PACTO PP-VOX: CONFIRMADO", "verde", 520, "@pacto"),
     ]),
@@ -107,12 +111,12 @@ scenes = [
     ], camara=[zoom(0, MAD, 1.2, 0), zoom("@Madrid", MAD, 2.8, 0.8), zoom("@Entonces", MAD, 2.2, 0.5)],
        elements=[
         mapa(R, 0, 0.01, acciones=[{"at": "@Madrid", "props": {"resalta": ["Madrid"]}, "sfx": "pop"}]),
-        obj("chincheta", MAD[0] + 6, MAD[1], "@Madrid", 0.12, props={"diseno": "espana"}, entra="cae"),
-        quien("alvise", MAD[0] - 24, "@uno", 0.07, "ilusionado", y=MAD[1] + 14, entra="cae", acciones=[{"at": "@Madrid", "salta": True}]),
+        obj("chincheta", MAD[0] + 10, MAD[1], "@Madrid", 0.16, props={"diseno": "espana"}, entra="cae"),
+        quien("alvise", MAD[0] - 30, "@uno", 0.11, "ilusionado", y=MAD[1] + 14, entra="cae", acciones=[{"at": "@Madrid", "salta": True}]),
         rot("Nº 1 POR MADRID", 540, 430, "@número", 96, "amarillo", golpe=True, out="@Entonces"),
-        quien("piz", 540, "@Entonces", 0.45, "confundido", y=1700, entra="abajo", hud=True, acciones=[
+        quien("piz", 540, "@Entonces", 0.42, "confundido", y=1640, entra="abajo", hud=True, acciones=[
             {"at": "@renuncia", "pose": "encoge", "mira": "camara"}, {"at": "@no", "cara": "pensativo", "pose": "piensa"}]),
-        sello("SENADO: SIN CONFIRMAR", "naranja", 640, "@Entonces"),
+        sello("SENADO: SIN CONFIRMAR", "naranja", 640, "@renuncia"),
     ]),
     # 6 · LO HEAVY 1: los 60.000 € de Valladolid y la calculadora de Piz
     dict(id="sueldo", fondo="calle", animo="tension", trans="barrido", footnote="El Español 21/10/2026 (acto de recogida de avales en Valladolid)", lines=[
@@ -122,9 +126,11 @@ scenes = [
     ], camara=[plano(0, "general", [540, 1000], 0), plano("@Gano", "medio", "alvise", 0.5, aire=260),
                plano("@cuentas", "general", [540, 1000], 0.5), plano("@10.000", "general", [540, 960], 0.4, zoom=1.08)],
        elements=[
-        quien("alvise", 360, 0, 0.6, "normal", entra="nada", acciones=[
-            {"at": "@Valladolid", "pose": "saluda", "mira": "camara"}, {"at": "@Gano", "pose": "senala", "cara": "burla"},
+        quien("alvise", -200, 0, 0.6, "normal", entra="nada", acciones=[
+            {"at": "@cinco", "x": 360, "dur": 0.8}, {"at": "@Valladolid", "pose": "saluda", "mira": "camara"}, {"at": "@Gano", "pose": "senala", "cara": "burla"},
             {"at": "@dinero", "pose": "jarras", "cara": "riendo"}, {"at": "@10.000", "cara": "sorpresa", "mira": "der"}]),
+        rot("HACE 5 DÍAS", 540, 420, "@más", 96, "amarillo", golpe=True, out="@Valladolid"),
+        etq("VALLADOLID", 540, 600, "@Valladolid", "azul", 0.7, hud=True, out="@Gano"),
         obj("bocadillo", 540, 520, "@Gano", 0.75, hud=True, entra="pop", sfx="pop", out="@cuentas",
             props={"lineas": ["«Gano 60.000 euros al mes", "de vuestro dinero»"]}),
         dict(monedas("@euros", 120, 960, 12)),
@@ -140,34 +146,34 @@ scenes = [
          footnote="EFE vía Público 09/10/2026 · Europa Press vía Público 14/09/2026", lines=[
         V("En los tribunales: el Supremo ha confirmado su segunda condena por vulnerar el honor de Ábalos. Es una condena civil.", "normal"),
         V("Y la Eurocámara tramita un cuarto suplicatorio para quitarle la inmunidad. Eso es una investigación, no una condena.", "normal", 0.15),
-    ], camara=[plano(0, "general", [540, 880], 0), plano("@segunda", "general", [540, 760], 0.6, zoom=1.1),
+    ], camara=[plano(0, "general", [540, 900], 0), plano("@segunda", "general", [540, 760], 0.6, zoom=1.08),
                plano("@cuarto", "general", [540, 900], 0.6, zoom=1.1), plano("@investigación", "general", [540, 900], 0.5)],
        elements=[
-        obj("documento", 540, 840, 0.2, 1.0, id="doc", entra="nada", dibujo=1.0, sfx="papel", props={
+        obj("documento", 540, 680, 0.2, 0.9, id="doc", entra="nada", dibujo=1.0, sfx="papel", props={
             "titulo": "TRIBUNALES", "subtitulo": "Alvise Pérez",
             "articulos": [{"id": "hon", "titulo": "Supremo", "lineas": ["2.ª condena: honor de Ábalos", "(vía civil)"]},
                           {"id": "sup", "titulo": "Eurocámara", "lineas": ["4.º suplicatorio:", "pedir quitar la inmunidad"]}]},
             acciones=[{"at": "@Supremo", "props": {"resalta": ["hon"]}}, {"at": "@Eurocámara", "props": {"resalta": ["sup"]}}]),
-        quien("jueza", -200, "@Supremo", 0.42, "serio", y=1660, entra="nada", hud=True, acciones=[{"at": "@Supremo", "x": 220, "dur": 0.6}]),
-        quien("alvise", 1300, "@honor", 0.45, "normal", y=1660, entra="nada", hud=True, acciones=[
-            {"at": "@honor", "x": 860, "dur": 0.6}, {"at": "@civil", "cara": "serio", "pose": "cruzados"},
+        quien("jueza", -200, "@Supremo", 0.42, "serio", y=1340, entra="nada", acciones=[{"at": "@Supremo", "x": 190, "dur": 0.6}, {"at": "@civil", "pose": "senala"}]),
+        quien("alvise", 1300, "@honor", 0.42, "normal", y=1340, entra="nada", acciones=[
+            {"at": "@honor", "x": 890, "dur": 0.6}, {"at": "@civil", "cara": "serio", "pose": "cruzados"},
             {"at": "@inmunidad", "cara": "preocupado", "mira": "arriba"}, {"at": "@condena+0.3", "cara": "normal", "mira": "camara"}]),
-        sello("CONDENA CIVIL", "rojo", 1440, "@civil", out="@Eurocámara"),
-        sello("INVESTIGACIÓN", "naranja", 1440, "@investigación"),
+        sello("CONDENA CIVIL", "rojo", 1040, "@civil", out="@Eurocámara"),
+        sello("INVESTIGACIÓN, NO CONDENA", "naranja", 1040, "@investigación"),
     ]),
     # 8 · FINAL: Piz con dos carteles y la pregunta
     dict(id="final", fondo="salon", animo="final", trans="iris", footnote="Pregunta a la audiencia", lines=[
         V("¿Estratega que une a la derecha… o candidato que divide el voto?", "normal"),
         V("Te leo en comentarios. Y síguenos: el 29N saldremos de dudas.", "energia", 0.15),
-    ], camara=[plano(0, "medio", "piz", 0, aire=260), plano("@candidato", "general", [540, 1000], 0.5),
-               plano("@síguenos", "medio", "piz", 0.5, aire=260)],
+    ], camara=[plano(0, "general", [540, 1000], 0), plano("@voto", "general", [540, 1000], 0.5, zoom=1.05),
+               plano("@síguenos", "medio", "piz", 0.5, aire=300)],
        elements=[
         quien("piz", 540, 0, 0.62, "pensativo", entra="nada", acciones=[
             {"at": "@Estratega", "pose": "senala_izq", "mira": "izq"}, {"at": "@candidato", "pose": "senala", "mira": "der"},
             {"at": "@voto", "cara": "pensativo", "pose": "piensa", "mira": "camara"}, {"at": "@leo", "cara": "ilusionado", "pose": "senala"},
             {"at": "@síguenos", "pose": "saluda", "cara": "riendo"}, {"at": "@dudas", "salta": True}]),
-        etq("¿UNE?", 230, 1000, "@Estratega", "verde", 0.8),
-        etq("¿DIVIDE?", 850, 1000, "@candidato", "rojo", 0.8),
+        etq("¿UNE?", 280, 880, "@Estratega", "verde", 0.7, out="@leo"),
+        etq("¿DIVIDE?", 800, 880, "@candidato", "rojo", 0.7, out="@leo"),
         rot("¿TÚ QUÉ CREES?", 540, 440, "@voto", 110, "amarillo", golpe=True, out="@síguenos-0.3", fx=[{"at": "@leo", "do": "latir"}]),
         rot("SÍGUENOS", 540, 440, "@síguenos", 110, "amarillo"),
     ]),
@@ -175,7 +181,7 @@ scenes = [
 
 if __name__ == "__main__":
     episodio("alvise_renuncia", "El hombre que siempre renuncia", scenes,
-             {"t": 2.2, "titulo": "El hombre que siempre renuncia", "capitulo": None},
+             {"t": 3.0, "titulo": "El hombre que siempre renuncia", "capitulo": None},
              ["Diario Crítico (18/11/2025): Alvise renuncia a Extremadura",
               "El Diario de Madrid (18/03/2026): las cinco condiciones para no ir en Andalucía",
               "The Objective (17/05/2026): SALF en las andaluzas, 105.671 votos, 2,53 %, 0 escaños",

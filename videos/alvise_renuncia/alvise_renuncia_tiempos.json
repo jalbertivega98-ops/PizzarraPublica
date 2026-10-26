@@ -1,0 +1,148 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 4.02,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.63,
+    "texto": "Alvise acaba de decir «renuncio»… otra vez."
+   },
+   {
+    "t0": 2.78,
+    "t1": 3.57,
+    "texto": "Y ya van tres."
+   }
+  ]
+ },
+ {
+  "escena": "extremadura",
+  "inicio": 4.02,
+  "fin": 10.19,
+  "frases": [
+   {
+    "t0": 4.34,
+    "t1": 7.9,
+    "texto": "Primera: noviembre de 2025. Renuncia a presentarse en Extremadura…"
+   },
+   {
+    "t0": 8.05,
+    "t1": 9.74,
+    "texto": "para no «regalar escaños» al PSOE."
+   }
+  ]
+ },
+ {
+  "escena": "andalucia",
+  "inicio": 10.19,
+  "fin": 22.32,
+  "frases": [
+   {
+    "t0": 10.19,
+    "t1": 15.68,
+    "texto": "Segunda: marzo de 2026. «Renuncio a Andalucía»… si PP o Vox le firmaban cinco medidas."
+   },
+   {
+    "t0": 15.88,
+    "t1": 20.77,
+    "texto": "No firmaron. Se presentó: 105.671 votos, un 2,5 %…"
+   },
+   {
+    "t0": 20.92,
+    "t1": 21.87,
+    "texto": "y cero escaños."
+   }
+  ]
+ },
+ {
+  "escena": "senado",
+  "inicio": 22.32,
+  "fin": 29.8,
+  "frases": [
+   {
+    "t0": 23.02,
+    "t1": 26.27,
+    "texto": "Tercera: en octubre promete no ir al Senado si PP y Vox van juntos."
+   },
+   {
+    "t0": 26.47,
+    "t1": 29.35,
+    "texto": "Y hoy, PP y Vox han cerrado su pacto para el Senado."
+   }
+  ]
+ },
+ {
+  "escena": "giro",
+  "inicio": 29.8,
+  "fin": 36.03,
+  "frases": [
+   {
+    "t0": 30.12,
+    "t1": 32.65,
+    "texto": "Pero al Congreso sí va: número uno de SALF por Madrid."
+   },
+   {
+    "t0": 32.85,
+    "t1": 35.58,
+    "texto": "Entonces… ¿renuncia o no renuncia?"
+   }
+  ]
+ },
+ {
+  "escena": "sueldo",
+  "inicio": 36.03,
+  "fin": 45.44,
+  "frases": [
+   {
+    "t0": 36.29,
+    "t1": 39.98,
+    "texto": "Y hay más. Hace cinco días, recogiendo firmas en Valladolid, soltó esto:"
+   },
+   {
+    "t0": 40.13,
+    "t1": 42.47,
+    "texto": "«Gano 60.000 euros al mes de vuestro dinero»."
+   },
+   {
+    "t0": 42.67,
+    "t1": 44.99,
+    "texto": "Las cuentas que dio después suman unos 10.000."
+   }
+  ]
+ },
+ {
+  "escena": "tribunales",
+  "inicio": 45.44,
+  "fin": 56.82,
+  "frases": [
+   {
+    "t0": 45.74,
+    "t1": 50.85,
+    "texto": "En los tribunales: el Supremo ha confirmado su segunda condena por vulnerar el honor de Ábalos. Es una condena civil."
+   },
+   {
+    "t0": 51.05,
+    "t1": 56.37,
+    "texto": "Y la Eurocámara tramita un cuarto suplicatorio para quitarle la inmunidad. Eso es una investigación, no una condena."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 56.82,
+  "fin": 65.35,
+  "frases": [
+   {
+    "t0": 57.52,
+    "t1": 60.59,
+    "texto": "¿Estratega que une a la derecha… o candidato que divide el voto?"
+   },
+   {
+    "t0": 60.79,
+    "t1": 64.0,
+    "texto": "Te leo en comentarios. Y síguenos: el 29N saldremos de dudas."
+   }
+  ]
+ }
+]

@@ -27,14 +27,23 @@ def _nube(c, x, y, s, a=235):
 
 
 def calle(c, t=0.0, capa=lambda d: None, suelo=SUELO, hora="dia", **kw):
-    alto, bajo = ("cielo_alto", "cielo") if hora == "dia" else ((250, 150, 110), (255, 205, 150))
+    noche = hora == "noche"
+    alto, bajo = {"dia": ("cielo_alto", "cielo"), "noche": ((16, 22, 56), (58, 46, 92))}.get(
+        hora, ((250, 150, 110), (255, 205, 150)))
     capa(0.15)
     _rect(c, X0, Y0, X1, suelo, alto, degradado(Y0, suelo, alto, bajo))
-    # nubes que se desplazan
-    for i, (y, s, v) in enumerate(((180, 1.0, 14), (360, 0.7, 9), (90, 0.55, 6))):
-        x = (i * 520 + t * v) % 1700 - 300
-        _nube(c, x, y, s, 200)
-    _pajaros(c, t)
+    if noche:  # luna y estrellas que titilan
+        for i in range(26):
+            sx, sy = X0 + (i * 397) % (X1 - X0), Y0 + 60 + (i * 211) % 700
+            c.drawCircle(sx, sy, 3 + 2 * (0.5 + 0.5 * math.sin(t * 3 + i)), relleno("blanco", 200))
+        pieza(c, elipse(860, 260, 70, 70), (250, 240, 200), 5)
+        c.drawCircle(890, 240, 58, relleno(alto))
+    else:
+        # nubes que se desplazan
+        for i, (y, s, v) in enumerate(((180, 1.0, 14), (360, 0.7, 9), (90, 0.55, 6))):
+            x = (i * 520 + t * v) % 1700 - 300
+            _nube(c, x, y, s, 200)
+        _pajaros(c, t)
     capa(0.45)
     # ciudad lejana (silueta suave)
     lejos = mezcla(bajo, "azul", 0.18)
@@ -46,10 +55,12 @@ def calle(c, t=0.0, capa=lambda d: None, suelo=SUELO, hora="dia", **kw):
         _rect(c, x, suelo - 60 - h, x + w, suelo, lejos)
         for wy in range(int(suelo - 40 - h), int(suelo - 80), 56):
             for wx in range(int(x + 18), int(x + w - 30), 40):
-                _rect(c, wx, wy, wx + 18, wy + 26, mezcla(lejos, "blanco", 0.35))
+                luz = (255, 214, 110) if noche and (wx * 7 + wy) % 3 == 0 else mezcla(lejos, "blanco", 0.35)
+                _rect(c, wx, wy, wx + 18, wy + 26, luz)
         x += w + 14
         i += 1
-    _bus_lejano(c, t, suelo, mezcla(bajo, "rojo", 0.45))
+    if not noche:
+        _bus_lejano(c, t, suelo, mezcla(bajo, "rojo", 0.45))
     capa(0.7)
     # árboles lejanos
     for i in range(9):
@@ -65,7 +76,8 @@ def calle(c, t=0.0, capa=lambda d: None, suelo=SUELO, hora="dia", **kw):
     c.drawLine(X0, suelo + 70, X1, suelo + 70, trazo(6))
     for x in range(X0, X1, 220):
         _rect(c, x, suelo + 200, x + 120, suelo + 216, "blanco")
-    _coches(c, t, suelo)
+    if not noche:
+        _coches(c, t, suelo)
 
 
 def _pajaros(c, t):

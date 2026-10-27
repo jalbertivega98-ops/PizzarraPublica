@@ -1,0 +1,1470 @@
+{
+ "slug": "disturbios_bcn",
+ "title": "128 detenidos. Convocado por TikTok",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Infobae (25/10/2026): convocatoria «institutos indignados» por redes y TikTok, unas 500 personas, sin organizador",
+  "Moncloa.com (25/10/2026), con datos de los Mossos: 128 detenidos, 72 menores, 23 comercios, 14 agentes heridos (4 graves), 33 salidas de bomberos",
+  "Infobae (25/10/2026): declaraciones de Collboni e Illa",
+  "Moncloa.com (25/10/2026): Feijóo en Salamanca y respuesta de Ferraz",
+  "EFE vía Infobae (26/10/2026): Bilbao, 19 detenidos, 7 menores, charla de Vito Quiles cancelada",
+  "Personajes dibujados como pizarras, sin caricatura; la frase de Feijóo es literal y con otra voz"
+ ],
+ "caption": "🔥 128 detenidos en una noche… y la convocatoria llegó por TikTok\n📱 «Institutos indignados»: protesta no autorizada y sin organizador conocido\n🚒 23 comercios destrozados, 33 salidas de bomberos, 14 mossos heridos\n🧒 72 de los 128 detenidos son menores\n🗣️ Collboni, Illa, Feijóo y el PSOE: qué ha dicho cada uno\n📍 El lunes, Bilbao: 19 detenidos\n💬 ¿Quién debe pagar: los chavales, sus padres o quien lo convoca? Te leemos 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Mossos d'Esquadra (vía Moncloa.com 25/10) · Infobae 25/10 · EFE vía Infobae 26/10. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#Barcelona",
+  "#disturbios",
+  "#Mossos",
+  "#Bilbao",
+  "#29N",
+  "#elecciones",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "calle",
+    "hora": "noche"
+   },
+   "animo": "tension",
+   "footnote": "Mossos d'Esquadra vía Moncloa.com 25/10/2026",
+   "luz": [
+    {
+     "at": "@detenidos",
+     "tipo": "alarma"
+    }
+   ],
+   "lines": [
+    {
+     "text": "128 detenidos en una sola noche.",
+     "tono": "energia"
+    },
+    {
+     "text": "Y la convocatoria llegó… por TikTok.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@noche",
+     "plano": "general",
+     "sobre": [
+      540,
+      980
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    },
+    {
+     "at": "@convocatoria",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 280
+    },
+    {
+     "at": "@TikTok",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.4,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "papelera",
+     "x": 200,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "papelera",
+     "x": 880,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "efecto",
+     "efecto": "fuego",
+     "x": 200,
+     "y": 1150,
+     "at": 0.05,
+     "vida": 4.2,
+     "scale": 0.8
+    },
+    {
+     "type": "efecto",
+     "efecto": "fuego",
+     "x": 880,
+     "y": 1150,
+     "at": 0.4,
+     "vida": 3.9,
+     "scale": 0.8
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": -200,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0.2,
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": 0.2,
+       "x": 520,
+       "dur": 0.9
+      },
+      {
+       "at": "@detenidos",
+       "cara": "susto",
+       "take": true,
+       "mira": "camara"
+      },
+      {
+       "at": "@convocatoria",
+       "cara": "confundido",
+       "pose": "encoge"
+      },
+      {
+       "at": "@TikTok",
+       "cara": "sorpresa",
+       "pose": "sostiene"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "movil",
+     "x": 700,
+     "y": 900,
+     "scale": 0.55,
+     "at": "@TikTok-0.2",
+     "props": {
+      "pantalla": "sms",
+      "remite": "REDES",
+      "lineas": [
+       "#institutos",
+       "indignados",
+       "sáb · 18:00"
+      ],
+      "suena": true
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "128 DETENIDOS",
+     "x": 540,
+     "y": 400,
+     "size": 120,
+     "color": "amarillo",
+     "at": "@128",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "mapa",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "aventura",
+   "trans": "zoom",
+   "footnote": "Infobae 25/10/2026",
+   "lines": [
+    {
+     "text": "Barcelona, sábado 24 de octubre. Plaza de Catalunya, seis de la tarde.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@Barcelona",
+     "plano": "general",
+     "sobre": [
+      884.1,
+      657.9
+     ],
+     "dur": 1.0,
+     "zoom": 2.8
+    },
+    {
+     "at": "@Catalunya",
+     "plano": "general",
+     "sobre": [
+      884.1,
+      657.9
+     ],
+     "dur": 0.7,
+     "zoom": 3.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana",
+      "orden": [
+       "Barcelona"
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@Barcelona",
+       "props": {
+        "resalta": [
+         "Barcelona"
+        ]
+       },
+       "sfx": "pop"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.3
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 890.1,
+     "y": 657.9,
+     "scale": 0.12,
+     "at": "@Barcelona+0.3",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 430,
+     "scale": 0.8,
+     "at": "@sábado",
+     "props": {
+      "texto": "SÁB. 24 OCT · 18:00",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "convocatoria",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "iris",
+   "footnote": "Infobae 25/10/2026 (fuentes de los Mossos)",
+   "lines": [
+    {
+     "text": "La protesta no estaba autorizada. Se convocó en redes con un lema: «institutos indignados».",
+     "tono": "normal"
+    },
+    {
+     "text": "Los Mossos la vigilaban desde hacía días. Pero nadie sabe quién la organizó.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@lema",
+     "plano": "general",
+     "sobre": [
+      540,
+      820
+     ],
+     "dur": 0.6,
+     "zoom": 1.12
+    },
+    {
+     "at": "@Mossos",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@nadie",
+     "plano": "general",
+     "sobre": [
+      540,
+      980
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "movil",
+     "x": 540,
+     "y": 760,
+     "scale": 0.95,
+     "at": 0,
+     "props": {
+      "pantalla": "sms",
+      "remite": "REDES",
+      "lineas": [
+       "#institutos",
+       "indignados",
+       "sáb · 18:00",
+       "pl. Catalunya"
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@lema",
+       "props": {
+        "suena": true
+       }
+      },
+      {
+       "at": "@Mossos",
+       "props": {
+        "suena": false
+       }
+      }
+     ],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1180,
+     "scale": 1.0,
+     "at": "@autorizada",
+     "props": {
+      "texto": "NO AUTORIZADA",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@Mossos"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1300,
+     "y": 1640,
+     "scale": 0.45,
+     "at": "@Mossos",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Mossos",
+       "x": 800,
+       "dur": 0.6
+      },
+      {
+       "at": "@vigilaban",
+       "pose": "prismaticos"
+      },
+      {
+       "at": "@nadie",
+       "cara": "confundido",
+       "pose": "encoge",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "hud": true,
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lupa",
+     "x": 300,
+     "y": 1440,
+     "scale": 0.6,
+     "at": "@organizó",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1180,
+     "scale": 1.0,
+     "at": "@organizó",
+     "props": {
+      "texto": "ORGANIZADOR: SIN IDENTIFICAR",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "noche",
+   "fondo": {
+    "tipo": "calle",
+    "hora": "noche"
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Mossos d'Esquadra vía Moncloa.com e Infobae 25/10/2026",
+   "luz": [
+    {
+     "at": "@mossos",
+     "tipo": "alarma"
+    }
+   ],
+   "lines": [
+    {
+     "text": "Unas 500 personas. Contenedores ardiendo, 23 comercios destrozados y 33 salidas de los bomberos.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y más de una docena de mossos heridos. Cuatro, graves.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Contenedores",
+     "plano": "general",
+     "sobre": [
+      540,
+      1060
+     ],
+     "dur": 0.6,
+     "zoom": 1.08
+    },
+    {
+     "at": "@mossos",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@graves",
+     "plano": "general",
+     "sobre": [
+      540,
+      980
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "papelera",
+     "x": 160,
+     "y": 1340,
+     "scale": 0.7,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "papelera",
+     "x": 920,
+     "y": 1340,
+     "scale": 0.7,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "papelera",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "efecto",
+     "efecto": "fuego",
+     "x": 160,
+     "y": 1150,
+     "at": "@Contenedores",
+     "vida": 7.5,
+     "scale": 0.8
+    },
+    {
+     "type": "efecto",
+     "efecto": "fuego",
+     "x": 920,
+     "y": 1150,
+     "at": "@Contenedores+0.35",
+     "vida": 7.2,
+     "scale": 0.8
+    },
+    {
+     "type": "efecto",
+     "efecto": "fuego",
+     "x": 540,
+     "y": 1180,
+     "at": "@Contenedores+0.7",
+     "vida": 6.8,
+     "scale": 0.7
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 520,
+     "scale": 0.75,
+     "at": "@500",
+     "props": {
+      "valor": 500,
+      "sufijo": " PERSONAS",
+      "ancho": 820
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@23"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 520,
+     "scale": 0.75,
+     "at": "@23",
+     "props": {
+      "valor": 23,
+      "sufijo": " COMERCIOS",
+      "ancho": 820
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@33"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 520,
+     "scale": 0.75,
+     "at": "@33",
+     "props": {
+      "valor": 33,
+      "sufijo": " BOMBEROS",
+      "ancho": 820
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@mossos"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 520,
+     "scale": 0.75,
+     "at": "@mossos",
+     "props": {
+      "valor": 14,
+      "sufijo": " HERIDOS",
+      "ancho": 820
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 700,
+     "scale": 0.85,
+     "at": "@Cuatro",
+     "props": {
+      "texto": "4 GRAVES",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1420,
+     "scale": 0.5,
+     "at": "@docena",
+     "cara": "susto",
+     "acciones": [
+      {
+       "at": "@heridos",
+       "pose": "cabeza"
+      },
+      {
+       "at": "@graves",
+       "cara": "triste",
+       "pose": "caidos"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "menores",
+   "fondo": {
+    "tipo": "plano",
+    "color": "amarillo"
+   },
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "Mossos d'Esquadra vía Moncloa.com 25/10/2026: 72 de 128 detenidos, menores",
+   "lines": [
+    {
+     "text": "Ahora, el dato que más pesa: de los 128 detenidos, 72 son menores de edad.",
+     "tono": "normal"
+    },
+    {
+     "text": "Más de la mitad.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@72",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@mitad",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 960,
+     "scale": 1.15,
+     "at": "@128",
+     "props": {
+      "sufijo": "",
+      "decimales": 0,
+      "tope": 90,
+      "resalta": [
+       0
+      ],
+      "barras": [
+       {
+        "texto": "MENORES",
+        "valor": 72,
+        "color": "rojo"
+       },
+       {
+        "texto": "ADULTOS",
+        "valor": 56,
+        "color": "gris"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 1.4
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1300,
+     "y": 1660,
+     "scale": 0.45,
+     "at": "@menores",
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@menores",
+       "x": 860,
+       "dur": 0.5
+      },
+      {
+       "at": "@edad",
+       "cara": "susto",
+       "take": true
+      },
+      {
+       "at": "@mitad",
+       "pose": "cabeza",
+       "cara": "triste",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "hud": true,
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "72 DE 128",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "rojo",
+     "at": "@72",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 400,
+     "y": 1560,
+     "scale": 1.0,
+     "at": "@mitad",
+     "props": {
+      "texto": "CONFIRMADO · MOSSOS",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "reacciones",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     110,
+     34,
+     40
+    ]
+   },
+   "animo": "tension",
+   "trans": "papel",
+   "footnote": "Infobae 25/10/2026 · Moncloa.com 25/10/2026",
+   "lines": [
+    {
+     "text": "El alcalde, Collboni, avisa: habrá consecuencias para los padres. Illa: la violencia no tiene cabida en Cataluña.",
+     "tono": "normal"
+    },
+    {
+     "text": "Feijóo culpa al Gobierno:",
+     "tono": "normal",
+     "pausa": 0.15
+    },
+    {
+     "text": "«Se están resistiendo a abandonar el poder con violencia».",
+     "tono": "normal",
+     "pausa": 0.1,
+     "efecto_voz": "tele"
+    },
+    {
+     "text": "Y el PSOE condena la violencia y rechaza usarla como arma electoral.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Feijóo",
+     "plano": "medio",
+     "sobre": "feijoo",
+     "dur": 0.5,
+     "aire": 280
+    },
+    {
+     "at": "@PSOE",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 560,
+     "scale": 0.72,
+     "at": 0.2,
+     "props": {
+      "lineas": [
+       "COLLBONI (PSC):",
+       "«consecuencias para",
+       "los progenitores»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Illa"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 560,
+     "scale": 0.72,
+     "at": "@Illa",
+     "props": {
+      "lineas": [
+       "ILLA (PSC):",
+       "«La violencia no tiene",
+       "cabida en Cataluña»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Feijóo"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": -220,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@Feijóo",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@Feijóo",
+       "x": 400,
+       "dur": 0.6
+      },
+      {
+       "at": "@resistiendo",
+       "pose": "senala",
+       "cara": "enfado",
+       "mira": "camara"
+      },
+      {
+       "at": "@PSOE",
+       "x": 260,
+       "dur": 0.5,
+       "mira": "der",
+       "pose": "cruzados"
+      }
+     ],
+     "entra": "nada",
+     "id": "feijoo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 600,
+     "y": 520,
+     "scale": 0.72,
+     "at": "@resistiendo",
+     "props": {
+      "lineas": [
+       "FEIJÓO (PP):",
+       "«Se están resistiendo",
+       "a abandonar el poder",
+       "con violencia»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@PSOE"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 520,
+     "scale": 0.72,
+     "at": "@PSOE",
+     "props": {
+      "lineas": [
+       "PSOE:",
+       "condena la violencia",
+       "y rechaza usarla",
+       "en campaña"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 1300,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@PSOE",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@PSOE",
+       "x": 800,
+       "dur": 0.6,
+       "mira": "izq"
+      },
+      {
+       "at": "@condena",
+       "pose": "manos_juntas"
+      },
+      {
+       "at": "@electoral",
+       "pose": "senala_izq"
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1600,
+     "scale": 1.0,
+     "at": "@violencia+0.2",
+     "props": {
+      "texto": "DECLARACIONES",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@Feijóo"
+    }
+   ]
+  },
+  {
+   "id": "bilbao",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "tension",
+   "trans": "zoom",
+   "footnote": "EFE vía Infobae 26/10/2026",
+   "lines": [
+    {
+     "text": "Y no fue solo Barcelona. El lunes, en Bilbao, tras la protesta contra una charla de Vito Quiles, que él canceló:",
+     "tono": "normal"
+    },
+    {
+     "text": "coches quemados y 19 detenidos. Siete, menores.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      884.1,
+      657.9
+     ],
+     "dur": 0,
+     "zoom": 2.2
+    },
+    {
+     "at": "@Bilbao",
+     "plano": "general",
+     "sobre": [
+      595.0,
+      519.6
+     ],
+     "dur": 1.1,
+     "zoom": 2.8
+    },
+    {
+     "at": "@coches",
+     "plano": "general",
+     "sobre": [
+      595.0,
+      519.6
+     ],
+     "dur": 0.5,
+     "zoom": 3.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana"
+     },
+     "acciones": [
+      {
+       "at": 0,
+       "props": {
+        "resalta": [
+         "Barcelona"
+        ]
+       }
+      },
+      {
+       "at": "@Bilbao",
+       "props": {
+        "resalta": [
+         "Barcelona",
+         "Bizkaia"
+        ]
+       },
+       "sfx": "pop"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 0.01
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 890.1,
+     "y": 657.9,
+     "scale": 0.12,
+     "at": 0,
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 601.0,
+     "y": 519.6,
+     "scale": 0.12,
+     "at": "@Bilbao+0.4",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "efecto",
+     "efecto": "fuego",
+     "x": 635.0,
+     "y": 509.6,
+     "at": "@coches",
+     "vida": 3.2,
+     "scale": 0.11
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 470,
+     "scale": 0.75,
+     "at": "@19",
+     "props": {
+      "valor": 19,
+      "sufijo": " DETENIDOS",
+      "ancho": 820
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 640,
+     "scale": 0.8,
+     "at": "@Siete",
+     "props": {
+      "texto": "7 MENORES",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 430,
+     "scale": 0.75,
+     "at": "@lunes",
+     "props": {
+      "texto": "LUNES 26 · BILBAO",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@19"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": {
+    "tipo": "calle",
+    "hora": "noche"
+   },
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Pregunta a la audiencia",
+   "lines": [
+    {
+     "text": "A un mes del 29N, la pregunta: ¿quién debe pagar esto? ¿Los chavales, sus padres… o quien lo convoca?",
+     "tono": "normal"
+    },
+    {
+     "text": "Te leo en comentarios. Y síguenos: hasta el 29N te lo contamos con datos.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@chavales",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5,
+     "zoom": 1.05
+    },
+    {
+     "at": "@leo",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "papelera",
+     "x": 200,
+     "y": 1340,
+     "scale": 0.7,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 560,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@pagar",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@chavales",
+       "pose": "senala_izq",
+       "mira": "izq"
+      },
+      {
+       "at": "@padres",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@convoca",
+       "pose": "sostiene",
+       "cara": "serio"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "movil",
+     "x": 820,
+     "y": 960,
+     "scale": 0.45,
+     "at": "@convoca",
+     "props": {
+      "pantalla": "sms",
+      "remite": "REDES",
+      "lineas": [
+       "#institutos",
+       "indignados"
+      ],
+      "suena": true
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@leo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 260,
+     "y": 640,
+     "scale": 0.65,
+     "at": "@chavales",
+     "props": {
+      "texto": "¿CHAVALES?",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@leo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 820,
+     "y": 640,
+     "scale": 0.65,
+     "at": "@padres",
+     "props": {
+      "texto": "¿PADRES?",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@leo"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿QUIÉN PAGA?",
+     "x": 540,
+     "y": 440,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@pagar",
+     "golpe": true,
+     "out": "@síguenos-0.3",
+     "fx": [
+      {
+       "at": "@leo",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 440,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 1.2,
+  "titulo": "128 detenidos. Convocado por TikTok",
+  "capitulo": null
+ }
+}

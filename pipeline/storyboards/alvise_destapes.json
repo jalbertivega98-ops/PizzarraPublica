@@ -1,0 +1,1332 @@
+{
+ "slug": "alvise_destapes",
+ "title": "¿Qué ha destapado Alvise?",
+ "series_tag": "VERDAD O BULO",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Álvaro Nieto, exdirector de Vozpópuli (X, 22/11/2024; The Objective 24/11/2024): el caso Koldo se publicó el 14/04/2020",
+  "El Distrito (19/06/2025): acusación de Alvise sobre el Bank of Africa, sin pruebas documentales concluyentes",
+  "Maldita.es (06/05/2026): bulo del respirador de Carmena, condena de 5.000 € (2023) confirmada el 25/10/2024",
+  "eldiario.es (09/02/2024): el Supremo anula su condena por lo de Newtral",
+  "Supremo (06/2024): 7.000 € por la foto de Ana Pastor (intimidad)",
+  "EFE vía Público (09/10/2026): segunda condena civil por el honor de Ábalos",
+  "El Constitucional (05/10/2026): seis causas abiertas en el Supremo, ninguna condena penal",
+  "Personajes dibujados como pizarras, sin caricatura"
+ ],
+ "caption": "🔎 Nos pedís «los casos de corrupción que ha destapado Alvise». Lo hemos comprobado\n📰 Caso Koldo: lo publicó Vozpópuli en abril de 2020\n🇲🇦 «Comisiones en un banco de Marruecos»: sin confirmar\n❌ Respirador de Carmena: bulo, 5.000 € de condena\n✅ Newtral: el Supremo le dio la razón\n⚖️ 6 causas abiertas en el Supremo, 0 condenas penales\n💬 ¿Destapa o difunde? ¿Conoces un caso que se nos escape? Pásanos la fuente 👇\n🔔 Síguenos · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Álvaro Nieto (exdirector de Vozpópuli) · El Distrito 19/06/2025 · Maldita 06/05/2026 · eldiario.es 09/02/2024 · EFE vía Público 09/10/2026 · El Constitucional 05/10/2026. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#Alvise",
+  "#SALF",
+  "#verificación",
+  "#bulos",
+  "#29N",
+  "#elecciones",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "calle",
+   "animo": "curioso",
+   "footnote": "Petición de un seguidor en comentarios",
+   "lines": [
+    {
+     "text": "Un seguidor nos pide: «los casos de corrupción que ha destapado Alvise».",
+     "tono": "energia"
+    },
+    {
+     "text": "Lo hemos comprobado. Uno por uno.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Alvise",
+     "plano": "medio",
+     "sobre": "alvise",
+     "dur": 0.5,
+     "aire": 260
+    },
+    {
+     "at": "@comprobado",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 260
+    },
+    {
+     "at": "@Uno",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "movil",
+     "x": 300,
+     "y": 820,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "pantalla": "sms",
+      "remite": "SEGUIDOR",
+      "lineas": [
+       "¿Y los casos",
+       "que destapó",
+       "Alvise?"
+      ],
+      "suena": true
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@comprobado"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.58,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@pide",
+       "pose": "sostiene",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@comprobado",
+       "cara": "serio",
+       "mira": "camara",
+       "pose": "jarras"
+      },
+      {
+       "at": "@Uno",
+       "pose": "senala",
+       "cara": "ilusionado"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "alvise",
+     "x": 1300,
+     "y": 1340,
+     "scale": 0.58,
+     "at": "@Alvise",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@Alvise",
+       "x": 790,
+       "dur": 0.6
+      },
+      {
+       "at": "@destapado",
+       "pose": "arriba",
+       "cara": "riendo",
+       "mira": "camara"
+      },
+      {
+       "at": "@comprobado",
+       "cara": "sorpresa",
+       "mira": "izq"
+      }
+     ],
+     "entra": "nada",
+     "id": "alvise"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lupa",
+     "x": 380,
+     "y": 920,
+     "scale": 0.6,
+     "at": "@comprobado",
+     "props": {},
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿QUÉ HA DESTAPADO ALVISE?",
+     "x": 540,
+     "y": 400,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@destapado",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "koldo",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Álvaro Nieto, exdirector de Vozpópuli (X, 22/11/2024; The Objective 24/11/2024)",
+   "lines": [
+    {
+     "text": "Uno: el caso Koldo. Mucha gente se lo atribuye a él.",
+     "tono": "normal"
+    },
+    {
+     "text": "Pero lo publicó el periódico Vozpópuli, en abril de 2020, según su director de entonces.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@publicó",
+     "plano": "general",
+     "sobre": [
+      540,
+      760
+     ],
+     "dur": 0.6,
+     "zoom": 1.1
+    },
+    {
+     "at": "@director",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "1 · CASO KOLDO",
+     "x": 540,
+     "y": 400,
+     "size": 96,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@publicó",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "alvise",
+     "x": 790,
+     "y": 1500,
+     "scale": 0.48,
+     "at": 0.1,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@atribuye",
+       "pose": "pulgar",
+       "cara": "riendo"
+      },
+      {
+       "at": "@Pero",
+       "cara": "sorpresa",
+       "mira": "izq",
+       "pose": "normal"
+      }
+     ],
+     "entra": "pop",
+     "id": "alvise"
+    },
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 540,
+     "y": 700,
+     "scale": 0.85,
+     "at": "@publicó",
+     "props": {
+      "titulo": "VOZPÓPULI",
+      "subtitulo": "14 de abril de 2020",
+      "articulos": [
+       {
+        "id": "k",
+        "titulo": "Primera noticia",
+        "lineas": [
+         "sobre Koldo García"
+        ]
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@abril",
+       "props": {
+        "resalta": [
+         "k"
+        ]
+       }
+      }
+     ],
+     "id": "periodico",
+     "entra": "nada",
+     "dibujo": 1.0,
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": -200,
+     "y": 1500,
+     "scale": 0.42,
+     "at": "@publicó",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@publicó",
+       "x": 230,
+       "dur": 0.6
+      },
+      {
+       "at": "@abril",
+       "pose": "senala",
+       "mira": "der"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1180,
+     "scale": 1.0,
+     "at": "@director",
+     "props": {
+      "texto": "NO FUE EL PRIMERO",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "marruecos",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "tension",
+   "trans": "zoom",
+   "footnote": "El Distrito 19/06/2025",
+   "lines": [
+    {
+     "text": "Dos: en 2025 acusó a Sánchez y a Begoña Gómez de cobrar comisiones en un banco de Marruecos.",
+     "tono": "normal"
+    },
+    {
+     "text": "No presentó pruebas concluyentes. Y nadie lo ha confirmado.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      532.3,
+      685.6
+     ],
+     "dur": 0,
+     "zoom": 1.1
+    },
+    {
+     "at": "@Marruecos",
+     "plano": "general",
+     "sobre": [
+      333.0,
+      1271.2
+     ],
+     "dur": 1.0,
+     "zoom": 2.0
+    },
+    {
+     "at": "@pruebas",
+     "plano": "general",
+     "sobre": [
+      432.7,
+      1012.0
+     ],
+     "dur": 0.6,
+     "zoom": 1.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "estrecho"
+     },
+     "acciones": [
+      {
+       "at": "@Marruecos",
+       "props": {
+        "resalta": [
+         "Morocco"
+        ]
+       },
+       "sfx": "pop"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.2
+    },
+    {
+     "type": "rotulo",
+     "text": "2 · «BANCO EN MARRUECOS»",
+     "x": 540,
+     "y": 400,
+     "size": 84,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@pruebas",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 333.0,
+     "y": 1271.2,
+     "scale": 0.14,
+     "at": "@banco",
+     "props": {},
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "saco",
+     "x": 423.0,
+     "y": 1241.2,
+     "scale": 0.16,
+     "at": "@banco+0.2",
+     "props": {},
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "kaching"
+    },
+    {
+     "type": "personaje",
+     "quien": "alvise",
+     "x": 532.3,
+     "y": 705.6,
+     "scale": 0.12,
+     "at": 0.3,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@acusó",
+       "pose": "senala",
+       "cara": "enfado"
+      },
+      {
+       "at": "@pruebas",
+       "pose": "encoge",
+       "cara": "normal"
+      }
+     ],
+     "entra": "cae",
+     "id": "alvise"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1320,
+     "scale": 1.0,
+     "at": "@confirmado",
+     "props": {
+      "texto": "SIN CONFIRMAR",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "carmena",
+   "fondo": "calle",
+   "animo": "comico",
+   "trans": "barrido",
+   "footnote": "Maldita.es 06/05/2026 (sentencias de 2023 y 2024)",
+   "lines": [
+    {
+     "text": "Tres: en 2020 dijo que Manuela Carmena tenía un respirador privado en casa.",
+     "tono": "normal"
+    },
+    {
+     "text": "Era falso. Le condenaron a pagarle 5.000 euros, y la condena se confirmó en 2024.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@falso",
+     "plano": "general",
+     "sobre": [
+      540,
+      980
+     ],
+     "dur": 0.4,
+     "zoom": 1.08
+    },
+    {
+     "at": "@condenaron",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "3 · EL RESPIRADOR",
+     "x": 540,
+     "y": 400,
+     "size": 96,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@falso",
+     "hud": true
+    },
+    {
+     "type": "edificio",
+     "edificio": "casa",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "acciones": [
+      {
+       "at": "@falso",
+       "cara": "enfado"
+      }
+     ],
+     "entra": "nada",
+     "dibuja": 0.7
+    },
+    {
+     "type": "personaje",
+     "quien": "alvise",
+     "x": 760,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0.2,
+     "cara": "burla",
+     "acciones": [
+      {
+       "at": "@respirador",
+       "pose": "senala_izq",
+       "mira": "izq"
+      },
+      {
+       "at": "@falso",
+       "cara": "susto",
+       "take": true
+      },
+      {
+       "at": "@5.000",
+       "cara": "triste",
+       "pose": "caidos"
+      }
+     ],
+     "entra": "pop",
+     "id": "alvise"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 760,
+     "y": 640,
+     "scale": 0.6,
+     "at": "@respirador",
+     "props": {
+      "lineas": [
+       "«Respirador",
+       "privado en casa»"
+      ]
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@falso"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 900,
+     "scale": 1.0,
+     "at": "@falso",
+     "props": {
+      "texto": "BULO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@condenaron"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 520,
+     "scale": 0.75,
+     "at": "@5.000",
+     "props": {
+      "valor": 5000,
+      "sufijo": " €",
+      "ancho": 700
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "personaje",
+     "quien": "jueza",
+     "x": -200,
+     "y": 1500,
+     "scale": 0.45,
+     "at": "@condenaron",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@condenaron",
+       "x": 200,
+       "dur": 0.5
+      },
+      {
+       "at": "@confirmó",
+       "pose": "senala"
+      }
+     ],
+     "entra": "nada",
+     "hud": true,
+     "id": "jueza"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 620,
+     "y": 1650,
+     "scale": 1.0,
+     "at": "@2024",
+     "props": {
+      "texto": "CONDENA CONFIRMADA",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "newtral",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     34,
+     110,
+     70
+    ]
+   },
+   "animo": "curioso",
+   "trans": "iris",
+   "footnote": "eldiario.es (09/02/2024): el Supremo avala que insinuara irregularidades contables en Newtral",
+   "lines": [
+    {
+     "text": "Pero ojo, no todo fue bulo. Insinuó irregularidades en Newtral, la empresa de Ana Pastor.",
+     "tono": "normal"
+    },
+    {
+     "text": "Le condenaron, y el Supremo anuló esa condena en 2024: lo que dijo tenía una base adecuada en hechos.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Supremo",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@hechos",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "4 · NEWTRAL",
+     "x": 540,
+     "y": 400,
+     "size": 96,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@Supremo",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1500,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@ojo",
+       "pose": "senala_arriba",
+       "mira": "camara"
+      },
+      {
+       "at": "@anuló",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@hechos",
+       "cara": "pensativo",
+       "pose": "piensa"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "alvise",
+     "x": 790,
+     "y": 1500,
+     "scale": 0.5,
+     "at": "@Insinuó",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@condenaron",
+       "cara": "triste"
+      },
+      {
+       "at": "@anuló",
+       "cara": "riendo",
+       "pose": "punos",
+       "salta": true
+      }
+     ],
+     "entra": "pop",
+     "id": "alvise"
+    },
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 540,
+     "y": 720,
+     "scale": 0.75,
+     "at": "@Supremo",
+     "props": {
+      "titulo": "TRIBUNAL SUPREMO",
+      "subtitulo": "Febrero de 2024",
+      "articulos": [
+       {
+        "id": "a",
+        "titulo": "Fallo",
+        "lineas": [
+         "Se anula la condena:",
+         "había base en hechos"
+        ]
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@base",
+       "props": {
+        "resalta": [
+         "a"
+        ]
+       }
+      }
+     ],
+     "entra": "nada",
+     "dibujo": 0.8,
+     "sfx": "papel",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1180,
+     "scale": 1.0,
+     "at": "@hechos",
+     "props": {
+      "texto": "LE DIERON LA RAZÓN",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "juzgado",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Maldita 06/05/2026 · Supremo jun. 2024 (Ana Pastor) · EFE vía Público 09/10/2026 · El Constitucional 05/10/2026",
+   "lines": [
+    {
+     "text": "En los juzgados, tres personas le han ganado por su honor o su intimidad: Carmena, Ana Pastor y Ábalos.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y tiene seis causas abiertas en el Supremo: financiación de su partido, acoso a una fiscal, una PCR falsa de Illa…",
+     "tono": "normal",
+     "pausa": 0.15
+    },
+    {
+     "text": "Investigado, sí. Condenado penalmente, ninguna vez.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@seis",
+     "plano": "general",
+     "sobre": [
+      540,
+      820
+     ],
+     "dur": 0.6,
+     "zoom": 1.06
+    },
+    {
+     "at": "@Investigado",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.04
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "checklist",
+     "x": 540,
+     "y": 640,
+     "scale": 0.75,
+     "at": 0.2,
+     "props": {
+      "items": [
+       "Carmena: honor",
+       "Ana Pastor: intimidad",
+       "Ábalos: honor"
+      ],
+      "marcas": [
+       null,
+       null,
+       null
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@Carmena",
+       "props": {
+        "marcas": [
+         "no",
+         null,
+         null
+        ]
+       }
+      },
+      {
+       "at": "@Pastor",
+       "props": {
+        "marcas": [
+         "no",
+         "no",
+         null
+        ]
+       }
+      },
+      {
+       "at": "@Ábalos",
+       "props": {
+        "marcas": [
+         "no",
+         "no",
+         "no"
+        ]
+       }
+      }
+     ],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel",
+     "out": "@seis"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 520,
+     "scale": 0.75,
+     "at": "@seis",
+     "props": {
+      "valor": 6,
+      "sufijo": " CAUSAS ABIERTAS",
+      "ancho": 900
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@Investigado"
+    },
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 540,
+     "y": 900,
+     "scale": 0.7,
+     "at": "@financiación",
+     "props": {
+      "titulo": "SUPREMO",
+      "subtitulo": "Algunas causas",
+      "articulos": [
+       {
+        "id": "f",
+        "titulo": "Financiación",
+        "lineas": [
+         "100.000 € de un empresario"
+        ]
+       },
+       {
+        "id": "a",
+        "titulo": "Acoso",
+        "lineas": [
+         "a una fiscal"
+        ]
+       },
+       {
+        "id": "p",
+        "titulo": "PCR",
+        "lineas": [
+         "falsa atribuida a Illa"
+        ]
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@financiación",
+       "props": {
+        "resalta": [
+         "f"
+        ]
+       }
+      },
+      {
+       "at": "@fiscal",
+       "props": {
+        "resalta": [
+         "a"
+        ]
+       }
+      },
+      {
+       "at": "@PCR",
+       "props": {
+        "resalta": [
+         "p"
+        ]
+       }
+      }
+     ],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 0.8,
+     "sfx": "papel",
+     "out": "@Investigado"
+    },
+    {
+     "type": "personaje",
+     "quien": "alvise",
+     "x": 540,
+     "y": 1420,
+     "scale": 0.55,
+     "at": "@Investigado-0.2",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@Condenado",
+       "pose": "cruzados",
+       "mira": "camara"
+      }
+     ],
+     "entra": "abajo",
+     "id": "alvise"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 300,
+     "y": 560,
+     "scale": 1.0,
+     "at": "@Investigado",
+     "props": {
+      "texto": "INVESTIGADO",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 640,
+     "y": 760,
+     "scale": 1.0,
+     "at": "@ninguna",
+     "props": {
+      "texto": "0 CONDENAS PENALES",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "veredicto",
+   "fondo": "salon",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Revisión de Pizarra Pública, 27/10/2026",
+   "lines": [
+    {
+     "text": "Resumen: grandes casos de corrupción destapados primero por él… no hemos encontrado ninguno.",
+     "tono": "normal"
+    },
+    {
+     "text": "Si conoces uno, pásanos la fuente y lo revisamos.",
+     "tono": "normal",
+     "pausa": 0.15
+    },
+    {
+     "text": "¿Destapa o difunde? Te leo en comentarios. Y síguenos para más verificaciones.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@ninguno",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 280
+    },
+    {
+     "at": "@Destapa",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@síguenos",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Resumen",
+       "pose": "sostiene"
+      },
+      {
+       "at": "@ninguno",
+       "cara": "serio",
+       "pose": "encoge",
+       "mira": "camara"
+      },
+      {
+       "at": "@fuente",
+       "pose": "senala",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@Destapa",
+       "pose": "senala_izq",
+       "mira": "izq",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@difunde",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@síguenos",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lupa",
+     "x": 640,
+     "y": 980,
+     "scale": 0.55,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 260,
+     "y": 880,
+     "scale": 0.7,
+     "at": "@Destapa",
+     "props": {
+      "texto": "¿DESTAPA?",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@síguenos"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 820,
+     "y": 880,
+     "scale": 0.7,
+     "at": "@difunde",
+     "props": {
+      "texto": "¿DIFUNDE?",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@síguenos"
+    },
+    {
+     "type": "rotulo",
+     "text": "CASOS DESTAPADOS PRIMERO: 0",
+     "x": 540,
+     "y": 430,
+     "size": 76,
+     "color": "amarillo",
+     "at": "@ninguno",
+     "golpe": true,
+     "out": "@Destapa",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "¿TÚ QUÉ CREES?",
+     "x": 540,
+     "y": 430,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@Destapa",
+     "golpe": true,
+     "out": "@síguenos-0.3",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS",
+     "x": 540,
+     "y": 430,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@síguenos",
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.5,
+  "titulo": "¿Qué ha destapado Alvise?",
+  "capitulo": null
+ }
+}

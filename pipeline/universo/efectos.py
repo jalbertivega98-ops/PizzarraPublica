@@ -8,6 +8,7 @@ Elemento {"type": "efecto", "efecto": ..., "at", "vida": s} con:
   vuelan     {"objeto": "billete", "n", "x", "y", "scale"}: salen volando y se van (dinero que desaparece)
   flash      {}: destello blanco de pantalla
   polvo      {"x", "y"}: nube de polvo
+  fuego      {"x", "y", "scale"}: llamas cartoon que bailan y sueltan chispas (contenedores, coches); "vida" = lo que dura
 """
 import math
 
@@ -16,7 +17,7 @@ import skia
 
 from .estilo import COL, elipse, pieza, poly, relleno, texto_cartoon, trazo
 
-VIDA = {"pum": 0.9, "estrellas": 1.4, "lineas": 0.8, "lluvia": 2.2, "vuelan": 1.8, "flash": 0.3, "polvo": 0.6}
+VIDA = {"pum": 0.9, "estrellas": 1.4, "lineas": 0.8, "lluvia": 2.2, "vuelan": 1.8, "flash": 0.3, "polvo": 0.6, "fuego": 3.0}
 
 
 def tamano(s):
@@ -107,6 +108,8 @@ def dibuja(c, e, t, am):
         c.drawRect(skia.Rect(-400, -400, 1500, 2400), relleno("blanco", int(230 * (1 - q) * am)))
     elif k_e == "polvo":
         polvo(c, s.get("x", 540), s.get("y", 1340), q, sc)
+    elif k_e == "fuego":
+        fuego(c, s.get("x", 540), s.get("y", 1300), t - e.t0, sc, a, _rng(e))
     elif k_e in ("lluvia", "vuelan"):
         from . import objetos
         rng = _rng(e)
@@ -150,3 +153,34 @@ def dibuja(c, e, t, am):
                 if a < 255:
                     c.restore()
                 c.restore()
+
+
+def _llama(c, x, y, w, h, t, fase, color, a):
+    """Lengua de fuego: gota invertida cuya punta se mece."""
+    dx = w * 0.45 * math.sin(t * 9 + fase)
+    p = skia.Path()
+    p.moveTo(x - w / 2, y)
+    p.cubicTo(x - w * 0.7, y - h * 0.45, x + dx - w * 0.15, y - h * 0.7, x + dx, y - h)
+    p.cubicTo(x + dx + w * 0.2, y - h * 0.65, x + w * 0.75, y - h * 0.4, x + w / 2, y)
+    p.close()
+    c.drawPath(p, relleno(color, a))
+    c.drawPath(p, trazo(5, "tinta", a))
+
+
+def fuego(c, x, y, tt, sc, a, rng):
+    """Llamas que crecen al empezar y chispas que suben."""
+    k = min(1.0, tt / 0.35)
+    c.save(); c.translate(x, y); c.scale(sc * k, sc * k)
+    halo = skia.Paint(AntiAlias=True, Color=skia.Color(255, 150, 40, int(70 * a / 255)),
+                      MaskFilter=skia.MaskFilter.MakeBlur(skia.kNormal_BlurStyle, 40))
+    c.drawCircle(0, -110, 170 + 12 * math.sin(tt * 7), halo)
+    capas = (((226, 58, 48), 1.0, 0.0), ((255, 140, 30), 0.72, 1.3), ((255, 222, 80), 0.42, 2.6))
+    for col, f, fase in capas:
+        for j, ox in enumerate((-70, 0, 70)):
+            h = (230 if ox == 0 else 170) * f * (1 + 0.12 * math.sin(tt * 11 + j * 1.7 + fase))
+            _llama(c, ox * f, 0, 120 * f, h, tt, fase + j, col, a)
+    for i in range(7):  # chispas
+        u = (tt * 0.9 + rng.random()) % 1
+        cx = (rng.random() - 0.5) * 160 + 30 * math.sin(tt * 4 + i)
+        c.drawCircle(cx, -120 - u * 320, 9 * (1 - u), relleno((255, 200, 60), int(a * (1 - u))))
+    c.restore()

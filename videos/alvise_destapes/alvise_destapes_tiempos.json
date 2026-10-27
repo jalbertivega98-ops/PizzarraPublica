@@ -1,0 +1,131 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 5.7,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 3.25,
+    "texto": "Un seguidor nos pide: «los casos de corrupción que ha destapado Alvise»."
+   },
+   {
+    "t0": 3.45,
+    "t1": 5.25,
+    "texto": "Lo hemos comprobado. Uno por uno."
+   }
+  ]
+ },
+ {
+  "escena": "koldo",
+  "inicio": 5.7,
+  "fin": 13.61,
+  "frases": [
+   {
+    "t0": 6.0,
+    "t1": 8.71,
+    "texto": "Uno: el caso Koldo. Mucha gente se lo atribuye a él."
+   },
+   {
+    "t0": 8.91,
+    "t1": 13.16,
+    "texto": "Pero lo publicó el periódico Vozpópuli, en abril de 2020, según su director de entonces."
+   }
+  ]
+ },
+ {
+  "escena": "marruecos",
+  "inicio": 13.61,
+  "fin": 22.2,
+  "frases": [
+   {
+    "t0": 13.93,
+    "t1": 18.64,
+    "texto": "Dos: en 2025 acusó a Sánchez y a Begoña Gómez de cobrar comisiones en un banco de Marruecos."
+   },
+   {
+    "t0": 18.84,
+    "t1": 21.75,
+    "texto": "No presentó pruebas concluyentes. Y nadie lo ha confirmado."
+   }
+  ]
+ },
+ {
+  "escena": "carmena",
+  "inicio": 22.2,
+  "fin": 31.87,
+  "frases": [
+   {
+    "t0": 22.46,
+    "t1": 26.58,
+    "texto": "Tres: en 2020 dijo que Manuela Carmena tenía un respirador privado en casa."
+   },
+   {
+    "t0": 26.78,
+    "t1": 31.42,
+    "texto": "Era falso. Le condenaron a pagarle 5.000 euros, y la condena se confirmó en 2024."
+   }
+  ]
+ },
+ {
+  "escena": "newtral",
+  "inicio": 31.87,
+  "fin": 43.02,
+  "frases": [
+   {
+    "t0": 32.57,
+    "t1": 36.85,
+    "texto": "Pero ojo, no todo fue bulo. Insinuó irregularidades en Newtral, la empresa de Ana Pastor."
+   },
+   {
+    "t0": 37.05,
+    "t1": 42.57,
+    "texto": "Le condenaron, y el Supremo anuló esa condena en 2024: lo que dijo tenía una base adecuada en hechos."
+   }
+  ]
+ },
+ {
+  "escena": "juzgado",
+  "inicio": 43.02,
+  "fin": 57.07,
+  "frases": [
+   {
+    "t0": 43.02,
+    "t1": 47.95,
+    "texto": "En los juzgados, tres personas le han ganado por su honor o su intimidad: Carmena, Ana Pastor y Ábalos."
+   },
+   {
+    "t0": 48.15,
+    "t1": 53.9,
+    "texto": "Y tiene seis causas abiertas en el Supremo: financiación de su partido, acoso a una fiscal, una PCR falsa de Illa…"
+   },
+   {
+    "t0": 54.1,
+    "t1": 56.62,
+    "texto": "Investigado, sí. Condenado penalmente, ninguna vez."
+   }
+  ]
+ },
+ {
+  "escena": "veredicto",
+  "inicio": 57.07,
+  "fin": 69.86,
+  "frases": [
+   {
+    "t0": 57.77,
+    "t1": 62.13,
+    "texto": "Resumen: grandes casos de corrupción destapados primero por él… no hemos encontrado ninguno."
+   },
+   {
+    "t0": 62.33,
+    "t1": 64.62,
+    "texto": "Si conoces uno, pásanos la fuente y lo revisamos."
+   },
+   {
+    "t0": 64.82,
+    "t1": 68.51,
+    "texto": "¿Destapa o difunde? Te leo en comentarios. Y síguenos para más verificaciones."
+   }
+  ]
+ }
+]

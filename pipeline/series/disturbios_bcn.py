@@ -105,7 +105,7 @@ scenes = [
     ]),
     # 5 · EL DATO: más de la mitad, menores; la gráfica crece y Piz no se lo cree
     dict(id="menores", fondo={"tipo": "plano", "color": "amarillo"}, animo="tension", trans="barrido",
-         footnote="Mossos d'Esquadra vía Moncloa.com 25/10/2026: 72 de 128 detenidos, menores", lines=[
+         footnote="Mossos d'Esquadra vía Moncloa.com 25/10/2026", lines=[
         V("Ahora, el dato que más pesa: de los 128 detenidos, 72 son menores de edad.", "normal"),
         V("Más de la mitad.", "remate", 0.15),
     ], camara=[plano(0, "general", [540, 950], 0), plano("@72", "general", [540, 900], 0.5, zoom=1.08),
@@ -115,10 +115,10 @@ scenes = [
             props={"sufijo": "", "decimales": 0, "tope": 90, "resalta": [0], "barras": [
                 {"texto": "MENORES", "valor": 72, "color": "rojo"}, {"texto": "ADULTOS", "valor": 56, "color": "gris"}]}),
         quien("piz", 1300, "@menores", 0.45, "sorpresa", y=1660, entra="nada", hud=True, acciones=[
-            {"at": "@menores", "x": 860, "dur": 0.5}, {"at": "@edad", "cara": "susto", "take": True},
+            {"at": "@menores", "x": 930, "dur": 0.5}, {"at": "@edad", "cara": "susto", "take": True},
             {"at": "@mitad", "pose": "cabeza", "cara": "triste", "mira": "camara"}]),
         rot("72 DE 128", 540, 420, "@72", 110, "rojo", golpe=True),
-        sello("CONFIRMADO · MOSSOS", "verde", 1560, "@mitad", x=400),
+        sello("CONFIRMADO · MOSSOS", "verde", 580, "@mitad"),
     ]),
     # 6 · LAS REACCIONES: PSC, PP y PSOE, cada uno con su frase
     dict(id="reacciones", fondo={"tipo": "plano", "color": (110, 34, 40)}, animo="tension", trans="papel",
@@ -144,7 +144,7 @@ scenes = [
         quien("sanchez", 1300, "@PSOE", 0.55, "serio", entra="nada", acciones=[
             {"at": "@PSOE", "x": 800, "dur": 0.6, "mira": "izq"}, {"at": "@condena", "pose": "manos_juntas"},
             {"at": "@electoral", "pose": "senala_izq"}]),
-        sello("DECLARACIONES", "azul", 1600, "@violencia+0.2", out="@Feijóo"),
+        sello("DECLARACIONES", "azul", 1180, "@violencia+0.2", out="@Feijóo"),
     ]),
     # 7 · BILBAO: el mapa sube al norte; el lunes, otra noche igual
     dict(id="bilbao", fondo="mar_mapa", limites=LIM, animo="tension", trans="zoom", footnote="EFE vía Infobae 26/10/2026", lines=[
@@ -157,9 +157,9 @@ scenes = [
         obj("chincheta", BCN[0] + 6, BCN[1], 0, 0.12, props={"diseno": "espana"}, entra="nada"),
         obj("chincheta", BIL[0] + 6, BIL[1], "@Bilbao+0.4", 0.12, props={"diseno": "espana"}, entra="cae"),
         F(BIL[0] + 40, "@coches", 3.2, 0.11, BIL[1] - 10),
-        obj("contador", 540, 470, "@19", 0.75, hud=True, entra="pop", sfx="golpe", props={"valor": 19, "sufijo": " DETENIDOS", "ancho": 820}),
-        etq("7 MENORES", 540, 640, "@Siete", "rojo", 0.8, hud=True),
-        etq("LUNES 26 · BILBAO", 540, 430, "@lunes", "azul", 0.75, hud=True, out="@19"),
+        obj("contador", 540, 560, "@19", 0.75, hud=True, entra="pop", sfx="golpe", props={"valor": 19, "sufijo": " DETENIDOS", "ancho": 820}),
+        etq("7 MENORES", 540, 740, "@Siete", "rojo", 0.8, hud=True),
+        etq("LUNES 26 · BILBAO", 540, 420, "@lunes", "azul", 0.75, hud=True),
     ]),
     # 8 · FINAL: Piz en la calle ya apagada, con la pregunta
     dict(id="final", fondo=NOCHE, animo="final", trans="iris", footnote="Pregunta a la audiencia", lines=[
@@ -175,8 +175,8 @@ scenes = [
             {"at": "@leo", "cara": "ilusionado", "pose": "senala"}, {"at": "@síguenos", "pose": "saluda", "cara": "riendo"}]),
         obj("movil", 820, 960, "@convoca", 0.45, entra="pop", sfx="pop", out="@leo",
             props={"pantalla": "sms", "remite": "REDES", "lineas": ["#institutos", "indignados"], "suena": True}),
-        etq("¿CHAVALES?", 260, 640, "@chavales", "azul", 0.65, out="@leo"),
-        etq("¿PADRES?", 820, 640, "@padres", "verde", 0.65, out="@leo"),
+        etq("¿CHAVALES?", 270, 700, "@chavales", "azul", 0.65, hud=True, out="@leo"),
+        etq("¿PADRES?", 810, 700, "@padres", "verde", 0.65, hud=True, out="@leo"),
         rot("¿QUIÉN PAGA?", 540, 440, "@pagar", 110, "amarillo", golpe=True, out="@síguenos-0.3", fx=[{"at": "@leo", "do": "latir"}]),
         rot("SÍGUENOS", 540, 440, "@síguenos", 110, "amarillo"),
     ]),

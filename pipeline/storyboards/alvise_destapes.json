@@ -207,7 +207,7 @@
    },
    "animo": "curioso",
    "trans": "papel",
-   "footnote": "Álvaro Nieto, exdirector de Vozpópuli (X, 22/11/2024; The Objective 24/11/2024)",
+   "footnote": "Álvaro Nieto, exdirector de Vozpópuli (X, 22/11/2024)",
    "lines": [
     {
      "text": "Uno: el caso Koldo. Mucha gente se lo atribuye a él.",
@@ -445,10 +445,10 @@
     },
     {
      "type": "rotulo",
-     "text": "2 · «BANCO EN MARRUECOS»",
+     "text": "2 · BANCO EN MARRUECOS",
      "x": 540,
      "y": 400,
-     "size": 84,
+     "size": 72,
      "color": "amarillo",
      "at": 0,
      "golpe": true,
@@ -524,7 +524,7 @@
    "fondo": "calle",
    "animo": "comico",
    "trans": "barrido",
-   "footnote": "Maldita.es 06/05/2026 (sentencias de 2023 y 2024)",
+   "footnote": "Maldita.es 06/05/2026",
    "lines": [
     {
      "text": "Tres: en 2020 dijo que Manuela Carmena tenía un respirador privado en casa.",
@@ -728,7 +728,7 @@
    },
    "animo": "curioso",
    "trans": "iris",
-   "footnote": "eldiario.es (09/02/2024): el Supremo avala que insinuara irregularidades contables en Newtral",
+   "footnote": "eldiario.es 09/02/2024",
    "lines": [
     {
      "text": "Pero ojo, no todo fue bulo. Insinuó irregularidades en Newtral, la empresa de Ana Pastor.",
@@ -874,7 +874,7 @@
      "type": "objeto",
      "objeto": "sello",
      "x": 540,
-     "y": 1180,
+     "y": 1020,
      "scale": 1.0,
      "at": "@hechos",
      "props": {
@@ -900,7 +900,7 @@
    },
    "animo": "tension",
    "trans": "corte",
-   "footnote": "Maldita 06/05/2026 · Supremo jun. 2024 (Ana Pastor) · EFE vía Público 09/10/2026 · El Constitucional 05/10/2026",
+   "footnote": "Maldita 06/05/2026 · Público 09/10/2026 · El Constitucional 05/10/2026",
    "lines": [
     {
      "text": "En los juzgados, tres personas le han ganado por su honor o su intimidad: Carmena, Ana Pastor y Ábalos.",

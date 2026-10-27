@@ -50,7 +50,7 @@ scenes = [
     ]),
     # 2 · EL CASO KOLDO: el periódico de 2020 se dibuja con su fecha
     dict(id="koldo", fondo={"tipo": "plano", "color": (28, 52, 110)}, animo="curioso", trans="papel",
-         footnote="Álvaro Nieto, exdirector de Vozpópuli (X, 22/11/2024; The Objective 24/11/2024)", lines=[
+         footnote="Álvaro Nieto, exdirector de Vozpópuli (X, 22/11/2024)", lines=[
         V("Uno: el caso Koldo. Mucha gente se lo atribuye a él.", "normal"),
         V("Pero lo publicó el periódico Vozpópuli, en abril de 2020, según su director de entonces.", "normal", 0.15),
     ], camara=[plano(0, "general", [540, 900], 0), plano("@publicó", "general", [540, 760], 0.6, zoom=1.1),
@@ -74,7 +74,7 @@ scenes = [
     ], camara=[zoom(0, MAD_E, 1.1, 0), zoom("@Marruecos", MARR, 2.0, 1.0), zoom("@pruebas", P(RE, -5.0, 37.0), 1.4, 0.6)],
        elements=[
         mapa_e(0, 1.2, acciones=[{"at": "@Marruecos", "props": {"resalta": ["Morocco"]}, "sfx": "pop"}]),
-        rot("2 · «BANCO EN MARRUECOS»", 540, 400, 0, 84, "amarillo", golpe=True, out="@pruebas"),
+        rot("2 · BANCO EN MARRUECOS", 540, 400, 0, 72, "amarillo", golpe=True, out="@pruebas"),
         obj("chincheta", MARR[0], MARR[1], "@banco", 0.14, entra="cae"),
         obj("saco", MARR[0] + 90, MARR[1] - 30, "@banco+0.2", 0.16, entra="cae", sfx="kaching"),
         quien("alvise", MAD_E[0], 0.3, 0.12, "serio", y=MAD_E[1] + 20, entra="cae", acciones=[
@@ -82,7 +82,7 @@ scenes = [
         sello("SIN CONFIRMAR", "naranja", 1320, "@confirmado"),
     ]),
     # 4 · CARMENA: el bulo del respirador; casa de Carmena y la jueza con la multa
-    dict(id="carmena", fondo="calle", animo="comico", trans="barrido", footnote="Maldita.es 06/05/2026 (sentencias de 2023 y 2024)", lines=[
+    dict(id="carmena", fondo="calle", animo="comico", trans="barrido", footnote="Maldita.es 06/05/2026", lines=[
         V("Tres: en 2020 dijo que Manuela Carmena tenía un respirador privado en casa.", "normal"),
         V("Era falso. Le condenaron a pagarle 5.000 euros, y la condena se confirmó en 2024.", "normal", 0.15),
     ], camara=[plano(0, "general", [540, 1000], 0), plano("@falso", "general", [540, 980], 0.4, zoom=1.08),
@@ -104,7 +104,7 @@ scenes = [
     ]),
     # 5 · NEWTRAL: el giro; aquí el Supremo le da la razón
     dict(id="newtral", fondo={"tipo": "plano", "color": (34, 110, 70)}, animo="curioso", trans="iris",
-         footnote="eldiario.es (09/02/2024): el Supremo avala que insinuara irregularidades contables en Newtral", lines=[
+         footnote="eldiario.es 09/02/2024", lines=[
         V("Pero ojo, no todo fue bulo. Insinuó irregularidades en Newtral, la empresa de Ana Pastor.", "normal"),
         V("Le condenaron, y el Supremo anuló esa condena en 2024: lo que dijo tenía una base adecuada en hechos.", "remate", 0.15),
     ], camara=[plano(0, "general", [540, 950], 0), plano("@Supremo", "general", [540, 900], 0.5, zoom=1.08),
@@ -120,11 +120,11 @@ scenes = [
             "titulo": "TRIBUNAL SUPREMO", "subtitulo": "Febrero de 2024",
             "articulos": [{"id": "a", "titulo": "Fallo", "lineas": ["Se anula la condena:", "había base en hechos"]}]},
             acciones=[{"at": "@base", "props": {"resalta": ["a"]}}]),
-        sello("LE DIERON LA RAZÓN", "verde", 1180, "@hechos"),
+        sello("LE DIERON LA RAZÓN", "verde", 1020, "@hechos"),
     ]),
     # 6 · EL JUZGADO: quién le ha ganado y qué tiene pendiente
     dict(id="juzgado", fondo={"tipo": "plano", "color": (28, 52, 110)}, animo="tension", trans="corte",
-         footnote="Maldita 06/05/2026 · Supremo jun. 2024 (Ana Pastor) · EFE vía Público 09/10/2026 · El Constitucional 05/10/2026", lines=[
+         footnote="Maldita 06/05/2026 · Público 09/10/2026 · El Constitucional 05/10/2026", lines=[
         V("En los juzgados, tres personas le han ganado por su honor o su intimidad: Carmena, Ana Pastor y Ábalos.", "normal"),
         V("Y tiene seis causas abiertas en el Supremo: financiación de su partido, acoso a una fiscal, una PCR falsa de Illa…", "normal", 0.15),
         V("Investigado, sí. Condenado penalmente, ninguna vez.", "remate", 0.15),

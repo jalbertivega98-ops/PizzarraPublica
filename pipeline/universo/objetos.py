@@ -430,6 +430,9 @@ APOYADOS |= _mundo.APOYADOS
 TIPOS.update(_civico.TIPOS)  # elecciones, leyes, carreteras, viajes e historia: universo/civico.py
 TAMANO.update(_civico.TAMANO)
 APOYADOS |= _civico.APOYADOS
+from . import emergencia as _emergencia  # noqa: E402
+TIPOS.update(_emergencia.TIPOS)  # sucesos (lazo de luto, helicóptero, ambulancia, gota): universo/emergencia.py
+TAMANO.update(_emergencia.TAMANO)
 DIBUJO = {"grafica": 1.2, "mapa": 2.0, "documento": 1.0, "contador": 1.4, "barras": 1.4}  # objetos que se dibujan/despliegan solos (s por defecto)
 
 

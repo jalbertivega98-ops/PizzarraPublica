@@ -33,6 +33,7 @@ TONOS = {
     "energia":  {"stability": 0.30, "similarity_boost": 0.8, "style": 0.55, "use_speaker_boost": True, "speed": 1.10},
     "sorpresa": {"stability": 0.28, "similarity_boost": 0.8, "style": 0.60, "use_speaker_boost": True, "speed": 1.04},
     "intriga":  {"stability": 0.45, "similarity_boost": 0.8, "style": 0.45, "use_speaker_boost": True, "speed": 0.94},
+    "sobrio":   {"stability": 0.62, "similarity_boost": 0.8, "style": 0.12, "use_speaker_boost": True, "speed": 0.98},
     "remate":   {"stability": 0.50, "similarity_boost": 0.8, "style": 0.40, "use_speaker_boost": True, "speed": 0.92},
 }
 

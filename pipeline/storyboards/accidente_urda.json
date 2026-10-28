@@ -1,0 +1,1010 @@
+{
+ "slug": "accidente_urda",
+ "title": "Accidente de tren en Urda: lo que se sabe",
+ "series_tag": "EN DESARROLLO",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.12,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "EFE vía RTVC (28/10/2026): colisión a las 8:54 cerca de la estación de Urda, vagones por un terraplén",
+  "El Español (28/10/2026): Adif y Renfe, alcance entre dos trenes entre Los Yébenes y Urda",
+  "Libertad Digital (28/10/2026, directo): PK 118, viajeros 147 + 397, UME, 112 CLM",
+  "El Diario de Madrid (28/10/2026): 64 fallecidos según García-Page, Atocha 24 h, línea cortada",
+  "Canal Sur y El Salto (28/10/2026): comparecencia de Óscar Puente",
+  "Tono de luto: sin gags ni caras en los trenes; el choque no se dibuja"
+ ],
+ "caption": "🖤 Accidente de tren en Urda (Toledo): lo que se sabe\n🚆 Un AVE de Renfe alcanzó a un Iryo parado en la línea Madrid-Andalucía (8:54)\n🕯️ Al menos 64 fallecidos y más de un centenar de heridos (cifras provisionales)\n🗣️ El ministro Puente: falló la señalización y se autorizó al AVE a seguir; responsables, los dirá la investigación\n📞 Familias: Renfe 900 10 10 20 · punto de atención 24 h en Atocha\n⚠️ Información en desarrollo\n🖤 Nuestro recuerdo para las víctimas y sus familias · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: 112 Castilla-La Mancha (vía EFE) · Adif · Renfe · Gobierno de Castilla-La Mancha · comparecencia de Óscar Puente (28/10/2026). ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#Urda",
+  "#Toledo",
+  "#accidente",
+  "#tren",
+  "#ultimahora",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "triste",
+   "footnote": "112 Castilla-La Mancha vía EFE · 28/10/2026",
+   "lines": [
+    {
+     "text": "Esta mañana, dos trenes de alta velocidad han chocado en Urda, en Toledo.",
+     "tono": "sobrio"
+    },
+    {
+     "text": "Esto es lo que se sabe hasta ahora.",
+     "tono": "sobrio",
+     "pausa": 0.25
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      729.7
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@Urda",
+     "plano": "general",
+     "sobre": [
+      550.8,
+      804.5
+     ],
+     "dur": 1.2,
+     "zoom": 2.6
+    },
+    {
+     "at": "@sabe",
+     "plano": "general",
+     "sobre": [
+      550.8,
+      804.5
+     ],
+     "dur": 1.0,
+     "zoom": 3.0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana"
+     },
+     "acciones": [
+      {
+       "at": "@trenes",
+       "props": {
+        "lineas": [
+         {
+          "id": "ave",
+          "puntos": [
+           [
+            -3.7,
+            40.42
+           ],
+           [
+            -3.8,
+            39.85
+           ],
+           [
+            -3.71,
+            39.41
+           ],
+           [
+            -3.93,
+            38.98
+           ],
+           [
+            -4.1,
+            38.68
+           ],
+           [
+            -4.78,
+            37.89
+           ],
+           [
+            -5.98,
+            37.39
+           ]
+          ],
+          "color": "azul",
+          "dur": 1.2,
+          "ancho": 8
+         }
+        ]
+       }
+      },
+      {
+       "at": "@Toledo",
+       "props": {
+        "resalta": [
+         "Toledo"
+        ]
+       },
+       "sfx": "pop"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.4
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 556.8,
+     "y": 804.5,
+     "scale": 0.12,
+     "at": "@Urda",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "rotulo",
+     "text": "URDA (TOLEDO)",
+     "x": 540,
+     "y": 400,
+     "size": 96,
+     "color": "blanco",
+     "at": "@Urda",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.0,
+     "at": "@sabe",
+     "props": {
+      "texto": "EN DESARROLLO",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "que_paso",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     40,
+     70
+    ]
+   },
+   "animo": "triste",
+   "trans": "iris",
+   "footnote": "Adif, Renfe y 112 CLM · 28/10/2026",
+   "luz": [
+    {
+     "at": "@alcanzó+0.6",
+     "tipo": "oscuro"
+    }
+   ],
+   "lines": [
+    {
+     "text": "Eran las 8:54. Un tren de Iryo estaba parado en la línea Madrid-Andalucía.",
+     "tono": "sobrio"
+    },
+    {
+     "text": "Un AVE de Renfe lo alcanzó por detrás. Varios vagones descarrilaron y cayeron por un terraplén.",
+     "tono": "sobrio",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@alcanzó",
+     "plano": "general",
+     "sobre": [
+      540,
+      1040
+     ],
+     "dur": 0.8,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "via",
+     "x": 540,
+     "y": 1184,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "ancho": 1600
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "tren",
+     "x": 820,
+     "y": 1080,
+     "scale": 0.8,
+     "at": 0,
+     "props": {
+      "color": "rojo",
+      "cara": null,
+      "vagones": 1
+     },
+     "acciones": [],
+     "id": "iryo",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 760,
+     "y": 720,
+     "scale": 0.7,
+     "at": "@Iryo",
+     "props": {
+      "texto": "IRYO · PARADO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "tren",
+     "x": -700,
+     "y": 1080,
+     "scale": 0.8,
+     "at": "@AVE-0.3",
+     "props": {
+      "color": "azul",
+      "cara": null,
+      "vagones": 1
+     },
+     "acciones": [
+      {
+       "at": "@AVE-0.3",
+       "x": 200,
+       "dur": 1.6
+      }
+     ],
+     "id": "ave",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 220,
+     "y": 720,
+     "scale": 0.7,
+     "at": "@AVE",
+     "props": {
+      "texto": "AVE · RENFE",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "8:54",
+     "x": 540,
+     "y": 420,
+     "size": 130,
+     "color": "amarillo",
+     "at": "@8:54",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 560,
+     "scale": 0.6,
+     "at": "@Madrid-Andalucía",
+     "props": {
+      "texto": "PK 118 · LOS YÉBENES-URDA",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.0,
+     "at": "@descarrilaron",
+     "props": {
+      "texto": "CONFIRMADO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "victimas",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     226,
+     224,
+     220
+    ]
+   },
+   "animo": "triste",
+   "trans": "corte",
+   "footnote": "García-Page y Ministerio de Transportes · 112 CLM · 28/10/2026",
+   "lines": [
+    {
+     "text": "Hay al menos 64 fallecidos y más de un centenar de heridos.",
+     "tono": "sobrio"
+    },
+    {
+     "text": "En los dos trenes viajaban más de 500 personas. Las cifras todavía pueden cambiar.",
+     "tono": "sobrio",
+     "pausa": 0.25
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "lazo",
+     "x": 540,
+     "y": 600,
+     "scale": 1.0,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "dibuja": 1.2
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 1000,
+     "scale": 0.8,
+     "at": "@64",
+     "props": {
+      "valor": 64,
+      "sufijo": " FALLECIDOS",
+      "ancho": 860
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1170,
+     "scale": 0.75,
+     "at": "@heridos",
+     "props": {
+      "texto": "+100 HERIDOS",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1300,
+     "scale": 0.7,
+     "at": "@500",
+     "props": {
+      "texto": "+500 VIAJEROS",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.0,
+     "at": "@cifras",
+     "props": {
+      "texto": "CIFRAS PROVISIONALES",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "ministro",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     40,
+     70
+    ]
+   },
+   "animo": "triste",
+   "trans": "papel",
+   "footnote": "Óscar Puente, comparecencia 28/10/2026 (El Salto, Canal Sur)",
+   "lines": [
+    {
+     "text": "El ministro de Transportes, Óscar Puente, ha explicado que falló el sistema de señales de ese tramo.",
+     "tono": "sobrio"
+    },
+    {
+     "text": "Y que, aun así, a las 8:36 se autorizó al AVE a seguir, cuando debía quedarse parado.",
+     "tono": "sobrio",
+     "pausa": 0.15
+    },
+    {
+     "text": "Quién es el responsable lo decidirá la investigación.",
+     "tono": "sobrio",
+     "pausa": 0.25
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0.2,
+     "props": {
+      "titulo": "LO QUE DICE EL MINISTRO",
+      "ancho": 860,
+      "articulos": [
+       {
+        "id": "a",
+        "titulo": "FALLA LA SEÑALIZACIÓN",
+        "lineas": [
+         "Cae el sistema que controla",
+         "los trenes en el tramo"
+        ]
+       },
+       {
+        "id": "b",
+        "titulo": "8:36 · EL AVE SIGUE",
+        "lineas": [
+         "Se le autoriza a reanudar la marcha",
+         "aunque debía seguir parado"
+        ]
+       },
+       {
+        "id": "c",
+        "titulo": "¿RESPONSABLES?",
+        "lineas": [
+         "Lo establecerá la investigación"
+        ]
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@señales",
+       "props": {
+        "resalta": [
+         "a"
+        ]
+       }
+      },
+      {
+       "at": "@8:36",
+       "props": {
+        "resalta": [
+         "a",
+         "b"
+        ]
+       }
+      },
+      {
+       "at": "@responsable",
+       "props": {
+        "resalta": [
+         "a",
+         "b",
+         "c"
+        ]
+       }
+      }
+     ],
+     "hud": true,
+     "id": "doc",
+     "entra": "nada",
+     "dibujo": 1.1,
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.0,
+     "at": "@Puente",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@responsable"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.0,
+     "at": "@responsable",
+     "props": {
+      "texto": "INVESTIGACIÓN ABIERTA",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "rescate",
+   "fondo": {
+    "tipo": "carretera",
+    "velocidad": 0.0
+   },
+   "animo": "triste",
+   "trans": "barrido",
+   "footnote": "Ministerio de Defensa, Guardia Civil y 112 CLM · 28/10/2026",
+   "lines": [
+    {
+     "text": "En la zona trabajan bomberos, sanitarios, Guardia Civil y unos cien militares de la UME.",
+     "tono": "sobrio"
+    },
+    {
+     "text": "Y los hospitales de Madrid y de Castilla-La Mancha se han preparado para atender a los heridos.",
+     "tono": "sobrio",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "helicoptero",
+     "x": 1400,
+     "y": 760,
+     "scale": 0.6,
+     "at": 0,
+     "props": {},
+     "acciones": [
+      {
+       "at": 0,
+       "x": 720,
+       "dur": 2.4
+      }
+     ],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "ambulancia",
+     "x": -500,
+     "y": 1230,
+     "scale": 0.6,
+     "at": "@sanitarios-0.6",
+     "props": {},
+     "acciones": [
+      {
+       "at": "@sanitarios-0.6",
+       "x": 360,
+       "dur": 1.6
+      }
+     ],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 330,
+     "scale": 0.6,
+     "at": "@bomberos",
+     "props": {
+      "texto": "BOMBEROS",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 430,
+     "scale": 0.6,
+     "at": "@Guardia",
+     "props": {
+      "texto": "GUARDIA CIVIL",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 530,
+     "scale": 0.6,
+     "at": "@UME",
+     "props": {
+      "texto": "UME · 100 MILITARES",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 630,
+     "scale": 0.65,
+     "at": "@hospitales",
+     "props": {
+      "texto": "HOSPITALES EN ALERTA",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "ayuda",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     40,
+     70
+    ]
+   },
+   "animo": "triste",
+   "trans": "corte",
+   "footnote": "Renfe y Protección Civil de Madrid · 28/10/2026",
+   "lines": [
+    {
+     "text": "La línea entre Madrid y Andalucía sigue cortada.",
+     "tono": "sobrio"
+    },
+    {
+     "text": "Si buscas a un familiar, Renfe atiende en el 900 10 10 20. Y en la estación de Atocha hay un punto de atención.",
+     "tono": "sobrio",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "via",
+     "x": 540,
+     "y": 1104,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "ancho": 1600
+     },
+     "acciones": [],
+     "entra": "nada",
+     "out": "@familiar"
+    },
+    {
+     "type": "objeto",
+     "objeto": "tren",
+     "x": 640,
+     "y": 1080,
+     "scale": 0.8,
+     "at": 0,
+     "props": {
+      "color": "azul",
+      "cara": null,
+      "vagones": 1
+     },
+     "acciones": [],
+     "id": "parado",
+     "entra": "nada",
+     "out": "@familiar"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 700,
+     "scale": 1.0,
+     "at": "@cortada",
+     "props": {
+      "texto": "LÍNEA CORTADA",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@familiar"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 520,
+     "scale": 0.7,
+     "at": "@Madrid",
+     "props": {
+      "texto": "MADRID — ANDALUCÍA",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@familiar"
+    },
+    {
+     "type": "objeto",
+     "objeto": "movil",
+     "x": 540,
+     "y": 880,
+     "scale": 1.35,
+     "at": "@familiar",
+     "props": {
+      "pantalla": "sms",
+      "remite": "FAMILIAS",
+      "lineas": [
+       "RENFE",
+       "900 10 10 20",
+       "ATOCHA 24 H"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "900 10 10 20",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@900",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1290,
+     "scale": 0.65,
+     "at": "@Atocha",
+     "props": {
+      "texto": "ATOCHA · ATENCIÓN 24 H",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     226,
+     224,
+     220
+    ]
+   },
+   "animo": "triste",
+   "trans": "iris",
+   "footnote": "Información en desarrollo",
+   "lines": [
+    {
+     "text": "La información sigue en desarrollo.",
+     "tono": "sobrio"
+    },
+    {
+     "text": "Nuestro recuerdo, para las víctimas y sus familias.",
+     "tono": "sobrio",
+     "pausa": 0.3
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      980
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "lazo",
+     "x": 540,
+     "y": 780,
+     "scale": 0.9,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "triste",
+     "acciones": [
+      {
+       "at": "@recuerdo",
+       "pose": "manos_juntas"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "EN RECUERDO DE LAS VÍCTIMAS",
+     "x": 540,
+     "y": 430,
+     "size": 62,
+     "color": "tinta",
+     "at": "@recuerdo",
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 0.5,
+ "portada": {
+  "t": 9.0,
+  "titulo": "Accidente de tren en Urda: lo que se sabe",
+  "capitulo": null
+ },
+ "tono": "sobrio"
+}

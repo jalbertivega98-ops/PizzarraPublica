@@ -311,7 +311,7 @@
      "acciones": [
       {
        "at": "@AVE-0.3",
-       "x": 200,
+       "x": 40,
        "dur": 1.6
       }
      ],
@@ -321,7 +321,7 @@
     {
      "type": "objeto",
      "objeto": "etiqueta",
-     "x": 220,
+     "x": 150,
      "y": 720,
      "scale": 0.7,
      "at": "@AVE",
@@ -624,6 +624,23 @@
     },
     {
      "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1330,
+     "scale": 0.7,
+     "at": "@parado",
+     "props": {
+      "texto": "DEBÍA SEGUIR PARADO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@responsable"
+    },
+    {
+     "type": "objeto",
      "objeto": "sello",
      "x": 540,
      "y": 1500,
@@ -702,6 +719,11 @@
        "at": "@sanitarios-0.6",
        "x": 360,
        "dur": 1.6
+      },
+      {
+       "at": "@preparado",
+       "x": 1500,
+       "dur": 1.8
       }
      ],
      "entra": "nada"
@@ -845,7 +867,7 @@
      "x": 540,
      "y": 700,
      "scale": 1.0,
-     "at": "@cortada",
+     "at": 0.8,
      "props": {
       "texto": "LÍNEA CORTADA",
       "color": "rojo"
@@ -900,7 +922,7 @@
      "y": 420,
      "size": 110,
      "color": "amarillo",
-     "at": "@900",
+     "at": "@familiar",
      "hud": true
     },
     {
@@ -961,8 +983,8 @@
      "type": "objeto",
      "objeto": "lazo",
      "x": 540,
-     "y": 780,
-     "scale": 0.9,
+     "y": 640,
+     "scale": 0.8,
      "at": 0,
      "props": {},
      "acciones": [],
@@ -979,8 +1001,13 @@
      "cara": "triste",
      "acciones": [
       {
+       "at": "@desarrollo",
+       "mira": "camara"
+      },
+      {
        "at": "@recuerdo",
-       "pose": "manos_juntas"
+       "pose": "manos_juntas",
+       "mira": "abajo"
       }
      ],
      "entra": "nada",
@@ -992,7 +1019,7 @@
      "x": 540,
      "y": 430,
      "size": 62,
-     "color": "tinta",
+     "color": "blanco",
      "at": "@recuerdo",
      "hud": true
     }
@@ -1002,7 +1029,7 @@
  "banda": true,
  "sfx_volume": 0.5,
  "portada": {
-  "t": 9.0,
+  "t": 19.5,
   "titulo": "Accidente de tren en Urda: lo que se sabe",
   "capitulo": null
  },

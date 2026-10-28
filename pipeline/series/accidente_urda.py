@@ -66,8 +66,8 @@ scenes = [
         obj("via", 540, 1080 + 104, 0, 1.0, entra="nada", props={"ancho": 1600}),
         tren(820, 0, "rojo", "iryo"),
         etq("IRYO · PARADO", 760, 720, "@Iryo", "rojo", 0.7, hud=True),
-        tren(-700, "@AVE-0.3", "azul", "ave", acciones=[{"at": "@AVE-0.3", "x": 200, "dur": 1.6}]),
-        etq("AVE · RENFE", 220, 720, "@AVE", "azul", 0.7, hud=True),
+        tren(-700, "@AVE-0.3", "azul", "ave", acciones=[{"at": "@AVE-0.3", "x": 40, "dur": 1.6}]),
+        etq("AVE · RENFE", 150, 720, "@AVE", "azul", 0.7, hud=True),
         rot("8:54", 540, 420, "@8:54", 130, "amarillo"),
         etq("PK 118 · LOS YÉBENES-URDA", 540, 560, "@Madrid-Andalucía", "blanco", 0.6, hud=True),
         sello("CONFIRMADO", "verde", 1500, "@descarrilaron"),
@@ -102,6 +102,7 @@ scenes = [
             acciones=[{"at": "@señales", "props": {"resalta": ["a"]}}, {"at": "@8:36", "props": {"resalta": ["a", "b"]}},
                       {"at": "@responsable", "props": {"resalta": ["a", "b", "c"]}}]),
         sello("DECLARACIÓN", "azul", 1500, "@Puente", out="@responsable"),
+        etq("DEBÍA SEGUIR PARADO", 540, 1330, "@parado", "rojo", 0.7, hud=True, out="@responsable"),
         sello("INVESTIGACIÓN ABIERTA", "naranja", 1500, "@responsable"),
     ]),
     # 5 · EL RESCATE: ambulancia y helicóptero llegan; quién está trabajando
@@ -112,7 +113,7 @@ scenes = [
     ], camara=[plano(0, "general", [540, 1000], 0)],
        elements=[
         obj("helicoptero", 1400, 760, 0, 0.6, entra="nada", acciones=[{"at": 0, "x": 720, "dur": 2.4}]),
-        obj("ambulancia", -500, 1230, "@sanitarios-0.6", 0.6, entra="nada", acciones=[{"at": "@sanitarios-0.6", "x": 360, "dur": 1.6}]),
+        obj("ambulancia", -500, 1230, "@sanitarios-0.6", 0.6, entra="nada", acciones=[{"at": "@sanitarios-0.6", "x": 360, "dur": 1.6}, {"at": "@preparado", "x": 1500, "dur": 1.8}]),
         etq("BOMBEROS", 540, 330, "@bomberos", "rojo", 0.6, hud=True),
         etq("GUARDIA CIVIL", 540, 430, "@Guardia", "verde", 0.6, hud=True),
         etq("UME · 100 MILITARES", 540, 530, "@UME", "amarillo", 0.6, hud=True),
@@ -127,11 +128,11 @@ scenes = [
        elements=[
         obj("via", 540, 1104, 0, 1.0, entra="nada", props={"ancho": 1600}, out="@familiar"),
         tren(640, 0, "azul", "parado", acciones=[]) | {"out": "@familiar"},
-        sello("LÍNEA CORTADA", "rojo", 700, "@cortada", out="@familiar"),
+        sello("LÍNEA CORTADA", "rojo", 700, 0.8, out="@familiar"),
         etq("MADRID — ANDALUCÍA", 540, 520, "@Madrid", "blanco", 0.7, hud=True, out="@familiar"),
         obj("movil", 540, 880, "@familiar", 1.35, hud=True, entra="pop",
             props={"pantalla": "sms", "remite": "FAMILIAS", "lineas": ["RENFE", "900 10 10 20", "ATOCHA 24 H"]}),
-        rot("900 10 10 20", 540, 420, "@900", 110, "amarillo"),
+        rot("900 10 10 20", 540, 420, "@familiar", 110, "amarillo"),
         etq("ATOCHA · ATENCIÓN 24 H", 540, 1290, "@Atocha", "blanco", 0.65, hud=True),
     ]),
     # 7 · CIERRE: Piz, en silencio, junto al lazo
@@ -141,15 +142,15 @@ scenes = [
         S("Nuestro recuerdo, para las víctimas y sus familias.", 0.3),
     ], camara=[plano(0, "general", [540, 980], 0)],
        elements=[
-        obj("lazo", 540, 780, 0, 0.9, hud=True, entra="nada"),
-        quien("piz", 540, 0, 0.55, "triste", y=1500, entra="nada", acciones=[{"at": "@recuerdo", "pose": "manos_juntas"}]),
-        rot("EN RECUERDO DE LAS VÍCTIMAS", 540, 430, "@recuerdo", 62, "tinta"),
+        obj("lazo", 540, 640, 0, 0.8, hud=True, entra="nada"),
+        quien("piz", 540, 0, 0.55, "triste", y=1500, entra="nada", acciones=[{"at": "@desarrollo", "mira": "camara"}, {"at": "@recuerdo", "pose": "manos_juntas", "mira": "abajo"}]),
+        rot("EN RECUERDO DE LAS VÍCTIMAS", 540, 430, "@recuerdo", 62, "blanco"),
     ]),
 ]
 
 if __name__ == "__main__":
     SB = episodio("accidente_urda", "Accidente de tren en Urda: lo que se sabe", scenes,
-                  {"t": 9.0, "titulo": "Accidente de tren en Urda: lo que se sabe", "capitulo": None},
+                  {"t": 19.5, "titulo": "Accidente de tren en Urda: lo que se sabe", "capitulo": None},
                   ["EFE vía RTVC (28/10/2026): colisión a las 8:54 cerca de la estación de Urda, vagones por un terraplén",
                    "El Español (28/10/2026): Adif y Renfe, alcance entre dos trenes entre Los Yébenes y Urda",
                    "Libertad Digital (28/10/2026, directo): PK 118, viajeros 147 + 397, UME, 112 CLM",

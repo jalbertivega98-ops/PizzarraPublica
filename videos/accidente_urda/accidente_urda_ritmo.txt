@@ -1,0 +1,9 @@
+Duración 61.3 s · 66 cambios visuales · uno cada 0.93 s de media · hueco máximo 3.87 s
+⚠ RITMO: 3.0 s sin cambios visuales entre 30.1 y 33.0 s
+⚠ RITMO: 2.5 s sin cambios visuales entre 46.6 y 49.1 s
+⚠ RITMO: 3.9 s sin cambios visuales entre 49.1 y 52.9 s
+⚠ ESCENA larga: «ministro» dura 12.6 s (máx. 9)
+⚠ ESCENA larga: «rescate» dura 9.3 s (máx. 9)
+⚠ ESCENA larga: «ayuda» dura 9.0 s (máx. 9)
+⚠ DURACIÓN: 61.3 s (objetivo 30-45 s)
+⚠ FINAL: la última escena no tiene pregunta ni «síguenos»

@@ -1,0 +1,126 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 5.76,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 3.43,
+    "texto": "Esta mañana, dos trenes de alta velocidad han chocado en Urda, en Toledo."
+   },
+   {
+    "t0": 3.73,
+    "t1": 5.31,
+    "texto": "Esto es lo que se sabe hasta ahora."
+   }
+  ]
+ },
+ {
+  "escena": "que_paso",
+  "inicio": 5.76,
+  "fin": 15.77,
+  "frases": [
+   {
+    "t0": 6.46,
+    "t1": 10.71,
+    "texto": "Eran las 8:54. Un tren de Iryo estaba parado en la línea Madrid-Andalucía."
+   },
+   {
+    "t0": 10.96,
+    "t1": 15.32,
+    "texto": "Un AVE de Renfe lo alcanzó por detrás. Varios vagones descarrilaron y cayeron por un terraplén."
+   }
+  ]
+ },
+ {
+  "escena": "victimas",
+  "inicio": 15.77,
+  "fin": 23.9,
+  "frases": [
+   {
+    "t0": 15.77,
+    "t1": 19.12,
+    "texto": "Hay al menos 64 fallecidos y más de un centenar de heridos."
+   },
+   {
+    "t0": 19.42,
+    "t1": 23.45,
+    "texto": "En los dos trenes viajaban más de 500 personas. Las cifras todavía pueden cambiar."
+   }
+  ]
+ },
+ {
+  "escena": "ministro",
+  "inicio": 23.9,
+  "fin": 36.5,
+  "frases": [
+   {
+    "t0": 24.2,
+    "t1": 28.84,
+    "texto": "El ministro de Transportes, Óscar Puente, ha explicado que falló el sistema de señales de ese tramo."
+   },
+   {
+    "t0": 29.04,
+    "t1": 33.42,
+    "texto": "Y que, aun así, a las 8:36 se autorizó al AVE a seguir, cuando debía quedarse parado."
+   },
+   {
+    "t0": 33.72,
+    "t1": 36.05,
+    "texto": "Quién es el responsable lo decidirá la investigación."
+   }
+  ]
+ },
+ {
+  "escena": "rescate",
+  "inicio": 36.5,
+  "fin": 45.76,
+  "frases": [
+   {
+    "t0": 36.76,
+    "t1": 40.96,
+    "texto": "En la zona trabajan bomberos, sanitarios, Guardia Civil y unos cien militares de la UME."
+   },
+   {
+    "t0": 41.21,
+    "t1": 45.31,
+    "texto": "Y los hospitales de Madrid y de Castilla-La Mancha se han preparado para atender a los heridos."
+   }
+  ]
+ },
+ {
+  "escena": "ayuda",
+  "inicio": 45.76,
+  "fin": 54.81,
+  "frases": [
+   {
+    "t0": 45.76,
+    "t1": 48.09,
+    "texto": "La línea entre Madrid y Andalucía sigue cortada."
+   },
+   {
+    "t0": 48.34,
+    "t1": 54.36,
+    "texto": "Si buscas a un familiar, Renfe atiende en el 900 10 10 20. Y en la estación de Atocha hay un punto de atención."
+   }
+  ]
+ },
+ {
+  "escena": "cierre",
+  "inicio": 54.81,
+  "fin": 61.34,
+  "frases": [
+   {
+    "t0": 55.51,
+    "t1": 57.18,
+    "texto": "La información sigue en desarrollo."
+   },
+   {
+    "t0": 57.53,
+    "t1": 59.99,
+    "texto": "Nuestro recuerdo, para las víctimas y sus familias."
+   }
+  ]
+ }
+]

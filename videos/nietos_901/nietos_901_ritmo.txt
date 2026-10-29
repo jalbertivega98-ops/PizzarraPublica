@@ -1,0 +1,12 @@
+Duración 69.2 s · 72 cambios visuales · uno cada 0.96 s de media · hueco máximo 4.96 s
+⚠ RITMO: 3.7 s sin cambios visuales entre 0.3 y 4.0 s
+⚠ RITMO: 3.1 s sin cambios visuales entre 4.5 y 7.6 s
+⚠ RITMO: 5.0 s sin cambios visuales entre 8.8 y 13.8 s
+⚠ RITMO: 2.9 s sin cambios visuales entre 17.3 y 20.2 s
+⚠ RITMO: 3.4 s sin cambios visuales entre 28.2 y 31.6 s
+⚠ RITMO: 3.2 s sin cambios visuales entre 35.2 y 38.4 s
+⚠ RITMO: 4.0 s sin cambios visuales entre 44.8 y 48.9 s
+⚠ RITMO: 3.8 s sin cambios visuales entre 48.9 y 52.6 s
+⚠ RITMO: 2.6 s sin cambios visuales entre 61.7 y 64.4 s
+⚠ ESCENA larga: «pendiente» dura 16.5 s (máx. 9)
+⚠ DURACIÓN: 69.2 s (objetivo 30-45 s)

@@ -131,8 +131,8 @@
      "type": "personaje",
      "quien": "feijoo",
      "x": 260,
-     "y": 1460,
-     "scale": 0.5,
+     "y": 1560,
+     "scale": 0.7,
      "at": 0.3,
      "cara": "normal",
      "acciones": [
@@ -148,8 +148,8 @@
      "type": "personaje",
      "quien": "abascal",
      "x": 820,
-     "y": 1460,
-     "scale": 0.5,
+     "y": 1560,
+     "scale": 0.7,
      "at": 0.4,
      "cara": "normal",
      "acciones": [
@@ -166,7 +166,7 @@
      "type": "objeto",
      "objeto": "sello",
      "x": 540,
-     "y": 1000,
+     "y": 960,
      "scale": 1.0,
      "at": "@200",
      "props": {
@@ -182,7 +182,7 @@
      "type": "objeto",
      "objeto": "etiqueta",
      "x": 540,
-     "y": 1180,
+     "y": 1110,
      "scale": 0.7,
      "at": "@31",
      "props": {
@@ -516,6 +516,18 @@
     },
     {
      "type": "rotulo",
+     "text": "197",
+     "x": 540,
+     "y": 420,
+     "size": 130,
+     "color": "amarillo",
+     "at": "@197",
+     "golpe": true,
+     "out": "@sobran",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
      "text": "+21",
      "x": 540,
      "y": 420,
@@ -736,6 +748,11 @@
      "at": 0,
      "cara": "pensativo",
      "acciones": [
+      {
+       "at": "@mes",
+       "salta": true,
+       "cara": "sorpresa"
+      },
       {
        "at": "@vuelta",
        "pose": "piensa",

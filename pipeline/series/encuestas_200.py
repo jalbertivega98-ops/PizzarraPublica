@@ -34,10 +34,10 @@ scenes = [
             props={"valor": 197, "desde": 200, "sufijo": " ESCAÑOS", "ancho": 860},
             acciones=[{"at": "@bajan", "tiembla": True}]),
         rot("PP + VOX", 540, 520, 0.2, 110, "amarillo", golpe=True),
-        quien("feijoo", 260, 0.3, 0.5, "normal", y=1460, entra="izq", acciones=[{"at": "@bajan", "cara": "preocupado"}]),
-        quien("abascal", 820, 0.4, 0.5, "normal", y=1460, entra="der", acciones=[{"at": "@bajan", "cara": "serio", "pose": "cruzados"}]),
-        sello("POR DEBAJO DE 200", "rojo", 1000, "@200"),
-        etq("29N · QUEDAN 31 DÍAS", 540, 1180, "@31", "blanco", 0.7, hud=True),
+        quien("feijoo", 260, 0.3, 0.7, "normal", y=1560, entra="izq", acciones=[{"at": "@bajan", "cara": "preocupado"}]),
+        quien("abascal", 820, 0.4, 0.7, "normal", y=1560, entra="der", acciones=[{"at": "@bajan", "cara": "serio", "pose": "cruzados"}]),
+        sello("POR DEBAJO DE 200", "rojo", 960, "@200"),
+        etq("29N · QUEDAN 31 DÍAS", 540, 1110, "@31", "blanco", 0.7, hud=True),
     ]),
     # 2 · LA REGLA: el Congreso y la línea de los 176
     dict(id="regla", fondo="calle", animo="curioso", trans="iris", footnote="Constitución: 350 diputados · mayoría absoluta 176", lines=[
@@ -69,6 +69,7 @@ scenes = [
     ], camara=[plano(0, "general", [540, 950], 0), plano("@colchón", "general", [540, 900], 0.5, zoom=1.08)],
        elements=[
         barras("@Juntos", [("PP + VOX", 197, "pp"), ("MAYORÍA", 176, "gris")]),
+        rot("197", 540, 420, "@197", 130, "amarillo", golpe=True, out="@sobran"),
         rot("+21", 540, 420, "@sobran", 130, "verde", golpe=True, out="@Hace"),
         rot("ANTES: MÁS DE 200", 540, 420, "@Hace", 100, "tinta", golpe=True, out="@colchón"),
         rot("EL COLCHÓN ENCOGE", 540, 420, "@colchón", 80, "rojo", golpe=True),
@@ -95,7 +96,7 @@ scenes = [
        elements=[
         edif("congreso", 540, 0, 0.5, entra="nada"),
         quien("piz", 540, 0, 0.6, "pensativo", y=1500, entra="abajo", acciones=[
-            {"at": "@vuelta", "pose": "piensa", "mira": "camara"}, {"at": "@leo", "cara": "ilusionado", "pose": "senala"},
+            {"at": "@mes", "salta": True, "cara": "sorpresa"}, {"at": "@vuelta", "pose": "piensa", "mira": "camara"}, {"at": "@leo", "cara": "ilusionado", "pose": "senala"},
             {"at": "@sígueme", "pose": "saluda", "cara": "riendo"}]),
         rot("¿SE DA LA VUELTA?", 540, 420, "@vuelta", 96, "amarillo", golpe=True, out="@sígueme-0.3"),
         rot("SÍGUEME", 540, 420, "@sígueme", 110, "amarillo", fx=[{"at": "@datos", "do": "latir"}]),

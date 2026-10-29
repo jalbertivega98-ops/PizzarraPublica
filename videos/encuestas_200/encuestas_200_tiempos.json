@@ -1,0 +1,99 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 7.44,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.37,
+    "texto": "PP y Vox siguen sumando mayoría absoluta."
+   },
+   {
+    "t0": 2.57,
+    "t1": 5.48,
+    "texto": "Pero, por primera vez en meses, bajan de 200 escaños."
+   },
+   {
+    "t0": 5.73,
+    "t1": 6.99,
+    "texto": "Y quedan 31 días."
+   }
+  ]
+ },
+ {
+  "escena": "regla",
+  "inicio": 7.44,
+  "fin": 13.84,
+  "frases": [
+   {
+    "t0": 8.14,
+    "t1": 13.39,
+    "texto": "Recuerda: el Congreso tiene 350 diputados. Para gobernar solo, hacen falta 176."
+   }
+  ]
+ },
+ {
+  "escena": "partidos",
+  "inicio": 13.84,
+  "fin": 24.43,
+  "frases": [
+   {
+    "t0": 14.14,
+    "t1": 18.78,
+    "texto": "La media de tres encuestas: el PP, unos 130 escaños; pierde hasta siete en dos semanas."
+   },
+   {
+    "t0": 18.98,
+    "t1": 23.98,
+    "texto": "El PSOE sube a 108. Vox, 67, rozando el 20 por ciento. Y el Frente Amplio, 14."
+   }
+  ]
+ },
+ {
+  "escena": "bloques",
+  "inicio": 24.43,
+  "fin": 32.7,
+  "frases": [
+   {
+    "t0": 24.69,
+    "t1": 28.71,
+    "texto": "Juntos, PP y Vox suman 197. Les sobran 21 para la mayoría."
+   },
+   {
+    "t0": 28.91,
+    "t1": 32.25,
+    "texto": "Hace dos semanas pasaban de 200. El colchón se está encogiendo."
+   }
+  ]
+ },
+ {
+  "escena": "ojo",
+  "inicio": 32.7,
+  "fin": 37.2,
+  "frases": [
+   {
+    "t0": 32.7,
+    "t1": 36.75,
+    "texto": "Ojo: estas encuestas se hicieron antes del accidente de Urda. Y las encuestas no votan."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 37.2,
+  "fin": 44.96,
+  "frases": [
+   {
+    "t0": 37.9,
+    "t1": 40.39,
+    "texto": "¿Crees que en un mes esto se da la vuelta? Te leo."
+   },
+   {
+    "t0": 40.59,
+    "t1": 43.61,
+    "texto": "Y sígueme: hasta el 29N te cuento cada encuesta con datos."
+   }
+  ]
+ }
+]

@@ -46,7 +46,7 @@ scenes = [
             props={"valor": 163355, "ancho": 840}),
         obj("contador", 540, 720, "@901.", 0.95, hud=True, entra="pop", sfx="golpe", dibujo=0.8,
             props={"valor": 901, "desde": 163355, "ancho": 840, "color": (190, 40, 44)}),
-        quien("piz", 540, 0.3, 0.55, "ilusionado", y=1420, entra="abajo", objeto="pasaporte", pose="sostiene", acciones=[
+        quien("piz", 540, 0.3, 0.8, "ilusionado", y=1520, entra="abajo", objeto="pasaporte", pose="sostiene", acciones=[
             {"at": "@demostrado", "cara": "pensativo", "pose": "piensa", "objeto": None},
             {"at": "@901.", "cara": "susto", "take": True, "pose": "cabeza"}]),
         rot("¿CUÁNTOS?", 540, 450, "@Cuántos", 100, "amarillo", golpe=True, out="@901."),
@@ -58,8 +58,8 @@ scenes = [
         V("La ley de 2022 dio la nacionalidad a hijos y nietos de españoles nacidos fuera, sobre todo en América.", "normal"),
         V("Pero el Supremo, a petición de Vox y de Iustitia Europa, congeló su voto desde el extranjero para el 29N.", "normal", 0.15),
         V("Salvo para quien acredite que su familia se exilió.", "remate", 0.15),
-    ], camara=[zoom(0, ATL, 1.0, 0), zoom("@América", P(R, -60, -5), 1.6, 1.0), zoom("@Supremo", MAD, 3.0, 1.0),
-               zoom("@Salvo", MAD, 2.4, 0.6)],
+    ], camara=[zoom(0, ATL, 1.0, 0), zoom("@América", P(R, -60, -5), 1.6, 1.0), zoom("@Supremo", P(R, -9, 44), 3.2, 1.0),
+               zoom("@Salvo", P(R, -9, 44), 2.6, 0.6)],
        elements=[
         mapa(R, 0, 1.4, acciones=[
             {"at": "@América", "props": {"resalta": ["ARG", "CUB", "MEX"], "lineas": [ruta(i, p) for i, p in RUTAS]}, "sfx": "rotulador"},
@@ -67,7 +67,7 @@ scenes = [
         obj("chincheta", BSAS[0], BSAS[1], "@América", 0.3, props={"diseno": "argentina"}, entra="cae"),
         obj("chincheta", HABANA[0], HABANA[1], "@América+0.2", 0.3, props={"diseno": "cuba"}, entra="cae"),
         obj("chincheta", MEXICO[0], MEXICO[1], "@América+0.4", 0.3, props={"diseno": "mexico"}, entra="cae"),
-        obj("urna", MAD[0] + 40, MAD[1] - 10, "@congeló-0.3", 0.09, entra="crece", sfx="pop",
+        obj("urna", MAD[0] + 40, MAD[1] - 10, "@congeló-0.3", 0.18, entra="crece", sfx="pop",
             props={"llena": 0.3, "texto": "29N"}, acciones=[{"at": "@congeló", "tiembla": True}]),
         sello("VOTO CONGELADO", "rojo", 600, "@congeló", out="@Salvo"),
         sello("CON EXILIO ACREDITADO, SÍ VOTA", "verde", 600, "@exilió"),
@@ -78,9 +78,9 @@ scenes = [
         V("Llegó el 28 de octubre: 163.355 nombres.", "normal", 0.15),
     ], camara=[plano(0, "general", [540, 900], 0), plano("@Llegó", "general", [540, 860], 0.5, zoom=1.08)],
        elements=[
-        quien("jueza", 260, 0, 0.7, "serio", entra="pop", acciones=[{"at": "@exigió", "pose": "senala_arriba"},
+        quien("jueza", 250, 0, 0.85, "serio", y=1500, entra="pop", acciones=[{"at": "@exigió", "pose": "senala_arriba"},
                                                                      {"at": "@multas", "pose": "jarras"}]),
-        obj("documento", 720, 860, "@lista", 0.75, hud=True, id="doc", entra="nada", dibujo=1.0, sfx="papel", props={
+        obj("documento", 700, 860, "@lista", 0.95, hud=True, id="doc", entra="nada", dibujo=1.0, sfx="papel", props={
             "titulo": "LISTA AL SUPREMO", "ancho": 620,
             "articulos": [{"id": "a", "titulo": "NOMBRE Y APELLIDOS", "lineas": ["· · · · · · · ·", "· · · · · · · ·", "· · · · · · · ·"]}]},
             acciones=[{"at": "@Llegó", "props": {"resalta": ["a"]}, "salta": True}]),

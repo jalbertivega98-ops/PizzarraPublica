@@ -1,0 +1,126 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 7.99,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 4.56,
+    "texto": "A las 8:36, desde Atocha, alguien le dijo a un AVE: «reanude con marcha normal»."
+   },
+   {
+    "t0": 4.91,
+    "t1": 7.54,
+    "texto": "Dieciocho minutos después, chocó contra un tren parado."
+   }
+  ]
+ },
+ {
+  "escena": "orden",
+  "inicio": 7.99,
+  "fin": 20.24,
+  "frases": [
+   {
+    "t0": 7.99,
+    "t1": 13.46,
+    "texto": "8:31. Se cae el LZB, el sistema que vigila la distancia entre trenes. Seis trenes se paran."
+   },
+   {
+    "t0": 13.71,
+    "t1": 19.79,
+    "texto": "8:36. Atocha le dice al AVE: desconecta el sistema, vuelve a conectarlo y sigue. «¿Con marcha normal?». «Sí»."
+   }
+  ]
+ },
+ {
+  "escena": "iryo",
+  "inicio": 20.24,
+  "fin": 31.45,
+  "frases": [
+   {
+    "t0": 20.24,
+    "t1": 24.94,
+    "texto": "8:41. Más adelante, el Iryo está parado ante la señal de Urda. Recibe la misma orden."
+   },
+   {
+    "t0": 24.99,
+    "t1": 28.69,
+    "texto": "8:48. La maquinista avisa: no puede reiniciar, sigue parada."
+   },
+   {
+    "t0": 29.04,
+    "t1": 31.0,
+    "texto": "Según los audios, nadie avisó al AVE."
+   }
+  ]
+ },
+ {
+  "escena": "norma",
+  "inicio": 31.45,
+  "fin": 40.6,
+  "frases": [
+   {
+    "t0": 31.75,
+    "t1": 35.98,
+    "texto": "Con el sistema caído, la norma era ir a la vista y a 40 kilómetros por hora como máximo."
+   },
+   {
+    "t0": 36.33,
+    "t1": 40.15,
+    "texto": "A las 8:54 llegó el choque. Hoy ya son 69 los fallecidos."
+   }
+  ]
+ },
+ {
+  "escena": "gobierno",
+  "inicio": 40.6,
+  "fin": 48.31,
+  "frases": [
+   {
+    "t0": 40.86,
+    "t1": 45.44,
+    "texto": "El ministro Óscar Puente lo llama «inexplicable». Comparecerá en el Congreso el 3 de noviembre."
+   },
+   {
+    "t0": 45.64,
+    "t1": 47.86,
+    "texto": "Sánchez promete aclarar hasta el último detalle."
+   }
+  ]
+ },
+ {
+  "escena": "oposicion",
+  "inicio": 48.31,
+  "fin": 58.64,
+  "frases": [
+   {
+    "t0": 48.31,
+    "t1": 53.45,
+    "texto": "Feijóo: las responsabilidades políticas «no son opcionales». Vox se ha querellado por homicidio imprudente."
+   },
+   {
+    "t0": 53.65,
+    "t1": 58.19,
+    "texto": "Y Rufián, socio del Gobierno: una sola persona no puede ser responsable de cientos de vidas."
+   }
+  ]
+ },
+ {
+  "escena": "cierre",
+  "inicio": 58.64,
+  "fin": 67.72,
+  "frases": [
+   {
+    "t0": 59.34,
+    "t1": 62.48,
+    "texto": "Quién falló lo dirá la investigación. España está de luto hasta el sábado."
+   },
+   {
+    "t0": 62.83,
+    "t1": 66.37,
+    "texto": "Síguenos para no perderte lo que se sepa. Nuestro recuerdo, para las víctimas."
+   }
+  ]
+ }
+]

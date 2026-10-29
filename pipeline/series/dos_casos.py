@@ -37,7 +37,7 @@ scenes = [
     ], camara=[plano(0, "general", [540, 960], 0), plano("@hijas", "general", [540, 860], 0.6, zoom=1.1)],
        elements=[
         rot("24 AÑOS", 540, 520, "@24", 150, "amarillo", golpe=True, out="@hijas"),
-        quien("abalos", 540, 0.2, 0.6, "serio", y=1300, entra="abajo", out="@hijas"),
+        quien("abalos", 540, 0.2, 0.9, "serio", y=1400, entra="abajo", out="@hijas"),
         nov("@hijas", [29, 30], {29: "azul", 30: "rojo"}),
         etq("29 · VOTAS", 300, 1260, "@votar-0.4", "azul", 0.7, hud=True),
         etq("30 · AL JUZGADO", 780, 1260, "@votar", "rojo", 0.7, hud=True),
@@ -50,8 +50,8 @@ scenes = [
         V("Koldo García, casi 20 años. Y Aldama, cuatro y medio.", "normal", 0.15),
     ], camara=[plano(0, "general", [540, 900], 0), plano("@Koldo", "general", [540, 900], 0.5)],
        elements=[
-        quien("abalos", 230, 0, 0.55, "serio", y=1450, entra="izq", acciones=[{"at": "@condenó", "cara": "triste", "pose": "caidos"}]),
-        obj("documento", 640, 820, 0.2, 0.85, hud=True, id="doc", entra="nada", dibujo=1.1, sfx="papel", props={
+        quien("abalos", 250, 0, 0.7, "serio", y=1560, entra="izq", acciones=[{"at": "@condenó", "cara": "triste", "pose": "caidos"}]),
+        obj("documento", 540, 760, 0.2, 1.15, hud=True, id="doc", entra="nada", dibujo=1.1, sfx="papel", props={
             "titulo": "SENTENCIA · SUPREMO", "ancho": 700,
             "articulos": [
                 {"id": "a", "titulo": "ÁBALOS · 24 AÑOS Y 3 MESES", "lineas": ["Organización criminal, cohecho,", "tráfico de influencias, malversación"]},
@@ -76,7 +76,7 @@ scenes = [
         quien("piz", 1300, "@entorno-0.4", 0.5, "esceptica", y=1500, entra="nada", acciones=[
             {"at": "@entorno-0.4", "x": 820, "dur": 0.5}, {"at": "@desproporcionada", "pose": "cruzados"},
             {"at": "@Constitucional", "pose": "encoge", "cara": "pensativo"}]),
-        sello("SU DEFENSA", "azul", 1180, "@entorno"),
+        sello("SU DEFENSA", "azul", 1000, "@entorno"),
     ]),
     # 4 · PLUS ULTRA: el avión, el rescate y la empresa de las hijas
     dict(id="plusultra", fondo={"tipo": "plano", "color": AZUL}, animo="curioso", trans="iris", footnote=FZ, lines=[

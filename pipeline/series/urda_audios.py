@@ -82,8 +82,8 @@ scenes = [
        elements=[
         obj("via", 540, 1184, 0, 1.0, entra="nada", props={"ancho": 1600}),
         tren(760, 0, "rojo", "iryo"),
-        tren(-900, "@nadie-1.0", "azul", "ave", acciones=[{"at": "@nadie-1.0", "x": -260, "dur": 2.6}]),
-        etq("AVE 2080 · A 25 KM", 200, 760, "@nadie", "azul", 0.6, hud=True),
+        tren(-900, "@audios", "azul", "ave", acciones=[{"at": "@audios", "x": 60, "dur": 2.0}]),
+        etq("AVE 2080 · A 25 KM", 270, 620, "@AVE", "azul", 0.6, hud=True),
         etq("SEÑAL DE URDA", 900, 900, "@señal", "rojo", 0.6, hud=True),
         etq("IRYO 6076 · PARADO", 700, 760, 0.3, "rojo", 0.7, hud=True),
         hora("8:41", "@8:41", out="@8:48"),

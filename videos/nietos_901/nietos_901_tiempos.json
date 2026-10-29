@@ -1,0 +1,119 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 8.82,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 3.89,
+    "texto": "163.355 nuevos españoles, gracias a la ley de nietos."
+   },
+   {
+    "t0": 4.04,
+    "t1": 7.19,
+    "texto": "¿Cuántos han demostrado que su familia huyó por la guerra o la dictadura?"
+   },
+   {
+    "t0": 7.59,
+    "t1": 8.37,
+    "texto": "901."
+   }
+  ]
+ },
+ {
+  "escena": "contexto",
+  "inicio": 8.82,
+  "fin": 23.23,
+  "frases": [
+   {
+    "t0": 9.14,
+    "t1": 14.28,
+    "texto": "La ley de 2022 dio la nacionalidad a hijos y nietos de españoles nacidos fuera, sobre todo en América."
+   },
+   {
+    "t0": 14.48,
+    "t1": 20.04,
+    "texto": "Pero el Supremo, a petición de Vox y de Iustitia Europa, congeló su voto desde el extranjero para el 29N."
+   },
+   {
+    "t0": 20.24,
+    "t1": 22.78,
+    "texto": "Salvo para quien acredite que su familia se exilió."
+   }
+  ]
+ },
+ {
+  "escena": "lista",
+  "inicio": 23.23,
+  "fin": 32.47,
+  "frases": [
+   {
+    "t0": 23.53,
+    "t1": 28.04,
+    "texto": "El Supremo exigió la lista con nombre y apellidos, con multas de mil euros a dos ministros si no llegaba."
+   },
+   {
+    "t0": 28.24,
+    "t1": 32.02,
+    "texto": "Llegó el 28 de octubre: 163.355 nombres."
+   }
+  ]
+ },
+ {
+  "escena": "dato",
+  "inicio": 32.47,
+  "fin": 44.62,
+  "frases": [
+   {
+    "t0": 32.73,
+    "t1": 37.38,
+    "texto": "De todos ellos, los consulados solo han certificado a 901 como descendientes de exiliados."
+   },
+   {
+    "t0": 37.58,
+    "t1": 44.17,
+    "texto": "Son, por ahora, los únicos con el voto asegurado. Los otros 162.454, de momento, no votan desde fuera."
+   }
+  ]
+ },
+ {
+  "escena": "pendiente",
+  "inicio": 44.62,
+  "fin": 61.11,
+  "frases": [
+   {
+    "t0": 45.32,
+    "t1": 50.61,
+    "texto": "Y queda lo gordo: el Supremo debe decidir si la congelación alcanza también a sus hijos, como piden Vox y Hazte Oír."
+   },
+   {
+    "t0": 50.86,
+    "t1": 57.27,
+    "texto": "Detalle curioso: al principio eran 163.020. Hay 335 nombres más que nadie ha explicado."
+   },
+   {
+    "t0": 57.47,
+    "t1": 60.66,
+    "texto": "El Gobierno calcula que, al final, serían menos de 14.000 votos."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 61.11,
+  "fin": 69.23,
+  "frases": [
+   {
+    "t0": 61.43,
+    "t1": 65.17,
+    "texto": "Si tu abuelo emigró, pero no huyó de la dictadura, ¿deberías poder votar? Te leo."
+   },
+   {
+    "t0": 65.37,
+    "t1": 67.88,
+    "texto": "Y sígueme para no perderte nada antes del 29N."
+   }
+  ]
+ }
+]

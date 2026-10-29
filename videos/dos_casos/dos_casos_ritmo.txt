@@ -1,0 +1,11 @@
+Duración 66.7 s · 75 cambios visuales · uno cada 0.89 s de media · hueco máximo 6.45 s
+⚠ GANCHO: el primer dibujo aparece en 0.20 s (debe estar en el fotograma 0)
+⚠ RITMO: 6.5 s sin cambios visuales entre 9.7 y 16.2 s
+⚠ RITMO: 4.7 s sin cambios visuales entre 27.5 y 32.3 s
+⚠ RITMO: 2.7 s sin cambios visuales entre 32.3 y 35.0 s
+⚠ RITMO: 3.4 s sin cambios visuales entre 37.3 y 40.7 s
+⚠ RITMO: 2.6 s sin cambios visuales entre 44.5 y 47.1 s
+⚠ RITMO: 3.0 s sin cambios visuales entre 50.7 y 53.7 s
+⚠ RITMO: 2.7 s sin cambios visuales entre 54.8 y 57.4 s
+⚠ ESCENA larga: «equilibrio» dura 9.4 s (máx. 9)
+⚠ DURACIÓN: 66.7 s (objetivo 30-45 s)

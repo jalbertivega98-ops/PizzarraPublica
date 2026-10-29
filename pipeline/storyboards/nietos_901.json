@@ -140,8 +140,8 @@
      "type": "personaje",
      "quien": "piz",
      "x": 540,
-     "y": 1420,
-     "scale": 0.55,
+     "y": 1520,
+     "scale": 0.8,
      "at": 0.3,
      "cara": "ilusionado",
      "acciones": [
@@ -241,21 +241,21 @@
      "at": "@Supremo",
      "plano": "general",
      "sobre": [
-      776.7,
-      546.4
+      729.0,
+      514.0
      ],
      "dur": 1.0,
-     "zoom": 3.0
+     "zoom": 3.2
     },
     {
      "at": "@Salvo",
      "plano": "general",
      "sobre": [
-      776.7,
-      546.4
+      729.0,
+      514.0
      ],
      "dur": 0.6,
-     "zoom": 2.4
+     "zoom": 2.6
     }
    ],
    "elements": [
@@ -406,7 +406,7 @@
      "objeto": "urna",
      "x": 816.7,
      "y": 536.4,
-     "scale": 0.09,
+     "scale": 0.18,
      "at": "@congeló-0.3",
      "props": {
       "llena": 0.3,
@@ -505,9 +505,9 @@
     {
      "type": "personaje",
      "quien": "jueza",
-     "x": 260,
-     "y": 1340,
-     "scale": 0.7,
+     "x": 250,
+     "y": 1500,
+     "scale": 0.85,
      "at": 0,
      "cara": "serio",
      "acciones": [
@@ -526,9 +526,9 @@
     {
      "type": "objeto",
      "objeto": "documento",
-     "x": 720,
+     "x": 700,
      "y": 860,
-     "scale": 0.75,
+     "scale": 0.95,
      "at": "@lista",
      "props": {
       "titulo": "LISTA AL SUPREMO",

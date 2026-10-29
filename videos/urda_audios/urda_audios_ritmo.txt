@@ -1,0 +1,12 @@
+Duración 67.7 s · 74 cambios visuales · uno cada 0.92 s de media · hueco máximo 4.10 s
+⚠ RITMO: 2.7 s sin cambios visuales entre 0.3 y 3.0 s
+⚠ RITMO: 4.1 s sin cambios visuales entre 9.6 y 13.7 s
+⚠ RITMO: 2.9 s sin cambios visuales entre 15.6 y 18.5 s
+⚠ RITMO: 3.0 s sin cambios visuales entre 33.6 y 36.6 s
+⚠ RITMO: 2.9 s sin cambios visuales entre 55.7 y 58.6 s
+⚠ RITMO: 2.6 s sin cambios visuales entre 60.2 y 62.8 s
+⚠ ESCENA larga: «iryo» dura 11.2 s (máx. 9)
+⚠ ESCENA larga: «norma» dura 9.2 s (máx. 9)
+⚠ ESCENA larga: «oposicion» dura 10.3 s (máx. 9)
+⚠ ESCENA larga: «cierre» dura 9.1 s (máx. 9)
+⚠ DURACIÓN: 67.7 s (objetivo 30-45 s)

@@ -401,7 +401,7 @@
      "x": -900,
      "y": 1080,
      "scale": 0.8,
-     "at": "@nadie-1.0",
+     "at": "@audios",
      "props": {
       "color": "azul",
       "cara": null,
@@ -409,9 +409,9 @@
      },
      "acciones": [
       {
-       "at": "@nadie-1.0",
-       "x": -260,
-       "dur": 2.6
+       "at": "@audios",
+       "x": 60,
+       "dur": 2.0
       }
      ],
      "id": "ave",
@@ -420,10 +420,10 @@
     {
      "type": "objeto",
      "objeto": "etiqueta",
-     "x": 200,
-     "y": 760,
+     "x": 270,
+     "y": 620,
      "scale": 0.6,
-     "at": "@nadie",
+     "at": "@AVE",
      "props": {
       "texto": "AVE 2080 · A 25 KM",
       "color": "azul"

@@ -97,8 +97,8 @@
      "type": "personaje",
      "quien": "abalos",
      "x": 540,
-     "y": 1300,
-     "scale": 0.6,
+     "y": 1400,
+     "scale": 0.9,
      "at": 0.2,
      "cara": "serio",
      "acciones": [],
@@ -234,9 +234,9 @@
     {
      "type": "personaje",
      "quien": "abalos",
-     "x": 230,
-     "y": 1450,
-     "scale": 0.55,
+     "x": 250,
+     "y": 1560,
+     "scale": 0.7,
      "at": 0,
      "cara": "serio",
      "acciones": [
@@ -252,9 +252,9 @@
     {
      "type": "objeto",
      "objeto": "documento",
-     "x": 640,
-     "y": 820,
-     "scale": 0.85,
+     "x": 540,
+     "y": 760,
+     "scale": 1.15,
      "at": 0.2,
      "props": {
       "titulo": "SENTENCIA · SUPREMO",
@@ -474,7 +474,7 @@
      "type": "objeto",
      "objeto": "sello",
      "x": 540,
-     "y": 1180,
+     "y": 1000,
      "scale": 1.0,
      "at": "@entorno",
      "props": {

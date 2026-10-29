@@ -1,0 +1,796 @@
+{
+ "slug": "encuestas_200",
+ "title": "PP y Vox bajan de 200",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "El Independiente (26/10/2026): media de Sigma Dos, SocioMétrica y El Ateneo del Dato",
+  "Mayoría absoluta del Congreso: 176 de 350 diputados",
+  "Encuestas publicadas antes del accidente de Urda (28/10/2026)"
+ ],
+ "caption": "📉 PP y Vox siguen sumando mayoría… pero bajan de 200 escaños por primera vez en meses\n🔵 PP ~130 (−7 en dos semanas) · 🟢 Vox 67, rozando el 20 %\n🔴 PSOE sube a 108 · Frente Amplio 14\n🏛️ Mayoría absoluta: 176. A PP + Vox les sobran 21\n⚠️ Encuestas hechas antes del accidente de Urda\n💬 ¿Se da la vuelta en un mes? Te leo 👇\n🔔 Sígueme para no perderte nada hasta el 29N · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuente: media de Sigma Dos (El Mundo), SocioMétrica (El Español) y El Ateneo del Dato (eldiario.es), recogida por El Independiente 26/10/2026. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#29N",
+  "#encuestas",
+  "#elecciones",
+  "#PP",
+  "#PSOE",
+  "#Vox",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "tension",
+   "footnote": "Media de Sigma Dos, SocioMétrica y El Ateneo del Dato · El Independiente 26/10/2026",
+   "lines": [
+    {
+     "text": "PP y Vox siguen sumando mayoría absoluta.",
+     "tono": "energia"
+    },
+    {
+     "text": "Pero, por primera vez en meses, bajan de 200 escaños.",
+     "tono": "remate",
+     "pausa": 0.15
+    },
+    {
+     "text": "Y quedan 31 días.",
+     "tono": "intriga",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@primera",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@31",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 760,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "valor": 197,
+      "desde": 200,
+      "sufijo": " ESCAÑOS",
+      "ancho": 860
+     },
+     "acciones": [
+      {
+       "at": "@bajan",
+       "tiembla": true
+      }
+     ],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "dibujo": 2.0
+    },
+    {
+     "type": "rotulo",
+     "text": "PP + VOX",
+     "x": 540,
+     "y": 520,
+     "size": 110,
+     "color": "amarillo",
+     "at": 0.2,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 260,
+     "y": 1460,
+     "scale": 0.5,
+     "at": 0.3,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@bajan",
+       "cara": "preocupado"
+      }
+     ],
+     "entra": "izq",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 820,
+     "y": 1460,
+     "scale": 0.5,
+     "at": 0.4,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@bajan",
+       "cara": "serio",
+       "pose": "cruzados"
+      }
+     ],
+     "entra": "der",
+     "id": "abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1000,
+     "scale": 1.0,
+     "at": "@200",
+     "props": {
+      "texto": "POR DEBAJO DE 200",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1180,
+     "scale": 0.7,
+     "at": "@31",
+     "props": {
+      "texto": "29N · QUEDAN 31 DÍAS",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "regla",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "iris",
+   "footnote": "Constitución: 350 diputados · mayoría absoluta 176",
+   "lines": [
+    {
+     "text": "Recuerda: el Congreso tiene 350 diputados. Para gobernar solo, hacen falta 176.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@176",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "pop",
+     "dibuja": 0.8
+    },
+    {
+     "type": "rotulo",
+     "text": "350 ESCAÑOS",
+     "x": 540,
+     "y": 420,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@350",
+     "golpe": true,
+     "out": "@176",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "MAYORÍA: 176",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@176",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 860,
+     "y": 1560,
+     "scale": 0.45,
+     "at": 0.2,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@176",
+       "pose": "senala_arriba",
+       "cara": "idea"
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "partidos",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Media de Sigma Dos, SocioMétrica y El Ateneo del Dato · El Independiente 26/10/2026",
+   "lines": [
+    {
+     "text": "La media de tres encuestas: el PP, unos 130 escaños; pierde hasta siete en dos semanas.",
+     "tono": "normal"
+    },
+    {
+     "text": "El PSOE sube a 108. Vox, 67, rozando el 20 por ciento. Y el Frente Amplio, 14.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@PSOE",
+     "plano": "general",
+     "sobre": [
+      540,
+      920
+     ],
+     "dur": 0.4,
+     "zoom": 1.04
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 1000,
+     "scale": 1.15,
+     "at": "@PP",
+     "props": {
+      "sufijo": "",
+      "decimales": 0,
+      "tope": 150,
+      "barras": [
+       {
+        "texto": "PP",
+        "valor": 130,
+        "color": "pp"
+       },
+       {
+        "texto": "PSOE",
+        "valor": 108,
+        "color": "psoe"
+       },
+       {
+        "texto": "VOX",
+        "valor": 67,
+        "color": "vox"
+       },
+       {
+        "texto": "F. AMPLIO",
+        "valor": 14,
+        "color": "gris"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 1.4
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 420,
+     "scale": 0.75,
+     "at": "@siete",
+     "props": {
+      "texto": "PP: −7",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 420,
+     "scale": 0.75,
+     "at": "@sube",
+     "props": {
+      "texto": "PSOE: SUBE",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 540,
+     "scale": 0.75,
+     "at": "@rozando",
+     "props": {
+      "texto": "VOX ≈ 20 %",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1250,
+     "y": 1660,
+     "scale": 0.4,
+     "at": "@Vox-0.5",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Vox-0.5",
+       "x": 930,
+       "dur": 0.5
+      },
+      {
+       "at": "@20",
+       "cara": "sorpresa",
+       "take": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "bloques",
+   "fondo": {
+    "tipo": "plano",
+    "color": "amarillo"
+   },
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "Media de Sigma Dos, SocioMétrica y El Ateneo del Dato · El Independiente 26/10/2026",
+   "lines": [
+    {
+     "text": "Juntos, PP y Vox suman 197. Les sobran 21 para la mayoría.",
+     "tono": "normal"
+    },
+    {
+     "text": "Hace dos semanas pasaban de 200. El colchón se está encogiendo.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@colchón",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 1000,
+     "scale": 1.15,
+     "at": "@Juntos",
+     "props": {
+      "sufijo": "",
+      "decimales": 0,
+      "tope": 210,
+      "barras": [
+       {
+        "texto": "PP + VOX",
+        "valor": 197,
+        "color": "pp"
+       },
+       {
+        "texto": "MAYORÍA",
+        "valor": 176,
+        "color": "gris"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 1.4
+    },
+    {
+     "type": "rotulo",
+     "text": "+21",
+     "x": 540,
+     "y": 420,
+     "size": 130,
+     "color": "verde",
+     "at": "@sobran",
+     "golpe": true,
+     "out": "@Hace",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "ANTES: MÁS DE 200",
+     "x": 540,
+     "y": 420,
+     "size": 100,
+     "color": "tinta",
+     "at": "@Hace",
+     "golpe": true,
+     "out": "@colchón",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "EL COLCHÓN ENCOGE",
+     "x": 540,
+     "y": 420,
+     "size": 80,
+     "color": "rojo",
+     "at": "@colchón",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1250,
+     "y": 1660,
+     "scale": 0.45,
+     "at": "@colchón-0.5",
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": "@colchón-0.5",
+       "x": 900,
+       "dur": 0.5
+      },
+      {
+       "at": "@encogiendo",
+       "pose": "encoge",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "hud": true,
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "ojo",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "corte",
+   "footnote": "Encuestas publicadas el 26/10/2026, antes del accidente de Urda (28/10)",
+   "lines": [
+    {
+     "text": "Ojo: estas encuestas se hicieron antes del accidente de Urda. Y las encuestas no votan.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 820,
+     "scale": 0.8,
+     "at": 0,
+     "props": {
+      "mes": "OCTUBRE",
+      "inicio": 3,
+      "dias": 31,
+      "marcados": [
+       26,
+       28
+      ],
+      "colores": {
+       "26": "azul",
+       "28": "rojo"
+      }
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 1260,
+     "scale": 0.65,
+     "at": "@encuestas",
+     "props": {
+      "texto": "26 · ENCUESTAS",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 1260,
+     "scale": 0.65,
+     "at": "@Urda",
+     "props": {
+      "texto": "28 · URDA",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1420,
+     "scale": 1.0,
+     "at": "@votan",
+     "props": {
+      "texto": "LAS ENCUESTAS NO VOTAN",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Crees que en un mes esto se da la vuelta? Te leo.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y sígueme: hasta el 29N te cuento cada encuesta con datos.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sígueme",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@vuelta",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@sígueme",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿SE DA LA VUELTA?",
+     "x": 540,
+     "y": 420,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@vuelta",
+     "golpe": true,
+     "out": "@sígueme-0.3",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUEME",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sígueme",
+     "fx": [
+      {
+       "at": "@datos",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.2,
+  "titulo": "PP y Vox bajan de 200 escaños",
+  "capitulo": null
+ }
+}

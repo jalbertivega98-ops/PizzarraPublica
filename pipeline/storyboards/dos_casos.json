@@ -1,0 +1,1064 @@
+{
+ "slug": "dos_casos",
+ "title": "Una condena y una citación",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Ara (22/06/2026) y El Independiente (22/06/2026): sentencia del Supremo del caso mascarillas",
+  "Poder Judicial (18/06/2026): el juez del caso Plus Ultra acuerda investigar a las hijas de Zapatero",
+  "Euronews (21/09/2026): declaran como investigadas el 30 de noviembre; defensa de Zapatero",
+  "Vozpópuli (19/06/2026): pagos de Análisis Relevante a Whathefav y a Zapatero",
+  "El Independiente (29/10/2026, titular): los peritos tasan en un millón las joyas de Zapatero",
+  "Diario de Avisos (24/10/2026): candidata de Vox por Murcia investigada",
+  "Personajes dibujados como pizarras, sin caricatura; las hijas no se dibujan"
+ ],
+ "caption": "⚖️ Una condena y una citación antes del 29N\n🔒 Ábalos: 24 años y 3 meses, firme (caso mascarillas)\n💶 Según la sentencia, 10.000 € al mes durante 34 meses\n✈️ Plus Ultra: las hijas de Zapatero, investigadas, declaran el 30/11… el día después de votar\n🗣️ Zapatero: «trabajos de marketing»\n🟢 Vox también lleva una candidata investigada en Murcia · investigado ≠ culpable\n💬 ¿Te influyen en tu voto? Te leo 👇\n🔔 Sígueme para no perderte nada antes del 29N · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Supremo (Ara y El Independiente 22/06/2026) · CGPJ 18/06/2026 · Euronews 21/09/2026 · Vozpópuli 19/06/2026 · El Independiente 29/10/2026 · Diario de Avisos 24/10/2026. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#Abalos",
+  "#Zapatero",
+  "#PlusUltra",
+  "#29N",
+  "#elecciones",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "tension",
+   "footnote": "Tribunal Supremo, sentencia 22/06/2026 · Ara y El Independiente 22/06/2026 · Audiencia Nacional (CGPJ 18/06/2026) · Euronews 21/09/2026 · Vozpópuli 19/06/2026",
+   "lines": [
+    {
+     "text": "Un exministro de Sánchez ya tiene condena firme: 24 años de cárcel.",
+     "tono": "energia"
+    },
+    {
+     "text": "Y las hijas de Zapatero declaran ante el juez… el día después de votar.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@hijas",
+     "plano": "general",
+     "sobre": [
+      540,
+      860
+     ],
+     "dur": 0.6,
+     "zoom": 1.1
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "24 AÑOS",
+     "x": 540,
+     "y": 520,
+     "size": 150,
+     "color": "amarillo",
+     "at": "@24",
+     "golpe": true,
+     "out": "@hijas",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "abalos",
+     "x": 540,
+     "y": 1300,
+     "scale": 0.6,
+     "at": 0.2,
+     "cara": "serio",
+     "acciones": [],
+     "entra": "abajo",
+     "out": "@hijas",
+     "id": "abalos"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 800,
+     "scale": 0.8,
+     "at": "@hijas",
+     "props": {
+      "mes": "NOVIEMBRE",
+      "inicio": 6,
+      "dias": 30,
+      "marcados": [
+       29,
+       30
+      ],
+      "colores": {
+       "29": "azul",
+       "30": "rojo"
+      }
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 1260,
+     "scale": 0.7,
+     "at": "@votar-0.4",
+     "props": {
+      "texto": "29 · VOTAS",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 1260,
+     "scale": 0.7,
+     "at": "@votar",
+     "props": {
+      "texto": "30 · AL JUZGADO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1420,
+     "scale": 1.0,
+     "at": "@votar+0.3",
+     "props": {
+      "texto": "CASO PLUS ULTRA",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "abalos",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     110,
+     40,
+     52
+    ]
+   },
+   "animo": "tension",
+   "trans": "papel",
+   "footnote": "Tribunal Supremo, sentencia 22/06/2026 · Ara y El Independiente 22/06/2026",
+   "lines": [
+    {
+     "text": "Caso mascarillas. El Supremo, por unanimidad, condenó a José Luis Ábalos a 24 años y 3 meses.",
+     "tono": "normal"
+    },
+    {
+     "text": "Organización criminal, cohecho, tráfico de influencias y malversación.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Koldo García, casi 20 años. Y Aldama, cuatro y medio.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Koldo",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "abalos",
+     "x": 230,
+     "y": 1450,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@condenó",
+       "cara": "triste",
+       "pose": "caidos"
+      }
+     ],
+     "entra": "izq",
+     "id": "abalos"
+    },
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 640,
+     "y": 820,
+     "scale": 0.85,
+     "at": 0.2,
+     "props": {
+      "titulo": "SENTENCIA · SUPREMO",
+      "ancho": 700,
+      "articulos": [
+       {
+        "id": "a",
+        "titulo": "ÁBALOS · 24 AÑOS Y 3 MESES",
+        "lineas": [
+         "Organización criminal, cohecho,",
+         "tráfico de influencias, malversación"
+        ]
+       },
+       {
+        "id": "b",
+        "titulo": "KOLDO · 19 AÑOS Y 8 MESES",
+        "lineas": []
+       },
+       {
+        "id": "c",
+        "titulo": "ALDAMA · 4 AÑOS Y MEDIO",
+        "lineas": []
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@condenó",
+       "props": {
+        "resalta": [
+         "a"
+        ]
+       }
+      },
+      {
+       "at": "@Koldo",
+       "props": {
+        "resalta": [
+         "a",
+         "b"
+        ]
+       }
+      },
+      {
+       "at": "@Aldama",
+       "props": {
+        "resalta": [
+         "a",
+         "b",
+         "c"
+        ]
+       }
+      }
+     ],
+     "hud": true,
+     "id": "doc",
+     "entra": "nada",
+     "dibujo": 1.1,
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.0,
+     "at": "@unanimidad",
+     "props": {
+      "texto": "FIRME",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "dinero",
+   "fondo": {
+    "tipo": "plano",
+    "color": "amarillo"
+   },
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "Tribunal Supremo, sentencia 22/06/2026 · Ara y El Independiente 22/06/2026",
+   "lines": [
+    {
+     "text": "Según la sentencia, cobraba 10.000 euros al mes. Durante 34 meses.",
+     "tono": "normal"
+    },
+    {
+     "text": "Su entorno la llama «desproporcionada» y estudia ir al Constitucional.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@34",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 600,
+     "scale": 0.9,
+     "at": "@10.000",
+     "props": {
+      "valor": 10000,
+      "sufijo": " €/MES",
+      "ancho": 820
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "dibujo": 1.0,
+     "out": "@34"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 600,
+     "scale": 0.9,
+     "at": "@34",
+     "props": {
+      "valor": 340000,
+      "sufijo": " €",
+      "ancho": 820,
+      "color": [
+       190,
+       40,
+       44
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "dibujo": 1.4
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 780,
+     "scale": 0.8,
+     "at": "@34",
+     "props": {
+      "texto": "× 34 MESES",
+      "color": "tinta"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "efecto",
+     "efecto": "lluvia",
+     "objeto": "billete",
+     "n": 12,
+     "x0": 150,
+     "x1": 930,
+     "at": "@mes",
+     "vida": 1.8
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1300,
+     "y": 1500,
+     "scale": 0.5,
+     "at": "@entorno-0.4",
+     "cara": "esceptica",
+     "acciones": [
+      {
+       "at": "@entorno-0.4",
+       "x": 820,
+       "dur": 0.5
+      },
+      {
+       "at": "@desproporcionada",
+       "pose": "cruzados"
+      },
+      {
+       "at": "@Constitucional",
+       "pose": "encoge",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1180,
+     "scale": 1.0,
+     "at": "@entorno",
+     "props": {
+      "texto": "SU DEFENSA",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "plusultra",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "iris",
+   "footnote": "Audiencia Nacional (CGPJ 18/06/2026) · Euronews 21/09/2026 · Vozpópuli 19/06/2026",
+   "lines": [
+    {
+     "text": "Segundo caso. En 2021, el Gobierno rescató a la aerolínea Plus Ultra con 53 millones de euros.",
+     "tono": "normal"
+    },
+    {
+     "text": "El juez investiga a las hijas de Zapatero por presunto blanqueo.",
+     "tono": "normal",
+     "pausa": 0.15
+    },
+    {
+     "text": "Su empresa cobró casi 240.000 euros de una consultora que, a su vez, pagó a Zapatero casi medio millón.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@hijas",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@empresa",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "avion",
+     "x": -300,
+     "y": 700,
+     "scale": 0.8,
+     "at": 0,
+     "props": {},
+     "acciones": [
+      {
+       "at": 0.1,
+       "x": 540,
+       "dur": 1.6
+      }
+     ],
+     "entra": "nada",
+     "out": "@hijas"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 980,
+     "scale": 0.85,
+     "at": "@53",
+     "props": {
+      "texto": "RESCATE · 53 M€",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@hijas"
+    },
+    {
+     "type": "objeto",
+     "objeto": "pergamino",
+     "x": 540,
+     "y": 800,
+     "scale": 0.62,
+     "at": "@hijas",
+     "props": {
+      "titulo": "AUDIENCIA NACIONAL",
+      "fecha": "Caso Plus Ultra",
+      "lineas": [
+       "Laura y Alba",
+       "Rodríguez Espinosa:",
+       "investigadas"
+      ]
+     },
+     "acciones": [],
+     "entra": "abajo",
+     "sfx": "papel",
+     "out": "@empresa"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1300,
+     "scale": 1.0,
+     "at": "@blanqueo",
+     "props": {
+      "texto": "PRESUNTO BLANQUEO",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@empresa"
+    },
+    {
+     "type": "objeto",
+     "objeto": "flecha",
+     "x": 540,
+     "y": 820,
+     "scale": 0.8,
+     "at": "@empresa",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 640,
+     "scale": 0.7,
+     "at": "@empresa",
+     "props": {
+      "texto": "CONSULTORA → HIJAS · 239.755 €",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1000,
+     "scale": 0.7,
+     "at": "@pagó",
+     "props": {
+      "texto": "CONSULTORA → ZAPATERO · 490.780 €",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "zapatero",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     110,
+     40,
+     52
+    ]
+   },
+   "animo": "curioso",
+   "trans": "corte",
+   "footnote": "Euronews 21/09/2026 · El Independiente 29/10/2026",
+   "lines": [
+    {
+     "text": "Zapatero defiende que eran trabajos de marketing de sus hijas.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y hoy se ha publicado que los peritos tasan en un millón de euros las joyas de su despacho.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@peritos",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "zapatero",
+     "x": 330,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@marketing",
+       "pose": "manos_juntas"
+      },
+      {
+       "at": "@joyas",
+       "cara": "serio"
+      }
+     ],
+     "entra": "izq",
+     "id": "zapatero"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 700,
+     "y": 560,
+     "scale": 0.72,
+     "at": "@defiende",
+     "props": {
+      "lineas": [
+       "ZAPATERO:",
+       "trabajos de",
+       "marketing"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@peritos"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.0,
+     "at": "@defiende",
+     "props": {
+      "texto": "SU DEFENSA",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@peritos"
+    },
+    {
+     "type": "objeto",
+     "objeto": "corona",
+     "x": 760,
+     "y": 760,
+     "scale": 0.5,
+     "at": "@joyas-0.3",
+     "props": {},
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "estrellitas"
+    },
+    {
+     "type": "rotulo",
+     "text": "1.000.000 €",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@millón",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.0,
+     "at": "@peritos",
+     "props": {
+      "texto": "SEGÚN LA PRENSA",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "equilibrio",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Diario de Avisos 24/10/2026",
+   "lines": [
+    {
+     "text": "Ojo, no es cosa de un solo partido: Vox lleva en sus listas por Murcia a una candidata investigada por presunta falsedad documental.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y recuerda: investigado no es culpable.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 850,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@investigada",
+       "cara": "serio"
+      }
+     ],
+     "id": "p3",
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 230,
+     "y": 1350,
+     "scale": 0.46,
+     "at": 0,
+     "props": {
+      "texto": "PSOE",
+      "color": "psoe"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 540,
+     "y": 1350,
+     "scale": 0.46,
+     "at": 0.15,
+     "props": {
+      "texto": "PP",
+      "color": "pp"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 850,
+     "y": 1350,
+     "scale": 0.46,
+     "at": 0.3,
+     "props": {
+      "texto": "VOX",
+      "color": "vox"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 460,
+     "scale": 0.7,
+     "at": "@Murcia",
+     "props": {
+      "texto": "VOX · N.º 6 POR MURCIA",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@recuerda"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 600,
+     "scale": 1.0,
+     "at": "@recuerda",
+     "props": {
+      "texto": "INVESTIGADO ≠ CULPABLE",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Te influyen estos casos en tu voto? Te leo.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y sígueme para no perderte nada antes del 29N.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sígueme",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "urna",
+     "x": 820,
+     "y": 1200,
+     "scale": 0.6,
+     "at": 0,
+     "props": {
+      "llena": 0.5,
+      "texto": "29N"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 420,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@influyen",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@voto",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@sígueme",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿TE INFLUYE?",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@influyen",
+     "golpe": true,
+     "out": "@sígueme-0.3",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUEME",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sígueme",
+     "fx": [
+      {
+       "at": "@29N",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 5.2,
+  "titulo": "Ábalos condenado y las hijas de Zapatero, al juez",
+  "capitulo": null
+ }
+}

@@ -1,0 +1,1106 @@
+{
+ "slug": "nietos_901",
+ "title": "901 de 163.355",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Infobae (28/10/2026): Exteriores confirma que solo 901 personas certifican su condición de descendiente exiliado",
+  "Estrella Digital (29/10/2026): la lista de 163.355 nombres llega al Supremo; decisiones pendientes",
+  "Tribunal Supremo, Sala 3ª: suspensión cautelar (10/09/2026) confirmada el 12/10/2026",
+  "Ley 20/2022 de Memoria Democrática, disposición adicional 8ª (BOE)",
+  "Mapas dibujados sobre contornos de Natural Earth (dominio público)"
+ ],
+ "caption": "🌎 Ley de nietos: 163.355 nuevos españoles… y solo 901 han acreditado exilio\n⚖️ El Supremo congeló su voto desde el extranjero para el 29N (lo pidieron Vox e Iustitia Europa)\n📜 El Gobierno entregó la lista con nombres y apellidos, bajo amenaza de multa\n✅ 901 con voto asegurado · ❌ 162.454 sin voto desde fuera, de momento\n❓ Pendiente: ¿también sus hijos? Y 335 nombres de más sin explicar\n💬 ¿Deberían poder votar? Te leo 👇\n🔔 Sígueme para no perderte nada antes del 29N · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Infobae 28/10/2026 · Estrella Digital 29/10/2026 · Tribunal Supremo (autos 10/09 y 12/10/2026) · Ley 20/2022 (BOE). ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#leydenietos",
+  "#29N",
+  "#elecciones",
+  "#Supremo",
+  "#Argentina",
+  "#Cuba",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "tension",
+   "footnote": "Abogacía del Estado y Exteriores · Infobae 28/10/2026 · Estrella Digital 29/10/2026",
+   "lines": [
+    {
+     "text": "163.355 nuevos españoles, gracias a la ley de nietos.",
+     "tono": "energia"
+    },
+    {
+     "text": "¿Cuántos han demostrado que su familia huyó por la guerra o la dictadura?",
+     "tono": "intriga",
+     "pausa": 0.1
+    },
+    {
+     "text": "901.",
+     "tono": "remate",
+     "pausa": 0.35
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@demostrado",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.6,
+     "zoom": 1.06
+    },
+    {
+     "at": "@901.",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.3,
+     "zoom": 1.12
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 720,
+     "scale": 0.95,
+     "at": 0,
+     "props": {
+      "valor": 163355,
+      "ancho": 840
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@901.",
+     "dibujo": 1.6
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 720,
+     "scale": 0.95,
+     "at": "@901.",
+     "props": {
+      "valor": 901,
+      "desde": 163355,
+      "ancho": 840,
+      "color": [
+       190,
+       40,
+       44
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "dibujo": 0.8
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1420,
+     "scale": 0.55,
+     "at": 0.3,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@demostrado",
+       "cara": "pensativo",
+       "pose": "piensa",
+       "objeto": null
+      },
+      {
+       "at": "@901.",
+       "cara": "susto",
+       "take": true,
+       "pose": "cabeza"
+      }
+     ],
+     "entra": "abajo",
+     "objeto": "pasaporte",
+     "pose": "sostiene",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿CUÁNTOS?",
+     "x": 540,
+     "y": 450,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@Cuántos",
+     "golpe": true,
+     "out": "@901.",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SOLO EL 0,5 %",
+     "x": 540,
+     "y": 450,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@901.+0.4",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "contexto",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "curioso",
+   "trans": "zoom",
+   "footnote": "Ley 20/2022 · Tribunal Supremo, Sala 3ª (10/09 y 12/10/2026)",
+   "lines": [
+    {
+     "text": "La ley de 2022 dio la nacionalidad a hijos y nietos de españoles nacidos fuera, sobre todo en América.",
+     "tono": "normal"
+    },
+    {
+     "text": "Pero el Supremo, a petición de Vox y de Iustitia Europa, congeló su voto desde el extranjero para el 29N.",
+     "tono": "normal",
+     "pausa": 0.15
+    },
+    {
+     "text": "Salvo para quien acredite que su familia se exilió.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      450.0,
+      838.0
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@América",
+     "plano": "general",
+     "sobre": [
+      270.0,
+      955.0
+     ],
+     "dur": 1.0,
+     "zoom": 1.6
+    },
+    {
+     "at": "@Supremo",
+     "plano": "general",
+     "sobre": [
+      776.7,
+      546.4
+     ],
+     "dur": 1.0,
+     "zoom": 3.0
+    },
+    {
+     "at": "@Salvo",
+     "plano": "general",
+     "sobre": [
+      776.7,
+      546.4
+     ],
+     "dur": 0.6,
+     "zoom": 2.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "mundo"
+     },
+     "acciones": [
+      {
+       "at": "@América",
+       "props": {
+        "resalta": [
+         "ARG",
+         "CUB",
+         "MEX"
+        ],
+        "lineas": [
+         {
+          "id": "arg",
+          "puntos": [
+           [
+            -58.4,
+            -34.6
+           ],
+           [
+            -31.05,
+            11.899999999999999
+           ],
+           [
+            -3.7,
+            40.4
+           ]
+          ],
+          "color": "rojo",
+          "dur": 1.1,
+          "discontinua": true,
+          "ancho": 6
+         },
+         {
+          "id": "cub",
+          "puntos": [
+           [
+            -82.4,
+            23.1
+           ],
+           [
+            -43.050000000000004,
+            40.75
+           ],
+           [
+            -3.7,
+            40.4
+           ]
+          ],
+          "color": "rojo",
+          "dur": 1.1,
+          "discontinua": true,
+          "ancho": 6
+         },
+         {
+          "id": "mex",
+          "puntos": [
+           [
+            -99.1,
+            19.4
+           ],
+           [
+            -51.4,
+            38.9
+           ],
+           [
+            -3.7,
+            40.4
+           ]
+          ],
+          "color": "rojo",
+          "dur": 1.1,
+          "discontinua": true,
+          "ancho": 6
+         }
+        ]
+       },
+       "sfx": "rotulador"
+      },
+      {
+       "at": "@Supremo",
+       "props": {
+        "resalta": [
+         "ESP",
+         "ARG",
+         "CUB",
+         "MEX"
+        ]
+       }
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.4
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 284.4,
+     "y": 1221.4,
+     "scale": 0.3,
+     "at": "@América",
+     "props": {
+      "diseno": "argentina"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 68.4,
+     "y": 702.1,
+     "scale": 0.3,
+     "at": "@América+0.2",
+     "props": {
+      "diseno": "cuba"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": -81.9,
+     "y": 735.4,
+     "scale": 0.3,
+     "at": "@América+0.4",
+     "props": {
+      "diseno": "mexico"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "urna",
+     "x": 816.7,
+     "y": 536.4,
+     "scale": 0.09,
+     "at": "@congeló-0.3",
+     "props": {
+      "llena": 0.3,
+      "texto": "29N"
+     },
+     "acciones": [
+      {
+       "at": "@congeló",
+       "tiembla": true
+      }
+     ],
+     "entra": "crece",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 600,
+     "scale": 1.0,
+     "at": "@congeló",
+     "props": {
+      "texto": "VOTO CONGELADO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@Salvo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 600,
+     "scale": 1.0,
+     "at": "@exilió",
+     "props": {
+      "texto": "CON EXILIO ACREDITADO, SÍ VOTA",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "lista",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     110,
+     40,
+     52
+    ]
+   },
+   "animo": "tension",
+   "trans": "papel",
+   "footnote": "Abogacía del Estado y Exteriores · Infobae 28/10/2026 · Estrella Digital 29/10/2026",
+   "lines": [
+    {
+     "text": "El Supremo exigió la lista con nombre y apellidos, con multas de mil euros a dos ministros si no llegaba.",
+     "tono": "normal"
+    },
+    {
+     "text": "Llegó el 28 de octubre: 163.355 nombres.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Llegó",
+     "plano": "general",
+     "sobre": [
+      540,
+      860
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "jueza",
+     "x": 260,
+     "y": 1340,
+     "scale": 0.7,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@exigió",
+       "pose": "senala_arriba"
+      },
+      {
+       "at": "@multas",
+       "pose": "jarras"
+      }
+     ],
+     "entra": "pop",
+     "id": "jueza"
+    },
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 720,
+     "y": 860,
+     "scale": 0.75,
+     "at": "@lista",
+     "props": {
+      "titulo": "LISTA AL SUPREMO",
+      "ancho": 620,
+      "articulos": [
+       {
+        "id": "a",
+        "titulo": "NOMBRE Y APELLIDOS",
+        "lineas": [
+         "· · · · · · · ·",
+         "· · · · · · · ·",
+         "· · · · · · · ·"
+        ]
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@Llegó",
+       "props": {
+        "resalta": [
+         "a"
+        ]
+       },
+       "salta": true
+      }
+     ],
+     "hud": true,
+     "id": "doc",
+     "entra": "nada",
+     "dibujo": 1.0,
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 420,
+     "scale": 0.75,
+     "at": "@multas",
+     "props": {
+      "texto": "MULTA: 1.000 €",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@Llegó"
+    },
+    {
+     "type": "rotulo",
+     "text": "163.355 NOMBRES",
+     "x": 540,
+     "y": 420,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@nombres",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "dato",
+   "fondo": {
+    "tipo": "plano",
+    "color": "amarillo"
+   },
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "Abogacía del Estado y Exteriores · Infobae 28/10/2026 · Estrella Digital 29/10/2026",
+   "lines": [
+    {
+     "text": "De todos ellos, los consulados solo han certificado a 901 como descendientes de exiliados.",
+     "tono": "normal"
+    },
+    {
+     "text": "Son, por ahora, los únicos con el voto asegurado. Los otros 162.454, de momento, no votan desde fuera.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@162.454",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 960,
+     "scale": 1.15,
+     "at": "@certificado",
+     "props": {
+      "sufijo": "",
+      "decimales": 0,
+      "tope": 170000,
+      "resalta": [
+       0
+      ],
+      "barras": [
+       {
+        "texto": "CERTIFICADOS",
+        "valor": 901,
+        "color": "verde"
+       },
+       {
+        "texto": "SIN CERTIFICAR",
+        "valor": 162454,
+        "color": "rojo"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 1.4
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1300,
+     "y": 1660,
+     "scale": 0.45,
+     "at": "@únicos",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@únicos",
+       "x": 930,
+       "dur": 0.5
+      },
+      {
+       "at": "@162.454",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@momento",
+       "pose": "encoge",
+       "cara": "confundido",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "hud": true,
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "901",
+     "x": 540,
+     "y": 420,
+     "size": 130,
+     "color": "verde",
+     "at": "@901",
+     "golpe": true,
+     "out": "@162.454",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "162.454 SIN VOTO",
+     "x": 540,
+     "y": 420,
+     "size": 90,
+     "color": "rojo",
+     "at": "@162.454",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "pendiente",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "iris",
+   "footnote": "Estrella Digital 29/10/2026 · Infobae 28/10/2026 (estimación del Gobierno)",
+   "lines": [
+    {
+     "text": "Y queda lo gordo: el Supremo debe decidir si la congelación alcanza también a sus hijos, como piden Vox y Hazte Oír.",
+     "tono": "normal"
+    },
+    {
+     "text": "Detalle curioso: al principio eran 163.020. Hay 335 nombres más que nadie ha explicado.",
+     "tono": "intriga",
+     "pausa": 0.2
+    },
+    {
+     "text": "El Gobierno calcula que, al final, serían menos de 14.000 votos.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@335",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@14.000",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "checklist",
+     "x": 540,
+     "y": 760,
+     "scale": 0.85,
+     "at": 0.2,
+     "props": {
+      "titulo": "PENDIENTE DEL SUPREMO",
+      "items": [
+       "¿También sus hijos?",
+       "¿Lista reservada?"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel",
+     "out": "@curioso"
+    },
+    {
+     "type": "personaje",
+     "quien": "critica",
+     "x": 820,
+     "y": 1440,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "esceptica",
+     "acciones": [
+      {
+       "at": "@hijos",
+       "pose": "senala_izq"
+      },
+      {
+       "at": "@335",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@explicado",
+       "pose": "encoge",
+       "cara": "confundido"
+      }
+     ],
+     "entra": "der",
+     "id": "critica"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lupa",
+     "x": 300,
+     "y": 1100,
+     "scale": 0.7,
+     "at": "@335",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@14.000"
+    },
+    {
+     "type": "rotulo",
+     "text": "163.020 → 163.355",
+     "x": 540,
+     "y": 520,
+     "size": 80,
+     "color": "amarillo",
+     "at": "@163.020",
+     "golpe": true,
+     "out": "@14.000",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 760,
+     "scale": 1.0,
+     "at": "@explicado",
+     "props": {
+      "texto": "SIN EXPLICAR",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@14.000"
+    },
+    {
+     "type": "rotulo",
+     "text": "< 14.000 VOTOS",
+     "x": 540,
+     "y": 520,
+     "size": 100,
+     "color": "blanco",
+     "at": "@14.000",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 760,
+     "scale": 1.0,
+     "at": "@calcula",
+     "props": {
+      "texto": "ESTIMACIÓN DEL GOBIERNO",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "final",
+   "trans": "zoom",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "Si tu abuelo emigró, pero no huyó de la dictadura, ¿deberías poder votar? Te leo.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y sígueme para no perderte nada antes del 29N.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      776.7,
+      546.4
+     ],
+     "dur": 0,
+     "zoom": 4.0
+    },
+    {
+     "at": 0.2,
+     "plano": "general",
+     "sobre": [
+      450.0,
+      838.0
+     ],
+     "dur": 2.2,
+     "zoom": 1.0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "mundo",
+      "progreso": 1.0,
+      "resalta": [
+       "ESP",
+       "ARG",
+       "CUB",
+       "MEX"
+      ],
+      "lineas": [
+       {
+        "id": "arg",
+        "puntos": [
+         [
+          -58.4,
+          -34.6
+         ],
+         [
+          -31.05,
+          11.899999999999999
+         ],
+         [
+          -3.7,
+          40.4
+         ]
+        ],
+        "color": "rojo",
+        "dur": 0.01,
+        "discontinua": true,
+        "ancho": 6
+       },
+       {
+        "id": "cub",
+        "puntos": [
+         [
+          -82.4,
+          23.1
+         ],
+         [
+          -43.050000000000004,
+          40.75
+         ],
+         [
+          -3.7,
+          40.4
+         ]
+        ],
+        "color": "rojo",
+        "dur": 0.01,
+        "discontinua": true,
+        "ancho": 6
+       },
+       {
+        "id": "mex",
+        "puntos": [
+         [
+          -99.1,
+          19.4
+         ],
+         [
+          -51.4,
+          38.9
+         ],
+         [
+          -3.7,
+          40.4
+         ]
+        ],
+        "color": "rojo",
+        "dur": 0.01,
+        "discontinua": true,
+        "ancho": 6
+       }
+      ]
+     },
+     "acciones": [],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 0.01
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 790,
+     "y": 1500,
+     "scale": 0.6,
+     "at": "@abuelo",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@votar",
+       "pose": "senala_izq"
+      },
+      {
+       "at": "@leo",
+       "mira": "camara",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@sígueme",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@nada",
+       "salta": true
+      }
+     ],
+     "hud": true,
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿SÍ O NO?",
+     "x": 540,
+     "y": 450,
+     "size": 120,
+     "color": "amarillo",
+     "at": "@votar",
+     "golpe": true,
+     "out": "@sígueme-0.3",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUEME",
+     "x": 540,
+     "y": 450,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sígueme",
+     "fx": [
+      {
+       "at": "@29N",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 6.0,
+  "titulo": "Ley de nietos: 901 de 163.355",
+  "capitulo": null
+ }
+}

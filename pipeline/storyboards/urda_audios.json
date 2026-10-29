@@ -1,0 +1,1061 @@
+{
+ "slug": "urda_audios",
+ "title": "Urda: ocho minutos y una orden",
+ "series_tag": "EN DESARROLLO",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.12,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Euronews (29/10/2026): lo que revelan los audios del centro de control de Atocha",
+  "Castilla-La Mancha Media (29/10/2026): García-Page eleva a 69 los fallecidos; Feijóo",
+  "elDiario.es (29/10/2026, directo): Sánchez, Rufián, hospitalizados",
+  "El Independiente (29/10/2026): Puente comparecerá el 3 de noviembre",
+  "Infobae (28/10/2026): querella de Vox; RD 949/2026 de luto oficial",
+  "Tono de luto: sin gags ni caras en los trenes; el choque no se dibuja; el controlador no se nombra"
+ ],
+ "caption": "🖤 Urda: ocho minutos y una orden\n📻 8:36 · Atocha al AVE: «reanude con marcha normal»\n🚆 8:48 · El Iryo avisa de que sigue parado. Según los audios, nadie avisa al AVE\n⚠️ La norma con el sistema caído: a la vista y a 40 km/h\n🕯️ 69 fallecidos (cifra provisional)\n🗣️ Puente, Sánchez, Feijóo, Vox y Rufián: qué dice cada uno\n⚖️ Quién falló lo dirá la investigación\n🔔 Síguenos para no perderte lo que se sepa · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: audios del centro de control (El País, elDiario.es, vía Euronews 29/10) · CMM 29/10 · El Independiente 29/10 · Infobae 28/10. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#Urda",
+  "#Toledo",
+  "#tren",
+  "#accidente",
+  "#OscarPuente",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     40,
+     70
+    ]
+   },
+   "animo": "triste",
+   "footnote": "Audios del centro de control (El País, elDiario.es) vía Euronews 29/10/2026",
+   "lines": [
+    {
+     "text": "A las 8:36, desde Atocha, alguien le dijo a un AVE: «reanude con marcha normal».",
+     "tono": "sobrio"
+    },
+    {
+     "text": "Dieciocho minutos después, chocó contra un tren parado.",
+     "tono": "sobrio",
+     "pausa": 0.3
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@reanude",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.8,
+     "zoom": 1.08
+    },
+    {
+     "at": "@Dieciocho",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 540,
+     "y": 860,
+     "scale": 1.1,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "dibuja": 0.8
+    },
+    {
+     "type": "rotulo",
+     "text": "8:36",
+     "x": 540,
+     "y": 420,
+     "size": 130,
+     "color": "amarillo",
+     "at": "@8:36",
+     "hud": true,
+     "out": "@Dieciocho"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 1320,
+     "scale": 1.0,
+     "at": "@reanude",
+     "props": {
+      "lineas": [
+       "ATOCHA:",
+       "«reanude con",
+       "marcha normal»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Dieciocho"
+    },
+    {
+     "type": "rotulo",
+     "text": "8:54",
+     "x": 540,
+     "y": 420,
+     "size": 130,
+     "color": "amarillo",
+     "at": "@Dieciocho",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.0,
+     "at": "@chocó",
+     "props": {
+      "texto": "AUDIOS DEL CONTROL",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "orden",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     40,
+     70
+    ]
+   },
+   "animo": "triste",
+   "trans": "corte",
+   "footnote": "Audios del centro de control (El País, elDiario.es) vía Euronews 29/10/2026",
+   "lines": [
+    {
+     "text": "8:31. Se cae el LZB, el sistema que vigila la distancia entre trenes. Seis trenes se paran.",
+     "tono": "sobrio"
+    },
+    {
+     "text": "8:36. Atocha le dice al AVE: desconecta el sistema, vuelve a conectarlo y sigue. «¿Con marcha normal?». «Sí».",
+     "tono": "sobrio",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@AVE",
+     "plano": "general",
+     "sobre": [
+      540,
+      1040
+     ],
+     "dur": 0.6,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "via",
+     "x": 540,
+     "y": 1184,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "ancho": 1600
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "tren",
+     "x": 300,
+     "y": 1080,
+     "scale": 0.8,
+     "at": 0,
+     "props": {
+      "color": "azul",
+      "cara": null,
+      "vagones": 1
+     },
+     "acciones": [
+      {
+       "at": "@sigue+0.6",
+       "x": 520,
+       "dur": 2.4
+      }
+     ],
+     "id": "ave",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 760,
+     "scale": 0.7,
+     "at": 0.3,
+     "props": {
+      "texto": "AVE 2080",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "8:31",
+     "x": 540,
+     "y": 420,
+     "size": 130,
+     "color": "amarillo",
+     "at": "@8:31",
+     "hud": true,
+     "out": "@8:36"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.0,
+     "at": "@LZB",
+     "props": {
+      "texto": "LZB CAÍDO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@8:36"
+    },
+    {
+     "type": "rotulo",
+     "text": "8:36",
+     "x": 540,
+     "y": 420,
+     "size": 130,
+     "color": "amarillo",
+     "at": "@8:36",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 620,
+     "scale": 0.95,
+     "at": "@Sí-0.4",
+     "props": {
+      "lineas": [
+       "«¿Con marcha normal?»",
+       "«Sí»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "id": "iryo",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     40,
+     70
+    ]
+   },
+   "animo": "triste",
+   "trans": "corte",
+   "footnote": "Audios del centro de control (El País, elDiario.es) vía Euronews 29/10/2026",
+   "lines": [
+    {
+     "text": "8:41. Más adelante, el Iryo está parado ante la señal de Urda. Recibe la misma orden.",
+     "tono": "sobrio"
+    },
+    {
+     "text": "8:48. La maquinista avisa: no puede reiniciar, sigue parada.",
+     "tono": "sobrio"
+    },
+    {
+     "text": "Según los audios, nadie avisó al AVE.",
+     "tono": "sobrio",
+     "pausa": 0.3
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@nadie",
+     "plano": "general",
+     "sobre": [
+      540,
+      1020
+     ],
+     "dur": 0.8,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "via",
+     "x": 540,
+     "y": 1184,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "ancho": 1600
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "tren",
+     "x": 760,
+     "y": 1080,
+     "scale": 0.8,
+     "at": 0,
+     "props": {
+      "color": "rojo",
+      "cara": null,
+      "vagones": 1
+     },
+     "acciones": [],
+     "id": "iryo",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "tren",
+     "x": -900,
+     "y": 1080,
+     "scale": 0.8,
+     "at": "@nadie-1.0",
+     "props": {
+      "color": "azul",
+      "cara": null,
+      "vagones": 1
+     },
+     "acciones": [
+      {
+       "at": "@nadie-1.0",
+       "x": -260,
+       "dur": 2.6
+      }
+     ],
+     "id": "ave",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 200,
+     "y": 760,
+     "scale": 0.6,
+     "at": "@nadie",
+     "props": {
+      "texto": "AVE 2080 · A 25 KM",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 900,
+     "y": 900,
+     "scale": 0.6,
+     "at": "@señal",
+     "props": {
+      "texto": "SEÑAL DE URDA",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 700,
+     "y": 760,
+     "scale": 0.7,
+     "at": 0.3,
+     "props": {
+      "texto": "IRYO 6076 · PARADO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "8:41",
+     "x": 540,
+     "y": 420,
+     "size": 130,
+     "color": "amarillo",
+     "at": "@8:41",
+     "hud": true,
+     "out": "@8:48"
+    },
+    {
+     "type": "rotulo",
+     "text": "8:48",
+     "x": 540,
+     "y": 420,
+     "size": 130,
+     "color": "amarillo",
+     "at": "@8:48",
+     "hud": true,
+     "out": "@nadie"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 600,
+     "scale": 0.95,
+     "at": "@reiniciar",
+     "props": {
+      "lineas": [
+       "IRYO:",
+       "«no puedo reiniciar,",
+       "sigo parada»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@nadie"
+    },
+    {
+     "type": "rotulo",
+     "text": "NADIE AVISÓ AL AVE",
+     "x": 540,
+     "y": 460,
+     "size": 80,
+     "color": "blanco",
+     "at": "@nadie",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.0,
+     "at": "@audios",
+     "props": {
+      "texto": "SEGÚN LOS AUDIOS",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "norma",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     226,
+     224,
+     220
+    ]
+   },
+   "animo": "triste",
+   "trans": "papel",
+   "footnote": "Ministerio de Transportes vía Euronews 29/10/2026 · García-Page 29/10/2026",
+   "lines": [
+    {
+     "text": "Con el sistema caído, la norma era ir a la vista y a 40 kilómetros por hora como máximo.",
+     "tono": "sobrio"
+    },
+    {
+     "text": "A las 8:54 llegó el choque. Hoy ya son 69 los fallecidos.",
+     "tono": "sobrio",
+     "pausa": 0.3
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "senal",
+     "x": 540,
+     "y": 760,
+     "scale": 1.1,
+     "at": 0.2,
+     "props": {
+      "numero": "40"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@8:54"
+    },
+    {
+     "type": "rotulo",
+     "text": "A LA VISTA · MÁX. 40 KM/H",
+     "x": 540,
+     "y": 420,
+     "size": 66,
+     "color": "tinta",
+     "at": "@vista",
+     "out": "@8:54",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "lazo",
+     "x": 540,
+     "y": 640,
+     "scale": 0.9,
+     "at": "@8:54",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "dibuja": 1.0
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 1060,
+     "scale": 0.8,
+     "at": "@69",
+     "props": {
+      "valor": 69,
+      "sufijo": " FALLECIDOS",
+      "ancho": 860
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.0,
+     "at": "@fallecidos",
+     "props": {
+      "texto": "CIFRA PROVISIONAL",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "gobierno",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     40,
+     70
+    ]
+   },
+   "animo": "triste",
+   "trans": "barrido",
+   "footnote": "Euronews 29/10 · elDiario.es 29/10 · El Independiente 29/10/2026",
+   "lines": [
+    {
+     "text": "El ministro Óscar Puente lo llama «inexplicable». Comparecerá en el Congreso el 3 de noviembre.",
+     "tono": "sobrio"
+    },
+    {
+     "text": "Sánchez promete aclarar hasta el último detalle.",
+     "tono": "sobrio",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Sánchez",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "puente",
+     "x": 330,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@inexplicable",
+       "pose": "encoge"
+      },
+      {
+       "at": "@Congreso",
+       "pose": "manos_juntas"
+      }
+     ],
+     "entra": "izq",
+     "id": "puente"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 520,
+     "scale": 0.72,
+     "at": "@inexplicable",
+     "props": {
+      "lineas": [
+       "PUENTE:",
+       "«inexplicable»",
+       "Congreso · 3 nov."
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Sánchez"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 1300,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@Sánchez",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@Sánchez",
+       "x": 780,
+       "dur": 0.6,
+       "mira": "izq"
+      },
+      {
+       "at": "@detalle",
+       "pose": "manos_juntas"
+      }
+     ],
+     "entra": "nada",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 520,
+     "scale": 0.72,
+     "at": "@Sánchez",
+     "props": {
+      "lineas": [
+       "SÁNCHEZ:",
+       "«esclarecer hasta",
+       "el último detalle»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1500,
+     "scale": 1.0,
+     "at": "@Puente",
+     "props": {
+      "texto": "DECLARACIONES",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "oposicion",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     40,
+     70
+    ]
+   },
+   "animo": "triste",
+   "trans": "corte",
+   "footnote": "Feijóo (CMM 29/10) · Vox (Infobae 28/10) · Rufián (elDiario.es 29/10)",
+   "lines": [
+    {
+     "text": "Feijóo: las responsabilidades políticas «no son opcionales». Vox se ha querellado por homicidio imprudente.",
+     "tono": "sobrio"
+    },
+    {
+     "text": "Y Rufián, socio del Gobierno: una sola persona no puede ser responsable de cientos de vidas.",
+     "tono": "sobrio",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 230,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@opcionales",
+       "pose": "senala"
+      }
+     ],
+     "entra": "pop",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@Vox",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@querellado",
+       "pose": "cruzados"
+      }
+     ],
+     "entra": "pop",
+     "id": "abascal"
+    },
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 850,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@Rufián",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@persona",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "pop",
+     "id": "diputado"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 520,
+     "scale": 0.7,
+     "at": "@Feijóo",
+     "props": {
+      "lineas": [
+       "FEIJÓO (PP):",
+       "«no son opcionales»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Vox"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 520,
+     "scale": 0.7,
+     "at": "@Vox",
+     "props": {
+      "lineas": [
+       "VOX:",
+       "querella por",
+       "homicidio imprudente"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Rufián"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 520,
+     "scale": 0.7,
+     "at": "@Rufián",
+     "props": {
+      "lineas": [
+       "RUFIÁN (ERC):",
+       "«una sola persona",
+       "no puede ser",
+       "responsable»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     226,
+     224,
+     220
+    ]
+   },
+   "animo": "triste",
+   "trans": "iris",
+   "footnote": "Luto oficial: RD 949/2026",
+   "lines": [
+    {
+     "text": "Quién falló lo dirá la investigación. España está de luto hasta el sábado.",
+     "tono": "sobrio"
+    },
+    {
+     "text": "Síguenos para no perderte lo que se sepa. Nuestro recuerdo, para las víctimas.",
+     "tono": "sobrio",
+     "pausa": 0.3
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      980
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "lazo",
+     "x": 540,
+     "y": 640,
+     "scale": 0.8,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "triste",
+     "acciones": [
+      {
+       "at": "@investigación",
+       "mira": "camara"
+      },
+      {
+       "at": "@recuerdo",
+       "pose": "manos_juntas",
+       "mira": "abajo"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1180,
+     "scale": 1.0,
+     "at": "@investigación",
+     "props": {
+      "texto": "INVESTIGACIÓN ABIERTA",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@Síguenos"
+    },
+    {
+     "type": "rotulo",
+     "text": "SÍGUENOS · @PIZARRAPUBLICA",
+     "x": 540,
+     "y": 430,
+     "size": 58,
+     "color": "tinta",
+     "at": "@Síguenos",
+     "out": "@recuerdo",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "EN RECUERDO DE LAS VÍCTIMAS",
+     "x": 540,
+     "y": 430,
+     "size": 62,
+     "color": "tinta",
+     "at": "@recuerdo",
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 0.5,
+ "portada": {
+  "t": 3.0,
+  "titulo": "Urda: ocho minutos y una orden",
+  "capitulo": null
+ },
+ "tono": "sobrio"
+}

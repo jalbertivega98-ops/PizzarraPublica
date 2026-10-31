@@ -75,7 +75,8 @@ scenes = [
         obj("bandera", 860, 1520, "@europeos", 0.8, hud=True, entra="abajo", props={"diseno": "ue"}, out="@Plazo"),
         obj("calendario", 540, 920, "@Plazo", 0.75, hud=True, entra="crece", sfx="papel",
             props={"mes": "ENERO 2026", "inicio": 3, "dias": 31, "marcados": [16], "colores": {16: "rojo"}}),
-        etq("52 MESES", 540, 380, "@Plazo", "rojo", 0.8, hud=True),
+        etq("52 MESES", 540, 380, "@Plazo", "rojo", 0.8, hud=True, out="@enero"),
+        etq("FIN: ENERO 2026", 540, 380, "@enero", "rojo", 0.8, hud=True),
         sello("CONTRATO PÚBLICO", "verde", 1290, "@Plazo+0.4"),
     ]),
     # 3 · LA PROMESA: Transportes, abril de 2025
@@ -114,16 +115,19 @@ scenes = [
          footnote="Artículo 14 y Maldita, 30/10/2026", lines=[
         V("¿Se le dijo a Bruselas que ya estaba hecho? Artículo 14 publica un documento de mayo que da los contratos por ejecutados.", "intriga"),
         V("Maldita no lo ha podido verificar. Y Puente lo niega: «A la UE no se le engaña». Solo certificaron que estaba colocado.", "normal", 0.2),
-    ], camara=[plano(0, "general", [540, 960], 0), plano("@Puente", "general", [540, 1000], 0.6)],
+    ], camara=[plano(0, "general", [540, 960], 0), plano("@documento", "general", [470, 860], 0.8, zoom=1.12),
+               plano("@Maldita", "general", [540, 960], 0.6), plano("@Puente", "general", [540, 1000], 0.6)],
        elements=[
         obj("bandera", 860, 1300, 0, 0.9, entra="abajo", props={"diseno": "ue"}),
+        rot("¿YA ESTABA HECHO?", 540, 420, "@Bruselas", 80, "amarillo", out="@documento"),
         obj("documento", 470, 800, "@documento", 0.85, hud=True, id="anexo", entra="nada", dibujo=1.0, sfx="papel", props={
             "titulo": "ANEXO A BRUSELAS", "subtitulo": "MAYO 2026", "ancho": 720,
             "articulos": [{"id": "a", "titulo": "CONTRATOS", "lineas": ["«ejecutados»"]}]},
             acciones=[{"at": "@ejecutados", "props": {"resalta": ["a"]}}], out="@Puente"),
         sello("SIN CONFIRMAR", "naranja", 330, "@verificar"),
         quien("puente", 360, "@Puente", 0.55, "serio", entra="izq", acciones=[
-            {"at": "@niega", "pose": "senala"}, {"at": "@colocado", "pose": "encoge"}]),
+            {"at": "@niega", "pose": "senala"}, {"at": "@engaña", "cara": "enfado", "tiembla": True},
+            {"at": "@certificaron", "pose": "manos_juntas", "cara": "serio"}, {"at": "@colocado", "pose": "encoge"}]),
         bocata(["PUENTE:", "«A la UE", "no se le engaña»"], "@niega", out="@colocado"),
         bocata(["Certificado:", "equipo «colocado»", "(junio 2026)"], "@colocado"),
     ]),

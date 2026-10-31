@@ -402,6 +402,23 @@
      "acciones": [],
      "entra": "pop",
      "sfx": "kaching",
+     "hud": true,
+     "out": "@enero"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 380,
+     "scale": 0.8,
+     "at": "@enero",
+     "props": {
+      "texto": "FIN: ENERO 2026",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
      "hud": true
     },
     {
@@ -746,6 +763,25 @@
      "dur": 0
     },
     {
+     "at": "@documento",
+     "plano": "general",
+     "sobre": [
+      470,
+      860
+     ],
+     "dur": 0.8,
+     "zoom": 1.12
+    },
+    {
+     "at": "@Maldita",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.6
+    },
+    {
      "at": "@Puente",
      "plano": "general",
      "sobre": [
@@ -768,6 +804,17 @@
      },
      "acciones": [],
      "entra": "abajo"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿YA ESTABA HECHO?",
+     "x": 540,
+     "y": 420,
+     "size": 80,
+     "color": "amarillo",
+     "at": "@Bruselas",
+     "out": "@documento",
+     "hud": true
     },
     {
      "type": "objeto",
@@ -835,6 +882,16 @@
       {
        "at": "@niega",
        "pose": "senala"
+      },
+      {
+       "at": "@engaña",
+       "cara": "enfado",
+       "tiembla": true
+      },
+      {
+       "at": "@certificaron",
+       "pose": "manos_juntas",
+       "cara": "serio"
       },
       {
        "at": "@colocado",

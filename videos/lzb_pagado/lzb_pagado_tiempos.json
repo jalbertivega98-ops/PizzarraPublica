@@ -1,0 +1,121 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 7.83,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 5.24,
+    "texto": "En 2021 se pagaron 93,8 millones para cambiar el sistema de seguridad que falló en Urda."
+   },
+   {
+    "t0": 5.54,
+    "t1": 7.38,
+    "texto": "El día del choque, seguía puesto el viejo."
+   }
+  ]
+ },
+ {
+  "escena": "contrato",
+  "inicio": 7.83,
+  "fin": 18.61,
+  "frases": [
+   {
+    "t0": 8.53,
+    "t1": 14.48,
+    "texto": "Septiembre de 2021. Adif encarga a Thales cambiar el LZB de la Madrid-Sevilla por el ERTMS, con fondos europeos."
+   },
+   {
+    "t0": 14.73,
+    "t1": 18.16,
+    "texto": "Plazo: 52 meses. O sea, hacia enero de 2026."
+   }
+  ]
+ },
+ {
+  "escena": "promesa",
+  "inicio": 18.61,
+  "fin": 25.01,
+  "frases": [
+   {
+    "t0": 18.91,
+    "t1": 24.56,
+    "texto": "En abril de 2025, Transportes lo prometió: la línea, «completamente renovada», con el ERTMS 2."
+   }
+  ]
+ },
+ {
+  "escena": "urda",
+  "inicio": 25.01,
+  "fin": 33.11,
+  "frases": [
+   {
+    "t0": 25.01,
+    "t1": 28.9,
+    "texto": "El 28 de octubre, en Urda, el que funcionaba era el LZB. Y se cayó."
+   },
+   {
+    "t0": 29.15,
+    "t1": 32.66,
+    "texto": "Puente lo admite: está «en proceso de reemplazar», porque ya no se fabrica."
+   }
+  ]
+ },
+ {
+  "escena": "bruselas",
+  "inicio": 33.11,
+  "fin": 45.67,
+  "frases": [
+   {
+    "t0": 33.37,
+    "t1": 39.11,
+    "texto": "¿Se le dijo a Bruselas que ya estaba hecho? Artículo 14 publica un documento de mayo que da los contratos por ejecutados."
+   },
+   {
+    "t0": 39.36,
+    "t1": 45.22,
+    "texto": "Maldita no lo ha podido verificar. Y Puente lo niega: «A la UE no se le engaña». Solo certificaron que estaba colocado."
+   }
+  ]
+ },
+ {
+  "escena": "partidos",
+  "inicio": 45.67,
+  "fin": 54.33,
+  "frases": [
+   {
+    "t0": 45.67,
+    "t1": 51.5,
+    "texto": "Feijóo habla de un sistema «obsoleto»: «si no dimiten ellos, les dimitiremos en las urnas». Abascal lo llama «un crimen»."
+   },
+   {
+    "t0": 51.7,
+    "t1": 53.88,
+    "texto": "Puente no dimite. Comparece el 3 de noviembre."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 54.33,
+  "fin": 66.28,
+  "frases": [
+   {
+    "t0": 55.03,
+    "t1": 57.77,
+    "texto": "Ahora Adif habla de ponerlo en servicio en 2027."
+   },
+   {
+    "t0": 58.02,
+    "t1": 61.91,
+    "texto": "¿Retraso normal de una obra así, o alguien tiene que dimitir? Te leo en comentarios."
+   },
+   {
+    "t0": 62.11,
+    "t1": 64.93,
+    "texto": "Y sigue a Piz para no perderte nada antes del 29N."
+   }
+  ]
+ }
+]

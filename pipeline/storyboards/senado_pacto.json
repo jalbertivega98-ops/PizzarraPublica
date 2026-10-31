@@ -826,6 +826,16 @@
      ],
      "dur": 0.9,
      "zoom": 1.0
+    },
+    {
+     "at": "@candidato",
+     "plano": "general",
+     "sobre": [
+      506.0,
+      834.8
+     ],
+     "dur": 1.2,
+     "zoom": 1.15
     }
    ],
    "elements": [

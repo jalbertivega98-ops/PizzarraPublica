@@ -90,7 +90,7 @@ scenes = [
     dict(id="pp_fuera", fondo="mar_mapa", limites=LIM, animo="aventura", trans="corte", footnote=FD, lines=[
         V("A cambio, el PP se retira en Guipúzcoa, Girona y Tarragona."),
         V("Y en otras catorce provincias, Vox lleva un solo candidato. Así a sus votantes les quedan cruces libres para el PP.", "normal", 0.15),
-    ], camara=[zoom(0, P(R, -0.5, 42.0), 1.6, 0), zoom("@catorce", CENTRO, 1.0, 0.9)],
+    ], camara=[zoom(0, P(R, -0.5, 42.0), 1.6, 0), zoom("@catorce", CENTRO, 1.0, 0.9), zoom("@candidato", P(R, -4.5, 39.0), 1.15, 1.2)],
        elements=[
         mapa(R, 0, 0.01, progreso=1.0, acciones=[{"at": "@Guipúzcoa", "props": {"resalta": PP_FUERA[:1], "apaga": resto(PP_FUERA)}, "sfx": "pop"},
                                                  {"at": "@Girona", "props": {"resalta": PP_FUERA, "apaga": resto(PP_FUERA)}, "sfx": "pop"},

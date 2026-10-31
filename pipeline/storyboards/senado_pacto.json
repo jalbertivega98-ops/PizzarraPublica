@@ -1,0 +1,1490 @@
+{
+ "slug": "senado_pacto",
+ "title": "El pacto del Senado",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Demócrata (26/10/2026): Vox incorpora 20 independientes en las listas del PP al Senado en seis provincias",
+  "Demócrata/agencias (26/10/2026): PP y Vox aspiran a hasta 140 senadores; el PP no se presenta en Gipuzkoa, Girona y Tarragona",
+  "Infobae (17/10/2026): resultados del Senado en 2023 y «Senado de Progreso»",
+  "Constitución española, art. 90: veto del Senado por mayoría absoluta",
+  "Mapas dibujados sobre contornos de Natural Earth (dominio público)"
+ ],
+ "caption": "🏛️ El pacto del Senado: PP y Vox (capítulo 2)\n❌ Vox no se presenta en Las Palmas, Tenerife, Cádiz, Valencia, Castellón y Baleares\n🤝 Mete a 20 de los suyos (con suplentes) en las listas del PP\n🔁 A cambio, el PP se retira en Guipúzcoa, Girona y Tarragona\n✏️ En 14 provincias Vox lleva un solo candidato\n🎯 Aspiran a 125-140 senadores (según fuentes del pacto). En 2023 Vox sacó 0\n💬 ¿Pacto inteligente o trampa al votante? Te leo 👇\n🔔 Sigue a Piz para no perderte nada antes del 29N · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Demócrata 26/10/2026 (dos piezas) · Infobae 17/10/2026 · Constitución, art. 90. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#29N",
+  "#Senado",
+  "#PP",
+  "#Vox",
+  "#elecciones",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "calle",
+   "animo": "tension",
+   "footnote": "Demócrata, 26/10/2026",
+   "lines": [
+    {
+     "text": "En seis provincias, Vox desaparece de tu papeleta del Senado.",
+     "tono": "intriga"
+    },
+    {
+     "text": "Y no es un error: es un pacto con el PP.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@pacto",
+     "plano": "general",
+     "sobre": [
+      540,
+      980
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "papeleta",
+     "x": 540,
+     "y": 820,
+     "scale": 1.2,
+     "at": 0,
+     "props": {
+      "color": "sepia",
+      "texto": "SENADO"
+     },
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "papel",
+     "out": "@error"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lupa",
+     "x": 700,
+     "y": 760,
+     "scale": 0.7,
+     "at": "@Vox",
+     "props": {},
+     "acciones": [],
+     "entra": "izq",
+     "out": "@error"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿Y VOX?",
+     "x": 540,
+     "y": 430,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@desaparece",
+     "golpe": true,
+     "out": "@error",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 220,
+     "y": 1600,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "confundido",
+     "acciones": [
+      {
+       "at": "@desaparece",
+       "pose": "encoge",
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "abajo",
+     "out": "@error",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": -300,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@error",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@error",
+       "x": 380,
+       "dur": 0.7
+      },
+      {
+       "at": "@pacto",
+       "pose": "saluda",
+       "mira": "der"
+      }
+     ],
+     "entra": "nada",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 1380,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@error",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@error",
+       "x": 700,
+       "dur": 0.7
+      },
+      {
+       "at": "@pacto",
+       "pose": "saluda",
+       "mira": "izq"
+      }
+     ],
+     "entra": "nada",
+     "id": "abascal"
+    },
+    {
+     "type": "rotulo",
+     "text": "PACTO PP + VOX",
+     "x": 540,
+     "y": 430,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@pacto",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1290,
+     "scale": 1.0,
+     "at": "@PP",
+     "props": {
+      "texto": "CONFIRMADO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "reglas",
+   "fondo": "colegio",
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Capítulo 1: «La guerra del Senado»",
+   "lines": [
+    {
+     "text": "Recuerda: cada provincia elige cuatro senadores, y el que gana suele llevarse tres."
+    },
+    {
+     "text": "Si la derecha va dividida, la izquierda puede quedar primera.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@dividida",
+     "plano": "general",
+     "sobre": [
+      540,
+      1100
+     ],
+     "dur": 0.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 460,
+     "scale": 0.6,
+     "at": "@cuatro",
+     "props": {
+      "valor": 4,
+      "sufijo": " SENADORES",
+      "ancho": 760
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@dividida"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 330,
+     "y": 1420,
+     "scale": 0.32,
+     "at": "@gana+0.00",
+     "props": {
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 470,
+     "y": 1420,
+     "scale": 0.32,
+     "at": "@gana+0.15",
+     "props": {
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 610,
+     "y": 1420,
+     "scale": 0.32,
+     "at": "@gana+0.30",
+     "props": {
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 750,
+     "y": 1420,
+     "scale": 0.32,
+     "at": "@gana+0.45",
+     "props": {
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "rotulo",
+     "text": "3 + 1",
+     "x": 540,
+     "y": 1180,
+     "size": 120,
+     "color": "amarillo",
+     "at": "@tres",
+     "golpe": true,
+     "out": "@dividida",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "¿DIVIDIDOS? PIERDEN",
+     "x": 540,
+     "y": 460,
+     "size": 74,
+     "color": "amarillo",
+     "at": "@dividida",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 160,
+     "y": 1700,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@cuatro",
+       "pose": "senala"
+      },
+      {
+       "at": "@tres",
+       "cara": "idea"
+      },
+      {
+       "at": "@izquierda",
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "vox_fuera",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "aventura",
+   "trans": "zoom",
+   "footnote": "Demócrata, 26/10/2026",
+   "lines": [
+    {
+     "text": "El lunes 26 lo cerraron. Vox no se presenta en Las Palmas, Tenerife, Cádiz, Valencia, Castellón y Baleares."
+    },
+    {
+     "text": "Mete a los suyos como independientes en las listas del PP: veinte nombres, contando suplentes.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      760.8
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@Cádiz",
+     "plano": "general",
+     "sobre": [
+      591.0,
+      871.8
+     ],
+     "dur": 0.8,
+     "zoom": 1.25
+    },
+    {
+     "at": "@independientes",
+     "plano": "general",
+     "sobre": [
+      551.3,
+      760.8
+     ],
+     "dur": 0.8,
+     "zoom": 1.0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana"
+     },
+     "acciones": [
+      {
+       "at": "@Palmas",
+       "props": {
+        "resalta": [
+         "Las Palmas",
+         "Santa Cruz de Tenerife"
+        ],
+        "apaga": [
+         "Albacete",
+         "Alicante",
+         "Almería",
+         "Asturias",
+         "Badajoz",
+         "Barcelona",
+         "Bizkaia",
+         "Burgos",
+         "Cantabria",
+         "Ceuta",
+         "Ciudad Real",
+         "Cuenca",
+         "Cáceres",
+         "Córdoba",
+         "Gerona",
+         "Gipuzkoa",
+         "Granada",
+         "Guadalajara",
+         "Huelva",
+         "Huesca",
+         "Jaén",
+         "La Coruña",
+         "La Rioja",
+         "León",
+         "Lugo",
+         "Lérida",
+         "Madrid",
+         "Melilla",
+         "Murcia",
+         "Málaga",
+         "Navarra",
+         "Orense",
+         "Palencia",
+         "Pontevedra",
+         "Salamanca",
+         "Segovia",
+         "Sevilla",
+         "Soria",
+         "Tarragona",
+         "Teruel",
+         "Toledo",
+         "Valladolid",
+         "Zamora",
+         "Zaragoza",
+         "Álava",
+         "Ávila"
+        ]
+       },
+       "sfx": "pop"
+      },
+      {
+       "at": "@Cádiz",
+       "props": {
+        "resalta": [
+         "Las Palmas",
+         "Santa Cruz de Tenerife",
+         "Cádiz"
+        ],
+        "apaga": [
+         "Albacete",
+         "Alicante",
+         "Almería",
+         "Asturias",
+         "Badajoz",
+         "Barcelona",
+         "Bizkaia",
+         "Burgos",
+         "Cantabria",
+         "Ceuta",
+         "Ciudad Real",
+         "Cuenca",
+         "Cáceres",
+         "Córdoba",
+         "Gerona",
+         "Gipuzkoa",
+         "Granada",
+         "Guadalajara",
+         "Huelva",
+         "Huesca",
+         "Jaén",
+         "La Coruña",
+         "La Rioja",
+         "León",
+         "Lugo",
+         "Lérida",
+         "Madrid",
+         "Melilla",
+         "Murcia",
+         "Málaga",
+         "Navarra",
+         "Orense",
+         "Palencia",
+         "Pontevedra",
+         "Salamanca",
+         "Segovia",
+         "Sevilla",
+         "Soria",
+         "Tarragona",
+         "Teruel",
+         "Toledo",
+         "Valladolid",
+         "Zamora",
+         "Zaragoza",
+         "Álava",
+         "Ávila"
+        ]
+       },
+       "sfx": "pop"
+      },
+      {
+       "at": "@Valencia",
+       "props": {
+        "resalta": [
+         "Las Palmas",
+         "Santa Cruz de Tenerife",
+         "Cádiz",
+         "Valencia"
+        ],
+        "apaga": [
+         "Albacete",
+         "Alicante",
+         "Almería",
+         "Asturias",
+         "Badajoz",
+         "Barcelona",
+         "Bizkaia",
+         "Burgos",
+         "Cantabria",
+         "Ceuta",
+         "Ciudad Real",
+         "Cuenca",
+         "Cáceres",
+         "Córdoba",
+         "Gerona",
+         "Gipuzkoa",
+         "Granada",
+         "Guadalajara",
+         "Huelva",
+         "Huesca",
+         "Jaén",
+         "La Coruña",
+         "La Rioja",
+         "León",
+         "Lugo",
+         "Lérida",
+         "Madrid",
+         "Melilla",
+         "Murcia",
+         "Málaga",
+         "Navarra",
+         "Orense",
+         "Palencia",
+         "Pontevedra",
+         "Salamanca",
+         "Segovia",
+         "Sevilla",
+         "Soria",
+         "Tarragona",
+         "Teruel",
+         "Toledo",
+         "Valladolid",
+         "Zamora",
+         "Zaragoza",
+         "Álava",
+         "Ávila"
+        ]
+       },
+       "sfx": "pop"
+      },
+      {
+       "at": "@Castellón",
+       "props": {
+        "resalta": [
+         "Las Palmas",
+         "Santa Cruz de Tenerife",
+         "Cádiz",
+         "Valencia",
+         "Castellón"
+        ],
+        "apaga": [
+         "Albacete",
+         "Alicante",
+         "Almería",
+         "Asturias",
+         "Badajoz",
+         "Barcelona",
+         "Bizkaia",
+         "Burgos",
+         "Cantabria",
+         "Ceuta",
+         "Ciudad Real",
+         "Cuenca",
+         "Cáceres",
+         "Córdoba",
+         "Gerona",
+         "Gipuzkoa",
+         "Granada",
+         "Guadalajara",
+         "Huelva",
+         "Huesca",
+         "Jaén",
+         "La Coruña",
+         "La Rioja",
+         "León",
+         "Lugo",
+         "Lérida",
+         "Madrid",
+         "Melilla",
+         "Murcia",
+         "Málaga",
+         "Navarra",
+         "Orense",
+         "Palencia",
+         "Pontevedra",
+         "Salamanca",
+         "Segovia",
+         "Sevilla",
+         "Soria",
+         "Tarragona",
+         "Teruel",
+         "Toledo",
+         "Valladolid",
+         "Zamora",
+         "Zaragoza",
+         "Álava",
+         "Ávila"
+        ]
+       },
+       "sfx": "pop"
+      },
+      {
+       "at": "@Baleares",
+       "props": {
+        "resalta": [
+         "Las Palmas",
+         "Santa Cruz de Tenerife",
+         "Cádiz",
+         "Valencia",
+         "Castellón",
+         "Baleares"
+        ],
+        "apaga": [
+         "Albacete",
+         "Alicante",
+         "Almería",
+         "Asturias",
+         "Badajoz",
+         "Barcelona",
+         "Bizkaia",
+         "Burgos",
+         "Cantabria",
+         "Ceuta",
+         "Ciudad Real",
+         "Cuenca",
+         "Cáceres",
+         "Córdoba",
+         "Gerona",
+         "Gipuzkoa",
+         "Granada",
+         "Guadalajara",
+         "Huelva",
+         "Huesca",
+         "Jaén",
+         "La Coruña",
+         "La Rioja",
+         "León",
+         "Lugo",
+         "Lérida",
+         "Madrid",
+         "Melilla",
+         "Murcia",
+         "Málaga",
+         "Navarra",
+         "Orense",
+         "Palencia",
+         "Pontevedra",
+         "Salamanca",
+         "Segovia",
+         "Sevilla",
+         "Soria",
+         "Tarragona",
+         "Teruel",
+         "Toledo",
+         "Valladolid",
+         "Zamora",
+         "Zaragoza",
+         "Álava",
+         "Ávila"
+        ]
+       },
+       "sfx": "pop"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.2
+    },
+    {
+     "type": "rotulo",
+     "text": "VOX SE RETIRA EN 6",
+     "x": 540,
+     "y": 330,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@presenta",
+     "golpe": true,
+     "hud": true,
+     "out": "@independientes"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 330,
+     "scale": 0.8,
+     "at": "@independientes",
+     "props": {
+      "texto": "20 DE VOX EN LISTAS DEL PP",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1290,
+     "scale": 1.0,
+     "at": "@suplentes",
+     "props": {
+      "texto": "CONFIRMADO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "pp_fuera",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "aventura",
+   "trans": "corte",
+   "footnote": "Demócrata, 26/10/2026",
+   "lines": [
+    {
+     "text": "A cambio, el PP se retira en Guipúzcoa, Girona y Tarragona."
+    },
+    {
+     "text": "Y en otras catorce provincias, Vox lleva un solo candidato. Así a sus votantes les quedan cruces libres para el PP.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      732.7,
+      612.8
+     ],
+     "dur": 0,
+     "zoom": 1.6
+    },
+    {
+     "at": "@catorce",
+     "plano": "general",
+     "sobre": [
+      551.3,
+      760.8
+     ],
+     "dur": 0.9,
+     "zoom": 1.0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana",
+      "progreso": 1.0
+     },
+     "acciones": [
+      {
+       "at": "@Guipúzcoa",
+       "props": {
+        "resalta": [
+         "Gipuzkoa"
+        ],
+        "apaga": [
+         "Albacete",
+         "Alicante",
+         "Almería",
+         "Asturias",
+         "Badajoz",
+         "Baleares",
+         "Barcelona",
+         "Bizkaia",
+         "Burgos",
+         "Cantabria",
+         "Castellón",
+         "Ceuta",
+         "Ciudad Real",
+         "Cuenca",
+         "Cáceres",
+         "Cádiz",
+         "Córdoba",
+         "Granada",
+         "Guadalajara",
+         "Huelva",
+         "Huesca",
+         "Jaén",
+         "La Coruña",
+         "La Rioja",
+         "Las Palmas",
+         "León",
+         "Lugo",
+         "Lérida",
+         "Madrid",
+         "Melilla",
+         "Murcia",
+         "Málaga",
+         "Navarra",
+         "Orense",
+         "Palencia",
+         "Pontevedra",
+         "Salamanca",
+         "Santa Cruz de Tenerife",
+         "Segovia",
+         "Sevilla",
+         "Soria",
+         "Teruel",
+         "Toledo",
+         "Valencia",
+         "Valladolid",
+         "Zamora",
+         "Zaragoza",
+         "Álava",
+         "Ávila"
+        ]
+       },
+       "sfx": "pop"
+      },
+      {
+       "at": "@Girona",
+       "props": {
+        "resalta": [
+         "Gipuzkoa",
+         "Gerona",
+         "Tarragona"
+        ],
+        "apaga": [
+         "Albacete",
+         "Alicante",
+         "Almería",
+         "Asturias",
+         "Badajoz",
+         "Baleares",
+         "Barcelona",
+         "Bizkaia",
+         "Burgos",
+         "Cantabria",
+         "Castellón",
+         "Ceuta",
+         "Ciudad Real",
+         "Cuenca",
+         "Cáceres",
+         "Cádiz",
+         "Córdoba",
+         "Granada",
+         "Guadalajara",
+         "Huelva",
+         "Huesca",
+         "Jaén",
+         "La Coruña",
+         "La Rioja",
+         "Las Palmas",
+         "León",
+         "Lugo",
+         "Lérida",
+         "Madrid",
+         "Melilla",
+         "Murcia",
+         "Málaga",
+         "Navarra",
+         "Orense",
+         "Palencia",
+         "Pontevedra",
+         "Salamanca",
+         "Santa Cruz de Tenerife",
+         "Segovia",
+         "Sevilla",
+         "Soria",
+         "Teruel",
+         "Toledo",
+         "Valencia",
+         "Valladolid",
+         "Zamora",
+         "Zaragoza",
+         "Álava",
+         "Ávila"
+        ]
+       },
+       "sfx": "pop"
+      },
+      {
+       "at": "@catorce",
+       "props": {
+        "resalta": [
+         "Sevilla",
+         "Huelva",
+         "Asturias",
+         "Badajoz",
+         "Álava",
+         "Navarra",
+         "Cáceres",
+         "Huesca",
+         "Zaragoza",
+         "Alicante",
+         "Granada",
+         "Cuenca",
+         "Pontevedra",
+         "Jaén"
+        ],
+        "apaga": [
+         "Albacete",
+         "Almería",
+         "Baleares",
+         "Barcelona",
+         "Bizkaia",
+         "Burgos",
+         "Cantabria",
+         "Castellón",
+         "Ceuta",
+         "Ciudad Real",
+         "Cádiz",
+         "Córdoba",
+         "Gerona",
+         "Gipuzkoa",
+         "Guadalajara",
+         "La Coruña",
+         "La Rioja",
+         "Las Palmas",
+         "León",
+         "Lugo",
+         "Lérida",
+         "Madrid",
+         "Melilla",
+         "Murcia",
+         "Málaga",
+         "Orense",
+         "Palencia",
+         "Salamanca",
+         "Santa Cruz de Tenerife",
+         "Segovia",
+         "Soria",
+         "Tarragona",
+         "Teruel",
+         "Toledo",
+         "Valencia",
+         "Valladolid",
+         "Zamora",
+         "Ávila"
+        ]
+       },
+       "sfx": "kaching"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 0.01
+    },
+    {
+     "type": "rotulo",
+     "text": "EL PP SE RETIRA EN 3",
+     "x": 540,
+     "y": 330,
+     "size": 84,
+     "color": "amarillo",
+     "at": "@retira",
+     "golpe": true,
+     "hud": true,
+     "out": "@catorce"
+    },
+    {
+     "type": "rotulo",
+     "text": "VOX: 1 CANDIDATO EN 14",
+     "x": 540,
+     "y": 330,
+     "size": 80,
+     "color": "amarillo",
+     "at": "@catorce",
+     "golpe": true,
+     "hud": true,
+     "out": "@cruces"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 330,
+     "scale": 0.8,
+     "at": "@cruces",
+     "props": {
+      "texto": "CRUCES LIBRES → PP",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "objetivo",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "Infobae 17/10 (2023) · Demócrata 26/10/2026",
+   "lines": [
+    {
+     "text": "¿Para qué? En 2023, Vox no sacó ni un senador elegido. El PP, 120."
+    },
+    {
+     "text": "Ahora, juntos, aspiran a entre 125 y 140.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@juntos",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 980,
+     "scale": 1.0,
+     "at": "@2023",
+     "props": {
+      "tope": 208,
+      "decimales": 0,
+      "barras": [
+       {
+        "texto": "PP",
+        "valor": 120,
+        "color": "pp"
+       },
+       {
+        "texto": "VOX",
+        "valor": 0,
+        "color": "vox"
+       }
+      ]
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 1.2,
+     "out": "@juntos"
+    },
+    {
+     "type": "rotulo",
+     "text": "2023",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@2023",
+     "golpe": true,
+     "out": "@juntos",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "125 – 140",
+     "x": 540,
+     "y": 820,
+     "size": 170,
+     "color": "amarillo",
+     "at": "@125",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SENADORES",
+     "x": 540,
+     "y": 990,
+     "size": 80,
+     "color": "blanco",
+     "at": "@140",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1290,
+     "scale": 1.0,
+     "at": "@aspiran",
+     "props": {
+      "texto": "SEGÚN FUENTES DEL PACTO",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "critica",
+     "x": 880,
+     "y": 1700,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "esceptica",
+     "acciones": [
+      {
+       "at": "@ni",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@aspiran",
+       "pose": "cruzados",
+       "cara": "esceptica"
+      }
+     ],
+     "entra": "nada",
+     "id": "critica"
+    }
+   ]
+  },
+  {
+   "id": "enfrente",
+   "fondo": "calle",
+   "animo": "tension",
+   "trans": "pan",
+   "footnote": "Constitución, art. 90 · capítulo 1: «Senado de Progreso»",
+   "lines": [
+    {
+     "text": "Enfrente, PSOE y Frente Amplio van juntos: el «Senado de Progreso»."
+    },
+    {
+     "text": "Y quien tenga mayoría absoluta puede vetar leyes y obligar al Congreso a votarlas otra vez.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@mayoría",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5,
+     "zoom": 1.05
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@juntos",
+       "pose": "saluda",
+       "mira": "der"
+      }
+     ],
+     "entra": "izq",
+     "id": "sanchez"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 780,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@juntos",
+       "pose": "saluda",
+       "mira": "izq"
+      }
+     ],
+     "entra": "der",
+     "id": "fa"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 900,
+     "scale": 0.6,
+     "at": "@Frente",
+     "props": {
+      "texto": "FRENTE AMPLIO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "rotulo",
+     "text": "«SENADO DE PROGRESO»",
+     "x": 540,
+     "y": 430,
+     "size": 78,
+     "color": "amarillo",
+     "at": "@Progreso",
+     "golpe": true,
+     "out": "@mayoría",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "VETO",
+     "x": 540,
+     "y": 430,
+     "size": 150,
+     "color": "rojo",
+     "at": "@vetar",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "libro",
+     "x": 540,
+     "y": 640,
+     "scale": 0.6,
+     "at": "@leyes",
+     "props": {
+      "titulo": "LEY",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 820,
+     "scale": 0.7,
+     "at": "@Congreso",
+     "props": {
+      "texto": "VUELVE AL CONGRESO",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "colegio",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leo en comentarios",
+   "lines": [
+    {
+     "text": "¿Pacto inteligente o trampa al votante? Te leo en comentarios.",
+     "tono": "energia"
+    },
+    {
+     "text": "Y sigue a Piz para no perderte nada antes del 29N.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "papeleta",
+     "x": 820,
+     "y": 900,
+     "scale": 0.9,
+     "at": 0,
+     "props": {
+      "color": "sepia",
+      "texto": "SENADO"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "flota": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 380,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@inteligente",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@trampa",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo",
+       "salta": true
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿INTELIGENTE O TRAMPA?",
+     "x": 540,
+     "y": 420,
+     "size": 70,
+     "color": "amarillo",
+     "at": "@Pacto",
+     "golpe": true,
+     "out": "@sigue-0.3",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@29N",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.6,
+  "titulo": "El pacto del Senado: PP y Vox",
+  "capitulo": 2
+ }
+}

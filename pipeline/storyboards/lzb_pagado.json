@@ -1,0 +1,1194 @@
+{
+ "slug": "lzb_pagado",
+ "title": "Pagado, prometido… ¿y sin cambiar?",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Maldita (30/10/2026): Adif adjudicó a Thales en 2021 la sustitución del LZB por ERTMS en Madrid-Sevilla",
+  "Maldita (30/10/2026): qué sabemos de la comunicación del Gobierno a Bruselas (anexo de Artículo 14, sin verificar)",
+  "Infobae/EFE (28/10/2026): Puente, el LZB «en proceso de ser reemplazado»",
+  "Vozpópuli (30/10/2026): la oferta de Thales, un 28,45 % por debajo del presupuesto",
+  "Xataka (28/10/2026): el Ministerio prometió la línea renovada con ERTMS 2",
+  "HerQles (31/10/2026): Feijóo y Abascal; El Independiente (29/10/2026): comparecencia del 3/11",
+  "Tema político tras un accidente con víctimas: sin gags sobre el accidente, trenes sin cara, el choque no se dibuja"
+ ],
+ "caption": "🚆 Pagado, prometido… ¿y sin cambiar?\n💶 2021: Adif adjudica 93,8 M€ (fondos europeos) para cambiar el LZB por el ERTMS en la Madrid-Sevilla\n📅 Plazo: 52 meses, hacia enero de 2026\n🗣️ 2025: Transportes promete la línea «completamente renovada»\n⚠️ 28/10: en Urda seguía el LZB, y se cayó\n❓ ¿Se dijo a Bruselas que estaba hecho? Sin confirmar · Puente: «A la UE no se le engaña»\n💬 ¿Retraso normal o alguien tiene que dimitir? Te leo 👇\n🔔 Sigue a Piz para no perderte nada antes del 29N · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Maldita 30/10/2026 (contrato Adif-Thales y anexo a Bruselas, sin verificar) · EFE/Infobae 28/10 · Vozpópuli 30/10 · Xataka 28/10 · HerQles 31/10 · El Independiente 29/10. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#Urda",
+  "#Adif",
+  "#OscarPuente",
+  "#ERTMS",
+  "#29N",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     40,
+     70
+    ]
+   },
+   "animo": "tension",
+   "footnote": "Maldita, 30/10/2026: contrato Adif-Thales",
+   "lines": [
+    {
+     "text": "En 2021 se pagaron 93,8 millones para cambiar el sistema de seguridad que falló en Urda.",
+     "tono": "intriga"
+    },
+    {
+     "text": "El día del choque, seguía puesto el viejo.",
+     "tono": "remate",
+     "pausa": 0.25
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@viejo",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.8,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "fajo",
+     "x": 540,
+     "y": 760,
+     "scale": 1.1,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "kaching",
+     "out": "@día"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1040,
+     "scale": 0.95,
+     "at": "@93,8",
+     "props": {
+      "texto": "93,8 MILLONES",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@día"
+    },
+    {
+     "type": "rotulo",
+     "text": "PARA CAMBIARLO",
+     "x": 540,
+     "y": 420,
+     "size": 90,
+     "color": "blanco",
+     "at": "@cambiar",
+     "out": "@día",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "via",
+     "x": 540,
+     "y": 1184,
+     "scale": 1.0,
+     "at": "@día",
+     "props": {
+      "ancho": 1600
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "tren",
+     "x": -700,
+     "y": 1080,
+     "scale": 0.8,
+     "at": "@día",
+     "props": {
+      "color": "azul",
+      "cara": null,
+      "vagones": 1
+     },
+     "acciones": [
+      {
+       "at": "@día",
+       "x": 540,
+       "dur": 1.4
+      }
+     ],
+     "id": "ave",
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "scale": 0.8,
+     "at": "@seguía",
+     "props": {
+      "texto": "SISTEMA LZB · DE 1992",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1290,
+     "scale": 1.0,
+     "at": "@viejo",
+     "props": {
+      "texto": "CONFIRMADO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "contrato",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "curioso",
+   "trans": "iris",
+   "footnote": "Maldita, 30/10/2026: contrato Adif-Thales",
+   "lines": [
+    {
+     "text": "Septiembre de 2021. Adif encarga a Thales cambiar el LZB de la Madrid-Sevilla por el ERTMS, con fondos europeos."
+    },
+    {
+     "text": "Plazo: 52 meses. O sea, hacia enero de 2026.",
+     "tono": "normal",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      729.7
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@Madrid-Sevilla",
+     "plano": "general",
+     "sobre": [
+      486.7,
+      841.8
+     ],
+     "dur": 1.2,
+     "zoom": 2.0
+    },
+    {
+     "at": "@Plazo",
+     "plano": "general",
+     "sobre": [
+      486.7,
+      841.8
+     ],
+     "dur": 0.8,
+     "zoom": 1.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana"
+     },
+     "acciones": [
+      {
+       "at": "@Madrid-Sevilla",
+       "props": {
+        "lineas": [
+         {
+          "id": "ave",
+          "puntos": [
+           [
+            -3.7,
+            40.42
+           ],
+           [
+            -3.8,
+            39.85
+           ],
+           [
+            -3.71,
+            39.41
+           ],
+           [
+            -3.93,
+            38.98
+           ],
+           [
+            -4.1,
+            38.68
+           ],
+           [
+            -4.78,
+            37.89
+           ],
+           [
+            -5.98,
+            37.39
+           ]
+          ],
+          "color": "azul",
+          "dur": 1.2,
+          "ancho": 8
+         }
+        ]
+       },
+       "sfx": "rotulador"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.4
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 557.3,
+     "y": 729.7,
+     "scale": 0.1,
+     "at": "@Madrid-Sevilla",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 428.1,
+     "y": 953.9,
+     "scale": 0.1,
+     "at": "@Madrid-Sevilla+0.6",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 380,
+     "scale": 0.75,
+     "at": "@Thales",
+     "props": {
+      "texto": "ADIF → THALES · 93,8 M€",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@Plazo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bandera",
+     "x": 860,
+     "y": 1520,
+     "scale": 0.8,
+     "at": "@europeos",
+     "props": {
+      "diseno": "ue"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "abajo",
+     "out": "@Plazo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 920,
+     "scale": 0.75,
+     "at": "@Plazo",
+     "props": {
+      "mes": "ENERO 2026",
+      "inicio": 3,
+      "dias": 31,
+      "marcados": [
+       16
+      ],
+      "colores": {
+       "16": "rojo"
+      }
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 380,
+     "scale": 0.8,
+     "at": "@Plazo",
+     "props": {
+      "texto": "52 MESES",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1290,
+     "scale": 1.0,
+     "at": "@Plazo+0.4",
+     "props": {
+      "texto": "CONTRATO PÚBLICO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "promesa",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Transportes, abril 2025 (vía Maldita y Xataka)",
+   "lines": [
+    {
+     "text": "En abril de 2025, Transportes lo prometió: la línea, «completamente renovada», con el ERTMS 2."
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@renovada",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.6,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 600,
+     "y": 780,
+     "scale": 0.9,
+     "at": 0.1,
+     "props": {
+      "titulo": "TRANSPORTES · ABRIL 2025",
+      "ancho": 760,
+      "articulos": [
+       {
+        "id": "a",
+        "titulo": "LÍNEA MADRID-SEVILLA",
+        "lineas": [
+         "«completamente renovada»",
+         "con el sistema ERTMS 2"
+        ]
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@renovada",
+       "props": {
+        "resalta": [
+         "a"
+        ]
+       }
+      }
+     ],
+     "hud": true,
+     "id": "doc",
+     "entra": "nada",
+     "dibujo": 1.0,
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 220,
+     "y": 1500,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@prometió",
+       "pose": "piensa",
+       "mira": "der"
+      },
+      {
+       "at": "@renovada",
+       "cara": "esceptica"
+      }
+     ],
+     "entra": "izq",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 700,
+     "y": 1290,
+     "scale": 1.0,
+     "at": "@ERTMS",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "urda",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     40,
+     70
+    ]
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Puente, 28/10/2026 (EFE vía Infobae)",
+   "lines": [
+    {
+     "text": "El 28 de octubre, en Urda, el que funcionaba era el LZB. Y se cayó."
+    },
+    {
+     "text": "Puente lo admite: está «en proceso de reemplazar», porque ya no se fabrica.",
+     "tono": "normal",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Puente",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "via",
+     "x": 540,
+     "y": 1184,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "ancho": 1600
+     },
+     "acciones": [],
+     "entra": "nada",
+     "out": "@Puente"
+    },
+    {
+     "type": "objeto",
+     "objeto": "tren",
+     "x": 540,
+     "y": 1080,
+     "scale": 0.8,
+     "at": 0,
+     "props": {
+      "color": "azul",
+      "cara": null,
+      "vagones": 1
+     },
+     "acciones": [],
+     "id": "ave",
+     "entra": "nada",
+     "out": "@Puente"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "scale": 0.9,
+     "at": "@LZB",
+     "props": {
+      "texto": "LZB",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@cayó"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1290,
+     "scale": 1.0,
+     "at": "@cayó",
+     "props": {
+      "texto": "LZB CAÍDO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@Puente"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lazo",
+     "x": 960,
+     "y": 300,
+     "scale": 0.35,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "puente",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@Puente",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@admite",
+       "pose": "encoge"
+      },
+      {
+       "at": "@fabrica",
+       "pose": "manos_juntas"
+      }
+     ],
+     "entra": "abajo",
+     "id": "puente"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 520,
+     "scale": 0.72,
+     "at": "@admite",
+     "props": {
+      "lineas": [
+       "PUENTE:",
+       "«en proceso",
+       "de reemplazar»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1290,
+     "scale": 1.0,
+     "at": "@fabrica",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "bruselas",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     30,
+     56,
+     120
+    ]
+   },
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "Artículo 14 y Maldita, 30/10/2026",
+   "lines": [
+    {
+     "text": "¿Se le dijo a Bruselas que ya estaba hecho? Artículo 14 publica un documento de mayo que da los contratos por ejecutados.",
+     "tono": "intriga"
+    },
+    {
+     "text": "Maldita no lo ha podido verificar. Y Puente lo niega: «A la UE no se le engaña». Solo certificaron que estaba colocado.",
+     "tono": "normal",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Puente",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "bandera",
+     "x": 860,
+     "y": 1300,
+     "scale": 0.9,
+     "at": 0,
+     "props": {
+      "diseno": "ue"
+     },
+     "acciones": [],
+     "entra": "abajo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 470,
+     "y": 800,
+     "scale": 0.85,
+     "at": "@documento",
+     "props": {
+      "titulo": "ANEXO A BRUSELAS",
+      "subtitulo": "MAYO 2026",
+      "ancho": 720,
+      "articulos": [
+       {
+        "id": "a",
+        "titulo": "CONTRATOS",
+        "lineas": [
+         "«ejecutados»"
+        ]
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@ejecutados",
+       "props": {
+        "resalta": [
+         "a"
+        ]
+       }
+      }
+     ],
+     "hud": true,
+     "id": "anexo",
+     "entra": "nada",
+     "dibujo": 1.0,
+     "sfx": "papel",
+     "out": "@Puente"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 330,
+     "scale": 1.0,
+     "at": "@verificar",
+     "props": {
+      "texto": "SIN CONFIRMAR",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "puente",
+     "x": 360,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@Puente",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@niega",
+       "pose": "senala"
+      },
+      {
+       "at": "@colocado",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "izq",
+     "id": "puente"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 520,
+     "scale": 0.72,
+     "at": "@niega",
+     "props": {
+      "lineas": [
+       "PUENTE:",
+       "«A la UE",
+       "no se le engaña»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@colocado"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 520,
+     "scale": 0.72,
+     "at": "@colocado",
+     "props": {
+      "lineas": [
+       "Certificado:",
+       "equipo «colocado»",
+       "(junio 2026)"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "id": "partidos",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     40,
+     70
+    ]
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "HerQles 31/10 · El Independiente 29/10/2026",
+   "lines": [
+    {
+     "text": "Feijóo habla de un sistema «obsoleto»: «si no dimiten ellos, les dimitiremos en las urnas». Abascal lo llama «un crimen»."
+    },
+    {
+     "text": "Puente no dimite. Comparece el 3 de noviembre.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 230,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@dimitiremos",
+       "pose": "senala"
+      }
+     ],
+     "entra": "pop",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@Abascal",
+     "cara": "enfado",
+     "acciones": [
+      {
+       "at": "@crimen",
+       "pose": "punos"
+      }
+     ],
+     "entra": "pop",
+     "id": "abascal"
+    },
+    {
+     "type": "personaje",
+     "quien": "puente",
+     "x": 850,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@Puente",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@dimite",
+       "pose": "cruzados"
+      }
+     ],
+     "entra": "pop",
+     "id": "puente"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 520,
+     "scale": 0.72,
+     "at": "@Feijóo",
+     "props": {
+      "lineas": [
+       "FEIJÓO (PP):",
+       "«les dimitiremos",
+       "en las urnas»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 520,
+     "scale": 0.72,
+     "at": "@Abascal",
+     "props": {
+      "lineas": [
+       "ABASCAL (VOX):",
+       "«un crimen»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Puente"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 520,
+     "scale": 0.72,
+     "at": "@Puente",
+     "props": {
+      "lineas": [
+       "PUENTE (PSOE):",
+       "no dimite",
+       "Congreso · 3 nov."
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 330,
+     "scale": 1.0,
+     "at": "@urnas",
+     "props": {
+      "texto": "DECLARACIONES",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Adif, Declaración sobre la Red 2027 (vía Maldita)",
+   "lines": [
+    {
+     "text": "Ahora Adif habla de ponerlo en servicio en 2027."
+    },
+    {
+     "text": "¿Retraso normal de una obra así, o alguien tiene que dimitir? Te leo en comentarios.",
+     "tono": "energia",
+     "pausa": 0.2
+    },
+    {
+     "text": "Y sigue a Piz para no perderte nada antes del 29N.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 800,
+     "y": 820,
+     "scale": 0.42,
+     "at": 0,
+     "props": {
+      "mes": "¿2027?",
+      "inicio": 4,
+      "dias": 31,
+      "tachados": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "papel",
+     "out": "@Retraso"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 380,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "esceptica",
+     "acciones": [
+      {
+       "at": "@2027",
+       "pose": "jarras",
+       "mira": "der"
+      },
+      {
+       "at": "@Retraso",
+       "pose": "piensa",
+       "mira": "camara",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@dimitir",
+       "pose": "senala",
+       "mira": "camara"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿RETRASO O DIMISIÓN?",
+     "x": 540,
+     "y": 420,
+     "size": 70,
+     "color": "amarillo",
+     "at": "@Retraso",
+     "golpe": true,
+     "out": "@sigue-0.3",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@29N",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.2,
+  "titulo": "Pagado, prometido… ¿y sin cambiar?",
+  "capitulo": null
+ }
+}

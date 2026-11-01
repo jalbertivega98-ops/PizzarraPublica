@@ -1,0 +1,1241 @@
+{
+ "slug": "dimite_puente",
+ "title": "¿Debe dimitir Puente?",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "El Independiente (29/10/2026): comparecencia de Puente el martes 3/11 a las 17:00; Feijóo",
+  "Nuevaradio (31/10/2026): 69 fallecidos (balance provisional); Puente descarta dimitir por ahora",
+  "Malagaes: primer informe AITAT (160-200 km/h), posible error humano, querella de Vox, PNV",
+  "HerQles (31/10/2026): Colau pide su dimisión",
+  "Tema político tras una tragedia: tono sobrio, sin gags sobre el accidente, el choque no se dibuja"
+ ],
+ "caption": "🚆 ¿Debe dimitir Puente?\n🖤 28/10: el accidente de Urda · 69 fallecidos (balance provisional)\n📄 Primer informe: cae el LZB, Adif autoriza a seguir, alcance a 160-200 km/h (preliminar)\n🗣️ PP, Vox, Colau y PNV piden responsabilidades · Puente no dimite por ahora\n🏛️ Comparece el martes 3/11 a las 17:00 en el Congreso\n💬 ¿Dimitir ya (A) o esperar a la investigación (B)? Te leo 👇\n🔔 Sigue a Piz: el martes te contamos qué dice · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: El Independiente 29/10/2026 · Nuevaradio 31/10 · Malagaes (informe AITAT) · HerQles 31/10. Cifras provisionales. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#OscarPuente",
+  "#Urda",
+  "#Adif",
+  "#29N",
+  "#EleccionesGenerales",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     40,
+     70
+    ]
+   },
+   "animo": "tension",
+   "footnote": "Nuevaradio 31/10 · HerQles 31/10/2026",
+   "lines": [
+    {
+     "text": "Hasta socios del Gobierno le piden que dimita. Y él, de momento, dice que no.",
+     "tono": "intriga"
+    },
+    {
+     "text": "El martes, Óscar Puente da la cara por Urda.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@no",
+     "plano": "medio",
+     "sobre": "puente",
+     "dur": 0.4,
+     "aire": 260
+    },
+    {
+     "at": "@martes",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "puente",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@socios",
+       "mira": "izq"
+      },
+      {
+       "at": "@dimita",
+       "mira": "der",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@no",
+       "pose": "cruzados",
+       "cara": "serio",
+       "mira": "camara"
+      },
+      {
+       "at": "@cara",
+       "pose": "manos_juntas"
+      }
+     ],
+     "entra": "nada",
+     "id": "puente"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿DIMISIÓN?",
+     "x": 540,
+     "y": 440,
+     "size": 120,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@martes",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 220,
+     "y": 700,
+     "scale": 0.8,
+     "at": "@socios",
+     "props": {
+      "texto": "DIMISIÓN",
+      "color": "rojo",
+      "tinta": "blanco"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "abajo",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 860,
+     "y": 760,
+     "scale": 0.8,
+     "at": "@dimita",
+     "props": {
+      "texto": "DIMISIÓN",
+      "color": "rojo",
+      "tinta": "blanco"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "abajo",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 560,
+     "scale": 0.8,
+     "at": "@dimita+0.4",
+     "props": {
+      "texto": "RESPONSABILIDADES",
+      "color": "rojo",
+      "tinta": "blanco"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "abajo",
+     "sfx": "golpe",
+     "out": "@martes"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 820,
+     "y": 560,
+     "scale": 0.34,
+     "at": "@martes",
+     "props": {
+      "mes": "NOVIEMBRE 2026",
+      "inicio": 6,
+      "dias": 30,
+      "marcados": [
+       3
+      ],
+      "colores": {
+       "3": "rojo"
+      }
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "papel"
+    },
+    {
+     "type": "rotulo",
+     "text": "MARTES 3 · CONGRESO",
+     "x": 540,
+     "y": 440,
+     "size": 70,
+     "color": "blanco",
+     "at": "@martes",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "lazo",
+     "x": 960,
+     "y": 220,
+     "scale": 0.3,
+     "at": "@Urda",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop"
+    }
+   ]
+  },
+  {
+   "id": "urda",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "triste",
+   "trans": "iris",
+   "footnote": "El Independiente 29/10 · Nuevaradio 31/10/2026",
+   "lines": [
+    {
+     "text": "28 de octubre. Un AVE alcanza a un Iryo parado entre Urda y Los Yébenes.",
+     "tono": "sobrio"
+    },
+    {
+     "text": "69 muertos, según el último balance provisional.",
+     "tono": "sobrio",
+     "pausa": 0.25
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      729.7
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@AVE",
+     "plano": "general",
+     "sobre": [
+      550.8,
+      804.5
+     ],
+     "dur": 1.0,
+     "zoom": 2.4
+    },
+    {
+     "at": "@69",
+     "plano": "general",
+     "sobre": [
+      550.8,
+      804.5
+     ],
+     "dur": 0.8,
+     "zoom": 1.6
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana"
+     },
+     "acciones": [
+      {
+       "at": "@AVE",
+       "props": {
+        "lineas": [
+         {
+          "id": "ave",
+          "puntos": [
+           [
+            -3.7,
+            40.42
+           ],
+           [
+            -3.8,
+            39.85
+           ],
+           [
+            -3.71,
+            39.41
+           ],
+           [
+            -3.93,
+            38.98
+           ],
+           [
+            -4.1,
+            38.68
+           ],
+           [
+            -4.78,
+            37.89
+           ],
+           [
+            -5.98,
+            37.39
+           ]
+          ],
+          "color": "azul",
+          "dur": 1.0,
+          "ancho": 8
+         }
+        ]
+       },
+       "sfx": "rotulador"
+      },
+      {
+       "at": "@Urda",
+       "props": {
+        "resalta": [
+         "Toledo"
+        ]
+       }
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.2
+    },
+    {
+     "type": "rotulo",
+     "text": "28 OCTUBRE",
+     "x": 540,
+     "y": 440,
+     "size": 90,
+     "color": "blanco",
+     "at": 0.1,
+     "out": "@69",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 556.8,
+     "y": 804.5,
+     "scale": 0.12,
+     "at": "@Urda",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 520,
+     "scale": 0.6,
+     "at": "@Yébenes",
+     "props": {
+      "texto": "URDA · LOS YÉBENES",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@69"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lazo",
+     "x": 960,
+     "y": 220,
+     "scale": 0.3,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 520,
+     "scale": 0.75,
+     "at": "@69",
+     "props": {
+      "valor": 69,
+      "sufijo": " FALLECIDOS",
+      "ancho": 860
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@provisional",
+     "props": {
+      "texto": "PROVISIONAL",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "informe",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     210,
+     212,
+     218
+    ]
+   },
+   "animo": "tension",
+   "trans": "papel",
+   "footnote": "Primer informe AITAT, vía Malagaes",
+   "lines": [
+    {
+     "text": "Primer informe: se cae el sistema LZB, Adif autoriza al AVE a seguir… y alcanza al Iryo a entre 160 y 200 por hora."
+    },
+    {
+     "text": "Es preliminar. La investigación sigue abierta.",
+     "tono": "normal",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Adif",
+     "plano": "general",
+     "sobre": [
+      540,
+      820
+     ],
+     "dur": 0.6,
+     "zoom": 1.08
+    },
+    {
+     "at": "@preliminar",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 540,
+     "y": 760,
+     "scale": 0.82,
+     "at": 0,
+     "props": {
+      "titulo": "PRIMER INFORME",
+      "subtitulo": "AITAT",
+      "ancho": 760,
+      "articulos": [
+       {
+        "id": "a",
+        "titulo": "1 · SE CAE EL LZB",
+        "lineas": []
+       },
+       {
+        "id": "b",
+        "titulo": "2 · ADIF: «SIGA»",
+        "lineas": []
+       },
+       {
+        "id": "c",
+        "titulo": "3 · 160-200 KM/H",
+        "lineas": []
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@LZB",
+       "props": {
+        "resalta": [
+         "a"
+        ]
+       }
+      },
+      {
+       "at": "@autoriza",
+       "props": {
+        "resalta": [
+         "b"
+        ]
+       }
+      },
+      {
+       "at": "@160",
+       "props": {
+        "resalta": [
+         "c"
+        ]
+       }
+      }
+     ],
+     "hud": true,
+     "id": "inf",
+     "entra": "nada",
+     "dibujo": 0.9,
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 880,
+     "y": 1340,
+     "scale": 0.42,
+     "at": "@Primer",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@LZB",
+       "pose": "piensa",
+       "mira": "inf"
+      },
+      {
+       "at": "@autoriza",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@alcanza",
+       "pose": "manos_juntas",
+       "cara": "triste"
+      },
+      {
+       "at": "@Iryo",
+       "mira": "camara"
+      },
+      {
+       "at": "@200",
+       "cara": "triste"
+      },
+      {
+       "at": "@abierta",
+       "pose": "normal",
+       "mira": "camara",
+       "cara": "serio"
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 260,
+     "y": 1320,
+     "scale": 0.6,
+     "at": "@cae",
+     "props": {
+      "texto": "LZB CAÍDO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@preliminar"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1460,
+     "scale": 0.65,
+     "at": "@160",
+     "props": {
+      "texto": "160-200 KM/H",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@preliminar"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1200,
+     "scale": 0.6,
+     "at": "@alcanza",
+     "props": {
+      "texto": "EL AVE ALCANZA AL IRYO",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@160"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1400,
+     "scale": 1.0,
+     "at": "@preliminar",
+     "props": {
+      "texto": "PRELIMINAR",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "rotulo",
+     "text": "INVESTIGACIÓN ABIERTA",
+     "x": 540,
+     "y": 440,
+     "size": 66,
+     "color": "rojo",
+     "at": "@investigación",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "si",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     40,
+     70
+    ]
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "El Independiente, 29/10/2026 · Malagaes · HerQles 31/10",
+   "lines": [
+    {
+     "text": "Feijóo: las responsabilidades políticas «no son opcionales». Vox se querella contra él."
+    },
+    {
+     "text": "Y Colau y el PNV piden su salida.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Colau",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "PIDEN QUE SE VAYA",
+     "x": 540,
+     "y": 440,
+     "size": 80,
+     "color": "rojo",
+     "at": 0,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 230,
+     "y": 1340,
+     "scale": 0.48,
+     "at": 0.1,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@opcionales",
+       "pose": "senala"
+      }
+     ],
+     "entra": "pop",
+     "id": "feijoo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 430,
+     "y": 560,
+     "scale": 0.7,
+     "at": "@responsabilidades",
+     "props": {
+      "lineas": [
+       "FEIJÓO (PP):",
+       "«no son",
+       "opcionales»"
+      ],
+      "cola": [
+       -1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Vox"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.48,
+     "at": "@Vox",
+     "cara": "enfado",
+     "acciones": [
+      {
+       "at": "@querella",
+       "pose": "punos"
+      }
+     ],
+     "entra": "pop",
+     "id": "abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 560,
+     "y": 600,
+     "scale": 0.6,
+     "at": "@querella",
+     "props": {
+      "titulo": "QUERELLA",
+      "subtitulo": "VOX",
+      "ancho": 520,
+      "articulos": []
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 0.6,
+     "sfx": "papel",
+     "out": "@Colau"
+    },
+    {
+     "type": "personaje",
+     "quien": "colau",
+     "x": 850,
+     "y": 1340,
+     "scale": 0.48,
+     "at": "@Colau",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@salida",
+       "pose": "senala_izq"
+      }
+     ],
+     "entra": "pop",
+     "id": "colau"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 850,
+     "y": 640,
+     "scale": 0.7,
+     "at": "@PNV",
+     "props": {
+      "texto": "PNV",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 640,
+     "y": 440,
+     "scale": 0.7,
+     "at": "@piden",
+     "props": {
+      "lineas": [
+       "COLAU Y PNV:",
+       "dimisión"
+      ],
+      "cola": [
+       1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "id": "no",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Nuevaradio 31/10 · Malagaes",
+   "lines": [
+    {
+     "text": "Puente descarta dimitir por ahora. El Gobierno apunta a un posible error humano."
+    },
+    {
+     "text": "Y la investigación aún no ha terminado.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@error",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "puente",
+     "x": 500,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@descarta",
+       "pose": "cruzados"
+      },
+      {
+       "at": "@Gobierno",
+       "pose": "manos_juntas"
+      },
+      {
+       "at": "@error",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@terminado",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "izq",
+     "id": "puente"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 560,
+     "y": 460,
+     "scale": 0.7,
+     "at": "@descarta",
+     "props": {
+      "lineas": [
+       "PUENTE:",
+       "por ahora,",
+       "no dimite"
+      ],
+      "cola": [
+       -1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Gobierno"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 640,
+     "y": 460,
+     "scale": 0.7,
+     "at": "@Gobierno",
+     "props": {
+      "lineas": [
+       "GOBIERNO:",
+       "posible",
+       "error humano"
+      ],
+      "cola": [
+       1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@investigación"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lupa",
+     "x": 820,
+     "y": 900,
+     "scale": 0.7,
+     "at": "@investigación",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 820,
+     "y": 1250,
+     "scale": 0.5,
+     "at": "@aún",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@humano",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "El Independiente, 29/10/2026",
+   "lines": [
+    {
+     "text": "Martes, a las cinco, en el Congreso."
+    },
+    {
+     "text": "¿Dimitir ya, o esperar a la investigación? A o B, te leo.",
+     "tono": "energia",
+     "pausa": 0.15
+    },
+    {
+     "text": "Y sigue a Piz: el martes te contamos qué dice.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.6,
+     "out": "@Dimitir"
+    },
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 860,
+     "y": 520,
+     "scale": 0.45,
+     "at": "@cinco",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Dimitir"
+    },
+    {
+     "type": "rotulo",
+     "text": "MARTES 3 · 17:00",
+     "x": 540,
+     "y": 440,
+     "size": 80,
+     "color": "amarillo",
+     "at": "@Martes",
+     "out": "@Dimitir",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.62,
+     "at": "@Dimitir-0.4",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@ya",
+       "pose": "senala_izq",
+       "mira": "izq"
+      },
+      {
+       "at": "@esperar",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@leo",
+       "pose": "piensa",
+       "mira": "camara",
+       "cara": "normal"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@martes#2",
+       "pose": "senala_arriba"
+      },
+      {
+       "at": "@contamos",
+       "pose": "jarras",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 260,
+     "y": 700,
+     "scale": 0.58,
+     "at": "@ya",
+     "props": {
+      "texto": "A · DIMITIR YA",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 820,
+     "y": 700,
+     "scale": 0.58,
+     "at": "@esperar",
+     "props": {
+      "texto": "B · ESPERAR",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿A O B?",
+     "x": 540,
+     "y": 360,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@leo",
+     "golpe": true,
+     "out": "@sigue-0.2",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 830,
+     "y": 760,
+     "scale": 0.3,
+     "at": "@martes#2",
+     "props": {
+      "mes": "NOVIEMBRE 2026",
+      "inicio": 6,
+      "dias": 30,
+      "marcados": [
+       3
+      ],
+      "colores": {
+       "3": "rojo"
+      }
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "papel"
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 440,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@dice",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 1.2,
+  "titulo": "¿Debe dimitir Puente?",
+  "capitulo": null
+ }
+}

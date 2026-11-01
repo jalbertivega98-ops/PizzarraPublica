@@ -1,0 +1,1409 @@
+{
+ "slug": "expedientado",
+ "title": "Expedientado otra vez",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Infobae (29/10/2026): sexto expediente de la JEC a Sánchez, por el vídeo ante el Guernica; retirada del vídeo",
+  "Moncloa.com (15/10/2026) y La Región (29/10/2026): expedientes anteriores y 6.600 € en multas desde 2020",
+  "Esdiario (30/10/2026): Cayetana Álvarez de Toledo, «séptimo expediente»",
+  "El PP cuenta siete (incluye Navantia 2024 y dic. 2025); la prensa citada cuenta seis",
+  "LOREG arts. 50.2 y 53 (neutralidad institucional en periodo electoral)"
+ ],
+ "caption": "🖼️ Expedientado otra vez\n🎥 24/10: Sánchez graba un vídeo ante el Guernica\n⚖️ 29/10: la Junta Electoral ordena retirarlo y abre expediente (denuncia del PP)\n🔢 Es el sexto · 6.600 € en multas desde 2020\n🗣️ PP: «tramposo reincidente» · Moncloa: «sin peticiones de voto»\n💬 ¿Infracción o persecución? A o B 👇\n🔔 Sigue a Piz para no perderte nada antes del 29N · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Infobae 29/10/2026 · Moncloa.com 15/10 · La Región 29/10 · Esdiario 30/10 · LOREG arts. 50.2 y 53. El PP cuenta siete expedientes; la prensa citada, seis. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PedroSanchez",
+  "#JuntaElectoral",
+  "#Guernica",
+  "#29N",
+  "#EleccionesGenerales",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     30,
+     34,
+     52
+    ]
+   },
+   "animo": "tension",
+   "footnote": "Infobae, 29/10/2026",
+   "lines": [
+    {
+     "text": "Este vídeo de Pedro Sánchez ya no existe.",
+     "tono": "intriga"
+    },
+    {
+     "text": "La Junta Electoral le ha obligado a quitarlo.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@existe",
+     "plano": "general",
+     "sobre": [
+      540,
+      860
+     ],
+     "dur": 0.5,
+     "zoom": 1.12
+    },
+    {
+     "at": "@quitarlo",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "tele",
+     "x": 540,
+     "y": 780,
+     "scale": 0.95,
+     "at": 0,
+     "props": {
+      "texto": "SÁNCHEZ",
+      "pantalla": [
+       40,
+       70,
+       150
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@existe",
+       "props": {
+        "texto": "NO DISPONIBLE",
+        "pantalla": [
+         60,
+         60,
+         70
+        ]
+       }
+      },
+      {
+       "at": "@Junta",
+       "props": {
+        "texto": "RETIRADO",
+        "pantalla": [
+         150,
+         40,
+         40
+        ]
+       }
+      }
+     ],
+     "hud": true,
+     "entra": "nada"
+    },
+    {
+     "type": "rotulo",
+     "text": "24 OCT · REINA SOFÍA",
+     "x": 540,
+     "y": 440,
+     "size": 64,
+     "color": "blanco",
+     "at": 0.15,
+     "out": "@Junta",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 860,
+     "y": 1340,
+     "scale": 0.42,
+     "at": "@Sánchez",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@existe",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@quitarlo",
+       "cara": "serio",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "der",
+     "id": "sanchez"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 220,
+     "y": 1340,
+     "scale": 0.42,
+     "at": "@vídeo",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@existe",
+       "cara": "susto"
+      },
+      {
+       "at": "@obligado",
+       "pose": "senala",
+       "mira": "der",
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "izq",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "JUNTA ELECTORAL CENTRAL",
+     "x": 540,
+     "y": 440,
+     "size": 62,
+     "color": "amarillo",
+     "at": "@Junta",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1180,
+     "scale": 1.0,
+     "at": "@quitarlo",
+     "props": {
+      "texto": "RETIRADO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "guernica",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     236,
+     226,
+     204
+    ]
+   },
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Infobae, 29/10/2026",
+   "lines": [
+    {
+     "text": "24 de octubre: Sánchez graba un vídeo delante del Guernica."
+    },
+    {
+     "text": "«Cuando unos apostaban por las bombas, nosotros dijimos no a la guerra».",
+     "tono": "normal",
+     "pausa": 0.1,
+     "efecto_voz": "tele"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Guernica",
+     "plano": "general",
+     "sobre": [
+      540,
+      800
+     ],
+     "dur": 0.6,
+     "zoom": 1.08
+    },
+    {
+     "at": "@Cuando",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 820,
+     "y": 1000,
+     "scale": 0.36,
+     "at": 0,
+     "props": {
+      "mes": "OCTUBRE 2026",
+      "inicio": 3,
+      "dias": 31,
+      "marcados": [
+       24
+      ],
+      "colores": {
+       "24": "rojo"
+      }
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "papel",
+     "out": "@Guernica"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 640,
+     "scale": 1.15,
+     "at": "@graba",
+     "props": {
+      "lineas": [
+       "GUERNICA",
+       "MUSEO REINA SOFÍA"
+      ],
+      "color": "gris"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "golpe",
+     "dibuja": 0.8
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": -200,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@Sánchez",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Sánchez",
+       "x": 330,
+       "dur": 1.0
+      },
+      {
+       "at": "@delante",
+       "gira": true,
+       "mira": "camara"
+      },
+      {
+       "at": "@Cuando",
+       "pose": "senala",
+       "cara": "serio"
+      },
+      {
+       "at": "@bombas",
+       "pose": "arriba"
+      },
+      {
+       "at": "@dijimos",
+       "pose": "cruzados"
+      },
+      {
+       "at": "@guerra",
+       "pose": "punos"
+      }
+     ],
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "movil",
+     "x": 820,
+     "y": 1200,
+     "scale": 0.55,
+     "at": "@vídeo",
+     "props": {
+      "pantalla": "aviso",
+      "remite": "GRABANDO",
+      "lineas": [
+       "REC"
+      ]
+     },
+     "acciones": [],
+     "entra": "abajo",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 600,
+     "y": 860,
+     "scale": 0.72,
+     "at": "@Cuando",
+     "props": {
+      "lineas": [
+       "SÁNCHEZ:",
+       "«unos apostaban",
+       "por las bombas…»"
+      ],
+      "cola": [
+       -1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@nosotros"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 600,
+     "y": 860,
+     "scale": 0.72,
+     "at": "@nosotros",
+     "props": {
+      "lineas": [
+       "SÁNCHEZ:",
+       "«…nosotros dijimos",
+       "no a la guerra»"
+      ],
+      "cola": [
+       -1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1180,
+     "y": 1340,
+     "scale": 0.4,
+     "at": "@bombas",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@bombas",
+       "x": 900,
+       "dur": 0.8
+      },
+      {
+       "at": "@dijimos",
+       "cara": "pensativo",
+       "pose": "piensa",
+       "mira": "izq"
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@guerra-0.3",
+     "props": {
+      "texto": "BALANCE DEL GOBIERNO",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "ley",
+   "fondo": "oficina",
+   "animo": "tension",
+   "trans": "papel",
+   "footnote": "Infobae, 29/10/2026 · LOREG arts. 50.2 y 53",
+   "lines": [
+    {
+     "text": "Pero ya hay elecciones convocadas, y la ley prohíbe hacer campaña con lo público."
+    },
+    {
+     "text": "El PP lo denuncia. El 29 de octubre, la Junta abre expediente.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@ley",
+     "plano": "general",
+     "sobre": [
+      540,
+      820
+     ],
+     "dur": 0.6,
+     "zoom": 1.1
+    },
+    {
+     "at": "@PP",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@expediente",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "urna",
+     "x": 820,
+     "y": 1180,
+     "scale": 0.6,
+     "at": 0,
+     "props": {
+      "texto": "29N"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 470,
+     "y": 760,
+     "scale": 0.8,
+     "at": "@ley",
+     "props": {
+      "titulo": "LEY ELECTORAL",
+      "subtitulo": "LOREG",
+      "ancho": 700,
+      "articulos": [
+       {
+        "id": "a",
+        "titulo": "ART. 50.2 Y 53",
+        "lineas": [
+         "neutralidad: nada de",
+         "campaña con medios públicos"
+        ]
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@público",
+       "props": {
+        "resalta": [
+         "a"
+        ]
+       }
+      }
+     ],
+     "hud": true,
+     "id": "loreg",
+     "entra": "nada",
+     "dibujo": 0.9,
+     "sfx": "papel",
+     "out": "@PP"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 860,
+     "y": 1340,
+     "scale": 0.45,
+     "at": "@convocadas",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@ley",
+       "pose": "piensa",
+       "mira": "loreg"
+      },
+      {
+       "at": "@prohíbe",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@campaña",
+       "cara": "esceptica"
+      }
+     ],
+     "entra": "der",
+     "out": "@PP",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 260,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@PP",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@denuncia",
+       "pose": "senala",
+       "mira": "der"
+      }
+     ],
+     "entra": "izq",
+     "id": "feijoo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 560,
+     "y": 420,
+     "scale": 0.72,
+     "at": "@denuncia",
+     "props": {
+      "lineas": [
+       "PP:",
+       "denuncia ante",
+       "la Junta"
+      ],
+      "cola": [
+       -1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@29"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 760,
+     "y": 560,
+     "scale": 0.34,
+     "at": "@29",
+     "props": {
+      "mes": "OCTUBRE 2026",
+      "inicio": 3,
+      "dias": 31,
+      "marcados": [
+       29
+      ],
+      "colores": {
+       "29": "rojo"
+      }
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@expediente",
+     "props": {
+      "texto": "EXPEDIENTE ABIERTO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "contador",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     30,
+     34,
+     52
+    ]
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Moncloa.com 15/10 · La Región 29/10/2026",
+   "lines": [
+    {
+     "text": "Y no es el primero. Es el sexto.",
+     "tono": "sorpresa"
+    },
+    {
+     "text": "2020, entrevista en la Moncloa: 500 euros. 2023, Bruselas: 2.200.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sexto",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.3,
+     "zoom": 1.15
+    },
+    {
+     "at": "@2020",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 470,
+     "scale": 0.62,
+     "at": "@primero",
+     "props": {
+      "valor": 1,
+      "sufijo": "º EXPEDIENTE",
+      "ancho": 820
+     },
+     "acciones": [
+      {
+       "at": "@sexto",
+       "props": {
+        "valor": 6,
+        "desde": 1
+       },
+       "sfx": "golpe"
+      }
+     ],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "id": "cuenta"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 860,
+     "y": 1340,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@sexto",
+       "take": true,
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@500",
+       "cara": "esceptica"
+      },
+      {
+       "at": "@2.200",
+       "cara": "sorpresa",
+       "salta": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 230,
+     "y": 1340,
+     "scale": 0.4,
+     "at": "@entrevista",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Bruselas",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "izq",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 620,
+     "scale": 0.9,
+     "at": "@2020",
+     "props": {
+      "texto": "2020 · MONCLOA · 500 €",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "izq",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "scale": 0.6,
+     "at": "@500",
+     "props": {
+      "texto": "500 €",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@2023"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 900,
+     "scale": 0.9,
+     "at": "@2023",
+     "props": {
+      "texto": "2023 · BRUSELAS · 2.200 €",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "izq",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1040,
+     "scale": 0.6,
+     "at": "@2.200",
+     "props": {
+      "texto": "2.200 €",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "contador2",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     30,
+     34,
+     52
+    ]
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Moncloa.com 15/10 · La Región 29/10/2026",
+   "lines": [
+    {
+     "text": "Después 2024, Extremadura, la Moncloa en octubre… y el Guernica."
+    },
+    {
+     "text": "Total: 6.600 euros en multas.",
+     "tono": "remate",
+     "pausa": 0.25
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Total",
+     "plano": "general",
+     "sobre": [
+      540,
+      1100
+     ],
+     "dur": 0.4,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 470,
+     "scale": 0.62,
+     "at": 0,
+     "props": {
+      "valor": 6,
+      "desde": 6,
+      "sufijo": "º EXPEDIENTE",
+      "ancho": 820
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 860,
+     "y": 1340,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@Extremadura",
+       "cara": "confundido"
+      },
+      {
+       "at": "@Guernica",
+       "cara": "pensativo",
+       "pose": "piensa"
+      },
+      {
+       "at": "@6.600",
+       "aplasta": true,
+       "cara": "susto"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 620,
+     "scale": 0.9,
+     "at": "@2024",
+     "props": {
+      "texto": "2024 · OTRA MULTA",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "izq",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 760,
+     "scale": 0.9,
+     "at": "@Extremadura",
+     "props": {
+      "texto": "EXTREMADURA",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "izq",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 900,
+     "scale": 0.9,
+     "at": "@octubre",
+     "props": {
+      "texto": "6 OCT · MONCLOA",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "izq",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 1040,
+     "scale": 0.9,
+     "at": "@Guernica",
+     "props": {
+      "texto": "29 OCT · GUERNICA",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "izq",
+     "sfx": "papel"
+    },
+    {
+     "type": "efecto",
+     "efecto": "lluvia",
+     "objeto": "moneda",
+     "n": 12,
+     "x0": 560,
+     "x1": 960,
+     "at": "@6.600",
+     "vida": 1.8
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1180,
+     "scale": 0.85,
+     "at": "@6.600",
+     "props": {
+      "texto": "6.600 € EN MULTAS",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "fx": [
+      {
+       "at": "@multas",
+       "do": "latir"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "versiones",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "iris",
+   "footnote": "Esdiario 30/10 · Infobae 29/10/2026",
+   "lines": [
+    {
+     "text": "El PP cuenta siete: «tramposo reincidente», dice Cayetana Álvarez de Toledo."
+    },
+    {
+     "text": "Moncloa responde: una reflexión de política internacional, sin pedir el voto.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Cayetana",
+     "plano": "general",
+     "sobre": [
+      400,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@Moncloa",
+     "plano": "general",
+     "sobre": [
+      660,
+      960
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 470,
+     "scale": 0.55,
+     "at": 0,
+     "props": {
+      "valor": 6,
+      "sufijo": "º EXPEDIENTE",
+      "ancho": 820
+     },
+     "acciones": [
+      {
+       "at": "@siete",
+       "props": {
+        "valor": 7,
+        "desde": 6,
+        "sufijo": " SEGÚN EL PP"
+       },
+       "sfx": "golpe"
+      }
+     ],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@Moncloa"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.45,
+     "at": "@PP",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@siete",
+       "take": true,
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@tramposo",
+       "cara": "esceptica"
+      }
+     ],
+     "entra": "der",
+     "out": "@Moncloa",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "movil",
+     "x": 300,
+     "y": 820,
+     "scale": 0.75,
+     "at": "@Cayetana",
+     "props": {
+      "pantalla": "sms",
+      "remite": "CAYETANA (PP)",
+      "lineas": [
+       "«Séptimo",
+       "expediente de",
+       "un tramposo",
+       "reincidente»"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "izq",
+     "sfx": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 820,
+     "y": 1340,
+     "scale": 0.52,
+     "at": "@Moncloa",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@responde",
+       "pose": "manos_juntas"
+      },
+      {
+       "at": "@internacional",
+       "pose": "senala_arriba",
+       "cara": "normal"
+      },
+      {
+       "at": "@voto",
+       "pose": "cruzados"
+      }
+     ],
+     "entra": "der",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 700,
+     "y": 560,
+     "scale": 0.72,
+     "at": "@reflexión",
+     "props": {
+      "lineas": [
+       "MONCLOA:",
+       "«sin peticiones",
+       "de voto»"
+      ],
+      "cola": [
+       1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@voto",
+     "props": {
+      "texto": "DECLARACIONES",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "corte",
+   "footnote": "Infobae, 29/10/2026",
+   "lines": [
+    {
+     "text": "¿Infracción o persecución? Te leo en comentarios.",
+     "tono": "energia"
+    },
+    {
+     "text": "Y sigue a Piz para ver si cae otra multa.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "¿INFRACCIÓN",
+     "x": 540,
+     "y": 360,
+     "size": 96,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@sigue-0.2",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "O PERSECUCIÓN?",
+     "x": 540,
+     "y": 470,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@persecución",
+     "golpe": true,
+     "out": "@sigue-0.2",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Infracción",
+       "pose": "senala_izq",
+       "mira": "izq"
+      },
+      {
+       "at": "@persecución",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@leo",
+       "pose": "piensa",
+       "mira": "camara",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@multa",
+       "cara": "esceptica",
+       "pose": "jarras"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 260,
+     "y": 760,
+     "scale": 0.6,
+     "at": "@leo",
+     "props": {
+      "texto": "A · INFRACCIÓN",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 820,
+     "y": 760,
+     "scale": 0.6,
+     "at": "@leo+0.3",
+     "props": {
+      "texto": "B · PERSECUCIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 400,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@multa",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 1.6,
+  "titulo": "Expedientado otra vez",
+  "capitulo": null
+ }
+}

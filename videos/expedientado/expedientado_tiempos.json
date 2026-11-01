@@ -1,0 +1,121 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 5.06,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.18,
+    "texto": "Este vídeo de Pedro Sánchez ya no existe."
+   },
+   {
+    "t0": 2.43,
+    "t1": 4.61,
+    "texto": "La Junta Electoral le ha obligado a quitarlo."
+   }
+  ]
+ },
+ {
+  "escena": "guernica",
+  "inicio": 5.06,
+  "fin": 12.17,
+  "frases": [
+   {
+    "t0": 5.32,
+    "t1": 8.53,
+    "texto": "24 de octubre: Sánchez graba un vídeo delante del Guernica."
+   },
+   {
+    "t0": 8.68,
+    "t1": 11.72,
+    "texto": "«Cuando unos apostaban por las bombas, nosotros dijimos no a la guerra»."
+   }
+  ]
+ },
+ {
+  "escena": "ley",
+  "inicio": 12.17,
+  "fin": 20.22,
+  "frases": [
+   {
+    "t0": 12.47,
+    "t1": 16.01,
+    "texto": "Pero ya hay elecciones convocadas, y la ley prohíbe hacer campaña con lo público."
+   },
+   {
+    "t0": 16.21,
+    "t1": 19.77,
+    "texto": "El PP lo denuncia. El 29 de octubre, la Junta abre expediente."
+   }
+  ]
+ },
+ {
+  "escena": "contador",
+  "inicio": 20.22,
+  "fin": 27.24,
+  "frases": [
+   {
+    "t0": 20.22,
+    "t1": 21.95,
+    "texto": "Y no es el primero. Es el sexto."
+   },
+   {
+    "t0": 22.1,
+    "t1": 26.79,
+    "texto": "2020, entrevista en la Moncloa: 500 euros. 2023, Bruselas: 2.200."
+   }
+  ]
+ },
+ {
+  "escena": "contador2",
+  "inicio": 27.24,
+  "fin": 34.2,
+  "frases": [
+   {
+    "t0": 27.24,
+    "t1": 31.3,
+    "texto": "Después 2024, Extremadura, la Moncloa en octubre… y el Guernica."
+   },
+   {
+    "t0": 31.6,
+    "t1": 33.75,
+    "texto": "Total: 6.600 euros en multas."
+   }
+  ]
+ },
+ {
+  "escena": "versiones",
+  "inicio": 34.2,
+  "fin": 43.27,
+  "frases": [
+   {
+    "t0": 34.9,
+    "t1": 38.87,
+    "texto": "El PP cuenta siete: «tramposo reincidente», dice Cayetana Álvarez de Toledo."
+   },
+   {
+    "t0": 39.07,
+    "t1": 42.82,
+    "texto": "Moncloa responde: una reflexión de política internacional, sin pedir el voto."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 43.27,
+  "fin": 48.99,
+  "frases": [
+   {
+    "t0": 43.27,
+    "t1": 45.62,
+    "texto": "¿Infracción o persecución? Te leo en comentarios."
+   },
+   {
+    "t0": 45.82,
+    "t1": 47.64,
+    "texto": "Y sigue a Piz para ver si cae otra multa."
+   }
+  ]
+ }
+]

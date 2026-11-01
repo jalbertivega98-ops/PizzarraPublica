@@ -142,7 +142,7 @@ scenes = [
                plano("@Moncloa", "general", [660, 960], 0.5, zoom=1.06)],
        elements=[
         obj("contador", 540, 470, 0, 0.55, hud=True, entra="pop", sfx="kaching",
-            props={"valor": 6, "sufijo": "º EXPEDIENTE", "ancho": 820},
+            props={"valor": 6, "desde": 6, "sufijo": "º EXPEDIENTE", "ancho": 820},
             acciones=[{"at": "@siete", "props": {"valor": 7, "desde": 6, "sufijo": " SEGÚN EL PP"}, "sfx": "golpe"}], out="@Moncloa"),
         quien("piz", 800, "@PP", 0.45, "normal", entra="der", acciones=[{"at": "@siete", "take": True, "cara": "sorpresa"},
                                                                        {"at": "@tramposo", "cara": "esceptica"}], out="@Moncloa"),

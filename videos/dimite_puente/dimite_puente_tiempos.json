@@ -1,0 +1,109 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 6.58,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 3.5,
+    "texto": "Hasta socios del Gobierno le piden que dimita. Y él, de momento, dice que no."
+   },
+   {
+    "t0": 3.75,
+    "t1": 6.13,
+    "texto": "El martes, Óscar Puente da la cara por Urda."
+   }
+  ]
+ },
+ {
+  "escena": "urda",
+  "inicio": 6.58,
+  "fin": 14.91,
+  "frases": [
+   {
+    "t0": 7.28,
+    "t1": 11.22,
+    "texto": "28 de octubre. Un AVE alcanza a un Iryo parado entre Urda y Los Yébenes."
+   },
+   {
+    "t0": 11.52,
+    "t1": 14.46,
+    "texto": "69 muertos, según el último balance provisional."
+   }
+  ]
+ },
+ {
+  "escena": "informe",
+  "inicio": 14.91,
+  "fin": 24.99,
+  "frases": [
+   {
+    "t0": 15.21,
+    "t1": 22.11,
+    "texto": "Primer informe: se cae el sistema LZB, Adif autoriza al AVE a seguir… y alcanza al Iryo a entre 160 y 200 por hora."
+   },
+   {
+    "t0": 22.36,
+    "t1": 24.54,
+    "texto": "Es preliminar. La investigación sigue abierta."
+   }
+  ]
+ },
+ {
+  "escena": "si",
+  "inicio": 24.99,
+  "fin": 31.79,
+  "frases": [
+   {
+    "t0": 24.99,
+    "t1": 29.21,
+    "texto": "Feijóo: las responsabilidades políticas «no son opcionales». Vox se querella contra él."
+   },
+   {
+    "t0": 29.36,
+    "t1": 31.34,
+    "texto": "Y Colau y el PNV piden su salida."
+   }
+  ]
+ },
+ {
+  "escena": "no",
+  "inicio": 31.79,
+  "fin": 38.07,
+  "frases": [
+   {
+    "t0": 32.05,
+    "t1": 35.71,
+    "texto": "Puente descarta dimitir por ahora. El Gobierno apunta a un posible error humano."
+   },
+   {
+    "t0": 35.86,
+    "t1": 37.62,
+    "texto": "Y la investigación aún no ha terminado."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 38.07,
+  "fin": 47.61,
+  "frases": [
+   {
+    "t0": 38.77,
+    "t1": 40.81,
+    "texto": "Martes, a las cinco, en el Congreso."
+   },
+   {
+    "t0": 41.01,
+    "t1": 43.98,
+    "texto": "¿Dimitir ya, o esperar a la investigación? A o B, te leo."
+   },
+   {
+    "t0": 44.18,
+    "t1": 46.26,
+    "texto": "Y sigue a Piz: el martes te contamos qué dice."
+   }
+  ]
+ }
+]

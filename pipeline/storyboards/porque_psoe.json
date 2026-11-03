@@ -1,0 +1,1292 @@
+{
+ "slug": "porque_psoe",
+ "title": "¿Por qué votar al PSOE?",
+ "series_tag": "¿POR QUÉ VOTAR A…? 29N",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "SMI: 735,90 € (2018) y 1.221 € en 14 pagas (2026); deducción para que quien cobra el SMI no pague IRPF (Hacienda 17/02/2026)",
+  "Pensiones con el IPC 4 años más y 20.000 M€ en el Fondo de Reserva: mitin de Zaragoza, 14/10/2026",
+  "Decretos de vivienda del 6/10/2026 (tope del 2 %, préstamos ICO): pendientes de la Diputación Permanente (12/11)",
+  "Aborto en la Constitución y «club de la motosierra»: Vozpópuli 24/10/2026",
+  "Urda: 69 fallecidos (provisional), Infobae 03/11/2026; encuestas SocioMétrica y Sigma Dos 26/10 (Qué! 01/11/2026)"
+ ],
+ "caption": "🤔 ¿Por qué votar al PSOE el 29N? Sus 4 razones\n💶 Salario mínimo +66 % y sin IRPF ✅\n👵 Pensiones con el IPC 4 años más 🎤\n🏠 Alquiler: subida máxima del 2 % ⏳\n⚠️ Ojo: Urda y las encuestas\n💬 ¿Te convence? Sí o no\n➡️ ¿Por qué votar a…? Ep. 1/3 · Próximo: PP · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Hacienda 17/02/2026 (SMI) · mitin de Zaragoza 14/10 · decretos de vivienda 6/10 (se votan el 12/11) · Vozpópuli 24/10 · Infobae 03/11 · SocioMétrica y Sigma Dos 26/10. Las razones son las del partido; ¿ves un error? Dínoslo.",
+ "hashtags": [
+  "#PSOE",
+  "#PedroSanchez",
+  "#Elecciones29N",
+  "#QuéVotar",
+  "#PolíticaEspañola",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     70,
+     16,
+     22
+    ]
+   },
+   "animo": "tension",
+   "footnote": "Elecciones generales · 29 de noviembre de 2026",
+   "lines": [
+    {
+     "text": "¿Por qué votaría alguien al PSOE, con todo lo que ha pasado?",
+     "tono": "intriga"
+    },
+    {
+     "text": "Te doy sus cuatro razones. Las suyas, no las mías.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@pasado",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@cuatro",
+     "plano": "general",
+     "sobre": [
+      540,
+      980
+     ],
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "¿POR QUÉ VOTAR",
+     "x": 540,
+     "y": 380,
+     "size": 100,
+     "color": "blanco",
+     "at": 0,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "AL PSOE?",
+     "x": 540,
+     "y": 500,
+     "size": 130,
+     "color": "amarillo",
+     "at": 0.25,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "urna",
+     "x": 540,
+     "y": 1080,
+     "scale": 0.75,
+     "at": 0,
+     "props": {
+      "texto": "29N",
+      "llena": 0.3
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "papeleta",
+     "x": 540,
+     "y": 620,
+     "scale": 0.8,
+     "at": 0.1,
+     "props": {
+      "color": [
+       225,
+       30,
+       40
+      ],
+      "texto": "PSOE"
+     },
+     "acciones": [
+      {
+       "at": "@alguien",
+       "y": 1000,
+       "dur": 0.6
+      },
+      {
+       "at": "@todo",
+       "sale": true
+      }
+     ],
+     "entra": "cae",
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 900,
+     "y": 1340,
+     "scale": 0.48,
+     "at": "@alguien",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@pasado",
+       "cara": "preocupado",
+       "pose": "encoge"
+      },
+      {
+       "at": "@razones",
+       "cara": "ilusionado",
+       "pose": "arriba"
+      }
+     ],
+     "entra": "der",
+     "id": "sanchez"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 190,
+     "y": 1340,
+     "scale": 0.48,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@pasado",
+       "pose": "piensa",
+       "mira": "der"
+      },
+      {
+       "at": "@cuatro",
+       "pose": "senala",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@suyas",
+       "pose": "manos_juntas",
+       "cara": "normal",
+       "mira": "camara"
+      }
+     ],
+     "entra": "izq",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 760,
+     "scale": 0.5,
+     "at": "@cuatro",
+     "props": {
+      "valor": 4,
+      "desde": 0,
+      "sufijo": " RAZONES",
+      "ancho": 700
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "personaje",
+     "quien": "critica",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.38,
+     "at": "@mías",
+     "cara": "esceptica",
+     "acciones": [
+      {
+       "at": "@mías",
+       "pose": "cruzados"
+      }
+     ],
+     "entra": "abajo",
+     "id": "critica"
+    }
+   ]
+  },
+  {
+   "id": "sueldo",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "SMI 2018: 735,90 € · 2026: 1.221 € (14 pagas) · Hacienda 17/02/2026",
+   "lines": [
+    {
+     "text": "Una, el sueldo: el salario mínimo ha subido un 66 por ciento desde 2018,",
+     "tono": "normal"
+    },
+    {
+     "text": "y quien lo cobra ya no paga IRPF.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@66",
+     "plano": "general",
+     "sobre": [
+      540,
+      820
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@IRPF",
+     "plano": "general",
+     "sobre": [
+      540,
+      980
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "RAZÓN 1/4 · EL SUELDO",
+     "x": 540,
+     "y": 400,
+     "size": 66,
+     "color": "amarillo",
+     "at": 0.0,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 600,
+     "scale": 0.62,
+     "at": "@salario",
+     "props": {
+      "valor": 1221,
+      "desde": 736,
+      "sufijo": " €/MES",
+      "ancho": 820
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "id": "smi"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 790,
+     "scale": 0.75,
+     "at": "@66",
+     "props": {
+      "texto": "+66 % DESDE 2018",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "contrato",
+     "x": 300,
+     "y": 1050,
+     "scale": 0.8,
+     "at": "@sueldo",
+     "props": {
+      "titulo": "NÓMINA"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.45,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@66",
+       "cara": "ilusionado",
+       "salta": true
+      },
+      {
+       "at": "@IRPF",
+       "pose": "jarras",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "hacienda",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.42,
+     "at": "@cobra",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@paga",
+       "cara": "confundido",
+       "pose": "encoge"
+      },
+      {
+       "at": "@IRPF+0.3",
+       "x": -300,
+       "dur": 0.9
+      }
+     ],
+     "entra": "izq",
+     "id": "hacienda"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 940,
+     "scale": 0.75,
+     "at": "@IRPF",
+     "props": {
+      "texto": "IRPF: 0 €",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@IRPF+0.2",
+     "props": {
+      "texto": "✔ HECHO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "pension",
+   "fondo": "salon",
+   "animo": "alegre",
+   "trans": "papel",
+   "footnote": "Mitin de Zaragoza, 14/10/2026 (politicaelectoral.com)",
+   "lines": [
+    {
+     "text": "Dos, la pensión: promete cuatro años más subiéndola con el IPC,",
+     "tono": "normal"
+    },
+    {
+     "text": "y dejar 20.000 millones en la hucha de las pensiones.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      980
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@hucha",
+     "plano": "general",
+     "sobre": [
+      540,
+      1080
+     ],
+     "dur": 0.5,
+     "zoom": 1.1
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "RAZÓN 2/4 · LA PENSIÓN",
+     "x": 540,
+     "y": 400,
+     "size": 66,
+     "color": "amarillo",
+     "at": 0.0,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 820,
+     "y": 1340,
+     "scale": 0.45,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@promete",
+       "pose": "senala_arriba",
+       "cara": "ilusionado"
+      }
+     ],
+     "entra": "der",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 420,
+     "y": 600,
+     "scale": 0.7,
+     "at": "@IPC",
+     "props": {
+      "texto": "PENSIÓN = IPC",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 420,
+     "y": 740,
+     "scale": 0.65,
+     "at": "@cuatro",
+     "props": {
+      "texto": "+4 AÑOS",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "hucha",
+     "x": 380,
+     "y": 1180,
+     "scale": 0.85,
+     "at": "@millones",
+     "props": {
+      "cara": "ilusionado"
+     },
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "pop"
+    },
+    {
+     "type": "efecto",
+     "efecto": "lluvia",
+     "objeto": "moneda",
+     "n": 10,
+     "x0": 220,
+     "x1": 560,
+     "at": "@hucha",
+     "vida": 1.8
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 900,
+     "scale": 0.55,
+     "at": "@20.000",
+     "props": {
+      "valor": 20000,
+      "desde": 0,
+      "sufijo": " M€",
+      "ancho": 700
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 160,
+     "y": 1340,
+     "scale": 0.36,
+     "at": 0.2,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@hucha",
+       "cara": "sorpresa",
+       "take": true
+      }
+     ],
+     "entra": "izq",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@pensiones",
+     "props": {
+      "texto": "ANUNCIO",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "casa",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Decretos de vivienda del 6/10/2026 · pendientes de la Diputación Permanente (12/11)",
+   "lines": [
+    {
+     "text": "Tres, la casa: por decreto, el alquiler solo podría subir un 2 por ciento,",
+     "tono": "normal"
+    },
+    {
+     "text": "y préstamos sin intereses para pagar la entrada.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@2",
+     "plano": "general",
+     "sobre": [
+      600,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@préstamos",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "RAZÓN 3/4 · LA CASA",
+     "x": 540,
+     "y": 400,
+     "size": 66,
+     "color": "amarillo",
+     "at": 0.0,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "edificio",
+     "edificio": "piso",
+     "x": 760,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "pop",
+     "dibuja": 0.6
+    },
+    {
+     "type": "objeto",
+     "objeto": "contrato",
+     "x": 300,
+     "y": 900,
+     "scale": 0.75,
+     "at": "@alquiler",
+     "props": {
+      "titulo": "ALQUILER"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 640,
+     "scale": 0.75,
+     "at": "@2",
+     "props": {
+      "texto": "MÁX. +2 %",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "llave",
+     "x": 760,
+     "y": 760,
+     "scale": 0.9,
+     "at": "@entrada",
+     "props": {},
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 760,
+     "y": 600,
+     "scale": 0.65,
+     "at": "@intereses",
+     "props": {
+      "texto": "0 % INTERÉS",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 520,
+     "y": 1340,
+     "scale": 0.42,
+     "at": "@préstamos",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@entrada",
+       "pose": "arriba",
+       "salta": true
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@decreto",
+     "props": {
+      "texto": "PENDIENTE · SE VOTA EL 12/11",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "derechos",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     236,
+     226,
+     204
+    ]
+   },
+   "animo": "tension",
+   "trans": "papel",
+   "footnote": "Mitin de Granada, 24/10/2026 (Vozpópuli)",
+   "lines": [
+    {
+     "text": "Cuatro, los derechos: blindar el aborto en la Constitución,",
+     "tono": "normal"
+    },
+    {
+     "text": "y frenar lo que llama «la motosierra» de PP y Vox.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Constitución",
+     "plano": "general",
+     "sobre": [
+      460,
+      820
+     ],
+     "dur": 0.5,
+     "zoom": 1.1
+    },
+    {
+     "at": "@motosierra",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "RAZÓN 4/4 · LOS DERECHOS",
+     "x": 540,
+     "y": 400,
+     "size": 66,
+     "color": "amarillo",
+     "at": 0.0,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 420,
+     "y": 800,
+     "scale": 0.75,
+     "at": "@blindar",
+     "props": {
+      "titulo": "CONSTITUCIÓN",
+      "subtitulo": "REFORMA",
+      "ancho": 640,
+      "articulos": [
+       {
+        "id": "a",
+        "titulo": "ABORTO",
+        "lineas": [
+         "derecho blindado"
+        ]
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@Constitución",
+       "props": {
+        "resalta": [
+         "a"
+        ]
+       }
+      }
+     ],
+     "hud": true,
+     "id": "ce",
+     "entra": "nada",
+     "dibujo": 0.9,
+     "sfx": "papel",
+     "out": "@frenar"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 830,
+     "y": 1340,
+     "scale": 0.45,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@aborto",
+       "pose": "senala_izq",
+       "mira": "izq"
+      },
+      {
+       "at": "@frenar",
+       "pose": "punos",
+       "cara": "serio",
+       "mira": "camara"
+      }
+     ],
+     "entra": "der",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 420,
+     "y": 760,
+     "scale": 0.95,
+     "at": "@frenar",
+     "props": {
+      "lineas": [
+       "«LA MOTOSIERRA»"
+      ],
+      "color": "gris_claro"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¡STOP!",
+     "x": 420,
+     "y": 980,
+     "at": "@motosierra",
+     "scale": 0.8,
+     "vida": 0.8
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@Vox",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "ojo",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     34,
+     36,
+     46
+    ]
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Infobae 03/11/2026: 69 fallecidos (provisional) · Encuestas: SocioMétrica y Sigma Dos, 26/10/2026 (Qué! 01/11/2026)",
+   "lines": [
+    {
+     "text": "Ojo: llega tocado. La tragedia de Urda tiene a su ministro Puente contra las cuerdas,",
+     "tono": "sobrio"
+    },
+    {
+     "text": "y las encuestas le dejan por debajo de 110 escaños.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Urda",
+     "plano": "general",
+     "sobre": [
+      460,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    },
+    {
+     "at": "@encuestas",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "OJO",
+     "x": 540,
+     "y": 380,
+     "size": 140,
+     "color": "rojo",
+     "at": 0,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "critica",
+     "x": 860,
+     "y": 1340,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "esceptica",
+     "acciones": [
+      {
+       "at": "@Ojo",
+       "pose": "senala_izq",
+       "mira": "izq"
+      }
+     ],
+     "entra": "der",
+     "id": "critica"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lazo",
+     "x": 300,
+     "y": 640,
+     "scale": 0.6,
+     "at": "@Urda",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "crece"
+    },
+    {
+     "type": "personaje",
+     "quien": "puente",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.42,
+     "at": "@Puente",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@cuerdas",
+       "pose": "encoge",
+       "cara": "preocupado"
+      }
+     ],
+     "entra": "izq",
+     "out": "@encuestas",
+     "id": "puente"
+    },
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 330,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@encuestas",
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 820,
+     "scale": 0.55,
+     "at": "@110",
+     "props": {
+      "valor": 108,
+      "desde": 121,
+      "sufijo": " ESCAÑOS",
+      "ancho": 760
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 640,
+     "scale": 0.6,
+     "at": "@encuestas",
+     "props": {
+      "texto": "2023: 121",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Fuentes en el comentario fijado",
+   "lines": [
+    {
+     "text": "¿Te convence? Comenta sí o no.",
+     "tono": "energia"
+    },
+    {
+     "text": "Y sigue a Piz: mañana, por qué votar al PP.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Piz",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 320
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 760,
+     "scale": 0.9,
+     "at": "@sí",
+     "props": {
+      "texto": "SÍ",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@mañana-0.2"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 760,
+     "scale": 0.9,
+     "at": "@no",
+     "props": {
+      "texto": "NO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@mañana-0.2"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿TE CONVENCE?",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@Piz-0.2",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@sí",
+       "pose": "senala_izq",
+       "mira": "izq"
+      },
+      {
+       "at": "@no",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@mañana",
+       "pose": "senala",
+       "mira": "der",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@Piz",
+       "pose": "saluda",
+       "cara": "riendo",
+       "mira": "camara"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@Piz",
+     "fx": [
+      {
+       "at": "@Piz+0.4",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 830,
+     "y": 1350,
+     "scale": 0.5,
+     "at": "@mañana",
+     "props": {
+      "texto": "PP",
+      "color": "pp"
+     },
+     "acciones": [],
+     "entra": "der",
+     "sfx": "whoosh"
+    },
+    {
+     "type": "rotulo",
+     "text": "MAÑANA:",
+     "x": 540,
+     "y": 560,
+     "size": 70,
+     "color": "blanco",
+     "at": "@mañana",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "¿POR QUÉ PP?",
+     "x": 540,
+     "y": 650,
+     "size": 80,
+     "color": "amarillo",
+     "at": "@votar",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.2,
+  "titulo": "¿Por qué votar al PSOE?",
+  "capitulo": 1
+ }
+}

@@ -1,0 +1,1332 @@
+{
+ "slug": "porque_vox",
+ "title": "¿Por qué votar a Vox?",
+ "series_tag": "¿POR QUÉ VOTAR A…? 29N",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "IRPF 0 hasta 22.000 €, IVA 18 %, IVA 0 % en la primera vivienda, desalojo en 24 h, prioridad nacional: programa de Vox (2025)",
+  "Propinas sin impuestos y «gran mayoría»: mitin de Palma, 24/10/2026 (Infobae/Europa Press)",
+  "«Remigración»: mitin de Estepona, 11/10/2026 (Qué! 12/10); militares en Ceuta y Melilla: Abascal, 18/10/2026",
+  "Sigma Dos 26/10/2026: Vox 19,9 % y 68 escaños, nuevo máximo (Qué! 01/11/2026)",
+  "Coste: 46.000 M€ según Figaredo (Vox); 85.000 M€ según el ministro de Hacienda Arcadi España"
+ ],
+ "caption": "🤔 ¿Por qué votar a Vox el 29N? Sus 4 razones\n💶 0 € de IRPF hasta 22.000 € 📝\n🏠 Sin IVA en tu primera vivienda 📝\n🛂 «Remigración» y «prioridad nacional» 🎤\n⚠️ Ojo: 46.000 o 85.000 millones\n💬 ¿Te convence? Sí o no · ¿Con cuál de los tres te quedas?\n➡️ ¿Por qué votar a…? Ep. 3/3 · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: programa económico y de vivienda de Vox (2025) · mitin de Palma 24/10 · Qué! 12/10 · Sigma Dos 26/10 · coste: Figaredo (Vox) y Arcadi España (Hacienda). Las razones son las del partido; ¿ves un error? Dínoslo.",
+ "hashtags": [
+  "#Vox",
+  "#Abascal",
+  "#Elecciones29N",
+  "#QuéVotar",
+  "#PolíticaEspañola",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     22,
+     56,
+     20
+    ]
+   },
+   "animo": "tension",
+   "footnote": "Elecciones generales · 29 de noviembre de 2026",
+   "lines": [
+    {
+     "text": "¿Por qué votaría alguien a Vox, con todo lo que ha pasado?",
+     "tono": "intriga"
+    },
+    {
+     "text": "Te doy sus cuatro razones. Las suyas, no las mías.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@pasado",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    },
+    {
+     "at": "@cuatro",
+     "plano": "general",
+     "sobre": [
+      540,
+      980
+     ],
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "¿POR QUÉ VOTAR",
+     "x": 540,
+     "y": 380,
+     "size": 100,
+     "color": "blanco",
+     "at": 0,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "A VOX?",
+     "x": 540,
+     "y": 500,
+     "size": 130,
+     "color": "amarillo",
+     "at": 0.25,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "urna",
+     "x": 540,
+     "y": 1080,
+     "scale": 0.75,
+     "at": 0,
+     "props": {
+      "texto": "29N",
+      "llena": 0.3
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "papeleta",
+     "x": 540,
+     "y": 620,
+     "scale": 0.8,
+     "at": 0.1,
+     "props": {
+      "color": [
+       90,
+       175,
+       40
+      ],
+      "texto": "VOX"
+     },
+     "acciones": [
+      {
+       "at": "@alguien",
+       "y": 1000,
+       "dur": 0.6
+      },
+      {
+       "at": "@todo",
+       "sale": true
+      }
+     ],
+     "entra": "cae",
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 900,
+     "y": 1340,
+     "scale": 0.48,
+     "at": "@alguien",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@pasado",
+       "cara": "preocupado",
+       "pose": "encoge"
+      },
+      {
+       "at": "@razones",
+       "cara": "ilusionado",
+       "pose": "arriba"
+      }
+     ],
+     "entra": "der",
+     "id": "abascal"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 190,
+     "y": 1340,
+     "scale": 0.48,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@pasado",
+       "pose": "piensa",
+       "mira": "der"
+      },
+      {
+       "at": "@cuatro",
+       "pose": "senala",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@suyas",
+       "pose": "manos_juntas",
+       "cara": "normal",
+       "mira": "camara"
+      }
+     ],
+     "entra": "izq",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 760,
+     "scale": 0.5,
+     "at": "@cuatro",
+     "props": {
+      "valor": 4,
+      "desde": 0,
+      "sufijo": " RAZONES",
+      "ancho": 700
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "personaje",
+     "quien": "critica",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.38,
+     "at": "@mías",
+     "cara": "esceptica",
+     "acciones": [
+      {
+       "at": "@mías",
+       "pose": "cruzados"
+      }
+     ],
+     "entra": "abajo",
+     "id": "critica"
+    }
+   ]
+  },
+  {
+   "id": "impuestos",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Programa económico y de vivienda de Vox (voxespana.es, 2025) · Mitin de Palma, 24/10/2026",
+   "lines": [
+    {
+     "text": "Una, los impuestos: nada de IRPF hasta 22.000 euros, el IVA del 21 al 18,",
+     "tono": "normal"
+    },
+    {
+     "text": "y sin impuestos sobre las propinas.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@IVA",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    },
+    {
+     "at": "@propinas",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "RAZÓN 1/4 · LOS IMPUESTOS",
+     "x": 540,
+     "y": 400,
+     "size": 66,
+     "color": "amarillo",
+     "at": 0.0,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "edificio",
+     "edificio": "hacienda",
+     "x": 280,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "pop",
+     "dibuja": 0.6
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 600,
+     "scale": 0.62,
+     "at": "@IRPF",
+     "props": {
+      "texto": "IRPF 0 € HASTA 22.000 €",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 770,
+     "scale": 0.68,
+     "at": "@IVA",
+     "props": {
+      "texto": "IVA: 21 → 18 %",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "hucha",
+     "x": 780,
+     "y": 1180,
+     "scale": 0.6,
+     "at": "@propinas",
+     "props": {
+      "cara": "ilusionado"
+     },
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "kaching"
+    },
+    {
+     "type": "efecto",
+     "efecto": "lluvia",
+     "objeto": "moneda",
+     "n": 8,
+     "x0": 640,
+     "x1": 920,
+     "at": "@propinas",
+     "vida": 1.8
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 780,
+     "y": 1340,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@22.000",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@propinas",
+       "x": 560,
+       "dur": 0.6,
+       "cara": "riendo"
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@propinas",
+     "props": {
+      "texto": "DOCUMENTO",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "casa",
+   "fondo": "calle",
+   "animo": "alegre",
+   "trans": "papel",
+   "footnote": "Programa económico y de vivienda de Vox (voxespana.es, 2025)",
+   "lines": [
+    {
+     "text": "Dos, la casa: sin IVA al comprar tu primera vivienda, okupas fuera en 24 horas,",
+     "tono": "normal"
+    },
+    {
+     "text": "y «prioridad nacional» en la vivienda protegida.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@okupas",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    },
+    {
+     "at": "@prioridad",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "RAZÓN 2/4 · LA CASA",
+     "x": 540,
+     "y": 400,
+     "size": 66,
+     "color": "amarillo",
+     "at": 0.0,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "edificio",
+     "edificio": "casa",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "pop",
+     "dibuja": 0.6
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 600,
+     "scale": 0.62,
+     "at": "@IVA",
+     "props": {
+      "texto": "1.ª VIVIENDA: IVA 0 %",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 780,
+     "y": 820,
+     "scale": 0.55,
+     "at": "@okupas",
+     "props": {
+      "velocidad": 4.0
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "redoble"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 1000,
+     "scale": 0.65,
+     "at": "@24",
+     "props": {
+      "texto": "OKUPAS: 24 H",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 780,
+     "scale": 0.85,
+     "at": "@prioridad",
+     "props": {
+      "lineas": [
+       "«PRIORIDAD",
+       "NACIONAL»"
+      ],
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 760,
+     "y": 1340,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@vivienda",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@24",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@prioridad",
+       "pose": "piensa",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@protegida",
+     "props": {
+      "texto": "DOCUMENTO",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "fronteras",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "tension",
+   "trans": "iris",
+   "footnote": "Mitin de Estepona 11/10 (Qué! 12/10/2026) · Abascal, 18/10/2026",
+   "lines": [
+    {
+     "text": "Tres, las fronteras: lo que llama «remigración»: devolver a quien entra ilegalmente",
+     "tono": "normal"
+    },
+    {
+     "text": "y expulsar al extranjero que delinque. Y militares en Ceuta y Melilla.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      478.7,
+      954.4
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@Ceuta",
+     "plano": "general",
+     "sobre": [
+      494.0,
+      1127.2
+     ],
+     "dur": 0.9,
+     "zoom": 2.0
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "RAZÓN 3/4 · LAS FRONTERAS",
+     "x": 540,
+     "y": 400,
+     "size": 66,
+     "color": "amarillo",
+     "at": 0.0,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "estrecho",
+      "orden": [
+       "Spain",
+       "Portugal",
+       "Gibraltar",
+       "Ceuta",
+       "Morocco",
+       "Melilla",
+       "Balearic Islands",
+       "France",
+       "Andorra",
+       "Algeria"
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@Ceuta",
+       "props": {
+        "resalta": [
+         "Ceuta",
+         "Melilla"
+        ]
+       },
+       "sfx": "pop"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.2
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 620,
+     "scale": 0.85,
+     "at": "@remigración",
+     "props": {
+      "lineas": [
+       "«REMIGRACIÓN»"
+      ],
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe",
+     "out": "@Ceuta-0.2"
+    },
+    {
+     "type": "objeto",
+     "objeto": "avion",
+     "x": 540,
+     "y": 820,
+     "scale": 0.6,
+     "at": "@devolver",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "izq",
+     "sfx": "whoosh",
+     "out": "@Ceuta-0.2"
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 411.0,
+     "y": 1118.1,
+     "scale": 0.22,
+     "at": "@Ceuta",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 594.6,
+     "y": 1176.2,
+     "scale": 0.2,
+     "at": "@Melilla",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 660.6,
+     "y": 1206.2,
+     "scale": 0.2,
+     "at": 0.4,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@expulsar",
+       "cara": "sorpresa",
+       "mira": "izq"
+      },
+      {
+       "at": "@militares",
+       "pose": "encoge",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "cae",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@militares",
+     "props": {
+      "texto": "ANUNCIO",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "momento",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     22,
+     56,
+     20
+    ]
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Encuestas: SocioMétrica y Sigma Dos, 26/10/2026 (Qué! 01/11/2026) · Mitin de Palma, 24/10/2026 (Infobae)",
+   "lines": [
+    {
+     "text": "Cuatro, el momento: está en máximos en las encuestas, cerca del 20 por ciento,",
+     "tono": "energia"
+    },
+    {
+     "text": "y Abascal pide una «gran mayoría» para ser presidente.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      940
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Abascal",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "RAZÓN 4/4 · EL MOMENTO",
+     "x": 540,
+     "y": 400,
+     "size": 66,
+     "color": "amarillo",
+     "at": 0.0,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 640,
+     "scale": 0.6,
+     "at": "@máximos",
+     "props": {
+      "valor": 19.9,
+      "desde": 12.4,
+      "decimales": 1,
+      "sufijo": " %",
+      "ancho": 700
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@Abascal-0.2"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 830,
+     "scale": 0.55,
+     "at": "@20",
+     "props": {
+      "texto": "SIGMA DOS · 26/10 · RÉCORD",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@Abascal-0.2"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 540,
+     "y": 1350,
+     "scale": 0.5,
+     "at": "@Abascal",
+     "props": {
+      "texto": "VOX",
+      "color": "vox"
+     },
+     "acciones": [],
+     "entra": "crece"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 540,
+     "y": 1200,
+     "scale": 0.5,
+     "at": "@Abascal",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@mayoría",
+       "pose": "arriba",
+       "cara": "ilusionado"
+      }
+     ],
+     "entra": "abajo",
+     "id": "abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 560,
+     "scale": 0.72,
+     "at": "@presidente",
+     "props": {
+      "lineas": [
+       "ABASCAL:",
+       "«no nos votéis",
+       "a medias»"
+      ],
+      "cola": [
+       -1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@presidente",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "ojo",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     34,
+     36,
+     46
+    ]
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Figaredo (Vox) 46.000 M€ · ministro Arcadi España 85.000 M€ (politicaelectoral.com)",
+   "lines": [
+    {
+     "text": "Ojo: Vox calcula que su bajada de impuestos cuesta 46.000 millones; Hacienda dice 85.000.",
+     "tono": "normal"
+    },
+    {
+     "text": "Y la «remigración» es su propuesta más polémica.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@46.000",
+     "plano": "general",
+     "sobre": [
+      540,
+      820
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    },
+    {
+     "at": "@remigración",
+     "plano": "general",
+     "sobre": [
+      540,
+      980
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "OJO",
+     "x": 540,
+     "y": 380,
+     "size": 140,
+     "color": "rojo",
+     "at": 0,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "critica",
+     "x": 860,
+     "y": 1340,
+     "scale": 0.42,
+     "at": 0,
+     "cara": "esceptica",
+     "acciones": [
+      {
+       "at": "@Ojo",
+       "pose": "senala_izq",
+       "mira": "izq"
+      }
+     ],
+     "entra": "der",
+     "id": "critica"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calculadora",
+     "x": 300,
+     "y": 760,
+     "scale": 0.8,
+     "at": "@46.000",
+     "props": {
+      "texto": "46.000"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "calculadora"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 560,
+     "scale": 0.55,
+     "at": "@46.000",
+     "props": {
+      "texto": "VOX",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "calculadora",
+     "x": 700,
+     "y": 760,
+     "scale": 0.8,
+     "at": "@85.000",
+     "props": {
+      "texto": "85.000"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "calculadora"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 700,
+     "y": 560,
+     "scale": 0.55,
+     "at": "@Hacienda",
+     "props": {
+      "texto": "HACIENDA",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¿?",
+     "x": 500,
+     "y": 640,
+     "at": "@85.000+0.3",
+     "scale": 0.8,
+     "vida": 0.8
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 1000,
+     "scale": 0.8,
+     "at": "@remigración",
+     "props": {
+      "lineas": [
+       "«REMIGRACIÓN»"
+      ],
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@polémica",
+     "props": {
+      "texto": "LA MÁS POLÉMICA",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Fuentes en el comentario fijado",
+   "lines": [
+    {
+     "text": "¿Te convence? Comenta sí o no.",
+     "tono": "energia"
+    },
+    {
+     "text": "¿Y tú, con cuál de los tres te quedas? Sigue a Piz.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Piz",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 320
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 760,
+     "scale": 0.9,
+     "at": "@sí",
+     "props": {
+      "texto": "SÍ",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@Piz-0.2"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 760,
+     "scale": 0.9,
+     "at": "@no",
+     "props": {
+      "texto": "NO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@Piz-0.2"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿TE CONVENCE?",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@Piz-0.2",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@sí",
+       "pose": "senala_izq",
+       "mira": "izq"
+      },
+      {
+       "at": "@no",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@tres",
+       "pose": "arriba",
+       "cara": "ilusionado",
+       "mira": "camara"
+      },
+      {
+       "at": "@Piz",
+       "pose": "saluda",
+       "cara": "riendo",
+       "mira": "camara"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@Piz",
+     "fx": [
+      {
+       "at": "@Piz+0.4",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 230,
+     "y": 1350,
+     "scale": 0.46,
+     "at": "@tres",
+     "props": {
+      "texto": "PSOE",
+      "color": "psoe"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 540,
+     "y": 1350,
+     "scale": 0.46,
+     "at": "@tres+0.15",
+     "props": {
+      "texto": "PP",
+      "color": "pp"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "atril",
+     "x": 850,
+     "y": 1350,
+     "scale": 0.46,
+     "at": "@tres+0.3",
+     "props": {
+      "texto": "VOX",
+      "color": "vox"
+     },
+     "acciones": [],
+     "entra": "nada"
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.2,
+  "titulo": "¿Por qué votar a Vox?",
+  "capitulo": 3
+ }
+}

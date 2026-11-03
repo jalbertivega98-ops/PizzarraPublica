@@ -12,6 +12,12 @@ Uso: python3 series/por_que_votar.py [psoe|pp|vox]  (sin argumento, los tres)
 import sys
 
 from _mundo import *  # noqa: F401,F403
+from _mundo import quien as _quien
+
+
+def quien(q, x, at=0.0, scale=0.75, *a, **kw):
+    """Personajes un 18 % más grandes que en la plantilla (salvo los diminutos sobre el mapa)."""
+    return _quien(q, x, at, scale * 1.18 if scale > 0.3 else scale, *a, **kw)
 
 PARTIDO = {
     "psoe": dict(nombre="PSOE", art="al PSOE", color=(225, 30, 40), fondo=(70, 16, 22), lider="sanchez", col="psoe"),
@@ -21,7 +27,7 @@ PARTIDO = {
 OSCURO = (34, 36, 46)
 SELLOS = {"hecho": ("✔ HECHO", "verde"), "doc": ("DOCUMENTO", "azul"), "anuncio": ("ANUNCIO", "amarillo"),
           "pendiente": ("PENDIENTE · SE VOTA EL 12/11", "naranja")}
-F_ENC = "Encuestas: SocioMétrica y Sigma Dos, 26/10/2026 (Qué! 01/11/2026)"
+F_ENC = "SocioMétrica y Sigma Dos, 26/10/2026"
 
 
 def bocata(lineas, at, out=None, x=540, y=520, scale=0.72, cola=(-1, 1)):
@@ -52,7 +58,7 @@ def gancho(p, extra=()):
                     rot("¿POR QUÉ VOTAR", 540, 380, 0, 100, "blanco", golpe=True),
                     rot(f"{P_['art'].upper()}?", 540, 500, 0.25, 130, "amarillo", golpe=True),
                     obj("urna", 540, 1080, 0, 0.75, entra="nada", props={"texto": "29N", "llena": 0.3}),
-                    obj("papeleta", 540, 620, 0.1, 0.8, entra="cae", sfx="papel", props={"color": P_["color"], "texto": P_["nombre"]},
+                    obj("papeleta", 540, 620, 0.1, 0.8, entra="cae", sfx="papel", props={"color": P_["col"], "texto": P_["nombre"]},
                         acciones=[{"at": "@alguien", "y": 1000, "dur": 0.6}, {"at": "@todo", "sale": True}]),
                     quien(P_["lider"], 900, "@alguien", 0.48, "normal", entra="der", acciones=[
                         {"at": "@pasado", "cara": "preocupado", "pose": "encoge"}, {"at": "@razones", "cara": "ilusionado", "pose": "arriba"}]),
@@ -61,7 +67,7 @@ def gancho(p, extra=()):
                         {"at": "@suyas", "pose": "manos_juntas", "cara": "normal", "mira": "camara"}]),
                     obj("contador", 540, 760, "@cuatro", 0.5, hud=True, entra="pop", sfx="kaching",
                         props={"valor": 4, "desde": 0, "sufijo": " RAZONES", "ancho": 700}),
-                    quien("critica", 540, "@mías", 0.38, "esceptica", entra="abajo", acciones=[{"at": "@mías", "pose": "cruzados"}]),
+                    quien("critica", 540, "@suyas", 0.42, "esceptica", entra="abajo", acciones=[{"at": "@mías", "pose": "cruzados"}]),
                     *extra,
                 ])
 
@@ -70,7 +76,8 @@ def ojo(p, lines, footnote, elements, camara):
     return dict(id="ojo", fondo={"tipo": "plano", "color": OSCURO}, animo="tension", trans="corte", footnote=footnote, lines=lines,
                 camara=camara,
                 elements=[rot("OJO", 540, 380, 0, 140, "rojo", golpe=True),
-                          quien("critica", 860, 0, 0.42, "esceptica", entra="der", acciones=[{"at": "@Ojo", "pose": "senala_izq", "mira": "izq"}]),
+                          quien("critica", 860, 0, 0.42, "esceptica", entra="der", acciones=[{"at": "@Ojo", "pose": "senala_izq", "mira": "izq"},
+                                                                                {"at": "@Ojo+2.2", "pose": "jarras", "cara": "indignado"}]),
                           *elements])
 
 
@@ -122,7 +129,8 @@ def psoe():
             etq("+66 % DESDE 2018", 540, 790, "@66", "verde", 0.75, hud=True),
             obj("contrato", 300, 1050, "@sueldo", 0.8, entra="cae", sfx="papel", props={"titulo": "NÓMINA"}),
             quien("piz", 800, 0, 0.45, "normal", entra="der", acciones=[
-                {"at": "@66", "cara": "ilusionado", "salta": True}, {"at": "@IRPF", "pose": "jarras", "cara": "riendo"}]),
+                {"at": "@66", "cara": "ilusionado", "salta": True}, {"at": "@desde", "pose": "senala_arriba", "mira": "izq"},
+                {"at": "@2018", "pose": "arriba", "cara": "riendo"}, {"at": "@IRPF", "pose": "jarras", "cara": "riendo"}]),
             quien("hacienda", 300, "@cobra", 0.42, "normal", entra="izq", acciones=[
                 {"at": "@paga", "cara": "confundido", "pose": "encoge"}, {"at": "@IRPF+0.3", "x": -300, "dur": 0.9}]),
             etq("IRPF: 0 €", 540, 940, "@IRPF", "amarillo", 0.75, hud=True),
@@ -144,7 +152,7 @@ def psoe():
             quien("piz", 160, 0.2, 0.36, "normal", entra="izq", acciones=[{"at": "@hucha", "cara": "sorpresa", "take": True}]),
             marca("anuncio", "@pensiones"),
         ]),
-        dict(id="casa", fondo="calle", animo="curioso", trans="barrido", footnote="Decretos de vivienda del 6/10/2026 · pendientes de la Diputación Permanente (12/11)", lines=[
+        dict(id="casa", fondo="calle", animo="curioso", trans="barrido", footnote="Decretos del 6/10/2026 · se votan el 12/11", lines=[
             V("Tres, la casa: por decreto, el alquiler solo podría subir un 2 por ciento,", "normal"),
             V("y préstamos sin intereses para pagar la entrada.", "normal", 0.1),
         ], camara=[plano(0, "general", [540, 1000], 0), plano("@2", "general", [600, 900], 0.5, zoom=1.08),
@@ -167,19 +175,19 @@ def psoe():
                    plano("@motosierra", "general", [540, 960], 0.4)],
            elements=[
             tit(4, "LOS DERECHOS"),
-            obj("documento", 420, 800, "@blindar", 0.75, hud=True, id="ce", entra="nada", dibujo=0.9, sfx="papel", props={
+            obj("documento", 420, 800, "@Cuatro", 1.0, hud=True, id="ce", entra="nada", dibujo=0.9, sfx="papel", props={
                 "titulo": "CONSTITUCIÓN", "subtitulo": "REFORMA", "ancho": 640,
                 "articulos": [{"id": "a", "titulo": "ABORTO", "lineas": ["derecho blindado"]}]},
                 acciones=[{"at": "@Constitución", "props": {"resalta": ["a"]}}], out="@frenar"),
             quien("sanchez", 830, 0, 0.45, "normal", entra="der", acciones=[
                 {"at": "@aborto", "pose": "senala_izq", "mira": "izq"}, {"at": "@frenar", "pose": "punos", "cara": "serio", "mira": "camara"}]),
-            obj("cartel", 420, 760, "@frenar", 0.95, hud=True, entra="cae", sfx="golpe", props={"lineas": ["«LA MOTOSIERRA»"], "color": "gris_claro"}),
+            obj("cartel", 420, 760, "@frenar", 0.95, hud=True, entra="cae", sfx="golpe", props={"lineas": ["«LA MOTOSIERRA»", "DE PP Y VOX"], "color": "gris_claro"}).__or__({"scale": 1.25}),
             pum("¡STOP!", 420, 980, "@motosierra", 0.8),
             sello("DECLARACIÓN", "azul", 1240, "@Vox"),
         ]),
         ojo("psoe", [V("Ojo: llega tocado. La tragedia de Urda tiene a su ministro Puente contra las cuerdas,", "sobrio"),
                      V("y las encuestas le dejan por debajo de 110 escaños.", "normal", 0.15)],
-            "Infobae 03/11/2026: 69 fallecidos (provisional) · " + F_ENC,
+            "Infobae 03/11/2026 · SocioMétrica y Sigma Dos 26/10",
             [obj("lazo", 300, 640, "@Urda", 0.6, hud=True, entra="crece"),
              quien("puente", 300, "@Puente", 0.42, "serio", entra="izq", acciones=[{"at": "@cuerdas", "pose": "encoge", "cara": "preocupado"}],
                    out="@encuestas"),
@@ -195,12 +203,12 @@ def psoe():
 
 # ───────────────────────────── PP ─────────────────────────────
 F_DEC = "Decálogo económico del PP, 27/09/2026 (pp.es)"
-F_CON = "«Mi contrato con España», 19/10/2026 (PDF publicado por El Debate)"
+F_CON = "«Mi contrato con España», 19/10/2026"
 
 
 def pp():
     galicia = mapa("espana", "@Galicia-0.3", 1.0, id="mapa_es",
-                   acciones=[{"at": "@Galicia", "props": {"colores": {"Galicia": (0, 104, 180)},
+                   acciones=[{"at": "@Galicia", "props": {"colores": {"Galicia": "pp"},
                                                          "resalta": ["La Coruña", "Lugo", "Orense", "Pontevedra"]}, "sfx": "pop"}])
     return [
         gancho("pp"),
@@ -212,8 +220,8 @@ def pp():
            elements=[
             tit(1, "EL BOLSILLO"),
             edif("supermercado", 300, 0, 0.55, entra="crece", sfx="pop", dibuja=0.6),
-            etq("IVA 0 %", 300, 600, "@cero", "verde", 0.75, hud=True),
-            etq("LUZ: 21 → 10 %", 760, 600, "@luz", "amarillo", 0.65, hud=True),
+            etq("IVA 0 %", 230, 600, "@cero", "verde", 0.75, hud=True),
+            etq("LUZ: DEL 21 AL 10 %", 700, 600, "@luz", "amarillo", 0.65, hud=True),
             etq("POR HIJO ×2", 540, 790, "@doble", "amarillo", 0.7, hud=True),
             quien("piz", 800, 0, 0.45, "normal", entra="der", acciones=[
                 {"at": "@cero", "cara": "ilusionado"}, {"at": "@luz", "cara": "sorpresa", "take": True},
@@ -241,7 +249,7 @@ def pp():
             marca("doc", "@horas"),
         ]),
         dict(id="palabra", fondo={"tipo": "plano", "color": (236, 226, 204)}, animo="curioso", trans="barrido",
-             footnote=F_CON + " · Galicia: mayorías absolutas en 2009, 2012, 2016 y 2020", lines=[
+             footnote="Contrato con España 19/10 · Galicia 2009-2020", lines=[
             V("Tres, la palabra: Feijóo ha firmado un «Contrato con España» de doce compromisos.", "normal"),
             V("Lo mismo que hizo en Galicia, donde ganó cuatro mayorías absolutas.", "normal", 0.15),
         ], camara=[plano(0, "general", [540, 960], 0), plano("@compromisos", "general", [460, 820], 0.5, zoom=1.08),
@@ -259,17 +267,17 @@ def pp():
             marca("doc", "@compromisos"),
         ]),
         dict(id="cambio", fondo={"tipo": "plano", "color": PARTIDO["pp"]["fondo"]}, animo="tension", trans="corte",
-             footnote=F_ENC + " · Infobae 03/11/2026", lines=[
+             footnote="Sigma Dos 26/10 · Infobae 03/11/2026", lines=[
             V("Cuatro, el cambio: va primero en las encuestas,", "energia"),
             V("y, tras Urda, exige la dimisión del ministro Puente.", "sobrio", 0.15),
         ], camara=[plano(0, "general", [540, 940], 0), plano("@Urda", "general", [540, 1000], 0.5)],
            elements=[
             tit(4, "EL CAMBIO"),
-            obj("barras", 540, 900, "@encuestas", 1.0, hud=True, entra="nada", dibujo=1.2, out="@Urda-0.2",
+            obj("barras", 540, 900, "@Cuatro", 1.0, hud=True, entra="nada", dibujo=1.2, out="@dimisión-0.1",
                 props={"sufijo": " %", "decimales": 1, "tope": 35, "barras": [
                     {"texto": "PP", "valor": 30.6, "color": "pp"}, {"texto": "PSOE", "valor": 26.1, "color": "psoe"},
                     {"texto": "VOX", "valor": 19.9, "color": "vox"}]}),
-            etq("SIGMA DOS · 26/10", 540, 560, "@encuestas", "blanco", 0.55, hud=True, out="@Urda-0.2"),
+            etq("SIGMA DOS · 26/10", 540, 1000, "@primero", "blanco", 0.55, hud=True, out="@dimisión-0.1"),
             quien("feijoo", 250, "@Urda", 0.48, "serio", entra="izq", acciones=[{"at": "@exige", "pose": "senala", "mira": "der"}]),
             quien("puente", 830, "@ministro", 0.45, "serio", entra="der", acciones=[{"at": "@Puente", "pose": "encoge", "cara": "preocupado"}]),
             bocata(["PP:", "«¡DIMISIÓN!»"], "@dimisión", x=380, y=640),
@@ -277,11 +285,13 @@ def pp():
         ]),
         ojo("pp", [V("Ojo: no ha dicho cuánto cuestan sus rebajas de impuestos.", "normal"),
                    V("Y para gobernar, casi seguro necesita a Vox: ya han pactado el Senado.", "remate", 0.15)],
-            "Coste sin cifrar: politicaelectoral.com (PP) · Pacto PP-Vox en el Senado, 26/10/2026",
-            [obj("calculadora", 300, 760, "@cuestan", 0.85, entra="cae", sfx="calculadora", props={"texto": "¿?"}, out="@Vox-0.3"),
-             quien("feijoo", 300, "@Vox", 0.42, "normal", entra="izq", acciones=[{"at": "@pactado", "pose": "senala", "mira": "der"}]),
-             quien("abascal", 620, "@Vox+0.2", 0.42, "normal", entra="der", acciones=[{"at": "@pactado", "pose": "senala_izq", "mira": "izq"}]),
-             edif("congreso", 460, "@Senado-0.2", 0.36, entra="crece", sfx="pop", texto="SENADO")],
+            "politicaelectoral.com (PP) · pacto del Senado, 26/10/2026",
+            [obj("calculadora", 300, 760, "@cuestan", 0.85, entra="cae", sfx="calculadora", props={"texto": "¿?"}, out="@Vox-0.3",
+                  acciones=[{"at": "@rebajas", "tiembla": True}]),
+             pum("¿CUÁNTO?", 360, 560, "@impuestos", 0.75),
+             quien("feijoo", 190, "@gobernar", 0.4, "normal", entra="izq", acciones=[{"at": "@pactado", "pose": "senala", "mira": "der"}]),
+             quien("abascal", 680, "@Vox+0.2", 0.4, "normal", entra="der", acciones=[{"at": "@pactado", "pose": "senala_izq", "mira": "izq"}]),
+             edif("congreso", 435, "@Senado-0.2", 0.3, entra="crece", sfx="pop", texto="SENADO")],
             camara=[plano(0, "general", [540, 960], 0), plano("@cuestan", "general", [400, 820], 0.4, zoom=1.08),
                     plano("@Vox", "general", [540, 1000], 0.5)]),
         cierre("pp", "vox"),
@@ -298,7 +308,7 @@ def vox():
     MELILLA = P(R, -2.94, 35.29)
     return [
         gancho("vox"),
-        dict(id="impuestos", fondo="calle", animo="curioso", trans="barrido", footnote=F_VOX + " · Mitin de Palma, 24/10/2026", lines=[
+        dict(id="impuestos", fondo="calle", animo="curioso", trans="barrido", footnote="Programa de Vox 2025 · Palma 24/10/2026", lines=[
             V("Una, los impuestos: nada de IRPF hasta 22.000 euros, el IVA del 21 al 18,", "normal"),
             V("y sin impuestos sobre las propinas.", "remate", 0.1),
         ], camara=[plano(0, "general", [540, 1000], 0), plano("@IVA", "general", [540, 900], 0.5, zoom=1.06),
@@ -307,11 +317,13 @@ def vox():
             tit(1, "LOS IMPUESTOS"),
             edif("hacienda", 280, 0, 0.5, entra="crece", sfx="pop", dibuja=0.6),
             etq("IRPF 0 € HASTA 22.000 €", 540, 600, "@IRPF", "verde", 0.62, hud=True),
-            etq("IVA: 21 → 18 %", 540, 770, "@IVA", "amarillo", 0.68, hud=True),
+            etq("IVA: DEL 21 AL 18 %", 540, 770, "@IVA", "amarillo", 0.68, hud=True),
             obj("hucha", 780, 1180, "@propinas", 0.6, entra="crece", sfx="kaching", props={"cara": "ilusionado"}),
             monedas("@propinas", 640, 920, 8),
             quien("piz", 780, 0, 0.42, "normal", entra="der", acciones=[
-                {"at": "@22.000", "cara": "sorpresa", "take": True}, {"at": "@propinas", "x": 560, "dur": 0.6, "cara": "riendo"}]),
+                {"at": "@IRPF", "pose": "senala_arriba", "mira": "izq"}, {"at": "@22.000", "cara": "sorpresa", "take": True},
+                {"at": "@euros", "pose": "arriba", "cara": "ilusionado"}, {"at": "@21", "pose": "piensa", "cara": "pensativo"},
+                {"at": "@propinas", "x": 560, "dur": 0.6, "cara": "riendo"}]),
             marca("doc", "@propinas"),
         ]),
         dict(id="casa", fondo="calle", animo="alegre", trans="papel", footnote=F_VOX, lines=[
@@ -333,7 +345,7 @@ def vox():
             marca("doc", "@protegida"),
         ]),
         dict(id="fronteras", fondo="mar_mapa", limites=LIM, animo="tension", trans="iris",
-             footnote="Mitin de Estepona 11/10 (Qué! 12/10/2026) · Abascal, 18/10/2026", lines=[
+             footnote="Mitin de Estepona 11/10 · Abascal 18/10/2026", lines=[
             V("Tres, las fronteras: lo que llama «remigración»: devolver a quien entra ilegalmente", "normal"),
             V("y expulsar al extranjero que delinque. Y militares en Ceuta y Melilla.", "normal", 0.1),
         ], camara=[zoom(0, P(R, -4.4, 37.6), 1.0, 0), zoom("@Ceuta", P(R, -4.2, 35.8), 2.0, 0.9)],
@@ -351,13 +363,14 @@ def vox():
             marca("anuncio", "@militares"),
         ]),
         dict(id="momento", fondo={"tipo": "plano", "color": PARTIDO["vox"]["fondo"]}, animo="tension", trans="corte",
-             footnote=F_ENC + " · Mitin de Palma, 24/10/2026 (Infobae)", lines=[
+             footnote="Sigma Dos 26/10 · Palma 24/10/2026", lines=[
             V("Cuatro, el momento: está en máximos en las encuestas, cerca del 20 por ciento,", "energia"),
             V("y Abascal pide una «gran mayoría» para ser presidente.", "remate", 0.15),
         ], camara=[plano(0, "general", [540, 940], 0), plano("@Abascal", "general", [540, 1000], 0.5)],
            elements=[
             tit(4, "EL MOMENTO"),
-            obj("contador", 540, 640, "@máximos", 0.6, hud=True, entra="pop", sfx="kaching",
+            pum("¡RÉCORD!", 540, 960, "@momento", 0.8),
+            obj("contador", 540, 640, "@momento", 0.6, hud=True, entra="pop", sfx="kaching",
                 props={"valor": 19.9, "desde": 12.4, "decimales": 1, "sufijo": " %", "ancho": 700}, out="@Abascal-0.2"),
             etq("SIGMA DOS · 26/10 · RÉCORD", 540, 830, "@20", "blanco", 0.55, hud=True, out="@Abascal-0.2"),
             obj("atril", 540, SUELO_ATRIL, "@Abascal", 0.5, entra="crece", props={"texto": "VOX", "color": "vox"}),
@@ -368,15 +381,17 @@ def vox():
         ]),
         ojo("vox", [V("Ojo: Vox calcula que su bajada de impuestos cuesta 46.000 millones; Hacienda dice 85.000.", "normal"),
                     V("Y la «remigración» es su propuesta más polémica.", "remate", 0.15)],
-            "Figaredo (Vox) 46.000 M€ · ministro Arcadi España 85.000 M€ (politicaelectoral.com)",
-            [obj("calculadora", 300, 760, "@46.000", 0.8, entra="cae", sfx="calculadora", props={"texto": "46.000"}),
+            "Figaredo (Vox) · ministro Arcadi España (Hacienda)",
+            [obj("calculadora", 300, 760, "@46.000", 0.8, entra="cae", sfx="calculadora", props={"texto": "46"}),
+             etq("46.000 M€", 300, 960, "@46.000", "verde", 0.55, hud=True),
              etq("VOX", 300, 560, "@46.000", "verde", 0.55, hud=True),
-             obj("calculadora", 700, 760, "@85.000", 0.8, entra="cae", sfx="calculadora", props={"texto": "85.000"}),
+             obj("calculadora", 700, 760, "@85.000", 0.8, entra="cae", sfx="calculadora", props={"texto": "85"}),
+             etq("85.000 M€", 700, 960, "@85.000", "blanco", 0.55, hud=True),
              etq("HACIENDA", 700, 560, "@Hacienda", "blanco", 0.55, hud=True),
              pum("¿?", 500, 640, "@85.000+0.3", 0.8),
-             obj("cartel", 540, 1000, "@remigración", 0.8, hud=True, entra="cae", sfx="golpe",
+             obj("cartel", 540, 1110, "@remigración", 0.75, hud=True, entra="cae", sfx="golpe",
                  props={"lineas": ["«REMIGRACIÓN»"], "color": "naranja"}),
-             sello("LA MÁS POLÉMICA", "rojo", 1240, "@polémica")],
+             sello("LA MÁS POLÉMICA", "rojo", 1260, "@polémica")],
             camara=[plano(0, "general", [540, 960], 0), plano("@46.000", "general", [540, 820], 0.4, zoom=1.06),
                     plano("@remigración", "general", [540, 980], 0.5)]),
         cierre("vox"),

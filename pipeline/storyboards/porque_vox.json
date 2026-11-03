@@ -132,11 +132,7 @@
      "scale": 0.8,
      "at": 0.1,
      "props": {
-      "color": [
-       90,
-       175,
-       40
-      ],
+      "color": "vox",
       "texto": "VOX"
      },
      "acciones": [
@@ -158,7 +154,7 @@
      "quien": "abascal",
      "x": 900,
      "y": 1340,
-     "scale": 0.48,
+     "scale": 0.5663999999999999,
      "at": "@alguien",
      "cara": "normal",
      "acciones": [
@@ -181,7 +177,7 @@
      "quien": "piz",
      "x": 190,
      "y": 1340,
-     "scale": 0.48,
+     "scale": 0.5663999999999999,
      "at": 0,
      "cara": "pensativo",
      "acciones": [
@@ -228,8 +224,8 @@
      "quien": "critica",
      "x": 540,
      "y": 1340,
-     "scale": 0.38,
-     "at": "@mías",
+     "scale": 0.49559999999999993,
+     "at": "@suyas",
      "cara": "esceptica",
      "acciones": [
       {
@@ -247,7 +243,7 @@
    "fondo": "calle",
    "animo": "curioso",
    "trans": "barrido",
-   "footnote": "Programa económico y de vivienda de Vox (voxespana.es, 2025) · Mitin de Palma, 24/10/2026",
+   "footnote": "Programa de Vox 2025 · Palma 24/10/2026",
    "lines": [
     {
      "text": "Una, los impuestos: nada de IRPF hasta 22.000 euros, el IVA del 21 al 18,",
@@ -337,7 +333,7 @@
      "scale": 0.68,
      "at": "@IVA",
      "props": {
-      "texto": "IVA: 21 → 18 %",
+      "texto": "IVA: DEL 21 AL 18 %",
       "color": "amarillo"
      },
      "acciones": [],
@@ -374,14 +370,29 @@
      "quien": "piz",
      "x": 780,
      "y": 1340,
-     "scale": 0.42,
+     "scale": 0.49559999999999993,
      "at": 0,
      "cara": "normal",
      "acciones": [
       {
+       "at": "@IRPF",
+       "pose": "senala_arriba",
+       "mira": "izq"
+      },
+      {
        "at": "@22.000",
        "cara": "sorpresa",
        "take": true
+      },
+      {
+       "at": "@euros",
+       "pose": "arriba",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@21",
+       "pose": "piensa",
+       "cara": "pensativo"
       },
       {
        "at": "@propinas",
@@ -553,7 +564,7 @@
      "quien": "piz",
      "x": 760,
      "y": 1340,
-     "scale": 0.42,
+     "scale": 0.49559999999999993,
      "at": 0,
      "cara": "normal",
      "acciones": [
@@ -604,7 +615,7 @@
    ],
    "animo": "tension",
    "trans": "iris",
-   "footnote": "Mitin de Estepona 11/10 (Qué! 12/10/2026) · Abascal, 18/10/2026",
+   "footnote": "Mitin de Estepona 11/10 · Abascal 18/10/2026",
    "lines": [
     {
      "text": "Tres, las fronteras: lo que llama «remigración»: devolver a quien entra ilegalmente",
@@ -800,7 +811,7 @@
    },
    "animo": "tension",
    "trans": "corte",
-   "footnote": "Encuestas: SocioMétrica y Sigma Dos, 26/10/2026 (Qué! 01/11/2026) · Mitin de Palma, 24/10/2026 (Infobae)",
+   "footnote": "Sigma Dos 26/10 · Palma 24/10/2026",
    "lines": [
     {
      "text": "Cuatro, el momento: está en máximos en las encuestas, cerca del 20 por ciento,",
@@ -845,12 +856,22 @@
      "hud": true
     },
     {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¡RÉCORD!",
+     "x": 540,
+     "y": 960,
+     "at": "@momento",
+     "scale": 0.8,
+     "vida": 0.8
+    },
+    {
      "type": "objeto",
      "objeto": "contador",
      "x": 540,
      "y": 640,
      "scale": 0.6,
-     "at": "@máximos",
+     "at": "@momento",
      "props": {
       "valor": 19.9,
       "desde": 12.4,
@@ -900,7 +921,7 @@
      "quien": "abascal",
      "x": 540,
      "y": 1200,
-     "scale": 0.5,
+     "scale": 0.59,
      "at": "@Abascal",
      "cara": "normal",
      "acciones": [
@@ -966,7 +987,7 @@
    },
    "animo": "tension",
    "trans": "corte",
-   "footnote": "Figaredo (Vox) 46.000 M€ · ministro Arcadi España 85.000 M€ (politicaelectoral.com)",
+   "footnote": "Figaredo (Vox) · ministro Arcadi España (Hacienda)",
    "lines": [
     {
      "text": "Ojo: Vox calcula que su bajada de impuestos cuesta 46.000 millones; Hacienda dice 85.000.",
@@ -1025,7 +1046,7 @@
      "quien": "critica",
      "x": 860,
      "y": 1340,
-     "scale": 0.42,
+     "scale": 0.49559999999999993,
      "at": 0,
      "cara": "esceptica",
      "acciones": [
@@ -1033,6 +1054,11 @@
        "at": "@Ojo",
        "pose": "senala_izq",
        "mira": "izq"
+      },
+      {
+       "at": "@Ojo+2.2",
+       "pose": "jarras",
+       "cara": "indignado"
       }
      ],
      "entra": "der",
@@ -1046,11 +1072,27 @@
      "scale": 0.8,
      "at": "@46.000",
      "props": {
-      "texto": "46.000"
+      "texto": "46"
      },
      "acciones": [],
      "entra": "cae",
      "sfx": "calculadora"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 960,
+     "scale": 0.55,
+     "at": "@46.000",
+     "props": {
+      "texto": "46.000 M€",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
     },
     {
      "type": "objeto",
@@ -1076,11 +1118,27 @@
      "scale": 0.8,
      "at": "@85.000",
      "props": {
-      "texto": "85.000"
+      "texto": "85"
      },
      "acciones": [],
      "entra": "cae",
      "sfx": "calculadora"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 700,
+     "y": 960,
+     "scale": 0.55,
+     "at": "@85.000",
+     "props": {
+      "texto": "85.000 M€",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
     },
     {
      "type": "objeto",
@@ -1112,8 +1170,8 @@
      "type": "objeto",
      "objeto": "cartel",
      "x": 540,
-     "y": 1000,
-     "scale": 0.8,
+     "y": 1110,
+     "scale": 0.75,
      "at": "@remigración",
      "props": {
       "lineas": [
@@ -1130,7 +1188,7 @@
      "type": "objeto",
      "objeto": "sello",
      "x": 540,
-     "y": 1240,
+     "y": 1260,
      "scale": 1.0,
      "at": "@polémica",
      "props": {
@@ -1231,7 +1289,7 @@
      "quien": "piz",
      "x": 540,
      "y": 1340,
-     "scale": 0.55,
+     "scale": 0.649,
      "at": 0,
      "cara": "normal",
      "acciones": [

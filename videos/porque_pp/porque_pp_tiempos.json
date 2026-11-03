@@ -1,0 +1,121 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 6.21,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.69,
+    "texto": "¿Por qué votaría alguien al PP, con todo lo que ha pasado?"
+   },
+   {
+    "t0": 2.89,
+    "t1": 5.76,
+    "texto": "Te doy sus cuatro razones. Las suyas, no las mías."
+   }
+  ]
+ },
+ {
+  "escena": "bolsillo",
+  "inicio": 6.21,
+  "fin": 12.86,
+  "frases": [
+   {
+    "t0": 6.47,
+    "t1": 10.37,
+    "texto": "Una, el bolsillo: IVA cero en alimentos básicos, la luz del 21 al 10,"
+   },
+   {
+    "t0": 10.52,
+    "t1": 12.41,
+    "texto": "y el doble de desgravación por cada hijo."
+   }
+  ]
+ },
+ {
+  "escena": "casa",
+  "inicio": 12.86,
+  "fin": 20.18,
+  "frases": [
+   {
+    "t0": 13.16,
+    "t1": 17.51,
+    "texto": "Dos, la casa: al menos un millón de viviendas nuevas, prioridad para los jóvenes,"
+   },
+   {
+    "t0": 17.66,
+    "t1": 19.73,
+    "texto": "y echar a los okupas en 48 horas."
+   }
+  ]
+ },
+ {
+  "escena": "palabra",
+  "inicio": 20.18,
+  "fin": 28.1,
+  "frases": [
+   {
+    "t0": 20.44,
+    "t1": 24.48,
+    "texto": "Tres, la palabra: Feijóo ha firmado un «Contrato con España» de doce compromisos."
+   },
+   {
+    "t0": 24.68,
+    "t1": 27.65,
+    "texto": "Lo mismo que hizo en Galicia, donde ganó cuatro mayorías absolutas."
+   }
+  ]
+ },
+ {
+  "escena": "cambio",
+  "inicio": 28.1,
+  "fin": 33.5,
+  "frases": [
+   {
+    "t0": 28.1,
+    "t1": 30.34,
+    "texto": "Cuatro, el cambio: va primero en las encuestas,"
+   },
+   {
+    "t0": 30.54,
+    "t1": 33.05,
+    "texto": "y, tras Urda, exige la dimisión del ministro Puente."
+   }
+  ]
+ },
+ {
+  "escena": "ojo",
+  "inicio": 33.5,
+  "fin": 40.5,
+  "frases": [
+   {
+    "t0": 33.5,
+    "t1": 36.18,
+    "texto": "Ojo: no ha dicho cuánto cuestan sus rebajas de impuestos."
+   },
+   {
+    "t0": 36.38,
+    "t1": 40.05,
+    "texto": "Y para gobernar, casi seguro necesita a Vox: ya han pactado el Senado."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 40.5,
+  "fin": 46.74,
+  "frases": [
+   {
+    "t0": 41.2,
+    "t1": 43.11,
+    "texto": "¿Te convence? Comenta sí o no."
+   },
+   {
+    "t0": 43.31,
+    "t1": 45.39,
+    "texto": "Y sigue a Piz: mañana, por qué votar a Vox."
+   }
+  ]
+ }
+]

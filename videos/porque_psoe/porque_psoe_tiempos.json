@@ -1,0 +1,121 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 6.28,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.77,
+    "texto": "¿Por qué votaría alguien al PSOE, con todo lo que ha pasado?"
+   },
+   {
+    "t0": 2.97,
+    "t1": 5.83,
+    "texto": "Te doy sus cuatro razones. Las suyas, no las mías."
+   }
+  ]
+ },
+ {
+  "escena": "sueldo",
+  "inicio": 6.28,
+  "fin": 13.88,
+  "frases": [
+   {
+    "t0": 6.54,
+    "t1": 11.13,
+    "texto": "Una, el sueldo: el salario mínimo ha subido un 66 por ciento desde 2018,"
+   },
+   {
+    "t0": 11.28,
+    "t1": 13.43,
+    "texto": "y quien lo cobra ya no paga IRPF."
+   }
+  ]
+ },
+ {
+  "escena": "pension",
+  "inicio": 13.88,
+  "fin": 20.6,
+  "frases": [
+   {
+    "t0": 14.18,
+    "t1": 17.63,
+    "texto": "Dos, la pensión: promete cuatro años más subiéndola con el IPC,"
+   },
+   {
+    "t0": 17.78,
+    "t1": 20.15,
+    "texto": "y dejar 20.000 millones en la hucha de las pensiones."
+   }
+  ]
+ },
+ {
+  "escena": "casa",
+  "inicio": 20.6,
+  "fin": 27.21,
+  "frases": [
+   {
+    "t0": 20.86,
+    "t1": 24.48,
+    "texto": "Tres, la casa: por decreto, el alquiler solo podría subir un 2 por ciento,"
+   },
+   {
+    "t0": 24.63,
+    "t1": 26.76,
+    "texto": "y préstamos sin intereses para pagar la entrada."
+   }
+  ]
+ },
+ {
+  "escena": "derechos",
+  "inicio": 27.21,
+  "fin": 33.58,
+  "frases": [
+   {
+    "t0": 27.51,
+    "t1": 30.4,
+    "texto": "Cuatro, los derechos: blindar el aborto en la Constitución,"
+   },
+   {
+    "t0": 30.55,
+    "t1": 33.13,
+    "texto": "y frenar lo que llama «la motosierra» de PP y Vox."
+   }
+  ]
+ },
+ {
+  "escena": "ojo",
+  "inicio": 33.58,
+  "fin": 41.12,
+  "frases": [
+   {
+    "t0": 33.58,
+    "t1": 37.71,
+    "texto": "Ojo: llega tocado. La tragedia de Urda tiene a su ministro Puente contra las cuerdas,"
+   },
+   {
+    "t0": 37.91,
+    "t1": 40.67,
+    "texto": "y las encuestas le dejan por debajo de 110 escaños."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 41.12,
+  "fin": 47.39,
+  "frases": [
+   {
+    "t0": 41.82,
+    "t1": 43.73,
+    "texto": "¿Te convence? Comenta sí o no."
+   },
+   {
+    "t0": 43.93,
+    "t1": 46.04,
+    "texto": "Y sigue a Piz: mañana, por qué votar al PP."
+   }
+  ]
+ }
+]

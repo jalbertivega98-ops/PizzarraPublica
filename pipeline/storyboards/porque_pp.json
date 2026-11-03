@@ -132,11 +132,7 @@
      "scale": 0.8,
      "at": 0.1,
      "props": {
-      "color": [
-       0,
-       104,
-       180
-      ],
+      "color": "pp",
       "texto": "PP"
      },
      "acciones": [
@@ -158,7 +154,7 @@
      "quien": "feijoo",
      "x": 900,
      "y": 1340,
-     "scale": 0.48,
+     "scale": 0.5663999999999999,
      "at": "@alguien",
      "cara": "normal",
      "acciones": [
@@ -181,7 +177,7 @@
      "quien": "piz",
      "x": 190,
      "y": 1340,
-     "scale": 0.48,
+     "scale": 0.5663999999999999,
      "at": 0,
      "cara": "pensativo",
      "acciones": [
@@ -228,8 +224,8 @@
      "quien": "critica",
      "x": 540,
      "y": 1340,
-     "scale": 0.38,
-     "at": "@mías",
+     "scale": 0.49559999999999993,
+     "at": "@suyas",
      "cara": "esceptica",
      "acciones": [
       {
@@ -316,7 +312,7 @@
     {
      "type": "objeto",
      "objeto": "etiqueta",
-     "x": 300,
+     "x": 230,
      "y": 600,
      "scale": 0.75,
      "at": "@cero",
@@ -332,12 +328,12 @@
     {
      "type": "objeto",
      "objeto": "etiqueta",
-     "x": 760,
+     "x": 700,
      "y": 600,
      "scale": 0.65,
      "at": "@luz",
      "props": {
-      "texto": "LUZ: 21 → 10 %",
+      "texto": "LUZ: DEL 21 AL 10 %",
       "color": "amarillo"
      },
      "acciones": [],
@@ -366,7 +362,7 @@
      "quien": "piz",
      "x": 800,
      "y": 1340,
-     "scale": 0.45,
+     "scale": 0.531,
      "at": 0,
      "cara": "normal",
      "acciones": [
@@ -393,7 +389,7 @@
      "quien": "hacienda",
      "x": 560,
      "y": 1340,
-     "scale": 0.36,
+     "scale": 0.42479999999999996,
      "at": "@doble",
      "cara": "confundido",
      "acciones": [
@@ -428,7 +424,7 @@
    "fondo": "calle",
    "animo": "alegre",
    "trans": "papel",
-   "footnote": "«Mi contrato con España», 19/10/2026 (PDF publicado por El Debate)",
+   "footnote": "«Mi contrato con España», 19/10/2026",
    "lines": [
     {
      "text": "Dos, la casa: al menos un millón de viviendas nuevas, prioridad para los jóvenes,",
@@ -597,7 +593,7 @@
      "quien": "piz",
      "x": 540,
      "y": 1560,
-     "scale": 0.36,
+     "scale": 0.42479999999999996,
      "at": "@jóvenes",
      "cara": "ilusionado",
      "acciones": [],
@@ -634,7 +630,7 @@
    },
    "animo": "curioso",
    "trans": "barrido",
-   "footnote": "«Mi contrato con España», 19/10/2026 (PDF publicado por El Debate) · Galicia: mayorías absolutas en 2009, 2012, 2016 y 2020",
+   "footnote": "Contrato con España 19/10 · Galicia 2009-2020",
    "lines": [
     {
      "text": "Tres, la palabra: Feijóo ha firmado un «Contrato con España» de doce compromisos.",
@@ -713,7 +709,7 @@
      "quien": "feijoo",
      "x": 830,
      "y": 1340,
-     "scale": 0.45,
+     "scale": 0.531,
      "at": 0,
      "cara": "normal",
      "acciones": [
@@ -752,11 +748,7 @@
        "at": "@Galicia",
        "props": {
         "colores": {
-         "Galicia": [
-          0,
-          104,
-          180
-         ]
+         "Galicia": "pp"
         },
         "resalta": [
          "La Coruña",
@@ -820,7 +812,7 @@
    },
    "animo": "tension",
    "trans": "corte",
-   "footnote": "Encuestas: SocioMétrica y Sigma Dos, 26/10/2026 (Qué! 01/11/2026) · Infobae 03/11/2026",
+   "footnote": "Sigma Dos 26/10 · Infobae 03/11/2026",
    "lines": [
     {
      "text": "Cuatro, el cambio: va primero en las encuestas,",
@@ -870,7 +862,7 @@
      "x": 540,
      "y": 900,
      "scale": 1.0,
-     "at": "@encuestas",
+     "at": "@Cuatro",
      "props": {
       "sufijo": " %",
       "decimales": 1,
@@ -897,15 +889,15 @@
      "hud": true,
      "entra": "nada",
      "dibujo": 1.2,
-     "out": "@Urda-0.2"
+     "out": "@dimisión-0.1"
     },
     {
      "type": "objeto",
      "objeto": "etiqueta",
      "x": 540,
-     "y": 560,
+     "y": 1000,
      "scale": 0.55,
-     "at": "@encuestas",
+     "at": "@primero",
      "props": {
       "texto": "SIGMA DOS · 26/10",
       "color": "blanco"
@@ -914,14 +906,14 @@
      "entra": "pop",
      "sfx": "kaching",
      "hud": true,
-     "out": "@Urda-0.2"
+     "out": "@dimisión-0.1"
     },
     {
      "type": "personaje",
      "quien": "feijoo",
      "x": 250,
      "y": 1340,
-     "scale": 0.48,
+     "scale": 0.5663999999999999,
      "at": "@Urda",
      "cara": "serio",
      "acciones": [
@@ -939,7 +931,7 @@
      "quien": "puente",
      "x": 830,
      "y": 1340,
-     "scale": 0.45,
+     "scale": 0.531,
      "at": "@ministro",
      "cara": "serio",
      "acciones": [
@@ -1004,7 +996,7 @@
    },
    "animo": "tension",
    "trans": "corte",
-   "footnote": "Coste sin cifrar: politicaelectoral.com (PP) · Pacto PP-Vox en el Senado, 26/10/2026",
+   "footnote": "politicaelectoral.com (PP) · pacto del Senado, 26/10/2026",
    "lines": [
     {
      "text": "Ojo: no ha dicho cuánto cuestan sus rebajas de impuestos.",
@@ -1063,7 +1055,7 @@
      "quien": "critica",
      "x": 860,
      "y": 1340,
-     "scale": 0.42,
+     "scale": 0.49559999999999993,
      "at": 0,
      "cara": "esceptica",
      "acciones": [
@@ -1071,6 +1063,11 @@
        "at": "@Ojo",
        "pose": "senala_izq",
        "mira": "izq"
+      },
+      {
+       "at": "@Ojo+2.2",
+       "pose": "jarras",
+       "cara": "indignado"
       }
      ],
      "entra": "der",
@@ -1086,18 +1083,33 @@
      "props": {
       "texto": "¿?"
      },
-     "acciones": [],
+     "acciones": [
+      {
+       "at": "@rebajas",
+       "tiembla": true
+      }
+     ],
      "entra": "cae",
      "sfx": "calculadora",
      "out": "@Vox-0.3"
     },
     {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¿CUÁNTO?",
+     "x": 360,
+     "y": 560,
+     "at": "@impuestos",
+     "scale": 0.75,
+     "vida": 0.8
+    },
+    {
      "type": "personaje",
      "quien": "feijoo",
-     "x": 300,
+     "x": 190,
      "y": 1340,
-     "scale": 0.42,
-     "at": "@Vox",
+     "scale": 0.472,
+     "at": "@gobernar",
      "cara": "normal",
      "acciones": [
       {
@@ -1112,9 +1124,9 @@
     {
      "type": "personaje",
      "quien": "abascal",
-     "x": 620,
+     "x": 680,
      "y": 1340,
-     "scale": 0.42,
+     "scale": 0.472,
      "at": "@Vox+0.2",
      "cara": "normal",
      "acciones": [
@@ -1130,9 +1142,9 @@
     {
      "type": "edificio",
      "edificio": "congreso",
-     "x": 460,
+     "x": 435,
      "y": 1340,
-     "scale": 0.36,
+     "scale": 0.3,
      "at": "@Senado-0.2",
      "acciones": [],
      "entra": "crece",
@@ -1228,7 +1240,7 @@
      "quien": "piz",
      "x": 300,
      "y": 1340,
-     "scale": 0.55,
+     "scale": 0.649,
      "at": 0,
      "cara": "normal",
      "acciones": [

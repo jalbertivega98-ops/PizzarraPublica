@@ -1,0 +1,121 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 6.04,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.53,
+    "texto": "¿Por qué votaría alguien a Vox, con todo lo que ha pasado?"
+   },
+   {
+    "t0": 2.73,
+    "t1": 5.59,
+    "texto": "Te doy sus cuatro razones. Las suyas, no las mías."
+   }
+  ]
+ },
+ {
+  "escena": "impuestos",
+  "inicio": 6.04,
+  "fin": 13.33,
+  "frases": [
+   {
+    "t0": 6.3,
+    "t1": 10.93,
+    "texto": "Una, los impuestos: nada de IRPF hasta 22.000 euros, el IVA del 21 al 18,"
+   },
+   {
+    "t0": 11.08,
+    "t1": 12.88,
+    "texto": "y sin impuestos sobre las propinas."
+   }
+  ]
+ },
+ {
+  "escena": "casa",
+  "inicio": 13.33,
+  "fin": 21.05,
+  "frases": [
+   {
+    "t0": 13.63,
+    "t1": 17.95,
+    "texto": "Dos, la casa: sin IVA al comprar tu primera vivienda, okupas fuera en 24 horas,"
+   },
+   {
+    "t0": 18.1,
+    "t1": 20.6,
+    "texto": "y «prioridad nacional» en la vivienda protegida."
+   }
+  ]
+ },
+ {
+  "escena": "fronteras",
+  "inicio": 21.05,
+  "fin": 29.96,
+  "frases": [
+   {
+    "t0": 21.75,
+    "t1": 26.04,
+    "texto": "Tres, las fronteras: lo que llama «remigración»: devolver a quien entra ilegalmente"
+   },
+   {
+    "t0": 26.19,
+    "t1": 29.51,
+    "texto": "y expulsar al extranjero que delinque. Y militares en Ceuta y Melilla."
+   }
+  ]
+ },
+ {
+  "escena": "momento",
+  "inicio": 29.96,
+  "fin": 37.16,
+  "frases": [
+   {
+    "t0": 29.96,
+    "t1": 33.81,
+    "texto": "Cuatro, el momento: está en máximos en las encuestas, cerca del 20 por ciento,"
+   },
+   {
+    "t0": 34.01,
+    "t1": 36.71,
+    "texto": "y Abascal pide una «gran mayoría» para ser presidente."
+   }
+  ]
+ },
+ {
+  "escena": "ojo",
+  "inicio": 37.16,
+  "fin": 45.4,
+  "frases": [
+   {
+    "t0": 37.16,
+    "t1": 42.32,
+    "texto": "Ojo: Vox calcula que su bajada de impuestos cuesta 46.000 millones; Hacienda dice 85.000."
+   },
+   {
+    "t0": 42.52,
+    "t1": 44.95,
+    "texto": "Y la «remigración» es su propuesta más polémica."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 45.4,
+  "fin": 51.76,
+  "frases": [
+   {
+    "t0": 46.1,
+    "t1": 48.01,
+    "texto": "¿Te convence? Comenta sí o no."
+   },
+   {
+    "t0": 48.21,
+    "t1": 50.41,
+    "texto": "¿Y tú, con cuál de los tres te quedas? Sigue a Piz."
+   }
+  ]
+ }
+]

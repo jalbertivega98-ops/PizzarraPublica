@@ -132,11 +132,7 @@
      "scale": 0.8,
      "at": 0.1,
      "props": {
-      "color": [
-       225,
-       30,
-       40
-      ],
+      "color": "psoe",
       "texto": "PSOE"
      },
      "acciones": [
@@ -158,7 +154,7 @@
      "quien": "sanchez",
      "x": 900,
      "y": 1340,
-     "scale": 0.48,
+     "scale": 0.5663999999999999,
      "at": "@alguien",
      "cara": "normal",
      "acciones": [
@@ -181,7 +177,7 @@
      "quien": "piz",
      "x": 190,
      "y": 1340,
-     "scale": 0.48,
+     "scale": 0.5663999999999999,
      "at": 0,
      "cara": "pensativo",
      "acciones": [
@@ -228,8 +224,8 @@
      "quien": "critica",
      "x": 540,
      "y": 1340,
-     "scale": 0.38,
-     "at": "@mías",
+     "scale": 0.49559999999999993,
+     "at": "@suyas",
      "cara": "esceptica",
      "acciones": [
       {
@@ -355,7 +351,7 @@
      "quien": "piz",
      "x": 800,
      "y": 1340,
-     "scale": 0.45,
+     "scale": 0.531,
      "at": 0,
      "cara": "normal",
      "acciones": [
@@ -363,6 +359,16 @@
        "at": "@66",
        "cara": "ilusionado",
        "salta": true
+      },
+      {
+       "at": "@desde",
+       "pose": "senala_arriba",
+       "mira": "izq"
+      },
+      {
+       "at": "@2018",
+       "pose": "arriba",
+       "cara": "riendo"
       },
       {
        "at": "@IRPF",
@@ -378,7 +384,7 @@
      "quien": "hacienda",
      "x": 300,
      "y": 1340,
-     "scale": 0.42,
+     "scale": 0.49559999999999993,
      "at": "@cobra",
      "cara": "normal",
      "acciones": [
@@ -485,7 +491,7 @@
      "quien": "sanchez",
      "x": 820,
      "y": 1340,
-     "scale": 0.45,
+     "scale": 0.531,
      "at": 0,
      "cara": "normal",
      "acciones": [
@@ -577,7 +583,7 @@
      "quien": "piz",
      "x": 160,
      "y": 1340,
-     "scale": 0.36,
+     "scale": 0.42479999999999996,
      "at": 0.2,
      "cara": "normal",
      "acciones": [
@@ -613,7 +619,7 @@
    "fondo": "calle",
    "animo": "curioso",
    "trans": "barrido",
-   "footnote": "Decretos de vivienda del 6/10/2026 · pendientes de la Diputación Permanente (12/11)",
+   "footnote": "Decretos del 6/10/2026 · se votan el 12/11",
    "lines": [
     {
      "text": "Tres, la casa: por decreto, el alquiler solo podría subir un 2 por ciento,",
@@ -742,7 +748,7 @@
      "quien": "piz",
      "x": 520,
      "y": 1340,
-     "scale": 0.42,
+     "scale": 0.49559999999999993,
      "at": "@préstamos",
      "cara": "ilusionado",
      "acciones": [
@@ -844,8 +850,8 @@
      "objeto": "documento",
      "x": 420,
      "y": 800,
-     "scale": 0.75,
-     "at": "@blindar",
+     "scale": 1.0,
+     "at": "@Cuatro",
      "props": {
       "titulo": "CONSTITUCIÓN",
       "subtitulo": "REFORMA",
@@ -882,7 +888,7 @@
      "quien": "sanchez",
      "x": 830,
      "y": 1340,
-     "scale": 0.45,
+     "scale": 0.531,
      "at": 0,
      "cara": "normal",
      "acciones": [
@@ -906,11 +912,12 @@
      "objeto": "cartel",
      "x": 420,
      "y": 760,
-     "scale": 0.95,
+     "scale": 1.25,
      "at": "@frenar",
      "props": {
       "lineas": [
-       "«LA MOTOSIERRA»"
+       "«LA MOTOSIERRA»",
+       "DE PP Y VOX"
       ],
       "color": "gris_claro"
      },
@@ -959,7 +966,7 @@
    },
    "animo": "tension",
    "trans": "corte",
-   "footnote": "Infobae 03/11/2026: 69 fallecidos (provisional) · Encuestas: SocioMétrica y Sigma Dos, 26/10/2026 (Qué! 01/11/2026)",
+   "footnote": "Infobae 03/11/2026 · SocioMétrica y Sigma Dos 26/10",
    "lines": [
     {
      "text": "Ojo: llega tocado. La tragedia de Urda tiene a su ministro Puente contra las cuerdas,",
@@ -1018,7 +1025,7 @@
      "quien": "critica",
      "x": 860,
      "y": 1340,
-     "scale": 0.42,
+     "scale": 0.49559999999999993,
      "at": 0,
      "cara": "esceptica",
      "acciones": [
@@ -1026,6 +1033,11 @@
        "at": "@Ojo",
        "pose": "senala_izq",
        "mira": "izq"
+      },
+      {
+       "at": "@Ojo+2.2",
+       "pose": "jarras",
+       "cara": "indignado"
       }
      ],
      "entra": "der",
@@ -1048,7 +1060,7 @@
      "quien": "puente",
      "x": 300,
      "y": 1340,
-     "scale": 0.42,
+     "scale": 0.49559999999999993,
      "at": "@Puente",
      "cara": "serio",
      "acciones": [
@@ -1196,7 +1208,7 @@
      "quien": "piz",
      "x": 300,
      "y": 1340,
-     "scale": 0.55,
+     "scale": 0.649,
      "at": 0,
      "cara": "normal",
      "acciones": [

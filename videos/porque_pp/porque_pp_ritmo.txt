@@ -1,0 +1,2 @@
+Duración 46.7 s · 109 cambios visuales · uno cada 0.43 s de media · hueco máximo 2.20 s
+✓ Cumple el estándar de enganche

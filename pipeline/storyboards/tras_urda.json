@@ -238,12 +238,41 @@
    "elements": [
     {
      "type": "rotulo",
+     "text": "MISMA EMPRESA",
+     "x": 540,
+     "y": 560,
+     "size": 80,
+     "color": "amarillo",
+     "at": 0.1,
+     "golpe": true,
+     "out": "@PP",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 700,
+     "scale": 0.7,
+     "at": "@Target",
+     "props": {
+      "texto": "TARGET POINT",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@PP"
+    },
+    {
+     "type": "rotulo",
      "text": "ANTES 11/10 · DESPUÉS 30/10",
      "x": 540,
      "y": 420,
      "size": 60,
      "color": "blanco",
-     "at": 0.2,
+     "at": "@antes",
      "hud": true
     },
     {
@@ -341,6 +370,18 @@
        "at": "@Vox-0.5",
        "x": 900,
        "dur": 0.5
+      },
+      {
+       "at": "@18,7",
+       "mira": "camara"
+      },
+      {
+       "at": "@19,9",
+       "salta": true
+      },
+      {
+       "at": "@décima",
+       "cara": "sorpresa"
       },
       {
        "at": "@20",
@@ -469,6 +510,10 @@
        "at": "@medio",
        "pose": "pulgar",
        "cara": "ilusionado"
+      },
+      {
+       "at": "@31,1",
+       "salta": true
       }
      ],
      "entra": "izq",
@@ -486,10 +531,40 @@
       {
        "at": "@cae",
        "cara": "preocupado"
+      },
+      {
+       "at": "@24,6",
+       "pose": "encoge"
+      },
+      {
+       "at": "@19,3",
+       "mira": "camara"
       }
      ],
      "entra": "der",
      "id": "sanchez"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 1250,
+     "y": 1560,
+     "scale": 0.42,
+     "at": "@Vox-0.4",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Vox-0.4",
+       "x": 540,
+       "dur": 0.4
+      },
+      {
+       "at": "@19,3",
+       "pose": "punos"
+      }
+     ],
+     "entra": "nada",
+     "id": "abascal"
     },
     {
      "type": "objeto",
@@ -587,10 +662,10 @@
      "type": "rotulo",
      "text": "MAYORÍA: 176",
      "x": 540,
-     "y": 420,
+     "y": 520,
      "size": 100,
      "color": "blanco",
-     "at": "@176",
+     "at": "@176+0.25",
      "golpe": true,
      "hud": true
     },
@@ -604,9 +679,25 @@
      "cara": "pensativo",
      "acciones": [
       {
+       "at": "@accidente",
+       "mira": "camara"
+      },
+      {
        "at": "@todas",
        "pose": "senala_arriba",
        "cara": "sorpresa"
+      },
+      {
+       "at": "@mayoría",
+       "salta": true
+      },
+      {
+       "at": "@196",
+       "pose": "jarras"
+      },
+      {
+       "at": "@208",
+       "cara": "idea"
       },
       {
        "at": "@176",
@@ -615,6 +706,23 @@
      ],
      "entra": "der",
      "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 560,
+     "scale": 0.42,
+     "at": "@Cinco",
+     "props": {
+      "texto": "SIGMA · NC · TARGET · SOCIOMÉTRICA · HAMALGAMA",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@Entre"
     }
    ]
   },
@@ -869,7 +977,7 @@
  "banda": true,
  "sfx_volume": 1.0,
  "portada": {
-  "t": 3.0,
+  "t": 5.5,
   "titulo": "¿Ha cambiado todo tras Urda?",
   "capitulo": null
  }

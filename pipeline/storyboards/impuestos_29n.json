@@ -138,7 +138,27 @@
      "at": 0,
      "golpe": true,
      "out": "@Uno",
+     "fx": [
+      {
+       "at": "@bolsillo",
+       "do": "latir"
+      }
+     ],
      "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "hucha",
+     "x": 540,
+     "y": 640,
+     "scale": 0.5,
+     "at": "@bolsillo",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@Uno"
     },
     {
      "type": "objeto",
@@ -499,12 +519,20 @@
      "x": 780,
      "y": 1340,
      "scale": 0.45,
-     "at": "@hijo-0.3",
+     "at": "@luz",
      "cara": "ilusionado",
      "acciones": [
       {
+       "at": "@gas",
+       "cara": "riendo"
+      },
+      {
        "at": "@doble",
        "salta": true
+      },
+      {
+       "at": "@4.800",
+       "pose": "arriba"
       }
      ],
      "entra": "der",
@@ -787,6 +815,32 @@
      "hud": true
     },
     {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1600,
+     "scale": 0.42,
+     "at": "@admite",
+     "cara": "esceptica",
+     "acciones": [
+      {
+       "at": "@100",
+       "pose": "encoge"
+      },
+      {
+       "at": "@PP",
+       "pose": "piensa",
+       "cara": "confundido"
+      },
+      {
+       "at": "@cuesta",
+       "mira": "camara"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
      "type": "objeto",
      "objeto": "sello",
      "x": 540,
@@ -940,7 +994,7 @@
  "banda": true,
  "sfx_volume": 1.0,
  "portada": {
-  "t": 1.4,
+  "t": 5.5,
   "titulo": "¿Quién te baja más los impuestos?",
   "capitulo": null
  }

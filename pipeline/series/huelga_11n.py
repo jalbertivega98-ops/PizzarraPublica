@@ -27,7 +27,7 @@ scenes = [
        elements=[
         obj("cartel", 540, 620, 0, 0.9, hud=True, entra="cae", sfx="golpe", props={"texto": "HUELGA GENERAL · 11N", "color": "rojo", "tinta": "blanco"}),
         obj("reloj", 860, 420, "@Veinticuatro", 0.4, hud=True, entra="pop", sfx="pop"),
-        quien("piz", 540, 0.2, 0.55, "sorpresa", entra="abajo", acciones=[{"at": "@2012", "take": True}, {"at": "@casa", "pose": "senala", "mira": "casa", "cara": "pensativo"}]),
+        quien("piz", 540, 0.2, 0.55, "sorpresa", entra="abajo", acciones=[{"at": "@para", "salta": True}, {"at": "@horas", "mira": "der", "cara": "susto"}, {"at": "@primera", "pose": "senala_arriba"}, {"at": "@2012", "take": True}, {"at": "@sueldo", "pose": "encoge", "cara": "pensativo"}, {"at": "@casa", "pose": "senala", "mira": "casa", "cara": "pensativo"}]),
         edif("piso", 200, "@casa", 0.45, entra="crece", sfx="pop", id="casa"),
         rot("DESDE 2012", 540, 420, "@2012", 90, "amarillo", golpe=True),
     ]),
@@ -41,9 +41,10 @@ scenes = [
         etq("CCOO", 300, 680, "@CCOO", "rojo", 0.7, hud=True),
         etq("UGT", 780, 680, "@UGT", "rojo", 0.7, hud=True),
         etq("+ OTROS", 540, 820, "@otros", "blanco", 0.6, hud=True, out="@líder"),
+        quien("piz", 860, "@sindicatos", 0.4, "normal", y=1640, entra="der", acciones=[{"at": "@líder", "mira": "izq"}, {"at": "@mitad", "cara": "susto", "take": True}]),
         obj("bocadillo", 540, 960, "@líder", 0.75, hud=True, entra="pop", sfx="pop",
             props={"lineas": ["SORDO (CCOO):", "«se come la mitad", "de los salarios»"], "cola": (0, 1)}),
-        obj("billete", 540, 1300, "@mitad", 0.8, hud=True, entra="pop", sfx="kaching", fx=[{"at": "@salarios", "do": "temblar"}]),
+        obj("billete", 540, 1300, "@comiendo", 0.8, hud=True, entra="pop", sfx="kaching", fx=[{"at": "@salarios", "do": "temblar"}]),
         sello("DECLARACIÓN", "azul", 1440, "@familias"),
     ]),
     # 3 · QUÉ PIDEN
@@ -54,8 +55,10 @@ scenes = [
        elements=[
         obj("checklist", 540, 720, 0.2, 0.85, hud=True, entra="pop", sfx="papel",
             props={"items": ["ALQUILER INDEFINIDO", "BAJAR PRECIOS", "IMPUESTO A LA RIQUEZA", "EXPROPIAR VACÍOS"], "marcas": []}),
-        quien("pizon", 860, 0.3, 0.45, "pensativo", entra="der", acciones=[{"at": "@ricos", "cara": "sorpresa"}, {"at": "@vacíos", "pose": "piensa"}]),
+        quien("pizon", 860, 0.3, 0.45, "pensativo", entra="der", acciones=[{"at": "@Alquileres", "pose": "senala_arriba", "cara": "normal"}, {"at": "@indefinidos", "cara": "ilusionado"}, {"at": "@bajen", "salta": True}, {"at": "@precios", "pose": "jarras"}, {"at": "@ricos", "cara": "sorpresa"}, {"at": "@vacíos", "pose": "piensa"}]),
         edif("abandonado", 220, "@vacíos", 0.4, texto="VACÍO", entra="crece", sfx="pop"),
+        obj("billete", 220, 1000, "@ricos", 0.6, hud=True, entra="pop", sfx="kaching", out="@vacíos"),
+        edif("casa", 220, "@pública", 0.35, entra="crece", sfx="pop", out="@vacíos"),
     ]),
     # 4 · LA POLÍTICA: los decretos
     dict(id="decretos", fondo="oficina", animo="tension", trans="barrido", footnote="Naiz 2/10 y 6/10/2026", lines=[
@@ -68,6 +71,9 @@ scenes = [
             props={"titulo": "DECRETOS", "subtitulo": "VIVIENDA", "ancho": 640, "articulos": []},
             out="@aprobar"),
         rot("172 SÍ · 178 NO", 540, 420, "@tumbó", 80, "rojo", golpe=True, out="@aprobar"),
+        etq("PP · VOX · JUNTS: NO", 540, 1180, "@Junts", "rojo", 0.6, hud=True, out="@aprobar"),
+        quien("sanchez", 860, "@Gobierno#2", 0.42, "serio", entra="der", out="@jueves", acciones=[{"at": "@aprobar", "pose": "senala_arriba", "cara": "normal"}]),
+        quien("piz", 220, "@pelea", 0.42, "preocupado", entra="izq", acciones=[{"at": "@octubre", "cara": "sorpresa"}, {"at": "@aprobar", "mira": "der"}, {"at": "@jueves", "pose": "senala"}]),
         rot("APROBADOS OTRA VEZ", 540, 420, "@aprobar", 80, "verde", golpe=True, out="@jueves"),
         obj("calendario", 540, 760, "@jueves", 0.7, hud=True, entra="pop", sfx="papel",
             props={"mes": "NOVIEMBRE 2026", "inicio": 6, "dias": 30, "marcados": [11, 12], "colores": {11: "rojo", 12: "azul"}}),
@@ -98,6 +104,7 @@ scenes = [
         etq("CEOE: «POLÍTICA»", 300, 600, "@patronal", "gris", 0.6, hud=True, out="@Tú"),
         etq("SINDICATOS: LA CASA", 780, 600, "@sindicatos", "rojo", 0.6, hud=True, out="@Tú"),
         quien("piz", 540, 0, 0.6, "pensativo", y=1500, entra="abajo", acciones=[
+            {"at": "@patronal", "mira": "izq"}, {"at": "@política", "cara": "esceptica"}, {"at": "@sindicatos", "mira": "der"}, {"at": "@casa", "cara": "normal"},
             {"at": "@huelga", "pose": "piensa", "mira": "camara"}, {"at": "@leo", "cara": "ilusionado", "pose": "senala"},
             {"at": "@sigue", "pose": "saluda", "cara": "riendo"}]),
         etq("SÍ", 300, 700, "@Sí", "verde", 0.7, hud=True, out="@sigue"),
@@ -108,7 +115,7 @@ scenes = [
 
 if __name__ == "__main__":
     episodio("huelga_11n", "Mañana España para", scenes,
-             {"t": 1.2, "titulo": "Huelga general: mañana España para", "capitulo": None},
+             {"t": 3.6, "titulo": "Huelga general: mañana España para", "capitulo": None},
              ["Moncloa.com (8/10/2026): convocantes, 24 h, primera desde 2012, reivindicaciones, CEOE",
               "Ara (7/10/2026): Unai Sordo (CCOO), «la mitad de los salarios»",
               "Naiz (2/10 y 6/10/2026): decretos de vivienda tumbados y aprobados de nuevo",

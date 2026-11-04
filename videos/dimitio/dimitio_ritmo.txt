@@ -1,0 +1,3 @@
+Duración 56.5 s · 95 cambios visuales · uno cada 0.59 s de media · hueco máximo 2.90 s
+⚠ RITMO: 2.9 s sin cambios visuales entre 7.1 y 9.9 s
+⚠ ESCENA larga: «reacciones» dura 9.7 s (máx. 9)

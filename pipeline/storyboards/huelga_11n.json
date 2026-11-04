@@ -111,8 +111,26 @@
      "cara": "sorpresa",
      "acciones": [
       {
+       "at": "@para",
+       "salta": true
+      },
+      {
+       "at": "@horas",
+       "mira": "der",
+       "cara": "susto"
+      },
+      {
+       "at": "@primera",
+       "pose": "senala_arriba"
+      },
+      {
        "at": "@2012",
        "take": true
+      },
+      {
+       "at": "@sueldo",
+       "pose": "encoge",
+       "cara": "pensativo"
       },
       {
        "at": "@casa",
@@ -250,6 +268,28 @@
      "out": "@líder"
     },
     {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 860,
+     "y": 1640,
+     "scale": 0.4,
+     "at": "@sindicatos",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@líder",
+       "mira": "izq"
+      },
+      {
+       "at": "@mitad",
+       "cara": "susto",
+       "take": true
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    },
+    {
      "type": "objeto",
      "objeto": "bocadillo",
      "x": 540,
@@ -278,7 +318,7 @@
      "x": 540,
      "y": 1300,
      "scale": 0.8,
-     "at": "@mitad",
+     "at": "@comiendo",
      "props": {},
      "acciones": [],
      "hud": true,
@@ -368,6 +408,23 @@
      "cara": "pensativo",
      "acciones": [
       {
+       "at": "@Alquileres",
+       "pose": "senala_arriba",
+       "cara": "normal"
+      },
+      {
+       "at": "@indefinidos",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@bajen",
+       "salta": true
+      },
+      {
+       "at": "@precios",
+       "pose": "jarras"
+      },
+      {
        "at": "@ricos",
        "cara": "sorpresa"
       },
@@ -390,6 +447,32 @@
      "texto": "VACÍO",
      "entra": "crece",
      "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "billete",
+     "x": 220,
+     "y": 1000,
+     "scale": 0.6,
+     "at": "@ricos",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@vacíos"
+    },
+    {
+     "type": "edificio",
+     "edificio": "casa",
+     "x": 220,
+     "y": 1340,
+     "scale": 0.35,
+     "at": "@pública",
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "pop",
+     "out": "@vacíos"
     }
    ]
   },
@@ -468,6 +551,67 @@
      "golpe": true,
      "out": "@aprobar",
      "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1180,
+     "scale": 0.6,
+     "at": "@Junts",
+     "props": {
+      "texto": "PP · VOX · JUNTS: NO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@aprobar"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 860,
+     "y": 1340,
+     "scale": 0.42,
+     "at": "@Gobierno#2",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@aprobar",
+       "pose": "senala_arriba",
+       "cara": "normal"
+      }
+     ],
+     "entra": "der",
+     "out": "@jueves",
+     "id": "sanchez"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 220,
+     "y": 1340,
+     "scale": 0.42,
+     "at": "@pelea",
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": "@octubre",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@aprobar",
+       "mira": "der"
+      },
+      {
+       "at": "@jueves",
+       "pose": "senala"
+      }
+     ],
+     "entra": "izq",
+     "id": "piz"
     },
     {
      "type": "rotulo",
@@ -764,6 +908,22 @@
      "cara": "pensativo",
      "acciones": [
       {
+       "at": "@patronal",
+       "mira": "izq"
+      },
+      {
+       "at": "@política",
+       "cara": "esceptica"
+      },
+      {
+       "at": "@sindicatos",
+       "mira": "der"
+      },
+      {
+       "at": "@casa",
+       "cara": "normal"
+      },
+      {
        "at": "@huelga",
        "pose": "piensa",
        "mira": "camara"
@@ -838,7 +998,7 @@
  "banda": true,
  "sfx_volume": 1.0,
  "portada": {
-  "t": 1.2,
+  "t": 3.6,
   "titulo": "Huelga general: mañana España para",
   "capitulo": null
  }

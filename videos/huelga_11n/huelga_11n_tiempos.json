@@ -1,0 +1,109 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 7.83,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.55,
+    "texto": "Mañana, España para. Veinticuatro horas."
+   },
+   {
+    "t0": 2.75,
+    "t1": 7.38,
+    "texto": "La primera gran huelga general desde 2012. Y el motivo no es solo el sueldo: es la casa."
+   }
+  ]
+ },
+ {
+  "escena": "quien",
+  "inicio": 7.83,
+  "fin": 17.56,
+  "frases": [
+   {
+    "t0": 8.09,
+    "t1": 12.04,
+    "texto": "La convocan el Sindicato de Inquilinas, con CCOO, UGT y otros sindicatos."
+   },
+   {
+    "t0": 12.24,
+    "t1": 17.11,
+    "texto": "El líder de CCOO lo resume así: «la vivienda se está comiendo la mitad de los salarios de muchas familias»."
+   }
+  ]
+ },
+ {
+  "escena": "piden",
+  "inicio": 17.56,
+  "fin": 25.29,
+  "frases": [
+   {
+    "t0": 17.86,
+    "t1": 20.82,
+    "texto": "¿Qué piden? Alquileres indefinidos y que bajen los precios."
+   },
+   {
+    "t0": 20.97,
+    "t1": 24.84,
+    "texto": "Un impuesto a los ricos para hacer vivienda pública. Y expropiar pisos vacíos."
+   }
+  ]
+ },
+ {
+  "escena": "decretos",
+  "inicio": 25.29,
+  "fin": 37.49,
+  "frases": [
+   {
+    "t0": 25.55,
+    "t1": 28.42,
+    "texto": "Y llega en plena pelea por los decretos de vivienda del Gobierno."
+   },
+   {
+    "t0": 28.57,
+    "t1": 33.9,
+    "texto": "El Congreso los tumbó el 2 de octubre, con PP, Vox y Junts en contra. El Gobierno los volvió a aprobar."
+   },
+   {
+    "t0": 34.1,
+    "t1": 37.04,
+    "texto": "Y el jueves 12, el día después de la huelga, se votan otra vez."
+   }
+  ]
+ },
+ {
+  "escena": "partidos",
+  "inicio": 37.49,
+  "fin": 46.32,
+  "frases": [
+   {
+    "t0": 37.49,
+    "t1": 41.81,
+    "texto": "¿Y los partidos? El PSOE: alargar los alquileres hasta dos años y préstamos para la entrada."
+   },
+   {
+    "t0": 41.96,
+    "t1": 45.87,
+    "texto": "El PP: un millón de viviendas. Y Vox: quitar el IVA al comprar tu primera casa."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 46.32,
+  "fin": 55.45,
+  "frases": [
+   {
+    "t0": 47.02,
+    "t1": 50.83,
+    "texto": "La patronal dice que es una huelga política. Los sindicatos, que es por la casa."
+   },
+   {
+    "t0": 51.03,
+    "t1": 54.1,
+    "texto": "¿Tú vas a hacer huelga mañana? Sí o no, te leo. Y sigue a Piz."
+   }
+  ]
+ }
+]

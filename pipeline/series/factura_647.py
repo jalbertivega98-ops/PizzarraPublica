@@ -25,7 +25,7 @@ scenes = [
         obj("contador", 540, 700, 0.2, 1.0, hud=True, entra="pop", sfx="kaching", dibujo=1.8,
             props={"valor": 647000, "sufijo": " €", "ancho": 900}, acciones=[{"at": "@euros", "tiembla": True}]),
         rot("LA FACTURA", 540, 460, 0.1, 110, "amarillo", golpe=True),
-        quien("abalos", 540, "@Ábalos", 0.7, "susto", y=1480, entra="abajo", acciones=[{"at": "@pagar", "pose": "encoge", "cara": "preocupado"}]),
+        quien("abalos", 540, "@factura", 0.7, "susto", y=1480, entra="abajo", acciones=[{"at": "@pagar", "pose": "encoge", "cara": "preocupado"}]),
         etq("KOLDO", 230, 1180, "@Koldo", "blanco", 0.6, hud=True),
         etq("ALDAMA", 850, 1180, "@Aldama", "blanco", 0.6, hud=True),
         obj("calendario", 860, 420, "@quince", 0.28, hud=True, entra="crece", sfx="papel",
@@ -45,6 +45,7 @@ scenes = [
                 {"texto": "ÁBALOS", "valor": 52.5, "color": "psoe"}, {"texto": "KOLDO", "valor": 45.75, "color": "gris"},
                 {"texto": "ALDAMA", "valor": 75.0, "color": "amarillo"}]}, out="@curioso"),
         rot("1 · MULTAS", 540, 420, 0, 100, "amarillo"),
+        quien("abalos", 230, "@Ábalos", 0.4, "preocupado", y=1640, entra="izq", out="@curioso", acciones=[{"at": "@Koldo", "mira": "der"}, {"at": "@Aldama", "cara": "sorpresa"}]),
         quien("piz", 1250, "@Aldama-0.4", 0.45, "normal", y=1640, entra="nada", acciones=[
             {"at": "@Aldama-0.4", "x": 900, "dur": 0.5}, {"at": "@75.000", "cara": "sorpresa", "take": True},
             {"at": "@cárcel", "pose": "jarras", "cara": "esceptica", "mira": "camara"}]),
@@ -61,8 +62,9 @@ scenes = [
        elements=[
         rot("2 · DECOMISO", 540, 420, 0, 100, "amarillo"),
         obj("contador", 540, 640, "@decomiso", 0.95, hud=True, entra="pop", sfx="kaching", props={"valor": 430298, "sufijo": " €", "ancho": 900}),
-        obj("saco", 540, 1000, "@mordidas", 0.8, hud=True, entra="cae", sfx="golpe"),
+        obj("saco", 540, 1000, "@Es", 0.8, hud=True, entra="cae", sfx="golpe"),
         dict(type="efecto", efecto="lluvia", objeto="moneda", n=12, x0=200, x1=880, at="@repartía", vida=1.8),
+        etq("MORDIDAS", 540, 1240, "@mordidas", "rojo", 0.6, hud=True, out="@repartía"),
         etq("ALDAMA REPARTÍA", 540, 1240, "@repartía", "blanco", 0.6, hud=True, out="@pagan"),
         etq("ENTRE LOS TRES", 540, 1240, "@pagan", "amarillo", 0.65, hud=True),
         sello("SENTENCIA", "azul", 1400, "@sentencia"),
@@ -78,10 +80,10 @@ scenes = [
         obj("cartel", 780, 820, "@Tragsatec", 0.8, hud=True, entra="cae", sfx="golpe", props={"texto": "TRAGSATEC", "color": "verde", "tinta": "blanco"}),
         etq("34.450 €", 300, 620, "@Ineco", "verde", 0.62, hud=True),
         etq("9.500 €", 780, 620, "@Tragsatec", "verde", 0.62, hud=True),
-        quien("abalos", 540, "@enchufe", 0.45, "serio", y=1600, entra="abajo", acciones=[{"at": "@pagan", "pose": "manos_juntas", "cara": "preocupado"}]),
+        quien("abalos", 540, "@empresas", 0.45, "serio", y=1600, entra="abajo", acciones=[{"at": "@pagan", "pose": "manos_juntas", "cara": "preocupado"}]),
     ]),
     # 5 · LAS CONDENAS Y QUÉ PASA SI NO PAGAN
-    dict(id="condenas", fondo={"tipo": "plano", "color": GRANATE}, animo="tension", trans="iris", footnote=F, lines=[
+    dict(id="condenas", fondo="oficina", animo="tension", trans="iris", footnote=F, lines=[
         V("Recuerda las condenas: 24 años para Ábalos, el que fue ministro y número tres del PSOE. 19 para Koldo."),
         V("¿Y si no pagan? El tribunal irá a por su dinero por la vía de apremio.", "remate", 0.2),
     ], camara=[plano(0, "general", [540, 960], 0), plano("@pagan", "general", [540, 900], 0.4, zoom=1.06)],
@@ -89,7 +91,9 @@ scenes = [
         obj("barras", 540, 820, "@condenas", 0.95, hud=True, entra="nada", dibujo=1.2, out="@pagan",
             props={"sufijo": " AÑOS", "decimales": 0, "tope": 26, "barras": [
                 {"texto": "ÁBALOS", "valor": 24, "color": "psoe"}, {"texto": "KOLDO", "valor": 19, "color": "gris"}]}),
-        quien("abalos", 540, "@pagan", 0.55, "susto", y=1560, entra="abajo", acciones=[{"at": "@apremio", "pose": "encoge"}]),
+        etq("EX MINISTRO", 300, 1250, "@ministro", "blanco", 0.55, hud=True, out="@pagan"),
+        etq("Nº 3 DEL PSOE", 780, 1250, "@tres", "psoe", 0.55, hud=True, out="@pagan"),
+        quien("abalos", 540, "@pagan", 0.55, "susto", y=1560, entra="abajo", acciones=[{"at": "@tribunal", "cara": "preocupado"}, {"at": "@apremio", "pose": "encoge"}]),
         obj("lupa", 820, 760, "@dinero", 0.7, hud=True, entra="crece", sfx="pop"),
         rot("VÍA DE APREMIO", 540, 440, "@apremio", 90, "rojo", golpe=True),
         sello("COBRO FORZOSO", "naranja", 1100, "@apremio+0.3"),
@@ -112,7 +116,7 @@ scenes = [
 
 if __name__ == "__main__":
     episodio("factura_647", "647.000 €", scenes,
-             {"t": 1.6, "titulo": "La factura de Ábalos: 647.000 €", "capitulo": None},
+             {"t": 4.2, "titulo": "La factura de Ábalos: 647.000 €", "capitulo": None},
              ["Auto del Tribunal Supremo (ejecución de la sentencia del caso mascarillas), vía Europa Press/EFE 4/11/2026",
               "Infobae, El Debate, Público y Cronista, 4/11/2026: multas, decomiso, indemnizaciones, plazo y vía de apremio",
               "No afirmamos si la sentencia es firme (no consta en las fuentes)"],

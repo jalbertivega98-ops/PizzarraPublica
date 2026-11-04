@@ -1,0 +1,5 @@
+Duración 56.6 s · 78 cambios visuales · uno cada 0.73 s de media · hueco máximo 2.67 s
+⚠ RITMO: 2.7 s sin cambios visuales entre 0.2 y 2.9 s
+⚠ RITMO: 2.7 s sin cambios visuales entre 45.7 y 48.4 s
+⚠ ESCENA larga: «antes_despues» dura 14.0 s (máx. 9)
+⚠ ESCENA larga: «michavila» dura 9.1 s (máx. 9)

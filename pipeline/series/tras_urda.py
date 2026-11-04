@@ -46,13 +46,15 @@ scenes = [
         V("Y quien más sube es Vox: del 18,7 al 19,9. A una décima del 20.", "remate", 0.15),
     ], camara=[plano(0, "general", [540, 900], 0), plano("@Vox", "general", [540, 920], 0.4, zoom=1.05)],
        elements=[
-        rot("ANTES 11/10 → DESPUÉS 30/10".replace("→", "·"), 540, 420, 0.2, 60, "blanco"),
+        rot("MISMA EMPRESA", 540, 560, 0.1, 80, "amarillo", golpe=True, out="@PP"),
+        etq("TARGET POINT", 540, 700, "@Target", "blanco", 0.7, hud=True, out="@PP"),
+        rot("ANTES 11/10 · DESPUÉS 30/10", 540, 420, "@antes", 60, "blanco"),
         barras("@PP", [("PP", 31.8, "pp"), ("PSOE", 25.5, "psoe"), ("VOX", 19.9, "vox")]),
         etq("PP: −0,2", 230, 1330, "@igual", "blanco", 0.5, hud=True),
         etq("PSOE: −0,4", 540, 1430, "@décimas", "rojo", 0.5, hud=True),
         etq("VOX: +1,2", 850, 1330, "@sube", "verde", 0.55, hud=True),
         quien("abascal", 1250, "@Vox-0.5", 0.42, "normal", y=1660, entra="nada", acciones=[
-            {"at": "@Vox-0.5", "x": 900, "dur": 0.5}, {"at": "@20", "pose": "punos", "cara": "riendo"}]),
+            {"at": "@Vox-0.5", "x": 900, "dur": 0.5}, {"at": "@18,7", "mira": "camara"}, {"at": "@19,9", "salta": True}, {"at": "@décima", "cara": "sorpresa"}, {"at": "@20", "pose": "punos", "cara": "riendo"}]),
     ]),
     # 3 · SIGMA DOS: el golpe al PSOE
     dict(id="sigma", fondo="oficina", animo="tension", trans="barrido", footnote=F_SD, lines=[
@@ -63,8 +65,9 @@ scenes = [
         obj("grafica", 540, 700, 0, 0.8, hud=True, entra="crece", sfx="pop", out="@PP"),
         etq("PSOE −1,5 EN 7 DÍAS", 540, 460, "@semana", "rojo", 0.7, hud=True, out="@PP"),
         barras("@PP", [("PP", 31.1, "pp"), ("PSOE", 24.6, "psoe"), ("VOX", 19.3, "vox")], y=900),
-        quien("feijoo", 260, "@PP", 0.42, "normal", y=1560, entra="izq", acciones=[{"at": "@medio", "pose": "pulgar", "cara": "ilusionado"}]),
-        quien("sanchez", 820, 0.2, 0.42, "serio", y=1560, entra="der", acciones=[{"at": "@cae", "cara": "preocupado"}]),
+        quien("feijoo", 260, "@PP", 0.42, "normal", y=1560, entra="izq", acciones=[{"at": "@medio", "pose": "pulgar", "cara": "ilusionado"}, {"at": "@31,1", "salta": True}]),
+        quien("sanchez", 820, 0.2, 0.42, "serio", y=1560, entra="der", acciones=[{"at": "@cae", "cara": "preocupado"}, {"at": "@24,6", "pose": "encoge"}, {"at": "@19,3", "mira": "camara"}]),
+        quien("abascal", 1250, "@Vox-0.4", 0.42, "normal", y=1560, entra="nada", acciones=[{"at": "@Vox-0.4", "x": 540, "dur": 0.4}, {"at": "@19,3", "pose": "punos"}]),
         sello("ENCUESTA", "azul", 1240, "@24,6"),
     ]),
     # 4 · LOS BLOQUES
@@ -76,8 +79,9 @@ scenes = [
         edif("congreso", 540, 0, 0.55, entra="crece", sfx="pop", dibuja=0.7),
         rot("5 ENCUESTAS", 540, 420, 0.1, 100, "amarillo", golpe=True, out="@Entre"),
         rot("PP + VOX: 196-208", 540, 420, "@Entre", 90, "amarillo", golpe=True, out="@176"),
-        rot("MAYORÍA: 176", 540, 420, "@176", 100, "blanco", golpe=True),
-        quien("piz", 860, 0.2, 0.45, "pensativo", y=1560, entra="der", acciones=[{"at": "@todas", "pose": "senala_arriba", "cara": "sorpresa"}, {"at": "@176", "pose": "piensa"}]),
+        rot("MAYORÍA: 176", 540, 520, "@176+0.25", 100, "blanco", golpe=True),
+        quien("piz", 860, 0.2, 0.45, "pensativo", y=1560, entra="der", acciones=[{"at": "@accidente", "mira": "camara"}, {"at": "@todas", "pose": "senala_arriba", "cara": "sorpresa"}, {"at": "@mayoría", "salta": True}, {"at": "@196", "pose": "jarras"}, {"at": "@208", "cara": "idea"}, {"at": "@176", "pose": "piensa"}]),
+        etq("SIGMA · NC · TARGET · SOCIOMÉTRICA · HAMALGAMA", 540, 560, "@Cinco", "blanco", 0.42, hud=True, out="@Entre"),
     ]),
     # 5 · LA FRASE DE MICHAVILA + OJO
     dict(id="michavila", fondo={"tipo": "plano", "color": AZUL}, animo="tension", trans="corte",
@@ -111,7 +115,7 @@ scenes = [
 
 if __name__ == "__main__":
     episodio("tras_urda", "¿Ha cambiado todo después de Urda?", scenes,
-             {"t": 3.0, "titulo": "¿Ha cambiado todo tras Urda?", "capitulo": None},
+             {"t": 5.5, "titulo": "¿Ha cambiado todo tras Urda?", "capitulo": None},
              ["Target Point / El Debate (campo 28-30/10/2026) vs su sondeo del 11/10, vía Demócrata 2/11",
               "Sigma Dos / El Mundo (campo 29-30/10/2026), vía Infobae y UHN Plus 2/11",
               "NC Report, SocioMétrica y Hamalgama, vía Libertad Digital 2/11/2026",

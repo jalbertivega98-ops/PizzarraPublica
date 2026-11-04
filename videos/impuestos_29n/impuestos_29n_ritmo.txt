@@ -1,0 +1,4 @@
+Duración 57.7 s · 77 cambios visuales · uno cada 0.75 s de media · hueco máximo 2.61 s
+⚠ RITMO: 2.6 s sin cambios visuales entre 41.9 y 44.5 s
+⚠ ESCENA larga: «psoe» dura 9.2 s (máx. 9)
+⚠ ESCENA larga: «ojo» dura 11.3 s (máx. 9)

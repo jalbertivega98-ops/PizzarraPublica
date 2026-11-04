@@ -1,0 +1,6 @@
+Duración 56.0 s · 71 cambios visuales · uno cada 0.79 s de media · hueco máximo 3.04 s
+⚠ GANCHO: el primer dibujo aparece en 0.10 s (debe estar en el fotograma 0)
+⚠ RITMO: 2.8 s sin cambios visuales entre 10.7 y 13.5 s
+⚠ RITMO: 3.0 s sin cambios visuales entre 21.1 y 24.1 s
+⚠ RITMO: 2.7 s sin cambios visuales entre 34.9 y 37.6 s
+⚠ RITMO: 2.5 s sin cambios visuales entre 43.6 y 46.1 s

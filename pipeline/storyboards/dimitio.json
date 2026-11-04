@@ -1055,6 +1055,42 @@
      "hud": true
     },
     {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 600,
+     "scale": 0.6,
+     "at": "@pedían",
+     "props": {
+      "texto": "PEDÍAN SU SALIDA",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@dignidad"
+    },
+    {
+     "type": "personaje",
+     "quien": "puente",
+     "x": 860,
+     "y": 1340,
+     "scale": 0.42,
+     "at": "@grupos",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@fuera",
+       "pose": "encoge",
+       "cara": "triste"
+      }
+     ],
+     "entra": "der",
+     "out": "@dignidad",
+     "id": "puente"
+    },
+    {
      "type": "personaje",
      "quien": "piz",
      "x": 540,
@@ -1183,7 +1219,7 @@
  "banda": true,
  "sfx_volume": 1.0,
  "portada": {
-  "t": 1.4,
+  "t": 3.4,
   "titulo": "Puente dimite",
   "capitulo": null
  }

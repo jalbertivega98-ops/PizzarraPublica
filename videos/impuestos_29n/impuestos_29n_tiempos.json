@@ -1,0 +1,104 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 7.59,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 3.08,
+    "texto": "Los tres dicen que van a cuidar tu bolsillo. Pero no te prometen lo mismo."
+   },
+   {
+    "t0": 3.28,
+    "t1": 7.14,
+    "texto": "Uno baja el IVA de todo. Otro, el de la comida. Y otro no promete bajarlo."
+   }
+  ]
+ },
+ {
+  "escena": "vox",
+  "inicio": 7.59,
+  "fin": 18.61,
+  "frases": [
+   {
+    "t0": 7.85,
+    "t1": 13.47,
+    "texto": "Vox: el IVA general, del 21 al 18. Algo de 121 euros pasaría a costar 118."
+   },
+   {
+    "t0": 13.62,
+    "t1": 18.16,
+    "texto": "Y en el IRPF, nada hasta 22.000 euros al año, y un 15 por ciento hasta 70.000."
+   }
+  ]
+ },
+ {
+  "escena": "pp",
+  "inicio": 18.61,
+  "fin": 28.96,
+  "frases": [
+   {
+    "t0": 18.91,
+    "t1": 22.52,
+    "texto": "El PP: IVA cero en la comida básica, como el pan, la leche o los huevos."
+   },
+   {
+    "t0": 22.67,
+    "t1": 28.51,
+    "texto": "La luz y el gas, del 21 al 10. Y el doble por cada hijo en la renta: de 2.400 a 4.800 euros."
+   }
+  ]
+ },
+ {
+  "escena": "psoe",
+  "inicio": 28.96,
+  "fin": 38.14,
+  "frases": [
+   {
+    "t0": 29.22,
+    "t1": 34.11,
+    "texto": "El PSOE no promete una bajada general. Defiende que el que cobra el salario mínimo no pague IRPF."
+   },
+   {
+    "t0": 34.26,
+    "t1": 37.69,
+    "texto": "Y préstamos sin intereses de hasta 50.000 euros para tu primera casa."
+   }
+  ]
+ },
+ {
+  "escena": "ojo",
+  "inicio": 38.14,
+  "fin": 49.47,
+  "frases": [
+   {
+    "t0": 38.14,
+    "t1": 42.84,
+    "texto": "Ojo: Vox dice que su rebaja cuesta 46.000 millones. Hacienda dice 85.000."
+   },
+   {
+    "t0": 43.04,
+    "t1": 49.02,
+    "texto": "Y hasta su número dos en economía admite: «No creo que saquemos el 100 %». El PP no ha dicho cuánto cuesta la suya."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 49.47,
+  "fin": 57.73,
+  "frases": [
+   {
+    "t0": 50.17,
+    "t1": 54.01,
+    "texto": "¿Cuál te convence más? A, Vox. B, PP. C, PSOE. Te leo."
+   },
+   {
+    "t0": 54.21,
+    "t1": 56.38,
+    "texto": "Y sigue a Piz: te contamos qué cumple cada uno."
+   }
+  ]
+ }
+]

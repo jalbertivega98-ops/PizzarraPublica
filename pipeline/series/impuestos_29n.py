@@ -33,7 +33,8 @@ scenes = [
         quien("abascal", 230, 0, 0.46, "normal", entra="izq", acciones=[{"at": "@todo", "pose": "senala_arriba", "cara": "riendo"}]),
         quien("feijoo", 540, 0.1, 0.46, "normal", entra="abajo", acciones=[{"at": "@comida", "pose": "senala", "cara": "ilusionado"}]),
         quien("sanchez", 850, 0.2, 0.46, "normal", entra="der", acciones=[{"at": "@promete#2", "pose": "cruzados", "cara": "serio"}]),
-        rot("¿QUIÉN TE BAJA MÁS?", 540, 420, 0, 90, "amarillo", golpe=True, out="@Uno"),
+        rot("¿QUIÉN TE BAJA MÁS?", 540, 420, 0, 90, "amarillo", golpe=True, out="@Uno", fx=[{"at": "@bolsillo", "do": "latir"}]),
+        obj("hucha", 540, 640, "@bolsillo", 0.5, hud=True, entra="pop", sfx="kaching", out="@Uno"),
         tarjeta("IVA DE TODO", 300, 540, "@todo", "vox", scale=0.5),
         tarjeta("IVA DE LA COMIDA", 540, 640, "@comida", "pp", scale=0.5),
         tarjeta("NO PROMETE BAJARLO", 760, 740, "@bajarlo", "psoe", scale=0.5),
@@ -67,7 +68,7 @@ scenes = [
         tarjeta("IVA 0 % COMIDA BÁSICA", 540, 600, "@cero", "pp", out="@luz"),
         obj("etiqueta", 300, 700, "@luz", 0.9, hud=True, entra="pop", sfx="kaching", props={"texto": "LUZ Y GAS: 10 %", "color": "amarillo"}),
         obj("etiqueta", 780, 840, "@hijo", 0.9, hud=True, entra="pop", sfx="kaching", props={"texto": "HIJO: 4.800 €", "color": "verde"}),
-        quien("pizon", 780, "@hijo-0.3", 0.45, "ilusionado", entra="der", acciones=[{"at": "@doble", "salta": True}]),
+        quien("pizon", 780, "@luz", 0.45, "ilusionado", entra="der", acciones=[{"at": "@gas", "cara": "riendo"}, {"at": "@doble", "salta": True}, {"at": "@4.800", "pose": "arriba"}]),
         sello("DECÁLOGO", "azul", 1240, "@básica"),
     ]),
     # 4 · PSOE
@@ -96,6 +97,7 @@ scenes = [
         tarjeta("HACIENDA: 85.000 M", 780, 1120, "@85.000", "rojo", scale=0.5),
         obj("bocadillo", 540, 520, "@admite", 0.7, hud=True, entra="pop", sfx="pop", props={"lineas": ["«No creo que", "saquemos el 100 %»"], "cola": (0, 1)}, out="@PP"),
         tarjeta("PP: COSTE ¿?", 540, 520, "@PP", "azul"),
+        quien("piz", 540, "@admite", 0.42, "esceptica", y=1600, entra="abajo", acciones=[{"at": "@100", "pose": "encoge"}, {"at": "@PP", "pose": "piensa", "cara": "confundido"}, {"at": "@cuesta", "mira": "camara"}]),
         sello("CIFRAS QUE NO CUADRAN", "naranja", 1300, "@85.000"),
     ]),
     # 6 · FINAL
@@ -116,7 +118,7 @@ scenes = [
 
 if __name__ == "__main__":
     episodio("impuestos_29n", "¿Quién te baja más los impuestos?", scenes,
-             {"t": 1.4, "titulo": "¿Quién te baja más los impuestos?", "capitulo": None},
+             {"t": 5.5, "titulo": "¿Quién te baja más los impuestos?", "capitulo": None},
              ["Vox: Figaredo, Madrid Foro 4/11/2026 (Valencia Plaza, Demócrata, Infobae); IRPF del programa 2025 (Infobae 13/10)",
               "Hacienda: coste de 85.000 M€ de la rebaja de Vox (Infobae 13/10/2026)",
               "PP: decálogo económico de septiembre de 2026 (Euro Weekly 24/09, Forbes 5/10)",

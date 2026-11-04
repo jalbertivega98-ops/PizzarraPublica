@@ -141,6 +141,8 @@ scenes = [
        elements=[
         edif("congreso", 540, 0, 0.5, entra="nada", dibuja=0.6, out="@dignidad"),
         rot("TODOS MENOS PSOE Y BILDU", 540, 440, 0.1, 64, "blanco", out="@dignidad"),
+        etq("PEDÍAN SU SALIDA", 540, 600, "@pedían", "rojo", 0.6, hud=True, out="@dignidad"),
+        quien("puente", 860, "@grupos", 0.42, "serio", entra="der", out="@dignidad", acciones=[{"at": "@fuera", "pose": "encoge", "cara": "triste"}]),
         quien("piz", 540, "@dignidad-0.4", 0.62, "pensativo", entra="abajo", acciones=[
             {"at": "@dignidad", "pose": "senala_izq", "mira": "izq"}, {"at": "@cálculo", "pose": "senala", "mira": "der"},
             {"at": "@leo", "pose": "piensa", "mira": "camara", "cara": "normal"},
@@ -156,7 +158,7 @@ scenes = [
 
 if __name__ == "__main__":
     episodio("dimitio", "Dimitió", scenes,
-             {"t": 1.4, "titulo": "Puente dimite", "capitulo": None},
+             {"t": 3.4, "titulo": "Puente dimite", "capitulo": None},
              ["The Objective (3/11/2026): dimisión tras +4 h de comparecencia, se baja de la lista por Valladolid, Sánchez en X",
               "Infobae/EFE (3-4/11/2026): «dos accidentes de esta gravedad en menos de un año»; 69 fallecidos en Urda",
               "El Español (4/11/2026): Cuerpo asume Transportes hasta el 29N; Vox: «fusible»",

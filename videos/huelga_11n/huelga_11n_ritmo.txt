@@ -1,0 +1,6 @@
+Duración 55.4 s · 85 cambios visuales · uno cada 0.65 s de media · hueco máximo 2.98 s
+⚠ RITMO: 2.5 s sin cambios visuales entre 12.4 y 15.0 s
+⚠ RITMO: 3.0 s sin cambios visuales entre 26.2 y 29.2 s
+⚠ RITMO: 2.6 s sin cambios visuales entre 39.5 y 42.1 s
+⚠ ESCENA larga: «quien» dura 9.7 s (máx. 9)
+⚠ ESCENA larga: «decretos» dura 12.2 s (máx. 9)

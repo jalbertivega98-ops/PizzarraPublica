@@ -118,7 +118,7 @@
      "x": 540,
      "y": 1480,
      "scale": 0.7,
-     "at": "@Ábalos",
+     "at": "@factura",
      "cara": "susto",
      "acciones": [
       {
@@ -302,6 +302,28 @@
     },
     {
      "type": "personaje",
+     "quien": "abalos",
+     "x": 230,
+     "y": 1640,
+     "scale": 0.4,
+     "at": "@Ábalos",
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": "@Koldo",
+       "mira": "der"
+      },
+      {
+       "at": "@Aldama",
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "izq",
+     "out": "@curioso",
+     "id": "abalos"
+    },
+    {
+     "type": "personaje",
      "quien": "piz",
      "x": 1250,
      "y": 1640,
@@ -454,7 +476,7 @@
      "x": 540,
      "y": 1000,
      "scale": 0.8,
-     "at": "@mordidas",
+     "at": "@Es",
      "props": {},
      "acciones": [],
      "hud": true,
@@ -470,6 +492,23 @@
      "x1": 880,
      "at": "@repartía",
      "vida": 1.8
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1240,
+     "scale": 0.6,
+     "at": "@mordidas",
+     "props": {
+      "texto": "MORDIDAS",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@repartía"
     },
     {
      "type": "objeto",
@@ -632,7 +671,7 @@
      "x": 540,
      "y": 1600,
      "scale": 0.45,
-     "at": "@enchufe",
+     "at": "@empresas",
      "cara": "serio",
      "acciones": [
       {
@@ -648,14 +687,7 @@
   },
   {
    "id": "condenas",
-   "fondo": {
-    "tipo": "plano",
-    "color": [
-     70,
-     30,
-     40
-    ]
-   },
+   "fondo": "oficina",
    "animo": "tension",
    "trans": "iris",
    "footnote": "Auto del Supremo vía Infobae, El Debate y Público, 4/11/2026",
@@ -722,6 +754,40 @@
      "out": "@pagan"
     },
     {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 1250,
+     "scale": 0.55,
+     "at": "@ministro",
+     "props": {
+      "texto": "EX MINISTRO",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@pagan"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 1250,
+     "scale": 0.55,
+     "at": "@tres",
+     "props": {
+      "texto": "Nº 3 DEL PSOE",
+      "color": "psoe"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@pagan"
+    },
+    {
      "type": "personaje",
      "quien": "abalos",
      "x": 540,
@@ -730,6 +796,10 @@
      "at": "@pagan",
      "cara": "susto",
      "acciones": [
+      {
+       "at": "@tribunal",
+       "cara": "preocupado"
+      },
       {
        "at": "@apremio",
        "pose": "encoge"
@@ -911,7 +981,7 @@
  "banda": true,
  "sfx_volume": 1.0,
  "portada": {
-  "t": 1.6,
+  "t": 4.2,
   "titulo": "La factura de Ábalos: 647.000 €",
   "capitulo": null
  }

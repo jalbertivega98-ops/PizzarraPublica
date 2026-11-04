@@ -1,0 +1,114 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 7.47,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 3.78,
+    "texto": "El Supremo acaba de pasarles la factura: 647.000 euros."
+   },
+   {
+    "t0": 3.98,
+    "t1": 7.02,
+    "texto": "A Ábalos, a Koldo y a Aldama. Y tienen quince días para pagar."
+   }
+  ]
+ },
+ {
+  "escena": "multas",
+  "inicio": 7.47,
+  "fin": 20.08,
+  "frases": [
+   {
+    "t0": 7.77,
+    "t1": 12.82,
+    "texto": "Primero, las multas. Ábalos, 52.500. Koldo, 45.750."
+   },
+   {
+    "t0": 12.97,
+    "t1": 15.33,
+    "texto": "Y el que más paga es Aldama: 75.000."
+   },
+   {
+    "t0": 15.58,
+    "t1": 19.63,
+    "texto": "Lo curioso: es el único de los tres que no está en la cárcel. Colaboró con la justicia."
+   }
+  ]
+ },
+ {
+  "escena": "decomiso",
+  "inicio": 20.08,
+  "fin": 31.21,
+  "frases": [
+   {
+    "t0": 20.34,
+    "t1": 23.96,
+    "texto": "Segundo, el decomiso: 430.298 euros."
+   },
+   {
+    "t0": 24.11,
+    "t1": 28.43,
+    "texto": "Es lo que, según la sentencia, ganaron con las mordidas. Y el que lo repartía era Aldama."
+   },
+   {
+    "t0": 28.58,
+    "t1": 30.76,
+    "texto": "Lo pagan entre los tres, hasta el último euro."
+   }
+  ]
+ },
+ {
+  "escena": "enchufe",
+  "inicio": 31.21,
+  "fin": 39.13,
+  "frases": [
+   {
+    "t0": 31.21,
+    "t1": 35.54,
+    "texto": "Y tercero: casi 44.000 euros para dos empresas públicas, Ineco y Tragsatec."
+   },
+   {
+    "t0": 35.69,
+    "t1": 38.68,
+    "texto": "Por el enchufe de Jéssica Rodríguez. Esto lo pagan Ábalos y Koldo."
+   }
+  ]
+ },
+ {
+  "escena": "condenas",
+  "inicio": 39.13,
+  "fin": 49.3,
+  "frases": [
+   {
+    "t0": 39.83,
+    "t1": 45.48,
+    "texto": "Recuerda las condenas: 24 años para Ábalos, el que fue ministro y número tres del PSOE. 19 para Koldo."
+   },
+   {
+    "t0": 45.73,
+    "t1": 48.85,
+    "texto": "¿Y si no pagan? El tribunal irá a por su dinero por la vía de apremio."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 49.3,
+  "fin": 55.95,
+  "frases": [
+   {
+    "t0": 50.0,
+    "t1": 52.56,
+    "texto": "¿Crees que van a pagar en quince días? Sí o no, te leo."
+   },
+   {
+    "t0": 52.76,
+    "t1": 54.6,
+    "texto": "Y sigue a Piz: te contamos cómo acaba."
+   }
+  ]
+ }
+]

@@ -1,0 +1,109 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 6.98,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.43,
+    "texto": "Antes de Urda, el PSOE remontaba en las encuestas."
+   },
+   {
+    "t0": 2.63,
+    "t1": 6.53,
+    "texto": "Una semana después, una lo deja en 99 escaños. Por debajo de cien."
+   }
+  ]
+ },
+ {
+  "escena": "antes_despues",
+  "inicio": 6.98,
+  "fin": 21.01,
+  "frases": [
+   {
+    "t0": 7.28,
+    "t1": 10.89,
+    "texto": "La forma limpia de verlo: misma empresa, antes y después. Target Point."
+   },
+   {
+    "t0": 11.04,
+    "t1": 15.56,
+    "texto": "El PP, casi igual: 31,8. El PSOE baja cuatro décimas, al 25,5."
+   },
+   {
+    "t0": 15.76,
+    "t1": 20.56,
+    "texto": "Y quien más sube es Vox: del 18,7 al 19,9. A una décima del 20."
+   }
+  ]
+ },
+ {
+  "escena": "sigma",
+  "inicio": 21.01,
+  "fin": 30.91,
+  "frases": [
+   {
+    "t0": 21.27,
+    "t1": 26.35,
+    "texto": "Sigma Dos lo ve más fuerte: el PSOE cae punto y medio en una semana, hasta el 24,6."
+   },
+   {
+    "t0": 26.5,
+    "t1": 30.46,
+    "texto": "El PP sube medio punto, al 31,1. Y Vox, 19,3."
+   }
+  ]
+ },
+ {
+  "escena": "bloques",
+  "inicio": 30.91,
+  "fin": 40.1,
+  "frases": [
+   {
+    "t0": 31.61,
+    "t1": 35.8,
+    "texto": "Cinco encuestas tras el accidente. En todas, PP y Vox suman mayoría absoluta."
+   },
+   {
+    "t0": 35.95,
+    "t1": 39.65,
+    "texto": "Entre 196 y 208 escaños. Hacen falta 176."
+   }
+  ]
+ },
+ {
+  "escena": "michavila",
+  "inicio": 40.1,
+  "fin": 49.17,
+  "frases": [
+   {
+    "t0": 40.1,
+    "t1": 45.46,
+    "texto": "Y el presidente de GAD3, Narciso Michavila, va más lejos: «ahora es imposible que Pedro Sánchez sea el más votado»."
+   },
+   {
+    "t0": 45.71,
+    "t1": 48.72,
+    "texto": "Ojo: son encuestas hechas en caliente. Y las encuestas no votan."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 49.17,
+  "fin": 56.64,
+  "frases": [
+   {
+    "t0": 49.87,
+    "t1": 52.18,
+    "texto": "¿Urda ha cambiado tu voto? Sí o no, te leo."
+   },
+   {
+    "t0": 52.38,
+    "t1": 55.29,
+    "texto": "Y sigue a Piz: hasta el 29N, cada encuesta con datos."
+   }
+  ]
+ }
+]

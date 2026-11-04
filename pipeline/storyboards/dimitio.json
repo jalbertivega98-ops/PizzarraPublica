@@ -1,0 +1,1190 @@
+{
+ "slug": "dimitio",
+ "title": "Dimitió",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "The Objective (3/11/2026): dimisión tras +4 h de comparecencia, se baja de la lista por Valladolid, Sánchez en X",
+  "Infobae/EFE (3-4/11/2026): «dos accidentes de esta gravedad en menos de un año»; 69 fallecidos en Urda",
+  "El Español (4/11/2026): Cuerpo asume Transportes hasta el 29N; Vox: «fusible»",
+  "The Objective (4/11/2026), citando a ABC: destitución del presidente de Adif",
+  "Tema político tras una tragedia: tono sobrio, sin gags sobre el accidente"
+ ],
+ "caption": "🚆 Óscar Puente dimite\n🕛 A mediodía Moncloa decía que no · por la noche, dimisión\n🖤 «No puede continuar con dos accidentes en menos de un año» (Adamuz 46 · Urda 69)\n🗳️ Se baja de las listas del PSOE por Valladolid\n🚄 Cuerpo se queda Transportes hasta el 29N · según ABC, fuera el presidente de Adif\n💬 ¿Dignidad (A) o cálculo electoral (B)? Te leo 👇\n🔔 Sigue a Piz · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: The Objective 3/11 y 4/11/2026 (Adif, citando a ABC) · Infobae/EFE 3/11 · El Español 4/11. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#OscarPuente",
+  "#Urda",
+  "#Adif",
+  "#CarlosCuerpo",
+  "#29N",
+  "#EleccionesGenerales",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     40,
+     70
+    ]
+   },
+   "animo": "tension",
+   "footnote": "The Objective, 3/11/2026",
+   "lines": [
+    {
+     "text": "A mediodía, Moncloa decía que no se iba. Por la noche, Óscar Puente ya había dimitido.",
+     "tono": "intriga"
+    },
+    {
+     "text": "Esto es lo que pasó en el Congreso.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@noche",
+     "plano": "medio",
+     "sobre": "puente",
+     "dur": 0.4,
+     "aire": 260
+    },
+    {
+     "at": "@Esto",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "puente",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@Moncloa",
+       "pose": "cruzados"
+      },
+      {
+       "at": "@noche",
+       "pose": "manos_juntas",
+       "cara": "triste",
+       "mira": "camara"
+      },
+      {
+       "at": "@dimitido",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "nada",
+     "id": "puente"
+    },
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 230,
+     "y": 600,
+     "scale": 0.45,
+     "at": 0.2,
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@noche"
+    },
+    {
+     "type": "rotulo",
+     "text": "MEDIODÍA: «NO»",
+     "x": 540,
+     "y": 440,
+     "size": 90,
+     "color": "blanco",
+     "at": 0.1,
+     "out": "@noche",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "NOCHE: DIMITE",
+     "x": 540,
+     "y": 440,
+     "size": 100,
+     "color": "rojo",
+     "at": "@noche",
+     "golpe": true,
+     "out": "@Esto",
+     "hud": true
+    },
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.42,
+     "at": "@Esto",
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.6
+    },
+    {
+     "type": "rotulo",
+     "text": "MARTES 3 · CONGRESO",
+     "x": 540,
+     "y": 440,
+     "size": 70,
+     "color": "amarillo",
+     "at": "@Esto",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "lazo",
+     "x": 960,
+     "y": 220,
+     "scale": 0.3,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop"
+    }
+   ]
+  },
+  {
+   "id": "razon",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "triste",
+   "trans": "iris",
+   "footnote": "Infobae/EFE 3/11 · The Objective 3/11/2026",
+   "lines": [
+    {
+     "text": "Más de cuatro horas de comparecencia. Y al final, esta frase:",
+     "tono": "sobrio"
+    },
+    {
+     "text": "«Un ministro no puede continuar con dos accidentes de esta gravedad en menos de un año».",
+     "tono": "sobrio",
+     "pausa": 0.2
+    },
+    {
+     "text": "Adamuz, en enero: 46 muertos. Urda, en octubre: 69.",
+     "tono": "sobrio",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      729.7
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@Adamuz",
+     "plano": "general",
+     "sobre": [
+      504.9,
+      906.6
+     ],
+     "dur": 0.9,
+     "zoom": 1.8
+    },
+    {
+     "at": "@Urda",
+     "plano": "general",
+     "sobre": [
+      550.8,
+      804.5
+     ],
+     "dur": 0.9,
+     "zoom": 1.8
+    },
+    {
+     "at": "@69",
+     "plano": "general",
+     "sobre": [
+      551.3,
+      729.7
+     ],
+     "dur": 0.8,
+     "zoom": 1.15
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana"
+     },
+     "acciones": [
+      {
+       "at": "@Adamuz",
+       "props": {
+        "resalta": [
+         "Córdoba"
+        ]
+       }
+      },
+      {
+       "at": "@Urda",
+       "props": {
+        "resalta": [
+         "Córdoba",
+         "Toledo"
+        ]
+       }
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.2
+    },
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 540,
+     "y": 520,
+     "scale": 0.5,
+     "at": 0.2,
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@frase"
+    },
+    {
+     "type": "rotulo",
+     "text": "+4 HORAS",
+     "x": 540,
+     "y": 440,
+     "size": 90,
+     "color": "blanco",
+     "at": 0.3,
+     "out": "@frase",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 540,
+     "y": 700,
+     "scale": 0.78,
+     "at": "@frase",
+     "props": {
+      "titulo": "PUENTE:",
+      "subtitulo": "3/11/2026",
+      "ancho": 820,
+      "articulos": [
+       {
+        "id": "a",
+        "titulo": "«NO PUEDE CONTINUAR»",
+        "lineas": []
+       },
+       {
+        "id": "b",
+        "titulo": "«DOS ACCIDENTES",
+        "lineas": [
+         "EN MENOS DE UN AÑO»"
+        ]
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@continuar",
+       "props": {
+        "resalta": [
+         "a"
+        ]
+       }
+      },
+      {
+       "at": "@accidentes",
+       "props": {
+        "resalta": [
+         "b"
+        ]
+       }
+      }
+     ],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 0.7,
+     "sfx": "papel",
+     "out": "@Adamuz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 510.9,
+     "y": 906.6,
+     "scale": 0.12,
+     "at": "@Adamuz",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 520,
+     "scale": 0.62,
+     "at": "@46",
+     "props": {
+      "texto": "ADAMUZ · ENERO · 46",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 556.8,
+     "y": 804.5,
+     "scale": 0.12,
+     "at": "@Urda",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 620,
+     "scale": 0.62,
+     "at": "@69",
+     "props": {
+      "texto": "URDA · OCTUBRE · 69",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "lazo",
+     "x": 960,
+     "y": 220,
+     "scale": 0.3,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@gravedad",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "listas",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "curioso",
+   "trans": "corte",
+   "footnote": "The Objective, 3/11/2026",
+   "lines": [
+    {
+     "text": "Y se baja de las listas: ya no será el número uno del PSOE por Valladolid."
+    },
+    {
+     "text": "Dice que lo decidió el día del accidente, pero esperó a dejar aprobadas las primeras medidas.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      493.5,
+      638.7
+     ],
+     "dur": 0,
+     "zoom": 2.0
+    },
+    {
+     "at": "@decidió",
+     "plano": "general",
+     "sobre": [
+      551.3,
+      729.7
+     ],
+     "dur": 0.8,
+     "zoom": 1.0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana"
+     },
+     "acciones": [
+      {
+       "at": "@Valladolid",
+       "props": {
+        "resalta": [
+         "Valladolid"
+        ]
+       }
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 0
+    },
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 540,
+     "y": 760,
+     "scale": 0.72,
+     "at": 0.1,
+     "props": {
+      "titulo": "LISTA DEL PSOE",
+      "subtitulo": "VALLADOLID · 29N",
+      "ancho": 700,
+      "articulos": [
+       {
+        "id": "a",
+        "titulo": "1 · ÓSCAR PUENTE",
+        "lineas": []
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@número",
+       "props": {
+        "resalta": [
+         "a"
+        ]
+       }
+      }
+     ],
+     "hud": true,
+     "id": "lista",
+     "entra": "nada",
+     "dibujo": 0.6,
+     "sfx": "papel",
+     "fx": [
+      {
+       "at": "@uno",
+       "do": "tachar"
+      }
+     ]
+    },
+    {
+     "type": "rotulo",
+     "text": "VALLADOLID",
+     "x": 540,
+     "y": 440,
+     "size": 80,
+     "color": "amarillo",
+     "at": "@Valladolid",
+     "out": "@decidió",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "puente",
+     "x": 860,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@decidió-0.3",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@accidente",
+       "pose": "manos_juntas",
+       "cara": "triste"
+      },
+      {
+       "at": "@esperó",
+       "pose": "senala_arriba"
+      },
+      {
+       "at": "@medidas",
+       "pose": "normal",
+       "mira": "camara"
+      }
+     ],
+     "entra": "der",
+     "id": "puente"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 230,
+     "y": 520,
+     "scale": 0.3,
+     "at": "@decidió",
+     "props": {
+      "mes": "OCTUBRE 2026",
+      "inicio": 3,
+      "dias": 31,
+      "marcados": [
+       28
+      ],
+      "colores": {
+       "28": "rojo"
+      }
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "checklist",
+     "x": 540,
+     "y": 1060,
+     "scale": 0.55,
+     "at": "@medidas",
+     "props": {
+      "items": [
+       "INVESTIGACIÓN",
+       "PRIMERAS MEDIDAS"
+      ],
+      "marcas": [
+       "si",
+       "si"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@decidió",
+     "props": {
+      "texto": "SU VERSIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "cuerpo",
+   "fondo": "oficina",
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "El Español 4/11 · The Objective 4/11 (cita a ABC)",
+   "lines": [
+    {
+     "text": "¿Y ahora quién lleva los trenes? Carlos Cuerpo, el vicepresidente primero, hasta el 29N."
+    },
+    {
+     "text": "Y según ABC, su primera decisión: destituir al presidente de Adif.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Cuerpo",
+     "plano": "medio",
+     "sobre": "cuerpo",
+     "dur": 0.5,
+     "aire": 280
+    },
+    {
+     "at": "@destituir",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 640,
+     "scale": 0.8,
+     "at": 0,
+     "props": {
+      "texto": "MINISTERIO DE TRANSPORTES",
+      "color": "blanco",
+      "tinta": "tinta"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe",
+     "out": "@Cuerpo"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿QUIÉN LLEVA LOS TRENES?",
+     "x": 540,
+     "y": 420,
+     "size": 70,
+     "color": "amarillo",
+     "at": 0,
+     "out": "@destituir",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "cuerpo",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.58,
+     "at": "@Cuerpo",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@vicepresidente",
+       "pose": "jarras"
+      },
+      {
+       "at": "@29N",
+       "pose": "senala_arriba"
+      },
+      {
+       "at": "@destituir",
+       "pose": "senala",
+       "mira": "der",
+       "cara": "serio"
+      }
+     ],
+     "entra": "abajo",
+     "id": "cuerpo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 560,
+     "scale": 0.65,
+     "at": "@29N",
+     "props": {
+      "texto": "HASTA EL 29N",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@destituir"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 760,
+     "scale": 0.62,
+     "at": "@destituir",
+     "props": {
+      "texto": "ADIF: PRESIDENTE FUERA",
+      "color": "rojo",
+      "tinta": "blanco"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@ABC",
+     "props": {
+      "texto": "SEGÚN ABC",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "reacciones",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     40,
+     70
+    ]
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "The Objective, 3/11/2026 · El Español 4/11/2026",
+   "lines": [
+    {
+     "text": "Sánchez: «Políticos como él dignifican a nuestro país»."
+    },
+    {
+     "text": "El PP pedía su dimisión desde Adamuz, en enero.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Y Vox dice que Cuerpo es solo un fusible, y que el que tiene que irse es Sánchez.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 230,
+     "y": 1340,
+     "scale": 0.58,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@dignifican",
+       "pose": "manos_juntas"
+      }
+     ],
+     "entra": "pop",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 430,
+     "y": 560,
+     "scale": 0.7,
+     "at": "@Políticos",
+     "props": {
+      "lineas": [
+       "SÁNCHEZ:",
+       "«dignifican",
+       "a nuestro país»"
+      ],
+      "cola": [
+       -1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@PP"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.58,
+     "at": "@PP",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@enero",
+       "pose": "senala"
+      }
+     ],
+     "entra": "pop",
+     "id": "feijoo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 600,
+     "scale": 0.6,
+     "at": "@Adamuz",
+     "props": {
+      "texto": "PP: DESDE ENERO",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@Vox"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 850,
+     "y": 1340,
+     "scale": 0.58,
+     "at": "@Vox",
+     "cara": "enfado",
+     "acciones": [
+      {
+       "at": "@fusible",
+       "pose": "senala_izq"
+      },
+      {
+       "at": "@Sánchez#2",
+       "pose": "punos"
+      }
+     ],
+     "entra": "pop",
+     "id": "abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 640,
+     "y": 480,
+     "scale": 0.7,
+     "at": "@fusible",
+     "props": {
+      "lineas": [
+       "VOX:",
+       "Cuerpo, un «fusible»"
+      ],
+      "cola": [
+       1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@Políticos",
+     "props": {
+      "texto": "DECLARACIONES",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "The Objective, 3/11/2026",
+   "lines": [
+    {
+     "text": "Todos los grupos, menos PSOE y Bildu, le pedían que se fuera."
+    },
+    {
+     "text": "¿Dimisión por dignidad, o por cálculo electoral? A o B, te leo.",
+     "tono": "energia",
+     "pausa": 0.15
+    },
+    {
+     "text": "Y sigue a Piz: quedan veinticuatro días.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.6,
+     "out": "@dignidad"
+    },
+    {
+     "type": "rotulo",
+     "text": "TODOS MENOS PSOE Y BILDU",
+     "x": 540,
+     "y": 440,
+     "size": 64,
+     "color": "blanco",
+     "at": 0.1,
+     "out": "@dignidad",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.62,
+     "at": "@dignidad-0.4",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@dignidad",
+       "pose": "senala_izq",
+       "mira": "izq"
+      },
+      {
+       "at": "@cálculo",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@leo",
+       "pose": "piensa",
+       "mira": "camara",
+       "cara": "normal"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@veinticuatro",
+       "pose": "senala_arriba"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 260,
+     "y": 700,
+     "scale": 0.58,
+     "at": "@dignidad",
+     "props": {
+      "texto": "A · DIGNIDAD",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 820,
+     "y": 700,
+     "scale": 0.58,
+     "at": "@cálculo",
+     "props": {
+      "texto": "B · CÁLCULO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿A O B?",
+     "x": 540,
+     "y": 360,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@leo",
+     "golpe": true,
+     "out": "@sigue-0.2",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 830,
+     "y": 760,
+     "scale": 0.3,
+     "at": "@veinticuatro",
+     "props": {
+      "mes": "NOVIEMBRE 2026",
+      "inicio": 6,
+      "dias": 30,
+      "marcados": [
+       29
+      ],
+      "colores": {
+       "29": "rojo"
+      }
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "papel"
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 440,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@días",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 1.4,
+  "titulo": "Puente dimite",
+  "capitulo": null
+ }
+}

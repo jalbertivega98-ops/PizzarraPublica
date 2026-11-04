@@ -1,0 +1,918 @@
+{
+ "slug": "factura_647",
+ "title": "647.000 €",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Auto del Tribunal Supremo (ejecución de la sentencia del caso mascarillas), vía Europa Press/EFE 4/11/2026",
+  "Infobae, El Debate, Público y Cronista, 4/11/2026: multas, decomiso, indemnizaciones, plazo y vía de apremio",
+  "No afirmamos si la sentencia es firme (no consta en las fuentes)"
+ ],
+ "caption": "💸 El Supremo les pasa la factura: 647.000 €\n⚖️ Multas: Ábalos 52.500 € · Koldo 45.750 € · Aldama 75.000 €\n🤔 El que más paga, Aldama, es el único que no está en la cárcel\n💰 Decomiso: 430.298 € de las mordidas, entre los tres\n🏢 ~44.000 € a Ineco y Tragsatec por el enchufe de Jéssica\n⏳ 15 días para pagar · si no, vía de apremio\n💬 ¿Pagarán a tiempo? Te leo 👇\n🔔 Sigue a Piz · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuente: auto del Tribunal Supremo (4/11/2026) recogido por Europa Press/EFE: Infobae, El Debate, Público. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#Abalos",
+  "#Koldo",
+  "#Aldama",
+  "#CasoMascarillas",
+  "#Supremo",
+  "#29N",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     70,
+     30,
+     40
+    ]
+   },
+   "animo": "tension",
+   "footnote": "Auto del Supremo vía Infobae, El Debate y Público, 4/11/2026",
+   "lines": [
+    {
+     "text": "El Supremo acaba de pasarles la factura: 647.000 euros.",
+     "tono": "intriga"
+    },
+    {
+     "text": "A Ábalos, a Koldo y a Aldama. Y tienen quince días para pagar.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@quince",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 700,
+     "scale": 1.0,
+     "at": 0.2,
+     "props": {
+      "valor": 647000,
+      "sufijo": " €",
+      "ancho": 900
+     },
+     "acciones": [
+      {
+       "at": "@euros",
+       "tiembla": true
+      }
+     ],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "dibujo": 1.8
+    },
+    {
+     "type": "rotulo",
+     "text": "LA FACTURA",
+     "x": 540,
+     "y": 460,
+     "size": 110,
+     "color": "amarillo",
+     "at": 0.1,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "abalos",
+     "x": 540,
+     "y": 1480,
+     "scale": 0.7,
+     "at": "@Ábalos",
+     "cara": "susto",
+     "acciones": [
+      {
+       "at": "@pagar",
+       "pose": "encoge",
+       "cara": "preocupado"
+      }
+     ],
+     "entra": "abajo",
+     "id": "abalos"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 230,
+     "y": 1180,
+     "scale": 0.6,
+     "at": "@Koldo",
+     "props": {
+      "texto": "KOLDO",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 850,
+     "y": 1180,
+     "scale": 0.6,
+     "at": "@Aldama",
+     "props": {
+      "texto": "ALDAMA",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 860,
+     "y": 420,
+     "scale": 0.28,
+     "at": "@quince",
+     "props": {
+      "mes": "NOVIEMBRE 2026",
+      "inicio": 6,
+      "dias": 30,
+      "marcados": [
+       4
+      ],
+      "colores": {
+       "4": "rojo"
+      }
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1000,
+     "scale": 1.0,
+     "at": "@días",
+     "props": {
+      "texto": "15 DÍAS",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "multas",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Auto del Supremo vía Infobae, El Debate y Público, 4/11/2026",
+   "lines": [
+    {
+     "text": "Primero, las multas. Ábalos, 52.500. Koldo, 45.750."
+    },
+    {
+     "text": "Y el que más paga es Aldama: 75.000.",
+     "tono": "sorpresa",
+     "pausa": 0.1
+    },
+    {
+     "text": "Lo curioso: es el único de los tres que no está en la cárcel. Colaboró con la justicia.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Aldama",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    },
+    {
+     "at": "@curioso",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 880,
+     "scale": 1.05,
+     "at": "@Ábalos",
+     "props": {
+      "sufijo": " MIL €",
+      "decimales": 1,
+      "tope": 80,
+      "barras": [
+       {
+        "texto": "ÁBALOS",
+        "valor": 52.5,
+        "color": "psoe"
+       },
+       {
+        "texto": "KOLDO",
+        "valor": 45.75,
+        "color": "gris"
+       },
+       {
+        "texto": "ALDAMA",
+        "valor": 75.0,
+        "color": "amarillo"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 1.6,
+     "out": "@curioso"
+    },
+    {
+     "type": "rotulo",
+     "text": "1 · MULTAS",
+     "x": 540,
+     "y": 420,
+     "size": 100,
+     "color": "amarillo",
+     "at": 0,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 1250,
+     "y": 1640,
+     "scale": 0.45,
+     "at": "@Aldama-0.4",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Aldama-0.4",
+       "x": 900,
+       "dur": 0.5
+      },
+      {
+       "at": "@75.000",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@cárcel",
+       "pose": "jarras",
+       "cara": "esceptica",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "checklist",
+     "x": 480,
+     "y": 900,
+     "scale": 0.75,
+     "at": "@curioso",
+     "props": {
+      "items": [
+       "ÁBALOS: PRISIÓN",
+       "KOLDO: PRISIÓN",
+       "ALDAMA: CALLE"
+      ],
+      "marcas": [
+       "si",
+       "si",
+       "no"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@Colaboró",
+     "props": {
+      "texto": "COLABORÓ",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "decomiso",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     70,
+     30,
+     40
+    ]
+   },
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "Auto del Supremo vía Infobae, El Debate y Público, 4/11/2026",
+   "lines": [
+    {
+     "text": "Segundo, el decomiso: 430.298 euros."
+    },
+    {
+     "text": "Es lo que, según la sentencia, ganaron con las mordidas. Y el que lo repartía era Aldama.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Lo pagan entre los tres, hasta el último euro.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@repartía",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "2 · DECOMISO",
+     "x": 540,
+     "y": 420,
+     "size": 100,
+     "color": "amarillo",
+     "at": 0,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 640,
+     "scale": 0.95,
+     "at": "@decomiso",
+     "props": {
+      "valor": 430298,
+      "sufijo": " €",
+      "ancho": 900
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "saco",
+     "x": 540,
+     "y": 1000,
+     "scale": 0.8,
+     "at": "@mordidas",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "efecto",
+     "efecto": "lluvia",
+     "objeto": "moneda",
+     "n": 12,
+     "x0": 200,
+     "x1": 880,
+     "at": "@repartía",
+     "vida": 1.8
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1240,
+     "scale": 0.6,
+     "at": "@repartía",
+     "props": {
+      "texto": "ALDAMA REPARTÍA",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@pagan"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1240,
+     "scale": 0.65,
+     "at": "@pagan",
+     "props": {
+      "texto": "ENTRE LOS TRES",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1400,
+     "scale": 1.0,
+     "at": "@sentencia",
+     "props": {
+      "texto": "SENTENCIA",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "enchufe",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "corte",
+   "footnote": "Auto del Supremo vía Infobae, El Debate y Público, 4/11/2026",
+   "lines": [
+    {
+     "text": "Y tercero: casi 44.000 euros para dos empresas públicas, Ineco y Tragsatec."
+    },
+    {
+     "text": "Por el enchufe de Jéssica Rodríguez. Esto lo pagan Ábalos y Koldo.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "3 · INDEMNIZACIONES",
+     "x": 540,
+     "y": 420,
+     "size": 84,
+     "color": "amarillo",
+     "at": 0,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 300,
+     "y": 820,
+     "scale": 0.8,
+     "at": "@Ineco",
+     "props": {
+      "texto": "INECO",
+      "color": "azul",
+      "tinta": "blanco"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 780,
+     "y": 820,
+     "scale": 0.8,
+     "at": "@Tragsatec",
+     "props": {
+      "texto": "TRAGSATEC",
+      "color": "verde",
+      "tinta": "blanco"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 620,
+     "scale": 0.62,
+     "at": "@Ineco",
+     "props": {
+      "texto": "34.450 €",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 620,
+     "scale": 0.62,
+     "at": "@Tragsatec",
+     "props": {
+      "texto": "9.500 €",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "abalos",
+     "x": 540,
+     "y": 1600,
+     "scale": 0.45,
+     "at": "@enchufe",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@pagan",
+       "pose": "manos_juntas",
+       "cara": "preocupado"
+      }
+     ],
+     "entra": "abajo",
+     "id": "abalos"
+    }
+   ]
+  },
+  {
+   "id": "condenas",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     70,
+     30,
+     40
+    ]
+   },
+   "animo": "tension",
+   "trans": "iris",
+   "footnote": "Auto del Supremo vía Infobae, El Debate y Público, 4/11/2026",
+   "lines": [
+    {
+     "text": "Recuerda las condenas: 24 años para Ábalos, el que fue ministro y número tres del PSOE. 19 para Koldo."
+    },
+    {
+     "text": "¿Y si no pagan? El tribunal irá a por su dinero por la vía de apremio.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@pagan",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 820,
+     "scale": 0.95,
+     "at": "@condenas",
+     "props": {
+      "sufijo": " AÑOS",
+      "decimales": 0,
+      "tope": 26,
+      "barras": [
+       {
+        "texto": "ÁBALOS",
+        "valor": 24,
+        "color": "psoe"
+       },
+       {
+        "texto": "KOLDO",
+        "valor": 19,
+        "color": "gris"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 1.2,
+     "out": "@pagan"
+    },
+    {
+     "type": "personaje",
+     "quien": "abalos",
+     "x": 540,
+     "y": 1560,
+     "scale": 0.55,
+     "at": "@pagan",
+     "cara": "susto",
+     "acciones": [
+      {
+       "at": "@apremio",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "abajo",
+     "id": "abalos"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lupa",
+     "x": 820,
+     "y": 760,
+     "scale": 0.7,
+     "at": "@dinero",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "VÍA DE APREMIO",
+     "x": 540,
+     "y": 440,
+     "size": 90,
+     "color": "rojo",
+     "at": "@apremio",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1100,
+     "scale": 1.0,
+     "at": "@apremio+0.3",
+     "props": {
+      "texto": "COBRO FORZOSO",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Crees que van a pagar en quince días? Sí o no, te leo."
+    },
+    {
+     "text": "Y sigue a Piz: te contamos cómo acaba.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@pagar",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 700,
+     "scale": 0.7,
+     "at": "@Sí",
+     "props": {
+      "texto": "SÍ",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 700,
+     "scale": 0.7,
+     "at": "@no",
+     "props": {
+      "texto": "NO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "rotulo",
+     "text": "647.000 €",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@sigue-0.2",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@acaba",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 1.6,
+  "titulo": "La factura de Ábalos: 647.000 €",
+  "capitulo": null
+ }
+}

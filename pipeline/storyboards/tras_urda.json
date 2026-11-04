@@ -1,0 +1,876 @@
+{
+ "slug": "tras_urda",
+ "title": "¿Ha cambiado todo después de Urda?",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Target Point / El Debate (campo 28-30/10/2026) vs su sondeo del 11/10, vía Demócrata 2/11",
+  "Sigma Dos / El Mundo (campo 29-30/10/2026), vía Infobae y UHN Plus 2/11",
+  "NC Report, SocioMétrica y Hamalgama, vía Libertad Digital 2/11/2026",
+  "Narciso Michavila (GAD3), 31/10/2026, vía Infobae 4/11"
+ ],
+ "caption": "📊 ¿Ha cambiado todo después de Urda?\n🔴 Sigma Dos: PSOE 24,6 % (−1,5 en una semana) · 99 escaños\n🟢 Target Point: quien más sube es Vox, del 18,7 al 19,9 %\n🔵 PP, casi igual: 31-32 %\n🏛️ En las 5 encuestas, PP + Vox suman mayoría (196-208 · hacen falta 176)\n⚠️ Encuestas en caliente · las encuestas no votan\n💬 ¿Urda ha cambiado tu voto? Te leo 👇\n🔔 Sigue a Piz · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Target Point/El Debate y Sigma Dos/El Mundo (2/11/2026), NC Report, SocioMétrica y Hamalgama (vía Libertad Digital 2/11), Michavila/GAD3 vía Infobae. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#29N",
+  "#encuestas",
+  "#Urda",
+  "#PSOE",
+  "#PP",
+  "#Vox",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "tension",
+   "footnote": "Sigma Dos / El Mundo, vía Infobae y UHN Plus 2/11/2026",
+   "lines": [
+    {
+     "text": "Antes de Urda, el PSOE remontaba en las encuestas.",
+     "tono": "intriga"
+    },
+    {
+     "text": "Una semana después, una lo deja en 99 escaños. Por debajo de cien.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@99",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "grafica",
+     "x": 540,
+     "y": 760,
+     "scale": 0.9,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "pop",
+     "out": "@semana"
+    },
+    {
+     "type": "rotulo",
+     "text": "PSOE: REMONTADA",
+     "x": 540,
+     "y": 460,
+     "size": 90,
+     "color": "verde",
+     "at": 0.2,
+     "out": "@semana",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 760,
+     "scale": 1.0,
+     "at": "@semana",
+     "props": {
+      "valor": 99,
+      "desde": 106,
+      "sufijo": " ESCAÑOS",
+      "ancho": 860
+     },
+     "acciones": [
+      {
+       "at": "@cien",
+       "tiembla": true
+      }
+     ],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "dibujo": 1.6
+    },
+    {
+     "type": "rotulo",
+     "text": "PSOE",
+     "x": 540,
+     "y": 520,
+     "size": 110,
+     "color": "rojo",
+     "at": "@semana",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 540,
+     "y": 1560,
+     "scale": 0.62,
+     "at": "@99",
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": "@cien",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "abajo",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1100,
+     "scale": 1.0,
+     "at": "@Por",
+     "props": {
+      "texto": "SIGMA DOS",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lazo",
+     "x": 960,
+     "y": 220,
+     "scale": 0.3,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop"
+    }
+   ]
+  },
+  {
+   "id": "antes_despues",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Target Point / El Debate, vía Demócrata 2/11/2026",
+   "lines": [
+    {
+     "text": "La forma limpia de verlo: misma empresa, antes y después. Target Point."
+    },
+    {
+     "text": "El PP, casi igual: 31,8. El PSOE baja cuatro décimas, al 25,5.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Y quien más sube es Vox: del 18,7 al 19,9. A una décima del 20.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Vox",
+     "plano": "general",
+     "sobre": [
+      540,
+      920
+     ],
+     "dur": 0.4,
+     "zoom": 1.05
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "ANTES 11/10 · DESPUÉS 30/10",
+     "x": 540,
+     "y": 420,
+     "size": 60,
+     "color": "blanco",
+     "at": 0.2,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 1000,
+     "scale": 1.1,
+     "at": "@PP",
+     "props": {
+      "sufijo": " %",
+      "decimales": 1,
+      "tope": 35,
+      "barras": [
+       {
+        "texto": "PP",
+        "valor": 31.8,
+        "color": "pp"
+       },
+       {
+        "texto": "PSOE",
+        "valor": 25.5,
+        "color": "psoe"
+       },
+       {
+        "texto": "VOX",
+        "valor": 19.9,
+        "color": "vox"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 1.3
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 230,
+     "y": 1330,
+     "scale": 0.5,
+     "at": "@igual",
+     "props": {
+      "texto": "PP: −0,2",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1430,
+     "scale": 0.5,
+     "at": "@décimas",
+     "props": {
+      "texto": "PSOE: −0,4",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 850,
+     "y": 1330,
+     "scale": 0.55,
+     "at": "@sube",
+     "props": {
+      "texto": "VOX: +1,2",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 1250,
+     "y": 1660,
+     "scale": 0.42,
+     "at": "@Vox-0.5",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Vox-0.5",
+       "x": 900,
+       "dur": 0.5
+      },
+      {
+       "at": "@20",
+       "pose": "punos",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "nada",
+     "id": "abascal"
+    }
+   ]
+  },
+  {
+   "id": "sigma",
+   "fondo": "oficina",
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "Sigma Dos / El Mundo, vía Infobae y UHN Plus 2/11/2026",
+   "lines": [
+    {
+     "text": "Sigma Dos lo ve más fuerte: el PSOE cae punto y medio en una semana, hasta el 24,6."
+    },
+    {
+     "text": "El PP sube medio punto, al 31,1. Y Vox, 19,3.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@24,6",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "grafica",
+     "x": 540,
+     "y": 700,
+     "scale": 0.8,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "crece",
+     "sfx": "pop",
+     "out": "@PP"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 460,
+     "scale": 0.7,
+     "at": "@semana",
+     "props": {
+      "texto": "PSOE −1,5 EN 7 DÍAS",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@PP"
+    },
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 900,
+     "scale": 1.1,
+     "at": "@PP",
+     "props": {
+      "sufijo": " %",
+      "decimales": 1,
+      "tope": 35,
+      "barras": [
+       {
+        "texto": "PP",
+        "valor": 31.1,
+        "color": "pp"
+       },
+       {
+        "texto": "PSOE",
+        "valor": 24.6,
+        "color": "psoe"
+       },
+       {
+        "texto": "VOX",
+        "valor": 19.3,
+        "color": "vox"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 1.3
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 260,
+     "y": 1560,
+     "scale": 0.42,
+     "at": "@PP",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@medio",
+       "pose": "pulgar",
+       "cara": "ilusionado"
+      }
+     ],
+     "entra": "izq",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 820,
+     "y": 1560,
+     "scale": 0.42,
+     "at": 0.2,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@cae",
+       "cara": "preocupado"
+      }
+     ],
+     "entra": "der",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@24,6",
+     "props": {
+      "texto": "ENCUESTA",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "bloques",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "iris",
+   "footnote": "Sigma Dos, NC Report, Target Point, SocioMétrica, Hamalgama · Libertad Digital 2/11",
+   "lines": [
+    {
+     "text": "Cinco encuestas tras el accidente. En todas, PP y Vox suman mayoría absoluta."
+    },
+    {
+     "text": "Entre 196 y 208 escaños. Hacen falta 176.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@176",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "pop",
+     "dibuja": 0.7
+    },
+    {
+     "type": "rotulo",
+     "text": "5 ENCUESTAS",
+     "x": 540,
+     "y": 420,
+     "size": 100,
+     "color": "amarillo",
+     "at": 0.1,
+     "golpe": true,
+     "out": "@Entre",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "PP + VOX: 196-208",
+     "x": 540,
+     "y": 420,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@Entre",
+     "golpe": true,
+     "out": "@176",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "MAYORÍA: 176",
+     "x": 540,
+     "y": 420,
+     "size": 100,
+     "color": "blanco",
+     "at": "@176",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 860,
+     "y": 1560,
+     "scale": 0.45,
+     "at": 0.2,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@todas",
+       "pose": "senala_arriba",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@176",
+       "pose": "piensa"
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "michavila",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Narciso Michavila (GAD3), 31/10/2026, vía Infobae",
+   "lines": [
+    {
+     "text": "Y el presidente de GAD3, Narciso Michavila, va más lejos: «ahora es imposible que Pedro Sánchez sea el más votado»."
+    },
+    {
+     "text": "Ojo: son encuestas hechas en caliente. Y las encuestas no votan.",
+     "tono": "normal",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 620,
+     "scale": 0.85,
+     "at": "@lejos",
+     "props": {
+      "lineas": [
+       "MICHAVILA (GAD3):",
+       "«ahora es imposible",
+       "que Sánchez sea",
+       "el más votado»"
+      ],
+      "cola": [
+       0,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Ojo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1100,
+     "scale": 1.0,
+     "at": "@imposible",
+     "props": {
+      "texto": "OPINIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@Ojo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 820,
+     "scale": 0.7,
+     "at": "@Ojo",
+     "props": {
+      "mes": "OCTUBRE 2026",
+      "inicio": 3,
+      "dias": 31,
+      "marcados": [
+       28,
+       29,
+       30
+      ],
+      "colores": {
+       "28": "rojo",
+       "29": "azul",
+       "30": "azul"
+      }
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1300,
+     "scale": 1.0,
+     "at": "@votan",
+     "props": {
+      "texto": "LAS ENCUESTAS NO VOTAN",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Urda ha cambiado tu voto? Sí o no, te leo."
+    },
+    {
+     "text": "Y sigue a Piz: hasta el 29N, cada encuesta con datos.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@voto",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 700,
+     "scale": 0.7,
+     "at": "@Sí",
+     "props": {
+      "texto": "SÍ",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 700,
+     "scale": 0.7,
+     "at": "@no",
+     "props": {
+      "texto": "NO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@datos",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.0,
+  "titulo": "¿Ha cambiado todo tras Urda?",
+  "capitulo": null
+ }
+}

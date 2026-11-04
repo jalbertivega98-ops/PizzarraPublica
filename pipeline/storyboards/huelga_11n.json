@@ -1,0 +1,845 @@
+{
+ "slug": "huelga_11n",
+ "title": "Mañana España para",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Moncloa.com (8/10/2026): convocantes, 24 h, primera desde 2012, reivindicaciones, CEOE",
+  "Ara (7/10/2026): Unai Sordo (CCOO), «la mitad de los salarios»",
+  "Naiz (2/10 y 6/10/2026): decretos de vivienda tumbados y aprobados de nuevo",
+  "Decretos 6/10/2026 (PSOE) · Contrato con España 19/10/2026 (PP) · programa de Vox 2025"
+ ],
+ "caption": "✊ Mañana, huelga general · 11N · 24 horas\n🏠 La primera gran huelga general desde 2012, y el motivo es la vivienda\n📋 Piden alquileres indefinidos, bajar precios, impuesto a la riqueza y expropiar pisos vacíos\n🏛️ El jueves 12 se vuelven a votar los decretos de vivienda\n🔴 PSOE: alquileres +2 años · 🔵 PP: un millón de casas · 🟢 Vox: sin IVA en la 1.ª casa\n💬 ¿Vas a hacer huelga? Te leo 👇\n🔔 Sigue a Piz · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Moncloa.com 8/10/2026 · Ara 7/10 · Naiz 2/10 y 6/10 · decretos 6/10 · Contrato con España (PP) · programa de Vox 2025. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#HuelgaGeneral",
+  "#11N",
+  "#vivienda",
+  "#alquiler",
+  "#29N",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "calle",
+   "animo": "tension",
+   "footnote": "Moncloa.com 8/10/2026 · Ara 7/10/2026",
+   "lines": [
+    {
+     "text": "Mañana, España para. Veinticuatro horas.",
+     "tono": "intriga"
+    },
+    {
+     "text": "La primera gran huelga general desde 2012. Y el motivo no es solo el sueldo: es la casa.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@casa",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 540,
+     "y": 620,
+     "scale": 0.9,
+     "at": 0,
+     "props": {
+      "texto": "HUELGA GENERAL · 11N",
+      "color": "rojo",
+      "tinta": "blanco"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 860,
+     "y": 420,
+     "scale": 0.4,
+     "at": "@Veinticuatro",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0.2,
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@2012",
+       "take": true
+      },
+      {
+       "at": "@casa",
+       "pose": "senala",
+       "mira": "casa",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "edificio",
+     "edificio": "piso",
+     "x": 200,
+     "y": 1340,
+     "scale": 0.45,
+     "at": "@casa",
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "pop",
+     "id": "casa"
+    },
+    {
+     "type": "rotulo",
+     "text": "DESDE 2012",
+     "x": 540,
+     "y": 420,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@2012",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "quien",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     36,
+     34,
+     64
+    ]
+   },
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Moncloa.com 8/10/2026 · Ara 7/10/2026",
+   "lines": [
+    {
+     "text": "La convocan el Sindicato de Inquilinas, con CCOO, UGT y otros sindicatos."
+    },
+    {
+     "text": "El líder de CCOO lo resume así: «la vivienda se está comiendo la mitad de los salarios de muchas familias».",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 520,
+     "scale": 0.75,
+     "at": "@Inquilinas",
+     "props": {
+      "texto": "INQUILINAS",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 680,
+     "scale": 0.7,
+     "at": "@CCOO",
+     "props": {
+      "texto": "CCOO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 680,
+     "scale": 0.7,
+     "at": "@UGT",
+     "props": {
+      "texto": "UGT",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 820,
+     "scale": 0.6,
+     "at": "@otros",
+     "props": {
+      "texto": "+ OTROS",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@líder"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 960,
+     "scale": 0.75,
+     "at": "@líder",
+     "props": {
+      "lineas": [
+       "SORDO (CCOO):",
+       "«se come la mitad",
+       "de los salarios»"
+      ],
+      "cola": [
+       0,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "billete",
+     "x": 540,
+     "y": 1300,
+     "scale": 0.8,
+     "at": "@mitad",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "fx": [
+      {
+       "at": "@salarios",
+       "do": "temblar"
+      }
+     ]
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1440,
+     "scale": 1.0,
+     "at": "@familias",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "piden",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Moncloa.com 8/10/2026",
+   "lines": [
+    {
+     "text": "¿Qué piden? Alquileres indefinidos y que bajen los precios."
+    },
+    {
+     "text": "Un impuesto a los ricos para hacer vivienda pública. Y expropiar pisos vacíos.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "checklist",
+     "x": 540,
+     "y": 720,
+     "scale": 0.85,
+     "at": 0.2,
+     "props": {
+      "items": [
+       "ALQUILER INDEFINIDO",
+       "BAJAR PRECIOS",
+       "IMPUESTO A LA RIQUEZA",
+       "EXPROPIAR VACÍOS"
+      ],
+      "marcas": []
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 860,
+     "y": 1340,
+     "scale": 0.45,
+     "at": 0.3,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@ricos",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@vacíos",
+       "pose": "piensa"
+      }
+     ],
+     "entra": "der",
+     "id": "pizon"
+    },
+    {
+     "type": "edificio",
+     "edificio": "abandonado",
+     "x": 220,
+     "y": 1340,
+     "scale": 0.4,
+     "at": "@vacíos",
+     "acciones": [],
+     "texto": "VACÍO",
+     "entra": "crece",
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "id": "decretos",
+   "fondo": "oficina",
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "Naiz 2/10 y 6/10/2026",
+   "lines": [
+    {
+     "text": "Y llega en plena pelea por los decretos de vivienda del Gobierno."
+    },
+    {
+     "text": "El Congreso los tumbó el 2 de octubre, con PP, Vox y Junts en contra. El Gobierno los volvió a aprobar.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Y el jueves 12, el día después de la huelga, se votan otra vez.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@jueves",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 540,
+     "y": 720,
+     "scale": 0.75,
+     "at": 0.2,
+     "props": {
+      "titulo": "DECRETOS",
+      "subtitulo": "VIVIENDA",
+      "ancho": 640,
+      "articulos": []
+     },
+     "acciones": [],
+     "hud": true,
+     "id": "dec",
+     "entra": "nada",
+     "dibujo": 0.6,
+     "sfx": "papel",
+     "out": "@aprobar"
+    },
+    {
+     "type": "rotulo",
+     "text": "172 SÍ · 178 NO",
+     "x": 540,
+     "y": 420,
+     "size": 80,
+     "color": "rojo",
+     "at": "@tumbó",
+     "golpe": true,
+     "out": "@aprobar",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "APROBADOS OTRA VEZ",
+     "x": 540,
+     "y": 420,
+     "size": 80,
+     "color": "verde",
+     "at": "@aprobar",
+     "golpe": true,
+     "out": "@jueves",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 760,
+     "scale": 0.7,
+     "at": "@jueves",
+     "props": {
+      "mes": "NOVIEMBRE 2026",
+      "inicio": 6,
+      "dias": 30,
+      "marcados": [
+       11,
+       12
+      ],
+      "colores": {
+       "11": "rojo",
+       "12": "azul"
+      }
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 1220,
+     "scale": 0.6,
+     "at": "@huelga",
+     "props": {
+      "texto": "11 · HUELGA",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 1220,
+     "scale": 0.6,
+     "at": "@votan",
+     "props": {
+      "texto": "12 · VOTACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "partidos",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "corte",
+   "footnote": "Decretos 6/10 · Contrato con España 19/10 · programa de Vox 2025",
+   "lines": [
+    {
+     "text": "¿Y los partidos? El PSOE: alargar los alquileres hasta dos años y préstamos para la entrada."
+    },
+    {
+     "text": "El PP: un millón de viviendas. Y Vox: quitar el IVA al comprar tu primera casa.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 230,
+     "y": 1340,
+     "scale": 0.46,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@alquileres",
+       "pose": "senala"
+      }
+     ],
+     "entra": "izq",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 230,
+     "y": 640,
+     "scale": 0.55,
+     "at": "@alquileres",
+     "props": {
+      "texto": "ALQUILER +2 AÑOS",
+      "color": "psoe"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.46,
+     "at": "@PP",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@millón",
+       "pose": "senala_arriba"
+      }
+     ],
+     "entra": "abajo",
+     "id": "feijoo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 540,
+     "scale": 0.55,
+     "at": "@millón",
+     "props": {
+      "texto": "1.000.000 DE CASAS",
+      "color": "pp"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 850,
+     "y": 1340,
+     "scale": 0.46,
+     "at": "@Vox",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@IVA",
+       "pose": "punos"
+      }
+     ],
+     "entra": "der",
+     "id": "abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 850,
+     "y": 640,
+     "scale": 0.55,
+     "at": "@IVA",
+     "props": {
+      "texto": "SIN IVA 1.ª CASA",
+      "color": "vox"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@PSOE",
+     "props": {
+      "texto": "PROPUESTAS",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "La patronal dice que es una huelga política. Los sindicatos, que es por la casa."
+    },
+    {
+     "text": "¿Tú vas a hacer huelga mañana? Sí o no, te leo. Y sigue a Piz.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 600,
+     "scale": 0.6,
+     "at": "@patronal",
+     "props": {
+      "texto": "CEOE: «POLÍTICA»",
+      "color": "gris"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@Tú"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 600,
+     "scale": 0.6,
+     "at": "@sindicatos",
+     "props": {
+      "texto": "SINDICATOS: LA CASA",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@Tú"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@huelga",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 700,
+     "scale": 0.7,
+     "at": "@Sí",
+     "props": {
+      "texto": "SÍ",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 700,
+     "scale": 0.7,
+     "at": "@no",
+     "props": {
+      "texto": "NO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@Piz",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 1.2,
+  "titulo": "Huelga general: mañana España para",
+  "capitulo": null
+ }
+}

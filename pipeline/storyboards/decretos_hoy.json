@@ -1,0 +1,648 @@
+{
+ "slug": "decretos_hoy",
+ "title": "Hoy se votan los decretos de vivienda",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "edge",
+  "voice_id": "es-ES-AlvaroNeural"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "ESdiario (5/11/2026): votación en la Diputación Permanente el 12/11; contenido de los dos decretos",
+  "Moncloa.com (17/10/2026): composición de la Diputación Permanente (69) y aritmética; el PNV, clave",
+  "BOE 7/10/2026: reales decretos-ley de vivienda"
+ ],
+ "caption": "🏠 Hoy se decide si tu alquiler se alarga\n📜 Dos decretos: freno a desahucios + créditos 1.ª casa · y prórroga de alquileres\n🏛️ Vota la Diputación Permanente: 69 diputados\n⚖️ PSOE y socios 34 · PP, Vox y Junts 34 · el PNV decide\n💬 ¿Alargarías los alquileres por decreto? Te leo 👇\n🔔 Sigue a Piz · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: ESdiario 5/11/2026 · Moncloa.com 17/10/2026 · BOE 7/10/2026. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#Vivienda",
+  "#Alquiler",
+  "#Decretos",
+  "#Congreso",
+  "#29N",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "calle",
+   "animo": "tension",
+   "footnote": "ESdiario 5/11/2026 · Moncloa.com 17/10/2026",
+   "lines": [
+    {
+     "text": "Hoy se decide si tu alquiler se alarga o no.",
+     "tono": "intriga"
+    },
+    {
+     "text": "Y puede depender de un solo voto.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@solo",
+     "plano": "general",
+     "sobre": [
+      540,
+      920
+     ],
+     "dur": 0.4,
+     "zoom": 1.1
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "piso",
+     "x": 260,
+     "y": 1340,
+     "scale": 0.45,
+     "at": 0,
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "pop",
+     "id": "casa"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contrato",
+     "x": 760,
+     "y": 700,
+     "scale": 0.6,
+     "at": "@alquiler",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 700,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0.2,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@alarga",
+       "pose": "senala_izq",
+       "mira": "casa"
+      },
+      {
+       "at": "@solo",
+       "cara": "sorpresa",
+       "take": true
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "1 VOTO",
+     "x": 540,
+     "y": 430,
+     "size": 140,
+     "color": "amarillo",
+     "at": "@voto",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "que",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "ESdiario 5/11/2026 · BOE 7/10/2026",
+   "lines": [
+    {
+     "text": "Son dos decretos del Gobierno. El primero: frenar desahucios de familias vulnerables, ventajas fiscales y créditos para tu primera casa."
+    },
+    {
+     "text": "El segundo: prorrogar los alquileres.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@segundo",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4,
+     "zoom": 1.05
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "checklist",
+     "x": 540,
+     "y": 700,
+     "scale": 0.8,
+     "at": "@primero",
+     "props": {
+      "items": [
+       "FRENO A DESAHUCIOS",
+       "VENTAJAS FISCALES",
+       "CRÉDITOS 1.ª CASA"
+      ],
+      "marcas": []
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel",
+     "out": "@segundo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 540,
+     "y": 700,
+     "scale": 0.75,
+     "at": "@segundo",
+     "props": {
+      "titulo": "DECRETO 2",
+      "subtitulo": "PRÓRROGA DE ALQUILERES",
+      "ancho": 640,
+      "articulos": []
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "dibujo": 0.5,
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 860,
+     "y": 1580,
+     "scale": 0.42,
+     "at": 0.2,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@desahucios",
+       "pose": "senala_izq"
+      },
+      {
+       "at": "@segundo",
+       "pose": "pulgar"
+      }
+     ],
+     "entra": "der",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1180,
+     "scale": 0.55,
+     "at": "@prorrogar",
+     "props": {
+      "texto": "YA TUMBADOS EL 2/10",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "cuentas",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "Moncloa.com 17/10/2026",
+   "lines": [
+    {
+     "text": "No vota el pleno: vota la Diputación Permanente, 69 diputados."
+    },
+    {
+     "text": "PSOE y sus socios suman 34. PP, Vox y Junts, otros 34.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Y en medio, un voto: el del PNV.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@PNV",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.45,
+     "at": 0,
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.6,
+     "id": "cong"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 520,
+     "scale": 0.8,
+     "at": "@69",
+     "props": {
+      "valor": 69,
+      "sufijo": " DIPUTADOS",
+      "ancho": 720
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@socios"
+    },
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 560,
+     "scale": 0.75,
+     "at": "@socios",
+     "props": {
+      "tope": 40,
+      "barras": [
+       {
+        "texto": "PSOE Y SOCIOS",
+        "valor": 34,
+        "color": "psoe"
+       },
+       {
+        "texto": "PP + VOX + JUNTS",
+        "valor": 34,
+        "color": "pp"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 0.8,
+     "out": "@PNV"
+    },
+    {
+     "type": "rotulo",
+     "text": "34 · 34",
+     "x": 540,
+     "y": 820,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@Junts",
+     "golpe": true,
+     "out": "@PNV",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "PNV",
+     "x": 540,
+     "y": 560,
+     "size": 160,
+     "color": "verde",
+     "at": "@PNV",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 860,
+     "y": 1620,
+     "scale": 0.4,
+     "at": "@medio",
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@PNV",
+       "take": true
+      }
+     ],
+     "entra": "der",
+     "hud": true,
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "pasar",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "corte",
+   "footnote": "Moncloa.com 17/10/2026 · ESdiario 5/11/2026",
+   "lines": [
+    {
+     "text": "El PNV ya votó no al de alquileres en octubre. Si repite, ese decreto cae."
+    },
+    {
+     "text": "El de los desahucios y los créditos lo tiene más fácil.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 520,
+     "scale": 0.65,
+     "at": "@cae",
+     "props": {
+      "texto": "ALQUILERES: EN EL AIRE",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 660,
+     "scale": 0.55,
+     "at": "@desahucios",
+     "props": {
+      "texto": "DESAHUCIOS Y CRÉDITOS: MÁS FÁCIL",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "contrato",
+     "x": 300,
+     "y": 900,
+     "scale": 0.55,
+     "at": "@alquileres",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel",
+     "fx": [
+      {
+       "at": "@cae",
+       "do": "temblar"
+      }
+     ]
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 760,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@octubre",
+       "pose": "senala_izq"
+      },
+      {
+       "at": "@cae",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@fácil",
+       "cara": "normal",
+       "pose": "pulgar"
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@créditos",
+     "props": {
+      "texto": "SE VOTA HOY",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Tú alargarías los alquileres por decreto? Sí o no, te leo."
+    },
+    {
+     "text": "Y sigue a Piz para no perderte nada antes del 29N.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 640,
+     "scale": 0.7,
+     "at": "@Sí",
+     "props": {
+      "texto": "SÍ",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 640,
+     "scale": 0.7,
+     "at": "@no",
+     "props": {
+      "texto": "NO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@alargarías",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@Piz",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.6,
+  "titulo": "Hoy se decide tu alquiler",
+  "capitulo": null
+ }
+}

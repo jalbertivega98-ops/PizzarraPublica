@@ -1,0 +1,813 @@
+{
+ "slug": "tres_cumbres",
+ "title": "Se salta tres cumbres",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "edge",
+  "voice_id": "es-ES-AlvaroNeural"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "EFE (Infobae, 6/11/2026): Sánchez no irá a la COP31 (Antalya, 11/11), a la Comunidad Política Europea (Dublín, 12/11) ni a la cumbre informal de los 27 (Dublín, 13/11) por la cercanía del 29N; precedente UE-CELAC 2023; Bruselas 26-27/11 en duda"
+ ],
+ "caption": "✈️ Sánchez se salta tres cumbres esta semana\n🌍 11N Antalya: cumbre del clima (COP31)\n🇪🇺 12N Dublín: Comunidad Política Europea · 13N Dublín: los 27\n🗳️ El motivo, según el Gobierno: el 29N (la campaña empieza el 13 a las 00:00)\n🕰️ En 2023 sí fue a Bruselas en plena campaña · el 26-27 está en duda\n💬 ¿Europa o campaña? Te leo 👇\n🔔 Sigue a Piz · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: EFE vía Infobae, 6/11/2026 («El 29N altera la agenda exterior de Sánchez»). ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#29N",
+  "#Sánchez",
+  "#COP31",
+  "#UE",
+  "#PolíticaEspañola",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "calle",
+   "animo": "tension",
+   "footnote": "EFE (Infobae), 6/11/2026",
+   "lines": [
+    {
+     "text": "Esta semana hay tres cumbres internacionales. Y Sánchez no va a ir a ninguna.",
+     "tono": "intriga"
+    },
+    {
+     "text": "¿El motivo? El 29N.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@ninguna",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 560,
+     "scale": 0.62,
+     "at": 0,
+     "props": {
+      "mes": "NOVIEMBRE 2026",
+      "inicio": 6,
+      "dias": 30,
+      "marcados": [
+       11,
+       12,
+       13
+      ],
+      "colores": {
+       "11": "verde",
+       "12": "azul",
+       "13": "azul"
+      }
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel",
+     "fx": [
+      {
+       "at": "@ninguna",
+       "do": "tachar"
+      }
+     ]
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 760,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@Sánchez-0.3",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@ninguna",
+       "pose": "cruzados",
+       "mira": "camara"
+      },
+      {
+       "at": "@29N",
+       "pose": "senala_arriba",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "der",
+     "id": "sanchez"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 260,
+     "y": 1340,
+     "scale": 0.45,
+     "at": 0.2,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@ninguna",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@motivo",
+       "pose": "piensa"
+      }
+     ],
+     "entra": "izq",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "29N",
+     "x": 540,
+     "y": 960,
+     "size": 140,
+     "color": "amarillo",
+     "at": "@29N",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "mapa",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "aventura",
+   "trans": "zoom",
+   "footnote": "EFE (Infobae), 6/11/2026",
+   "lines": [
+    {
+     "text": "Hoy, en Antalya, Turquía: los líderes del mundo en la cumbre del clima."
+    },
+    {
+     "text": "El jueves, en Dublín, la Comunidad Política Europea. Y el viernes, también en Dublín, los veintisiete de la Unión.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      900.0,
+      505.0
+     ],
+     "dur": 0,
+     "zoom": 2.2
+    },
+    {
+     "at": "@Antalya",
+     "plano": "general",
+     "sobre": [
+      1086.3,
+      577.9
+     ],
+     "dur": 0.9,
+     "zoom": 4.0
+    },
+    {
+     "at": "@jueves",
+     "plano": "general",
+     "sobre": [
+      753.7,
+      429.8
+     ],
+     "dur": 1.0,
+     "zoom": 4.0
+    },
+    {
+     "at": "@viernes",
+     "plano": "general",
+     "sobre": [
+      900.0,
+      505.0
+     ],
+     "dur": 0.9,
+     "zoom": 2.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "mundo",
+      "lineas": [
+       {
+        "id": "r1",
+        "puntos": [
+         [
+          -3.7,
+          40.4
+         ],
+         [
+          14,
+          44
+         ],
+         [
+          30.7,
+          36.9
+         ]
+        ],
+        "color": "gris",
+        "dur": 0.9,
+        "discontinua": true,
+        "ancho": 5
+       },
+       {
+        "id": "r2",
+        "puntos": [
+         [
+          -3.7,
+          40.4
+         ],
+         [
+          -8,
+          47
+         ],
+         [
+          -6.26,
+          53.35
+         ]
+        ],
+        "color": "gris",
+        "dur": 0.9,
+        "discontinua": true,
+        "ancho": 5
+       }
+      ]
+     },
+     "acciones": [
+      {
+       "at": "@Antalya",
+       "props": {
+        "resalta": [
+         "TUR"
+        ]
+       },
+       "sfx": "pop"
+      },
+      {
+       "at": "@Dublín",
+       "props": {
+        "resalta": [
+         "TUR",
+         "IRL"
+        ]
+       },
+       "sfx": "pop"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.4
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 776.7,
+     "y": 546.4,
+     "scale": 0.4,
+     "at": 0.4,
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sol",
+     "x": 1126.3,
+     "y": 527.9,
+     "scale": 0.12,
+     "at": "@clima",
+     "props": {},
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bandera",
+     "x": 753.7,
+     "y": 429.8,
+     "scale": 0.25,
+     "at": "@Europea",
+     "props": {
+      "diseno": "ue"
+     },
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 480,
+     "scale": 0.65,
+     "at": "@Antalya",
+     "props": {
+      "texto": "11 · COP31",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@jueves"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 480,
+     "scale": 0.55,
+     "at": "@jueves",
+     "props": {
+      "texto": "12 · COMUNIDAD POLÍTICA EUROPEA",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@viernes"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 480,
+     "scale": 0.65,
+     "at": "@viernes",
+     "props": {
+      "texto": "13 · LOS 27",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@Unión",
+     "props": {
+      "texto": "NO VA",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "motivo",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "EFE (Infobae), 6/11/2026",
+   "lines": [
+    {
+     "text": "Según fuentes del Gobierno, es por la cercanía de las elecciones."
+    },
+    {
+     "text": "La campaña empieza a las doce de la noche del jueves al viernes.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@campaña",
+     "plano": "general",
+     "sobre": [
+      540,
+      940
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 520,
+     "scale": 1.0,
+     "at": "@Gobierno",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 540,
+     "y": 720,
+     "scale": 0.6,
+     "at": "@campaña",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "00:00 DEL 13",
+     "x": 540,
+     "y": 980,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@doce",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 860,
+     "y": 1560,
+     "scale": 0.45,
+     "at": 0.2,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@cercanía",
+       "pose": "senala_izq",
+       "mira": "izq"
+      },
+      {
+       "at": "@noche",
+       "cara": "idea"
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 220,
+     "y": 1560,
+     "scale": 0.42,
+     "at": "@campaña",
+     "cara": "confundido",
+     "acciones": [
+      {
+       "at": "@viernes",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "izq",
+     "id": "pizon"
+    }
+   ]
+  },
+  {
+   "id": "precedente",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "EFE (Infobae), 6/11/2026",
+   "lines": [
+    {
+     "text": "¿Y en 2023? En plena campaña sí fue a una cumbre en Bruselas, con un mitin en Huesca entre medias."
+    },
+    {
+     "text": "Y queda otra: Bruselas, el 26 y 27, tres días antes de votar. Esa, el Gobierno no la descarta.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@queda",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4,
+     "zoom": 1.05
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 480,
+     "scale": 0.65,
+     "at": "@2023",
+     "props": {
+      "texto": "2023 · SÍ FUE",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@queda"
+    },
+    {
+     "type": "objeto",
+     "objeto": "avion",
+     "x": 300,
+     "y": 700,
+     "scale": 0.5,
+     "at": "@Bruselas",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "izq",
+     "sfx": "whoosh",
+     "out": "@queda"
+    },
+    {
+     "type": "objeto",
+     "objeto": "microfono",
+     "x": 780,
+     "y": 720,
+     "scale": 0.45,
+     "at": "@mitin",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@queda"
+    },
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 640,
+     "scale": 0.58,
+     "at": "@queda",
+     "props": {
+      "mes": "NOVIEMBRE 2026",
+      "inicio": 6,
+      "dias": 30,
+      "marcados": [
+       26,
+       27,
+       29
+      ],
+      "colores": {
+       "26": "azul",
+       "27": "azul",
+       "29": "rojo"
+      }
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1100,
+     "scale": 1.0,
+     "at": "@descarta",
+     "props": {
+      "texto": "EN DUDA",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 540,
+     "y": 1560,
+     "scale": 0.45,
+     "at": "@2023",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Huesca",
+       "pose": "saluda",
+       "cara": "riendo"
+      },
+      {
+       "at": "@queda",
+       "pose": "piensa",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "sanchez"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Tú qué ves bien: Europa o campaña? Te leo."
+    },
+    {
+     "text": "Y sigue a Piz para no perderte nada antes del 29N.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 640,
+     "scale": 0.7,
+     "at": "@Europa",
+     "props": {
+      "texto": "EUROPA",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 640,
+     "scale": 0.7,
+     "at": "@campaña",
+     "props": {
+      "texto": "CAMPAÑA",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Europa",
+       "mira": "izq",
+       "pose": "senala_izq"
+      },
+      {
+       "at": "@campaña",
+       "mira": "der",
+       "pose": "senala"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado",
+       "mira": "camara",
+       "pose": "normal"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@29N",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.2,
+  "titulo": "Sánchez se salta tres cumbres",
+  "capitulo": null
+ }
+}

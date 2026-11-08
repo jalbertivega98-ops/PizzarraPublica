@@ -1,0 +1,842 @@
+{
+ "slug": "mocion_2018",
+ "title": "La única moción que ganó",
+ "series_tag": "HISTORIA EN LA PIZARRA",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "edge",
+  "voice_id": "es-ES-AlvaroNeural"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Congreso de los Diputados: mociones de censura (1980, 1987, 2017, 2018, 2020 y 2023)",
+  "Audiencia Nacional: sentencia del caso Gürtel (24/5/2018)",
+  "Congreso: votación del 1/6/2018 (180 sí, 169 no, 1 abstención)"
+ ],
+ "caption": "📜 Historia en la pizarra · Cap. 3\n🗳️ 6 mociones de censura en España… y solo 1 ganó\n⚖️ Mayo de 2018: sentencia Gürtel → el PSOE registra la moción contra Rajoy\n🔢 Hacían falta 176 votos: salieron 180 · el PNV, clave\n🪑 Sánchez, presidente sin ser diputado\n💬 ¿Fue justa? Te leo, con respeto 👇\n🔔 Sigue a Piz · Próximo: el PSOE cumple 147 años · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Congreso (mociones de censura y votación 1/6/2018) · Audiencia Nacional (sentencia Gürtel, 24/5/2018). ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#MociónDeCensura",
+  "#HistoriaDeEspaña",
+  "#Rajoy",
+  "#Sánchez",
+  "#AprendeEnTikTok",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     32,
+     30,
+     60
+    ]
+   },
+   "animo": "tension",
+   "footnote": "Congreso de los Diputados: mociones de censura",
+   "lines": [
+    {
+     "text": "En España ha habido seis mociones de censura.",
+     "tono": "intriga"
+    },
+    {
+     "text": "Cinco fracasaron. Solo una tumbó a un presidente.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Solo",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "HISTORIA EN LA PIZARRA",
+     "x": 540,
+     "y": 430,
+     "size": 70,
+     "color": "blanco",
+     "at": 0,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 640,
+     "scale": 1.0,
+     "at": "@seis",
+     "props": {
+      "valor": 6,
+      "ancho": 380
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "rotulo",
+     "text": "MOCIONES",
+     "x": 540,
+     "y": 840,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@mociones",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "5 FRACASOS",
+     "x": 540,
+     "y": 1000,
+     "size": 90,
+     "color": "rojo",
+     "at": "@Cinco",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "1 GANÓ",
+     "x": 540,
+     "y": 1120,
+     "size": 110,
+     "color": "verde",
+     "at": "@una",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 860,
+     "y": 1560,
+     "scale": 0.42,
+     "at": "@Cinco",
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@tumbó",
+       "take": true,
+       "cara": "susto"
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "fracasos",
+   "fondo": "carretera",
+   "animo": "aventura",
+   "trans": "barrido",
+   "footnote": "Congreso de los Diputados: mociones de censura",
+   "lines": [
+    {
+     "text": "1980, contra Suárez. 1987, contra González."
+    },
+    {
+     "text": "2017, contra Rajoy. Y 2020 y 2023, las dos contra Sánchez.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Sánchez",
+     "plano": "general",
+     "sobre": [
+      600,
+      980
+     ],
+     "dur": 0.5,
+     "zoom": 1.04
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 420,
+     "scale": 0.6,
+     "at": 0.1,
+     "props": {
+      "texto": "1980 · SUÁREZ",
+      "color": "gris"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 540,
+     "scale": 0.6,
+     "at": "@1987",
+     "props": {
+      "texto": "1987 · GONZÁLEZ",
+      "color": "gris"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 660,
+     "scale": 0.6,
+     "at": "@2017",
+     "props": {
+      "texto": "2017 · RAJOY",
+      "color": "gris"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 780,
+     "scale": 0.6,
+     "at": "@2020",
+     "props": {
+      "texto": "2020 · SÁNCHEZ",
+      "color": "gris"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 900,
+     "scale": 0.6,
+     "at": "@2023",
+     "props": {
+      "texto": "2023 · SÁNCHEZ",
+      "color": "gris"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1080,
+     "scale": 1.0,
+     "at": "@Sánchez",
+     "props": {
+      "texto": "FRACASÓ",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 220,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@1987",
+       "mira": "der"
+      },
+      {
+       "at": "@2017",
+       "pose": "senala"
+      },
+      {
+       "at": "@dos",
+       "pose": "encoge",
+       "cara": "confundido"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "gurtel",
+   "fondo": "oficina",
+   "animo": "tension",
+   "trans": "papel",
+   "footnote": "Audiencia Nacional, sentencia Gürtel (24/5/2018)",
+   "lines": [
+    {
+     "text": "Mayo de 2018. Sale la sentencia de la Gürtel: el PP, condenado por beneficiarse de la trama."
+    },
+    {
+     "text": "Al día siguiente, el PSOE registra la moción contra Rajoy.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@siguiente",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4,
+     "zoom": 1.05
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 540,
+     "y": 700,
+     "scale": 0.75,
+     "at": "@sentencia",
+     "props": {
+      "titulo": "SENTENCIA",
+      "subtitulo": "CASO GÜRTEL · 24/5/2018",
+      "ancho": 640,
+      "articulos": []
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 0.6,
+     "sfx": "papel",
+     "id": "sent",
+     "out": "@siguiente"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1040,
+     "scale": 1.0,
+     "at": "@condenado",
+     "props": {
+      "texto": "CONDENADO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@siguiente"
+    },
+    {
+     "type": "personaje",
+     "quien": "rajoy",
+     "x": 820,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0.2,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@condenado",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@moción",
+       "cara": "serio"
+      }
+     ],
+     "entra": "der",
+     "id": "rajoy"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 240,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@PSOE-0.3",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@registra",
+       "pose": "senala"
+      }
+     ],
+     "entra": "izq",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "documento",
+     "x": 540,
+     "y": 700,
+     "scale": 0.7,
+     "at": "@registra",
+     "props": {
+      "titulo": "MOCIÓN DE CENSURA",
+      "subtitulo": "25/5/2018",
+      "ancho": 600,
+      "articulos": []
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "dibujo": 0.4,
+     "sfx": "papel"
+    }
+   ]
+  },
+  {
+   "id": "votacion",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "Congreso de los Diputados: mociones de censura",
+   "lines": [
+    {
+     "text": "1 de junio. Hacen falta 176 votos. Salen 180."
+    },
+    {
+     "text": "La clave: el PNV, que una semana antes había apoyado los presupuestos de Rajoy.",
+     "tono": "intriga",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@PNV",
+     "plano": "general",
+     "sobre": [
+      540,
+      920
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "acciones": [
+      {
+       "at": "@180",
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "nada",
+     "dibuja": 0.6
+    },
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 560,
+     "scale": 0.75,
+     "at": "@176",
+     "props": {
+      "tope": 200,
+      "barras": [
+       {
+        "texto": "NECESARIOS",
+        "valor": 176,
+        "color": "gris"
+       },
+       {
+        "texto": "SÍ",
+        "valor": 180,
+        "color": "verde"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 1.0,
+     "out": "@PNV"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 560,
+     "scale": 0.75,
+     "at": "@PNV",
+     "props": {
+      "texto": "PNV: SÍ",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 700,
+     "scale": 0.5,
+     "at": "@presupuestos",
+     "props": {
+      "texto": "UNA SEMANA ANTES: PRESUPUESTOS",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 860,
+     "y": 1620,
+     "scale": 0.4,
+     "at": "@Salen",
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@clave",
+       "pose": "senala_arriba",
+       "cara": "idea"
+      }
+     ],
+     "entra": "der",
+     "hud": true,
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "resultado",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "corte",
+   "footnote": "Congreso de los Diputados: mociones de censura",
+   "lines": [
+    {
+     "text": "Rajoy pasó la tarde anterior en un restaurante, fuera del hemiciclo."
+    },
+    {
+     "text": "Y Sánchez llegó a presidente sin ser diputado. La Constitución no lo exige.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Sánchez",
+     "plano": "general",
+     "sobre": [
+      540,
+      980
+     ],
+     "dur": 0.5,
+     "zoom": 1.04
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "rajoy",
+     "x": 260,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@restaurante",
+       "pose": "encoge",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "izq",
+     "out": "@Sánchez",
+     "id": "rajoy"
+    },
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 760,
+     "y": 760,
+     "scale": 0.4,
+     "at": "@tarde",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Sánchez"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@Sánchez",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@presidente",
+       "pose": "arriba",
+       "cara": "riendo"
+      },
+      {
+       "at": "@Constitución",
+       "pose": "senala_arriba"
+      }
+     ],
+     "entra": "abajo",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 520,
+     "scale": 1.0,
+     "at": "@diputado",
+     "props": {
+      "texto": "SIN ESCAÑO",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "libro",
+     "x": 860,
+     "y": 760,
+     "scale": 0.4,
+     "at": "@Constitución",
+     "props": {
+      "titulo": "CONSTITUCIÓN",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Fue justa aquella moción? Te leo, con respeto."
+    },
+    {
+     "text": "Y sigue a Piz: el viernes, el PSOE cumple 147 años.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@justa",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿JUSTA?",
+     "x": 540,
+     "y": 420,
+     "size": 120,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@sigue-0.2",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@147",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 620,
+     "scale": 0.55,
+     "at": "@viernes",
+     "props": {
+      "texto": "PRÓXIMO: 147 AÑOS DE PSOE",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.2,
+  "titulo": "La única moción de censura que ganó",
+  "capitulo": "📜 Historia en la pizarra · Cap. 3"
+ }
+}

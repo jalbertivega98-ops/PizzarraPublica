@@ -1,0 +1,874 @@
+{
+ "slug": "veintitres_f",
+ "title": "El 23-F",
+ "series_tag": "HISTORIA EN LA PIZARRA",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "edge",
+  "voice_id": "es-ES-AlvaroNeural"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Congreso de los Diputados: «23 de febrero de 1981» (asalto durante la votación de investidura de Calvo-Sotelo)",
+  "Casa Real: mensaje de S. M. el Rey, madrugada del 24/2/1981",
+  "RTVE Archivo: 23-F, 18 horas de secuestro; condena de Tejero (30 años)"
+ ],
+ "caption": "📜 Historia en la pizarra · Cap. 2\n⚡ 23-F de 1981, 18:20: disparos en el Congreso\n🪖 Tejero: «¡Quieto todo el mundo!» · Suárez no se tira al suelo\n🗺️ En Valencia, los tanques salen a la calle\n📺 A la 1:14, el Rey en la tele defiende la Constitución\n💬 ¿Dónde estaban tus padres o abuelos esa noche? 👇\n🔔 Sigue a Piz · Próximo: la única moción que ganó · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Congreso de los Diputados (23-F) · Casa Real (mensaje del 24/2/1981) · RTVE Archivo. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#23F",
+  "#HistoriaDeEspaña",
+  "#Transición",
+  "#Congreso",
+  "#AprendeEnTikTok",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     30,
+     28,
+     56
+    ]
+   },
+   "animo": "tension",
+   "footnote": "Congreso de los Diputados · Casa Real · RTVE Archivo",
+   "lines": [
+    {
+     "text": "23 de febrero de 1981. Seis y veinte de la tarde.",
+     "tono": "intriga"
+    },
+    {
+     "text": "En el Congreso se vota un presidente. Y de repente, disparos.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Congreso",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    },
+    {
+     "at": "@disparos",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.3,
+     "zoom": 1.15
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "HISTORIA EN LA PIZARRA",
+     "x": 540,
+     "y": 430,
+     "size": 70,
+     "color": "blanco",
+     "at": 0,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "23-F · 1981",
+     "x": 540,
+     "y": 560,
+     "size": 130,
+     "color": "amarillo",
+     "at": 0.2,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 860,
+     "y": 760,
+     "scale": 0.45,
+     "at": "@Seis",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@Congreso-0.3",
+     "acciones": [
+      {
+       "at": "@disparos",
+       "cara": "susto"
+      }
+     ],
+     "entra": "crece",
+     "sfx": "pop",
+     "dibuja": 0.8,
+     "id": "cong"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 860,
+     "y": 1560,
+     "scale": 0.42,
+     "at": "@presidente",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@repente",
+       "mira": "cong",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@disparos",
+       "cara": "susto",
+       "take": true,
+       "pose": "cabeza"
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¡BANG!",
+     "x": 540,
+     "y": 760,
+     "at": "@disparos",
+     "scale": 1.0,
+     "vida": 0.8
+    }
+   ]
+  },
+  {
+   "id": "dentro",
+   "fondo": "oficina",
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "Congreso de los Diputados · Casa Real · RTVE Archivo",
+   "lines": [
+    {
+     "text": "Entra el teniente coronel Tejero con guardias civiles. «¡Quieto todo el mundo!»."
+    },
+    {
+     "text": "Casi todos los diputados se tiran al suelo. Suárez se queda sentado.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Y el vicepresidente, Gutiérrez Mellado, les planta cara.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Suárez",
+     "plano": "medio",
+     "sobre": "suarez",
+     "dur": 0.5,
+     "aire": 250
+    },
+    {
+     "at": "@Gutiérrez",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 520,
+     "scale": 0.8,
+     "at": "@Quieto",
+     "props": {
+      "lineas": [
+       "¡QUIETO TODO",
+       "EL MUNDO!"
+      ],
+      "cola": [
+       0,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@diputados"
+    },
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 200,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@suelo",
+       "cara": "susto",
+       "pose": "cabeza",
+       "y": 1500,
+       "dur": 0.4
+      }
+     ],
+     "entra": "nada",
+     "id": "dip1"
+    },
+    {
+     "type": "personaje",
+     "quien": "diputado",
+     "x": 880,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@suelo",
+       "cara": "susto",
+       "pose": "cabeza",
+       "y": 1500,
+       "dur": 0.4
+      }
+     ],
+     "entra": "nada",
+     "id": "dip2"
+    },
+    {
+     "type": "personaje",
+     "quien": "suarez",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.62,
+     "at": "@diputados",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@sentado",
+       "pose": "cruzados",
+       "mira": "camara"
+      }
+     ],
+     "entra": "abajo",
+     "id": "suarez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 560,
+     "scale": 0.65,
+     "at": "@sentado",
+     "props": {
+      "texto": "SE QUEDA SENTADO",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@Gutiérrez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 560,
+     "scale": 0.65,
+     "at": "@Gutiérrez",
+     "props": {
+      "texto": "GUTIÉRREZ MELLADO",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@cara",
+     "props": {
+      "texto": "CONFIRMADO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "valencia",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "aventura",
+   "trans": "zoom",
+   "footnote": "Congreso de los Diputados · Casa Real · RTVE Archivo",
+   "lines": [
+    {
+     "text": "Mientras, en Valencia, el general Milans del Bosch saca los tanques a la calle."
+    },
+    {
+     "text": "Durante horas, nadie sabe quién manda en España.",
+     "tono": "intriga",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      619.4,
+      760.8
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@Valencia",
+     "plano": "general",
+     "sobre": [
+      739.5,
+      800.0
+     ],
+     "dur": 0.9,
+     "zoom": 3.2
+    },
+    {
+     "at": "@nadie",
+     "plano": "general",
+     "sobre": [
+      619.4,
+      760.8
+     ],
+     "dur": 0.9,
+     "zoom": 1.1
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana",
+      "lineas": [
+       {
+        "id": "ruta",
+        "puntos": [
+         [
+          -3.7,
+          40.4
+         ],
+         [
+          -0.38,
+          39.47
+         ]
+        ],
+        "color": "rojo",
+        "dur": 0.9,
+        "discontinua": true,
+        "ancho": 6
+       }
+      ]
+     },
+     "acciones": [],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.4
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 551.3,
+     "y": 731.2,
+     "scale": 0.5,
+     "at": 0.6,
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 739.5,
+     "y": 800.0,
+     "scale": 0.5,
+     "at": "@Valencia",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "pop"
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "TANQUES",
+     "x": 739.5,
+     "y": 740.0,
+     "at": "@tanques",
+     "scale": 0.5,
+     "vida": 0.8
+    },
+    {
+     "type": "rotulo",
+     "text": "¿QUIÉN MANDA?",
+     "x": 540,
+     "y": 430,
+     "size": 100,
+     "color": "amarillo",
+     "at": "@nadie",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 860,
+     "y": 1600,
+     "scale": 0.4,
+     "at": "@horas",
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": "@manda",
+       "pose": "encoge",
+       "cara": "confundido"
+      }
+     ],
+     "entra": "der",
+     "hud": true,
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "rey",
+   "fondo": "salon",
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Casa Real: mensaje del 24/2/1981",
+   "lines": [
+    {
+     "text": "A la una y cuarto de la madrugada, el Rey sale en televisión."
+    },
+    {
+     "text": "Con uniforme militar, defiende la Constitución. Y el golpe se queda solo.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Constitución",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "tele",
+     "x": 540,
+     "y": 820,
+     "scale": 0.8,
+     "at": 0,
+     "props": {
+      "texto": "MENSAJE DEL REY"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador"
+    },
+    {
+     "type": "objeto",
+     "objeto": "corona",
+     "x": 540,
+     "y": 560,
+     "scale": 0.45,
+     "at": "@Rey",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "reloj",
+     "x": 860,
+     "y": 460,
+     "scale": 0.4,
+     "at": "@una",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@uniforme"
+    },
+    {
+     "type": "objeto",
+     "objeto": "libro",
+     "x": 260,
+     "y": 560,
+     "scale": 0.5,
+     "at": "@Constitución",
+     "props": {
+      "titulo": "CONSTITUCIÓN",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 860,
+     "y": 1520,
+     "scale": 0.45,
+     "at": 0.3,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@televisión",
+       "mira": "izq",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@Constitución",
+       "cara": "ilusionado",
+       "pose": "pulgar"
+      },
+      {
+       "at": "@solo",
+       "salta": true
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "fin",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     60,
+     40,
+     20
+    ]
+   },
+   "animo": "final",
+   "trans": "barrido",
+   "footnote": "Congreso de los Diputados · Casa Real · RTVE Archivo",
+   "lines": [
+    {
+     "text": "Por la mañana se rinden. Unas dieciocho horas de secuestro."
+    },
+    {
+     "text": "Dos días después, Calvo-Sotelo es investido presidente. Y Tejero, condenado a treinta años.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Calvo-Sotelo",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5,
+     "zoom": 1.04
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 600,
+     "scale": 0.9,
+     "at": "@dieciocho",
+     "props": {
+      "valor": 18,
+      "sufijo": " HORAS",
+      "ancho": 640
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "personaje",
+     "quien": "calvo_sotelo",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@Calvo-Sotelo-0.2",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@investido",
+       "pose": "saluda"
+      }
+     ],
+     "entra": "abajo",
+     "id": "calvo_sotelo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 820,
+     "scale": 0.6,
+     "at": "@investido",
+     "props": {
+      "texto": "INVESTIDO 25/2/1981",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@Tejero"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 820,
+     "scale": 0.65,
+     "at": "@condenado",
+     "props": {
+      "texto": "TEJERO: 30 AÑOS",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Tus padres o abuelos lo vivieron? Cuéntame dónde estaban esa noche."
+    },
+    {
+     "text": "Y sigue a Piz: próximo capítulo, la única moción de censura que ha ganado.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@abuelos",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@Cuéntame",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "23-F",
+     "x": 540,
+     "y": 420,
+     "size": 130,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@sigue-0.2",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@moción",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 620,
+     "scale": 0.6,
+     "at": "@capítulo",
+     "props": {
+      "texto": "PRÓXIMO: LA MOCIÓN",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.0,
+  "titulo": "El 23-F: la tarde que entraron en el Congreso",
+  "capitulo": "📜 Historia en la pizarra · Cap. 2"
+ }
+}

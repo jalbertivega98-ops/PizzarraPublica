@@ -1,0 +1,707 @@
+{
+ "slug": "correo_desconfianza",
+ "title": "Abascal no se fía del voto por correo",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "edge",
+  "voice_id": "es-ES-AlvaroNeural"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Infobae (6/11/2026): Abascal en El gato al agua sobre el voto por correo",
+  "Diario de León / Europa Press (6/10/2026): Ayuso; Correos (Olga García) y garantías del proceso",
+  "Xataka / Diario de León (oct. 2026): Feijóo (7/10), «no confío en los directivos de Correos»",
+  "Xataka (8/10/2026): identificación en tres momentos · Interior: plazos (19/11 y 25/11)"
+ ],
+ "caption": "📮 Abascal pide no votar por correo: «no puedo garantizar» que esté salvaguardado\n🔵 Ayuso: «ni se le ocurra» · Feijóo: no se fía de los directivos de Correos, sí de los carteros\n📦 Correos: «seguro y garantista» · código de barras y DNI 3 veces\n📅 Si votas por correo: pídelo hasta el 19 y envíalo antes del 25\n💬 ¿Te fías? Sí o no, te leo 👇\n🔔 Sigue a Piz · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Infobae 6/11/2026 · Diario de León 6/10/2026 · Xataka 8/10/2026 · Interior. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#VotoPorCorreo",
+  "#29N",
+  "#Vox",
+  "#PP",
+  "#Correos",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "calle",
+   "animo": "tension",
+   "footnote": "Infobae 6/11/2026 · Diario de León 6/10/2026",
+   "lines": [
+    {
+     "text": "Abascal pide a los suyos que no voten por correo.",
+     "tono": "intriga"
+    },
+    {
+     "text": "Y no es el único que desconfía.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@único",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "contrato",
+     "x": 540,
+     "y": 600,
+     "scale": 0.6,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel",
+     "fx": [
+      {
+       "at": "@correo",
+       "do": "tachar"
+      }
+     ]
+    },
+    {
+     "type": "rotulo",
+     "text": "VOTO POR CORREO",
+     "x": 540,
+     "y": 420,
+     "size": 90,
+     "color": "amarillo",
+     "at": 0.1,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.52,
+     "at": 0.2,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@voten",
+       "pose": "senala"
+      },
+      {
+       "at": "@correo",
+       "pose": "cruzados"
+      }
+     ],
+     "entra": "izq",
+     "id": "abascal"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 820,
+     "y": 1560,
+     "scale": 0.45,
+     "at": "@único",
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@desconfía",
+       "cara": "pensativo",
+       "pose": "piensa"
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "dijo",
+   "fondo": "plato",
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Infobae 6/11/2026",
+   "lines": [
+    {
+     "text": "En El gato al agua dijo que no puede garantizar que el voto por correo vaya a estar salvaguardado."
+    },
+    {
+     "text": "Pide ir a votar en persona, con un esfuerzo extraordinario. Por correo, solo si no hay otra opción.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.52,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@garantizar",
+       "pose": "encoge"
+      },
+      {
+       "at": "@persona",
+       "pose": "punos"
+      },
+      {
+       "at": "@opción",
+       "pose": "senala"
+      }
+     ],
+     "entra": "nada",
+     "id": "abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 520,
+     "scale": 0.65,
+     "at": "@garantizar",
+     "props": {
+      "lineas": [
+       "«NO PUEDO",
+       "GARANTIZAR»"
+      ],
+      "cola": [
+       0,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Pide"
+    },
+    {
+     "type": "objeto",
+     "objeto": "urna",
+     "x": 860,
+     "y": 760,
+     "scale": 0.4,
+     "at": "@persona",
+     "props": {
+      "llena": 0.5,
+      "texto": "29N"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@extraordinario",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "pp",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "corte",
+   "footnote": "Diario de León 6/10/2026 · Xataka 8/10/2026",
+   "lines": [
+    {
+     "text": "Ayuso fue más allá: «pido a todo el mundo que ni se le ocurra votar por correo»."
+    },
+    {
+     "text": "Y Feijóo: no confía en los directivos de Correos, pero sí en los carteros.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 440,
+     "scale": 0.65,
+     "at": 0.1,
+     "props": {
+      "texto": "AYUSO (PP)",
+      "color": "pp"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@Feijóo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 540,
+     "y": 600,
+     "scale": 0.6,
+     "at": "@ocurra",
+     "props": {
+      "lineas": [
+       "«NI SE LE OCURRA",
+       "VOTAR POR CORREO»"
+      ],
+      "cola": [
+       0,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@Feijóo"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.52,
+     "at": "@Feijóo-0.3",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@directivos",
+       "pose": "cruzados"
+      },
+      {
+       "at": "@carteros",
+       "pose": "pulgar",
+       "cara": "normal"
+      }
+     ],
+     "entra": "abajo",
+     "id": "feijoo"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 860,
+     "y": 1600,
+     "scale": 0.4,
+     "at": 0.2,
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@carteros",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "der",
+     "hud": true,
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "correos",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Diario de León 6/10/2026 · Xataka 8/10/2026",
+   "lines": [
+    {
+     "text": "Correos responde: «es un proceso seguro, transparente y garantista». «No hay posibilidad de manipulación»."
+    },
+    {
+     "text": "Cada sobre va con código de barras y vigilado hasta la mesa. Y tú enseñas el DNI tres veces.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@tres",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 440,
+     "scale": 0.7,
+     "at": 0,
+     "props": {
+      "texto": "CORREOS",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 620,
+     "scale": 1.0,
+     "at": "@manipulación",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@código"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contrato",
+     "x": 300,
+     "y": 720,
+     "scale": 0.5,
+     "at": "@sobre",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lupa",
+     "x": 780,
+     "y": 720,
+     "scale": 0.45,
+     "at": "@vigilado",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 980,
+     "scale": 0.75,
+     "at": "@tres",
+     "props": {
+      "valor": 3,
+      "sufijo": " VECES DNI",
+      "ancho": 640
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 860,
+     "y": 1620,
+     "scale": 0.4,
+     "at": "@DNI",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@tres",
+       "pose": "senala_arriba",
+       "cara": "idea"
+      }
+     ],
+     "entra": "der",
+     "hud": true,
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "fechas",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "La Moncloa / Ministerio del Interior",
+   "lines": [
+    {
+     "text": "Si vas a votar por correo: pídelo hasta el jueves 19, y envíalo antes del 25."
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 640,
+     "scale": 0.62,
+     "at": 0,
+     "props": {
+      "mes": "NOVIEMBRE 2026",
+      "inicio": 6,
+      "dias": 30,
+      "marcados": [
+       19,
+       25,
+       29
+      ],
+      "colores": {
+       "19": "amarillo",
+       "25": "rojo",
+       "29": "azul"
+      }
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 1040,
+     "scale": 0.6,
+     "at": "@19",
+     "props": {
+      "texto": "19 · PEDIRLO",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 1040,
+     "scale": 0.6,
+     "at": "@25",
+     "props": {
+      "texto": "25 · ENVIARLO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Tú te fías del voto por correo? Sí o no, te leo."
+    },
+    {
+     "text": "Y sigue a Piz para no perderte nada antes del 29N.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 640,
+     "scale": 0.7,
+     "at": "@Sí",
+     "props": {
+      "texto": "SÍ",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 640,
+     "scale": 0.7,
+     "at": "@no",
+     "props": {
+      "texto": "NO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@fías",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@29N",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.4,
+  "titulo": "¿Te fías del voto por correo?",
+  "capitulo": null
+ }
+}

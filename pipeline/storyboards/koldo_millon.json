@@ -1,0 +1,681 @@
+{
+ "slug": "koldo_millon",
+ "title": "Koldo: «el PP me ofreció un millón»",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "edge",
+  "voice_id": "es-ES-AlvaroNeural"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Demócrata (5/11/2026, agencias): declaraciones de Koldo García en la Cadena SER y TVE; respuesta del PSOE (Torró) y del PP (Génova, Ester Muñoz)",
+  "Infobae (6/11/2026): Koldo García, en prisión"
+ ],
+ "caption": "💶 Koldo dice que el PP le ofreció 1 millón por hablar contra Sánchez\n🎙️ Lo contó en la SER y en TVE: defensa pagada, rebaja de condena y un millón\n🗣️ «Incluso si tenía que mentir» · dice que lo rechazó\n🔍 De momento, sin pruebas públicas\n🔴 PSOE: «guerra sucia» · 🔵 PP: «absolutamente falso»\n💬 ¿A quién crees? Te leo 👇\n🔔 Sigue a Piz · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Demócrata 5/11/2026 (Cadena SER, TVE, agencias) · Infobae 6/11/2026. Son declaraciones, no hechos probados. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#Koldo",
+  "#PP",
+  "#PSOE",
+  "#29N",
+  "#PolíticaEspañola",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     34,
+     30,
+     58
+    ]
+   },
+   "animo": "tension",
+   "footnote": "Demócrata 5/11/2026 (Cadena SER, TVE)",
+   "lines": [
+    {
+     "text": "Un millón de euros por hablar contra Sánchez.",
+     "tono": "intriga"
+    },
+    {
+     "text": "Eso dice Koldo que le ofrecieron. El PP dice que es mentira.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Koldo",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "fajo",
+     "x": 540,
+     "y": 560,
+     "scale": 0.7,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "rotulo",
+     "text": "1.000.000 €",
+     "x": 540,
+     "y": 760,
+     "size": 130,
+     "color": "amarillo",
+     "at": 0.3,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "koldo",
+     "x": 260,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@Koldo-0.3",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@ofrecieron",
+       "pose": "senala",
+       "mira": "der"
+      }
+     ],
+     "entra": "izq",
+     "id": "koldo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 800,
+     "y": 980,
+     "scale": 0.6,
+     "at": "@mentira",
+     "props": {
+      "texto": "PP: «MENTIRA»",
+      "color": "pp"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 820,
+     "y": 1560,
+     "scale": 0.42,
+     "at": "@PP-0.3",
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@mentira",
+       "pose": "encoge",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1100,
+     "scale": 1.0,
+     "at": "@dice",
+     "props": {
+      "texto": "DECLARACIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "cuenta",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Demócrata 5/11/2026 (Cadena SER, TVE)",
+   "lines": [
+    {
+     "text": "Koldo, en prisión, lo contó en la SER y en TVE."
+    },
+    {
+     "text": "Según él, un abogado del PP le ofreció pagar su defensa, rebajar su condena y un millón."
+    },
+    {
+     "text": "A cambio de información contra Sánchez, su mujer y Zapatero. «Incluso si tenía que mentir».",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Incluso",
+     "plano": "general",
+     "sobre": [
+      540,
+      940
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "microfono",
+     "x": 220,
+     "y": 720,
+     "scale": 0.45,
+     "at": 0.2,
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@abogado"
+    },
+    {
+     "type": "objeto",
+     "objeto": "tele",
+     "x": 820,
+     "y": 740,
+     "scale": 0.45,
+     "at": "@TVE",
+     "props": {
+      "texto": "TVE"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@abogado"
+    },
+    {
+     "type": "personaje",
+     "quien": "koldo",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@abogado",
+       "pose": "senala_arriba"
+      },
+      {
+       "at": "@mentir",
+       "cara": "indignado"
+      }
+     ],
+     "entra": "nada",
+     "id": "koldo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "checklist",
+     "x": 540,
+     "y": 520,
+     "scale": 0.75,
+     "at": "@defensa",
+     "props": {
+      "items": [
+       "PAGAR SU DEFENSA",
+       "REBAJAR CONDENA",
+       "1 MILLÓN"
+      ],
+      "marcas": []
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel",
+     "out": "@cambio"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 520,
+     "scale": 0.5,
+     "at": "@cambio",
+     "props": {
+      "texto": "CONTRA SÁNCHEZ · SU MUJER · ZAPATERO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "«INCLUSO MINTIENDO»",
+     "x": 540,
+     "y": 660,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@Incluso",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "pruebas",
+   "fondo": "calle",
+   "animo": "tension",
+   "trans": "barrido",
+   "footnote": "Demócrata 5/11/2026 (Cadena SER, TVE)",
+   "lines": [
+    {
+     "text": "Dice que lo rechazó. Pero de momento no ha enseñado ninguna prueba."
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@prueba",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "koldo",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@rechazó",
+       "pose": "cruzados"
+      },
+      {
+       "at": "@prueba",
+       "pose": "encoge",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "koldo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "lupa",
+     "x": 820,
+     "y": 620,
+     "scale": 0.5,
+     "at": "@momento",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 520,
+     "scale": 1.0,
+     "at": "@prueba",
+     "props": {
+      "texto": "SIN PRUEBAS",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "reacciones",
+   "fondo": "plato",
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Demócrata 5/11/2026 (Cadena SER, TVE)",
+   "lines": [
+    {
+     "text": "El PSOE pide explicaciones a Feijóo: «guerra sucia de una gravedad extrema»."
+    },
+    {
+     "text": "El PP: «absolutamente falso». Y Ester Muñoz: «está mintiendo».",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 420,
+     "scale": 0.5,
+     "at": 0.1,
+     "props": {
+      "texto": "PSOE · REBECA TORRÓ",
+      "color": "psoe"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 300,
+     "y": 560,
+     "scale": 0.6,
+     "at": "@guerra",
+     "props": {
+      "lineas": [
+       "«GUERRA SUCIA»"
+      ],
+      "cola": [
+       0,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@PP"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 420,
+     "scale": 0.45,
+     "at": "@PP",
+     "props": {
+      "texto": "PP · GÉNOVA Y ESTER MUÑOZ",
+      "color": "pp"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Feijóo",
+       "mira": "izq"
+      },
+      {
+       "at": "@PP",
+       "mira": "der",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@mintiendo",
+       "pose": "encoge",
+       "mira": "camara"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 780,
+     "y": 560,
+     "scale": 0.6,
+     "at": "@falso",
+     "props": {
+      "lineas": [
+       "«ABSOLUTAMENTE",
+       "FALSO»"
+      ],
+      "cola": [
+       0,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1240,
+     "scale": 1.0,
+     "at": "@mintiendo",
+     "props": {
+      "texto": "DECLARACIONES",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "Palabra de Koldo contra palabra del PP. ¿A quién crees? Te leo."
+    },
+    {
+     "text": "Y sigue a Piz: aquí, siempre con fuentes.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 640,
+     "scale": 0.7,
+     "at": "@Koldo",
+     "props": {
+      "texto": "KOLDO",
+      "color": "gris"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 640,
+     "scale": 0.7,
+     "at": "@PP",
+     "props": {
+      "texto": "PP",
+      "color": "pp"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Koldo",
+       "mira": "izq"
+      },
+      {
+       "at": "@PP",
+       "mira": "der"
+      },
+      {
+       "at": "@crees",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@fuentes",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.6,
+  "titulo": "Koldo: «el PP me ofreció un millón»",
+  "capitulo": null
+ }
+}

@@ -1,0 +1,771 @@
+{
+ "slug": "nace_vox",
+ "title": "Cómo nació Vox",
+ "series_tag": "HISTORIA EN LA PIZARRA",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "edge",
+  "voice_id": "es-ES-AlvaroNeural"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Ministerio del Interior: resultados de las europeas 2014 y las generales 2015, abril 2019, noviembre 2019 y 2023",
+  "Junta de Andalucía: elecciones autonómicas del 2/12/2018 (12 escaños de Vox)",
+  "Fundación de Vox: diciembre de 2013, presentación en enero de 2014"
+ ],
+ "caption": "📜 Historia en la pizarra · Cap. 6\n🟢 2015: Vox, 0 escaños · 2019: 52\n🧳 Nace a finales de 2013 con gente que sale del PP: Vidal-Quadras, Ortega Lara, Abascal…\n🗺️ Diciembre de 2018: 12 escaños en Andalucía, su primer parlamento\n📈 Abril 2019: 24 · noviembre 2019: 52 · 2023: 33\n💬 ¿Superará los 52 el 29N? Te leo 👇\n🔔 Sigue a Piz · Próximo: el primer cara a cara · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Ministerio del Interior (resultados 2014-2023) · Junta de Andalucía (2018). ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#Vox",
+  "#HistoriaDeEspaña",
+  "#Abascal",
+  "#29N",
+  "#AprendeEnTikTok",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     24,
+     60,
+     40
+    ]
+   },
+   "animo": "intriga",
+   "footnote": "Ministerio del Interior: resultados electorales",
+   "lines": [
+    {
+     "text": "En 2015, Vox sacó cero escaños.",
+     "tono": "intriga"
+    },
+    {
+     "text": "Cuatro años después tenía 52. ¿Cómo pasó?",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@52",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "HISTORIA EN LA PIZARRA",
+     "x": 540,
+     "y": 430,
+     "size": 70,
+     "color": "blanco",
+     "at": 0,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 640,
+     "scale": 1.0,
+     "at": "@cero",
+     "props": {
+      "valor": 0,
+      "sufijo": " ESCAÑOS",
+      "ancho": 640
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@52"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 640,
+     "scale": 1.0,
+     "at": "@52",
+     "props": {
+      "valor": 52,
+      "sufijo": " ESCAÑOS",
+      "ancho": 640
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 760,
+     "y": 1340,
+     "scale": 0.48,
+     "at": 0.2,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@52",
+       "pose": "punos",
+       "cara": "ilusionado"
+      }
+     ],
+     "entra": "der",
+     "id": "abascal"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 260,
+     "y": 1340,
+     "scale": 0.45,
+     "at": 0.3,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@52",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@pasó",
+       "pose": "piensa"
+      }
+     ],
+     "entra": "izq",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "nace",
+   "fondo": "oficina",
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Ministerio del Interior: resultados electorales",
+   "lines": [
+    {
+     "text": "Nace a finales de 2013, fundado por gente que se va del PP."
+    },
+    {
+     "text": "Entre ellos, Vidal-Quadras, Ortega Lara y un tal Santiago Abascal.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Abascal",
+     "plano": "general",
+     "sobre": [
+      540,
+      980
+     ],
+     "dur": 0.4,
+     "zoom": 1.04
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 440,
+     "scale": 0.7,
+     "at": 0.1,
+     "props": {
+      "texto": "DICIEMBRE 2013",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "PP",
+     "x": 260,
+     "y": 640,
+     "size": 120,
+     "color": "azul",
+     "at": "@PP",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "flecha",
+     "x": 540,
+     "y": 640,
+     "scale": 0.5,
+     "at": "@PP+0.3",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "whoosh"
+    },
+    {
+     "type": "rotulo",
+     "text": "VOX",
+     "x": 820,
+     "y": 640,
+     "size": 120,
+     "color": "verde",
+     "at": "@PP+0.6",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 820,
+     "scale": 0.5,
+     "at": "@Vidal-Quadras",
+     "props": {
+      "texto": "VIDAL-QUADRAS",
+      "color": "gris"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 820,
+     "scale": 0.5,
+     "at": "@Ortega",
+     "props": {
+      "texto": "ORTEGA LARA",
+      "color": "gris"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 540,
+     "y": 1560,
+     "scale": 0.5,
+     "at": "@Santiago-0.3",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Abascal",
+       "pose": "saluda"
+      }
+     ],
+     "entra": "abajo",
+     "id": "abascal"
+    }
+   ]
+  },
+  {
+   "id": "blanco",
+   "fondo": "carretera",
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Ministerio del Interior: resultados electorales",
+   "lines": [
+    {
+     "text": "En las europeas de 2014 se queda sin escaño por muy poco. En 2015, un 0,2 por ciento."
+    },
+    {
+     "text": "Casi nadie apostaba por él.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "props": {
+      "texto": "SIN ESCAÑO",
+      "numero": "2014",
+      "color": "gris"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador",
+     "out": "@2015"
+    },
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": "@2015",
+     "props": {
+      "texto": "0,2 %",
+      "numero": "2015",
+      "color": "gris"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 380,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "preocupado",
+     "acciones": [
+      {
+       "at": "@poco",
+       "pose": "encoge"
+      },
+      {
+       "at": "@apostaba",
+       "cara": "serio",
+       "pose": "cruzados"
+      }
+     ],
+     "entra": "nada",
+     "id": "abascal"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 520,
+     "scale": 1.0,
+     "at": "@ciento",
+     "props": {
+      "texto": "0 ESCAÑOS",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "andalucia",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "energia",
+   "trans": "zoom",
+   "footnote": "Junta de Andalucía: elecciones del 2/12/2018",
+   "lines": [
+    {
+     "text": "Hasta diciembre de 2018. Andalucía: doce escaños de golpe."
+    },
+    {
+     "text": "Primera vez en un parlamento. Y de ahí, al Congreso.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      760.8
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@Andalucía",
+     "plano": "general",
+     "sobre": [
+      422.1,
+      953.9
+     ],
+     "dur": 0.9,
+     "zoom": 2.6
+    },
+    {
+     "at": "@Congreso",
+     "plano": "general",
+     "sobre": [
+      551.3,
+      760.8
+     ],
+     "dur": 0.8,
+     "zoom": 1.1
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana"
+     },
+     "acciones": [
+      {
+       "at": "@Andalucía",
+       "props": {
+        "resalta": [
+         "Sevilla",
+         "Cádiz",
+         "Málaga",
+         "Granada",
+         "Almería",
+         "Jaén",
+         "Córdoba",
+         "Huelva"
+        ]
+       },
+       "sfx": "pop"
+      }
+     ],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.2
+    },
+    {
+     "type": "rotulo",
+     "text": "12 ESCAÑOS",
+     "x": 540,
+     "y": 430,
+     "size": 120,
+     "color": "verde",
+     "at": "@doce",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 600,
+     "scale": 1.0,
+     "at": "@Primera",
+     "props": {
+      "texto": "1.ª VEZ",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 860,
+     "y": 1600,
+     "scale": 0.4,
+     "at": "@golpe",
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@Congreso",
+       "pose": "senala_arriba",
+       "cara": "idea"
+      }
+     ],
+     "entra": "der",
+     "hud": true,
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "subida",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Ministerio del Interior: resultados electorales",
+   "lines": [
+    {
+     "text": "Abril de 2019: 24 diputados. Noviembre de 2019: 52, tercera fuerza."
+    },
+    {
+     "text": "En 2023 baja a 33. Y ahora, el 29N, vuelve a buscar su récord.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 640,
+     "scale": 0.85,
+     "at": "@Abril",
+     "props": {
+      "tope": 60,
+      "barras": [
+       {
+        "texto": "2015",
+        "valor": 0,
+        "color": "vox"
+       },
+       {
+        "texto": "ABR 2019",
+        "valor": 24,
+        "color": "vox"
+       },
+       {
+        "texto": "NOV 2019",
+        "valor": 52,
+        "color": "vox"
+       },
+       {
+        "texto": "2023",
+        "valor": 33,
+        "color": "vox"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 1.6
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1080,
+     "scale": 1.0,
+     "at": "@tercera",
+     "props": {
+      "texto": "TERCERA FUERZA",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 860,
+     "y": 1620,
+     "scale": 0.4,
+     "at": "@2023",
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@29N",
+       "pose": "punos",
+       "cara": "ilusionado"
+      }
+     ],
+     "entra": "der",
+     "hud": true,
+     "id": "abascal"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Crees que superará los 52? Te leo, con respeto."
+    },
+    {
+     "text": "Y sigue a Piz: esta noche, el último capítulo, el primer cara a cara de la historia.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@superará",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "¿MÁS DE 52?",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@sigue-0.2",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@cara",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 620,
+     "scale": 0.5,
+     "at": "@noche",
+     "props": {
+      "texto": "ESTA NOCHE: EL PRIMER CARA A CARA",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.0,
+  "titulo": "De 0 a 52 escaños: cómo nació Vox",
+  "capitulo": "📜 Historia en la pizarra · Cap. 6"
+ }
+}

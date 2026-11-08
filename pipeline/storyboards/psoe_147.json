@@ -1,0 +1,818 @@
+{
+ "slug": "psoe_147",
+ "title": "El PSOE tiene 147 años",
+ "series_tag": "HISTORIA EN LA PIZARRA",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "edge",
+  "voice_id": "es-ES-AlvaroNeural"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Fundación Pablo Iglesias: fundación del PSOE (Casa Labra, Madrid, 2/5/1879), UGT (1888)",
+  "Congreso de los Diputados: Pablo Iglesias, diputado en 1910; elecciones del 28/10/1982 (202 escaños)",
+  "Congreso de Suresnes (1974) y congreso extraordinario de 1979"
+ ],
+ "caption": "📜 Historia en la pizarra · Cap. 4\n🍷 El PSOE nació en una taberna de Madrid: Casa Labra, 2 de mayo de 1879\n✍️ 25 fundadores, casi todos tipógrafos, con Pablo Iglesias (el original)\n🚫 Prohibido con Franco · 1974: Felipe González toma el mando\n🏆 1982: 202 escaños, récord que nadie ha tocado\n💬 ¿Lo sabías? Te leo 👇\n🔔 Sigue a Piz · Próximo: cómo nació el PP · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Fundación Pablo Iglesias · Congreso de los Diputados (elecciones de 1982). ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PSOE",
+  "#HistoriaDeEspaña",
+  "#FelipeGonzález",
+  "#29N",
+  "#AprendeEnTikTok",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     92,
+     64,
+     38
+    ]
+   },
+   "animo": "intriga",
+   "footnote": "Fundación Pablo Iglesias · Congreso de los Diputados",
+   "lines": [
+    {
+     "text": "El partido que hoy gobierna España nació en una taberna.",
+     "tono": "intriga"
+    },
+    {
+     "text": "Y de eso hace 147 años.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@147",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "HISTORIA EN LA PIZARRA",
+     "x": 540,
+     "y": 430,
+     "size": 70,
+     "color": "blanco",
+     "at": 0,
+     "hud": true
+    },
+    {
+     "type": "edificio",
+     "edificio": "casa",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@taberna-0.4",
+     "acciones": [],
+     "entra": "crece",
+     "sfx": "pop",
+     "dibuja": 0.8,
+     "id": "taberna"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 860,
+     "scale": 0.6,
+     "at": "@taberna",
+     "props": {
+      "texto": "CASA LABRA · MADRID",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@147"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 600,
+     "scale": 1.0,
+     "at": "@147",
+     "props": {
+      "valor": 147,
+      "sufijo": " AÑOS",
+      "ancho": 620
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 860,
+     "y": 1580,
+     "scale": 0.42,
+     "at": 0.2,
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@taberna",
+       "mira": "taberna",
+       "take": true
+      },
+      {
+       "at": "@147",
+       "cara": "ilusionado"
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "fundacion",
+   "fondo": "mar_mapa",
+   "limites": [
+    -6000,
+    -6000,
+    7000,
+    7000
+   ],
+   "animo": "aventura",
+   "trans": "zoom",
+   "footnote": "Fundación Pablo Iglesias · Congreso de los Diputados",
+   "lines": [
+    {
+     "text": "2 de mayo de 1879. Madrid, Casa Labra. Veinticinco personas, casi todas tipógrafos."
+    },
+    {
+     "text": "Las lidera un tal Pablo Iglesias. Sí, el original.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      551.3,
+      760.8
+     ],
+     "dur": 0,
+     "zoom": 1.0
+    },
+    {
+     "at": "@Madrid",
+     "plano": "general",
+     "sobre": [
+      551.3,
+      731.2
+     ],
+     "dur": 0.9,
+     "zoom": 4.0
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mapa",
+     "x": 540,
+     "y": 820,
+     "scale": 1.0,
+     "at": 0,
+     "props": {
+      "region": "espana"
+     },
+     "acciones": [],
+     "id": "mapa",
+     "entra": "nada",
+     "dibujo": 1.2
+    },
+    {
+     "type": "objeto",
+     "objeto": "chincheta",
+     "x": 551.3,
+     "y": 731.2,
+     "scale": 0.5,
+     "at": "@Madrid",
+     "props": {
+      "diseno": "espana"
+     },
+     "acciones": [],
+     "entra": "cae",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 480,
+     "scale": 0.75,
+     "at": "@1879",
+     "props": {
+      "texto": "2/5/1879",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 620,
+     "scale": 0.7,
+     "at": "@Veinticinco",
+     "props": {
+      "valor": 25,
+      "sufijo": " FUNDADORES",
+      "ancho": 720
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@lidera"
+    },
+    {
+     "type": "personaje",
+     "quien": "iglesias_posse",
+     "x": 540,
+     "y": 1560,
+     "scale": 0.55,
+     "at": "@lidera-0.2",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@original",
+       "pose": "saluda",
+       "cara": "normal"
+      }
+     ],
+     "entra": "abajo",
+     "hud": true,
+     "id": "iglesias_posse"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 880,
+     "y": 1640,
+     "scale": 0.36,
+     "at": "@original-0.3",
+     "cara": "riendo",
+     "acciones": [],
+     "entra": "der",
+     "hud": true,
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "siglo",
+   "fondo": "carretera",
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Fundación Pablo Iglesias · Congreso de los Diputados",
+   "lines": [
+    {
+     "text": "1888: crea el sindicato UGT. 1910: Iglesias, primer diputado socialista."
+    },
+    {
+     "text": "Con Franco, prohibido. Y en 1974, en Francia, un joven sevillano toma el mando: Felipe González.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Felipe",
+     "plano": "general",
+     "sobre": [
+      600,
+      980
+     ],
+     "dur": 0.5,
+     "zoom": 1.05
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0.1,
+     "props": {
+      "texto": "UGT",
+      "numero": "1888",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador",
+     "out": "@1910"
+    },
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": "@1910",
+     "props": {
+      "texto": "1.er DIPUTADO",
+      "numero": "1910",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador",
+     "out": "@Franco"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 600,
+     "scale": 1.0,
+     "at": "@prohibido",
+     "props": {
+      "texto": "PROHIBIDO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe",
+     "out": "@1974"
+    },
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": "@1974",
+     "props": {
+      "texto": "SURESNES",
+      "numero": "1974",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador"
+    },
+    {
+     "type": "personaje",
+     "quien": "gonzalez",
+     "x": 480,
+     "y": 1560,
+     "scale": 0.5,
+     "at": "@Felipe-0.3",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@González",
+       "pose": "saluda"
+      }
+     ],
+     "entra": "abajo",
+     "id": "gonzalez"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 220,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@UGT",
+       "pose": "senala"
+      },
+      {
+       "at": "@prohibido",
+       "cara": "preocupado"
+      },
+      {
+       "at": "@joven",
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "record",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "energia",
+   "trans": "corte",
+   "footnote": "Congreso: elecciones del 28/10/1982",
+   "lines": [
+    {
+     "text": "En 1979 deja de definirse como marxista. Y en 1982, la gran explosión:"
+    },
+    {
+     "text": "202 escaños y más de diez millones de votos. Un récord que nadie ha vuelto a tocar.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@202",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 500,
+     "scale": 0.6,
+     "at": "@1979",
+     "props": {
+      "texto": "1979 · ADIÓS AL MARXISMO",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@1982"
+    },
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.45,
+     "at": "@1982",
+     "acciones": [
+      {
+       "at": "@202",
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "crece",
+     "sfx": "pop",
+     "dibuja": 0.6
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 520,
+     "scale": 1.0,
+     "at": "@202",
+     "props": {
+      "valor": 202,
+      "sufijo": " ESCAÑOS",
+      "ancho": 700
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "rotulo",
+     "text": "+10 MILLONES DE VOTOS",
+     "x": 540,
+     "y": 700,
+     "size": 80,
+     "color": "blanco",
+     "at": "@millones",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 860,
+     "scale": 1.0,
+     "at": "@récord",
+     "props": {
+      "texto": "RÉCORD",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "hoy",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Fundación Pablo Iglesias · Congreso de los Diputados",
+   "lines": [
+    {
+     "text": "En democracia, tres presidentes socialistas: González, Zapatero y Sánchez."
+    },
+    {
+     "text": "Entre los tres, casi treinta años en la Moncloa.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@treinta",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4,
+     "zoom": 1.05
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "gonzalez",
+     "x": 230,
+     "y": 1340,
+     "scale": 0.45,
+     "at": "@González-0.3",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@González",
+       "pose": "saluda"
+      }
+     ],
+     "entra": "izq",
+     "id": "gonzalez"
+    },
+    {
+     "type": "personaje",
+     "quien": "zapatero",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.45,
+     "at": "@Zapatero-0.3",
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@Zapatero",
+       "pose": "saluda"
+      }
+     ],
+     "entra": "abajo",
+     "id": "zapatero"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 850,
+     "y": 1340,
+     "scale": 0.45,
+     "at": "@Sánchez-0.3",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@Sánchez",
+       "pose": "saluda"
+      }
+     ],
+     "entra": "der",
+     "id": "sanchez"
+    },
+    {
+     "type": "rotulo",
+     "text": "3 PRESIDENTES",
+     "x": 540,
+     "y": 460,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@tres",
+     "golpe": true,
+     "out": "@treinta",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 520,
+     "scale": 0.9,
+     "at": "@treinta",
+     "props": {
+      "valor": 29,
+      "prefijo": "CASI ",
+      "sufijo": " AÑOS",
+      "ancho": 700
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Sabías que nació en una taberna? Te leo."
+    },
+    {
+     "text": "Y sigue a Piz: mañana, cómo nació el PP.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@taberna",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "147 AÑOS",
+     "x": 540,
+     "y": 420,
+     "size": 120,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@sigue-0.2",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@PP",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 620,
+     "scale": 0.55,
+     "at": "@mañana",
+     "props": {
+      "texto": "PRÓXIMO: CÓMO NACIÓ EL PP",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.0,
+  "titulo": "El PSOE nació en una taberna",
+  "capitulo": "📜 Historia en la pizarra · Cap. 4"
+ }
+}

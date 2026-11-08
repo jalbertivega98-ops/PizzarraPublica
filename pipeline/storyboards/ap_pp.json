@@ -1,0 +1,794 @@
+{
+ "slug": "ap_pp",
+ "title": "De Alianza Popular al PP",
+ "series_tag": "HISTORIA EN LA PIZARRA",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "edge",
+  "voice_id": "es-ES-AlvaroNeural"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Partido Popular: historia (Alianza Popular 1976, refundación 1989)",
+  "Congreso de los Diputados: resultados de 1977, 1982, 1996, 2000 y 2011"
+ ],
+ "caption": "📜 Historia en la pizarra · Cap. 5\n🔵 El PP no siempre se llamó PP: nació como Alianza Popular (1976)\n👔 Lo fundó Manuel Fraga con otros exministros, «los siete magníficos»\n🔄 1989: se refunda como Partido Popular · 1990: Aznar al mando\n🏆 2000: 183 escaños · 2011, con Rajoy: 186, su récord\n💬 ¿Lo sabías? Te leo 👇\n🔔 Sigue a Piz · Próximo: cómo nació Vox · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: Partido Popular (historia) · Congreso de los Diputados (resultados 1977-2011). ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#PP",
+  "#HistoriaDeEspaña",
+  "#Aznar",
+  "#29N",
+  "#AprendeEnTikTok",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     92,
+     64,
+     38
+    ]
+   },
+   "animo": "intriga",
+   "footnote": "Partido Popular · Congreso de los Diputados",
+   "lines": [
+    {
+     "text": "El PP no siempre se llamó PP.",
+     "tono": "intriga"
+    },
+    {
+     "text": "Nació con otro nombre, lo fundó un exministro de Franco y tardó veinte años en ganar.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@ganar",
+     "plano": "general",
+     "sobre": [
+      540,
+      920
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "HISTORIA EN LA PIZARRA",
+     "x": 540,
+     "y": 430,
+     "size": 70,
+     "color": "blanco",
+     "at": 0,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "PP",
+     "x": 540,
+     "y": 640,
+     "size": 200,
+     "color": "azul",
+     "at": 0.2,
+     "golpe": true,
+     "fx": [
+      {
+       "at": "@siempre",
+       "do": "tachar"
+      }
+     ],
+     "out": "@nombre",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "¿?",
+     "x": 540,
+     "y": 640,
+     "size": 200,
+     "color": "amarillo",
+     "at": "@nombre",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 860,
+     "scale": 0.8,
+     "at": "@veinte",
+     "props": {
+      "valor": 20,
+      "sufijo": " AÑOS",
+      "ancho": 560
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 860,
+     "y": 1580,
+     "scale": 0.42,
+     "at": 0.3,
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@nombre",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@Franco",
+       "take": true,
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "der",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "ap",
+   "fondo": {
+    "tipo": "carretera",
+    "velocidad": 0.6
+   },
+   "animo": "aventura",
+   "trans": "barrido",
+   "footnote": "Partido Popular · Congreso de los Diputados",
+   "lines": [
+    {
+     "text": "1976: Manuel Fraga funda Alianza Popular, con otros exministros. Les llamaban los siete magníficos."
+    },
+    {
+     "text": "En 1977, solo 16 escaños. En 1982, ya 106: líder de la oposición.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@1982",
+     "plano": "general",
+     "sobre": [
+      600,
+      980
+     ],
+     "dur": 0.5,
+     "zoom": 1.04
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0.1,
+     "props": {
+      "texto": "ALIANZA POPULAR",
+      "numero": "1976",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador",
+     "out": "@1977"
+    },
+    {
+     "type": "personaje",
+     "quien": "fraga",
+     "x": 400,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@Fraga-0.3",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@funda",
+       "pose": "senala_arriba"
+      },
+      {
+       "at": "@magníficos",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "izq",
+     "id": "fraga"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 520,
+     "scale": 0.7,
+     "at": "@magníficos",
+     "props": {
+      "valor": 7,
+      "sufijo": " MAGNÍFICOS",
+      "ancho": 700
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@1977"
+    },
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": "@1977",
+     "props": {
+      "texto": "16 ESCAÑOS",
+      "numero": "1977",
+      "color": "gris"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador",
+     "out": "@1982"
+    },
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": "@1982",
+     "props": {
+      "texto": "106 ESCAÑOS",
+      "numero": "1982",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 520,
+     "scale": 1.0,
+     "at": "@oposición",
+     "props": {
+      "texto": "OPOSICIÓN",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "refundacion",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Partido Popular · Congreso de los Diputados",
+   "lines": [
+    {
+     "text": "Pero no ganaba. Así que en 1989 se refunda: nace el Partido Popular."
+    },
+    {
+     "text": "Y en 1990, el presidente de Castilla y León toma el mando: José María Aznar.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Aznar",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5,
+     "zoom": 1.04
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "AP",
+     "x": 540,
+     "y": 520,
+     "size": 160,
+     "color": "verde",
+     "at": 0,
+     "golpe": true,
+     "fx": [
+      {
+       "at": "@refunda",
+       "do": "tachar"
+      }
+     ],
+     "out": "@Partido",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "PARTIDO POPULAR",
+     "x": 540,
+     "y": 560,
+     "size": 110,
+     "color": "azul",
+     "at": "@Partido",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 720,
+     "scale": 0.75,
+     "at": "@1989",
+     "props": {
+      "texto": "1989",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "aznar",
+     "x": 540,
+     "y": 1560,
+     "scale": 0.55,
+     "at": "@1990",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@Aznar",
+       "pose": "saluda",
+       "cara": "normal"
+      }
+     ],
+     "entra": "abajo",
+     "id": "aznar"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 220,
+     "y": 1560,
+     "scale": 0.45,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@ganaba",
+       "pose": "encoge"
+      },
+      {
+       "at": "@nace",
+       "cara": "ilusionado"
+      }
+     ],
+     "entra": "izq",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "victorias",
+   "fondo": {
+    "tipo": "carretera",
+    "velocidad": 0.6
+   },
+   "animo": "energia",
+   "trans": "corte",
+   "footnote": "Congreso: resultados de 1996, 2000 y 2011",
+   "lines": [
+    {
+     "text": "1996: por fin gana. En 2000, mayoría absoluta: 183 escaños."
+    },
+    {
+     "text": "Y en 2011, con Rajoy, su récord: 186.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@186",
+     "plano": "general",
+     "sobre": [
+      600,
+      960
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "props": {
+      "texto": "GANA",
+      "numero": "1996",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador",
+     "out": "@2000"
+    },
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": "@2000",
+     "props": {
+      "texto": "183 ESCAÑOS",
+      "numero": "2000",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador",
+     "out": "@2011"
+    },
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 800,
+     "y": 1340,
+     "scale": 0.72,
+     "at": "@2011",
+     "props": {
+      "texto": "186 ESCAÑOS",
+      "numero": "2011",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador"
+    },
+    {
+     "type": "personaje",
+     "quien": "aznar",
+     "x": 400,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0.1,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@gana",
+       "pose": "arriba"
+      }
+     ],
+     "entra": "izq",
+     "out": "@Rajoy",
+     "id": "aznar"
+    },
+    {
+     "type": "personaje",
+     "quien": "rajoy",
+     "x": 400,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@Rajoy",
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@récord",
+       "pose": "pulgar"
+      }
+     ],
+     "entra": "izq",
+     "id": "rajoy"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 520,
+     "scale": 1.0,
+     "at": "@186",
+     "props": {
+      "texto": "RÉCORD",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "hoy",
+   "fondo": "calle",
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Partido Popular · Congreso de los Diputados",
+   "lines": [
+    {
+     "text": "Desde 2022, lo lidera Feijóo. Y el 29N busca lo que no consiguió en 2023: gobernar.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@gobernar",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4,
+     "zoom": 1.05
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@29N",
+       "pose": "senala_arriba"
+      },
+      {
+       "at": "@gobernar",
+       "pose": "punos"
+      }
+     ],
+     "entra": "abajo",
+     "id": "feijoo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 520,
+     "scale": 0.7,
+     "at": "@2022",
+     "props": {
+      "texto": "DESDE 2022",
+      "color": "pp"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "urna",
+     "x": 860,
+     "y": 780,
+     "scale": 0.4,
+     "at": "@29N",
+     "props": {
+      "llena": 0.5,
+      "texto": "29N"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Sabías que antes se llamaba Alianza Popular? Te leo."
+    },
+    {
+     "text": "Y sigue a Piz: mañana, cómo nació Vox.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Sabías",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "DE AP A PP",
+     "x": 540,
+     "y": 420,
+     "size": 120,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@sigue-0.2",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@Vox",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 620,
+     "scale": 0.55,
+     "at": "@mañana",
+     "props": {
+      "texto": "PRÓXIMO: CÓMO NACIÓ VOX",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 2.8,
+  "titulo": "El PP no siempre se llamó PP",
+  "capitulo": "📜 Historia en la pizarra · Cap. 5"
+ }
+}

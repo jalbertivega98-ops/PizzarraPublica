@@ -1,0 +1,635 @@
+{
+ "slug": "debate_1993",
+ "title": "El primer cara a cara",
+ "series_tag": "HISTORIA EN LA PIZARRA",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "edge",
+  "voice_id": "es-ES-AlvaroNeural"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "RTVE Archivo: debates González-Aznar en Antena 3 (24/5/1993) y Telecinco (31/5/1993)",
+  "Congreso de los Diputados: elecciones del 6/6/1993 (PSOE, 159 escaños)",
+  "Debates Zapatero-Rajoy (2008) · RTVC y Euronews (22/10/2026): cara a cara Sánchez-Feijóo el 16/11"
+ ],
+ "caption": "📜 Historia en la pizarra · Cap. 7 (final)\n📺 Mañana, cara a cara Sánchez-Feijóo… pero el primero fue en 1993\n🥊 24/5/1993, Antena 3: González vs Aznar · según las encuestas, gana Aznar\n🔁 31/5, Telecinco: revancha, y gana González\n🗳️ 6/6/1993: gana González (159 escaños) · luego, 15 años sin cara a cara\n💬 ¿Un debate puede cambiar tu voto? Te leo 👇\n🔔 Sigue a Piz · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: RTVE Archivo (debates de 1993) · Congreso (elecciones 6/6/1993) · RTVC 22/10/2026 (cara a cara 16/11). ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#CaraACara",
+  "#HistoriaDeEspaña",
+  "#Debate",
+  "#29N",
+  "#AprendeEnTikTok",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plato",
+    "rotulo": "CARA A CARA"
+   },
+   "animo": "tension",
+   "footnote": "RTVE Archivo · Antena 3 · Telecinco",
+   "lines": [
+    {
+     "text": "Mañana, Sánchez y Feijóo, cara a cara.",
+     "tono": "intriga"
+    },
+    {
+     "text": "Pero el primero de la historia fue en 1993. Y el que ganó el debate… no ganó las elecciones.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@1993",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 260,
+     "y": 1340,
+     "scale": 0.48,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@cara",
+       "pose": "senala"
+      }
+     ],
+     "entra": "izq",
+     "out": "@1993",
+     "id": "sanchez"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": 820,
+     "y": 1340,
+     "scale": 0.48,
+     "at": 0.1,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@cara",
+       "pose": "senala_izq"
+      }
+     ],
+     "entra": "der",
+     "out": "@1993",
+     "id": "feijoo"
+    },
+    {
+     "type": "rotulo",
+     "text": "HISTORIA EN LA PIZARRA",
+     "x": 540,
+     "y": 430,
+     "size": 70,
+     "color": "blanco",
+     "at": "@1993",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "1993",
+     "x": 540,
+     "y": 580,
+     "size": 150,
+     "color": "amarillo",
+     "at": "@1993",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@ganó",
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@elecciones",
+       "take": true,
+       "cara": "susto"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "primero",
+   "fondo": {
+    "tipo": "plato",
+    "rotulo": "ANTENA 3 · 1993"
+   },
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "RTVE Archivo · Antena 3 · Telecinco",
+   "lines": [
+    {
+     "text": "24 de mayo de 1993. Antena 3. Felipe González contra José María Aznar."
+    },
+    {
+     "text": "Aznar llega como aspirante. Y, según casi todas las encuestas, gana el debate.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@gana",
+     "plano": "general",
+     "sobre": [
+      700,
+      1000
+     ],
+     "dur": 0.4,
+     "zoom": 1.05
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 440,
+     "scale": 0.7,
+     "at": 0.1,
+     "props": {
+      "texto": "24/5/1993",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "gonzalez",
+     "x": 260,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@Felipe-0.3",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@gana",
+       "cara": "preocupado"
+      }
+     ],
+     "entra": "izq",
+     "id": "gonzalez"
+    },
+    {
+     "type": "personaje",
+     "quien": "aznar",
+     "x": 820,
+     "y": 1340,
+     "scale": 0.5,
+     "at": "@José-0.3",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@aspirante",
+       "pose": "senala_izq"
+      },
+      {
+       "at": "@gana",
+       "pose": "arriba",
+       "cara": "ilusionado"
+      }
+     ],
+     "entra": "der",
+     "id": "aznar"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 640,
+     "scale": 1.0,
+     "at": "@debate",
+     "props": {
+      "texto": "GANA AZNAR",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "revancha",
+   "fondo": {
+    "tipo": "plato",
+    "rotulo": "TELECINCO · 1993"
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "RTVE Archivo · Antena 3 · Telecinco",
+   "lines": [
+    {
+     "text": "Una semana después, revancha en Telecinco. González sale a por todas."
+    },
+    {
+     "text": "Esta vez, el que gana es él.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@él",
+     "plano": "general",
+     "sobre": [
+      360,
+      1000
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 440,
+     "scale": 0.7,
+     "at": 0,
+     "props": {
+      "texto": "31/5/1993",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "gonzalez",
+     "x": 260,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@todas",
+       "pose": "punos",
+       "cara": "enfado"
+      },
+      {
+       "at": "@él",
+       "pose": "arriba",
+       "cara": "ilusionado"
+      }
+     ],
+     "entra": "nada",
+     "id": "gonzalez"
+    },
+    {
+     "type": "personaje",
+     "quien": "aznar",
+     "x": 820,
+     "y": 1340,
+     "scale": 0.5,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@él",
+       "cara": "preocupado"
+      }
+     ],
+     "entra": "nada",
+     "id": "aznar"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 640,
+     "scale": 1.0,
+     "at": "@gana",
+     "props": {
+      "texto": "GANA GONZÁLEZ",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "1 · 1",
+     "x": 540,
+     "y": 800,
+     "at": "@revancha",
+     "scale": 0.8,
+     "vida": 0.8
+    }
+   ]
+  },
+  {
+   "id": "resultado",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     32,
+     30,
+     60
+    ]
+   },
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Congreso: elecciones del 6/6/1993",
+   "lines": [
+    {
+     "text": "El 6 de junio gana González, con 159 escaños. Pierde la mayoría absoluta, pero sigue."
+    },
+    {
+     "text": "Y después, quince años sin un solo cara a cara. Hasta 2008: Zapatero contra Rajoy.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    }
+   ],
+   "elements": [
+    {
+     "type": "edificio",
+     "edificio": "congreso",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.45,
+     "at": 0,
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.6,
+     "out": "@quince"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 520,
+     "scale": 0.9,
+     "at": "@159",
+     "props": {
+      "valor": 159,
+      "sufijo": " ESCAÑOS",
+      "ancho": 680
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "out": "@quince"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 600,
+     "scale": 0.9,
+     "at": "@quince",
+     "props": {
+      "valor": 15,
+      "sufijo": " AÑOS SIN DEBATE",
+      "ancho": 860
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "personaje",
+     "quien": "zapatero",
+     "x": 260,
+     "y": 1560,
+     "scale": 0.45,
+     "at": "@2008",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Rajoy",
+       "pose": "senala"
+      }
+     ],
+     "entra": "izq",
+     "id": "zapatero"
+    },
+    {
+     "type": "personaje",
+     "quien": "rajoy",
+     "x": 820,
+     "y": 1560,
+     "scale": 0.45,
+     "at": "@Rajoy-0.3",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Rajoy",
+       "pose": "senala_izq"
+      }
+     ],
+     "entra": "der",
+     "id": "rajoy"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "Y mañana, otro. ¿Crees que un debate puede cambiar tu voto? Te leo."
+    },
+    {
+     "text": "Fin de la serie. Sigue a Piz: mañana te contamos el cara a cara.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "calendario",
+     "x": 540,
+     "y": 560,
+     "scale": 0.5,
+     "at": 0,
+     "props": {
+      "mes": "NOVIEMBRE 2026",
+      "inicio": 6,
+      "dias": 30,
+      "marcados": [
+       16
+      ],
+      "colores": {
+       "16": "azul"
+      }
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "papel",
+     "out": "@Fin"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@debate",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@Sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "FIN DE LA SERIE",
+     "x": 540,
+     "y": 420,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@Fin",
+     "golpe": true,
+     "out": "@Sigue-0.2",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@Sigue",
+     "fx": [
+      {
+       "at": "@cara",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 3.0,
+  "titulo": "El primer cara a cara de la historia",
+  "capitulo": "📜 Historia en la pizarra · Cap. 7"
+ }
+}

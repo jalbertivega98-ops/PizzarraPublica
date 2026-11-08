@@ -206,6 +206,16 @@
      ],
      "dur": 0.5,
      "zoom": 1.06
+    },
+    {
+     "at": "@provincia",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
     }
    ],
    "elements": [
@@ -285,6 +295,22 @@
      "entra": "pop",
      "sfx": "kaching",
      "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "libro",
+     "x": 820,
+     "y": 1000,
+     "scale": 0.6,
+     "at": "@ley",
+     "props": {
+      "titulo": "LEY ELECTORAL",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe"
     }
    ]
   },
@@ -345,6 +371,16 @@
       960
      ],
      "dur": 0.4
+    },
+    {
+     "at": "@sube",
+     "plano": "general",
+     "sobre": [
+      540,
+      760
+     ],
+     "dur": 0.5,
+     "zoom": 1.1
     }
    ],
    "elements": [
@@ -452,6 +488,23 @@
      "at": "@listón",
      "golpe": true,
      "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1300,
+     "scale": 0.6,
+     "at": "@110",
+     "props": {
+      "texto": "110 VÁLIDOS",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@listón"
     }
    ]
   },
@@ -503,6 +556,16 @@
        "at": "@nada",
        "cara": "vacio",
        "pose": "encoge"
+      },
+      {
+       "at": "@barrera",
+       "pose": "cruzados",
+       "mira": "der"
+      },
+      {
+       "at": "@nadie",
+       "cara": "burla",
+       "mira": "camara"
       }
      ],
      "entra": "nada",
@@ -576,34 +639,117 @@
      ],
      "dur": 0.4,
      "zoom": 1.04
+    },
+    {
+     "at": "@como",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4
     }
    ],
    "elements": [
     {
      "type": "objeto",
-     "objeto": "checklist",
+     "objeto": "etiqueta",
      "x": 540,
-     "y": 820,
-     "scale": 0.95,
+     "y": 640,
+     "scale": 0.7,
      "at": "@vacío",
      "props": {
-      "items": [
-       "SOBRE VACÍO: BLANCO",
-       "2 IGUALES: VALE 1",
-       "2 DISTINTAS: NULO",
-       "TACHADA: NULO"
-      ],
-      "marcas": [
-       "si",
-       "si",
-       "no",
-       "no"
-      ]
+      "texto": "SOBRE VACÍO = BLANCO",
+      "color": "blanco"
      },
      "acciones": [],
-     "hud": true,
      "entra": "pop",
-     "sfx": "pop"
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 820,
+     "scale": 0.7,
+     "at": "@iguales",
+     "props": {
+      "texto": "2 IGUALES = VALE 1",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1000,
+     "scale": 0.7,
+     "at": "@distintos",
+     "props": {
+      "texto": "2 DISTINTAS = NULO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1180,
+     "scale": 0.7,
+     "at": "@tachada",
+     "props": {
+      "texto": "TACHADA = NULO",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "papeleta",
+     "x": 860,
+     "y": 1380,
+     "scale": 0.6,
+     "at": "@Sobre",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 200,
+     "y": 1600,
+     "scale": 0.45,
+     "at": "@sabe",
+     "cara": "confundido",
+     "acciones": [
+      {
+       "at": "@una",
+       "cara": "sorpresa",
+       "take": true
+      },
+      {
+       "at": "@nulo",
+       "cara": "idea",
+       "pose": "senala_arriba"
+      }
+     ],
+     "entra": "abajo",
+     "id": "pizon"
     },
     {
      "type": "rotulo",
@@ -653,6 +799,16 @@
      ],
      "dur": 0.5,
      "zoom": 1.04
+    },
+    {
+     "at": "@pesa",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
     }
    ],
    "elements": [
@@ -782,6 +938,10 @@
        "at": "@sigue",
        "pose": "saluda",
        "cara": "riendo"
+      },
+      {
+       "at": "@votado",
+       "salta": true
       }
      ],
      "entra": "abajo",

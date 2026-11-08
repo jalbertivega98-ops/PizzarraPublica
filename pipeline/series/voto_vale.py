@@ -43,7 +43,7 @@ scenes = [
             props={"valor": 21167.64, "decimales": 2, "sufijo": " €", "ancho": 900}),
         obj("silla", 540, 1330, "@gane", 0.7, hud=True, entra="cae", sfx="golpe", props={"color": "rojo", "texto": "ESCAÑO"}),
         monedas("@21.167", 200, 880, 10),
-        obj("cartel", 820, 980, "@BOE", 0.7, hud=True, entra="cae", sfx="papel", props={"texto": "BOE 8/10", "color": "blanco", "tinta": "tinta"}),
+        etq("BOE · 8/10/2026", 540, 1000, "@BOE", "blanco", 0.7, hud=True),
         sello("OFICIAL", "azul", 1400, "@octubre"),
     ]),
     # 3 · EL TRUCO: sin diputado, tu voto vale cero
@@ -69,7 +69,7 @@ scenes = [
     ], camara=[plano(0, "general", [540, 960], 0), plano("@Más", "general", [540, 900], 0.4, zoom=1.07)],
        elements=[
         obj("calculadora", 220, 1180, 0, 0.55, hud=True, entra="pop", sfx="pop"),
-        obj("barras", 560, 860, "@votos", 1.0, hud=True, entra="nada", dibujo=1.4, out="@Más",
+        obj("barras", 560, 860, "@cuenta", 1.0, hud=True, entra="nada", dibujo=1.4, out="@Más",
             props={"sufijo": " M€", "decimales": 2, "tope": 7, "barras": [
                 {"texto": "VOTOS", "valor": 6.48, "color": "verde"}, {"texto": "ESCAÑOS", "valor": 2.75, "color": "amarillo"}]}),
         obj("contador", 540, 700, "@Más", 1.0, hud=True, entra="pop", sfx="kaching", props={"valor": 9.2, "decimales": 1, "prefijo": "+", "sufijo": " M€", "ancho": 760}),
@@ -105,6 +105,25 @@ scenes = [
         rot("SIGUE A PIZ", 540, 420, "@sigue", 110, "amarillo", fx=[{"at": "@blanco", "do": "latir"}]),
     ]),
 ]
+
+# Ritmo: cambios extra para que no haya tramos quietos de más de 3 s
+EXTRA = {
+    "escano": {"cam": [plano("@invento", "general", [540, 900], 0.5, zoom=1.1)]},
+    "truco": {"acc": {"piz": [{"at": "@provincia", "mira": "camara", "pose": "senala"}, {"at": "@voto", "cara": "preocupado", "pose": "manos_juntas"}]},
+              "el": [obj("hucha", 820, 1050, "@caja", 0.5, hud=True, entra="pop", sfx="pop")]},
+    "ejemplo": {"el": [etq("SOLO CONGRESO", 540, 1300, "@Congreso", "blanco", 0.6, hud=True)],
+                "cam": [plano("@euros", "general", [540, 960], 0.5, zoom=1.0)]},
+    "extras": {"cam": [plano("@voto", "general", [540, 900], 0.5, zoom=1.06), plano("@gastar", "general", [600, 950], 0.5, zoom=1.08)],
+               "acc": {"piz": [{"at": "@elector", "salta": True, "cara": "riendo"}]}},
+    "final": {"el": [obj("papeleta", 820, 760, "@pasa", 0.7, hud=True, entra="cae", sfx="papel")]},
+}
+
+for _sc in scenes:
+    _ex = EXTRA.get(_sc["id"], {})
+    _sc["elements"] += _ex.get("el", [])
+    _sc["camara"] += _ex.get("cam", [])
+    for _q, _acc in _ex.get("acc", {}).items():
+        next(e for e in _sc["elements"] if e.get("id") == _q)["acciones"] += _acc
 
 if __name__ == "__main__":
     episodio("voto_vale", "Tu voto vale 0,81 €", scenes,

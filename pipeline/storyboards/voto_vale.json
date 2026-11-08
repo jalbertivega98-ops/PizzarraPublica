@@ -233,6 +233,16 @@
      ],
      "dur": 0.4,
      "zoom": 1.06
+    },
+    {
+     "at": "@invento",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.1
     }
    ],
    "elements": [
@@ -293,20 +303,19 @@
     },
     {
      "type": "objeto",
-     "objeto": "cartel",
-     "x": 820,
-     "y": 980,
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1000,
      "scale": 0.7,
      "at": "@BOE",
      "props": {
-      "texto": "BOE 8/10",
-      "color": "blanco",
-      "tinta": "tinta"
+      "texto": "BOE · 8/10/2026",
+      "color": "blanco"
      },
      "acciones": [],
-     "hud": true,
-     "entra": "cae",
-     "sfx": "papel"
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
     },
     {
      "type": "objeto",
@@ -401,6 +410,16 @@
        "cara": "susto",
        "take": true,
        "pose": "cabeza"
+      },
+      {
+       "at": "@provincia",
+       "mira": "camara",
+       "pose": "senala"
+      },
+      {
+       "at": "@voto",
+       "cara": "preocupado",
+       "pose": "manos_juntas"
       }
      ],
      "entra": "nada",
@@ -439,6 +458,19 @@
      "at": "@cero",
      "golpe": true,
      "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "hucha",
+     "x": 820,
+     "y": 1050,
+     "scale": 0.5,
+     "at": "@caja",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
     }
    ]
   },
@@ -485,6 +517,16 @@
      ],
      "dur": 0.4,
      "zoom": 1.07
+    },
+    {
+     "at": "@euros",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.5,
+     "zoom": 1.0
     }
    ],
    "elements": [
@@ -507,7 +549,7 @@
      "x": 560,
      "y": 860,
      "scale": 1.0,
-     "at": "@votos",
+     "at": "@cuenta",
      "props": {
       "sufijo": " M€",
       "decimales": 2,
@@ -578,6 +620,22 @@
      "hud": true,
      "entra": "pop",
      "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 1300,
+     "scale": 0.6,
+     "at": "@Congreso",
+     "props": {
+      "texto": "SOLO CONGRESO",
+      "color": "blanco"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
     }
    ]
   },
@@ -626,6 +684,26 @@
       1000
      ],
      "dur": 0.4
+    },
+    {
+     "at": "@voto",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    },
+    {
+     "at": "@gastar",
+     "plano": "general",
+     "sobre": [
+      600,
+      950
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
     }
    ],
    "elements": [
@@ -700,6 +778,11 @@
        "at": "@habitante",
        "pose": "senala",
        "mira": "camara"
+      },
+      {
+       "at": "@elector",
+       "salta": true,
+       "cara": "riendo"
       }
      ],
      "entra": "abajo",
@@ -823,6 +906,19 @@
       }
      ],
      "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "papeleta",
+     "x": 820,
+     "y": 760,
+     "scale": 0.7,
+     "at": "@pasa",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "papel"
     }
    ]
   }

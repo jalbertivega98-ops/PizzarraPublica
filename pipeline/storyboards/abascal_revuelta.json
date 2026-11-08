@@ -332,6 +332,26 @@
      ],
      "dur": 0.5,
      "zoom": 1.06
+    },
+    {
+     "at": "@partido",
+     "plano": "general",
+     "sobre": [
+      540,
+      800
+     ],
+     "dur": 0.5,
+     "zoom": 1.1
+    },
+    {
+     "at": "@RTVE",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.5,
+     "zoom": 1.0
     }
    ],
    "elements": [
@@ -353,9 +373,9 @@
     {
      "type": "personaje",
      "quien": "abascal",
-     "x": 540,
-     "y": 1580,
-     "scale": 0.55,
+     "x": 330,
+     "y": 1400,
+     "scale": 0.5,
      "at": "@estrella-0.6",
      "cara": "normal",
      "acciones": [
@@ -371,10 +391,10 @@
     },
     {
      "type": "rotulo",
-     "text": "«MOTOSIERRAS Y LANZALLAMAS»",
+     "text": "MOTOSIERRAS Y LANZALLAMAS",
      "x": 540,
      "y": 440,
-     "size": 70,
+     "size": 56,
      "color": "amarillo",
      "at": "@motosierras",
      "golpe": true,
@@ -383,8 +403,8 @@
     {
      "type": "objeto",
      "objeto": "sello",
-     "x": 540,
-     "y": 1180,
+     "x": 760,
+     "y": 1120,
      "scale": 1.0,
      "at": "@lanzallamas",
      "props": {
@@ -400,14 +420,7 @@
   },
   {
    "id": "liston",
-   "fondo": {
-    "tipo": "plano",
-    "color": [
-     40,
-     30,
-     70
-    ]
-   },
+   "fondo": "oficina",
    "animo": "curioso",
    "trans": "barrido",
    "footnote": "eldiario.es/Vertele 5/11/2026 · Demócrata 5/11/2026",
@@ -441,6 +454,16 @@
      ],
      "dur": 0.4,
      "zoom": 1.05
+    },
+    {
+     "at": "@espectadores",
+     "plano": "general",
+     "sobre": [
+      540,
+      880
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
     }
    ],
    "elements": [
@@ -475,11 +498,6 @@
         "texto": "MONTERO Y RUFIÁN",
         "valor": 2.7,
         "color": "gris"
-       },
-       {
-        "texto": "ABASCAL",
-        "valor": 0.0,
-        "color": "vox"
        }
       ]
      },
@@ -507,12 +525,12 @@
     {
      "type": "objeto",
      "objeto": "etiqueta",
-     "x": 860,
-     "y": 1080,
-     "scale": 0.8,
+     "x": 540,
+     "y": 1380,
+     "scale": 0.75,
      "at": "@Montero+0.6",
      "props": {
-      "texto": "¿?",
+      "texto": "¿ABASCAL?",
       "color": "vox"
      },
      "acciones": [],

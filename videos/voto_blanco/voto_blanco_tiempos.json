@@ -1,0 +1,121 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 7.38,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 1.78,
+    "texto": "¿Votar en blanco es no votar a nadie?"
+   },
+   {
+    "t0": 1.98,
+    "t1": 6.93,
+    "texto": "No exactamente. Tu voto en blanco sí cuenta… y casi nadie sabe a quién perjudica."
+   }
+  ]
+ },
+ {
+  "escena": "valido",
+  "inicio": 7.38,
+  "fin": 18.04,
+  "frases": [
+   {
+    "t0": 7.64,
+    "t1": 15.74,
+    "texto": "El voto en blanco es un voto válido. Y la ley dice que un partido necesita el 3 % de los votos válidos de tu provincia para entrar en el reparto."
+   },
+   {
+    "t0": 15.89,
+    "t1": 17.59,
+    "texto": "El que no llega, se queda fuera."
+   }
+  ]
+ },
+ {
+  "escena": "ejemplo",
+  "inicio": 18.04,
+  "fin": 30.4,
+  "frases": [
+   {
+    "t0": 18.34,
+    "t1": 21.06,
+    "texto": "Mira: con 100 votos, la barrera son 3."
+   },
+   {
+    "t0": 21.21,
+    "t1": 26.21,
+    "texto": "Si llegan 10 votos en blanco, ya son 110 válidos, y la barrera sube a 3,3."
+   },
+   {
+    "t0": 26.41,
+    "t1": 29.95,
+    "texto": "Cada voto en blanco pone el listón un poco más alto a los partidos pequeños."
+   }
+  ]
+ },
+ {
+  "escena": "nulo",
+  "inicio": 30.4,
+  "fin": 36.49,
+  "frases": [
+   {
+    "t0": 30.4,
+    "t1": 36.04,
+    "texto": "¿Y el voto nulo? Ese no cuenta para nada. Ni para la barrera, ni para nadie."
+   }
+  ]
+ },
+ {
+  "escena": "sobre",
+  "inicio": 36.49,
+  "fin": 48.07,
+  "frases": [
+   {
+    "t0": 36.75,
+    "t1": 41.2,
+    "texto": "Y tres cosas que casi nadie sabe. Sobre vacío: voto en blanco."
+   },
+   {
+    "t0": 41.35,
+    "t1": 47.62,
+    "texto": "Dos papeletas iguales en el sobre: vale como una. Dos de partidos distintos, o una tachada: nulo."
+   }
+  ]
+ },
+ {
+  "escena": "donde",
+  "inicio": 48.07,
+  "fin": 57.3,
+  "frases": [
+   {
+    "t0": 48.39,
+    "t1": 53.71,
+    "texto": "Eso sí: esa barrera del 3 % pesa sobre todo en provincias grandes, como Madrid o Barcelona."
+   },
+   {
+    "t0": 53.86,
+    "t1": 56.85,
+    "texto": "En las pequeñas, para sacar escaño hace falta mucho más."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 57.3,
+  "fin": 65.01,
+  "frases": [
+   {
+    "t0": 58.0,
+    "t1": 60.88,
+    "texto": "¿Tú has votado alguna vez en blanco? Te leo."
+   },
+   {
+    "t0": 61.08,
+    "t1": 63.66,
+    "texto": "Y sigue a Piz: mañana, Abascal en La Revuelta."
+   }
+  ]
+ }
+]

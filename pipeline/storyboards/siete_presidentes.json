@@ -74,6 +74,16 @@
      ],
      "dur": 0.5,
      "zoom": 1.08
+    },
+    {
+     "at": "@siete",
+     "plano": "general",
+     "sobre": [
+      540,
+      700
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
     }
    ],
    "elements": [
@@ -119,8 +129,8 @@
      "type": "personaje",
      "quien": "piz",
      "x": 540,
-     "y": 1600,
-     "scale": 0.5,
+     "y": 1330,
+     "scale": 0.45,
      "at": "@tres-0.3",
      "cara": "sorpresa",
      "acciones": [
@@ -183,6 +193,25 @@
      ],
      "dur": 0.5,
      "zoom": 1.04
+    },
+    {
+     "at": "@elecciones",
+     "plano": "general",
+     "sobre": [
+      600,
+      980
+     ],
+     "dur": 0.5,
+     "zoom": 1.05
+    },
+    {
+     "at": "@investidura",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.5
     }
    ],
    "elements": [
@@ -229,6 +258,16 @@
       },
       {
        "at": "@nueve",
+       "cara": "pensativo"
+      },
+      {
+       "at": "@gana",
+       "salta": true,
+       "cara": "riendo"
+      },
+      {
+       "at": "@votación",
+       "mira": "der",
        "cara": "pensativo"
       }
      ],
@@ -291,6 +330,23 @@
      "entra": "pop",
      "sfx": "kaching",
      "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 480,
+     "scale": 0.65,
+     "at": "@1977",
+     "props": {
+      "texto": "ELECCIONES 1977",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@1981"
     }
    ]
   },
@@ -333,6 +389,16 @@
      ],
      "dur": 0.5,
      "zoom": 1.06
+    },
+    {
+     "at": "@Moncloa",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.5,
+     "zoom": 1.0
     }
    ],
    "elements": [
@@ -401,6 +467,10 @@
        "at": "@Nadie",
        "pose": "jarras",
        "mira": "camara"
+      },
+      {
+       "at": "@trece",
+       "pose": "arriba"
       }
      ],
      "entra": "nada",
@@ -506,6 +576,11 @@
       {
        "at": "@ocho",
        "pose": "saluda"
+      },
+      {
+       "at": "@casi",
+       "pose": "pulgar",
+       "cara": "ilusionado"
       }
      ],
      "entra": "abajo",
@@ -547,6 +622,11 @@
        "at": "@moción",
        "cara": "sorpresa",
        "take": true
+      },
+      {
+       "at": "@único",
+       "pose": "jarras",
+       "mira": "camara"
       }
      ],
      "entra": "nada",
@@ -641,6 +721,15 @@
       {
        "at": "@moción",
        "pose": "saluda"
+      },
+      {
+       "at": "@llegó",
+       "pose": "pulgar",
+       "cara": "riendo"
+      },
+      {
+       "at": "@medio",
+       "salta": true
       }
      ],
      "entra": "abajo",
@@ -649,9 +738,9 @@
     {
      "type": "objeto",
      "objeto": "barras",
-     "x": 540,
-     "y": 760,
-     "scale": 0.85,
+     "x": 420,
+     "y": 640,
+     "scale": 0.7,
      "at": "@gana",
      "props": {
       "sufijo": " AÑOS",
@@ -674,6 +763,23 @@
      "hud": true,
      "entra": "nada",
      "dibujo": 1.0
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 480,
+     "scale": 0.65,
+     "at": "@Lleva",
+     "props": {
+      "texto": "8 AÑOS Y 5 MESES",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@gana"
     }
    ]
   },
@@ -767,6 +873,16 @@
       }
      ],
      "hud": true
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "23-F",
+     "x": 800,
+     "y": 760,
+     "at": "@capítulo",
+     "scale": 0.9,
+     "vida": 0.8
     }
    ]
   }

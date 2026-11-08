@@ -79,11 +79,16 @@ scenes = [
     dict(id="sobre", fondo={"tipo": "plano", "color": AZUL}, animo="curioso", trans="barrido", footnote=F, lines=[
         V("Y tres cosas que casi nadie sabe. Sobre vacío: voto en blanco.", "normal"),
         V("Dos papeletas iguales en el sobre: vale como una. Dos de partidos distintos, o una tachada: nulo.", "normal", 0.1),
-    ], camara=[plano(0, "general", [540, 960], 0), plano("@iguales", "general", [540, 920], 0.4, zoom=1.04)],
+    ], camara=[plano(0, "general", [540, 960], 0), plano("@iguales", "general", [540, 920], 0.4, zoom=1.04),
+               plano("@como", "general", [540, 960], 0.4)],
        elements=[
-        obj("checklist", 540, 820, "@vacío", 0.95, hud=True, entra="pop", sfx="pop",
-            props={"items": ["SOBRE VACÍO: BLANCO", "2 IGUALES: VALE 1", "2 DISTINTAS: NULO", "TACHADA: NULO"],
-                   "marcas": ["si", "si", "no", "no"]}),
+        etq("SOBRE VACÍO = BLANCO", 540, 640, "@vacío", "blanco", 0.7, hud=True),
+        etq("2 IGUALES = VALE 1", 540, 820, "@iguales", "verde", 0.7, hud=True),
+        etq("2 DISTINTAS = NULO", 540, 1000, "@distintos", "rojo", 0.7, hud=True),
+        etq("TACHADA = NULO", 540, 1180, "@tachada", "rojo", 0.7, hud=True),
+        obj("papeleta", 860, 1380, "@Sobre", 0.6, hud=True, entra="cae", sfx="papel"),
+        quien("pizon", 200, "@sabe", 0.45, "confundido", y=1600, entra="abajo", acciones=[
+            {"at": "@una", "cara": "sorpresa", "take": True}, {"at": "@nulo", "cara": "idea", "pose": "senala_arriba"}]),
         rot("3 COSAS QUE NO SABÍAS", 540, 420, 0, 84, "amarillo"),
     ]),
     # 6 · EL DATO FINAL: dónde importa
@@ -111,6 +116,24 @@ scenes = [
         rot("SIGUE A PIZ", 540, 420, "@sigue", 110, "amarillo", fx=[{"at": "@Revuelta", "do": "latir"}]),
     ]),
 ]
+
+# Ritmo: cambios extra para que no haya tramos quietos de más de 3 s
+EXTRA = {
+    "valido": {"el": [obj("libro", 820, 1000, "@ley", 0.6, hud=True, entra="cae", sfx="golpe", props={"titulo": "LEY ELECTORAL", "color": "azul"})],
+               "cam": [plano("@provincia", "general", [540, 900], 0.5, zoom=1.08)]},
+    "ejemplo": {"el": [etq("110 VÁLIDOS", 540, 1300, "@110", "blanco", 0.6, hud=True, out="@listón")],
+                "cam": [plano("@sube", "general", [540, 760], 0.5, zoom=1.1)]},
+    "nulo": {"acc": {"piz": [{"at": "@barrera", "pose": "cruzados", "mira": "der"}, {"at": "@nadie", "cara": "burla", "mira": "camara"}]}},
+    "donde": {"cam": [plano("@pesa", "general", [540, 900], 0.5, zoom=1.06)]},
+    "final": {"acc": {"piz": [{"at": "@votado", "salta": True}]}},
+}
+
+for _sc in scenes:
+    _ex = EXTRA.get(_sc["id"], {})
+    _sc["elements"] += _ex.get("el", [])
+    _sc["camara"] += _ex.get("cam", [])
+    for _q, _acc in _ex.get("acc", {}).items():
+        next(e for e in _sc["elements"] if e.get("id") == _q)["acciones"] += _acc
 
 if __name__ == "__main__":
     episodio("voto_blanco", "Votar en blanco no es lo que crees", scenes,

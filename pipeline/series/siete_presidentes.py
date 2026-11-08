@@ -33,7 +33,7 @@ scenes = [
         obj("contador", 540, 600, 0.2, 1.0, hud=True, entra="pop", sfx="kaching", props={"valor": 7, "ancho": 380}),
         rot("PRESIDENTES", 540, 800, 0.4, 110, "amarillo", golpe=True),
         rot("3 SIN GANAR", 540, 1000, "@tres", 110, "rojo", golpe=True),
-        quien("piz", 540, "@tres-0.3", 0.5, "sorpresa", y=1600, entra="abajo", acciones=[{"at": "@elecciones", "take": True}]),
+        quien("piz", 540, "@tres-0.3", 0.45, "sorpresa", y=1330, entra="abajo", acciones=[{"at": "@elecciones", "take": True}]),
         rot("HISTORIA EN LA PIZARRA", 540, 430, 0, 70, "blanco"),
     ]),
     # 2 · SUÁREZ Y CALVO-SOTELO
@@ -85,7 +85,7 @@ scenes = [
        elements=[
         poste("SÁNCHEZ", 2018, 0, 820, "rojo"),
         quien("sanchez", 480, 0.1, 0.55, "ilusionado", y=1560, entra="abajo", acciones=[{"at": "@moción", "pose": "saluda"}]),
-        obj("barras", 540, 760, "@gana", 0.85, hud=True, entra="nada", dibujo=1.0,
+        obj("barras", 420, 640, "@gana", 0.7, hud=True, entra="nada", dibujo=1.0,
             props={"sufijo": " AÑOS", "decimales": 1, "tope": 14, "barras": [
                 {"texto": "GONZÁLEZ", "valor": 13.4, "color": "psoe"}, {"texto": "SÁNCHEZ", "valor": 8.4, "color": "psoe"}]}),
     ]),
@@ -102,6 +102,26 @@ scenes = [
         rot("SIGUE A PIZ", 540, 420, "@sigue", 110, "amarillo", fx=[{"at": "@23-F", "do": "latir"}]),
     ]),
 ]
+
+# Ritmo: cambios extra para que no haya tramos quietos de más de 3 s
+EXTRA = {
+    "gancho": {"cam": [plano("@siete", "general", [540, 700], 0.5, zoom=1.08)]},
+    "suarez": {"acc": {"piz": [{"at": "@gana", "salta": True, "cara": "riendo"}, {"at": "@votación", "mira": "der", "cara": "pensativo"}]},
+               "el": [etq("ELECCIONES 1977", 540, 480, "@1977", "verde", 0.65, hud=True, out="@1981")],
+               "cam": [plano("@elecciones", "general", [600, 980], 0.5, zoom=1.05), plano("@investidura", "general", [540, 1000], 0.5)]},
+    "gonzalez": {"acc": {"piz": [{"at": "@trece", "pose": "arriba"}]}, "cam": [plano("@Moncloa", "general", [540, 960], 0.5, zoom=1.0)]},
+    "tres": {"acc": {"zapatero": [{"at": "@casi", "pose": "pulgar", "cara": "ilusionado"}], "piz": [{"at": "@único", "pose": "jarras", "mira": "camara"}]}},
+    "sanchez": {"acc": {"sanchez": [{"at": "@llegó", "pose": "pulgar", "cara": "riendo"}, {"at": "@medio", "salta": True}]},
+                "el": [etq("8 AÑOS Y 5 MESES", 540, 480, "@Lleva", "amarillo", 0.65, hud=True, out="@gana")]},
+    "final": {"el": [pum("23-F", 800, 760, "@capítulo", 0.9)]},
+}
+
+for _sc in scenes:
+    _ex = EXTRA.get(_sc["id"], {})
+    _sc["elements"] += _ex.get("el", [])
+    _sc["camara"] += _ex.get("cam", [])
+    for _q, _acc in _ex.get("acc", {}).items():
+        next(e for e in _sc["elements"] if e.get("id") == _q)["acciones"] += _acc
 
 if __name__ == "__main__":
     episodio("siete_presidentes", "Siete presidentes en 50 años", scenes,

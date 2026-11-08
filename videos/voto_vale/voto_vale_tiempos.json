@@ -1,0 +1,109 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 6.07,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.3,
+    "texto": "Cuando metes tu voto en la urna, alguien cobra."
+   },
+   {
+    "t0": 2.5,
+    "t1": 5.62,
+    "texto": "El partido al que votas: 81 céntimos por cada voto."
+   }
+  ]
+ },
+ {
+  "escena": "escano",
+  "inicio": 6.07,
+  "fin": 13.98,
+  "frases": [
+   {
+    "t0": 6.33,
+    "t1": 10.58,
+    "texto": "Y por cada escaño que gane, mucho más: 21.167 euros."
+   },
+   {
+    "t0": 10.78,
+    "t1": 13.53,
+    "texto": "No me lo invento: lo publicó el BOE el 8 de octubre."
+   }
+  ]
+ },
+ {
+  "escena": "truco",
+  "inicio": 13.98,
+  "fin": 22.5,
+  "frases": [
+   {
+    "t0": 13.98,
+    "t1": 14.73,
+    "texto": "Pero hay truco."
+   },
+   {
+    "t0": 14.88,
+    "t1": 18.92,
+    "texto": "Esos 81 céntimos solo los cobra si saca al menos un diputado en tu provincia."
+   },
+   {
+    "t0": 19.12,
+    "t1": 22.05,
+    "texto": "Si no, tu voto, para su caja, vale cero."
+   }
+  ]
+ },
+ {
+  "escena": "ejemplo",
+  "inicio": 22.5,
+  "fin": 31.21,
+  "frases": [
+   {
+    "t0": 22.8,
+    "t1": 26.97,
+    "texto": "Haz la cuenta con un partido grande: 8 millones de votos y 130 diputados."
+   },
+   {
+    "t0": 27.12,
+    "t1": 30.76,
+    "texto": "Más de 9 millones de euros. Solo por el Congreso."
+   }
+  ]
+ },
+ {
+  "escena": "extras",
+  "inicio": 31.21,
+  "fin": 44.15,
+  "frases": [
+   {
+    "t0": 31.47,
+    "t1": 38.57,
+    "texto": "En el Senado, 32 céntimos por voto. Y si te mandan las papeletas a casa, 26 céntimos más por elector."
+   },
+   {
+    "t0": 38.77,
+    "t1": 43.7,
+    "texto": "Eso sí: no pueden gastar sin límite. 37 céntimos por habitante."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 44.15,
+  "fin": 53.28,
+  "frases": [
+   {
+    "t0": 44.85,
+    "t1": 48.57,
+    "texto": "¿Sabías que tu voto valía dinero? Dímelo en comentarios."
+   },
+   {
+    "t0": 48.77,
+    "t1": 51.93,
+    "texto": "Y sigue a Piz: esta noche, lo que pasa si votas en blanco."
+   }
+  ]
+ }
+]

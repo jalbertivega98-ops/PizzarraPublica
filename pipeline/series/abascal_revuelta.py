@@ -53,13 +53,13 @@ scenes = [
     ], camara=[plano(0, "general", [540, 960], 0), plano("@estrella", "general", [540, 920], 0.5, zoom=1.06)],
        elements=[
         obj("tele", 540, 760, 0, 0.9, hud=True, entra="pop", sfx="pop", props={"texto": "RTVE"}),
-        quien("abascal", 540, "@estrella-0.6", 0.55, "normal", y=1580, entra="abajo", acciones=[
+        quien("abascal", 330, "@estrella-0.6", 0.5, "normal", y=1400, entra="abajo", acciones=[
             {"at": "@estrella", "pose": "pulgar", "cara": "ilusionado", "mira": "camara"}]),
-        rot("«MOTOSIERRAS Y LANZALLAMAS»", 540, 440, "@motosierras", 70, "amarillo", golpe=True),
-        sello("SEGÚN ELDIARIO.ES", "naranja", 1180, "@lanzallamas"),
+        rot("MOTOSIERRAS Y LANZALLAMAS", 540, 440, "@motosierras", 56, "amarillo", golpe=True),
+        sello("SEGÚN ELDIARIO.ES", "naranja", 1120, "@lanzallamas", x=760),
     ]),
     # 4 · EL LISTÓN: audiencias
-    dict(id="liston", fondo={"tipo": "plano", "color": (40, 30, 70)}, animo="curioso", trans="barrido", footnote=F, lines=[
+    dict(id="liston", fondo="oficina", animo="curioso", trans="barrido", footnote=F, lines=[
         V("Y el listón está alto. Sánchez hizo 4,4 millones de espectadores: récord del programa.", "normal"),
         V("Montero y Rufián, 2,7 millones.", "normal", 0.1),
     ], camara=[plano(0, "general", [540, 960], 0), plano("@Montero", "general", [540, 920], 0.4, zoom=1.05)],
@@ -67,10 +67,9 @@ scenes = [
         rot("AUDIENCIA", 540, 420, 0, 110, "amarillo"),
         obj("barras", 540, 880, "@Sánchez", 1.05, hud=True, entra="nada", dibujo=1.6,
             props={"sufijo": " M", "decimales": 1, "tope": 5, "barras": [
-                {"texto": "SÁNCHEZ", "valor": 4.4, "color": "psoe"}, {"texto": "MONTERO Y RUFIÁN", "valor": 2.7, "color": "gris"},
-                {"texto": "ABASCAL", "valor": 0.0, "color": "vox"}]}),
+                {"texto": "SÁNCHEZ", "valor": 4.4, "color": "psoe"}, {"texto": "MONTERO Y RUFIÁN", "valor": 2.7, "color": "gris"}]}),
         sello("RÉCORD", "rojo", 1250, "@récord"),
-        etq("¿?", 860, 1080, "@Montero+0.6", "vox", 0.8, hud=True),
+        etq("¿ABASCAL?", 540, 1380, "@Montero+0.6", "vox", 0.75, hud=True),
     ]),
     # 5 · ¿Y FEIJÓO?
     dict(id="feijoo", fondo=REV, animo="comico", trans="corte", footnote="eldiario.es 5/11 · Infobae 6/11/2026", lines=[
@@ -100,6 +99,19 @@ scenes = [
         rot("SIGUE A PIZ", 540, 420, "@sigue", 110, "amarillo", fx=[{"at": "@fue", "do": "latir"}]),
     ]),
 ]
+
+# Ritmo: cambios extra para que no haya tramos quietos de más de 3 s
+EXTRA = {
+    "paradoja": {"cam": [plano("@partido", "general", [540, 800], 0.5, zoom=1.1), plano("@RTVE", "general", [540, 960], 0.5, zoom=1.0)]},
+    "liston": {"cam": [plano("@espectadores", "general", [540, 880], 0.5, zoom=1.08)]},
+}
+
+for _sc in scenes:
+    _ex = EXTRA.get(_sc["id"], {})
+    _sc["elements"] += _ex.get("el", [])
+    _sc["camara"] += _ex.get("cam", [])
+    for _q, _acc in _ex.get("acc", {}).items():
+        next(e for e in _sc["elements"] if e.get("id") == _q)["acciones"] += _acc
 
 if __name__ == "__main__":
     episodio("abascal_revuelta", "Esta noche, Abascal en La Revuelta", scenes,

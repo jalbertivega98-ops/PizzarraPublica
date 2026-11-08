@@ -1,0 +1,104 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 8.46,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.62,
+    "texto": "Esta noche pasa algo que hace un año parecía imposible."
+   },
+   {
+    "t0": 2.82,
+    "t1": 8.01,
+    "texto": "Abascal se sienta con Broncano. En La Revuelta. En la tele pública."
+   }
+  ]
+ },
+ {
+  "escena": "anuncio",
+  "inicio": 8.46,
+  "fin": 14.56,
+  "frases": [
+   {
+    "t0": 8.46,
+    "t1": 12.41,
+    "texto": "Broncano lo anunció así: «Nunca pensé que diría esto: Santiago Abascal»."
+   },
+   {
+    "t0": 12.66,
+    "t1": 14.11,
+    "texto": "Y el público… abucheó."
+   }
+  ]
+ },
+ {
+  "escena": "paradoja",
+  "inicio": 14.56,
+  "fin": 21.97,
+  "frases": [
+   {
+    "t0": 14.88,
+    "t1": 19.66,
+    "texto": "Lo curioso: su partido amenazó con entrar en RTVE con «motosierras y lanzallamas»."
+   },
+   {
+    "t0": 19.86,
+    "t1": 21.52,
+    "texto": "Y ahora va a su programa estrella."
+   }
+  ]
+ },
+ {
+  "escena": "liston",
+  "inicio": 21.97,
+  "fin": 31.44,
+  "frases": [
+   {
+    "t0": 22.23,
+    "t1": 28.37,
+    "texto": "Y el listón está alto. Sánchez hizo 4,4 millones de espectadores: récord del programa."
+   },
+   {
+    "t0": 28.52,
+    "t1": 30.99,
+    "texto": "Montero y Rufián, 2,7 millones."
+   }
+  ]
+ },
+ {
+  "escena": "feijoo",
+  "inicio": 31.44,
+  "fin": 38.36,
+  "frases": [
+   {
+    "t0": 31.44,
+    "t1": 35.49,
+    "texto": "¿Y Feijóo? A Broncano, de momento, no le ha contestado."
+   },
+   {
+    "t0": 35.64,
+    "t1": 37.91,
+    "texto": "Él ha elegido El Hormiguero, el miércoles."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 38.36,
+  "fin": 47.75,
+  "frases": [
+   {
+    "t0": 39.06,
+    "t1": 43.87,
+    "texto": "¿Superará a Sánchez? Apuesta: más o menos de 4,4 millones."
+   },
+   {
+    "t0": 44.07,
+    "t1": 46.4,
+    "texto": "Y sigue a Piz: mañana te contamos cómo fue."
+   }
+  ]
+ }
+]

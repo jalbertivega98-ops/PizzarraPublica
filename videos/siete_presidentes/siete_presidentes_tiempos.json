@@ -1,0 +1,104 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 6.21,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 3.12,
+    "texto": "En 50 años, España solo ha tenido siete presidentes."
+   },
+   {
+    "t0": 3.32,
+    "t1": 5.76,
+    "texto": "Y tres llegaron sin haber ganado unas elecciones."
+   }
+  ]
+ },
+ {
+  "escena": "suarez",
+  "inicio": 6.21,
+  "fin": 22.48,
+  "frases": [
+   {
+    "t0": 6.47,
+    "t1": 13.87,
+    "texto": "1976: Suárez. Lo nombra el Rey; gana las elecciones después, en 1977."
+   },
+   {
+    "t0": 14.02,
+    "t1": 22.03,
+    "texto": "1981: Calvo-Sotelo. Su votación de investidura la interrumpió el golpe del 23-F. Duró un año y nueve meses."
+   }
+  ]
+ },
+ {
+  "escena": "gonzalez",
+  "inicio": 22.48,
+  "fin": 29.85,
+  "frases": [
+   {
+    "t0": 22.48,
+    "t1": 28.16,
+    "texto": "1982: Felipe González. El récord: más de trece años en la Moncloa."
+   },
+   {
+    "t0": 28.31,
+    "t1": 29.4,
+    "texto": "Nadie lo ha superado."
+   }
+  ]
+ },
+ {
+  "escena": "tres",
+  "inicio": 29.85,
+  "fin": 43.14,
+  "frases": [
+   {
+    "t0": 30.11,
+    "t1": 36.66,
+    "texto": "1996: Aznar, ocho años. 2004: Zapatero, casi ocho."
+   },
+   {
+    "t0": 36.81,
+    "t1": 42.69,
+    "texto": "2011: Rajoy. Y aquí viene lo raro: es el único al que echaron con una moción de censura."
+   }
+  ]
+ },
+ {
+  "escena": "sanchez",
+  "inicio": 43.14,
+  "fin": 53.17,
+  "frases": [
+   {
+    "t0": 43.14,
+    "t1": 49.11,
+    "texto": "2018: Sánchez, que llegó justo con esa moción. Lleva casi ocho años y medio."
+   },
+   {
+    "t0": 49.26,
+    "t1": 52.72,
+    "texto": "Si gana el 29N, podría acercarse al récord de González."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 53.17,
+  "fin": 62.83,
+  "frases": [
+   {
+    "t0": 53.87,
+    "t1": 57.74,
+    "texto": "¿Cuál ha sido el mejor presidente? Te leo, con respeto."
+   },
+   {
+    "t0": 57.94,
+    "t1": 61.48,
+    "texto": "Y sigue a Piz: próximo capítulo, la noche del 23-F."
+   }
+  ]
+ }
+]

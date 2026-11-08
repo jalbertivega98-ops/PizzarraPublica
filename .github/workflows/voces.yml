@@ -45,7 +45,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Instalar edge-tts
-        run: python3 -m pip install edge-tts==7.2.8
+        run: python3 -m pip install edge-tts==7.3.1
       - name: Generar voces
         shell: bash
         working-directory: pipeline
@@ -76,6 +76,7 @@ jobs:
             > pipeline/voces_elevenlabs/creditos.json || true
           cat pipeline/voces_elevenlabs/creditos.json
       - name: Guardar las voces en el repositorio
+        if: always()
         shell: bash
         run: |
           git add pipeline/voces_elevenlabs pipeline/v2/voces 2>/dev/null || git add pipeline/voces_elevenlabs

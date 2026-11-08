@@ -10,8 +10,8 @@
  },
  "handle": "@pizarrapublica",
  "voice": {
-  "engine": "elevenlabs",
-  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+  "engine": "edge",
+  "voice_id": "es-ES-AlvaroNeural"
  },
  "music_volume": 0.2,
  "scribble_volume": 0.0,

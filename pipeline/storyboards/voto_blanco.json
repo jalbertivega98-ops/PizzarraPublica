@@ -1,0 +1,828 @@
+{
+ "slug": "voto_blanco",
+ "title": "Votar en blanco no es lo que crees",
+ "series_tag": "DATOS QUE NO SABÍAS",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Ley Orgánica 5/1985 del Régimen Electoral General, art. 96 (votos nulos y en blanco) y art. 163 (barrera del 3 %)",
+  "Reparto de escaños 2026: Madrid 37, Barcelona 32 (Real Decreto de convocatoria)"
+ ],
+ "caption": "🗳️ Votar en blanco SÍ cuenta… y no como crees\n✅ Es un voto válido: entra en la cuenta del 3 %\n📈 Cada voto en blanco sube el listón a los partidos pequeños\n🗑️ El nulo no cuenta para nada\n✉️ Sobre vacío = blanco · 2 papeletas iguales = 1 voto · 2 distintas o tachada = nulo\n💬 ¿Has votado alguna vez en blanco? Te leo 👇\n🔔 Sigue a Piz · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuente: Ley Orgánica 5/1985 del Régimen Electoral General (LOREG), arts. 96 y 163. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#29N",
+  "#VotoEnBlanco",
+  "#EleccionesGenerales",
+  "#LeyElectoral",
+  "#AprendeEnTikTok",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "colegio",
+   "animo": "tension",
+   "footnote": "LOREG (Ley Orgánica 5/1985), arts. 96 y 163",
+   "lines": [
+    {
+     "text": "¿Votar en blanco es no votar a nadie?",
+     "tono": "intriga"
+    },
+    {
+     "text": "No exactamente. Tu voto en blanco sí cuenta… y casi nadie sabe a quién perjudica.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0,
+     "aire": 220
+    },
+    {
+     "at": "@exactamente",
+     "plano": "medio",
+     "sobre": "urna",
+     "dur": 0.5,
+     "aire": 180
+    },
+    {
+     "at": "@perjudica",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mesa_electoral",
+     "x": 760,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "props": {
+      "texto": "MESA 1"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "urna",
+     "x": 760,
+     "y": 1020,
+     "scale": 0.55,
+     "at": 0,
+     "props": {
+      "llena": 0.35,
+      "texto": "CONGRESO"
+     },
+     "acciones": [],
+     "id": "urna",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@nadie",
+       "cara": "esceptica"
+      },
+      {
+       "at": "@exactamente",
+       "x": 520,
+       "dur": 0.7
+      },
+      {
+       "at": "@cuenta",
+       "pose": "senala",
+       "objeto": null,
+       "cara": "ilusionado"
+      },
+      {
+       "at": "@perjudica",
+       "cara": "sorpresa",
+       "take": true,
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "objeto": "papeleta",
+     "pose": "sostiene",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "EN BLANCO",
+     "x": 540,
+     "y": 470,
+     "size": 120,
+     "color": "blanco",
+     "at": 0.2,
+     "golpe": true,
+     "out": "@perjudica-0.2",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "¿A QUIÉN PERJUDICA?",
+     "x": 540,
+     "y": 470,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@perjudica",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "valido",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "LOREG (Ley Orgánica 5/1985), arts. 96 y 163",
+   "lines": [
+    {
+     "text": "El voto en blanco es un voto válido. Y la ley dice que un partido necesita el 3 % de los votos válidos de tu provincia para entrar en el reparto.",
+     "tono": "normal"
+    },
+    {
+     "text": "El que no llega, se queda fuera.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@3",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 560,
+     "scale": 1.0,
+     "at": "@válido",
+     "props": {
+      "texto": "VÁLIDO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "senal",
+     "x": 540,
+     "y": 760,
+     "scale": 0.8,
+     "at": "@3",
+     "props": {
+      "numero": "3 %",
+      "poste": false
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "rotulo",
+     "text": "BARRERA DEL 3 %",
+     "x": 540,
+     "y": 440,
+     "size": 96,
+     "color": "amarillo",
+     "at": "@3",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "pizon",
+     "x": 300,
+     "y": 1560,
+     "scale": 0.5,
+     "at": "@reparto",
+     "cara": "confundido",
+     "acciones": [
+      {
+       "at": "@fuera",
+       "cara": "triste",
+       "pose": "caidos"
+      }
+     ],
+     "entra": "abajo",
+     "id": "pizon"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 1200,
+     "scale": 0.7,
+     "at": "@fuera",
+     "props": {
+      "texto": "FUERA",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "ejemplo",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "tension",
+   "trans": "papel",
+   "footnote": "Ejemplo sencillo · LOREG art. 163",
+   "lines": [
+    {
+     "text": "Mira: con 100 votos, la barrera son 3.",
+     "tono": "normal"
+    },
+    {
+     "text": "Si llegan 10 votos en blanco, ya son 110 válidos, y la barrera sube a 3,3.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Cada voto en blanco pone el listón un poco más alto a los partidos pequeños.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@blanco",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.05
+    },
+    {
+     "at": "@listón",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 560,
+     "scale": 0.9,
+     "at": "@100",
+     "props": {
+      "valor": 3,
+      "prefijo": "BARRERA: ",
+      "ancho": 820
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@llegan"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 560,
+     "scale": 0.9,
+     "at": "@llegan",
+     "props": {
+      "valor": 3.3,
+      "decimales": 1,
+      "prefijo": "BARRERA: ",
+      "ancho": 820,
+      "desde": 3
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "papeleta",
+     "x": 300,
+     "y": 900,
+     "scale": 0.8,
+     "at": "@blanco",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "papeleta",
+     "x": 540,
+     "y": 880,
+     "scale": 0.8,
+     "at": "@blanco+0.15",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "papeleta",
+     "x": 780,
+     "y": 900,
+     "scale": 0.8,
+     "at": "@blanco+0.3",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "papel"
+    },
+    {
+     "type": "personaje",
+     "quien": "critica",
+     "x": 540,
+     "y": 1560,
+     "scale": 0.5,
+     "at": "@listón-0.4",
+     "cara": "esceptica",
+     "acciones": [
+      {
+       "at": "@pequeños",
+       "pose": "senala_arriba",
+       "cara": "sorpresa"
+      }
+     ],
+     "entra": "abajo",
+     "id": "critica"
+    },
+    {
+     "type": "rotulo",
+     "text": "SUBE EL LISTÓN",
+     "x": 540,
+     "y": 1120,
+     "size": 90,
+     "color": "amarillo",
+     "at": "@listón",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "nulo",
+   "fondo": "colegio",
+   "animo": "comico",
+   "trans": "corte",
+   "footnote": "LOREG (Ley Orgánica 5/1985), arts. 96 y 163",
+   "lines": [
+    {
+     "text": "¿Y el voto nulo? Ese no cuenta para nada. Ni para la barrera, ni para nadie.",
+     "tono": "normal"
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@nada",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.4,
+     "aire": 260
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@nulo",
+       "pose": "piensa"
+      },
+      {
+       "at": "@nada",
+       "cara": "vacio",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "papelera",
+     "x": 820,
+     "y": 1250,
+     "scale": 0.7,
+     "at": "@nulo",
+     "props": {},
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "NULO = NADA",
+     "x": 540,
+     "y": 460,
+     "size": 110,
+     "color": "rojo",
+     "at": "@nada",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "sobre",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     28,
+     52,
+     110
+    ]
+   },
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "LOREG (Ley Orgánica 5/1985), arts. 96 y 163",
+   "lines": [
+    {
+     "text": "Y tres cosas que casi nadie sabe. Sobre vacío: voto en blanco.",
+     "tono": "normal"
+    },
+    {
+     "text": "Dos papeletas iguales en el sobre: vale como una. Dos de partidos distintos, o una tachada: nulo.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@iguales",
+     "plano": "general",
+     "sobre": [
+      540,
+      920
+     ],
+     "dur": 0.4,
+     "zoom": 1.04
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "checklist",
+     "x": 540,
+     "y": 820,
+     "scale": 0.95,
+     "at": "@vacío",
+     "props": {
+      "items": [
+       "SOBRE VACÍO: BLANCO",
+       "2 IGUALES: VALE 1",
+       "2 DISTINTAS: NULO",
+       "TACHADA: NULO"
+      ],
+      "marcas": [
+       "si",
+       "si",
+       "no",
+       "no"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "rotulo",
+     "text": "3 COSAS QUE NO SABÍAS",
+     "x": 540,
+     "y": 420,
+     "size": 84,
+     "color": "amarillo",
+     "at": 0,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "donde",
+   "fondo": "calle",
+   "animo": "tension",
+   "trans": "zoom",
+   "footnote": "LOREG art. 163 · escaños 2026: Madrid 37, Barcelona 32",
+   "lines": [
+    {
+     "text": "Eso sí: esa barrera del 3 % pesa sobre todo en provincias grandes, como Madrid o Barcelona.",
+     "tono": "normal"
+    },
+    {
+     "text": "En las pequeñas, para sacar escaño hace falta mucho más.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@pequeñas",
+     "plano": "general",
+     "sobre": [
+      540,
+      980
+     ],
+     "dur": 0.5,
+     "zoom": 1.04
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 600,
+     "scale": 0.65,
+     "at": "@Madrid",
+     "props": {
+      "texto": "MADRID · 37",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 600,
+     "scale": 0.65,
+     "at": "@Barcelona",
+     "props": {
+      "texto": "BARCELONA · 32",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "profe",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@grandes",
+       "pose": "senala_arriba"
+      },
+      {
+       "at": "@pequeñas",
+       "pose": "jarras",
+       "cara": "serio",
+       "mira": "camara"
+      }
+     ],
+     "entra": "abajo",
+     "id": "profe"
+    },
+    {
+     "type": "rotulo",
+     "text": "MUCHO MÁS DEL 3 %",
+     "x": 540,
+     "y": 440,
+     "size": 90,
+     "color": "rojo",
+     "at": "@más",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Tú has votado alguna vez en blanco? Te leo."
+    },
+    {
+     "text": "Y sigue a Piz: mañana, Abascal en La Revuelta.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@blanco",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "EN BLANCO",
+     "x": 540,
+     "y": 420,
+     "size": 120,
+     "color": "blanco",
+     "at": 0,
+     "golpe": true,
+     "out": "@sigue-0.2",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@Revuelta",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 4.0,
+  "titulo": "Votar en blanco no es lo que crees",
+  "capitulo": null
+ }
+}

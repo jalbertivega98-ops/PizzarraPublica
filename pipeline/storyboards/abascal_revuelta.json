@@ -1,0 +1,780 @@
+{
+ "slug": "abascal_revuelta",
+ "title": "Esta noche, Abascal en La Revuelta",
+ "series_tag": "EXPLICADO FÁCIL",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "eldiario.es/Vertele 5/11/2026: Abascal acepta ir a La Revuelta el lunes 9/11; audiencias de Sánchez y de Montero y Rufián; Feijóo sin respuesta",
+  "Demócrata 5/11/2026 (fuentes de Vox a Europa Press): confirma la entrevista",
+  "Infobae 6/11/2026: Feijóo, en El Hormiguero"
+ ],
+ "caption": "📺 Esta noche, Abascal con Broncano en La Revuelta (La 1)\n🙉 Broncano lo anunció… y el público abucheó\n🪚 Su partido habló de entrar en RTVE con «motosierras y lanzallamas»\n📊 El listón: Sánchez 4,4 millones · Montero y Rufián 2,7\n🪑 ¿Y Feijóo? Sin respuesta a Broncano; va a El Hormiguero\n💬 ¿Más o menos de 4,4 millones? Apuesta 👇\n🔔 Sigue a Piz · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: eldiario.es/Vertele 5/11/2026 · Demócrata/Europa Press 5/11 · Infobae 6/11. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#Abascal",
+  "#LaRevuelta",
+  "#Broncano",
+  "#Vox",
+  "#29N",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plato",
+    "rotulo": "LA REVUELTA"
+   },
+   "animo": "tension",
+   "footnote": "eldiario.es/Vertele 5/11/2026 · Demócrata 5/11/2026",
+   "lines": [
+    {
+     "text": "Esta noche pasa algo que hace un año parecía imposible.",
+     "tono": "intriga"
+    },
+    {
+     "text": "Abascal se sienta con Broncano. En La Revuelta. En la tele pública.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0,
+     "zoom": 1.15
+    },
+    {
+     "at": "@Abascal",
+     "plano": "general",
+     "sobre": [
+      440,
+      980
+     ],
+     "dur": 0.5,
+     "zoom": 1.25
+    },
+    {
+     "at": "@pública",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5,
+     "zoom": 1.15
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "broncano",
+     "x": 790,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@imposible",
+       "cara": "sorpresa"
+      },
+      {
+       "at": "@Broncano",
+       "pose": "saluda",
+       "mira": "izq"
+      },
+      {
+       "at": "@pública",
+       "mira": "camara",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "nada",
+     "id": "broncano"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": -220,
+     "y": 1340,
+     "scale": 0.75,
+     "at": "@Abascal-0.3",
+     "cara": "serio",
+     "acciones": [
+      {
+       "at": "@Abascal-0.3",
+       "x": 330,
+       "dur": 1.0
+      },
+      {
+       "at": "@sienta",
+       "pose": "saluda",
+       "cara": "normal"
+      },
+      {
+       "at": "@pública",
+       "mira": "camara",
+       "pose": "cruzados"
+      }
+     ],
+     "entra": "nada",
+     "id": "abascal"
+    },
+    {
+     "type": "rotulo",
+     "text": "ESTA NOCHE",
+     "x": 540,
+     "y": 470,
+     "size": 120,
+     "color": "amarillo",
+     "at": 0.2,
+     "golpe": true,
+     "out": "@Revuelta",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "LA 1 · RTVE",
+     "x": 540,
+     "y": 470,
+     "size": 110,
+     "color": "blanco",
+     "at": "@Revuelta",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 650,
+     "scale": 1.0,
+     "at": "@pública",
+     "props": {
+      "texto": "CONFIRMADO",
+      "color": "verde"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "anuncio",
+   "fondo": {
+    "tipo": "plato",
+    "rotulo": "LA REVUELTA"
+   },
+   "animo": "comico",
+   "trans": "corte",
+   "footnote": "eldiario.es/Vertele 5/11/2026 · Demócrata 5/11/2026",
+   "lines": [
+    {
+     "text": "Broncano lo anunció así: «Nunca pensé que diría esto: Santiago Abascal».",
+     "tono": "normal"
+    },
+    {
+     "text": "Y el público… abucheó.",
+     "tono": "remate",
+     "pausa": 0.2
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "medio",
+     "sobre": "broncano",
+     "dur": 0,
+     "aire": 260
+    },
+    {
+     "at": "@público",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.4,
+     "zoom": 1.1
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "broncano",
+     "x": 600,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@Nunca",
+       "pose": "manos_juntas",
+       "cara": "confundido"
+      },
+      {
+       "at": "@Santiago",
+       "pose": "senala",
+       "cara": "riendo"
+      },
+      {
+       "at": "@abucheó",
+       "cara": "susto",
+       "pose": "encoge"
+      }
+     ],
+     "entra": "nada",
+     "id": "broncano"
+    },
+    {
+     "type": "objeto",
+     "objeto": "bocadillo",
+     "x": 360,
+     "y": 560,
+     "scale": 0.9,
+     "at": "@Nunca",
+     "props": {
+      "lineas": [
+       "NUNCA PENSÉ",
+       "QUE DIRÍA ESTO…"
+      ],
+      "cola": [
+       1,
+       1
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@público"
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¡UUUH!",
+     "x": 300,
+     "y": 760,
+     "at": "@abucheó",
+     "scale": 0.9,
+     "vida": 0.8
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "¡BUUU!",
+     "x": 780,
+     "y": 640,
+     "at": "@abucheó+0.25",
+     "scale": 0.8,
+     "vida": 0.8
+    }
+   ]
+  },
+  {
+   "id": "paradoja",
+   "fondo": {
+    "tipo": "rayos",
+    "color": "rojo"
+   },
+   "animo": "tension",
+   "trans": "zoom",
+   "footnote": "eldiario.es/Vertele 5/11/2026 · Demócrata 5/11/2026",
+   "lines": [
+    {
+     "text": "Lo curioso: su partido amenazó con entrar en RTVE con «motosierras y lanzallamas».",
+     "tono": "normal"
+    },
+    {
+     "text": "Y ahora va a su programa estrella.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@estrella",
+     "plano": "general",
+     "sobre": [
+      540,
+      920
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "tele",
+     "x": 540,
+     "y": 760,
+     "scale": 0.9,
+     "at": 0,
+     "props": {
+      "texto": "RTVE"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "personaje",
+     "quien": "abascal",
+     "x": 540,
+     "y": 1580,
+     "scale": 0.55,
+     "at": "@estrella-0.6",
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@estrella",
+       "pose": "pulgar",
+       "cara": "ilusionado",
+       "mira": "camara"
+      }
+     ],
+     "entra": "abajo",
+     "id": "abascal"
+    },
+    {
+     "type": "rotulo",
+     "text": "«MOTOSIERRAS Y LANZALLAMAS»",
+     "x": 540,
+     "y": 440,
+     "size": 70,
+     "color": "amarillo",
+     "at": "@motosierras",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1180,
+     "scale": 1.0,
+     "at": "@lanzallamas",
+     "props": {
+      "texto": "SEGÚN ELDIARIO.ES",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "liston",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     40,
+     30,
+     70
+    ]
+   },
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "eldiario.es/Vertele 5/11/2026 · Demócrata 5/11/2026",
+   "lines": [
+    {
+     "text": "Y el listón está alto. Sánchez hizo 4,4 millones de espectadores: récord del programa.",
+     "tono": "normal"
+    },
+    {
+     "text": "Montero y Rufián, 2,7 millones.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Montero",
+     "plano": "general",
+     "sobre": [
+      540,
+      920
+     ],
+     "dur": 0.4,
+     "zoom": 1.05
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "AUDIENCIA",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": 0,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 880,
+     "scale": 1.05,
+     "at": "@Sánchez",
+     "props": {
+      "sufijo": " M",
+      "decimales": 1,
+      "tope": 5,
+      "barras": [
+       {
+        "texto": "SÁNCHEZ",
+        "valor": 4.4,
+        "color": "psoe"
+       },
+       {
+        "texto": "MONTERO Y RUFIÁN",
+        "valor": 2.7,
+        "color": "gris"
+       },
+       {
+        "texto": "ABASCAL",
+        "valor": 0.0,
+        "color": "vox"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 1.6
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1250,
+     "scale": 1.0,
+     "at": "@récord",
+     "props": {
+      "texto": "RÉCORD",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 860,
+     "y": 1080,
+     "scale": 0.8,
+     "at": "@Montero+0.6",
+     "props": {
+      "texto": "¿?",
+      "color": "vox"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "feijoo",
+   "fondo": {
+    "tipo": "plato",
+    "rotulo": "LA REVUELTA"
+   },
+   "animo": "comico",
+   "trans": "corte",
+   "footnote": "eldiario.es 5/11 · Infobae 6/11/2026",
+   "lines": [
+    {
+     "text": "¿Y Feijóo? A Broncano, de momento, no le ha contestado.",
+     "tono": "normal"
+    },
+    {
+     "text": "Él ha elegido El Hormiguero, el miércoles.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0,
+     "zoom": 1.1
+    },
+    {
+     "at": "@Hormiguero",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.4,
+     "zoom": 1.15
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "broncano",
+     "x": 790,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "cara": "normal",
+     "acciones": [
+      {
+       "at": "@contestado",
+       "pose": "encoge",
+       "cara": "confundido",
+       "mira": "izq"
+      }
+     ],
+     "entra": "nada",
+     "id": "broncano"
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 330,
+     "y": 1340,
+     "scale": 0.8,
+     "at": 0,
+     "props": {
+      "color": "gris",
+      "texto": "FEIJÓO"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "feijoo",
+     "x": -250,
+     "y": 1580,
+     "scale": 0.55,
+     "at": "@Hormiguero-0.5",
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@Hormiguero-0.5",
+       "x": 300,
+       "dur": 0.6
+      },
+      {
+       "at": "@miércoles",
+       "pose": "saluda",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "id": "feijoo"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 640,
+     "scale": 1.0,
+     "at": "@momento",
+     "props": {
+      "texto": "SILLA VACÍA",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": {
+    "tipo": "plato",
+    "rotulo": "LA REVUELTA"
+   },
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Superará a Sánchez? Apuesta: más o menos de 4,4 millones."
+    },
+    {
+     "text": "Y sigue a Piz: mañana te contamos cómo fue.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@Superará",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@Apuesta",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 300,
+     "y": 700,
+     "scale": 0.7,
+     "at": "@más",
+     "props": {
+      "texto": "MÁS",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 780,
+     "y": 700,
+     "scale": 0.7,
+     "at": "@menos",
+     "props": {
+      "texto": "MENOS",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@sigue"
+    },
+    {
+     "type": "rotulo",
+     "text": "4,4 MILLONES",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@sigue-0.2",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@fue",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 4.0,
+  "titulo": "Esta noche, Abascal en La Revuelta",
+  "capitulo": null
+ }
+}

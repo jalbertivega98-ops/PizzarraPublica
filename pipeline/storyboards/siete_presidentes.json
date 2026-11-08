@@ -1,0 +1,781 @@
+{
+ "slug": "siete_presidentes",
+ "title": "Siete presidentes en 50 años",
+ "series_tag": "HISTORIA EN LA PIZARRA",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "La Moncloa: relación de presidentes del Gobierno desde 1976 (fechas de toma de posesión y cese)",
+  "Congreso de los Diputados: moción de censura del 1/6/2018 (180 votos a favor), la única que ha prosperado",
+  "23-F: el golpe interrumpió la votación de investidura de Calvo-Sotelo (23/2/1981)"
+ ],
+ "caption": "📜 Historia en la pizarra · Cap. 1\n🇪🇸 En 50 años, solo 7 presidentes… y 3 llegaron sin ganar unas elecciones\n👑 Suárez, nombrado por el Rey · ⚡ Calvo-Sotelo y el 23-F\n🏆 González, el récord: más de 13 años\n🗳️ Rajoy, el único echado por una moción · Sánchez llegó con ella\n💬 ¿El mejor presidente? Te leo, con respeto 👇\n🔔 Sigue a Piz · Próximo: el 23-F · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuentes: La Moncloa (presidentes desde 1976) · Congreso (moción de censura 1/6/2018). ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#HistoriaDeEspaña",
+  "#Presidentes",
+  "#Transición",
+  "#29N",
+  "#AprendeEnTikTok",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     60,
+     40,
+     20
+    ]
+   },
+   "animo": "tension",
+   "footnote": "La Moncloa: presidentes del Gobierno desde 1976",
+   "lines": [
+    {
+     "text": "En 50 años, España solo ha tenido siete presidentes.",
+     "tono": "intriga"
+    },
+    {
+     "text": "Y tres llegaron sin haber ganado unas elecciones.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@tres",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 600,
+     "scale": 1.0,
+     "at": 0.2,
+     "props": {
+      "valor": 7,
+      "ancho": 380
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "rotulo",
+     "text": "PRESIDENTES",
+     "x": 540,
+     "y": 800,
+     "size": 110,
+     "color": "amarillo",
+     "at": 0.4,
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "3 SIN GANAR",
+     "x": 540,
+     "y": 1000,
+     "size": 110,
+     "color": "rojo",
+     "at": "@tres",
+     "golpe": true,
+     "hud": true
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1600,
+     "scale": 0.5,
+     "at": "@tres-0.3",
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@elecciones",
+       "take": true
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "HISTORIA EN LA PIZARRA",
+     "x": 540,
+     "y": 430,
+     "size": 70,
+     "color": "blanco",
+     "at": 0,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "suarez",
+   "fondo": {
+    "tipo": "carretera",
+    "velocidad": 0.6
+   },
+   "animo": "aventura",
+   "trans": "barrido",
+   "footnote": "La Moncloa: presidentes del Gobierno desde 1976",
+   "lines": [
+    {
+     "text": "1976: Suárez. Lo nombra el Rey; gana las elecciones después, en 1977.",
+     "tono": "normal"
+    },
+    {
+     "text": "1981: Calvo-Sotelo. Su votación de investidura la interrumpió el golpe del 23-F. Duró un año y nueve meses.",
+     "tono": "normal",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Calvo-Sotelo",
+     "plano": "general",
+     "sobre": [
+      600,
+      980
+     ],
+     "dur": 0.5,
+     "zoom": 1.04
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 820,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0.1,
+     "props": {
+      "texto": "SUÁREZ",
+      "numero": "1976",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 220,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@nombra",
+       "pose": "senala",
+       "mira": "der"
+      },
+      {
+       "at": "@1981",
+       "x": 330,
+       "dur": 0.4
+      },
+      {
+       "at": "@golpe",
+       "cara": "susto",
+       "take": true
+      },
+      {
+       "at": "@nueve",
+       "cara": "pensativo"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "corona",
+     "x": 820,
+     "y": 760,
+     "scale": 0.5,
+     "at": "@Rey",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@1981"
+    },
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 820,
+     "y": 1340,
+     "scale": 0.72,
+     "at": "@1981",
+     "props": {
+      "texto": "CALVO-SOTELO",
+      "numero": "1981",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador"
+    },
+    {
+     "type": "efecto",
+     "efecto": "pum",
+     "text": "23-F",
+     "x": 700,
+     "y": 640,
+     "at": "@golpe",
+     "scale": 1.0,
+     "vida": 0.8
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 480,
+     "scale": 0.7,
+     "at": "@Duró",
+     "props": {
+      "texto": "1 AÑO Y 9 MESES",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "gonzalez",
+   "fondo": {
+    "tipo": "carretera",
+    "velocidad": 0.6
+   },
+   "animo": "curioso",
+   "trans": "corte",
+   "footnote": "La Moncloa: presidentes del Gobierno desde 1976",
+   "lines": [
+    {
+     "text": "1982: Felipe González. El récord: más de trece años en la Moncloa.",
+     "tono": "energia"
+    },
+    {
+     "text": "Nadie lo ha superado.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@récord",
+     "plano": "general",
+     "sobre": [
+      700,
+      1000
+     ],
+     "dur": 0.5,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 820,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "props": {
+      "texto": "GONZÁLEZ",
+      "numero": "1982",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 560,
+     "scale": 0.9,
+     "at": "@récord",
+     "props": {
+      "valor": 13,
+      "prefijo": "+",
+      "sufijo": " AÑOS",
+      "ancho": 700
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "corona",
+     "x": 820,
+     "y": 760,
+     "scale": 0.45,
+     "at": "@superado",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@récord",
+       "salta": true
+      },
+      {
+       "at": "@Nadie",
+       "pose": "jarras",
+       "mira": "camara"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    }
+   ]
+  },
+  {
+   "id": "tres",
+   "fondo": {
+    "tipo": "carretera",
+    "velocidad": 0.6
+   },
+   "animo": "aventura",
+   "trans": "barrido",
+   "footnote": "La Moncloa: presidentes del Gobierno desde 1976",
+   "lines": [
+    {
+     "text": "1996: Aznar, ocho años. 2004: Zapatero, casi ocho.",
+     "tono": "normal"
+    },
+    {
+     "text": "2011: Rajoy. Y aquí viene lo raro: es el único al que echaron con una moción de censura.",
+     "tono": "intriga",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Rajoy",
+     "plano": "general",
+     "sobre": [
+      600,
+      1000
+     ],
+     "dur": 0.5,
+     "zoom": 1.04
+    },
+    {
+     "at": "@moción",
+     "plano": "general",
+     "sobre": [
+      700,
+      960
+     ],
+     "dur": 0.4,
+     "zoom": 1.08
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 820,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "props": {
+      "texto": "AZNAR",
+      "numero": "1996",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador"
+    },
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 820,
+     "y": 1340,
+     "scale": 0.72,
+     "at": "@2004",
+     "props": {
+      "texto": "ZAPATERO",
+      "numero": "2004",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador"
+    },
+    {
+     "type": "personaje",
+     "quien": "zapatero",
+     "x": 540,
+     "y": 1560,
+     "scale": 0.5,
+     "at": "@Zapatero",
+     "cara": "riendo",
+     "acciones": [
+      {
+       "at": "@ocho",
+       "pose": "saluda"
+      }
+     ],
+     "entra": "abajo",
+     "out": "@2011",
+     "id": "zapatero"
+    },
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 820,
+     "y": 1340,
+     "scale": 0.72,
+     "at": "@2011",
+     "props": {
+      "texto": "RAJOY",
+      "numero": "2011",
+      "color": "azul"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 220,
+     "y": 1340,
+     "scale": 0.55,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@raro",
+       "cara": "idea",
+       "pose": "senala_arriba"
+      },
+      {
+       "at": "@moción",
+       "cara": "sorpresa",
+       "take": true
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 600,
+     "scale": 1.0,
+     "at": "@moción",
+     "props": {
+      "texto": "ÚNICA VEZ",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "sanchez",
+   "fondo": {
+    "tipo": "carretera",
+    "velocidad": 0.6
+   },
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "La Moncloa: presidentes del Gobierno desde 1976",
+   "lines": [
+    {
+     "text": "2018: Sánchez, que llegó justo con esa moción. Lleva casi ocho años y medio.",
+     "tono": "normal"
+    },
+    {
+     "text": "Si gana el 29N, podría acercarse al récord de González.",
+     "tono": "remate",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@récord",
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.4,
+     "zoom": 1.04
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "poste",
+     "x": 820,
+     "y": 1340,
+     "scale": 0.72,
+     "at": 0,
+     "props": {
+      "texto": "SÁNCHEZ",
+      "numero": "2018",
+      "color": "rojo"
+     },
+     "acciones": [],
+     "entra": "nada",
+     "dibuja": 0.7,
+     "sfx": "rotulador"
+    },
+    {
+     "type": "personaje",
+     "quien": "sanchez",
+     "x": 480,
+     "y": 1560,
+     "scale": 0.55,
+     "at": 0.1,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@moción",
+       "pose": "saluda"
+      }
+     ],
+     "entra": "abajo",
+     "id": "sanchez"
+    },
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 540,
+     "y": 760,
+     "scale": 0.85,
+     "at": "@gana",
+     "props": {
+      "sufijo": " AÑOS",
+      "decimales": 1,
+      "tope": 14,
+      "barras": [
+       {
+        "texto": "GONZÁLEZ",
+        "valor": 13.4,
+        "color": "psoe"
+       },
+       {
+        "texto": "SÁNCHEZ",
+        "valor": 8.4,
+        "color": "psoe"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 1.0
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Cuál ha sido el mejor presidente? Te leo, con respeto."
+    },
+    {
+     "text": "Y sigue a Piz: próximo capítulo, la noche del 23-F.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@mejor",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@leo",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "7 PRESIDENTES",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@sigue-0.2",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@23-F",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 4.0,
+  "titulo": "Siete presidentes en 50 años",
+  "capitulo": "📜 Historia en la pizarra · Cap. 1"
+ }
+}

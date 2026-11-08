@@ -1,0 +1,837 @@
+{
+ "slug": "voto_vale",
+ "title": "Tu voto vale 0,81 €",
+ "series_tag": "DATOS QUE NO SABÍAS",
+ "accent": "red",
+ "estilo": "viva",
+ "icon_accent": {
+  "blue": "gray",
+  "red": "yellow"
+ },
+ "handle": "@pizarrapublica",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "Iohr8NC0THLcVZXLaHlP"
+ },
+ "music_volume": 0.2,
+ "scribble_volume": 0.0,
+ "end_hold": 0.9,
+ "sources": [
+  "Orden HAC/1062/2026, de 7 de octubre (BOE núm. 250, 8/10/2026): subvenciones de las generales del 29N",
+  "Ejemplo de 8 millones de votos y 130 escaños: cuenta propia con esas cifras"
+ ],
+ "caption": "💶 Tu voto vale dinero: 0,81 € para el partido al que votas\n🪑 Cada escaño: 21.167 €\n⚠️ Truco: solo cobran tu voto si sacan diputado en tu provincia\n🧮 Un partido grande se lleva más de 9 millones solo por el Congreso\n📮 Senado 0,32 € · cartas a casa 0,26 € por elector · tope de gasto 0,37 €\n💬 ¿Lo sabías? Te leo 👇\n🔔 Sigue a Piz · 📚 Fuentes en comentarios",
+ "pinned_comment": "📚 Fuente: Orden HAC/1062/2026 (BOE 8/10/2026). El ejemplo de 9 M€ es una cuenta nuestra con esas cifras. ¿Ves un error? Dínoslo.",
+ "hashtags": [
+  "#29N",
+  "#EleccionesGenerales",
+  "#TuVoto",
+  "#BOE",
+  "#PartidosPolíticos",
+  "#pizarrapublica"
+ ],
+ "scenes": [
+  {
+   "id": "gancho",
+   "fondo": "colegio",
+   "animo": "tension",
+   "footnote": "Orden HAC/1062/2026 · BOE 8/10/2026",
+   "lines": [
+    {
+     "text": "Cuando metes tu voto en la urna, alguien cobra.",
+     "tono": "intriga"
+    },
+    {
+     "text": "El partido al que votas: 81 céntimos por cada voto.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0,
+     "aire": 220
+    },
+    {
+     "at": "@urna",
+     "plano": "medio",
+     "sobre": "urna",
+     "dur": 0.5,
+     "aire": 180
+    },
+    {
+     "at": "@partido",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.5
+    },
+    {
+     "at": "@céntimos",
+     "plano": "general",
+     "sobre": [
+      540,
+      880
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "mesa_electoral",
+     "x": 760,
+     "y": 1340,
+     "scale": 0.75,
+     "at": 0,
+     "props": {
+      "texto": "MESA 1"
+     },
+     "acciones": [],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "urna",
+     "x": 760,
+     "y": 1020,
+     "scale": 0.55,
+     "at": 0,
+     "props": {
+      "llena": 0.35,
+      "texto": "CONGRESO"
+     },
+     "acciones": [],
+     "id": "urna",
+     "entra": "nada"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "cara": "ilusionado",
+     "acciones": [
+      {
+       "at": "@metes",
+       "x": 520,
+       "dur": 0.8
+      },
+      {
+       "at": "@urna",
+       "pose": "senala",
+       "objeto": null,
+       "cara": "riendo"
+      },
+      {
+       "at": "@cobra",
+       "cara": "sorpresa",
+       "take": true,
+       "mira": "camara"
+      },
+      {
+       "at": "@céntimos",
+       "pose": "jarras",
+       "cara": "esceptica"
+      }
+     ],
+     "entra": "nada",
+     "objeto": "papeleta",
+     "pose": "sostiene",
+     "id": "piz"
+    },
+    {
+     "type": "efecto",
+     "efecto": "lluvia",
+     "objeto": "moneda",
+     "n": 6,
+     "x0": 640,
+     "x1": 880,
+     "at": "@cobra",
+     "vida": 1.4
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 520,
+     "scale": 1.0,
+     "at": "@partido",
+     "props": {
+      "valor": 0.81,
+      "decimales": 2,
+      "sufijo": " €",
+      "ancho": 700
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "kaching",
+     "dibujo": 1.4
+    },
+    {
+     "type": "rotulo",
+     "text": "POR CADA VOTO",
+     "x": 540,
+     "y": 700,
+     "size": 80,
+     "color": "amarillo",
+     "at": "@cada",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "escano",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     24,
+     92,
+     70
+    ]
+   },
+   "animo": "curioso",
+   "trans": "barrido",
+   "footnote": "Orden HAC/1062/2026 · BOE 8/10/2026",
+   "lines": [
+    {
+     "text": "Y por cada escaño que gane, mucho más: 21.167 euros.",
+     "tono": "sorpresa"
+    },
+    {
+     "text": "No me lo invento: lo publicó el BOE el 8 de octubre.",
+     "tono": "normal",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@21.167",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.06
+    }
+   ],
+   "elements": [
+    {
+     "type": "rotulo",
+     "text": "1 ESCAÑO =",
+     "x": 540,
+     "y": 430,
+     "size": 100,
+     "color": "amarillo",
+     "at": 0,
+     "hud": true
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 640,
+     "scale": 0.95,
+     "at": "@escaño",
+     "props": {
+      "valor": 21167.64,
+      "decimales": 2,
+      "sufijo": " €",
+      "ancho": 900
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching",
+     "dibujo": 1.2
+    },
+    {
+     "type": "objeto",
+     "objeto": "silla",
+     "x": 540,
+     "y": 1330,
+     "scale": 0.7,
+     "at": "@gane",
+     "props": {
+      "color": "rojo",
+      "texto": "ESCAÑO"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "efecto",
+     "efecto": "lluvia",
+     "objeto": "moneda",
+     "n": 10,
+     "x0": 200,
+     "x1": 880,
+     "at": "@21.167",
+     "vida": 1.8
+    },
+    {
+     "type": "objeto",
+     "objeto": "cartel",
+     "x": 820,
+     "y": 980,
+     "scale": 0.7,
+     "at": "@BOE",
+     "props": {
+      "texto": "BOE 8/10",
+      "color": "blanco",
+      "tinta": "tinta"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "papel"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1400,
+     "scale": 1.0,
+     "at": "@octubre",
+     "props": {
+      "texto": "OFICIAL",
+      "color": "azul"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "truco",
+   "fondo": "colegio",
+   "animo": "tension",
+   "trans": "corte",
+   "footnote": "Orden HAC/1062/2026 · BOE 8/10/2026",
+   "lines": [
+    {
+     "text": "Pero hay truco.",
+     "tono": "intriga"
+    },
+    {
+     "text": "Esos 81 céntimos solo los cobra si saca al menos un diputado en tu provincia.",
+     "tono": "normal",
+     "pausa": 0.1
+    },
+    {
+     "text": "Si no, tu voto, para su caja, vale cero.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@diputado",
+     "plano": "general",
+     "sobre": [
+      540,
+      950
+     ],
+     "dur": 0.5,
+     "zoom": 1.05
+    },
+    {
+     "at": "@cero",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.4,
+     "aire": 260
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1340,
+     "scale": 0.62,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@truco",
+       "pose": "piensa",
+       "cara": "esceptica"
+      },
+      {
+       "at": "@diputado",
+       "pose": "senala_arriba",
+       "cara": "idea"
+      },
+      {
+       "at": "@cero",
+       "cara": "susto",
+       "take": true,
+       "pose": "cabeza"
+      }
+     ],
+     "entra": "nada",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "checklist",
+     "x": 540,
+     "y": 640,
+     "scale": 0.75,
+     "at": "@solo",
+     "props": {
+      "items": [
+       "SACA DIPUTADO: 0,81 €",
+       "NO SACA: 0 €"
+      ],
+      "marcas": [
+       "si",
+       "no"
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop",
+     "out": "@cero-0.2"
+    },
+    {
+     "type": "rotulo",
+     "text": "0 €",
+     "x": 540,
+     "y": 600,
+     "size": 200,
+     "color": "rojo",
+     "at": "@cero",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "ejemplo",
+   "fondo": {
+    "tipo": "plano",
+    "color": [
+     24,
+     92,
+     70
+    ]
+   },
+   "animo": "curioso",
+   "trans": "papel",
+   "footnote": "Cuenta de Pizarra Pública con las cifras del BOE",
+   "lines": [
+    {
+     "text": "Haz la cuenta con un partido grande: 8 millones de votos y 130 diputados.",
+     "tono": "normal"
+    },
+    {
+     "text": "Más de 9 millones de euros. Solo por el Congreso.",
+     "tono": "energia",
+     "pausa": 0.1
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@Más",
+     "plano": "general",
+     "sobre": [
+      540,
+      900
+     ],
+     "dur": 0.4,
+     "zoom": 1.07
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "calculadora",
+     "x": 220,
+     "y": 1180,
+     "scale": 0.55,
+     "at": 0,
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "pop"
+    },
+    {
+     "type": "objeto",
+     "objeto": "barras",
+     "x": 560,
+     "y": 860,
+     "scale": 1.0,
+     "at": "@votos",
+     "props": {
+      "sufijo": " M€",
+      "decimales": 2,
+      "tope": 7,
+      "barras": [
+       {
+        "texto": "VOTOS",
+        "valor": 6.48,
+        "color": "verde"
+       },
+       {
+        "texto": "ESCAÑOS",
+        "valor": 2.75,
+        "color": "amarillo"
+       }
+      ]
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "nada",
+     "dibujo": 1.4,
+     "out": "@Más"
+    },
+    {
+     "type": "objeto",
+     "objeto": "contador",
+     "x": 540,
+     "y": 700,
+     "scale": 1.0,
+     "at": "@Más",
+     "props": {
+      "valor": 9.2,
+      "decimales": 1,
+      "prefijo": "+",
+      "sufijo": " M€",
+      "ancho": 760
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "kaching"
+    },
+    {
+     "type": "objeto",
+     "objeto": "saco",
+     "x": 540,
+     "y": 1050,
+     "scale": 0.8,
+     "at": "@millones-0.1",
+     "props": {},
+     "acciones": [],
+     "hud": true,
+     "entra": "cae",
+     "sfx": "golpe"
+    },
+    {
+     "type": "objeto",
+     "objeto": "sello",
+     "x": 540,
+     "y": 1300,
+     "scale": 1.0,
+     "at": "@cuenta",
+     "props": {
+      "texto": "EJEMPLO",
+      "color": "naranja"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    }
+   ]
+  },
+  {
+   "id": "extras",
+   "fondo": "calle",
+   "animo": "comico",
+   "trans": "barrido",
+   "footnote": "Orden HAC/1062/2026 · BOE 8/10/2026",
+   "lines": [
+    {
+     "text": "En el Senado, 32 céntimos por voto. Y si te mandan las papeletas a casa, 26 céntimos más por elector.",
+     "tono": "normal"
+    },
+    {
+     "text": "Eso sí: no pueden gastar sin límite. 37 céntimos por habitante.",
+     "tono": "remate",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@casa",
+     "plano": "general",
+     "sobre": [
+      600,
+      980
+     ],
+     "dur": 0.5,
+     "zoom": 1.05
+    },
+    {
+     "at": "@límite",
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.4
+    }
+   ],
+   "elements": [
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 520,
+     "scale": 0.75,
+     "at": "@Senado",
+     "props": {
+      "texto": "SENADO: 0,32 €",
+      "color": "amarillo"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@límite"
+    },
+    {
+     "type": "objeto",
+     "objeto": "camion",
+     "x": -300,
+     "y": 1180,
+     "scale": 0.5,
+     "at": "@papeletas",
+     "props": {
+      "texto": "PAPELETAS"
+     },
+     "acciones": [
+      {
+       "at": "@papeletas",
+       "x": 760,
+       "dur": 1.0
+      }
+     ],
+     "entra": "nada"
+    },
+    {
+     "type": "objeto",
+     "objeto": "etiqueta",
+     "x": 540,
+     "y": 680,
+     "scale": 0.7,
+     "at": "@céntimos",
+     "props": {
+      "texto": "CARTAS: 0,26 €",
+      "color": "verde"
+     },
+     "acciones": [],
+     "entra": "pop",
+     "sfx": "kaching",
+     "hud": true,
+     "out": "@límite"
+    },
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 300,
+     "y": 1340,
+     "scale": 0.55,
+     "at": "@casa-0.3",
+     "cara": "sorpresa",
+     "acciones": [
+      {
+       "at": "@límite",
+       "pose": "jarras",
+       "cara": "esceptica"
+      },
+      {
+       "at": "@habitante",
+       "pose": "senala",
+       "mira": "camara"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "objeto",
+     "objeto": "senal",
+     "x": 760,
+     "y": 620,
+     "scale": 0.7,
+     "at": "@límite",
+     "props": {
+      "numero": "0,37"
+     },
+     "acciones": [],
+     "hud": true,
+     "entra": "pop",
+     "sfx": "golpe"
+    },
+    {
+     "type": "rotulo",
+     "text": "TOPE DE GASTO",
+     "x": 540,
+     "y": 440,
+     "size": 96,
+     "color": "rojo",
+     "at": "@límite",
+     "golpe": true,
+     "hud": true
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "fondo": "calle",
+   "animo": "final",
+   "trans": "iris",
+   "footnote": "Te leemos en comentarios",
+   "lines": [
+    {
+     "text": "¿Sabías que tu voto valía dinero? Dímelo en comentarios."
+    },
+    {
+     "text": "Y sigue a Piz: esta noche, lo que pasa si votas en blanco.",
+     "tono": "energia",
+     "pausa": 0.15
+    }
+   ],
+   "camara": [
+    {
+     "at": 0,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0
+    },
+    {
+     "at": "@sigue",
+     "plano": "medio",
+     "sobre": "piz",
+     "dur": 0.5,
+     "aire": 300
+    }
+   ],
+   "elements": [
+    {
+     "type": "personaje",
+     "quien": "piz",
+     "x": 540,
+     "y": 1500,
+     "scale": 0.6,
+     "at": 0,
+     "cara": "pensativo",
+     "acciones": [
+      {
+       "at": "@dinero",
+       "pose": "piensa",
+       "mira": "camara"
+      },
+      {
+       "at": "@comentarios",
+       "cara": "ilusionado",
+       "pose": "senala"
+      },
+      {
+       "at": "@sigue",
+       "pose": "saluda",
+       "cara": "riendo"
+      }
+     ],
+     "entra": "abajo",
+     "id": "piz"
+    },
+    {
+     "type": "rotulo",
+     "text": "0,81 €",
+     "x": 540,
+     "y": 420,
+     "size": 130,
+     "color": "amarillo",
+     "at": 0,
+     "golpe": true,
+     "out": "@sigue-0.2",
+     "hud": true
+    },
+    {
+     "type": "rotulo",
+     "text": "SIGUE A PIZ",
+     "x": 540,
+     "y": 420,
+     "size": 110,
+     "color": "amarillo",
+     "at": "@sigue",
+     "fx": [
+      {
+       "at": "@blanco",
+       "do": "latir"
+      }
+     ],
+     "hud": true
+    }
+   ]
+  }
+ ],
+ "banda": true,
+ "sfx_volume": 1.0,
+ "portada": {
+  "t": 4.0,
+  "titulo": "Tu voto vale 0,81 €",
+  "capitulo": null
+ }
+}

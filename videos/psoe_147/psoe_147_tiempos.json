@@ -1,0 +1,104 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 5.5,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.62,
+    "texto": "El partido que hoy gobierna España nació en una taberna."
+   },
+   {
+    "t0": 2.82,
+    "t1": 5.05,
+    "texto": "Y de eso hace 147 años."
+   }
+  ]
+ },
+ {
+  "escena": "fundacion",
+  "inicio": 5.5,
+  "fin": 18.46,
+  "frases": [
+   {
+    "t0": 5.82,
+    "t1": 13.84,
+    "texto": "2 de mayo de 1879. Madrid, Casa Labra. Veinticinco personas, casi todas tipógrafos."
+   },
+   {
+    "t0": 14.04,
+    "t1": 18.01,
+    "texto": "Las lidera un tal Pablo Iglesias. Sí, el original."
+   }
+  ]
+ },
+ {
+  "escena": "siglo",
+  "inicio": 18.46,
+  "fin": 34.35,
+  "frases": [
+   {
+    "t0": 18.72,
+    "t1": 25.99,
+    "texto": "1888: crea el sindicato UGT. 1910: Iglesias, primer diputado socialista."
+   },
+   {
+    "t0": 26.14,
+    "t1": 33.9,
+    "texto": "Con Franco, prohibido. Y en 1974, en Francia, un joven sevillano toma el mando: Felipe González."
+   }
+  ]
+ },
+ {
+  "escena": "record",
+  "inicio": 34.35,
+  "fin": 47.05,
+  "frases": [
+   {
+    "t0": 34.35,
+    "t1": 41.11,
+    "texto": "En 1979 deja de definirse como marxista. Y en 1982, la gran explosión:"
+   },
+   {
+    "t0": 41.26,
+    "t1": 46.6,
+    "texto": "202 escaños y más de diez millones de votos. Un récord que nadie ha vuelto a tocar."
+   }
+  ]
+ },
+ {
+  "escena": "hoy",
+  "inicio": 47.05,
+  "fin": 54.98,
+  "frases": [
+   {
+    "t0": 47.31,
+    "t1": 51.84,
+    "texto": "En democracia, tres presidentes socialistas: González, Zapatero y Sánchez."
+   },
+   {
+    "t0": 51.99,
+    "t1": 54.53,
+    "texto": "Entre los tres, casi treinta años en la Moncloa."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 54.98,
+  "fin": 62.68,
+  "frases": [
+   {
+    "t0": 55.68,
+    "t1": 58.57,
+    "texto": "¿Sabías que nació en una taberna? Te leo."
+   },
+   {
+    "t0": 58.77,
+    "t1": 61.33,
+    "texto": "Y sigue a Piz: mañana, cómo nació el PP."
+   }
+  ]
+ }
+]

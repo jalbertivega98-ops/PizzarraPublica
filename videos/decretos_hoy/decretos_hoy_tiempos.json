@@ -1,0 +1,92 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 4.69,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.31,
+    "texto": "Mañana se decide si tu alquiler se alarga o no."
+   },
+   {
+    "t0": 2.51,
+    "t1": 4.24,
+    "texto": "Y puede depender de un solo voto."
+   }
+  ]
+ },
+ {
+  "escena": "que",
+  "inicio": 4.69,
+  "fin": 15.59,
+  "frases": [
+   {
+    "t0": 4.99,
+    "t1": 12.93,
+    "texto": "Son dos decretos del Gobierno. El primero: frenar desahucios de familias vulnerables, ventajas fiscales y créditos para tu primera casa."
+   },
+   {
+    "t0": 13.08,
+    "t1": 15.14,
+    "texto": "El segundo: prorrogar los alquileres."
+   }
+  ]
+ },
+ {
+  "escena": "cuentas",
+  "inicio": 15.59,
+  "fin": 28.55,
+  "frases": [
+   {
+    "t0": 15.85,
+    "t1": 19.86,
+    "texto": "No vota el pleno: vota la Diputación Permanente, 69 diputados."
+   },
+   {
+    "t0": 20.01,
+    "t1": 25.49,
+    "texto": "PSOE y sus socios suman 34. PP, Vox y Junts, otros 34."
+   },
+   {
+    "t0": 25.69,
+    "t1": 28.1,
+    "texto": "Y en medio, un voto: el del PNV."
+   }
+  ]
+ },
+ {
+  "escena": "pasar",
+  "inicio": 28.55,
+  "fin": 36.89,
+  "frases": [
+   {
+    "t0": 28.55,
+    "t1": 33.71,
+    "texto": "El PNV ya votó no al de alquileres en octubre. Si repite, ese decreto cae."
+   },
+   {
+    "t0": 33.86,
+    "t1": 36.44,
+    "texto": "El de los desahucios y los créditos lo tiene más fácil."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 36.89,
+  "fin": 46.05,
+  "frases": [
+   {
+    "t0": 37.59,
+    "t1": 41.64,
+    "texto": "¿Tú alargarías los alquileres por decreto? Sí o no, te leo."
+   },
+   {
+    "t0": 41.84,
+    "t1": 44.7,
+    "texto": "Y sigue a Piz para no perderte nada antes del 29N."
+   }
+  ]
+ }
+]

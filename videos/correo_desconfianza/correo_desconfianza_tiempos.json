@@ -1,0 +1,99 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 4.57,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.34,
+    "texto": "Abascal pide a los suyos que no voten por correo."
+   },
+   {
+    "t0": 2.54,
+    "t1": 4.12,
+    "texto": "Y no es el único que desconfía."
+   }
+  ]
+ },
+ {
+  "escena": "dijo",
+  "inicio": 4.57,
+  "fin": 15.68,
+  "frases": [
+   {
+    "t0": 4.83,
+    "t1": 9.27,
+    "texto": "En El gato al agua dijo que no puede garantizar que el voto por correo vaya a estar salvaguardado."
+   },
+   {
+    "t0": 9.42,
+    "t1": 15.23,
+    "texto": "Pide ir a votar en persona, con un esfuerzo extraordinario. Por correo, solo si no hay otra opción."
+   }
+  ]
+ },
+ {
+  "escena": "pp",
+  "inicio": 15.68,
+  "fin": 24.0,
+  "frases": [
+   {
+    "t0": 15.68,
+    "t1": 19.38,
+    "texto": "Ayuso fue más allá: «pido a todo el mundo que ni se le ocurra votar por correo»."
+   },
+   {
+    "t0": 19.53,
+    "t1": 23.55,
+    "texto": "Y Feijóo: no confía en los directivos de Correos, pero sí en los carteros."
+   }
+  ]
+ },
+ {
+  "escena": "correos",
+  "inicio": 24.0,
+  "fin": 36.82,
+  "frases": [
+   {
+    "t0": 24.3,
+    "t1": 30.6,
+    "texto": "Correos responde: «es un proceso seguro, transparente y garantista». «No hay posibilidad de manipulación»."
+   },
+   {
+    "t0": 30.75,
+    "t1": 36.37,
+    "texto": "Cada sobre va con código de barras y vigilado hasta la mesa. Y tú enseñas el DNI tres veces."
+   }
+  ]
+ },
+ {
+  "escena": "fechas",
+  "inicio": 36.82,
+  "fin": 42.31,
+  "frases": [
+   {
+    "t0": 37.08,
+    "t1": 41.86,
+    "texto": "Si vas a votar por correo: pídelo hasta el jueves 19, y envíalo antes del 25."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 42.31,
+  "fin": 51.04,
+  "frases": [
+   {
+    "t0": 43.01,
+    "t1": 46.64,
+    "texto": "¿Tú te fías del voto por correo? Sí o no, te leo."
+   },
+   {
+    "t0": 46.84,
+    "t1": 49.69,
+    "texto": "Y sigue a Piz para no perderte nada antes del 29N."
+   }
+  ]
+ }
+]

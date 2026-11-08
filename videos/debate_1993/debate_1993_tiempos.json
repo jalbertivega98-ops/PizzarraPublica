@@ -1,0 +1,87 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 9.52,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.59,
+    "texto": "Mañana, Sánchez y Feijóo, cara a cara."
+   },
+   {
+    "t0": 2.79,
+    "t1": 9.07,
+    "texto": "Pero el primero de la historia fue en 1993. Y el que ganó el debate… no ganó las elecciones."
+   }
+  ]
+ },
+ {
+  "escena": "primero",
+  "inicio": 9.52,
+  "fin": 23.02,
+  "frases": [
+   {
+    "t0": 9.78,
+    "t1": 17.06,
+    "texto": "24 de mayo de 1993. Antena 3. Felipe González contra José María Aznar."
+   },
+   {
+    "t0": 17.21,
+    "t1": 22.57,
+    "texto": "Aznar llega como aspirante. Y, según casi todas las encuestas, gana el debate."
+   }
+  ]
+ },
+ {
+  "escena": "revancha",
+  "inicio": 23.02,
+  "fin": 30.03,
+  "frases": [
+   {
+    "t0": 23.02,
+    "t1": 27.74,
+    "texto": "Una semana después, revancha en Telecinco. González sale a por todas."
+   },
+   {
+    "t0": 27.89,
+    "t1": 29.58,
+    "texto": "Esta vez, el que gana es él."
+   }
+  ]
+ },
+ {
+  "escena": "resultado",
+  "inicio": 30.03,
+  "fin": 43.25,
+  "frases": [
+   {
+    "t0": 30.29,
+    "t1": 36.83,
+    "texto": "El 6 de junio gana González, con 159 escaños. Pierde la mayoría absoluta, pero sigue."
+   },
+   {
+    "t0": 36.98,
+    "t1": 42.8,
+    "texto": "Y después, quince años sin un solo cara a cara. Hasta 2008: Zapatero contra Rajoy."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 43.25,
+  "fin": 54.91,
+  "frases": [
+   {
+    "t0": 43.95,
+    "t1": 49.09,
+    "texto": "Y mañana, otro. ¿Crees que un debate puede cambiar tu voto? Te leo."
+   },
+   {
+    "t0": 49.29,
+    "t1": 53.56,
+    "texto": "Fin de la serie. Sigue a Piz: mañana te contamos el cara a cara."
+   }
+  ]
+ }
+]

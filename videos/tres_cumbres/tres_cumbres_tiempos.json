@@ -1,0 +1,87 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 7.9,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 4.75,
+    "texto": "Esta semana hay tres cumbres internacionales. Y Sánchez no va a ir a ninguna."
+   },
+   {
+    "t0": 4.95,
+    "t1": 7.45,
+    "texto": "¿El motivo? El 29N."
+   }
+  ]
+ },
+ {
+  "escena": "mapa",
+  "inicio": 7.9,
+  "fin": 19.59,
+  "frases": [
+   {
+    "t0": 8.22,
+    "t1": 12.11,
+    "texto": "Hoy, en Antalya, Turquía: los líderes del mundo en la cumbre del clima."
+   },
+   {
+    "t0": 12.26,
+    "t1": 19.14,
+    "texto": "El jueves, en Dublín, la Comunidad Política Europea. Y el viernes, también en Dublín, los veintisiete de la Unión."
+   }
+  ]
+ },
+ {
+  "escena": "motivo",
+  "inicio": 19.59,
+  "fin": 26.59,
+  "frases": [
+   {
+    "t0": 19.85,
+    "t1": 23.06,
+    "texto": "Según fuentes del Gobierno, es por la cercanía de las elecciones."
+   },
+   {
+    "t0": 23.21,
+    "t1": 26.14,
+    "texto": "La campaña empieza a las doce de la noche del jueves al viernes."
+   }
+  ]
+ },
+ {
+  "escena": "precedente",
+  "inicio": 26.59,
+  "fin": 40.85,
+  "frases": [
+   {
+    "t0": 26.89,
+    "t1": 33.01,
+    "texto": "¿Y en 2023? En plena campaña sí fue a una cumbre en Bruselas, con un mitin en Huesca entre medias."
+   },
+   {
+    "t0": 33.21,
+    "t1": 40.4,
+    "texto": "Y queda otra: Bruselas, el 26 y 27, tres días antes de votar. Esa, el Gobierno no la descarta."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 40.85,
+  "fin": 49.11,
+  "frases": [
+   {
+    "t0": 41.55,
+    "t1": 44.71,
+    "texto": "¿Tú qué ves bien: Europa o campaña? Te leo."
+   },
+   {
+    "t0": 44.91,
+    "t1": 47.76,
+    "texto": "Y sigue a Piz para no perderte nada antes del 29N."
+   }
+  ]
+ }
+]

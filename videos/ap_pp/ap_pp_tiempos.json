@@ -1,0 +1,99 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 6.38,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 1.69,
+    "texto": "El PP no siempre se llamó PP."
+   },
+   {
+    "t0": 1.89,
+    "t1": 5.93,
+    "texto": "Nació con otro nombre, lo fundó un exministro de Franco y tardó veinte años en ganar."
+   }
+  ]
+ },
+ {
+  "escena": "ap",
+  "inicio": 6.38,
+  "fin": 22.79,
+  "frases": [
+   {
+    "t0": 6.64,
+    "t1": 14.09,
+    "texto": "1976: Manuel Fraga funda Alianza Popular, con otros exministros. Les llamaban los siete magníficos."
+   },
+   {
+    "t0": 14.24,
+    "t1": 22.34,
+    "texto": "En 1977, solo 16 escaños. En 1982, ya 106: líder de la oposición."
+   }
+  ]
+ },
+ {
+  "escena": "refundacion",
+  "inicio": 22.79,
+  "fin": 34.25,
+  "frases": [
+   {
+    "t0": 23.09,
+    "t1": 28.69,
+    "texto": "Pero no ganaba. Así que en 1989 se refunda: nace el Partido Popular."
+   },
+   {
+    "t0": 28.84,
+    "t1": 33.8,
+    "texto": "Y en 1990, el presidente de Castilla y León toma el mando: José María Aznar."
+   }
+  ]
+ },
+ {
+  "escena": "victorias",
+  "inicio": 34.25,
+  "fin": 45.36,
+  "frases": [
+   {
+    "t0": 34.25,
+    "t1": 41.0,
+    "texto": "1996: por fin gana. En 2000, mayoría absoluta: 183 escaños."
+   },
+   {
+    "t0": 41.15,
+    "t1": 44.91,
+    "texto": "Y en 2011, con Rajoy, su récord: 186."
+   }
+  ]
+ },
+ {
+  "escena": "hoy",
+  "inicio": 45.36,
+  "fin": 53.07,
+  "frases": [
+   {
+    "t0": 45.62,
+    "t1": 52.62,
+    "texto": "Desde 2022, lo lidera Feijóo. Y el 29N busca lo que no consiguió en 2023: gobernar."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 53.07,
+  "fin": 61.27,
+  "frases": [
+   {
+    "t0": 53.77,
+    "t1": 57.29,
+    "texto": "¿Sabías que antes se llamaba Alianza Popular? Te leo."
+   },
+   {
+    "t0": 57.49,
+    "t1": 59.92,
+    "texto": "Y sigue a Piz: mañana, cómo nació Vox."
+   }
+  ]
+ }
+]

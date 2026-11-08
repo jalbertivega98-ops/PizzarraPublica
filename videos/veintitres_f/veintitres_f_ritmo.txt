@@ -1,0 +1,2 @@
+Duración 60.0 s · 73 cambios visuales · uno cada 0.82 s de media · hueco máximo 2.32 s
+⚠ DURACIÓN: 60.0 s (objetivo 30-45 s)

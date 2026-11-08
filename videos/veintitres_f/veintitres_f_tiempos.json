@@ -1,0 +1,109 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 9.79,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 4.76,
+    "texto": "23 de febrero de 1981. Seis y veinte de la tarde."
+   },
+   {
+    "t0": 4.96,
+    "t1": 9.34,
+    "texto": "En el Congreso se vota un presidente. Y de repente, disparos."
+   }
+  ]
+ },
+ {
+  "escena": "dentro",
+  "inicio": 9.79,
+  "fin": 22.85,
+  "frases": [
+   {
+    "t0": 10.05,
+    "t1": 14.54,
+    "texto": "Entra el teniente coronel Tejero con guardias civiles. «¡Quieto todo el mundo!»."
+   },
+   {
+    "t0": 14.69,
+    "t1": 19.0,
+    "texto": "Casi todos los diputados se tiran al suelo. Suárez se queda sentado."
+   },
+   {
+    "t0": 19.15,
+    "t1": 22.4,
+    "texto": "Y el vicepresidente, Gutiérrez Mellado, les planta cara."
+   }
+  ]
+ },
+ {
+  "escena": "valencia",
+  "inicio": 22.85,
+  "fin": 30.22,
+  "frases": [
+   {
+    "t0": 23.17,
+    "t1": 27.08,
+    "texto": "Mientras, en Valencia, el general Milans del Bosch saca los tanques a la calle."
+   },
+   {
+    "t0": 27.28,
+    "t1": 29.77,
+    "texto": "Durante horas, nadie sabe quién manda en España."
+   }
+  ]
+ },
+ {
+  "escena": "rey",
+  "inicio": 30.22,
+  "fin": 38.94,
+  "frases": [
+   {
+    "t0": 30.52,
+    "t1": 33.64,
+    "texto": "A la una y cuarto de la madrugada, el Rey sale en televisión."
+   },
+   {
+    "t0": 33.84,
+    "t1": 38.49,
+    "texto": "Con uniforme militar, defiende la Constitución. Y el golpe se queda solo."
+   }
+  ]
+ },
+ {
+  "escena": "fin",
+  "inicio": 38.94,
+  "fin": 49.72,
+  "frases": [
+   {
+    "t0": 39.2,
+    "t1": 42.97,
+    "texto": "Por la mañana se rinden. Unas dieciocho horas de secuestro."
+   },
+   {
+    "t0": 43.12,
+    "t1": 49.27,
+    "texto": "Dos días después, Calvo-Sotelo es investido presidente. Y Tejero, condenado a treinta años."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 49.72,
+  "fin": 60.03,
+  "frases": [
+   {
+    "t0": 50.42,
+    "t1": 54.5,
+    "texto": "¿Tus padres o abuelos lo vivieron? Cuéntame dónde estaban esa noche."
+   },
+   {
+    "t0": 54.7,
+    "t1": 58.68,
+    "texto": "Y sigue a Piz: próximo capítulo, la única moción de censura que ha ganado."
+   }
+  ]
+ }
+]

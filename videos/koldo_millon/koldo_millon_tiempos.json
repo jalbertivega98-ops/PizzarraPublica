@@ -1,0 +1,87 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 6.73,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.06,
+    "texto": "Un millón de euros por hablar contra Sánchez."
+   },
+   {
+    "t0": 2.26,
+    "t1": 6.28,
+    "texto": "Eso dice Koldo que le ofrecieron. El PP dice que es mentira."
+   }
+  ]
+ },
+ {
+  "escena": "cuenta",
+  "inicio": 6.73,
+  "fin": 20.78,
+  "frases": [
+   {
+    "t0": 7.03,
+    "t1": 9.97,
+    "texto": "Koldo, en prisión, lo contó en la SER y en TVE."
+   },
+   {
+    "t0": 10.02,
+    "t1": 14.87,
+    "texto": "Según él, un abogado del PP le ofreció pagar su defensa, rebajar su condena y un millón."
+   },
+   {
+    "t0": 15.02,
+    "t1": 20.33,
+    "texto": "A cambio de información contra Sánchez, su mujer y Zapatero. «Incluso si tenía que mentir»."
+   }
+  ]
+ },
+ {
+  "escena": "pruebas",
+  "inicio": 20.78,
+  "fin": 25.54,
+  "frases": [
+   {
+    "t0": 21.04,
+    "t1": 25.09,
+    "texto": "Dice que lo rechazó. Pero de momento no ha enseñado ninguna prueba."
+   }
+  ]
+ },
+ {
+  "escena": "reacciones",
+  "inicio": 25.54,
+  "fin": 34.73,
+  "frases": [
+   {
+    "t0": 25.54,
+    "t1": 29.6,
+    "texto": "El PSOE pide explicaciones a Feijóo: «guerra sucia de una gravedad extrema»."
+   },
+   {
+    "t0": 29.75,
+    "t1": 34.28,
+    "texto": "El PP: «absolutamente falso». Y Ester Muñoz: «está mintiendo»."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 34.73,
+  "fin": 43.49,
+  "frases": [
+   {
+    "t0": 35.43,
+    "t1": 39.36,
+    "texto": "Palabra de Koldo contra palabra del PP. ¿A quién crees? Te leo."
+   },
+   {
+    "t0": 39.56,
+    "t1": 42.14,
+    "texto": "Y sigue a Piz: aquí, siempre con fuentes."
+   }
+  ]
+ }
+]

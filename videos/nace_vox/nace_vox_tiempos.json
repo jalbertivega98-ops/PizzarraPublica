@@ -1,0 +1,104 @@
+[
+ {
+  "escena": "gancho",
+  "inicio": 0.0,
+  "fin": 6.67,
+  "frases": [
+   {
+    "t0": 0.0,
+    "t1": 2.52,
+    "texto": "En 2015, Vox sacó cero escaños."
+   },
+   {
+    "t0": 2.72,
+    "t1": 6.22,
+    "texto": "Cuatro años después tenía 52. ¿Cómo pasó?"
+   }
+  ]
+ },
+ {
+  "escena": "nace",
+  "inicio": 6.67,
+  "fin": 14.67,
+  "frases": [
+   {
+    "t0": 6.97,
+    "t1": 10.42,
+    "texto": "Nace a finales de 2013, fundado por gente que se va del PP."
+   },
+   {
+    "t0": 10.57,
+    "t1": 14.22,
+    "texto": "Entre ellos, Vidal-Quadras, Ortega Lara y un tal Santiago Abascal."
+   }
+  ]
+ },
+ {
+  "escena": "blanco",
+  "inicio": 14.67,
+  "fin": 23.61,
+  "frases": [
+   {
+    "t0": 14.93,
+    "t1": 21.59,
+    "texto": "En las europeas de 2014 se queda sin escaño por muy poco. En 2015, un 0,2 por ciento."
+   },
+   {
+    "t0": 21.74,
+    "t1": 23.16,
+    "texto": "Casi nadie apostaba por él."
+   }
+  ]
+ },
+ {
+  "escena": "andalucia",
+  "inicio": 23.61,
+  "fin": 33.13,
+  "frases": [
+   {
+    "t0": 23.93,
+    "t1": 28.69,
+    "texto": "Hasta diciembre de 2018. Andalucía: doce escaños de golpe."
+   },
+   {
+    "t0": 28.84,
+    "t1": 32.68,
+    "texto": "Primera vez en un parlamento. Y de ahí, al Congreso."
+   }
+  ]
+ },
+ {
+  "escena": "subida",
+  "inicio": 33.13,
+  "fin": 46.99,
+  "frases": [
+   {
+    "t0": 33.13,
+    "t1": 40.38,
+    "texto": "Abril de 2019: 24 diputados. Noviembre de 2019: 52, tercera fuerza."
+   },
+   {
+    "t0": 40.53,
+    "t1": 46.54,
+    "texto": "En 2023 baja a 33. Y ahora, el 29N, vuelve a buscar su récord."
+   }
+  ]
+ },
+ {
+  "escena": "final",
+  "inicio": 46.99,
+  "fin": 57.86,
+  "frases": [
+   {
+    "t0": 47.69,
+    "t1": 51.79,
+    "texto": "¿Crees que superará los 52? Te leo, con respeto."
+   },
+   {
+    "t0": 51.99,
+    "t1": 56.51,
+    "texto": "Y sigue a Piz: esta noche, el último capítulo, el primer cara a cara de la historia."
+   }
+  ]
+ }
+]

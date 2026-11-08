@@ -208,6 +208,26 @@
      ],
      "dur": 0.4,
      "zoom": 1.06
+    },
+    {
+     "at": 1.57,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
+    },
+    {
+     "at": 10.12,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [

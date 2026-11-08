@@ -70,6 +70,16 @@
      ],
      "dur": 0.4,
      "zoom": 1.06
+    },
+    {
+     "at": 3.53,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [
@@ -188,6 +198,36 @@
      ],
      "dur": 0.4,
      "zoom": 1.05
+    },
+    {
+     "at": 1.6,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
+    },
+    {
+     "at": 7.13,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
+    },
+    {
+     "at": 10.4,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [
@@ -302,6 +342,16 @@
      ],
      "dur": 0.4,
      "zoom": 1.06
+    },
+    {
+     "at": 2.8,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [
@@ -421,6 +471,36 @@
       960
      ],
      "dur": 0
+    },
+    {
+     "at": 1.41,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
+    },
+    {
+     "at": 5.27,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
+    },
+    {
+     "at": 9.26,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [
@@ -539,6 +619,16 @@
      "sobre": "piz",
      "dur": 0.5,
      "aire": 300
+    },
+    {
+     "at": 1.49,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [

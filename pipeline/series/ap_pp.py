@@ -28,10 +28,10 @@ scenes = [
     ], camara=[plano(0, "general", [540, 960], 0), plano("@ganar", "general", [540, 920], 0.4, zoom=1.06)],
        elements=[
         rot("HISTORIA EN LA PIZARRA", 540, 430, 0, 70, "blanco"),
-        rot("PP", 540, 640, 0.2, 200, "azul", golpe=True, fx=[{"at": "@siempre", "do": "tachar"}], out="@nombre"),
+        rot("PP", 540, 640, 0.2, 200, "azul", golpe=True, fx=[{"at": "@siempre", "do": "temblar"}], out="@nombre"),
         rot("¿?", 540, 640, "@nombre", 200, "amarillo", golpe=True),
         obj("contador", 540, 860, "@veinte", 0.8, hud=True, entra="pop", sfx="kaching", props={"valor": 20, "sufijo": " AÑOS", "ancho": 560}),
-        quien("piz", 860, 0.3, 0.42, "sorpresa", y=1580, entra="der", acciones=[{"at": "@nombre", "cara": "pensativo"}, {"at": "@Franco", "take": True, "cara": "sorpresa"}]),
+        quien("piz", 540, 0.3, 0.6, "sorpresa", y=1560, entra="abajo", acciones=[{"at": "@nombre", "cara": "pensativo"}, {"at": "@Franco", "take": True, "cara": "sorpresa"}]),
     ]),
     # 2 · ALIANZA POPULAR
     dict(id="ap", fondo=CAMINO, animo="aventura", trans="barrido", footnote=F, lines=[
@@ -52,7 +52,7 @@ scenes = [
         V("Y en 1990, el presidente de Castilla y León toma el mando: José María Aznar.", "normal", 0.1),
     ], camara=[plano(0, "general", [540, 960], 0), plano("@Aznar", "general", [540, 1000], 0.5, zoom=1.04)],
        elements=[
-        rot("AP", 540, 520, 0, 160, "verde", golpe=True, fx=[{"at": "@refunda", "do": "tachar"}], out="@Partido"),
+        rot("AP", 540, 520, 0, 160, "verde", golpe=True, fx=[{"at": "@refunda", "do": "temblar"}], out="@Partido"),
         rot("PARTIDO POPULAR", 540, 560, "@Partido", 110, "azul", golpe=True),
         etq("1989", 540, 720, "@1989", "amarillo", 0.75, hud=True),
         quien("aznar", 540, "@1990", 0.55, "serio", y=1560, entra="abajo", acciones=[{"at": "@Aznar", "pose": "saluda", "cara": "normal"}]),

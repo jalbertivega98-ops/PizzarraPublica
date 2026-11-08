@@ -49,12 +49,12 @@ scenes = [
         V("Al día siguiente, el PSOE registra la moción contra Rajoy.", "remate", 0.15),
     ], camara=[plano(0, "general", [540, 1000], 0), plano("@siguiente", "general", [540, 960], 0.4, zoom=1.05)],
        elements=[
-        obj("documento", 540, 700, "@sentencia", 0.75, hud=True, entra="nada", dibujo=0.6, sfx="papel", id="sent",
+        obj("documento", 540, 760, "@sentencia", 1.15, hud=True, entra="nada", dibujo=0.6, sfx="papel", id="sent",
             props={"titulo": "SENTENCIA", "subtitulo": "CASO GÜRTEL · 24/5/2018", "ancho": 640, "articulos": []}, out="@siguiente"),
         sello("CONDENADO", "rojo", 1040, "@condenado", out="@siguiente"),
         quien("rajoy", 820, 0.2, 0.5, "normal", entra="der", acciones=[{"at": "@condenado", "cara": "preocupado"}, {"at": "@moción", "cara": "serio"}]),
         quien("sanchez", 240, "@PSOE-0.3", 0.5, "normal", entra="izq", acciones=[{"at": "@registra", "pose": "senala"}]),
-        obj("documento", 540, 700, "@registra", 0.7, hud=True, entra="pop", dibujo=0.4, sfx="papel",
+        obj("documento", 540, 760, "@registra", 1.1, hud=True, entra="pop", dibujo=0.4, sfx="papel",
             props={"titulo": "MOCIÓN DE CENSURA", "subtitulo": "25/5/2018", "ancho": 600, "articulos": []}),
     ]),
     # 4 · LA VOTACIÓN

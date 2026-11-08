@@ -1,6 +1,6 @@
 {
  "slug": "decretos_hoy",
- "title": "Hoy se votan los decretos de vivienda",
+ "title": "Mañana se votan los decretos de vivienda",
  "series_tag": "EXPLICADO FÁCIL",
  "accent": "red",
  "estilo": "viva",
@@ -21,7 +21,7 @@
   "Moncloa.com (17/10/2026): composición de la Diputación Permanente (69) y aritmética; el PNV, clave",
   "BOE 7/10/2026: reales decretos-ley de vivienda"
  ],
- "caption": "🏠 Hoy se decide si tu alquiler se alarga\n📜 Dos decretos: freno a desahucios + créditos 1.ª casa · y prórroga de alquileres\n🏛️ Vota la Diputación Permanente: 69 diputados\n⚖️ PSOE y socios 34 · PP, Vox y Junts 34 · el PNV decide\n💬 ¿Alargarías los alquileres por decreto? Te leo 👇\n🔔 Sigue a Piz · 📚 Fuentes en comentarios",
+ "caption": "🏠 Mañana, jueves 12, se decide si tu alquiler se alarga\n📜 Dos decretos: freno a desahucios + créditos 1.ª casa · y prórroga de alquileres\n🏛️ Vota la Diputación Permanente: 69 diputados\n⚖️ PSOE y socios 34 · PP, Vox y Junts 34 · el PNV decide\n💬 ¿Alargarías los alquileres por decreto? Te leo 👇\n🔔 Sigue a Piz · 📚 Fuentes en comentarios",
  "pinned_comment": "📚 Fuentes: ESdiario 5/11/2026 · Moncloa.com 17/10/2026 · BOE 7/10/2026. ¿Ves un error? Dínoslo.",
  "hashtags": [
   "#Vivienda",
@@ -39,7 +39,7 @@
    "footnote": "ESdiario 5/11/2026 · Moncloa.com 17/10/2026",
    "lines": [
     {
-     "text": "Hoy se decide si tu alquiler se alarga o no.",
+     "text": "Mañana se decide si tu alquiler se alarga o no.",
      "tono": "intriga"
     },
     {
@@ -173,8 +173,8 @@
      "type": "objeto",
      "objeto": "checklist",
      "x": 540,
-     "y": 700,
-     "scale": 0.8,
+     "y": 720,
+     "scale": 1.0,
      "at": "@primero",
      "props": {
       "items": [
@@ -194,8 +194,8 @@
      "type": "objeto",
      "objeto": "documento",
      "x": 540,
-     "y": 700,
-     "scale": 0.75,
+     "y": 760,
+     "scale": 1.1,
      "at": "@segundo",
      "props": {
       "titulo": "DECRETO 2",
@@ -512,7 +512,7 @@
      "scale": 1.0,
      "at": "@créditos",
      "props": {
-      "texto": "SE VOTA HOY",
+      "texto": "SE VOTA MAÑANA",
       "color": "azul"
      },
      "acciones": [],
@@ -642,7 +642,7 @@
  "sfx_volume": 1.0,
  "portada": {
   "t": 2.6,
-  "titulo": "Hoy se decide tu alquiler",
+  "titulo": "Mañana se decide tu alquiler",
   "capitulo": null
  }
 }

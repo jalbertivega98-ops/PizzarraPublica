@@ -191,6 +191,26 @@
      ],
      "dur": 0.5,
      "zoom": 1.04
+    },
+    {
+     "at": 1.54,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
+    },
+    {
+     "at": 4.53,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [
@@ -353,6 +373,16 @@
      ],
      "dur": 0.4,
      "zoom": 1.05
+    },
+    {
+     "at": 5.67,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [
@@ -360,8 +390,8 @@
      "type": "objeto",
      "objeto": "documento",
      "x": 540,
-     "y": 700,
-     "scale": 0.75,
+     "y": 760,
+     "scale": 1.15,
      "at": "@sentencia",
      "props": {
       "titulo": "SENTENCIA",
@@ -436,8 +466,8 @@
      "type": "objeto",
      "objeto": "documento",
      "x": 540,
-     "y": 700,
-     "scale": 0.7,
+     "y": 760,
+     "scale": 1.1,
      "at": "@registra",
      "props": {
       "titulo": "MOCIÓN DE CENSURA",
@@ -495,6 +525,16 @@
      ],
      "dur": 0.4,
      "zoom": 1.06
+    },
+    {
+     "at": 1.67,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [

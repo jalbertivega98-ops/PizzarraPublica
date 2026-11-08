@@ -84,6 +84,16 @@
      ],
      "dur": 0.3,
      "zoom": 1.15
+    },
+    {
+     "at": 3.65,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [
@@ -221,6 +231,26 @@
       1000
      ],
      "dur": 0.5
+    },
+    {
+     "at": 1.65,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
+    },
+    {
+     "at": 4.58,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [
@@ -550,6 +580,16 @@
      ],
      "dur": 0.5,
      "zoom": 1.08
+    },
+    {
+     "at": 4.3,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [
@@ -682,6 +722,16 @@
      ],
      "dur": 0.5,
      "zoom": 1.04
+    },
+    {
+     "at": 3.69,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [

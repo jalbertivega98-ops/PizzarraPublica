@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""«Hoy se votan los decretos de vivienda» (jueves 12/11/2026, 15:00).
+"""«Mañana se votan los decretos de vivienda» (miércoles 11/11/2026, 20:00; la votación es el jueves 12 y su hora no se conoce).
 Pedido por joel el 8/11/2026 («adelante» al plan de la semana).
 Fuentes:
   ESdiario 5/11/2026: la Diputación Permanente vota el jueves 12/11, víspera de la campaña. Dos reales decretos-ley
@@ -16,7 +16,7 @@ F = "ESdiario 5/11/2026 · Moncloa.com 17/10/2026"
 scenes = [
     # 1 · GANCHO
     dict(id="gancho", fondo="calle", animo="tension", footnote=F, lines=[
-        V("Hoy se decide si tu alquiler se alarga o no.", "intriga"),
+        V("Mañana se decide si tu alquiler se alarga o no.", "intriga"),
         V("Y puede depender de un solo voto.", "remate", 0.15),
     ], camara=[plano(0, "general", [540, 1000], 0), plano("@solo", "general", [540, 920], 0.4, zoom=1.1)],
        elements=[
@@ -31,9 +31,9 @@ scenes = [
         V("El segundo: prorrogar los alquileres.", "remate", 0.1),
     ], camara=[plano(0, "general", [540, 1000], 0), plano("@segundo", "general", [540, 960], 0.4, zoom=1.05)],
        elements=[
-        obj("checklist", 540, 700, "@primero", 0.8, hud=True, entra="pop", sfx="papel",
+        obj("checklist", 540, 720, "@primero", 1.0, hud=True, entra="pop", sfx="papel",
             props={"items": ["FRENO A DESAHUCIOS", "VENTAJAS FISCALES", "CRÉDITOS 1.ª CASA"], "marcas": []}, out="@segundo"),
-        obj("documento", 540, 700, "@segundo", 0.75, hud=True, entra="pop", dibujo=0.5, sfx="papel",
+        obj("documento", 540, 760, "@segundo", 1.1, hud=True, entra="pop", dibujo=0.5, sfx="papel",
             props={"titulo": "DECRETO 2", "subtitulo": "PRÓRROGA DE ALQUILERES", "ancho": 640, "articulos": []}),
         quien("sanchez", 860, 0.2, 0.42, "normal", y=1580, entra="der", acciones=[{"at": "@desahucios", "pose": "senala_izq"}, {"at": "@segundo", "pose": "pulgar"}]),
         etq("YA TUMBADOS EL 2/10", 540, 1180, "@prorrogar", "rojo", 0.55, hud=True),
@@ -64,7 +64,7 @@ scenes = [
         etq("DESAHUCIOS Y CRÉDITOS: MÁS FÁCIL", 540, 660, "@desahucios", "verde", 0.55, hud=True),
         obj("contrato", 300, 900, "@alquileres", 0.55, hud=True, entra="pop", sfx="papel", fx=[{"at": "@cae", "do": "temblar"}]),
         quien("piz", 760, 0, 0.5, "pensativo", entra="der", acciones=[{"at": "@octubre", "pose": "senala_izq"}, {"at": "@cae", "cara": "preocupado"}, {"at": "@fácil", "cara": "normal", "pose": "pulgar"}]),
-        sello("SE VOTA HOY", "azul", 1240, "@créditos"),
+        sello("SE VOTA MAÑANA", "azul", 1240, "@créditos"),
     ]),
     # 5 · CIERRE
     dict(id="final", fondo="calle", animo="final", trans="iris", footnote="Te leemos en comentarios", lines=[
@@ -82,12 +82,12 @@ scenes = [
 ]
 
 if __name__ == "__main__":
-    episodio("decretos_hoy", "Hoy se votan los decretos de vivienda", scenes,
-             {"t": 2.6, "titulo": "Hoy se decide tu alquiler", "capitulo": None},
+    episodio("decretos_hoy", "Mañana se votan los decretos de vivienda", scenes,
+             {"t": 2.6, "titulo": "Mañana se decide tu alquiler", "capitulo": None},
              ["ESdiario (5/11/2026): votación en la Diputación Permanente el 12/11; contenido de los dos decretos",
               "Moncloa.com (17/10/2026): composición de la Diputación Permanente (69) y aritmética; el PNV, clave",
               "BOE 7/10/2026: reales decretos-ley de vivienda"],
-             ("🏠 Hoy se decide si tu alquiler se alarga\n"
+             ("🏠 Mañana, jueves 12, se decide si tu alquiler se alarga\n"
               "📜 Dos decretos: freno a desahucios + créditos 1.ª casa · y prórroga de alquileres\n"
               "🏛️ Vota la Diputación Permanente: 69 diputados\n"
               "⚖️ PSOE y socios 34 · PP, Vox y Junts 34 · el PNV decide\n"

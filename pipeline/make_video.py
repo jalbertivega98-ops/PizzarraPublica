@@ -199,7 +199,7 @@ def build_elements(story, scenes):
             prev_end = t0 + e.dur
         for clave in ("camara", "luz"):  # planos de cámara y cambios de luz anclados a la voz
             if clave in sc:
-                tl[clave] = [{**x, "t": resolve_at(x.get("at", 0), tl, tl["start"])} for x in sc[clave]]
+                tl[clave] = sorted([{**x, "t": resolve_at(x.get("at", 0), tl, tl["start"])} for x in sc[clave]], key=lambda x: x["t"])
         mundo = {e.spec["id"]: e for e in els if "id" in e.spec}  # para seguir, mirar y encuadrar por id
         for e in els:
             e.mundo = mundo

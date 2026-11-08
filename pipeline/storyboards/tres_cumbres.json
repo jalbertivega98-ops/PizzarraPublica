@@ -221,6 +221,26 @@
      ],
      "dur": 0.9,
      "zoom": 2.4
+    },
+    {
+     "at": 2.3,
+     "plano": "general",
+     "sobre": [
+      1086.3,
+      577.9
+     ],
+     "dur": 0.6,
+     "zoom": 4.2
+    },
+    {
+     "at": 9.33,
+     "plano": "general",
+     "sobre": [
+      900.0,
+      505.0
+     ],
+     "dur": 0.6,
+     "zoom": 2.52
     }
    ],
    "elements": [
@@ -565,6 +585,36 @@
      ],
      "dur": 0.4,
      "zoom": 1.05
+    },
+    {
+     "at": 2.13,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
+    },
+    {
+     "at": 8.89,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.6,
+     "zoom": 1.103
+    },
+    {
+     "at": 10.99,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.6,
+     "zoom": 1.103
     }
    ],
    "elements": [

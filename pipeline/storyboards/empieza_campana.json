@@ -80,7 +80,7 @@
      "x": 540,
      "y": 560,
      "scale": 0.7,
-     "at": 0.1,
+     "at": 0,
      "props": {},
      "acciones": [],
      "hud": true,
@@ -173,6 +173,16 @@
      ],
      "dur": 0.4,
      "zoom": 1.05
+    },
+    {
+     "at": 2.06,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [
@@ -289,6 +299,26 @@
       960
      ],
      "dur": 0
+    },
+    {
+     "at": 2.69,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
+    },
+    {
+     "at": 6.3,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [
@@ -441,6 +471,16 @@
      ],
      "dur": 0.4,
      "zoom": 1.06
+    },
+    {
+     "at": 6.9,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [
@@ -459,7 +499,7 @@
      "fx": [
       {
        "at": "@prohibido",
-       "do": "tachar"
+       "do": "temblar"
       }
      ],
      "out": "@28"

@@ -26,7 +26,7 @@ scenes = [
         V("Y con ella, cambian las reglas del juego.", "remate", 0.15),
     ], camara=[plano(0, "general", [540, 1000], 0), plano("@reglas", "general", [540, 940], 0.4, zoom=1.08)],
        elements=[
-        obj("reloj", 540, 560, 0.1, 0.7, hud=True, entra="pop", sfx="pop"),
+        obj("reloj", 540, 560, 0, 0.7, hud=True, entra="pop", sfx="pop"),
         rot("00:00", 540, 780, "@doce", 140, "amarillo", golpe=True),
         obj("cartel", 760, 1000, "@campaña", 0.6, entra="cae", sfx="golpe", props={"texto": "¡VÓTAME!", "color": "rojo", "tinta": "blanco"}),
         quien("piz", 280, 0.3, 0.5, "ilusionado", entra="izq", acciones=[{"at": "@campaña", "salta": True}, {"at": "@reglas", "pose": "senala_arriba", "cara": "idea"}]),
@@ -61,7 +61,7 @@ scenes = [
         V("El 28, jornada de reflexión: nadie puede pedir el voto. Y el 29, a las urnas.", "remate", 0.1),
     ], camara=[plano(0, "general", [540, 960], 0), plano("@urnas", "general", [540, 920], 0.4, zoom=1.06)],
        elements=[
-        obj("grafica", 540, 600, "@encuestas-0.3", 0.6, hud=True, entra="pop", sfx="pop", fx=[{"at": "@prohibido", "do": "tachar"}], out="@28"),
+        obj("grafica", 540, 600, "@encuestas-0.3", 0.6, hud=True, entra="pop", sfx="pop", fx=[{"at": "@prohibido", "do": "temblar"}], out="@28"),
         sello("PROHIBIDO", "rojo", 860, "@prohibido", out="@28"),
         obj("cartel", 540, 640, "@28", 0.7, hud=True, entra="cae", sfx="golpe", props={"texto": "REFLEXIÓN", "color": "blanco", "tinta": "tinta"}, out="@29"),
         obj("urna", 540, 760, "@29", 0.6, entra="crece", sfx="pop", props={"llena": 0.6, "texto": "29N"}),

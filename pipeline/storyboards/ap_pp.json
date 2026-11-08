@@ -98,7 +98,7 @@
      "fx": [
       {
        "at": "@siempre",
-       "do": "tachar"
+       "do": "temblar"
       }
      ],
      "out": "@nombre",
@@ -135,9 +135,9 @@
     {
      "type": "personaje",
      "quien": "piz",
-     "x": 860,
-     "y": 1580,
-     "scale": 0.42,
+     "x": 540,
+     "y": 1560,
+     "scale": 0.6,
      "at": 0.3,
      "cara": "sorpresa",
      "acciones": [
@@ -151,7 +151,7 @@
        "cara": "sorpresa"
       }
      ],
-     "entra": "der",
+     "entra": "abajo",
      "id": "piz"
     }
    ]
@@ -194,6 +194,46 @@
      ],
      "dur": 0.5,
      "zoom": 1.04
+    },
+    {
+     "at": 3.41,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
+    },
+    {
+     "at": 5.12,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
+    },
+    {
+     "at": 9.84,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
+    },
+    {
+     "at": 13.06,
+     "plano": "general",
+     "sobre": [
+      600,
+      980
+     ],
+     "dur": 0.6,
+     "zoom": 1.092
     }
    ],
    "elements": [
@@ -349,6 +389,16 @@
      ],
      "dur": 0.5,
      "zoom": 1.04
+    },
+    {
+     "at": 8.49,
+     "plano": "general",
+     "sobre": [
+      540,
+      960
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [
@@ -364,7 +414,7 @@
      "fx": [
       {
        "at": "@refunda",
-       "do": "tachar"
+       "do": "temblar"
       }
      ],
      "out": "@Partido",
@@ -476,6 +526,16 @@
      ],
      "dur": 0.4,
      "zoom": 1.06
+    },
+    {
+     "at": 5.04,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [
@@ -616,6 +676,16 @@
      ],
      "dur": 0.4,
      "zoom": 1.05
+    },
+    {
+     "at": 4.83,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [
@@ -706,6 +776,16 @@
      "sobre": "piz",
      "dur": 0.5,
      "aire": 300
+    },
+    {
+     "at": 2.29,
+     "plano": "general",
+     "sobre": [
+      540,
+      1000
+     ],
+     "dur": 0.6,
+     "zoom": 0.95
     }
    ],
    "elements": [

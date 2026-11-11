@@ -233,7 +233,9 @@ def synth_edge_viva(text, voice, tono):
     for t, v, p, vol, pausa in trozos_edge(text, tono):
         audio, pal = asyncio.run(uno(t, v, p, vol))
         pcm, corte = _recorta(_pcm(audio, sr), sr)
-        base = len(total) / sr - corte
+        # los tiempos de Edge no cuentan el silencio inicial del MP3: la primera palabra empieza
+        # donde empieza a sonar la voz (30 ms tras el recorte)
+        base = len(total) / sr + (0.03 - (pal[0][1] - corte) if pal and corte > 0 else -corte)
         words += [{"w": w, "t0": round(base + a, 3), "t1": round(base + b, 3)} for w, a, b in pal]
         total.extend(pcm)
         total.extend(array("h", [0]) * int(pausa * sr))

@@ -45,7 +45,10 @@ jobs:
         with:
           python-version: "3.12"
       - name: Instalar edge-tts
-        run: python3 -m pip install edge-tts==7.3.1
+        shell: bash
+        run: |
+          python3 -m pip install edge-tts==7.3.1
+          command -v ffmpeg || (sudo apt-get update -q && sudo apt-get install -y -q ffmpeg) || brew install ffmpeg
       - name: Generar voces
         shell: bash
         working-directory: pipeline

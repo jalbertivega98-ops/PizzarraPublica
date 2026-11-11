@@ -139,10 +139,107 @@ def biblioteca(texto, n, model, api_key):
 
 
 EDGE_RATE = "+8%"
+# Álvaro «expresivo»: cada frase se parte en trozos (en . ? ! : …) y cada trozo se lee con su propia
+# velocidad, tono y volumen según el «tono» de la frase; las cifras se recalcan y se ponen pausas
+# medidas entre trozos. Edge no admite SSML propio, así que la entonación se construye así.
+EDGE_TONOS = {  # (velocidad %, tono Hz, volumen %)
+    "normal":   (8, 0, 0),
+    "energia":  (16, 7, 10),
+    "sorpresa": (8, 12, 8),
+    "intriga":  (-4, -5, -6),
+    "sobrio":   (-2, -7, -6),
+    "remate":   (0, -3, 6),
+}
+EDGE_PAUSAS = {",": 0.12, ";": 0.22, ":": 0.38, "…": 0.5, ".": 0.32, "?": 0.34, "!": 0.3}
+CIFRA = re.compile(r"\d|\b(euros?|céntimos?|millones?|mil|cero|nadie|nunca|todos?|récord)\b", re.I)
+TROZO = re.compile(r".+?(?:\.\.\.|[.?!:…;](?=\s|$)|$)", re.S)
 
 
-def edge_model(rate=EDGE_RATE):
-    return f"edge{rate}"
+def edge_model(vcfg=None, rate=EDGE_RATE):
+    """Con "expresivo": false en la voz del storyboard se usa la lectura plana de antes."""
+    if vcfg is not None and vcfg.get("expresivo") is False:
+        return f"edge{rate}"
+    return "edgeviva"
+
+
+def trozos_edge(text, tono):
+    """[(texto, velocidad, tono_hz, volumen, pausa_después)] de una frase."""
+    v0, p0, vol0 = EDGE_TONOS.get(tono or "normal", EDGE_TONOS["normal"])
+    partes = [t.strip() for t in TROZO.findall(text) if t.strip()]
+    out = []
+    for i, t in enumerate(partes):
+        v, p, vol = v0, p0, vol0
+        ultimo = i == len(partes) - 1
+        n = len(t.split())
+        if CIFRA.search(t):          # el dato se dice más despacio y más fuerte
+            v, vol = v - 10, vol + 10
+        if t.endswith("?"):          # pregunta: sube
+            p += 6
+        if t.endswith("!"):
+            v, p, vol = v + 4, p + 5, vol + 6
+        if i > 0 and partes[i - 1].endswith(":") and n <= 6:   # la revelación tras los dos puntos
+            v, p = v - 6, p - 2
+        if ultimo and tono == "remate":   # el remate cae despacio
+            v, p = v - 6, p - 3
+        if i == 0 and tono in ("energia", "sorpresa") and n <= 4:  # arranque con chispa
+            p += 3
+        fin = t.rstrip()[-1]
+        pausa = 0.0 if ultimo else EDGE_PAUSAS.get("…" if t.endswith("...") else fin, 0.15)
+        if tono == "intriga" and not ultimo:
+            pausa += 0.12
+        v, p, vol = max(-14, min(20, v)), max(-12, min(14, p)), max(-10, min(15, vol))
+        out.append((t, f"{v:+d}%", f"{p:+d}Hz", f"{vol:+d}%", pausa))
+    return out
+
+
+def _pcm(mp3, sr=24000):
+    import subprocess
+    from array import array
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", "pipe:0", "-f", "s16le", "-ac", "1", "-ar", str(sr), "-"],
+                         input=mp3, capture_output=True, check=True).stdout
+    return array("h", raw)
+
+
+def _recorta(pcm, sr=24000, umbral=330):
+    """Quita el silencio de los bordes (deja 30 ms delante y 60 ms detrás). Devuelve (pcm, inicio_recortado_s)."""
+    idx = [i for i in range(len(pcm)) if abs(pcm[i]) > umbral]
+    if not idx:
+        return pcm, 0.0
+    a = max(0, idx[0] - int(0.03 * sr))
+    b = min(len(pcm), idx[-1] + int(0.06 * sr))
+    return pcm[a:b], a / sr
+
+
+def synth_edge_viva(text, voice, tono):
+    """Álvaro expresivo: MP3 + tiempos por palabra [{"w","t0","t1"}] para sincronizar los dibujos."""
+    import asyncio
+    import subprocess
+    from array import array
+    import edge_tts
+
+    sr = 24000
+
+    async def uno(t, v, p, vol):
+        audio, pal = b"", []
+        com = edge_tts.Communicate(t, voice, rate=v, pitch=p, volume=vol, boundary="WordBoundary")
+        async for ch in com.stream():
+            if ch["type"] == "audio":
+                audio += ch["data"]
+            elif ch["type"] == "WordBoundary":
+                pal.append((ch["text"], ch["offset"] / 1e7, (ch["offset"] + ch["duration"]) / 1e7))
+        return audio, pal
+
+    total, words = array("h"), []
+    for t, v, p, vol, pausa in trozos_edge(text, tono):
+        audio, pal = asyncio.run(uno(t, v, p, vol))
+        pcm, corte = _recorta(_pcm(audio, sr), sr)
+        base = len(total) / sr - corte
+        words += [{"w": w, "t0": round(base + a, 3), "t1": round(base + b, 3)} for w, a, b in pal]
+        total.extend(pcm)
+        total.extend(array("h", [0]) * int(pausa * sr))
+    mp3 = subprocess.run(["ffmpeg", "-v", "error", "-f", "s16le", "-ac", "1", "-ar", str(sr), "-i", "pipe:0",
+                          "-b:a", "96k", "-f", "mp3", "-"], input=total.tobytes(), capture_output=True, check=True).stdout
+    return mp3, words
 
 
 def synth_edge(text, voice, model):
@@ -237,7 +334,7 @@ def main():
         story = json.load(open(f, encoding="utf-8"))
         vcfg = story.get("voice", {})
         voice = a.voice or vcfg.get("voice_id")
-        model = vcfg.get("model") or (edge_model() if vcfg.get("engine") == "edge" else a.model)
+        model = vcfg.get("model") or (edge_model(vcfg) if vcfg.get("engine") == "edge" else a.model)
         os.makedirs(CACHE, exist_ok=True)
         for sc in story["scenes"]:
             for line in sc["lines"]:
@@ -247,7 +344,11 @@ def main():
                 path = os.path.join(CACHE, key(vid, model, text, tono) + ".mp3")
                 if os.path.exists(path):
                     continue
-                if tono and not model.startswith("edge"):
+                if model == "edgeviva":
+                    audio, words = synth_edge_viva(text, vid, tono)
+                    open(path, "wb").write(audio)
+                    json.dump(words, open(path[:-4] + ".json", "w", encoding="utf-8"), ensure_ascii=False)
+                elif tono and not model.startswith("edge"):
                     audio, words = synth_tiempos(text, vid, model, api_key, tono)
                     open(path, "wb").write(audio)
                     json.dump(words, open(path[:-4] + ".json", "w", encoding="utf-8"), ensure_ascii=False)

@@ -55,7 +55,7 @@ def tts_elevenlabs(story, workdir):
     for si, sc in enumerate(story["scenes"]):
         for li, line in enumerate(sc["lines"]):
             text = line_text(line)
-            model = vcfg.get("model") or (edge_model() if vcfg["engine"] == "edge" else MODEL)
+            model = vcfg.get("model") or (edge_model(vcfg) if vcfg["engine"] == "edge" else MODEL)
             vid = (line.get("voice_id") if isinstance(line, dict) else None) or vcfg["voice_id"]
             path = os.path.join(CACHE, key(vid, model, text, line_tono(story, line)) + ".mp3")
             if not os.path.exists(path):

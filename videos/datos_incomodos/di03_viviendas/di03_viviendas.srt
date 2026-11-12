@@ -1,0 +1,63 @@
+1
+00:00:00,000 --> 00:00:02,218
+184.000 viviendas prometidas.
+
+2
+00:00:02,478 --> 00:00:04,231
+¿Cuántas tienen ya a alguien viviendo dentro?
+
+3
+00:00:04,491 --> 00:00:05,279
+Nadie lo sabe.
+
+4
+00:00:05,379 --> 00:00:07,013
+El Gobierno no publica esa cifra.
+
+5
+00:00:07,273 --> 00:00:12,476
+Desde 2018, el Gobierno de Pedro Sánchez ha anunciado planes de vivienda al menos catorce veces.
+
+6
+00:00:12,736 --> 00:00:16,801
+En abril de 2026, Vivienda habló de 120.479 viviendas «movilizadas».
+
+7
+00:00:17,061 --> 00:00:20,955
+Suena bien. Pero movilizada significa que se ha enviado el dinero.
+
+8
+00:00:21,055 --> 00:00:22,148
+No que la casa exista.
+
+9
+00:00:22,408 --> 00:00:26,751
+Maldita.es pidió cuántas se han entregado. También por Transparencia.
+
+10
+00:00:26,851 --> 00:00:28,377
+El Ministerio no ha dado la cifra.
+
+11
+00:00:28,637 --> 00:00:33,881
+En 2024, un recuento de prensa llegó a 10.206: el 5,5 %.
+
+12
+00:00:34,141 --> 00:00:39,161
+Y en toda España, en un año, se terminaron 14.317 viviendas protegidas.
+
+13
+00:00:39,971 --> 00:00:44,475
+Pero ojo: construir y adjudicar vivienda depende sobre todo de comunidades y ayuntamientos.
+
+14
+00:00:44,735 --> 00:00:46,943
+Y ahí gobiernan partidos de todos los colores.
+
+15
+00:00:47,203 --> 00:00:48,806
+Si un Gobierno promete viviendas…
+
+16
+00:00:48,906 --> 00:00:51,173
+¿debería estar obligado a publicar cuántas entrega?

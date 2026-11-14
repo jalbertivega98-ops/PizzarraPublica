@@ -217,7 +217,7 @@ export function Character({ look, state, scale = 1, shadow = true }: { look: Loo
     skin: mat(look.skin, { rough: 0.65 }), hair: mat('#ffffff', { vc: true, rough: 0.8 }), top: mat(look.top, { rough: 0.85 }), topD: mat(look.topDark, { rough: 0.85 }),
     pants: mat(look.pants, { rough: 0.9 }), shoes: mat(look.shoes, { rough: 0.6 }), accent: mat(look.accent, { rough: 0.6 }), sole: mat('#e9e6df', { rough: 0.7 }),
     white: mat('#ffffff', { rough: 0.3 }), iris: mat(look.eye ?? '#3b2a20', { rough: 0.3 }), pupil: mat('#111111', { rough: 0.2 }), brow: mat(new THREE.Color(look.hair).multiplyScalar(0.7).getStyle(), { rough: 0.8 }),
-    mouth: mat('#6d2a2c', { rough: 0.6 }), lip: mat(new THREE.Color(look.skin).multiplyScalar(0.72).getStyle(), { rough: 0.6 }), cheek: mat('#f08f86', { rough: 0.9, transparent: true, opacity: 0.35 }),
+    mouth: mat('#3d1418', { rough: 0.8 }), lip: mat(new THREE.Color(look.skin).multiplyScalar(0.72).getStyle(), { rough: 0.6 }), cheek: mat('#f08f86', { rough: 0.9, transparent: true, opacity: 0.35 }),
     hat: mat('#f4c430', { rough: 0.45 }), vest: mat('#d9f24a', { rough: 0.6 }), vc: mat('#ffffff', { vc: true, rough: 0.6 }),
   }
   const r = (j: J) => (g: THREE.Group | null) => { if (g) refs.current[j] = g }
@@ -256,7 +256,7 @@ export function Character({ look, state, scale = 1, shadow = true }: { look: Loo
     const surprised = st.action === 'surprise' ? Math.min(1, st.actionT * 5) * st.actionW : 0
     const open = Math.max(m, surprised * 0.8)
     mouthOpen.current.visible = open > 0.06
-    mouthOpen.current.scale.set(1 - surprised * 0.35 + m * 0.1, 0.25 + open * 0.95, 1)
+    mouthOpen.current.scale.set(1.25 - surprised * 0.35 + m * 0.15, 0.2 + open * 0.5, 0.6)
     smile.current.visible = open <= 0.06
     smile.current.scale.set(1, 0.6 + st.smile * 0.6, 1)
     const blinkPhase = (t * 0.31) % 1

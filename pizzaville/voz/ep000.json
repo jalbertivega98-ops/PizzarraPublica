@@ -4,15 +4,64 @@
   "rate": "+10%",
   "pitch": "+8Hz",
   "lines": [
-    {"id": "l01", "text": "¡Eh, tú! ¡Sí, tú! ¡Ven, que te enseño una cosa!"},
-    {"id": "l02", "text": "Soy Pizz, y bienvenido a Pizzaville."},
-    {"id": "l03", "text": "Ahora mismo vivo aquí completamente solo. Tengo mi casita, un montón de terreno... y absolutamente ningún vecino."},
-    {"id": "l04", "text": "Pero quiero convertir todo esto en una ciudad enorme. ¡Y necesito vuestra ayuda!"},
-    {"id": "l05", "text": "Cada persona que comente su nombre y su país podrá convertirse en un nuevo habitante."},
-    {"id": "l06", "text": "Lo veremos llegar, construir su casa... ¡y colocar su bandera!"},
-    {"id": "l07", "text": "Vamos a actualizar Pizzaville dos veces al día, para que veáis cómo crece."},
-    {"id": "l08", "text": "Empezaremos con unas pocas casas. Después, calles, tiendas, parques... ¡y barrios enteros!"},
-    {"id": "l09", "text": "Así que dime de dónde eres, y ayúdame a construir Pizzaville."},
-    {"id": "l10", "text": "¡Nos vemos en la próxima actualización!"}
-  ]
+    {
+      "id": "l01",
+      "text": "¡Eh, tú! ¡Sí, tú! En todo este valle enorme... solo vive una persona."
+    },
+    {
+      "id": "l02",
+      "text": "¡Yo! Soy Pizz, y esto es Pizzaville."
+    },
+    {
+      "id": "l03",
+      "text": "Tengo mi casa, todo este terreno... y cero vecinos."
+    },
+    {
+      "id": "l04",
+      "text": "Aquí caben cientos de casas. Pero ahora mismo no hay nadie. Ni un solo vecino."
+    },
+    {
+      "id": "l05",
+      "text": "Bueno... ¡eso va a cambiar!"
+    },
+    {
+      "id": "l06",
+      "text": "Quiero convertir esto en la ciudad más grande de internet. ¡Y la vais a construir vosotros!"
+    },
+    {
+      "id": "l07",
+      "text": "Comenta tu nombre y tu país, y te mudas a Pizzaville."
+    },
+    {
+      "id": "l08",
+      "text": "Te construimos tu casa, ladrillo a ladrillo... ¡con tu bandera!"
+    },
+    {
+      "id": "l09",
+      "text": "Como Sofía, de México. ¡Bienvenida, vecina!"
+    },
+    {
+      "id": "l10",
+      "text": "Cada parcela es para alguien de los comentarios. Y actualizamos dos veces al día."
+    },
+    {
+      "id": "l11",
+      "text": "Calles, tiendas, parques... y un barrio para cada país. ¿Qué país tendrá más casas?"
+    },
+    {
+      "id": "l12",
+      "text": "Así que comenta: soy tal, de tal país. ¡El primero será mi primer vecino!"
+    },
+    {
+      "id": "l13",
+      "text": "¡Te espero!"
+    }
+  ],
+  "eleven": {
+    "stability": 0.3,
+    "similarity_boost": 0.8,
+    "style": 0.6,
+    "use_speaker_boost": true
+  },
+  "eleven_out": "ep000"
 }

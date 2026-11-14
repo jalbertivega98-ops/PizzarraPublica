@@ -20,18 +20,21 @@ export const EP000 = {
   id: 'ep000',
   duration: 60,
   script: [
-    { id: 'l01', at: 4.9, text: '¡Eh, tú! ¡Sí, tú! ¡Ven, que te enseño una cosa!' },
-    { id: 'l02', at: 11.0, text: 'Soy Pizz, y bienvenido a Pizzaville.' },
-    { id: 'l03', at: 14.2, text: 'Ahora mismo vivo aquí completamente solo. Tengo mi casita, un montón de terreno... y absolutamente ningún vecino.' },
-    { id: 'l04', at: 22.0, text: 'Pero quiero convertir todo esto en una ciudad enorme. ¡Y necesito vuestra ayuda!' },
-    { id: 'l05', at: 27.8, text: 'Cada persona que comente su nombre y su país podrá convertirse en un nuevo habitante.' },
-    { id: 'l06', at: 32.8, text: 'Lo veremos llegar, construir su casa... ¡y colocar su bandera!' },
-    { id: 'l07', at: 40.3, text: 'Vamos a actualizar Pizzaville dos veces al día, para que veáis cómo crece.' },
-    { id: 'l08', at: 45.1, text: 'Empezaremos con unas pocas casas. Después, calles, tiendas, parques... ¡y barrios enteros!' },
-    { id: 'l09', at: 52.9, text: 'Así que dime de dónde eres, y ayúdame a construir Pizzaville.' },
-    { id: 'l10', at: 57.0, text: '¡Nos vemos en la próxima actualización!' },
+    { id: 'l01', at: 0.3, text: '¡Eh, tú! ¡Sí, tú! En todo este valle enorme... solo vive una persona.' },
+    { id: 'l02', at: 5.0, text: '¡Yo! Soy Pizz, y esto es Pizzaville.' },
+    { id: 'l03', at: 7.9, text: 'Tengo mi casa, todo este terreno... y cero vecinos.' },
+    { id: 'l04', at: 11.8, text: 'Aquí caben cientos de casas. Pero ahora mismo no hay nadie. Ni un solo vecino.' },
+    { id: 'l05', at: 17.4, text: 'Bueno... ¡eso va a cambiar!' },
+    { id: 'l06', at: 19.8, text: 'Quiero convertir esto en la ciudad más grande de internet. ¡Y la vais a construir vosotros!' },
+    { id: 'l07', at: 25.3, text: 'Comenta tu nombre y tu país, y te mudas a Pizzaville.' },
+    { id: 'l08', at: 29.6, text: 'Te construimos tu casa, ladrillo a ladrillo... ¡con tu bandera!' },
+    { id: 'l09', at: 35.2, text: 'Como Sofía, de México. ¡Bienvenida, vecina!' },
+    { id: 'l10', at: 40.6, text: 'Cada parcela es para alguien de los comentarios. Y actualizamos dos veces al día.' },
+    { id: 'l11', at: 45.6, text: 'Calles, tiendas, parques... y un barrio para cada país. ¿Qué país tendrá más casas?' },
+    { id: 'l12', at: 50.9, text: 'Así que comenta: soy tal, de tal país. ¡El primero será mi primer vecino!' },
+    { id: 'l13', at: 56.6, text: '¡Te espero!' },
   ],
-}
+}}
 
 // ---------------------------------------------------------------- layout
 const PZ = { x: 0.15, z: 5.3 } // Pizz's mark in front of his door
@@ -75,7 +78,7 @@ function cameraKeys(): CamKey[] {
     { t: 29.4, p: at(12, 8, 4.5), l: [s.x, s.y + 1.5, s.z], fov: 46, cut: true },
     { t: 33.5, p: at(12, -9, 7), l: [s.x, s.y + 2.5, s.z], fov: 44 },
     { t: 38.6, p: at(10, -6, 4.5), l: [fl[0], s.y + 2.6, fl[1]], fov: 44 },
-    { t: 40.2, p: at(8.5, -3.5, 3.8), l: [fl[0], s.y + 3.6, fl[1]], fov: 40 },
+    { t: 40.2, p: at(13, -6.5, 5.5), l: [fl[0] * 0.5 + s.x * 0.5, s.y + 3.0, fl[1] * 0.5 + s.z * 0.5], fov: 46 },
     // valley flyover with free plots
     { t: 40.3, p: [-34, 34, 66], l: [24, 0, 24], fov: 50, cut: true },
     { t: 50.2, p: [62, 28, 74], l: [0, 0, 22], fov: 50, e: 'linear' },
@@ -83,7 +86,8 @@ function cameraKeys(): CamKey[] {
     { t: 50.3, p: [0.8, 2.5, 9.0], l: [PZ.x, H - 0.05, PZ.z], fov: 36, cut: true },
     { t: 55.0, p: [0.3, 2.45, 8.4], l: [PZ.x, H - 0.05, PZ.z], fov: 34 },
     // pull back to the single house in the huge valley
-    { t: 56.4, p: [3, 6, 19], l: [0, 2, 2], fov: 40, e: 'in' },
+    { t: 56.3, p: [0.25, 2.45, 8.3], l: [PZ.x, H - 0.05, PZ.z], fov: 34 },
+    { t: 56.4, p: [4, 7, 24], l: [0, 2, 2], fov: 40, cut: true },
     { t: 60, p: [110, 210, 420], l: [0, 0, 0], fov: 46, e: 'out' },
   ]
 }
@@ -272,8 +276,8 @@ export function Ep000({ startAt = 0 }: { startAt?: number }) {
       </group>
       <group ref={markers}>
         {free.map((f, i) => (
-          <group key={f.id} position={[f.x, f.y + 9, f.z]} userData={{ y: f.y + 9 }}>
-            <group scale={2.2}><PlotMarker /></group>
+          <group key={f.id} position={[f.x, f.y + 13, f.z]} userData={{ y: f.y + 13 }}>
+            <group scale={3.4}><PlotMarker /></group>
           </group>
         ))}
       </group>
@@ -304,7 +308,7 @@ function PlotMarker() {
         <Text font="/fonts/lilita.woff" fontSize={1.1} color="#ff7a3d" anchorX="center" anchorY="middle" position={[0, 0.08, 0]}>
           +
         </Text>
-        <Text font="/fonts/fredoka600.woff" fontSize={0.55} color="#ffffff" outlineWidth={0.05} outlineColor="#1a2233" anchorX="center" anchorY="top" position={[0, -1.7, 0]}>
+        <Text font="/fonts/fredoka600.woff" fontSize={1.05} color="#ffffff" outlineWidth={0.09} outlineColor="#1a2233" anchorX="center" anchorY="top" position={[0, -1.65, 0]}>
           ¿TU CASA?
         </Text>
       </Billboard>

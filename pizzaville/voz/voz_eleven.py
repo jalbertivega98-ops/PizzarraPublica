@@ -43,7 +43,7 @@ def main():
     need = sum(len(l["text"]) for l in cfg["lines"])
     print(f"El guion necesita {need} caracteres")
     if left is not None and need > left: sys.exit(f"NO HAY SALDO: faltan {need - left} caracteres. No genero nada.")
-    out = os.path.join(os.path.dirname(os.path.abspath(path)), "..", "public", "voz", cfg["episode"] + "_eleven")
+    out = os.path.join(os.path.dirname(os.path.abspath(path)), "..", "public", "voz", cfg.get("eleven_out", cfg["episode"] + "_eleven"))
     os.makedirs(out, exist_ok=True)
     st = cfg.get("eleven", {"stability": 0.4, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": True})
     voice, first = None, None

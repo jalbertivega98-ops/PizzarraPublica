@@ -38,7 +38,7 @@ Style: Mid,Lilita One,78,&H00FFFFFF,&H00FFFFFF,&H00201810,&H64000000,0,0,0,0,100
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 `
-  const ev = []
+  const ev = [], subs = []
   for (const l of info.lines) {
     // chunks of up to 4 words / 24 chars, karaoke highlight word by word
     const words = l.words
@@ -52,7 +52,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         const dur = Math.round(((i < chunk.length - 1 ? chunk[i + 1].t : w.t + w.d) - w.t) * 100)
         txt += `{\\kf${Math.max(5, dur)}}${w.disp}${i < chunk.length - 1 ? ' ' : ''}`
       })
-      ev.push(`Dialogue: 0,${assTime(a)},${assTime(Math.min(b, to))},Sub,,0,0,0,,${txt}`)
+      subs.push({ a, b: Math.min(b, to), txt })
       chunk = []
     }
     // map spoken words to display tokens (keep ¡! punctuation)
@@ -68,12 +68,18 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     }
     flush()
   }
+  subs.sort((x, y) => x.a - y.a).forEach((c, i) => {
+    const nb = i + 1 < subs.length ? Math.min(c.b, subs[i + 1].a - 0.01) : c.b
+    ev.push(`Dialogue: 0,${assTime(c.a)},${assTime(nb)},Sub,,0,0,0,,${c.txt}`)
+  })
   if (ep === 'ep000') {
+    ev.push(`Dialogue: 2,${assTime(0)},${assTime(3.0)},Mid,,0,0,0,,{\\an5\\pos(540,560)\\fad(0,200)\\t(0,250,\\fscx115\\fscy115)\\t(250,450,\\fscx100\\fscy100)}AQUÍ SOLO VIVE\\N{\\c&H004DD3FF&\\fs120}1 PERSONA`)
     ev.push(`Dialogue: 1,${assTime(25.2)},${assTime(40.2)},Tag,,0,0,0,,{\\fad(200,200)}SIMULACIÓN · ASÍ SERÁ`)
+    ev.push(`Dialogue: 2,${assTime(51.0)},${assTime(56.3)},Mid,,0,0,0,,{\\an5\\pos(540,330)\\fad(200,150)}COMENTA:\\N{\\c&H004DD3FF&}«SOY ___ DE ___»`)
     ev.push(`Dialogue: 1,${assTime(41.0)},${assTime(50.2)},Tag,,0,0,0,,{\\fad(200,200)}2 ACTUALIZACIONES AL DÍA`)
     ev.push(`Dialogue: 2,${assTime(57.2)},${assTime(to)},Big,,0,0,0,,{\\an5\\pos(540,700)\\fad(250,0)\\t(0,300,\\fscx110\\fscy110)\\t(300,500,\\fscx100\\fscy100)}PIZZAVILLE`)
     ev.push(`Dialogue: 2,${assTime(57.7)},${assTime(to)},Mid,,0,0,0,,{\\an5\\pos(540,850)\\fad(250,0)}1 HABITANTE · 1 CASA`)
-    ev.push(`Dialogue: 2,${assTime(58.2)},${assTime(to)},Mid,,0,0,0,,{\\an5\\pos(540,1010)\\fad(250,0)\\c&H004DD3FF&}COMENTA TU PAÍS\\NPARA UNIRTE`)
+    ev.push(`Dialogue: 2,${assTime(58.2)},${assTime(to)},Mid,,0,0,0,,{\\an5\\pos(540,1010)\\fad(250,0)\\c&H004DD3FF&}COMENTA «SOY ___ DE ___»\\NY TE MUDAS AQUÍ`)
   }
   return head + ev.join('\n') + '\n'
 }

@@ -39,15 +39,22 @@ def main():
             print(f"VOZ {v['voice_id']} | {v.get('name')} | {v.get('category')} | {l.get('gender','')} {l.get('age','')} {l.get('accent','')} {l.get('language','')}")
         return
     path = sys.argv[1] if os.path.exists(sys.argv[1]) else os.path.join(os.path.dirname(os.path.abspath(__file__)), sys.argv[1])
-    cfg = json.load(open(path)); voice = sys.argv[2]
+    cfg = json.load(open(path)); candidates = sys.argv[2].split(",")
     need = sum(len(l["text"]) for l in cfg["lines"])
     print(f"El guion necesita {need} caracteres")
     if left is not None and need > left: sys.exit(f"NO HAY SALDO: faltan {need - left} caracteres. No genero nada.")
     out = os.path.join(os.path.dirname(os.path.abspath(path)), "..", "public", "voz", cfg["episode"] + "_eleven")
     os.makedirs(out, exist_ok=True)
     st = cfg.get("eleven", {"stability": 0.4, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": True})
+    voice, first = None, None
+    for v in candidates:  # the first voice the account can actually use
+        first = call(f"/text-to-speech/{v}/with-timestamps?output_format=mp3_44100_128",
+                     {"text": cfg["lines"][0]["text"], "model_id": MODEL, "voice_settings": st}, soft=True)
+        if first is not None: voice = v; break
+    if not voice: sys.exit("Ninguna voz disponible")
+    print("VOZ_USADA", voice)
     for line in cfg["lines"]:
-        r = call(f"/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_128",
+        r = first if line is cfg["lines"][0] else call(f"/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_128",
                  {"text": line["text"], "model_id": MODEL, "voice_settings": st})
         open(os.path.join(out, line["id"] + ".mp3"), "wb").write(base64.b64decode(r["audio_base64"]))
         a = r.get("alignment") or {}

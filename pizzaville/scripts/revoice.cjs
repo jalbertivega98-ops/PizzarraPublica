@@ -4,7 +4,7 @@ const fs = require('fs'), path = require('path'), { execFileSync } = require('ch
 const [dir, vdir] = process.argv.slice(2)
 const src = fs.readFileSync(path.join(__dirname, 'export.cjs'), 'utf8')
 const lib = src.slice(src.indexOf('const FPS'), src.indexOf(';(async'))
-const { buildAss } = new Function('require', 'path', 'fs', 'args', 'opt', 'ep', lib.replace(/^fs\.mkdirSync[^\n]*\n/m, '') + '\nreturn { buildAss }')(require, path, fs, [], (k, d) => d, 'ep')
+const { buildAss } = new Function('require', 'path', 'fs', 'args', 'opt', 'ep', lib.replace(/^fs\.mkdirSync[^\n]*\n/m, '') + '\nreturn { buildAss }')(require, path, fs, [], (k, d) => d, JSON.parse(fs.readFileSync(path.join(dir, 'info.json'), 'utf8')).id)
 const info = JSON.parse(fs.readFileSync(path.join(dir, 'info.json'), 'utf8'))
 const voices = []
 for (const l of info.lines) {

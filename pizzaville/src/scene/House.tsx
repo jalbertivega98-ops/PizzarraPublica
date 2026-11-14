@@ -91,6 +91,8 @@ export function useBuildAnim(getP: () => number) {
   return reg
 }
 
+const darkInterior = new THREE.MeshBasicMaterial({ color: '#1c1512' })
+
 // ---------------------------------------------------------------- pieces
 function Box({ s, p, m, cast = true, r }: { s: [number, number, number]; p: [number, number, number]; m: THREE.Material; cast?: boolean; r?: [number, number, number] }) {
   return (
@@ -198,7 +200,7 @@ function Door({ spec, z, reg, getDoor }: { spec: HouseSpec; z: number; reg: Retu
   return (
     <group position={[0, 0, z]} ref={reg('pop', a, b)}>
       <Box s={[1.3, 2.25, 0.12]} p={[0, 1.12, 0]} m={trim} />
-      <Box s={[1.0, 2.05, 0.04]} p={[0, 1.03, 0.04]} m={mat('#2b211c', { rough: 1 })} cast={false} />
+      <mesh position={[0, 1.03, 0.04]} material={darkInterior}><boxGeometry args={[1.0, 2.05, 0.04]} /></mesh>
       <group ref={panel} position={[-0.5, 0, 0.09]}>
         <Box s={[1.0, 2.05, 0.08]} p={[0.5, 1.03, 0]} m={wood} />
         <Box s={[0.36, 0.7, 0.04]} p={[0.28, 1.45, 0.05]} m={mat(spec.door, { rough: 0.5 })} cast={false} />

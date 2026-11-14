@@ -13,7 +13,7 @@ export const world = {
 }
 
 // ------------------------------------------------------------ camera paths
-export type CamKey = { t: number; p: [number, number, number]; l: [number, number, number]; fov?: number; e?: keyof typeof ease | 'linear' }
+export type CamKey = { t: number; p: [number, number, number]; l: [number, number, number]; fov?: number; e?: keyof typeof ease | 'linear'; cut?: boolean }
 
 const v3 = new THREE.Vector3()
 function catmull(p0: number, p1: number, p2: number, p3: number, t: number) {
@@ -29,7 +29,10 @@ export function evalCam(keys: CamKey[], t: number, outP: THREE.Vector3, outL: TH
   let i = 0
   while (keys[i + 1].t < t) i++
   const a = keys[i], b = keys[i + 1]
-  const k0 = keys[Math.max(0, i - 1)], k3 = keys[Math.min(keys.length - 1, i + 2)]
+  if (b.cut) { outP.set(...a.p); outL.set(...a.l); return a.fov ?? 45 }
+  const k0 = a.cut ? a : keys[Math.max(0, i - 1)]
+  const n3 = keys[Math.min(keys.length - 1, i + 2)]
+  const k3 = n3.cut ? b : n3
   let u = (t - a.t) / (b.t - a.t)
   const e = b.e ?? 'inOut'
   u = e === 'linear' ? u : ease[e](u)

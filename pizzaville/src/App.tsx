@@ -9,6 +9,9 @@ import { params, tickLive, clock, RECORD, setTime, whenReady } from './engine/cl
 import { nightMats } from './scene/materials'
 import { world } from './engine/director'
 import { skyAt } from './scene/Atmosphere'
+import { Ep000 } from './episodes/ep000'
+
+const EPISODE = params.get('episode')
 
 function Ticker() {
   useFrame((_, d) => {
@@ -46,6 +49,11 @@ if (RECORD) {
   }
 }
 
+function EpisodeHooks() {
+  useMemo(() => { if (RECORD) (window as any).__pv.setCam = () => {} }, [])
+  return null
+}
+
 export default function App() {
   const pizz = useMemo(() => { const s = newState(); s.x = 0.4; s.z = 5.6; s.y = HOME_Y; s.ry = 0.25; return s }, [])
   if (params.get('hour')) world.hour = Number(params.get('hour'))
@@ -53,11 +61,17 @@ export default function App() {
   return (
     <Canvas shadows={{ type: THREE.PCFShadowMap }} frameloop={RECORD ? 'never' : 'always'} gl={{ antialias: true, preserveDrawingBuffer: true }} dpr={1} camera={{ fov: 45, near: 0.1, far: 20000 }}>
       <Ticker />
-      <DebugCam />
+      {EPISODE ? <EpisodeHooks /> : <DebugCam />}
       <NatureWorld />
-      <PizzHome />
       <Sign />
-      <Character look={PIZZ_LOOK} state={pizz} />
+      {EPISODE === 'ep000' ? (
+        <Ep000 />
+      ) : (
+        <>
+          <PizzHome />
+          <Character look={PIZZ_LOOK} state={pizz} />
+        </>
+      )}
     </Canvas>
   )
 }

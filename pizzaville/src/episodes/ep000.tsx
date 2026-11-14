@@ -21,15 +21,15 @@ export const EP000 = {
   duration: 60,
   script: [
     { id: 'l01', at: 4.9, text: '¡Eh, tú! ¡Sí, tú! ¡Ven, que te enseño una cosa!' },
-    { id: 'l02', at: 8.4, text: 'Soy Pizz, y bienvenido a Pizzaville.' },
-    { id: 'l03', at: 11.6, text: 'Ahora mismo vivo aquí completamente solo. Tengo mi casita, un montón de terreno... y absolutamente ningún vecino.' },
-    { id: 'l04', at: 19.6, text: 'Pero quiero convertir todo esto en una ciudad enorme. ¡Y necesito vuestra ayuda!' },
-    { id: 'l05', at: 25.2, text: 'Cada persona que comente su nombre y su país podrá convertirse en un nuevo habitante.' },
-    { id: 'l06', at: 31.0, text: 'Lo veremos llegar, construir su casa... ¡y colocar su bandera!' },
+    { id: 'l02', at: 11.0, text: 'Soy Pizz, y bienvenido a Pizzaville.' },
+    { id: 'l03', at: 14.2, text: 'Ahora mismo vivo aquí completamente solo. Tengo mi casita, un montón de terreno... y absolutamente ningún vecino.' },
+    { id: 'l04', at: 22.0, text: 'Pero quiero convertir todo esto en una ciudad enorme. ¡Y necesito vuestra ayuda!' },
+    { id: 'l05', at: 27.8, text: 'Cada persona que comente su nombre y su país podrá convertirse en un nuevo habitante.' },
+    { id: 'l06', at: 32.8, text: 'Lo veremos llegar, construir su casa... ¡y colocar su bandera!' },
     { id: 'l07', at: 40.3, text: 'Vamos a actualizar Pizzaville dos veces al día, para que veáis cómo crece.' },
-    { id: 'l08', at: 44.6, text: 'Empezaremos con unas pocas casas. Después, calles, tiendas, parques... ¡y barrios enteros!' },
-    { id: 'l09', at: 50.4, text: 'Así que dime de dónde eres, y ayúdame a construir Pizzaville.' },
-    { id: 'l10', at: 55.2, text: '¡Nos vemos en la próxima actualización!' },
+    { id: 'l08', at: 45.1, text: 'Empezaremos con unas pocas casas. Después, calles, tiendas, parques... ¡y barrios enteros!' },
+    { id: 'l09', at: 52.9, text: 'Así que dime de dónde eres, y ayúdame a construir Pizzaville.' },
+    { id: 'l10', at: 57.0, text: '¡Nos vemos en la próxima actualización!' },
   ],
 }
 
@@ -48,6 +48,10 @@ function doorOf(s: { x: number; z: number; rot: number }, dist: number): Pt {
 function cameraKeys(): CamKey[] {
   const s = slot()
   const H = headY
+  const F = [Math.sin(s.rot), Math.cos(s.rot)], R = [Math.cos(s.rot), -Math.sin(s.rot)]
+  const at = (f: number, r: number, y: number): [number, number, number] => [s.x + F[0] * f + R[0] * r, s.y + y, s.z + F[1] * f + R[1] * r]
+  const spec = houseSpecFromSeed(DEMO_SEED)
+  const fl = [s.x - R[0] * (spec.w / 2 + 1.1) + F[0] * (spec.d / 2 + 1.6), s.z - R[1] * (spec.w / 2 + 1.1) + F[1] * (spec.d / 2 + 1.6)]
   return [
     // 0–3 s: aerial → house, fast and smooth
     { t: 0, p: [-520, 330, 760], l: [0, 20, 0], fov: 46 },
@@ -68,10 +72,10 @@ function cameraKeys(): CamKey[] {
     { t: 19.6, p: [1.4, 2.5, 10.2], l: [PZ.x, H - 0.05, PZ.z], fov: 38, cut: true },
     { t: 25.0, p: [0.6, 2.4, 9.2], l: [PZ.x, H, PZ.z], fov: 36 },
     // 25.1–29.4: follow the newcomer (handled in code), then the works
-    { t: 29.4, p: [s.x + 12, s.y + 4.5, s.z - 8], l: [s.x, s.y + 1.5, s.z], fov: 46, cut: true },
-    { t: 33.5, p: [s.x + 13, s.y + 7, s.z + 9], l: [s.x, s.y + 2.5, s.z], fov: 44 },
-    { t: 38.6, p: [s.x - 9, s.y + 5, s.z + 12], l: [s.x - 1, s.y + 2.8, s.z], fov: 44 },
-    { t: 40.2, p: [s.x - 7, s.y + 3.5, s.z + 10], l: [s.x - 3, s.y + 3.4, s.z + 3], fov: 40 },
+    { t: 29.4, p: at(12, 8, 4.5), l: [s.x, s.y + 1.5, s.z], fov: 46, cut: true },
+    { t: 33.5, p: at(12, -9, 7), l: [s.x, s.y + 2.5, s.z], fov: 44 },
+    { t: 38.6, p: at(10, -6, 4.5), l: [fl[0], s.y + 2.6, fl[1]], fov: 44 },
+    { t: 40.2, p: at(8.5, -3.5, 3.8), l: [fl[0], s.y + 3.6, fl[1]], fov: 40 },
     // valley flyover with free plots
     { t: 40.3, p: [-34, 34, 66], l: [24, 0, 24], fov: 50, cut: true },
     { t: 50.2, p: [62, 28, 74], l: [0, 0, 22], fov: 50, e: 'linear' },
@@ -116,6 +120,24 @@ export function Ep000({ startAt = 0 }: { startAt?: number }) {
     return pts
   }, [])
 
+  useMemo(() => {
+    const pv = (window as any).__pv
+    if (!pv) return
+    pv.info = () => {
+      const b = BUILD.start, d = BUILD.dur
+      const sfx: { type: string; at: number; g?: number }[] = [
+        { type: 'whoosh', at: 0.0, g: 0.7 }, { type: 'door', at: 3.0 }, { type: 'pop', at: 5.0, g: 0.35 },
+        { type: 'whoosh', at: 11.45, g: 0.35 }, { type: 'whoosh', at: 15.95, g: 0.35 }, { type: 'chime', at: 22.7, g: 0.35 },
+        { type: 'pop', at: b, g: 0.5 }, { type: 'thud', at: b + d * 0.06 }, { type: 'thud', at: b + d * 0.09 },
+        { type: 'thud', at: b + d * 0.14 }, { type: 'thud', at: b + d * 0.5, g: 0.7 }, { type: 'thud', at: b + d * 0.57, g: 0.7 },
+        { type: 'chime', at: b + d * 0.95, g: 0.6 }, { type: 'whoosh', at: 40.2, g: 0.6 }, { type: 'whoosh', at: 50.2, g: 0.4 }, { type: 'whoosh', at: 56.3, g: 0.6 },
+      ]
+      for (let k = 0; k < 10; k++) sfx.push({ type: 'pop', at: b + d * (0.64 + k * 0.012), g: 0.25 })
+      for (let k = 0; k < 8; k++) sfx.push({ type: 'pop', at: 41 + k * 0.35, g: 0.3 })
+      for (let tt = b + d * 0.2; tt < b + d * 0.62; tt += 0.27) sfx.push({ type: 'hammer', at: tt, g: 0.35 })
+      return { id: EP000.id, duration: EP000.duration, lines: lines.map((l) => ({ id: l.id, at: l.at, dur: l.dur, text: l.text, words: l.words, hasAudio: l.hasAudio })), sfx }
+    }
+  }, [])
   useFrame(() => {
     const t = T()
     // ---------- camera
@@ -163,8 +185,8 @@ export function Ep000({ startAt = 0 }: { startAt?: number }) {
     if (t >= 40.3) {
       walk(pizz, [[PZ.x, 1.2], [PZ.x, PZ.z]], -10, 2, t)
       pizz.lookAt = t > 50 ? camPos : null
-      if (t > 52.2 && t < 53.6) { pizz.action = 'point'; pizz.actionT = t; pizz.actionW = seg(t, 52.2, 52.5) * (1 - seg(t, 53.3, 53.6)); pizz.ry = 0.2 }
-      if (t > 55.4) { pizz.action = 'wave'; pizz.actionT = t; pizz.actionW = seg(t, 55.4, 55.7) }
+      if (t > 53.1 && t < 54.7) { pizz.action = 'point'; pizz.actionT = t; pizz.actionW = seg(t, 53.1, 53.4) * (1 - seg(t, 54.4, 54.7)); pizz.ry = 0.2 }
+      if (t > 56.6) { pizz.action = 'wave'; pizz.actionT = t; pizz.actionW = seg(t, 56.6, 56.9) }
     }
     pizz.mouth = mouthAt(lines, t)
     if (pizz.y < HOME_Y) pizz.y = HOME_Y

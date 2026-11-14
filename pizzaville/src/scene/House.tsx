@@ -159,7 +159,7 @@ function roofRise(spec: HouseSpec) {
 
 function Window({ x, y, z, ry = 0, spec, reg, a, b, flowers = false }: { x: number; y: number; z: number; ry?: number; spec: HouseSpec; reg: ReturnType<typeof useBuildAnim>; a: number; b: number; flowers?: boolean }) {
   const trim = mat(spec.trim, { rough: 0.6 })
-  const glass = nightMat('#5c7f9e', '#ffc46b', 0.06, 1.7)
+  const glass = nightMat('#9fc1dc', '#ffc46b', 0.04, 1.7)
   const sh = spec.shutter ? mat(spec.shutter, { rough: 0.7 }) : null
   return (
     <group position={[x, y, z]} rotation-y={ry} ref={reg('pop', a, b)}>
@@ -200,8 +200,8 @@ function Door({ spec, z, reg, getDoor }: { spec: HouseSpec; z: number; reg: Retu
   return (
     <group position={[0, 0, z]} ref={reg('pop', a, b)}>
       <Box s={[1.3, 2.25, 0.12]} p={[0, 1.12, 0]} m={trim} />
-      <mesh position={[0, 1.03, 0.04]} material={darkInterior}><boxGeometry args={[1.0, 2.05, 0.04]} /></mesh>
-      <group ref={panel} position={[-0.5, 0, 0.09]}>
+      <mesh position={[0, 1.03, 0.066]} material={darkInterior}><boxGeometry args={[1.0, 2.05, 0.04]} /></mesh>
+      <group ref={panel} position={[-0.5, 0, 0.1]}>
         <Box s={[1.0, 2.05, 0.08]} p={[0.5, 1.03, 0]} m={wood} />
         <Box s={[0.36, 0.7, 0.04]} p={[0.28, 1.45, 0.05]} m={mat(spec.door, { rough: 0.5 })} cast={false} />
         <Box s={[0.36, 0.7, 0.04]} p={[0.72, 1.45, 0.05]} m={mat(spec.door, { rough: 0.5 })} cast={false} />

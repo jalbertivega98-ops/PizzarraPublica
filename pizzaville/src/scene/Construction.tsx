@@ -47,7 +47,7 @@ export function ConstructionSite({ spec, getProgress }: { spec: HouseSpec; getPr
         else {
           const R = Math.max(w, d) * 0.55 + r1 * 1.2
           o.position.set(Math.cos(a) * R * (0.4 + age * 0.6), 0.2 + age * (1 + r2 * 1.5) + (e >= 4 ? spec.wallH * spec.floors * 0.9 : 0), Math.sin(a) * R * (0.4 + age * 0.6))
-          o.scale.setScalar((0.35 + r3 * 0.45) * Math.sin(age * Math.PI) * 1.4)
+          o.scale.setScalar((0.25 + r3 * 0.35) * Math.sin(age * Math.PI))
         }
         o.updateMatrix()
         dust.current.setMatrixAt(k, o.matrix)
@@ -104,7 +104,7 @@ export function ConstructionSite({ spec, getProgress }: { spec: HouseSpec; getPr
           </mesh>
         ))}
       </group>
-      <instancedMesh ref={dust} args={[new THREE.IcosahedronGeometry(0.5, 1), mat('#e8dcc6', { rough: 1, transparent: true, opacity: 0.75 }), N]} frustumCulled={false} />
+      <instancedMesh ref={dust} args={[new THREE.IcosahedronGeometry(0.5, 1), mat('#f6f1e8', { rough: 1, transparent: true, opacity: 0.5 }), N]} frustumCulled={false} />
       <instancedMesh ref={sparkle} args={[new THREE.OctahedronGeometry(0.5, 0), mat('#ffd34d', { emissive: '#ffb020', ei: 1.2 }), SP]} frustumCulled={false} />
     </group>
   )

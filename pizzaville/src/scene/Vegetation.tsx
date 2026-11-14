@@ -292,12 +292,12 @@ function placeGrass() {
 }
 
 function flowerParts() {
-  const stem = paint(T(new THREE.CylinderGeometry(0.008, 0.012, 0.32, 3), 0, 0.16, 0), '#4d8a35')
-  const center = paint(T(new THREE.SphereGeometry(0.03, 6, 4), 0, 0.33, 0), '#f2c230')
+  const stem = paint(T(new THREE.CylinderGeometry(0.01, 0.014, 0.2, 3), 0, 0.1, 0), '#4d8a35')
+  const center = paint(T(new THREE.SphereGeometry(0.035, 6, 4), 0, 0.21, 0), '#f2c230')
   const petals: THREE.BufferGeometry[] = []
   for (let i = 0; i < 5; i++) {
     const a = (i / 5) * Math.PI * 2
-    petals.push(paint(T(new THREE.SphereGeometry(0.035, 6, 4), Math.cos(a) * 0.045, 0.33, Math.sin(a) * 0.045, 0, 0, 0, [1.2, 0.45, 1.2]), '#ffffff'))
+    petals.push(paint(T(new THREE.SphereGeometry(0.05, 6, 4), Math.cos(a) * 0.065, 0.21, Math.sin(a) * 0.065, 0, 0, 0, [1.25, 0.45, 1.25]), '#ffffff'))
   }
   return { base: merge([stem, center]), petals: merge(petals) }
 }

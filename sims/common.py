@@ -48,6 +48,7 @@ class Canvas:
         c.move_to(x, y)
         c.set_source_rgba(*col, alpha)
         c.show_text(s)
+        c.new_path()
         c.restore()
 
 

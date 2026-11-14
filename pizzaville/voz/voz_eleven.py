@@ -8,17 +8,22 @@ KEY = os.environ.get("ELEVENLABS_API_KEY", "").strip()
 API = "https://api.elevenlabs.io/v1"
 MODEL = os.environ.get("ELEVEN_MODEL", "eleven_multilingual_v2")
 
-def call(path, data=None):
+def call(path, data=None, soft=False):
     req = urllib.request.Request(API + path, data=json.dumps(data).encode() if data is not None else None,
                                  headers={"xi-api-key": KEY, "Content-Type": "application/json"}, method="POST" if data is not None else "GET")
     try:
         with urllib.request.urlopen(req, timeout=120) as r:
-            return json.loads(r.read() or b"{}")
+            b = r.read()
+            try: return json.loads(b or b"{}")
+            except ValueError: return {"bytes": len(b)}
     except urllib.error.HTTPError as e:
-        sys.exit(f"ElevenLabs {e.code}: {e.read().decode()[:400]}")
+        msg = f"ElevenLabs {e.code}: {e.read().decode()[:400]}"
+        if soft: print(msg); return None
+        sys.exit(msg)
 
 def saldo():
-    s = call("/user/subscription")
+    s = call("/user/subscription", soft=True)
+    if s is None: print("SALDO_DESCONOCIDO (la clave no tiene permiso user_read)"); return None
     left = s.get("character_limit", 0) - s.get("character_count", 0)
     print(f"PLAN={s.get('tier')} USADOS={s.get('character_count')} LIMITE={s.get('character_limit')} QUEDAN={left} RENUEVA={s.get('next_character_count_reset_unix')}")
     return left
@@ -27,7 +32,9 @@ def main():
     if not KEY: sys.exit("Falta el secreto ELEVENLABS_API_KEY")
     left = saldo()
     if sys.argv[1] == "saldo":
-        for v in call("/voices").get("voices", []):
+        r = call(f"/text-to-speech/{sys.argv[2] if len(sys.argv) > 2 else 'Iohr8NC0THLcVZXLaHlP'}?output_format=mp3_22050_32", {"text": "Hola.", "model_id": MODEL}, soft=True)
+        print("PRUEBA_TTS", "OK (hay créditos)" if r is not None else "FALLÓ")
+        for v in (call("/voices", soft=True) or {}).get("voices", []):
             l = v.get("labels") or {}
             print(f"VOZ {v['voice_id']} | {v.get('name')} | {v.get('category')} | {l.get('gender','')} {l.get('age','')} {l.get('accent','')} {l.get('language','')}")
         return
@@ -35,7 +42,7 @@ def main():
     cfg = json.load(open(path)); voice = sys.argv[2]
     need = sum(len(l["text"]) for l in cfg["lines"])
     print(f"El guion necesita {need} caracteres")
-    if need > left: sys.exit(f"NO HAY SALDO: faltan {need - left} caracteres. No genero nada.")
+    if left is not None and need > left: sys.exit(f"NO HAY SALDO: faltan {need - left} caracteres. No genero nada.")
     out = os.path.join(os.path.dirname(os.path.abspath(path)), "..", "public", "voz", cfg["episode"] + "_eleven")
     os.makedirs(out, exist_ok=True)
     st = cfg.get("eleven", {"stability": 0.4, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": True})

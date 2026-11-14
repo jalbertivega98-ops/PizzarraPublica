@@ -38,7 +38,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Instalar edge-tts
-        run: pip install edge-tts==7.2.8
+        run: pip install edge-tts==7.3.1
       - name: Generar voces
         working-directory: pipeline
         env:
@@ -49,6 +49,10 @@ jobs:
           BIBLIOTECA: ${{ inputs.biblioteca }}
           MOTOR: ${{ inputs.motor }}
         run: |
+          case "$STORYBOARDS" in pizzaville:*)
+            for g in ${STORYBOARDS#pizzaville:}; do python3 ../pizzaville/voz/voz_edge.py ../pizzaville/voz/$g; done
+            exit 0;;
+          esac
           if [ -n "$MUESTRAS" ]; then
             python3 tts_elevenlabs.py --muestras "$MUESTRAS" --biblioteca "${BIBLIOTECA:-0}" --motor "${MOTOR:-elevenlabs}"
           else
@@ -56,7 +60,7 @@ jobs:
           fi
       - name: Guardar las voces en el repositorio
         run: |
-          git add pipeline/voces_elevenlabs
+          git add pipeline/voces_elevenlabs pizzaville/public/voz || true
           if ! git diff --cached --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

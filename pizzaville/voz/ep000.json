@@ -1,0 +1,18 @@
+{
+  "episode": "ep000",
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+10%",
+  "pitch": "+8Hz",
+  "lines": [
+    {"id": "l01", "text": "¡Eh, tú! ¡Sí, tú! ¡Ven, que te enseño una cosa!"},
+    {"id": "l02", "text": "Soy Pizz, y bienvenido a Pizzaville."},
+    {"id": "l03", "text": "Ahora mismo vivo aquí completamente solo. Tengo mi casita, un montón de terreno... y absolutamente ningún vecino."},
+    {"id": "l04", "text": "Pero quiero convertir todo esto en una ciudad enorme. ¡Y necesito vuestra ayuda!"},
+    {"id": "l05", "text": "Cada persona que comente su nombre y su país podrá convertirse en un nuevo habitante."},
+    {"id": "l06", "text": "Lo veremos llegar, construir su casa... ¡y colocar su bandera!"},
+    {"id": "l07", "text": "Vamos a actualizar Pizzaville dos veces al día, para que veáis cómo crece."},
+    {"id": "l08", "text": "Empezaremos con unas pocas casas. Después, calles, tiendas, parques... ¡y barrios enteros!"},
+    {"id": "l09", "text": "Así que dime de dónde eres, y ayúdame a construir Pizzaville."},
+    {"id": "l10", "text": "¡Nos vemos en la próxima actualización!"}
+  ]
+}

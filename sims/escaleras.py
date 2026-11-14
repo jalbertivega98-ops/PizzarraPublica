@@ -11,8 +11,8 @@ DUR = float(os.environ.get("DUR", "60"))
 rng = np.random.default_rng(21)
 SUB = 4
 SW, SH = 140, 100
-NST = 260
-PS = 26
+NST = 600
+PS = 32
 
 space = pymunk.Space()
 space.gravity = (0, 1500)
@@ -22,7 +22,7 @@ for i in range(NST):
     a = (x, y); b = (x + SW, y); d = (x + SW, y + SH)
     for p, q in ((a, b), (b, d)):
         s = pymunk.Segment(space.static_body, p, q, 3)
-        s.elasticity = 0.4; s.friction = 0.7; s.collision_type = 1
+        s.elasticity = 0.2; s.friction = 0.8; s.collision_type = 1
         space.add(s)
     stairs.append((a, b, d))
     x += SW; y += SH
@@ -45,7 +45,7 @@ def make_chunk(cells, pos, angle, vel, angv, hue, obj):
     for (cx, cy, _) in cells:
         h = PS / 2 - 0.5
         s = pymunk.Poly(b, [(cx - h, cy - h), (cx + h, cy - h), (cx + h, cy + h), (cx - h, cy + h)])
-        s.elasticity = 0.35; s.friction = 0.6; s.collision_type = 2
+        s.elasticity = 0.2; s.friction = 0.6; s.collision_type = 2
         shapes.append(s)
     space.add(b, *shapes)
     ch = dict(body=b, shapes=shapes, cells=cells, hue=hue, obj=obj, cool=0.15, flash=0.0)
@@ -116,7 +116,7 @@ def split(ch, at):
         mx = sum(c[0] for c in part) / len(part); my = sum(c[1] for c in part) / len(part)
         wp = b.local_to_world((mx, my))
         v = b.velocity_at_world_point(wp)
-        kick = 90 * sg
+        kick = 60 * sg
         nc = make_chunk([(c[0] - mx, c[1] - my, c[2]) for c in part], wp, b.angle,
                         (v.x + wn.x * kick, v.y + wn.y * kick), b.angular_velocity + rng.uniform(-2, 2), ch["hue"], ch["obj"])
         nc["flash"] = 1.0
@@ -137,8 +137,9 @@ nsplits = 0
 cur = None
 for f in range(nfr):
     t = f / FPS
-    if plan_i < len(PLAN) and t >= PLAN[plan_i][0]:
-        _, kind, hue = PLAN[plan_i]
+    moving = cur and any(c["body"].velocity.length > 60 for c in cur["chunks"])
+    if cur is None or (t - cur["t"] > 5 and not moving) or t - cur["t"] > 11:
+        _, kind, hue = PLAN[plan_i % len(PLAN)]
         sx = camx + 150 if cur else 150
         cur = dict(chunks=[], t=t, kind=kind, hue=hue)
         make_chunk(shape_cells(kind), (sx, stair_y(sx) - 420), 0.0, (360, -200), float(rng.choice([-2.5, 2.5])), hue, cur)
@@ -176,14 +177,10 @@ for f in range(nfr):
         aud.add(t + k * 0.01, crack(f + k), 0.55)
         aud.add(t + k * 0.01, pluck(penta_freq(int(rng.integers(5, 15)), 220), 0.5), 0.12)
     if cur and cur["chunks"]:
-        pts = sorted(((c["body"].position.x, c["body"].position.y, len(c["cells"])) for c in cur["chunks"]))
-        tot = sum(p[2] for p in pts); acc = 0
-        for p in pts:
-            acc += p[2]
-            if acc >= tot * 0.6:
-                tx, ty = p[0], p[1]; break
-        camx += (tx - camx) * 0.06
-        camy += (ty - camy) * 0.06
+        big = max(cur["chunks"], key=lambda c: len(c["cells"]))
+        tx, ty = big["body"].position.x, big["body"].position.y
+        camx += (tx - camx) * 0.1
+        camy += (ty - camy) * 0.1
     if f % 30 == 0:
         for ch in list(chunks):
             pp = ch["body"].position

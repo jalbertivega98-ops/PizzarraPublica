@@ -77,6 +77,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     ev.push(`Dialogue: 1,${assTime(25.2)},${assTime(40.2)},Tag,,0,0,0,,{\\fad(200,200)}SIMULACIÓN · ASÍ SERÁ`)
     ev.push(`Dialogue: 2,${assTime(51.0)},${assTime(56.3)},Mid,,0,0,0,,{\\an5\\pos(540,330)\\fad(200,150)}COMENTA:\\N{\\c&H004DD3FF&}«SOY ___ DE ___»`)
     ev.push(`Dialogue: 1,${assTime(41.0)},${assTime(50.2)},Tag,,0,0,0,,{\\fad(200,200)}2 ACTUALIZACIONES AL DÍA`)
+    ev.push(`Dialogue: 2,${assTime(41.3)},${assTime(50.2)},Mid,,0,0,0,,{\\an5\\pos(540,1180)\\fad(200,200)}CADA CÍRCULO ES UNA CASA LIBRE\\N{\\c&H004DD3FF&}¿CUÁL SERÁ LA TUYA?`)
     ev.push(`Dialogue: 2,${assTime(57.2)},${assTime(to)},Big,,0,0,0,,{\\an5\\pos(540,700)\\fad(250,0)\\t(0,300,\\fscx110\\fscy110)\\t(300,500,\\fscx100\\fscy100)}PIZZAVILLE`)
     ev.push(`Dialogue: 2,${assTime(57.7)},${assTime(to)},Mid,,0,0,0,,{\\an5\\pos(540,850)\\fad(250,0)}1 HABITANTE · 1 CASA`)
     ev.push(`Dialogue: 2,${assTime(58.2)},${assTime(to)},Mid,,0,0,0,,{\\an5\\pos(540,1010)\\fad(250,0)\\c&H004DD3FF&}COMENTA «SOY ___ DE ___»\\NY TE MUDAS AQUÍ`)
@@ -103,7 +104,9 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     '-vf', `scale=${OW}:${OH}:flags=lanczos`, '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', '-pix_fmt', 'yuv420p', silent], { stdio: ['pipe', 'inherit', 'inherit'] })
   const n0 = Math.round(from * FPS), n1 = Math.round(to * FPS)
   const t0 = Date.now()
-  for (let f = n0; f < n1; f++) {
+  const reuse = opt('video', null)
+  if (reuse) { ff.kill(); await new Promise((r) => ff.on('close', r)); fs.copyFileSync(reuse, silent) }
+  for (let f = reuse ? n1 : n0; f < n1; f++) {
     const data = await p.evaluate((t) => { window.__pv.renderAt(t); return document.querySelector('canvas').toDataURL('image/jpeg', 0.93) }, f / FPS)
     const buf = Buffer.from(data.slice(data.indexOf(',') + 1), 'base64')
     if (!ff.stdin.write(buf)) await new Promise((r) => ff.stdin.once('drain', r))
@@ -112,9 +115,9 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
       console.log(`frame ${f}/${n1}  ${(el / done).toFixed(2)} s/f  eta ${Math.round((el / done) * (n1 - f) / 60)} min`)
     }
   }
-  ff.stdin.end()
-  await new Promise((r) => ff.on('close', r))
+  if (!reuse) { ff.stdin.end(); await new Promise((r) => ff.on('close', r)) }
   await b.close()
+  if (args.includes('--frames-only')) { console.log('FRAMES OK', silent); return }
 
   // ---------------- subtitles
   const ass = path.join(out, 'subs.ass')

@@ -28,13 +28,13 @@ export const EP000 = {
     { id: 'l06', at: 19.8, text: 'Quiero convertir esto en la ciudad más grande de internet. ¡Y la vais a construir vosotros!' },
     { id: 'l07', at: 25.3, text: 'Comenta tu nombre y tu país, y te mudas a Pizzaville.' },
     { id: 'l08', at: 29.6, text: 'Te construimos tu casa, ladrillo a ladrillo... ¡con tu bandera!' },
-    { id: 'l09', at: 35.2, text: 'Como Sofía, de México. ¡Bienvenida, vecina!' },
+    { id: 'l09', at: 34.6, text: 'Como Sofía, de México. ¡Bienvenida, vecina!' },
     { id: 'l10', at: 40.6, text: 'Cada parcela es para alguien de los comentarios. Y actualizamos dos veces al día.' },
     { id: 'l11', at: 45.6, text: 'Calles, tiendas, parques... y un barrio para cada país. ¿Qué país tendrá más casas?' },
     { id: 'l12', at: 50.9, text: 'Así que comenta: soy tal, de tal país. ¡El primero será mi primer vecino!' },
     { id: 'l13', at: 56.6, text: '¡Te espero!' },
   ],
-}}
+}
 
 // ---------------------------------------------------------------- layout
 const PZ = { x: 0.15, z: 5.3 } // Pizz's mark in front of his door
@@ -277,7 +277,7 @@ export function Ep000({ startAt = 0 }: { startAt?: number }) {
       <group ref={markers}>
         {free.map((f, i) => (
           <group key={f.id} position={[f.x, f.y + 13, f.z]} userData={{ y: f.y + 13 }}>
-            <group scale={3.4}><PlotMarker /></group>
+            <group scale={2.6}><PlotMarker /></group>
           </group>
         ))}
       </group>
@@ -307,9 +307,6 @@ function PlotMarker() {
         </mesh>
         <Text font="/fonts/lilita.woff" fontSize={1.1} color="#ff7a3d" anchorX="center" anchorY="middle" position={[0, 0.08, 0]}>
           +
-        </Text>
-        <Text font="/fonts/fredoka600.woff" fontSize={1.05} color="#ffffff" outlineWidth={0.09} outlineColor="#1a2233" anchorX="center" anchorY="top" position={[0, -1.65, 0]}>
-          ¿TU CASA?
         </Text>
       </Billboard>
       <mesh position={[0, -3.2, 0]} material={mat('#ffffff', { transparent: true, opacity: 0.5 })}>

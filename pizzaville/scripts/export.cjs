@@ -89,7 +89,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     const D = (a, b, st, tx) => ev.push(`Dialogue: 2,${assTime(a)},${assTime(Math.min(b, to))},${st},,0,0,0,,${tx}`)
     const POP = '\\t(0,250,\\fscx112\\fscy112)\\t(250,450,\\fscx100\\fscy100)'
     D(0.2, 3.4, 'Mid', `{\\an5\\pos(540,520)\\fad(0,150)${POP}}AYER: 62\\N{\\c&H004DD3FF&\\fs120}HOY: 87 VECINOS\\N{\\fs70}19 PAÍSES`)
-    D(12.4, 16.2, 'Big', `{\\an5\\pos(540,330)\\fad(150,150)${POP}\\fs140}ELECCIONES\\N{\\fs70\\c&H004DD3FF&}OLIVER {\\c&H00FFFFFF&}vs {\\c&H00F5A93F&}THIAGO`)
+    D(12.4, 16.2, 'Big', `{\\an5\\pos(540,330)\\fad(150,150)${POP}\\fs140}ELECCIONES\\N{\\fs80\\bord7\\3c&H00201810&\\c&H004DD3FF&}OLIVER {\\c&H00FFFFFF&}vs {\\c&H00F5A93F&}THIAGO`)
     D(38.6, 44.9, 'Mid', `{\\an5\\pos(540,430)\\fad(150,150)${POP}}¡NUEVOS CONTINENTES!\\N{\\c&H0039C26B&\\fs110}ÁFRICA · ASIA`)
     D(45.5, 48.3, 'Big', `{\\an5\\pos(540,300)\\fad(200,150)${POP}\\fs150}{\\c&H004DD3FF&}49{\\c&H00FFFFFF&} – {\\c&H00FFE07F&}36\\N{\\fs62\\c&H004DD3FF&}EUROPA {\\c&H00FFFFFF&}· {\\c&H00FFE07F&}AMÉRICA`)
     D(48.6, 54.2, 'Mid', `{\\an5\\pos(540,330)\\fad(200,150)${POP}}VOTA EN LOS COMENTARIOS:\\N{\\fs120\\c&H004DD3FF&}OLIVER {\\c&H00FFFFFF&\\fs80}o {\\fs120\\c&H00F5A93F&}THIAGO`)

@@ -1,0 +1,21 @@
+{
+  "episode": "ep002",
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+10%",
+  "pitch": "+8Hz",
+  "notes": "Mismo motor, mismo Pizz, misma voz ElevenLabs que ep000 v2 y ep001. Datos: pizzaville/episodios/ep002/vecinos.csv (87 vecinos, 19 países; columna job = oficio pedido, wish = deseo). 25 vecinos nuevos. Europa 49 (España 48, Bulgaria 1) – América 36. Nuevos continentes: África (Sofian, Marruecos) y Asia (Youssef, Líbano): aparece una isla nueva en obras en el lago/río para ellos. Países nuevos: Guatemala, Costa Rica, Ecuador, El Salvador, Marruecos, Líbano. GANCHO: elecciones — Oliver (España) y Thiago (Argentina) pidieron ser presidente: dos carteles electorales enfrentados en el puente central y marcador de votos vacío. Oficios a enseñar (edificio o figura con cartel): comisaría con Gian y SoyAngelixFF (policías), Ezequiel sheriff, Esteban general, Álvaro cura (iglesia), calle de restaurantes (Gerard, Gerardo, Matheus con su perrito blanco Marley), Nico cocinero, Zeroh quiosco, Cantimplora granjero, Hugo (garrysgarrys_) informático, Hugo (hugooo0026) futbolista + Rafael club de fútbol → estadio en obras. Castillo de Toni. Barrido rápido con nombre y bandera del resto de nuevos. NO nombrar a enigmia.lab (cuenta de Joel). Cierre: marcador continentes, '¿Tu casa aquí?' en parcela libre, 'comenta OLIVER o THIAGO', 'tu nombre, tu país y qué quieres ser', 'etiqueta a alguien de tu país'.",
+  "lines": [
+    { "id": "l01", "text": "¡Ochenta y siete vecinos! ¡Y diecinueve países!" },
+    { "id": "l02", "text": "Pero tenemos un problema... ¡todos queréis mandar!" },
+    { "id": "l03", "text": "Oliver, desde España, quiere ser presidente. Y Thiago, desde Argentina... ¡también!" },
+    { "id": "l04", "text": "Así que... ¡elecciones en Pizzaville! Europa contra América." },
+    { "id": "l05", "text": "Mientras, la ciudad se pone a trabajar: Gian y SoyAngelix, policías. Ezequiel, sheriff. Y Álvaro, el cura del pueblo." },
+    { "id": "l06", "text": "Gerard y Gerardo abren restaurante... y Matheus también, ¡con su perrito Marley!" },
+    { "id": "l07", "text": "Hugo quiere ser futbolista y Rafael, desde Chile, monta el club. ¡Toca construir un estadio!" },
+    { "id": "l08", "text": "¿Y Toni Castillo? Pidió un castillo... ¡y aquí lo tiene!" },
+    { "id": "l09", "text": "¡Y atención! Llegan Marruecos y Líbano: ¡África y Asia! Y no tienen orilla... así que les estamos haciendo una isla nueva." },
+    { "id": "l10", "text": "Europa sigue ganando: ¡cuarenta y nueve a treinta y seis!" },
+    { "id": "l11", "text": "Ahora vota: comenta OLIVER o THIAGO. Quien tenga más votos será el primer presidente de Pizzaville." },
+    { "id": "l12", "text": "Y si eres nuevo: tu nombre, tu país y qué quieres ser. ¡Etiqueta a alguien de tu país!" }
+  ]
+}

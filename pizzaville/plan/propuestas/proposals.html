@@ -1,0 +1,359 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Pizzaville plan</title>
+<style>body{margin:0;background:#222}canvas{display:block;width:100%;height:auto}</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head><body>
+<canvas id="out" width="2560" height="1600"></canvas>
+<script>
+const W = 2560, H = 1600;
+const P = new URLSearchParams(location.search);
+const STATS = { likes: 127, comments: 62 };
+
+// ---------- vecinos ----------
+const ES = 'es', MX = 'mx', AR = 'ar';
+const people = [
+  // España (31 en cuadrícula + Rodrigo en el río)
+  ['Marina',ES],['Lara',ES],['Martín',ES],['Oumy',ES],['Álvaro',ES],['Bruno',ES],['Arturo',ES],['Yeray',ES],
+  ['Manuel',ES,'huerto'],['Pablo',ES,'piscina'],['Gabriel',ES,'granja'],['SoyAngelixFF',ES],['Alex',ES,'chalet_pool'],
+  ['José Ángel',ES],['Elena',ES],['Robert',ES],['Sensei',ES],['Javier',ES],['Isa',ES],['Galán',ES],['Julen',ES,'modern'],
+  ['Juan',ES],['Gerard',ES],['Oskiwii',ES],['Daniel',ES],['Hugo',ES,'chalet'],['Teo',ES,'pueblo'],['Abrahan',ES],
+  ['Quentin',ES],['Domingo',ES],['Gerardo',ES],
+];
+const WISH = { huerto:'🚜 huerto y tractor', piscina:'🏊 piscina', granja:'🐔 granja de gallinas', chalet_pool:'🏊 chalet, piscina y terraza',
+  modern:'💎 casa moderna millonaria', chalet:'🏡 chalet', pueblo:'🏘️ casa de pueblo, 2 plantas', rancho:'🐴 rancho', mansion:'🏰 mansión y piscina',
+  tech:'💻 lugar de tecnología', two:'🏠 casa de 2 pisos', van:'🚐 furgo, perros y río', batallon:'🪖 un batallón' };
+const CNAME = { es:'España', mx:'México', ar:'Argentina', cl:'Chile', co:'Colombia', pe:'Perú', bo:'Bolivia', ve:'Venezuela', bg:'Bulgaria', cu:'Cuba', do:'R. Dominicana', uy:'Uruguay' };
+
+// ---------- flags ----------
+function star(c, cx, cy, r, col) { c.fillStyle = col; c.beginPath(); for (let i = 0; i < 10; i++) { const a = -Math.PI/2 + i*Math.PI/5, rr = i%2 ? r*0.42 : r; c.lineTo(cx + rr*Math.cos(a), cy + rr*Math.sin(a)); } c.fill(); }
+function hs(c,x,y,w,h,cols){ cols.forEach((col,i)=>{ c.fillStyle=col; c.fillRect(x, y+h*i/cols.length, w, h/cols.length+0.5); }); }
+function vs(c,x,y,w,h,cols){ cols.forEach((col,i)=>{ c.fillStyle=col; c.fillRect(x+w*i/cols.length, y, w/cols.length+0.5, h); }); }
+function drawFlag(c, code, x, y, w, h) {
+  c.save(); c.beginPath(); c.rect(x,y,w,h); c.clip();
+  switch (code) {
+    case 'es': c.fillStyle='#c60b1e'; c.fillRect(x,y,w,h); c.fillStyle='#ffc400'; c.fillRect(x,y+h/4,w,h/2); break;
+    case 'mx': vs(c,x,y,w,h,['#006847','#fff','#ce1126']); c.fillStyle='#8c5a2b'; c.beginPath(); c.arc(x+w/2,y+h/2,h*0.16,0,7); c.fill(); break;
+    case 'ar': hs(c,x,y,w,h,['#74acdf','#fff','#74acdf']); c.fillStyle='#f6b40e'; c.beginPath(); c.arc(x+w/2,y+h/2,h*0.12,0,7); c.fill(); break;
+    case 'cl': c.fillStyle='#fff'; c.fillRect(x,y,w,h/2); c.fillStyle='#d52b1e'; c.fillRect(x,y+h/2,w,h/2); c.fillStyle='#0039a6'; c.fillRect(x,y,h/2,h/2); star(c,x+h/4,y+h/4,h*0.15,'#fff'); break;
+    case 'co': c.fillStyle='#fcd116'; c.fillRect(x,y,w,h/2); c.fillStyle='#003893'; c.fillRect(x,y+h/2,w,h/4); c.fillStyle='#ce1126'; c.fillRect(x,y+3*h/4,w,h/4); break;
+    case 'pe': vs(c,x,y,w,h,['#d91023','#fff','#d91023']); break;
+    case 'bo': hs(c,x,y,w,h,['#d52b1e','#f9e300','#007934']); break;
+    case 've': hs(c,x,y,w,h,['#fcd116','#00247d','#cf142b']); for (let i=0;i<8;i++){ const a=Math.PI*(0.15+0.7*i/7); star(c, x+w/2-Math.cos(a)*h*0.26, y+h*0.62-Math.sin(a)*h*0.2, h*0.04,'#fff'); } break;
+    case 'bg': hs(c,x,y,w,h,['#fff','#00966e','#d62612']); break;
+    case 'cu': hs(c,x,y,w,h,['#002a8f','#fff','#002a8f','#fff','#002a8f']); c.fillStyle='#cf142b'; c.beginPath(); c.moveTo(x,y); c.lineTo(x+h*0.87,y+h/2); c.lineTo(x,y+h); c.fill(); star(c,x+h*0.29,y+h/2,h*0.14,'#fff'); break;
+    case 'do': { c.fillStyle='#002d62'; c.fillRect(x,y,w/2,h/2); c.fillRect(x+w/2,y+h/2,w/2,h/2); c.fillStyle='#ce1126'; c.fillRect(x+w/2,y,w/2,h/2); c.fillRect(x,y+h/2,w/2,h/2); c.fillStyle='#fff'; c.fillRect(x+w/2-h*0.09,y,h*0.18,h); c.fillRect(x,y+h/2-h*0.09,w,h*0.18); break; }
+    case 'uy': hs(c,x,y,w,h,['#fff','#0038a8','#fff','#0038a8','#fff','#0038a8','#fff','#0038a8','#fff']); c.fillStyle='#fff'; c.fillRect(x,y,h*5/9,h*5/9); c.fillStyle='#fcd116'; c.beginPath(); c.arc(x+h*5/18,y+h*5/18,h*0.12,0,7); c.fill(); break;
+    case 'pizz': c.fillStyle='#ff6b1a'; c.fillRect(x,y,w,h); c.fillStyle='#ffd23f'; c.beginPath(); c.moveTo(x+w*0.3,y+h*0.2); c.lineTo(x+w*0.7,y+h*0.2); c.lineTo(x+w/2,y+h*0.85); c.fill(); c.fillStyle='#d62828'; [[0.45,0.35],[0.56,0.4],[0.5,0.55]].forEach(([a,b])=>{c.beginPath();c.arc(x+w*a,y+h*b,h*0.06,0,7);c.fill();}); break;
+  }
+  c.restore(); c.strokeStyle='rgba(0,0,0,0.35)'; c.lineWidth=Math.max(1,h/24); c.strokeRect(x,y,w,h);
+}
+const flagTex = {};
+function getFlagTex(code) { if (!flagTex[code]) { const cv=document.createElement('canvas'); cv.width=192; cv.height=128; drawFlag(cv.getContext('2d'),code,0,0,192,128); const t=new THREE.CanvasTexture(cv); t.anisotropy=8; flagTex[code]=t; } return flagTex[code]; }
+
+// ---------- three ----------
+let seed = 20261115; const rnd = () => (seed = (seed*16807) % 2147483647) / 2147483647;
+const gl = document.createElement('canvas');
+const renderer = new THREE.WebGLRenderer({ canvas: gl, antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1); renderer.setSize(W, H, false);
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+const scene = new THREE.Scene(); scene.background = new THREE.Color('#9fd3ff'); scene.fog = new THREE.Fog('#bfe3ff', 260, 480);
+const camera = new THREE.PerspectiveCamera(+(P.get('fov')||35), W/H, 1, 1000);
+camera.position.set(+(P.get('cx')||-2), +(P.get('cy')||160), +(P.get('cz')||90)); camera.lookAt(+(P.get('lx')||0), 0, +(P.get('lz')||-3));
+scene.add(new THREE.HemisphereLight('#ffffff', '#4f6b2f', 0.5));
+const sun = new THREE.DirectionalLight('#fff3df', 0.85); sun.position.set(-60, 110, 50); sun.castShadow = true;
+sun.shadow.mapSize.set(4096, 4096); Object.assign(sun.shadow.camera, { left: -115, right: 115, top: 85, bottom: -85, near: 10, far: 300 }); sun.shadow.bias = -0.0005;
+scene.add(sun);
+
+const M = {}; const mat = (c, o={}) => (M[c+JSON.stringify(o)] ||= new THREE.MeshStandardMaterial(Object.assign({ color: c, roughness: 0.85 }, o)));
+function box(w,h,d,c,x,y,z,parent,o) { const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d), mat(c,o)); m.position.set(x,y,z); m.castShadow=m.receiveShadow=true; (parent||scene).add(m); return m; }
+function cyl(rt,rb,h,c,x,y,z,parent,seg=12,o) { const m=new THREE.Mesh(new THREE.CylinderGeometry(rt,rb,h,seg), mat(c,o)); m.position.set(x,y,z); m.castShadow=m.receiveShadow=true; (parent||scene).add(m); return m; }
+function sph(r,c,x,y,z,parent) { const m=new THREE.Mesh(new THREE.SphereGeometry(r,12,10), mat(c)); m.position.set(x,y,z); m.castShadow=true; (parent||scene).add(m); return m; }
+function gable(w,h,d,c,x,y,z,parent) { const m=new THREE.Mesh(new THREE.CylinderGeometry(1,1,d,3), mat(c)); m.rotation.set(-Math.PI/2,0,0); m.scale.set(w/1.732, 1, h/1.5); const g=new THREE.Group(); g.add(m); m.position.y=h/3; g.position.set(x,y,z); m.castShadow=true; (parent||scene).add(g); return g; }
+function plane(w,d,c,x,y,z,o) { const m=new THREE.Mesh(new THREE.PlaneGeometry(w,d), mat(c,o)); m.rotation.x=-Math.PI/2; m.position.set(x,y,z); m.receiveShadow=true; scene.add(m); return m; }
+
+const ASF = '#4a4d52', DIRT = '#a8865a', LINE = '#f5f1e6';
+function road(x1,z1,x2,z2,w,c,dash) { const L=Math.hypot(x2-x1,z2-z1); const m=plane(L, w, c, (x1+x2)/2, 0.08, (z1+z2)/2); m.rotation.z = -Math.atan2(z2-z1,x2-x1); if (dash) for (let t=1.5;t<L;t+=4){ const k=t/L; const d=plane(1.8,0.22,LINE,x1+(x2-x1)*k,0.1,z1+(z2-z1)*k); d.rotation.z=m.rotation.z; } return m; }
+function roller(x,z,ry) { const g=new THREE.Group(); box(2.6,1.2,1.6,'#f2c230',0,1.0,0,g); cyl(0.7,0.7,1.8,'#555',1.3,0.7,0,g).rotation.x=Math.PI/2; cyl(0.7,0.7,1.8,'#555',-1.3,0.7,0,g).rotation.x=Math.PI/2; box(1,0.9,1.2,'#333',-0.3,2.0,0,g,{roughness:0.3}); g.position.set(x,0,z); g.rotation.y=ry; scene.add(g); }
+function excavator(x,z,ry) { const g=new THREE.Group(); box(3,0.6,2.2,'#333',0,0.3,0,g); box(2.4,1.4,2,'#f2c230',0,1.3,0,g); box(1,1.1,1,'#c9e6ff',0.6,2.4,0.4,g,{roughness:0.2}); const a=box(3.4,0.4,0.4,'#f2c230',2.6,2.6,0,g); a.rotation.z=0.5; const b=box(2.6,0.35,0.35,'#f2c230',4.6,2.2,0,g); b.rotation.z=-1.0; box(0.9,0.7,1,'#555',5.2,1.0,0,g); g.position.set(x,0,z); g.rotation.y=ry; scene.add(g); }
+function truck(x,z,ry,load) { const g=new THREE.Group(); box(4.2,1.6,2,'#e8e8e8',-0.6,1.4,0,g); box(1.6,1.8,2,load||'#e05a2b',2.3,1.4,0,g); box(0.2,0.8,1.8,'#9fd3ff',3.15,1.8,0,g,{roughness:0.2}); for (const [a,b] of [[-2,1],[-2,-1],[2.2,1],[2.2,-1]]) cyl(0.5,0.5,0.4,'#222',a,0.5,b,g).rotation.x=Math.PI/2; if (load==='mix') { const d=cyl(0.9,0.6,3,'#ddd',-0.6,2.4,0,g); d.rotation.z=Math.PI/2+0.2; } g.position.set(x,0,z); g.rotation.y=ry; scene.add(g); return g; }
+function crane(x,z,ry,h=17) { const g=new THREE.Group(); const Y='#f2b705'; box(1,h,1,Y,0,h/2,0,g); for (let y=1;y<h;y+=1.4){ const d=box(1.35,0.12,0.12,'#d49a00',0,y,0.5,g); d.rotation.z=0.7; } box(16,0.7,0.7,Y,3.5,h+0.4,0,g); box(2.4,1.6,1.2,'#888',-3.5,h-0.6,0,g); box(1.2,1.1,1.2,'#c9e6ff',0,h-0.3,0.9,g); const cable=cyl(0.04,0.04,h-6,'#222',10,h-(h-6)/2,0,g,4); box(1.4,0.8,1.4,'#b5651d',10,6,0,g); g.position.set(x,0,z); g.rotation.y=ry; scene.add(g); }
+function tree(x,z,s=1) { if (rnd()<0.55) { cyl(0.18*s,0.25*s,1.6*s,'#7a5230',x,0.8*s,z); sph(1.3*s, rnd()<0.5?'#3f8f34':'#4fa83d', x, 2.4*s, z); } else { cyl(0.15*s,0.2*s,1.2*s,'#6b4423',x,0.6*s,z); const c=new THREE.Mesh(new THREE.ConeGeometry(1.2*s,3.4*s,8), mat('#2f7a37')); c.position.set(x,2.6*s,z); c.castShadow=true; scene.add(c); } }
+// ---------- casas ----------
+const labels = [];
+const WALLS = ['#f3e9d2','#f6d7b0','#e8eef2','#f2d0c4','#fbe7a1','#d9ead3','#e6dcf5','#fff4e6'];
+const ROOFS = ['#c8553d','#b5462f','#8c3b2e','#3d5a80','#6b8f3a','#9a4f2a'];
+function flagPole(g, code, x, z, h=4.2) { cyl(0.07,0.07,h,'#ddd',x,h/2,z,g,6); const f=new THREE.Mesh(new THREE.PlaneGeometry(1.8,1.2), new THREE.MeshStandardMaterial({ map:getFlagTex(code), side:THREE.DoubleSide, roughness:0.9 })); f.position.set(x+0.92,h-0.65,z); f.castShadow=true; g.add(f); }
+function pool(g,x,z,w,d) { box(w+0.6,0.25,d+0.6,'#e9e4d8',x,0.12,z,g); box(w,0.06,d,'#2fb4e8',x,0.27,z,g,{roughness:0.1,metalness:0.1}); }
+function person(x,z,shirt,worker,parent) { const g=new THREE.Group(); cyl(0.26,0.3,0.9,worker?'#ff7a00':shirt,0,0.85,0,g,8); cyl(0.1,0.1,0.45,'#2b2b3a',-0.12,0.22,0,g,6); cyl(0.1,0.1,0.45,'#2b2b3a',0.12,0.22,0,g,6); sph(0.24,'#f0c6a0',0,1.52,0,g); if (worker) { const hm=new THREE.Mesh(new THREE.SphereGeometry(0.27,10,6,0,Math.PI*2,0,Math.PI/2), mat('#ffd400')); hm.position.y=1.6; g.add(hm); } g.position.set(x,0,z); g.rotation.y=rnd()*6.28; (parent||scene).add(g); return g; }
+function basic(g, wall, roof, floors=1, w=3.6, d=3.4) { const h=2.4*floors; box(w,h,d,wall,0,h/2,0,g); gable(w+0.4, 1.6, d+0.4, roof, 0, h, 0, g); box(0.8,1.4,0.1,'#6b3e26',0,0.7,d/2+0.02,g); for (let f=0; f<floors; f++) for (const sx of [-1,1]) box(0.7,0.6,0.08,'#9fd3ff',sx*1.05,1.5+f*2.4,d/2+0.03,g,{roughness:0.2}); return h+1.6; }
+function construction(g, stage) {
+  box(4.2,0.3,4,'#b9b5ad',0,0.15,0,g);
+  if (stage === 'base') { for (let i=0;i<9;i++) cyl(0.04,0.04,1.4,'#7a3d1a',-1.6+(i%3)*1.6,1,-1.5+Math.floor(i/3)*1.5,g,4); box(1.2,0.6,1,'#b5532f',2.4,0.6,1.8,g); box(1.2,0.6,1,'#b5532f',2.4,1.2,1.8,g); return 2; }
+  box(3.6,1.3,0.25,'#d9c3a5',0,0.95,-1.6,g); box(0.25,1.3,3.2,'#d9c3a5',-1.7,0.95,0,g); box(1.6,1.0,0.25,'#d9c3a5',-0.9,0.8,1.6,g);
+  for (const [a,b] of [[-1.9,-1.8],[1.9,-1.8],[-1.9,1.8],[1.9,1.8]]) box(0.12,4.2,0.12,'#c49a5a',a,2.1,b,g);
+  for (const y of [1.6,3.2]) { box(4,0.1,0.12,'#c49a5a',0,y,1.8,g); box(4,0.1,0.12,'#c49a5a',0,y,-1.8,g); box(0.12,0.1,3.6,'#c49a5a',1.9,y,0,g); }
+  box(3.8,0.1,0.8,'#8a6a3a',0,1.6,2.3,g); return 4.4;
+}
+function build(type, stage, wall, roof, g, code) {
+  if (stage !== 'done') return construction(g, stage);
+  switch (type) {
+    case 'two': return basic(g, wall, roof, 2);
+    case 'pueblo': { const h=basic(g, '#fbf8f0', '#c1502e', 2, 4, 3.6); box(2.4,0.15,0.8,'#7a4a2a',0,3.0,2.2,g); box(2.4,0.6,0.08,'#7a4a2a',0,3.35,2.6,g); for (const sx of [-1.3,1.3]) { box(0.5,0.5,0.5,'#c1502e',sx,2.85,2.3,g); sph(0.35,'#e0457b',sx,3.25,2.3,g); } return h; }
+    case 'piscina': { const h=basic(g, wall, roof); pool(g, 0, -3.6, 3.2, 1.8); return h; }
+    case 'chalet': { box(4.2,2.6,3.4,'#f7f3ea',0,1.3,0,g); box(3,2.2,2.6,'#f7f3ea',0.5,3.7,-0.3,g); box(4.4,0.2,3.6,'#555',0,2.7,0,g); box(3.2,0.2,2.8,'#555',0.5,4.9,-0.3,g); box(2.4,1,0.08,'#9fd3ff',-0.8,1.4,1.72,g,{roughness:0.15}); box(1.6,0.9,0.08,'#9fd3ff',0.5,3.8,1.02,g,{roughness:0.15}); for (let i=0;i<5;i++) sph(0.45,'#3f8f34',-2.4+i*1.2,0.4,2.6,g); return 5; }
+    case 'chalet_pool': { const h=build('chalet','done',wall,roof,g); pool(g, -0.2, -3.5, 4, 1.8); box(1.5,0.08,0.6,'#fff',2.4,0.4,-3.2,g); box(4.2,0.5,0.08,'#cfe8f5',0,3.0,1.75,g,{roughness:0.1,transparent:true,opacity:0.7}); for (const sx of [-1.4,0.2]) { cyl(0.05,0.05,1.4,'#ddd',sx,3.4,1.2,g,6); const u=new THREE.Mesh(new THREE.ConeGeometry(0.9,0.5,8), mat('#ff5d5d')); u.position.set(sx,4.2,1.2); g.add(u); } return h; }
+    case 'modern': { box(5,2.4,3.6,'#ffffff',0,1.2,0,g); box(4.2,2.2,3.4,'#ffffff',1.2,3.5,-0.4,g); box(4.6,1.9,0.06,'#1e3a5c',0,1.2,1.82,g,{roughness:0.05,metalness:0.6}); box(3.8,1.7,0.06,'#1e3a5c',1.2,3.5,1.32,g,{roughness:0.05,metalness:0.6}); box(0.06,1.8,3,'#1e3a5c',3.32,3.5,-0.4,g,{roughness:0.05,metalness:0.6}); pool(g, -0.6, -3.6, 4.6, 1.8); box(0.6,0.6,0.6,'#ffd700',-2,4.9,-0.4,g,{metalness:0.8,roughness:0.2}); cyl(0.15,0.15,3.2,'#333',3,1.6,2.8,g,6); return 5.2; }
+    case 'granja': { box(3.8,2.6,3.2,'#b3261e',0,1.3,0,g); gable(4.2,1.8,3.6,'#5a5a5a',0,2.6,0,g); box(1.4,1.8,0.1,'#fff',0,0.9,1.62,g); for (let i=0;i<14;i++) { const a=i/14*6.28; box(0.12,0.8,0.12,'#d8c39a',3.4+2.0*Math.cos(a),0.4,-0.2+2.0*Math.sin(a),g); } for (let i=0;i<9;i++) { sph(0.22,'#ffffff',2.6+rnd()*1.8,0.22,-1.2+rnd()*2,g); } box(1,0.8,0.9,'#c49a5a',4.2,0.4,1.3,g); return 4.4; }
+    case 'rancho': { box(5.4,2.2,3.4,'#a9744f',0,1.1,0,g); gable(5.8,1.4,3.8,'#6b4423',0,2.2,0,g); box(5.4,0.15,1.2,'#7a5230',0,2.0,2.3,g); for (const sx of [-2.5,0,2.5]) cyl(0.08,0.08,2,'#7a5230',sx,1,2.8,g,6); for (let x=-5;x<=5;x+=1.25) { box(0.14,1,0.14,'#8b5a2b',x,0.5,-6.5,g); box(0.14,1,0.14,'#8b5a2b',x,0.5,-2.6,g); } for (const z of [-6.5,-2.6]) box(10,0.12,0.1,'#8b5a2b',0,0.8,z,g); for (const [x,z,c] of [[-2.5,-4.8,'#6b3e1e'],[1.2,-4.0,'#2b2b2b'],[3.2,-5.4,'#a0622d']]) { const hrs=new THREE.Group(); box(1.5,0.6,0.5,c,0,1.0,0,hrs); box(0.4,0.8,0.35,c,0.75,1.4,0,hrs); for (const [a,b] of [[-0.6,0.18],[-0.6,-0.18],[0.6,0.18],[0.6,-0.18]]) box(0.12,0.75,0.12,c,a,0.38,b,hrs); hrs.position.set(x,0,z); hrs.rotation.y=rnd()*3; g.add(hrs); } for (const x of [-4,-3.2]) { const b=cyl(0.5,0.5,0.9,'#e3c46b',x,0.5,1.2+3.2,g); b.rotation.z=Math.PI/2; } return 3.6; }
+    case 'huerto': { const h=basic(g, wall, roof); for (let i=0;i<6;i++) box(5,0.35,0.5,i%2?'#3f8f34':'#6b4a2a',0,0.18,-3+(-i*0.75),g); const t=new THREE.Group(); box(1.8,1,1.2,'#2e8b3a',0,1.2,0,t); box(1,1,1,'#2e8b3a',-0.5,2.1,0,t); box(0.9,0.8,0.05,'#9fd3ff',-0.5,2.2,0.5,t); for (const s of [-1,1]) { const w=cyl(0.75,0.75,0.4,'#222',-0.6,0.75,s*0.75,t); w.rotation.x=Math.PI/2; const f=cyl(0.42,0.42,0.3,'#222',0.8,0.42,s*0.7,t); f.rotation.x=Math.PI/2; } t.position.set(3.2,0,-5.8); t.rotation.y=0.4; g.add(t); return h; }
+    case 'tech': { box(4,2.6,3.4,'#2b2f3a',0,1.3,0,g); box(4.1,0.15,3.5,'#00e5ff',0,2.62,0,g,{emissive:'#00e5ff',emissiveIntensity:0.8}); box(3.6,1.2,0.06,'#00bfff',0,1.5,1.72,g,{emissive:'#0077ff',emissiveIntensity:0.9}); for (let i=0;i<3;i++) { const p=box(1.1,0.06,1.6,'#1a2a5a',-1.3+i*1.3,3.0,-0.6,g,{metalness:0.6,roughness:0.2}); p.rotation.x=-0.4; } const dsh=new THREE.Mesh(new THREE.SphereGeometry(0.9,16,8,0,Math.PI*2,0,Math.PI/3), mat('#eee',{side:THREE.DoubleSide})); dsh.position.set(1.4,3.3,1); dsh.rotation.x=-0.8; g.add(dsh); cyl(0.05,0.05,3,'#aaa',-1.6,4.1,1,g,6); sph(0.18,'#ff3b3b',-1.6,5.6,1,g); return 5.6; }
+    case 'mansion': { box(6.4,4.8,4,'#fdf6e3',0,2.4,0,g); for (const sx of [-4,4]) { box(2.2,3.2,3.4,'#fdf6e3',sx,1.6,0.2,g); gable(2.6,1.2,3.8,'#8c3b2e',sx,3.2,0.2,g); } gable(6.8,2,4.4,'#8c3b2e',0,4.8,0,g); for (let i=0;i<4;i++) cyl(0.18,0.18,4.4,'#fff',-1.8+i*1.2,2.2,2.4,g,10); box(4.6,0.3,1.2,'#fff',0,4.5,2.4,g); pool(g, 0, -4.4, 6, 2.6); for (const sx of [-5.6,5.6]) { cyl(0.12,0.12,0.6,'#6b4423',sx,0.3,3,g,6); sph(0.7,'#2f7a37',sx,1.1,3,g); } return 7; }
+    case 'van': { const v=new THREE.Group(); box(4.4,2.1,2,'#f4f4f4',0,1.5,0,v); box(4.4,0.35,2.02,'#2a7de1',0,1.3,0,v); box(1.1,0.9,1.9,'#9fd3ff',2.1,2.0,0,v,{roughness:0.2}); for (const [a,b] of [[-1.4,1],[-1.4,-1],[1.4,1],[1.4,-1]]) cyl(0.45,0.45,0.35,'#222',a,0.45,b,v).rotation.x=Math.PI/2; v.rotation.y=0.3; g.add(v); const tent=new THREE.Mesh(new THREE.ConeGeometry(1.4,1.8,4), mat('#ff9f1c')); tent.position.set(-3.6,0.9,1.6); tent.rotation.y=0.78; g.add(tent); for (const [x,z,c] of [[1.5,2.4,'#c8a165'],[2.5,2.0,'#3a2a1a']]) { box(0.9,0.45,0.35,c,x,0.5,z,g); box(0.35,0.35,0.3,c,x+0.55,0.8,z,g); } cyl(0.4,0.5,0.25,'#555',-1,0.12,2.8,g); const fire=new THREE.Mesh(new THREE.ConeGeometry(0.3,0.7,6), mat('#ff6a00',{emissive:'#ff4500',emissiveIntensity:1})); fire.position.set(-1,0.55,2.8); g.add(fire); return 3.5; }
+    default: return basic(g, wall, roof);
+  }
+}
+function house(name, code, type, stage, x, z, opts={}) {
+  const g = new THREE.Group(); g.position.set(x, opts.y||0, z); if (opts.ry) g.rotation.y = opts.ry; scene.add(g);
+  const wall = WALLS[Math.floor(rnd()*WALLS.length)], roof = ROOFS[Math.floor(rnd()*ROOFS.length)];
+  const h = build(type||'basic', stage, wall, roof, g, code);
+  flagPole(g, code, opts.px ?? -2.6, opts.pz ?? 2.2);
+  labels.push({ name, code, type, stage, pos: new THREE.Vector3(x, h + 2.2 + (opts.y||0), z), showCountry: opts.showCountry });
+  if (stage !== 'done' && !opts.y) { for (let i=0;i<2;i++) person(x-1.5+rnd()*3, z+2.6+rnd()*0.8, '#888', true); }
+  return g;
+}
+// ================= PROPUESTAS =================
+const L = +(P.get('l') || 1);
+const RES = {
+  es: [['Marina'],['Manuel','huerto'],['Lara'],['Martín'],['Pablo','piscina'],['Oumy'],['Álvaro'],['Bruno'],['Gabriel','granja'],['Arturo'],['Yeray'],['Alex','chalet_pool'],['SoyAngelixFF'],['José Ángel'],['Elena'],['Julen','modern'],['Robert'],['Sensei'],['Javier'],['Hugo','chalet'],['Isa'],['Galán'],['Teo','pueblo'],['Juan'],['Gerard'],['Rodrigo','van'],['Oskiwii'],['Daniel'],['Abrahan'],['Quentin'],['Domingo'],['Gerardo']],
+  mx: [['Axel'],['Fernando','rancho'],['Moy'],['Luis'],['Kiker','two'],['Jesus'],['Emyr'],['Elian']],
+  ar: [['Milo'],['Thiago','mansion'],['Gian'],['Fran'],['Benja','tech'],['Aitana']],
+  cl: [['Vicente'],['Alonso']],
+  co: [['Chope'],['Edwar','batallon']],
+  world: [['Nain',null,'pe'],['Esteban',null,'bo'],['Tahiler',null,'ve'],['Acho',null,'bg'],['José Delgado',null,'cu'],['Moisés',null,'do'],['Fede',null,'uy']],
+};
+const rot = (x,z,a) => [x*Math.cos(a) + z*Math.sin(a), -x*Math.sin(a) + z*Math.cos(a)];
+const districts = [], roadsSeg = [], waterTest = [];
+let totalCap = 0;
+function seg(x1,z1,x2,z2,w,c,dash,y) { roadsSeg.push([x1,z1,x2,z2]); const m = road(x1,z1,x2,z2,w,c,dash); if (y) m.position.y = y + 0.08; return m; }
+function district(code, list, cx, cz, a, C, Pp, opt = {}) {
+  const sx = 8, pg = 22, y = opt.y || 0, Wd = C*sx, D = Pp*pg;
+  if (opt.platform) { const b = box(Wd+12, y, D+10, '#9c7a4f', cx, y/2, cz); b.rotation.y = a; b.castShadow = false; }
+  const pad = plane(Wd+8, D+6, opt.pad || '#93c86f', cx, y+0.03, cz); pad.rotation.z = a;
+  const W2 = (lx, lz) => { const [rx, rz] = rot(lx, lz, a); return [cx+rx, cz+rz]; };
+  const slots = [];
+  for (let p = 0; p < Pp; p++) {
+    const z0 = -D/2 + pg*(p+0.5);
+    const [ax,az] = W2(-Wd/2-3, z0), [bx2,bz2] = W2(Wd/2+3, z0); seg(ax,az,bx2,bz2,3.4,'#4a4d52',false,y);
+    for (let i = 0; i < C; i++) { const lx = -Wd/2 + sx*(i+0.5); slots.push([lx, z0-5.5, a], [lx, z0+5.5, a+Math.PI]); }
+  }
+  // ordenar: primero las más cercanas a la entrada (lado -x local)
+  slots.sort((s1,s2) => (s1[0]-s2[0]) || (s1[1]-s2[1]));
+  const n = list.length;
+  list.forEach(([name, type, cc], i) => {
+    const [lx, lz, ry] = slots[i]; const [x, z] = W2(lx, lz);
+    const stage = type ? 'done' : (i < n*0.6 ? 'done' : i < n*0.85 ? 'frame' : 'base');
+    house(name, cc || code, type, stage, x, z, { ry, y, showCountry: code === 'world' || opt.showCountry });
+  });
+  for (let i = n; i < slots.length; i++) { const [lx, lz, ry] = slots[i]; const [x, z] = W2(lx, lz); const b = box(4.4,0.12,4.2,'#efe6bf',x,y+0.06,z); b.rotation.y = ry; b.castShadow = false; const st = cyl(0.06,0.06,1.2,'#8b5a2b',x,y+0.6,z); }
+  const d = { code, n, cap: slots.length, cx, cz, a, Wd, D, y, W2, label: opt.label };
+  totalCap += slots.length; districts.push(d);
+  // grúa si quedan obras
+  if (n > 3) { const [kx,kz] = W2(Wd/2+5, -D/2+4); crane(kx, kz, a, 16 + y); }
+  return d;
+}
+function entrance(d) { return d.W2(-d.Wd/2 - 3, -d.D/2 + 11); }
+function linkL(x1, z1, x2, z2, w = 5) { seg(x1, z1, x2, z1, w, '#4a4d52', true); seg(x2, z1, x2, z2, w, '#4a4d52', true); }
+function link(x1, z1, x2, z2, w = 5, c = '#4a4d52') { seg(x1, z1, x2, z2, w, c, c === '#4a4d52'); }
+function pizzAt(x, z, y = 0) {
+  const pl = plane(16, 16, '#d6cfbf', x, y+0.07, z);
+  const g = new THREE.Group(); g.position.set(x, y, z-12); scene.add(g); basic(g,'#fff1d6','#d9481c',1,4.2,3.8); flagPole(g,'pizz',2.8,2.2,5.5);
+  labels.push({ name:'Pizz', code:'pizz', pos:new THREE.Vector3(x, y+6.5, z-12), pizz:true, prio:true });
+  cyl(1.6,1.8,0.6,'#d9d4c7',x,y+0.3,z); cyl(1.2,1.2,0.1,'#2fb4e8',x,y+0.62,z); cyl(0.2,0.25,1.6,'#d9d4c7',x,y+1.2,z);
+}
+function water(fnInside, color = '#3d9be0') { waterTest.push(fnInside); }
+function riverPath(pts, w = 7) { for (let i = 0; i < pts.length-1; i++) { const [x1,z1] = pts[i], [x2,z2] = pts[i+1]; const L2 = Math.hypot(x2-x1, z2-z1); const m = plane(L2+1, w, '#3d9be0', (x1+x2)/2, 0.06, (z1+z2)/2, {roughness:0.15}); m.rotation.z = -Math.atan2(z2-z1, x2-x1); const s = plane(L2+1, w+3, '#d8c79a', (x1+x2)/2, 0.045, (z1+z2)/2); s.rotation.z = m.rotation.z; } waterTest.push((x,z) => pts.some((p,i) => i < pts.length-1 && distSeg(x,z,p,pts[i+1]) < w/2+3)); }
+function distSeg(x, z, [x1,z1], [x2,z2]) { const dx=x2-x1, dz=z2-z1; const t=Math.max(0,Math.min(1,((x-x1)*dx+(z-z1)*dz)/(dx*dx+dz*dz||1))); return Math.hypot(x-x1-t*dx, z-z1-t*dz); }
+function bridge(x1,z1,x2,z2,y=0.5) { const L2=Math.hypot(x2-x1,z2-z1); const b=box(L2,0.5,5,'#9a6b3f',(x1+x2)/2,y,(z1+z2)/2); b.rotation.y=-Math.atan2(z2-z1,x2-x1); for (const s of [-1,1]) { const r=box(L2,0.6,0.25,'#6b4423',(x1+x2)/2+Math.sin(b.rotation.y)*0,y+0.6,(z1+z2)/2); r.rotation.y=b.rotation.y; r.translateZ(s*2.4); } }
+
+let TITLE = '', DESC = '';
+const deg = Math.PI/180;
+plane(1200, 1200, '#7fb85a', 0, 0, 0);
+for (let i = 0; i < 500; i++) { const x=(rnd()-0.5)*420, z=(rnd()-0.5)*300; plane(8+rnd()*14, 8+rnd()*14, rnd()<0.5?'#86bf60':'#76ad52', x, 0.01, z); }
+
+if (L === 1) {
+  TITLE = 'Barrios con parques'; DESC = 'Cada país en su barrio, separados por zonas verdes. Cada barrio ya tiene calles y parcelas libres.';
+  pizzAt(0, 0);
+  const es = district('es', RES.es, -70, 0, 0, 8, 3);
+  const mx = district('mx', RES.mx, 36, -40, 0, 4, 2);
+  const ar = district('ar', RES.ar, 36, 40, 0, 4, 2);
+  const cl = district('cl', RES.cl, 94, -52, 0, 3, 1);
+  const co = district('co', RES.co, 94, -14, 0, 3, 1);
+  const wd = district('world', RES.world, 100, 40, 0, 5, 2, { label: 'BARRIO INTERNACIONAL' });
+  link(-35, 0, 0, 0); link(0, 0, 112, 0); link(16, 0, 16, -51); link(16, 0, 16, 29); link(76, 0, 76, -63); link(76, 0, 76, 29);
+  riverPath(Array.from({length: 60}, (_, i) => [-200 + i*7, -86 + 4*Math.sin(i/3)]));
+} else if (L === 2) {
+  TITLE = 'La pizza'; DESC = 'Pizz en el centro y cada país es una porción. Para crecer, cada porción se alarga hacia fuera.';
+  pizzAt(0, 0);
+  const put = (code, list, th, r, C, Pp, opt) => { const t = th*deg; const d = district(code, list, r*Math.cos(t), r*Math.sin(t), -t - Math.PI/2, C, Pp, opt); const [ex, ez] = [(r - Pp*11 - 3)*Math.cos(t), (r - Pp*11 - 3)*Math.sin(t)]; link(0, 0, ex, ez); return d; };
+  put('es', RES.es, 180, 76, 8, 3); put('mx', RES.mx, -55, 62, 4, 2); put('ar', RES.ar, 55, 62, 4, 2);
+  put('world', RES.world, 0, 72, 5, 2, { label: 'BARRIO INTERNACIONAL' }); put('cl', RES.cl, -112, 52, 3, 1); put('co', RES.co, 112, 52, 3, 1);
+  for (let k = 0; k < 48; k++) { const t1 = k/48*2*Math.PI, t2 = (k+1)/48*2*Math.PI, R = 122; seg(R*Math.cos(t1), R*Math.sin(t1), R*Math.cos(t2), R*Math.sin(t2), 3.4, DIRT); }
+  for (let k = 0; k < 6; k++) { const t = (k*60+30)*deg; seg(10*Math.cos(t), 10*Math.sin(t), 122*Math.cos(t), 122*Math.sin(t), 2.4, DIRT); }
+} else if (L === 3) {
+  TITLE = 'Dos orillas: Europa y América'; DESC = 'Un río separa los continentes. Pizz vive en la isla del centro, unida por puentes.';
+  const rv = Array.from({length: 50}, (_, i) => [3*Math.sin(i/2.5), -170 + i*7]);
+  riverPath(rv, 12);
+  plane(24, 22, '#93c86f', 0, 0.09, 0); pizzAt(0, 2, 0.1);
+  bridge(-16, 0, -6, 0); bridge(6, 0, 16, 0); bridge(-10, -50, 10, -50); bridge(-10, 50, 10, 50);
+  const es = district('es', RES.es, -62, -4, 0, 8, 3);
+  const eu = district('world', [RES.world[3]], -62, 56, 0, 3, 1, { label: 'RESTO DE EUROPA' });
+  const mx = district('mx', RES.mx, 44, -40, 0, 4, 2); const ar = district('ar', RES.ar, 44, 40, 0, 4, 2);
+  const cl = district('cl', RES.cl, 96, -52, 0, 3, 1); const co = district('co', RES.co, 96, -14, 0, 3, 1);
+  const la = district('world', RES.world.filter((_, i) => i !== 3), 104, 40, 0, 5, 2, { label: 'RESTO DE AMÉRICA' });
+  link(-110, 0, -16, 0); link(16, 0, 124, 0); link(24, 0, 24, -51); link(24, 0, 24, 29); link(78, 0, 78, -63); link(78, 0, 78, 29);
+  link(-110, 50, -10, 50, 4); link(10, -50, 24, -50, 4); link(-30, 0, -30, 50, 4);
+} else if (L === 4) {
+  TITLE = 'La avenida de los países'; DESC = 'Una avenida larga. Cada país es una parada; los nuevos países se añaden al final.';
+  seg(-170, 0, 190, 0, 5.4, ASF, true); seg(190, 0, 250, 0, 5.4, DIRT);
+  pizzAt(-158, 14);
+  district('es', RES.es, -105, -42, 0, 8, 3); district('mx', RES.mx, -40, 30, 0, 4, 2); district('ar', RES.ar, 2, -30, 0, 4, 2);
+  district('cl', RES.cl, 40, 18, 0, 3, 1); district('co', RES.co, 72, -18, 0, 3, 1); district('world', RES.world, 118, 30, 0, 5, 2, { label: 'BARRIO INTERNACIONAL' });
+  for (const [x, s] of [[-105,-1],[-40,1],[2,-1],[40,1],[72,-1],[118,1]]) seg(x - 3, 0, x - 3, s*8, 3.4, ASF);
+  riverPath(Array.from({length: 70}, (_, i) => [-230 + i*7, 82 + 5*Math.sin(i/3)]));
+} else if (L === 5) {
+  TITLE = 'Islas en el lago'; DESC = 'Cada país tiene su isla y un puente a la isla de Pizz. Las islas pueden crecer o se añaden nuevas.';
+  const lake = plane(600, 600, '#3d9be0', 0, 0.05, 0, {roughness:0.15});
+  const isl = (x, z, r) => { const m = new THREE.Mesh(new THREE.CircleGeometry(r, 48), mat('#d8c79a')); m.rotation.x = -Math.PI/2; m.position.set(x, 0.1, z); m.receiveShadow = true; scene.add(m); const g2 = new THREE.Mesh(new THREE.CircleGeometry(r-2.5, 48), mat('#7fb85a')); g2.rotation.x = -Math.PI/2; g2.position.set(x, 0.12, z); g2.receiveShadow = true; scene.add(g2); for (let i=0;i<Math.floor(r*0.9);i++) { const t=rnd()*6.28; tree(x+Math.cos(t)*(r-4), z+Math.sin(t)*(r-4), 0.8+rnd()*0.4); } };
+  isl(0, 0, 22); pizzAt(0, 4, 0.12);
+  const put = (code, list, th, r, C, Pp, opt) => { const t = th*deg, x = r*Math.cos(t), z = r*Math.sin(t); isl(x, z, Math.hypot(C*4, Pp*11) + 9); const d = district(code, list, x, z, -t - Math.PI/2, C, Pp, Object.assign({ y: 0.12 }, opt || {})); const r0 = 22, r1 = r - Math.hypot(C*4, Pp*11) - 8; bridge(r0*Math.cos(t), r0*Math.sin(t), r1*Math.cos(t), r1*Math.sin(t), 0.6); return d; };
+  put('es', RES.es, 180, 108, 8, 3); put('mx', RES.mx, -52, 92, 4, 2); put('ar', RES.ar, 52, 92, 4, 2);
+  put('world', RES.world, 0, 104, 5, 2, { label: 'BARRIO INTERNACIONAL' }); put('cl', RES.cl, -112, 76, 3, 1); put('co', RES.co, 112, 76, 3, 1);
+  waterTest.push(() => true);
+} else if (L === 6) {
+  TITLE = 'Terrazas del valle'; DESC = 'El valle sube en escalones. Cada país tiene su terraza con vistas; se añaden terrazas más arriba.';
+  pizzAt(0, 0);
+  district('es', RES.es, -66, 0, 0, 8, 3);
+  district('mx', RES.mx, 40, -46, 0, 4, 2, { y: 5, platform: true }); district('ar', RES.ar, 40, 46, 0, 4, 2, { y: 5, platform: true });
+  district('cl', RES.cl, 96, -58, 0, 3, 1, { y: 10, platform: true }); district('co', RES.co, 96, -20, 0, 3, 1, { y: 10, platform: true });
+  district('world', RES.world, 102, 36, 0, 5, 2, { y: 10, platform: true, label: 'BARRIO INTERNACIONAL' });
+  link(-31, 0, 70, 0);
+  for (const [x, z1, z2] of [[18,-6,-18],[18,6,18]]) { const rp = box(5, 0.4, 14, '#4a4d52', x, 2.5, (z1+z2)/2); rp.rotation.x = Math.sign(z2)*0.36; }
+  for (const [x, z1, z2] of [[74,-6,-25],[74,6,15]]) { const rp = box(5, 0.4, 22, '#4a4d52', x, 5, (z1+z2)/2); rp.rotation.x = Math.sign(z2)*0.45; }
+  riverPath(Array.from({length: 60}, (_, i) => [-200 + i*7, -92 + 4*Math.sin(i/3)]));
+} else if (L === 7) {
+  TITLE = 'Ciudad en manzanas'; DESC = 'Cuadrícula de manzanas iguales (8 casas). Cada país ocupa manzanas seguidas; las vacías son parques o reserva.';
+  const BX = 46, BZ = 36; const blk = (i, j) => [(i - 2.5)*BX, (j - 1.5)*BZ];
+  for (let i = 0; i <= 6; i++) seg((i-3)*BX, -2*BZ - 4, (i-3)*BX, 2*BZ + 4, 5, ASF, true);
+  for (let j = 0; j <= 4; j++) seg(-3*BX - 4, (j-2)*BZ, 3*BX + 4, (j-2)*BZ, 5, ASF, true);
+  const [px, pz] = blk(2, 1); pizzAt(px + 23, pz + 18 - 5);
+  const fill = (code, list, cells, opt) => { let k = 0; cells.forEach(([i, j]) => { const [x, z] = blk(i, j); const part = list.slice(k, k + 8); k += 8; district(code, part, x, z, 0, 4, 1, opt); }); };
+  fill('es', RES.es, [[0,0],[0,1],[0,2],[0,3],[1,0],[1,3]]);
+  fill('mx', RES.mx, [[3,0],[4,0]]); fill('ar', RES.ar, [[3,3],[4,3]]);
+  fill('cl', RES.cl, [[5,0]]); fill('co', RES.co, [[5,1]]); fill('world', RES.world, [[5,2],[5,3]], { label: 'INTERNACIONAL' });
+  for (const [i, j] of [[1,1],[1,2],[3,1],[4,1],[3,2],[4,2]]) { const [x, z] = blk(i, j); plane(BX-8, BZ-8, '#6fb04a', x, 0.04, z); for (let t = 0; t < 10; t++) tree(x + (rnd()-0.5)*(BX-14), z + (rnd()-0.5)*(BZ-14), 0.9); }
+}
+
+// árboles fuera de barrios y calles
+const inDistrict = (x, z) => districts.some(d => { const [lx, lz] = rot(x - d.cx, z - d.cz, -d.a); return Math.abs(lx) < d.Wd/2 + 10 && Math.abs(lz) < d.D/2 + 8; });
+if (L !== 5) for (let i = 0; i < 1300; i++) { const x = (rnd()-0.5)*480, z = (rnd()-0.5)*340; if (Math.hypot(x, z) < 20 && L !== 4) continue; if (inDistrict(x, z)) continue; if (roadsSeg.some(s => distSeg(x, z, [s[0], s[1]], [s[2], s[3]]) < 5)) continue; if (waterTest.some(f => f(x, z))) continue; if (L === 4 && Math.hypot(x+158, z-8) < 20) continue; tree(x, z, 0.8 + rnd()*0.7); }
+// gente por las calles
+const shirts = ['#e63946','#2a9d8f','#e9c46a','#457b9d','#f4a261','#8338ec','#ff006e','#06d6a0','#118ab2','#ffbe0b'];
+for (let i = 0; i < 260; i++) { const s = roadsSeg[Math.floor(rnd()*roadsSeg.length)]; if (!s) break; const t = rnd(); const x = s[0] + (s[2]-s[0])*t + (rnd()-0.5)*2.4, z = s[1] + (s[3]-s[1])*t + (rnd()-0.5)*2.4; const dd = districts.find(d => { const [lx, lz] = rot(x - d.cx, z - d.cz, -d.a); return Math.abs(lx) < d.Wd/2 + 4 && Math.abs(lz) < d.D/2 + 3; }); const p = person(x, z, shirts[i % shirts.length], rnd() < 0.12); if (dd) p.position.y = dd.y; }
+for (let i = 0; i < 10; i++) { const s = roadsSeg[Math.floor(rnd()*roadsSeg.length)]; const t = rnd(); const tr = truck(s[0] + (s[2]-s[0])*t, s[1] + (s[3]-s[1])*t, -Math.atan2(s[3]-s[1], s[2]-s[0]), rnd() < 0.4 ? 'mix' : ['#2a7de1','#e05a2b','#2fa84f'][i%3]); const dd = districts.find(d => { const [lx, lz] = rot(tr.position.x - d.cx, tr.position.z - d.cz, -d.a); return Math.abs(lx) < d.Wd/2 + 4 && Math.abs(lz) < d.D/2 + 3; }); if (dd) tr.position.y = dd.y; }
+
+// cámara: encuadrar todo
+{ let x0 = 1e9, x1 = -1e9, z0 = 1e9, z1 = -1e9; const add = (x, z) => { x0 = Math.min(x0, x); x1 = Math.max(x1, x); z0 = Math.min(z0, z); z1 = Math.max(z1, z); };
+  districts.forEach(d => { for (const [sx, sz] of [[-1,-1],[1,-1],[-1,1],[1,1]]) add(...d.W2(sx*(d.Wd/2+6), sz*(d.D/2+6))); });
+  labels.filter(l => l.pizz).forEach(l => add(l.pos.x, l.pos.z));
+  const cx = (x0 + x1)/2, cz = (z0 + z1)/2, spanX = x1 - x0 + 30, spanZ = z1 - z0 + 40;
+  const vf = camera.fov*deg, hf = 2*Math.atan(Math.tan(vf/2)*W/H), el = 58*deg;
+  const d = Math.max((spanX/2)/Math.tan(hf/2), (spanZ*Math.sin(el)/2 + 20)/Math.tan(vf/2)) * 1.02;
+  camera.position.set(cx, d*Math.sin(el), cz + d*Math.cos(el) + 12); camera.lookAt(cx, 0, cz + 12);
+  camera.far = 3000; camera.updateProjectionMatrix();
+  const pts = []; districts.forEach(dd => { for (const [sx, sz] of [[-1,-1],[1,-1],[-1,1],[1,1]]) { const [px, pz] = dd.W2(sx*(dd.Wd/2+4), sz*(dd.D/2+4)); pts.push(new THREE.Vector3(px, dd.y, pz), new THREE.Vector3(px, dd.y + 9, pz)); } const [bx, bz] = dd.W2(0, ((L===2||L===5)?-1:1)*(dd.D/2 + 13)); pts.push(new THREE.Vector3(bx, dd.y, bz)); });
+  labels.filter(l => l.pizz).forEach(l => pts.push(l.pos.clone()));
+  let tx = cx, tz = cz + 12, dist = d;
+  for (let it = 0; it < 6; it++) {
+    camera.position.set(tx, dist*Math.sin(el), tz + dist*Math.cos(el)); camera.lookAt(tx, 0, tz); camera.updateMatrixWorld(); camera.updateProjectionMatrix();
+    let a0 = 9, a1 = -9, b0 = 9, b1 = -9; pts.forEach(p => { const q = p.clone().project(camera); a0 = Math.min(a0, q.x); a1 = Math.max(a1, q.x); b0 = Math.min(b0, q.y); b1 = Math.max(b1, q.y); });
+    const k = Math.max((a1 - a0)/2/0.94, (b1 - b0)/2/0.70);
+    const ncx = (a0 + a1)/2, ncy = (b0 + b1)/2 - (-0.10);
+    tx += ncx * dist*Math.tan(hf/2); tz -= ncy * dist*Math.tan(vf/2)/Math.sin(el);
+    dist *= k;
+  }
+  camera.position.set(tx, dist*Math.sin(el), tz + dist*Math.cos(el)); camera.lookAt(tx, 0, tz); camera.updateProjectionMatrix();
+  scene.fog = new THREE.Fog('#bfe3ff', d*1.6, d*3);
+  const S = Math.max(spanX, spanZ)/2 + 40; Object.assign(sun.shadow.camera, { left: -S, right: S, top: S, bottom: -S, far: 800 }); sun.position.set(cx - 90, 180, cz + 70); sun.target.position.set(cx, 0, cz); scene.add(sun.target); sun.shadow.camera.updateProjectionMatrix();
+}
+
+renderer.render(scene, camera);
+const out = document.getElementById('out'), c = out.getContext('2d');
+c.drawImage(gl, 0, 0);
+function rr(x,y,w,h,r){ c.beginPath(); c.moveTo(x+r,y); c.arcTo(x+w,y,x+w,y+h,r); c.arcTo(x+w,y+h,x,y+h,r); c.arcTo(x,y+h,x,y,r); c.arcTo(x,y,x+w,y,r); c.closePath(); }
+const FONT = '"Segoe UI", "Segoe UI Emoji", Arial, sans-serif';
+function project(v) { const p = v.clone().project(camera); return [(p.x+1)/2*W, (1-p.y)/2*H]; }
+const placed = [];
+const hit = (a) => placed.some(b => a.x < b.x + b.w + 4 && a.x + a.w + 4 > b.x && a.y < b.y + b.h + 4 && a.y + a.h + 4 > b.y);
+// paneles fijos reservados
+placed.push({ x: 36, y: 32, w: 1060, h: 200 }, { x: 36, y: H-96, w: 1200, h: 62 });
+// banners de barrio
+const NAMES = { es:'ESPAÑA', mx:'MÉXICO', ar:'ARGENTINA', cl:'CHILE', co:'COLOMBIA' };
+const banners = districts.filter(d => !(L === 7 && districts.filter(e => e.code === d.code && e.label === d.label)[0] !== d)).map(d => {
+  const same = districts.filter(e => e.code === d.code && e.label === d.label);
+  const n = same.reduce((s, e) => s + e.n, 0), cap = same.reduce((s, e) => s + e.cap, 0);
+  const [bx, bz] = d.W2(0, ((L===2||L===5)?-1:1)*(d.D/2 + 9)); const [x, y] = project(new THREE.Vector3(bx, d.y, bz));
+  const big = d.code === 'es' || d.code === 'mx' || d.code === 'ar';
+  const text = d.label || NAMES[d.code], sub = `${n} vecinos · sitio para ${cap}`;
+  const fT = big ? 38 : 28, fS = big ? 22 : 19;
+  c.font = `900 ${fT}px ${FONT}`; const tw = c.measureText(text).width; c.font = `700 ${fS}px ${FONT}`; const sw = c.measureText(sub).width;
+  const fw = big ? 66 : 50, w = Math.max(tw, sw) + fw + 44, h = big ? 84 : 70;
+  const r = { x: x - w/2, y: y - h/2, w, h }; placed.push(r);
+  return { d, r, text, sub, fT, fS, fw };
+});
+// etiquetas de vecinos
+const lab = labels.map(l => ({ ...l, xy: project(l.pos) }));
+const order = lab.sort((a, b) => ((b.type || b.prio) ? 1 : 0) - ((a.type || a.prio) ? 1 : 0) || b.xy[1] - a.xy[1]);
+for (const l of order) {
+  const [x, y] = l.xy; const big = l.pizz; const fs = big ? 26 : 16;
+  l.wish = l.type && WISH[l.type] ? WISH[l.type] : '';
+  l.title = (l.showCountry ? `${l.name} · ${CNAME[l.code]}` : l.name);
+  c.font = `800 ${fs}px ${FONT}`; l.tw = c.measureText(l.title).width; c.font = `600 14px ${FONT}`; l.ww = l.wish ? c.measureText(l.wish).width : 0;
+  l.fw = big ? 42 : 24; l.fh = big ? 28 : 16; l.fs = fs;
+  const w = Math.max(l.tw + l.fw + 8, l.ww) + 16, h = l.wish ? fs + 26 : fs + 11;
+  l.r = null;
+  for (const dy of (l.type || l.prio) ? [0, -(h+6), -(2*h+12), -(3*h+18)] : [0, -(h+6)]) { const cand = { x: x - w/2, y: y - h - 8 + dy, w, h }; if (!hit(cand) && cand.x > 0 && cand.x + w < W && cand.y > 0) { l.r = cand; break; } }
+  if (l.r) placed.push(l.r);
+}
+for (const l of lab.filter(l => l.r).sort((a, b) => a.r.y - b.r.y)) {
+  const [x, y] = l.xy; const { x: bx, y: by, w, h } = l.r; const fs = l.fs;
+  const bg = l.type ? '#fff7d6' : 'rgba(255,255,255,0.95)';
+  if (by + h + 10 < y - 2) { c.strokeStyle = 'rgba(255,255,255,0.95)'; c.lineWidth = 2; c.beginPath(); c.moveTo(x, by+h); c.lineTo(x, y-2); c.stroke(); }
+  c.shadowColor = 'rgba(0,0,0,0.3)'; c.shadowBlur = 6; c.fillStyle = bg; rr(bx, by, w, h, 8); c.fill(); c.shadowBlur = 0;
+  if (l.type) { c.strokeStyle = '#f2a900'; c.lineWidth = 2.5; rr(bx, by, w, h, 8); c.stroke(); }
+  c.beginPath(); c.moveTo(x-6, by+h); c.lineTo(x+6, by+h); c.lineTo(x, by+h+7); c.fillStyle = bg; c.fill();
+  const rowW = l.tw + l.fw + 8; let cx0 = x - rowW/2;
+  drawFlag(c, l.code, cx0, by + 5 + (fs - l.fh)/2 + 2, l.fw, l.fh); cx0 += l.fw + 8;
+  c.fillStyle = '#1b1f2a'; c.font = `800 ${fs}px ${FONT}`; c.textBaseline = 'top'; c.fillText(l.title, cx0, by + 5);
+  if (l.wish) { c.font = `600 14px ${FONT}`; c.fillStyle = '#7a4b00'; c.fillText(l.wish, x - l.ww/2, by + fs + 8); }
+}
+c.textBaseline = 'alphabetic';
+for (const { d, r, text, sub, fT, fS, fw } of banners) {
+  c.shadowColor = 'rgba(0,0,0,0.35)'; c.shadowBlur = 16; c.fillStyle = 'rgba(20,24,33,0.9)'; rr(r.x, r.y, r.w, r.h, 18); c.fill(); c.shadowBlur = 0;
+  const fh = fw*2/3, fy = r.y + (r.h - fh)/2;
+  if (d.code === 'world') { c.font = `${fh}px ${FONT}`; c.fillText('🌎', r.x + 16, fy + fh*0.86); } else drawFlag(c, d.code, r.x + 16, fy, fw, fh);
+  c.fillStyle = '#fff'; c.font = `900 ${fT}px ${FONT}`; c.fillText(text, r.x + fw + 30, r.y + r.h*0.5); c.fillStyle = '#ffd23f'; c.font = `700 ${fS}px ${FONT}`; c.fillText(sub, r.x + fw + 30, r.y + r.h*0.5 + fS + 6);
+}
+// panel título
+c.shadowColor = 'rgba(0,0,0,0.4)'; c.shadowBlur = 24; c.fillStyle = 'rgba(20,24,33,0.92)'; c.font = `900 50px ${FONT}`; const PW = Math.max(1060, c.measureText(`🍕 PROPUESTA ${L} · ${TITLE}`).width + 110); rr(36, 32, PW, 200, 26); c.fill(); c.shadowBlur = 0;
+c.fillStyle = '#ff6b1a'; c.font = `900 50px ${FONT}`; c.fillText(`🍕 PROPUESTA ${L}`, 64, 96);
+{ c.font = `900 50px ${FONT}`; const pw = c.measureText(`🍕 PROPUESTA ${L}`).width; c.fillStyle = '#fff'; c.fillText('· ' + TITLE, 64 + pw + 16, 96); }
+c.fillStyle = '#d7dde6'; c.font = `600 23px ${FONT}`;
+{ const words = DESC.split(' '); let line = '', yy = 140; for (const wd of words) { if (c.measureText(line + wd).width > 990) { c.fillText(line, 64, yy); line = ''; yy += 32; } line += wd + ' '; } c.fillText(line, 64, yy); }
+c.fillStyle = '#ffd23f'; c.font = `800 25px ${FONT}`; c.fillText(`🏠 57 vecinos hoy  ·  sitio para ${totalCap}  ·  ❤️ 127  ·  💬 62`, 64, 212);
+c.fillStyle = 'rgba(20,24,33,0.9)'; rr(36, H-96, 1200, 62, 18); c.fill();
+c.fillStyle = '#fff'; c.font = `700 23px ${FONT}`; c.fillText('🟨 parcela libre para nuevos vecinos    🟧 dorado = lo que pidió    🏗️ casas en obra', 58, H-56);
+window.__done = true;
+if (P.get('save')) fetch('/save?name=' + P.get('save'), { method: 'POST', body: out.toDataURL('image/png') }).then(r => r.text()).then(t => { document.title = 'saved ' + t; });
+
+</script></body></html>

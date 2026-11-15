@@ -1,0 +1,22 @@
+{
+  "episode": "ep001",
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+10%",
+  "pitch": "+8Hz",
+  "notes": "Mismo Pizz, mismo valle y misma voz ElevenLabs enérgica que ep000 v2. Mapa: el río parte el valle; Europa a un lado (España 36 + Bulgaria), América al otro (México 8, Argentina 6, Chile 2, Colombia 2, Perú, Bolivia, Venezuela, Cuba, R. Dominicana, Uruguay, Brasil). Pizz en el centro con puentes. Infra nueva: súper, escuela, centro de salud, peluquería (Aleky). Brasil = primer país nuevo, barrio propio. Datos: pizzaville/episodios/ep001/vecinos.csv (62 vecinos, 13 países). Cierre fijo: marcador continentes, '¿Tu casa aquí?' sobre parcela libre, ejemplo 'Soy Ana de Perú, quiero un castillo', 'etiqueta a alguien de tu país'.",
+  "lines": [
+    { "id": "l01", "text": "¡Eh! ¡Que ayer vivía SOLO aquí!" },
+    { "id": "l02", "text": "Y mirad esto: ¡sesenta y dos vecinos! ¡De trece países!" },
+    { "id": "l03", "text": "Sois tantos que he tenido que partir el valle en dos: Europa a este lado del río... ¡y América al otro!" },
+    { "id": "l04", "text": "Supermercado, escuela, centro de salud... ¡y tres puentes! Esto ya es una ciudad." },
+    { "id": "l05", "text": "Marina, fuiste la primera. ¡Tu casa ya está!" },
+    { "id": "l06", "text": "Gabriel, tu granja de gallinas. Manuel, tu huerto con tractor. Y Rodrigo... tu furgo, tus perros, y el río al ladito." },
+    { "id": "l07", "text": "¡Y Aleky quería ser el peluquero! Peluquería abierta." },
+    { "id": "l08", "text": "Cruzamos a América: Fernando, tu rancho. Kiker, tu casa de dos pisos. ¡Y Thiago, mansión con piscina!" },
+    { "id": "l09", "text": "¡Atención! Matheus trae la primera bandera nueva: ¡Brasil! Premio: barrio propio." },
+    { "id": "l10", "text": "Y ahora mismo... ¡Europa gana treinta y siete a veinticinco!" },
+    { "id": "l11", "text": "América, ¿os vais a dejar ganar?" },
+    { "id": "l12", "text": "Comenta tu nombre, tu país y qué casa quieres. ¡Y etiqueta a alguien de tu país!" },
+    { "id": "l13", "text": "¿Tu casa aquí? ¡Te la construyo en el próximo episodio!" }
+  ]
+}

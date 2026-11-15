@@ -1,0 +1,21 @@
+{
+  "episode": "futuro000",
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+10%",
+  "pitch": "+8Hz",
+  "notes": "Serie PIZZ 2050, episodio 0. Pizz se entierra en un baúl y sale en 2050; lo que comenten será lo que encuentre. Misma voz ElevenLabs enérgica que Pizzaville (ozbKZapo4Cy6jU7KTHtp).",
+  "lines": [
+    { "id": "l01", "text": "¡Cada comentario que dejes aquí... será algo que me encuentre en el año dos mil cincuenta!" },
+    { "id": "l02", "text": "Soy Pizz. Y voy a hacer la mayor locura de internet." },
+    { "id": "l03", "text": "Me meto en este baúl, me entierro... ¡y no salgo hasta dos mil cincuenta!" },
+    { "id": "l04", "text": "Veinticuatro años bajo tierra. Cuando se abra la tapa... el mundo será otro." },
+    { "id": "l05", "text": "¿Y qué habrá ahí fuera? ¡Eso lo decidís vosotros!" },
+    { "id": "l06", "text": "Comenta qué me voy a encontrar: coches voladores, robots, ¿pizza gratis?... ¡Lo que quieras!" },
+    { "id": "l07", "text": "Tú lo comentas... ¡y yo me lo encuentro!" },
+    { "id": "l08", "text": "Y etiqueta a alguien que tenga que venirse al futuro conmigo." },
+    { "id": "l09", "text": "¿Listos? ¡Nos vemos en dos mil cincuenta!" },
+    { "id": "l10", "text": "¿Hola?... ¿Ya es dos mil cincuenta?" }
+  ],
+  "eleven": { "stability": 0.3, "similarity_boost": 0.8, "style": 0.6, "use_speaker_boost": true },
+  "eleven_out": "futuro000"
+}

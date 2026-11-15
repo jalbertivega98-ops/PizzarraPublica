@@ -1,0 +1,96 @@
+{
+ "segments": [
+  {
+   "key": "intro",
+   "text": "¡Ey! ¿¡Pero qué ha pasado aquí!?",
+   "file": "voz/00_intro.mp3",
+   "dur": 3.168,
+   "start": 0.6
+  },
+  {
+   "key": "count",
+   "text": "Ayer vivía solo en este valle… y hoy ya somos sesenta y dos vecinos, de trece países.",
+   "file": "voz/01_count.mp3",
+   "dur": 5.736,
+   "start": 4.118
+  },
+  {
+   "key": "river",
+   "text": "Somos tantos, que hemos tenido que partir el valle en dos: Europa a este lado del río… y América al otro.",
+   "file": "voz/02_river.mp3",
+   "dur": 6.504,
+   "start": 10.204
+  },
+  {
+   "key": "infra",
+   "text": "Y tanta gente necesita cosas: ya tenemos supermercado, escuela, centro de salud… y tres puentes.",
+   "file": "voz/03_infra.mp3",
+   "dur": 6.768,
+   "start": 17.058
+  },
+  {
+   "key": "spain",
+   "text": "Marina, de España, fuiste la primera en llamar a la puerta. Gabriel ya tiene su granja de gallinas, y Manuel, su huerto con tractor.",
+   "file": "voz/04_spain.mp3",
+   "dur": 8.808,
+   "start": 24.176
+  },
+  {
+   "key": "rodrigo",
+   "text": "Rodrigo quería su furgo y sus perros, al ladito del río. Hecho.",
+   "file": "voz/05_rodrigo.mp3",
+   "dur": 5.28,
+   "start": 33.334
+  },
+  {
+   "key": "aleky",
+   "text": "Y Aleky quiere ser el peluquero del pueblo… ¡peluquería abierta!",
+   "file": "voz/06_aleky.mp3",
+   "dur": 4.008,
+   "start": 38.964
+  },
+  {
+   "key": "bridge",
+   "text": "Crucemos el puente.",
+   "file": "voz/07_bridge.mp3",
+   "dur": 2.064,
+   "start": 43.322
+  },
+  {
+   "key": "america",
+   "text": "Fernando ya tiene su rancho en México, Kiker su casa de dos pisos, y Thiago, desde Argentina, su mansión con piscina.",
+   "file": "voz/08_america.mp3",
+   "dur": 7.752,
+   "start": 45.736
+  },
+  {
+   "key": "brasil",
+   "text": "¡Y atención! Matheus trae la primera bandera nueva: Brasil. Premio: ¡barrio propio!",
+   "file": "voz/09_brasil.mp3",
+   "dur": 7.248,
+   "start": 53.838
+  },
+  {
+   "key": "sweep",
+   "text": "Bienvenidos también Laia, Jaume, Rafa… y todos los nuevos vecinos.",
+   "file": "voz/10_sweep.mp3",
+   "dur": 5.232,
+   "start": 61.436
+  },
+  {
+   "key": "score",
+   "text": "Ahora mismo gana Europa, treinta y siete a veinticinco. América… ¿le dais la vuelta?",
+   "file": "voz/11_score.mp3",
+   "dur": 6.264,
+   "start": 67.018
+  },
+  {
+   "key": "cta",
+   "text": "¿Tu casa aquí? Comenta tu nombre, tu país y qué casa quieres, y etiqueta a alguien de tu país. ¡Te la construyo en el próximo episodio!",
+   "file": "voz/12_cta.mp3",
+   "dur": 9.432,
+   "start": 73.632
+  }
+ ],
+ "total": 85.41
+}

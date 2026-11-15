@@ -11,6 +11,7 @@ import { world } from './engine/director'
 import { skyAt } from './scene/Atmosphere'
 import { Ep000 } from './episodes/ep000'
 import { Ep001 } from './episodes/ep001'
+import { Fut000 } from './episodes/futuro000'
 import { Town } from './scene/Town'
 import { Panel } from './ui/Panel'
 import { useStore } from './state/store'
@@ -110,6 +111,8 @@ export default function App() {
         <Ep000 />
       ) : EPISODE === 'ep001' ? (
         <Ep001 />
+      ) : EPISODE === 'futuro000' ? (
+        <Fut000 />
       ) : (
         <>
           <PizzHome />

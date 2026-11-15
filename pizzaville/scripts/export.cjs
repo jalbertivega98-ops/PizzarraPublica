@@ -85,6 +85,35 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     D(52.2, to, 'Big', '{\\an5\\pos(540,700)\\fad(250,0)}PIZZAVILLE')
     D(52.6, to, 'Mid', '{\\an5\\pos(540,850)\\fad(250,0)}EUROPA 37 · 25 AMÉRICA')
   }
+  if (ep === 'futuro000') {
+    const D = (a, b, st, tx, layer = 2) => ev.push(`Dialogue: ${layer},${assTime(a)},${assTime(Math.min(b, to))},${st},,0,0,0,,${tx}`)
+    const POP = '\\t(0,180,\\fscx115\\fscy115)\\t(180,360,\\fscx100\\fscy100)'
+    D(0, 4.5, 'Mid', `{\\an5\\pos(540,330)\\fad(0,200)${POP}}CADA COMENTARIO\\N{\\fs64}= ALGO QUE PIZZ ENCONTRARÁ EN`)
+    D(0.15, 4.5, 'Big', `{\\an5\\pos(540,560)\\fad(0,200)\\fs230\\c&H00FFF36F&\\3c&H00402010&${POP}}2050`)
+    D(4.8, 7.7, 'Tag', '{\\fad(150,150)}PIZZ 2050 · EPISODIO 0')
+    D(8.6, 11.8, 'Mid', `{\\an5\\pos(540,360)\\fad(150,150)${POP}}NO SALE HASTA\\N{\\c&H00FFF36F&\\fs130}2050`)
+    D(12.2, 16.1, 'Mid', `{\\an5\\pos(540,330)\\fad(150,150)${POP}}{\\c&H004DD3FF&\\fs140}24 AÑOS\\N{\\fs78\\c&H00FFFFFF&}BAJO TIERRA`)
+    D(17.6, 19.2, 'Mid', `{\\an5\\pos(540,360)\\fad(120,150)${POP}}LO DECIDES {\\c&H004DD3FF&}TÚ`)
+    const ideas = [['COCHES VOLADORES', 21.6], ['ROBOTS', 22.6], ['¿PIZZA GRATIS?', 23.3]]
+    ideas.forEach(([tx, a], i) => D(a, 24.8, 'Mid', `{\\an5\\pos(540,${300 + i * 105})\\fad(100,150)${POP}\\fs74}${i % 2 ? '{\\c&H00FFF36F&}' : '{\\c&H004DD3FF&}'}${tx}`))
+    D(19.6, 21.5, 'Mid', `{\\an5\\pos(540,330)\\fad(120,100)${POP}}COMENTA QUÉ\\NSE ENCONTRARÁ`)
+    D(25.0, 27.3, 'Big', `{\\an5\\pos(540,300)\\fad(100,150)${POP}\\fs108}TÚ LO COMENTAS`)
+    D(26.0, 27.3, 'Big', `{\\an5\\pos(540,450)\\fad(80,150)${POP}\\fs108\\c&H00FFF36F&}PIZZ LO ENCUENTRA`)
+    D(27.5, 30.4, 'Tag', '{\\fad(150,150)}ETIQUETA A QUIEN SE VENDRÍA CONTIGO')
+    D(30.6, 32.6, 'Mid', `{\\an5\\pos(540,360)\\fad(120,100)${POP}}¡NOS VEMOS EN\\N{\\c&H00FFF36F&\\fs130}2050!`)
+    // year counter during the timelapse
+    const L0 = 35.3, L1 = 41.1, n = 24, step = (L1 - L0 - 0.6) / n
+    for (let i = 0; i <= n; i++) {
+      const a = L0 + 0.2 + i * step, b = i === n ? 41.2 : a + step
+      const col = i === n ? '\\c&H00FFF36F&' : '\\c&H00FFFFFF&'
+      D(a, b, 'Big', `{\\an5\\pos(540,480)${i === n ? POP : ''}\\fs250${col}}${2026 + i}`, 3)
+    }
+    D(L0 + 0.2, 41.2, 'Mid', '{\\an5\\pos(540,300)\\fad(200,0)\\fs70}AÑO')
+    D(41.4, 44.3, 'Mid', `{\\an5\\pos(540,360)\\fad(200,100)}2050...\\N{\\fs64}ALGO SE MUEVE`)
+    D(44.5, to, 'Big', `{\\an5\\pos(540,420)\\fad(100,0)${POP}\\fs140}CONTINUARÁ...`)
+    D(45.1, to, 'Mid', `{\\an5\\pos(540,640)\\fad(200,0)${POP}\\fs68}¿QUÉ SE ENCONTRARÁ PIZZ?\\N{\\c&H004DD3FF&\\fs82}¡COMÉNTALO!`)
+    D(45.6, to, 'Tag', '{\\fad(200,0)}PIZZ 2050 · EPISODIO 0')
+  }
   if (ep === 'ep000') {
     ev.push(`Dialogue: 2,${assTime(0)},${assTime(3.0)},Mid,,0,0,0,,{\\an5\\pos(540,560)\\fad(0,200)\\t(0,250,\\fscx115\\fscy115)\\t(250,450,\\fscx100\\fscy100)}AQUÍ SOLO VIVE\\N{\\c&H004DD3FF&\\fs120}1 PERSONA`)
     ev.push(`Dialogue: 1,${assTime(25.2)},${assTime(40.2)},Tag,,0,0,0,,{\\fad(200,200)}SIMULACIÓN · ASÍ SERÁ`)
@@ -138,7 +167,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
   // ---------------- audio
   const voices = info.lines.filter((l) => l.hasAudio).map((l) => ({ file: path.resolve(`public/voz/${ep}/${l.id}.mp3`), at: l.at - from }))
-  const cues = { duration: to - from, voices, sfx: info.sfx.map((s) => ({ ...s, at: s.at - from })) }
+  const cues = { duration: to - from, voices, sfx: info.sfx.map((s) => ({ ...s, at: s.at - from })), music: info.music, mute: (info.mute || []).map(([a, b]) => [a - from, b - from]) }
   fs.writeFileSync(path.join(out, 'cues.json'), JSON.stringify(cues, null, 1))
   const wav = path.join(out, 'audio.wav')
   execFileSync('python3', [path.resolve('scripts/audio.py'), path.join(out, 'cues.json'), wav], { stdio: 'inherit' })

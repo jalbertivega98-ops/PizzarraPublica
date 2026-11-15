@@ -99,6 +99,44 @@ def music(duration, bpm=104):
     return out[: int(SR * duration)]
 
 
+def music_epic(duration, mute=(), bpm=122):
+    """minor-key, tense and driving (Pizz 2050): Am F C G, heavy kick, braam hits"""
+    out = np.zeros(int(SR * (duration + 2)))
+    beat = 60 / bpm
+    prog = [[45, 48, 52, 57], [41, 45, 48, 53], [48, 52, 55, 60], [43, 47, 50, 55]]
+    t, bar = 0.0, 0
+    while t < duration:
+        ch = prog[bar % 4]
+        intensity = min(1.0, 0.55 + t / 25)
+        add(out, pad([freq(m) for m in ch[1:]] + [freq(ch[0] - 12)], beat * 4), t, 0.16)
+        for k in range(8):  # driving 8th-note bass
+            add(out, pluck(freq(ch[0] - 12), beat * 0.5, 0.75), t + k * beat / 2, 0.30)
+        arp = [ch[1] + 24, ch[2] + 24, ch[3] + 12, ch[2] + 24]
+        for k in range(16):
+            add(out, pluck(freq(arp[k % 4]), beat * 0.4, 0.4), t + k * beat / 4, 0.07 * intensity)
+        for k in range(4):
+            add(out, kick(0.4), t + k * beat, 0.5 * intensity)
+            add(out, hat(), t + k * beat + beat / 2, 0.10 * intensity)
+        if bar % 2 == 0:
+            add(out, braam(freq(ch[0] - 24), beat * 3), t, 0.22)
+        t += beat * 4
+        bar += 1
+    out = out[: int(SR * duration)]
+    for a, b in mute:
+        i, j = int(a * SR), int(b * SR)
+        r = int(0.15 * SR)
+        if i < len(out):
+            out[i:i + r] *= np.linspace(1, 0, len(out[i:i + r]))
+            out[i + r:j] = 0
+    return out
+
+
+def braam(f, d):
+    t = t_(d)
+    s = sum(np.sign(np.sin(2 * np.pi * f * m * t + 0.3 * k)) * (0.5 ** k) for k, m in enumerate([1, 1.005, 2, 3]))
+    return s * env(len(t), 0.05, d * 0.6) * 0.5
+
+
 # ------------------------------------------------------------------ sfx
 def sfx(kind):
     if kind == 'whoosh':
@@ -119,6 +157,19 @@ def sfx(kind):
         o = np.zeros(int(SR * 1.6))
         for k, m in enumerate([84, 88, 91, 96]): add(o, bell(freq(m), 1.2), k * 0.09, 0.5)
         return o
+    if kind == 'rumble':
+        n = int(SR * 2.5); x = rng.uniform(-1, 1, n); y = np.zeros(n); s = 0.0
+        for i in range(n): s += 0.01 * (x[i] - s); y[i] = s
+        t = t_(2.5)
+        return (y * 25 + 0.5 * np.sin(2 * np.pi * 38 * t)) * env(n, 0.3, 1.0) * (0.6 + 0.4 * np.sin(2 * np.pi * 7 * t))
+    if kind == 'riser':
+        t = t_(2.0); f = 200 + 1400 * (t / 2.0) ** 2
+        return (np.sin(2 * np.pi * np.cumsum(f) / SR) * 0.3 + rng.uniform(-1, 1, len(t)) * 0.25) * (t / 2.0) ** 2
+    if kind == 'tick':
+        t = t_(0.05); return np.sin(2 * np.pi * 2400 * t) * np.exp(-t * 90) * 0.6
+    if kind == 'hit':
+        t = t_(1.5)
+        return (np.sin(2 * np.pi * (45 + 60 * np.exp(-t * 8)) * t) * np.exp(-t * 2.5) + rng.uniform(-1, 1, len(t)) * np.exp(-t * 18) * 0.5)
     if kind == 'step':
         t = t_(0.08); return rng.uniform(-1, 1, len(t)) * np.exp(-t * 70) * 0.25
     raise ValueError(kind)
@@ -132,7 +183,7 @@ def load_mp3(path):
 def main(cues_path, out_path):
     cues = json.load(open(cues_path))
     D = cues['duration']
-    mus = music(D)
+    mus = music_epic(D, cues.get('mute', [])) if cues.get('music') == 'epic' else music(D)
     voice = np.zeros(int(SR * (D + 1)))
     for v in cues['voices']:
         add(voice, load_mp3(v['file']) * 1.0, v['at'])

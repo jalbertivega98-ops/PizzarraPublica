@@ -39,7 +39,7 @@ export function plotSlots(): PlotSlot[] {
   return out
 }
 
-function valid(x: number, z: number) {
+export function valid(x: number, z: number) {
   if (waterDist(x, z) < 7) return false
   let lo = Infinity, hi = -Infinity
   for (const [dx, dz] of [[-4, -4], [4, -4], [-4, 4], [4, 4], [0, 0]]) {
@@ -58,6 +58,9 @@ export function footprintHeight(x: number, z: number) {
   return lo
 }
 
+/** extra spots kept free of trees (episodes register theirs at import time) */
+export const extraReserved: { x: number; z: number; r: number }[] = []
+
 /** keep the first slots free of trees and rocks */
 export function reservedAt(x: number, z: number, n = 70) {
   const slots = plotSlots()
@@ -66,5 +69,6 @@ export function reservedAt(x: number, z: number, n = 70) {
     if (Math.abs(s.x - x) < 9 && Math.abs(s.z - z) < 9) return true
   }
   if (Math.hypot(x - SIGN_POS.x, z - SIGN_POS.z) < 3) return true
+  for (const e of extraReserved) if (Math.abs(e.x - x) < e.r && Math.abs(e.z - z) < e.r) return true
   return false
 }

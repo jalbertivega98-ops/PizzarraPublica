@@ -10,6 +10,7 @@ import { nightMats } from './scene/materials'
 import { world } from './engine/director'
 import { skyAt } from './scene/Atmosphere'
 import { Ep000 } from './episodes/ep000'
+import { Ep001 } from './episodes/ep001'
 import { Town } from './scene/Town'
 import { Panel } from './ui/Panel'
 import { useStore } from './state/store'
@@ -107,6 +108,8 @@ export default function App() {
       <Sign />
       {EPISODE === 'ep000' ? (
         <Ep000 />
+      ) : EPISODE === 'ep001' ? (
+        <Ep001 />
       ) : (
         <>
           <PizzHome />

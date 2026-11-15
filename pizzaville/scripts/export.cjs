@@ -72,6 +72,19 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     const nb = i + 1 < subs.length ? Math.min(c.b, subs[i + 1].a - 0.01) : c.b
     ev.push(`Dialogue: 0,${assTime(c.a)},${assTime(nb)},Sub,,0,0,0,,${c.txt}`)
   })
+  if (ep === 'ep001') {
+    const D = (a, b, st, tx) => ev.push(`Dialogue: 2,${assTime(a)},${assTime(Math.min(b, to))},${st},,0,0,0,,${tx}`)
+    D(0, 2.15, 'Mid', '{\\an5\\pos(540,520)\\fad(0,150)}AYER:\\N{\\c&H004DD3FF&\\fs120}1 PERSONA')
+    D(2.6, 5.25, 'Mid', '{\\an5\\pos(540,520)\\fad(150,150)\\t(0,250,\\fscx112\\fscy112)\\t(250,450,\\fscx100\\fscy100)}HOY:\\N{\\c&H004DD3FF&\\fs120}62 VECINOS\\N{\\fs70}13 PAÍSES')
+    D(34.6, 38.5, 'Mid', '{\\an5\\pos(540,430)\\fad(150,150)}¡NUEVO PAÍS!\\N{\\c&H0039C26B&\\fs110}BRASIL')
+    D(38.9, 44.3, 'Big', '{\\an5\\pos(540,560)\\fad(200,150)\\fs96}EUROPA {\\c&H004DD3FF&}37{\\c&H003D8AFF&}  –  {\\c&H00FFE07F&}25{\\c&H003D8AFF&} AMÉRICA')
+    D(42.2, 44.3, 'Mid', '{\\an5\\pos(540,720)\\fad(150,150)}¿OS VAIS A DEJAR GANAR?')
+    D(44.6, 49.3, 'Mid', '{\\an5\\pos(540,330)\\fad(200,150)}COMENTA:\\N{\\c&H004DD3FF&}«SOY ANA DE PERÚ,\\NQUIERO UN CASTILLO»')
+    D(47.0, 49.3, 'Tag', '{\\fad(150,150)}ETIQUETA A ALGUIEN DE TU PAÍS')
+    D(49.6, to, 'Mid', '{\\an5\\pos(540,420)\\fad(200,0)\\t(0,250,\\fscx112\\fscy112)\\t(250,450,\\fscx100\\fscy100)}¿TU CASA AQUÍ?')
+    D(52.2, to, 'Big', '{\\an5\\pos(540,700)\\fad(250,0)}PIZZAVILLE')
+    D(52.6, to, 'Mid', '{\\an5\\pos(540,850)\\fad(250,0)}EUROPA 37 · 25 AMÉRICA')
+  }
   if (ep === 'ep000') {
     ev.push(`Dialogue: 2,${assTime(0)},${assTime(3.0)},Mid,,0,0,0,,{\\an5\\pos(540,560)\\fad(0,200)\\t(0,250,\\fscx115\\fscy115)\\t(250,450,\\fscx100\\fscy100)}AQUÍ SOLO VIVE\\N{\\c&H004DD3FF&\\fs120}1 PERSONA`)
     ev.push(`Dialogue: 1,${assTime(25.2)},${assTime(40.2)},Tag,,0,0,0,,{\\fad(200,200)}SIMULACIÓN · ASÍ SERÁ`)

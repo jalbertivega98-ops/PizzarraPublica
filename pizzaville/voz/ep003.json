@@ -1,0 +1,28 @@
+{
+  "episode": "ep003",
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+10%",
+  "pitch": "+8Hz",
+  "notes": "Motor ep000 v2, mismo Pizz, misma voz ElevenLabs (bloque eleven igual que ep001/ep002). Datos: pizzaville/episodios/ep003/vecinos.csv (91 vecinos, 19 países, Europa 51 – 38 América). Votos: Oliver 31 – Thiago 4. HISTORIA (aprobada por Joel): entrada como siempre; Oliver gana y paga la fiesta de la victoria en la casa grande con piscina de Joaquín (joaquinzamora99, pidió casa para dar fiestas a todo el pueblo); DJ Gisela (giseeelz, sin país: sin bandera) pinchando; Quentin el panadero reparte pan, Nicolás (Colombia, electricista) monta las luces; Álvaro el cura con sus perritas India (border collie negra) y Nala (mastín marrón clarito). La oposición de Thiago se enfada y asalta la fiesta en plan dibujo animado (lanzando tartas/globos de agua, nada violento). Se llama al ejército: base militar de Fran (pove10_, sin país) y el general Esteban (Chile); policías Gian y SoyAngelix y el sheriff Ezequiel. Todo vuelve a la calma. Elena (ayuntamiento) lo escribe en el libro de historia de Pizzaville. Barrido final: estadio (Hugo, Rafael, Joakin jugando), plaza de toros de Cayetano, castillo de Toni, isla de África y Asia. NO usar: enigmia.lab, alexx._fontaa__ ('camello'), cian.ismael ('asesino'), Nano/armería ('mafia'). GANCHO NUEVO: votación del castigo a la oposición: comenta MULTA o PERDÓN. Cierre: marcador continentes, '¿Tu casa aquí?' sobre parcelas libres, ejemplo en pantalla 'Soy Ana de Perú, quiero un castillo', 'etiqueta a alguien de tu país'.",
+  "lines": [
+    { "id": "l01", "text": "¡Noventa y un vecinos... y por fin, un presidente!" },
+    { "id": "l02", "text": "Oliver arrasa: ¡treinta y uno a cuatro! Y como ha ganado... ¡la fiesta la paga él!" },
+    { "id": "l03", "text": "¿Dónde? En la casa de Joaquín, que pidió una piscina para dar fiestas a todo el pueblo." },
+    { "id": "l04", "text": "A los platos, ¡DJ Gisela! Quentin trae el pan, Nicolás pone las luces... y Álvaro viene con India y Nala." },
+    { "id": "l05", "text": "Pero... la oposición de Thiago no se lo ha tomado nada bien." },
+    { "id": "l06", "text": "¡Asaltan la fiesta! ¡Tartas por los aires!" },
+    { "id": "l07", "text": "¡Llamad al ejército! Sale la base militar de Fran, con el general Esteban al frente." },
+    { "id": "l08", "text": "Gian, SoyAngelix y el sheriff Ezequiel ponen orden. ¡Paz en Pizzaville!" },
+    { "id": "l09", "text": "Y Elena, desde el ayuntamiento, lo apunta todo en el libro de historia del pueblo." },
+    { "id": "l10", "text": "Mientras, Hugo, Rafael y Joakin estrenan el estadio... ¡y Cayetano abre su plaza de toros!" },
+    { "id": "l11", "text": "Europa sigue ganando, cincuenta y uno a treinta y ocho. Ahora decidís vosotros: ¿qué hacemos con la oposición? Comenta MULTA o PERDÓN." },
+    { "id": "l12", "text": "Y si eres nuevo: tu nombre, tu país y qué quieres ser. ¿Tu casa aquí? ¡Etiqueta a alguien de tu país!" }
+  ],
+  "eleven": {
+    "stability": 0.3,
+    "similarity_boost": 0.8,
+    "style": 0.6,
+    "use_speaker_boost": true
+  },
+  "eleven_out": "ep003"
+}

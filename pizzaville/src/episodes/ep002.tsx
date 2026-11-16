@@ -43,7 +43,7 @@ export const EP002 = {
 const A = Object.fromEntries(EP002.script.map((l) => [l.id, l.at])) as Record<string, number>
 
 // ---------------------------------------------------------------- data & layout
-const ISO: Record<string, string> = {
+export const ISO: Record<string, string> = {
   España: 'es', México: 'mx', Argentina: 'ar', Colombia: 'co', Chile: 'cl', Bulgaria: 'bg', Perú: 'pe', Venezuela: 've', Bolivia: 'bo', Cuba: 'cu',
   'República Dominicana': 'do', Uruguay: 'uy', Brasil: 'br', Líbano: 'lb', Guatemala: 'gt', 'Costa Rica': 'cr', Marruecos: 'ma', Ecuador: 'ec', 'El Salvador': 'sv',
 }
@@ -57,7 +57,7 @@ function people(): Person[] {
   })
 }
 
-type Item = {
+export type Item = {
   key: string; lot: Lot; spec: HouseSpec; iso: string; name?: string; label?: string; sign?: string; signColor?: string
   pool?: boolean; fence?: boolean; castle?: boolean; isNew?: boolean; delay: number; person?: Person
 }
@@ -76,7 +76,7 @@ export const STADIUM = { x: -95, z: 85, rx: 26, rz: 18 }
 
 const spec = (seed: number, o: Partial<HouseSpec> = {}) => ({ ...houseSpecFromSeed(seed), ...o })
 
-function wishStyle(w: string) {
+export function wishStyle(w: string) {
   let o: Partial<HouseSpec> = {}, label: string | undefined, pool = false, fence = false
   if (/rancho/.test(w)) { o = { w: 9, d: 6, floors: 1, wall: '#d9a066', roof: '#8a4b2a' }; fence = true; label = 'RANCHO' }
   if (/2 pisos|dos plantas/.test(w)) { o = { ...o, floors: 2 }; label = /pueblo/.test(w) ? 'CASA DE PUEBLO' : '2 PISOS' }
@@ -171,10 +171,10 @@ function build() {
   for (const it of items) extraReserved.push({ x: it.lot.x, z: it.lot.z, r: 9 })
   for (const bx of BRIDGES) extraReserved.push({ x: bx, z: -60, r: 8 })
   extraReserved.push({ x: STADIUM.x, z: STADIUM.z, r: 36 })
-    return { items, byName, job, free }
+    return { items, byName, job, free, nextEu, nextAm, eu, am, used }
 }
 const BRIDGES = [-45, 20, 85]
-const LAYOUT = build()
+export const LAYOUT = build()
 ;(globalThis as any).__ep2 = LAYOUT
 
 const F = (l: Lot) => [Math.sin(l.rot), Math.cos(l.rot)]
@@ -185,11 +185,11 @@ function at(l: Lot, f: number, r: number, y: number): [number, number, number] {
 const look = (l: Lot, y = 2.6): [number, number, number] => [l.x, l.y + y, l.z]
 
 // campaign posters at both ends of the central bridge, facing east
-const POSTER = {
+export const POSTER = {
   oliver: { x: 16.5, z: -47, name: 'OLIVER', iso: 'es', bg: '#ffd23d', fg: '#1a2233' },
   thiago: { x: 16.5, z: -75, name: 'THIAGO', iso: 'ar', bg: '#3fa9f5', fg: '#ffffff' },
 }
-const DECK = 2.53 // top of the bridge deck
+export const DECK = 2.53 // top of the bridge deck
 const posterLot = (p: { x: number; z: number }): Lot => ({ x: p.x, z: p.z, y: DECK, rot: Math.PI / 2 })
 
 // ---------------------------------------------------------------- camera
@@ -404,7 +404,7 @@ export function Ep002() {
 }
 
 // ---------------------------------------------------------------- props
-function FlagPost({ iso, h = 4 }: { iso: string; h?: number }) {
+export function FlagPost({ iso, h = 4 }: { iso: string; h?: number }) {
   return (
     <group>
       <mesh position={[0, h / 2, 0]} material={mat('#d9d9d9', { rough: 0.4 })}><cylinderGeometry args={[0.06, 0.06, h, 6]} /></mesh>
@@ -413,7 +413,7 @@ function FlagPost({ iso, h = 4 }: { iso: string; h?: number }) {
   )
 }
 
-function Poster({ x, z, name, iso, bg, fg }: { x: number; z: number; name: string; iso: string; bg: string; fg: string }) {
+export function Poster({ x, z, name, iso, bg, fg }: { x: number; z: number; name: string; iso: string; bg: string; fg: string }) {
   const y = DECK
   const fm = useMemo(() => new THREE.MeshBasicMaterial({ map: flagTexture(iso), toneMapped: false }), [iso])
   return (
@@ -431,7 +431,7 @@ function Poster({ x, z, name, iso, bg, fg }: { x: number; z: number; name: strin
   )
 }
 
-function Castle({ getProgress }: { getProgress: () => number }) {
+export function Castle({ getProgress }: { getProgress: () => number }) {
   const g = useRef<THREE.Group>(null!)
   useFrame(() => { const p = getProgress(); g.current.visible = p > 0.01; g.current.scale.set(1, Math.max(0.01, ease.outBack(p)), 1) })
   const stone = mat('#c9c2b4', { rough: 0.95 }), dark = mat('#9b9384', { rough: 0.95 }), roof = mat('#7d4e9e', { rough: 0.7 })
@@ -463,7 +463,7 @@ function Castle({ getProgress }: { getProgress: () => number }) {
   )
 }
 
-function BellTower({ h, d }: { h: number; d: number }) {
+export function BellTower({ h, d }: { h: number; d: number }) {
   return (
     <group position={[0, 0, d / 2 - 1.2]}>
       <mesh position={[0, h + 1.6, 0]} material={mat('#f4ecd8', { rough: 0.9 })} castShadow><boxGeometry args={[2.2, 3.4, 2.2]} /></mesh>
@@ -475,7 +475,7 @@ function BellTower({ h, d }: { h: number; d: number }) {
   )
 }
 
-function Terrace({ w, d }: { w: number; d: number }) {
+export function Terrace({ w, d }: { w: number; d: number }) {
   const cloth = mat('#ffffff', { rough: 0.7 }), leg = mat('#5a3a22')
   return (
     <group position={[0, 0, d / 2 + 2.6]}>
@@ -492,7 +492,7 @@ function Terrace({ w, d }: { w: number; d: number }) {
 }
 
 /** Marley, Matheus' small white dog: wags its tail and hops */
-function Dog() {
+export function Dog({ color = '#fbfbf7', ear = '#eadfc8', scale = 1.2 }: { color?: string; ear?: string; scale?: number } = {}) {
   const g = useRef<THREE.Group>(null!)
   const tail = useRef<THREE.Mesh>(null!)
   useFrame(() => {
@@ -500,15 +500,15 @@ function Dog() {
     tail.current.rotation.y = Math.sin(t * 18) * 0.7
     g.current.position.y = Math.abs(Math.sin(t * 5)) * 0.12
   })
-  const w = mat('#fbfbf7', { rough: 0.9 }), k = mat('#222222')
+  const w = mat(color, { rough: 0.9 }), k = mat('#222222')
   return (
-    <group ref={g} scale={1.2}>
+    <group ref={g} scale={scale}>
       <mesh position={[0, 0.42, 0]} material={w} castShadow><boxGeometry args={[0.45, 0.36, 0.8]} /></mesh>
       <mesh position={[0, 0.72, 0.45]} material={w} castShadow><boxGeometry args={[0.38, 0.36, 0.36]} /></mesh>
       <mesh position={[0, 0.66, 0.66]} material={w}><boxGeometry args={[0.2, 0.16, 0.16]} /></mesh>
       <mesh position={[0, 0.7, 0.75]} material={k}><boxGeometry args={[0.08, 0.07, 0.04]} /></mesh>
       {[-0.1, 0.1].map((x) => <mesh key={x} position={[x, 0.8, 0.64]} material={k}><boxGeometry args={[0.05, 0.05, 0.02]} /></mesh>)}
-      {[-0.15, 0.15].map((x) => <mesh key={'e' + x} position={[x, 0.92, 0.42]} material={mat('#eadfc8')}><boxGeometry args={[0.1, 0.2, 0.12]} /></mesh>)}
+      {[-0.15, 0.15].map((x) => <mesh key={'e' + x} position={[x, 0.92, 0.42]} material={mat(ear)}><boxGeometry args={[0.1, 0.2, 0.12]} /></mesh>)}
       {[[-0.15, 0.28], [0.15, 0.28], [-0.15, -0.28], [0.15, -0.28]].map(([x, z], i) => (
         <mesh key={'l' + i} position={[x, 0.13, z]} material={w}><boxGeometry args={[0.1, 0.26, 0.1]} /></mesh>
       ))}
@@ -519,7 +519,7 @@ function Dog() {
 }
 
 /** stadium under construction: platform, pitch, stands rising section by section, crane */
-function Stadium() {
+export function Stadium({ progress, label = 'ESTADIO PIZZAVILLE · EN OBRAS' }: { progress?: () => number; label?: string } = {}) {
   const S = STADIUM
   const base = useMemo(() => {
     let lo = 1e9, hi = -1e9
@@ -535,7 +535,7 @@ function Stadium() {
   useFrame(() => {
     const t = clock.t
     // 60 % built at the start, rising to ~85 % during the stadium shot
-    const p = 0.55 + 0.3 * seg(t, A.l07 + 3.3, A.l08)
+    const p = progress ? progress() : 0.55 + 0.3 * seg(t, A.l07 + 3.3, A.l08)
     stands.current.children.forEach((c, i) => {
       const s = THREE.MathUtils.clamp(p * N - i, 0, 1)
       c.visible = s > 0.02
@@ -587,7 +587,7 @@ function Stadium() {
         </group>
       </group>
       <group position={[0, y0 + 15, 0]} scale={2.4}>
-        <Tag text="ESTADIO PIZZAVILLE · EN OBRAS" y={0} color="#ffffff" bg="#ec6a3f" big />
+        <Tag text={label} y={0} color="#ffffff" bg="#ec6a3f" big />
       </group>
       {/* site fence */}
       <group position={[0, y0, 0]}><Fence w={S.rx * 2 + 16} d={S.rz * 2 + 16} /></group>
@@ -596,7 +596,7 @@ function Stadium() {
 }
 
 /** new island in the lake: sand, grass, two houses being built, flags, crane */
-function Island({ getProgress, items }: { getProgress: () => number; items: Item[] }) {
+export function Island({ getProgress, items }: { getProgress: () => number; items: Item[] }) {
   const I = ISLE
   const hook = useRef<THREE.Group>(null!)
   useFrame(() => { hook.current.rotation.y = -0.4 + Math.sin(clock.t * 0.6) * 0.6 })

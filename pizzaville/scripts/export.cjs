@@ -85,6 +85,24 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     D(52.2, to, 'Big', '{\\an5\\pos(540,700)\\fad(250,0)}PIZZAVILLE')
     D(52.6, to, 'Mid', '{\\an5\\pos(540,850)\\fad(250,0)}EUROPA 37 · 25 AMÉRICA')
   }
+  if (ep === 'ep003') {
+    const D = (a, b, st, tx) => ev.push(`Dialogue: 2,${assTime(a)},${assTime(Math.min(b, to))},${st},,0,0,0,,${tx}`)
+    const POP = '\\t(0,250,\\fscx112\\fscy112)\\t(250,450,\\fscx100\\fscy100)'
+    D(0.2, 3.2, 'Mid', `{\\an5\\pos(540,520)\\fad(0,150)${POP}}91 VECINOS\\N{\\c&H004DD3FF&\\fs110}¡Y UN PRESIDENTE!`)
+    D(3.4, 8.1, 'Big', `{\\an5\\pos(540,320)\\fad(150,150)${POP}\\fs120\\bord8\\3c&H00201810&\\c&H004DD3FF&}OLIVER 31{\\c&H00FFFFFF&} – {\\c&H00F5A93F&}4 THIAGO\\N{\\fs70\\c&H00FFFFFF&}¡GANA OLIVER!`)
+    D(22.1, 24.4, 'Big', `{\\an5\\pos(540,330)\\fad(100,150)${POP}\\fs130\\bord8\\3c&H00201810&\\c&H00B88FFF&}¡ASALTO!`)
+    D(24.6, 28.7, 'Mid', `{\\an5\\pos(540,330)\\fad(150,150)${POP}\\c&H0039C26B&}¡LLAMAD AL EJÉRCITO!`)
+    D(31.9, 33.4, 'Big', `{\\an5\\pos(540,330)\\fad(150,150)${POP}\\fs120\\bord8\\3c&H00201810&\\c&H004DD3FF&}¡PAZ!`)
+    D(33.6, 37.4, 'Tag', '{\\fad(150,150)}QUEDA ESCRITO EN LA HISTORIA DE PIZZAVILLE')
+    D(42.6, 45.7, 'Big', `{\\an5\\pos(540,300)\\fad(200,150)${POP}\\fs150}{\\c&H004DD3FF&}51{\\c&H00FFFFFF&} – {\\c&H00FFE07F&}38\\N{\\fs62\\c&H004DD3FF&}EUROPA {\\c&H00FFFFFF&}· {\\c&H00FFE07F&}AMÉRICA`)
+    D(45.8, 50.0, 'Mid', `{\\an5\\pos(540,330)\\fad(200,150)${POP}}¿QUÉ HACEMOS CON LA OPOSICIÓN?\\N{\\fs120\\c&H003C3CD2&}MULTA {\\c&H00FFFFFF&\\fs80}o {\\fs120\\c&H006BC239&}PERDÓN`)
+    D(48.4, 50.0, 'Tag', '{\\fad(150,150)}COMENTA TU VOTO')
+    D(50.3, 52.7, 'Mid', '{\\an5\\pos(540,330)\\fad(200,150)}COMENTA:\\N{\\c&H004DD3FF&}«SOY ANA DE PERÚ,\\NQUIERO UN CASTILLO»')
+    D(53.4, 55.0, 'Tag', '{\\fad(150,150)}ETIQUETA A ALGUIEN DE TU PAÍS')
+    D(52.8, to, 'Mid', `{\\an5\\pos(540,420)\\fad(200,0)${POP}}¿TU CASA AQUÍ?`)
+    D(55.2, to, 'Big', '{\\an5\\pos(540,700)\\fad(250,0)}PIZZAVILLE')
+    D(55.5, to, 'Mid', '{\\an5\\pos(540,850)\\fad(250,0)}MULTA o PERDÓN: ¡VOTA!')
+  }
   if (ep === 'ep002') {
     const D = (a, b, st, tx) => ev.push(`Dialogue: 2,${assTime(a)},${assTime(Math.min(b, to))},${st},,0,0,0,,${tx}`)
     const POP = '\\t(0,250,\\fscx112\\fscy112)\\t(250,450,\\fscx100\\fscy100)'

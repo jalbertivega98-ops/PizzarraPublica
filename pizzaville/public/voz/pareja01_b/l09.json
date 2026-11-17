@@ -1,0 +1,31 @@
+{
+ "text": "Un bocadito, dice. Media hamburguesa.",
+ "voice": "Nh2zY9kknu6z4pZy6FhD",
+ "words": [
+  {
+   "w": "Un",
+   "t": 0.0,
+   "d": 0.197
+  },
+  {
+   "w": "bocadito",
+   "t": 0.267,
+   "d": 0.615
+  },
+  {
+   "w": "dice",
+   "t": 1.207,
+   "d": 0.3839999999999999
+  },
+  {
+   "w": "Media",
+   "t": 1.904,
+   "d": 0.34799999999999986
+  },
+  {
+   "w": "hamburguesa",
+   "t": 2.287,
+   "d": 0.6739999999999999
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "text": "Contigo. Que estabas aquí. Durmiendo.",
+ "voice": "gQLV6zBnMa9rDESaeDz9",
+ "words": [
+  {
+   "w": "Contigo",
+   "t": 0.0,
+   "d": 0.592
+  },
+  {
+   "w": "Que",
+   "t": 0.685,
+   "d": 0.09299999999999997
+  },
+  {
+   "w": "estabas",
+   "t": 0.801,
+   "d": 0.279
+  },
+  {
+   "w": "aquí",
+   "t": 1.138,
+   "d": 0.29000000000000004
+  },
+  {
+   "w": "Durmiendo",
+   "t": 1.533,
+   "d": 0.5449999999999999
+  }
+ ]
+}

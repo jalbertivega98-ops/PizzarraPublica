@@ -1,0 +1,64 @@
+{
+  "episode": "pareja01",
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+8%",
+  "pitch": "+0Hz",
+  "notes": "Serie COSAS DE PAREJA ep1 «No tengo hambre». Narrador en off que habla al chico en segunda persona (estilo reels tu.novia.dice que mandó joel). Pizz = el novio, su novia = personaje nuevo. Motor Pizzaville, decorado salón.",
+  "lines": [
+    {
+      "id": "l01",
+      "text": "Le preguntas a tu novia si tiene hambre."
+    },
+    {
+      "id": "l02",
+      "text": "«No, no, que he merendado.»"
+    },
+    {
+      "id": "l03",
+      "text": "Perfecto. Te pides una hamburguesa doble... solo para ti."
+    },
+    {
+      "id": "l04",
+      "text": "Error. Error de novato."
+    },
+    {
+      "id": "l05",
+      "text": "Llega el repartidor, abres la bolsa y, de repente: «¿Me das una patatita?»"
+    },
+    {
+      "id": "l06",
+      "text": "Una. Dos. Cinco. A los dos minutos lleva más patatas que tú."
+    },
+    {
+      "id": "l07",
+      "text": "Vas a darle el último mordisco a tu hamburguesa..."
+    },
+    {
+      "id": "l08",
+      "text": "«Uy, ¿me dejas probar? Un bocadito.»"
+    },
+    {
+      "id": "l09",
+      "text": "Un bocadito, dice. Media hamburguesa."
+    },
+    {
+      "id": "l10",
+      "text": "Resultado: tú, muerto de hambre. Ella, que no tenía hambre, cenada."
+    },
+    {
+      "id": "l11",
+      "text": "Y encima te mira y te suelta: «Oye... ¿y de postre qué hay?»"
+    },
+    {
+      "id": "l12",
+      "text": "Etiqueta a esa novia que nunca tiene hambre."
+    }
+  ],
+  "eleven": {
+    "stability": 0.32,
+    "similarity_boost": 0.8,
+    "style": 0.5,
+    "use_speaker_boost": true
+  },
+  "eleven_out": "pareja01_b"
+}

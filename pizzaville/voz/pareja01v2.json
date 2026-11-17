@@ -1,0 +1,65 @@
+{
+  "episode": "pareja01v2",
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "-5%",
+  "pitch": "-4Hz",
+  "notes": "COSAS DE PAREJA ep1 (rehecho 17 nov tras la referencia rapsodia.moderna): de noche en la cama, personajes nuevos low-poly (Dani y Lucía), narrador hombre español cansado, seco, que habla en «tú» y lee las frases de ella.",
+  "lines": [
+    {
+      "id": "l01",
+      "text": "Son las tres de la mañana. Por fin te estás quedando dormido."
+    },
+    {
+      "id": "l02",
+      "text": "Y entonces notas que te está mirando."
+    },
+    {
+      "id": "l03",
+      "text": "«¿Estás despierto?»"
+    },
+    {
+      "id": "l04",
+      "text": "No. Evidentemente no."
+    },
+    {
+      "id": "l05",
+      "text": "«Es que he soñado una cosa... y estoy muy enfadada contigo.»"
+    },
+    {
+      "id": "l06",
+      "text": "Contigo. Que estabas aquí. Durmiendo."
+    },
+    {
+      "id": "l07",
+      "text": "«En el sueño te ibas a cenar con otra. Y ni me avisabas.»"
+    },
+    {
+      "id": "l08",
+      "text": "Le intentas explicar que eso no ha pasado. Que era un sueño."
+    },
+    {
+      "id": "l09",
+      "text": "«Ya, pero lo habrías hecho. Se te veía muy feliz.»"
+    },
+    {
+      "id": "l10",
+      "text": "Veinte minutos después, estás pidiendo perdón por algo que no has hecho."
+    },
+    {
+      "id": "l11",
+      "text": "Ella ya se ha dormido. Tú no vas a dormir en tu vida."
+    },
+    {
+      "id": "l12",
+      "text": "Etiqueta a la que se enfada contigo por sus sueños."
+    }
+  ],
+  "eleven": {
+    "stability": 0.55,
+    "similarity_boost": 0.8,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 0.93
+  },
+  "eleven_out": "pareja01v2"
+}

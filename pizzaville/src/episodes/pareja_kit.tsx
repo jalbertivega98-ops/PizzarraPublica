@@ -87,8 +87,7 @@ export function LivingRoom({ tv }: { tv?: () => number }) {
       </group>
       {/* blanket over both laps */}
       <RoundedBox args={[1.95, 0.2, 0.8]} radius={0.08} smoothness={2} position={[0, 0.66, -0.05]} material={blanket} castShadow receiveShadow />
-      <RoundedBox args={[1.9, 0.16, 0.5]} radius={0.07} smoothness={2} position={[0, 0.66, 0.42]} rotation-x={0.08} material={blanket} castShadow receiveShadow />
-      <RoundedBox args={[1.88, 0.5, 0.1]} radius={0.04} smoothness={2} position={[0, 0.38, 0.66]} material={blanket} castShadow />
+      <RoundedBox args={[1.9, 0.12, 0.42]} radius={0.05} smoothness={2} position={[0, 0.6, 0.38]} rotation-x={0.25} material={blanket} castShadow receiveShadow />
       {[-0.42, 0.42].map((x) => <RoundedBox key={x} args={[0.5, 0.08, 0.6]} radius={0.04} smoothness={2} position={[x, 0.75, 0.25]} material={blanket} />)}
       {/* floor lamp + plant */}
       <group position={[-1.6, 0, -0.75]}>
@@ -153,7 +152,7 @@ export function PairEpisode({ spec }: { spec: PairSpec }) {
   useMemo(() => { scene.background = new THREE.Color(spec.bg); scene.fog = null }, [])
 
   const layout = () => {
-    for (let i = 0; i < lines.length; i++) lines[i].at = i === 0 ? 0.6 : lines[i - 1].at + lines[i - 1].dur + 0.35 + (spec.gap[lines[i].id] ?? 0)
+    for (let i = 0; i < lines.length; i++) lines[i].at = i === 0 ? 0.6 : lines[i - 1].at + lines[i - 1].dur + 0.25 + (spec.gap[lines[i].id] ?? 0)
   }
   const duration = () => { layout(); return Math.ceil((endOf(lines[lines.length - 1]) + (spec.tail ?? 2.8)) * 10) / 10 }
 
@@ -208,7 +207,7 @@ export function PairEpisode({ spec }: { spec: PairSpec }) {
 export function coupleShots(hy: number, z: number): Record<string, Shot> {
   return {
     two: { p: [0, hy + 0.2, z + 2.65], l: [0, hy - 0.13, z], fov: 44, push: 0.2 },
-    wide: { p: [0, hy + 0.35, z + 3.4], l: [0, hy - 0.35, z], fov: 46, push: 0.25 },
+    wide: { p: [0, hy + 0.55, z + 3.6], l: [0, hy - 0.3, z], fov: 48, push: 0.25 },
     lucia: { p: [-0.1, hy + 0.12, z + 1.85], l: [-0.42, hy - 0.08, z], fov: 38, push: 0.12 },
     dani: { p: [0.1, hy + 0.12, z + 1.85], l: [0.42, hy - 0.08, z], fov: 38, push: 0.12 },
     luciaTight: { p: [-0.36, hy + 0.08, z + 1.5], l: [-0.42, hy - 0.02, z], fov: 36, push: 0.08 },

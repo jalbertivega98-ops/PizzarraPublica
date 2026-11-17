@@ -30,7 +30,7 @@ export const EP = {
   ],
 }
 // pauses before a line (deadpan timing)
-const GAP: Record<string, number> = { l02: 0.3, l03: 0.9, l04: 0.7, l05: 0.3, l06: 0.5, l07: 0.4, l08: 0.5, l09: 0.4, l10: 1.0, l11: 0.6, l12: 0.9 }
+const GAP: Record<string, number> = { l02: 0.15, l03: 0.5, l04: 0.3, l05: 0.1, l06: 0.2, l07: 0.15, l08: 0.2, l09: 0.15, l10: 0.5, l11: 0.3, l12: 0.4 }
 
 const VOW = /[aeiouáéíóúü]/gi
 function lip(l: Line | undefined, t: number) {
@@ -192,7 +192,7 @@ export function Pareja01v2() {
   useMemo(() => { scene.background = new THREE.Color('#0d1022'); scene.fog = null }, [])
 
   const layout = () => {
-    for (let i = 0; i < lines.length; i++) lines[i].at = i === 0 ? 0.6 : lines[i - 1].at + lines[i - 1].dur + 0.35 + (GAP[lines[i].id] ?? 0)
+    for (let i = 0; i < lines.length; i++) lines[i].at = i === 0 ? 0.6 : lines[i - 1].at + lines[i - 1].dur + 0.25 + (GAP[lines[i].id] ?? 0)
   }
   const duration = () => { layout(); return Math.ceil((endOf(lines[lines.length - 1]) + 2.8) * 10) / 10 }
 

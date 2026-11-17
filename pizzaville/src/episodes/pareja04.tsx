@@ -65,7 +65,7 @@ const spec: PairSpec = {
       dani, lucia,
       cuts: [
         [0, 'two'], [a('l02') - 0.1, 'daniTight'], [a('l03') - 0.1, 'feet'], [a('l03') + l('l03').dur * 0.45, 'daniTight'],
-        [a('l04') - 0.1, 'lucia'], [a('l05') - 0.1, 'daniTight'], [a('l06') - 0.1, 'luciaTight'], [a('l07') - 0.1, 'two'],
+        [a('l04') - 0.1, 'lucia'], [a('l05') - 0.1, 'daniTight'], [a('l06') - 0.1, 'lucia'], [a('l07') - 0.1, 'two'],
         [a('l08') - 0.1, 'daniTight'], [a('l09') - 0.1, 'lucia'], [a('l10') - 0.1, 'two'], [a('l11') - 0.1, 'daniTight'], [a('l12') - 0.1, 'two'],
       ],
     }

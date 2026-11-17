@@ -16,7 +16,7 @@ const SCRIPT = [
   { id: 'l12', text: "Etiqueta a la que «le da igual» pero nunca le da igual." },
 ]
 
-const PH = { rSh: [0.95, -0.15] as [number, number], rEl: -1.35 } // phone held in front of the chest
+const PH = { rSh: [1.5, -0.2] as [number, number], rEl: -1.1 } // phone held in front of the chest
 const D = {
   bored: pose({ lids: 0.35, yaw: 0.05, smile: -0.1 }),
   ask: pose({ yaw: -0.45, brows: 0.35, lids: 0.1 }),

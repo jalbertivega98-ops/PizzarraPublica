@@ -8,6 +8,8 @@ for y in range(H): g.putpixel((0, y), int(min(190, max(0, 1 - y / 760) * 175 + m
 im = Image.composite(Image.new('RGB', (W, H), (25, 15, 30)), im, g.resize((W, H)))
 def text(xy, s, size, fill, stroke=12, sc=(32, 24, 16), rot=0):
     f = ImageFont.truetype(F, size)
+    while f.getlength(s) > W - 120 and size > 60:
+        size -= 6; f = ImageFont.truetype(F, size)
     lay = Image.new('RGBA', im.size, (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
     d.text((xy[0] + 8, xy[1] + 12), s, font=f, fill=(0, 0, 0, 150), anchor='mm', stroke_width=stroke, stroke_fill=(0, 0, 0, 150))
     lay = lay.filter(ImageFilter.GaussianBlur(7)); ImageDraw.Draw(lay).text(xy, s, font=f, fill=fill, anchor='mm', stroke_width=stroke, stroke_fill=sc)

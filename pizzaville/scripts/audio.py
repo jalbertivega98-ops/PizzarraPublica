@@ -123,6 +123,23 @@ def music_comedy(duration, bpm=118):
     return out[: int(SR * duration)]
 
 
+def music_night(duration, bpm=78):
+    """quiet late-night bed: soft pad, slow plucked arpeggio, no drums"""
+    out = np.zeros(int(SR * (duration + 2)))
+    beat = 60 / bpm
+    prog = [[45, 52, 55, 60], [41, 48, 52, 57], [43, 50, 53, 59], [40, 47, 52, 55]]  # Am – F – G – Em
+    t, bar = 0.0, 0
+    while t < duration:
+        ch = prog[bar % 4]
+        add(out, pad([freq(m) for m in ch[1:]], beat * 4.2), t, 0.13)
+        add(out, pluck(freq(ch[0] - 12), beat * 3, 0.4), t, 0.22)
+        for k, m in enumerate([ch[1] + 12, ch[2] + 12, ch[3] + 12, ch[2] + 12]):
+            add(out, pluck(freq(m), beat * 1.6, 0.3), t + k * beat, 0.06)
+        t += beat * 4
+        bar += 1
+    return out[: int(SR * duration)]
+
+
 # ------------------------------------------------------------------ sfx
 def sfx(kind):
     if kind == 'ding':
@@ -188,7 +205,7 @@ def load_mp3(path):
 def main(cues_path, out_path):
     cues = json.load(open(cues_path))
     D = cues['duration']
-    mus = music_comedy(D) if cues.get('music') == 'comedy' else music(D)
+    mus = music_comedy(D) if cues.get('music') == 'comedy' else music_night(D) if cues.get('music') == 'night' else music(D)
     voice = np.zeros(int(SR * (D + 1)))
     for v in cues['voices']:
         add(voice, load_mp3(v['file']) * 1.0, v['at'])

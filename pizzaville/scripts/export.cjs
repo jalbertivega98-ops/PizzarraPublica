@@ -33,12 +33,45 @@ Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour,
 Style: Sub,Lilita One,112,&H00FFFFFF,&H0000D5FF,&H00201810,&H64000000,0,0,0,0,100,100,1,0,1,8,3,2,60,60,400,1
 Style: Tag,Fredoka SemiBold,46,&H00FFFFFF,&H00FFFFFF,&H003D7AFF,&H00000000,0,0,0,0,100,100,2,0,3,14,0,8,60,60,150,1
 Style: Big,Lilita One,150,&H003D8AFF,&H00FFFFFF,&H00FFFFFF,&H64000000,0,0,0,0,100,100,3,0,1,10,4,5,40,40,0,1
+Style: SubBox,Inter ExtraBold,78,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,-1,0,0,100,100,0,0,1,5,0,5,60,60,0,1
+Style: Box,Inter ExtraBold,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,-1,0,0,100,100,0,0,1,5,0,5,40,40,0,1
 Style: Mid,Lilita One,78,&H00FFFFFF,&H00FFFFFF,&H00201810,&H64000000,0,0,0,0,100,100,2,0,1,7,3,5,40,40,0,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 `
   const ev = [], subs = []
+  if (info.subStyle === 'box') {
+    // short italic chunks, the key word on a red box (reels style)
+    const norm = (x) => x.normalize('NFD').replace(/[^\p{L}\p{N}]/gu, '').toLowerCase()
+    for (const l of info.lines) {
+      const tokens = l.text.replace(/[«»]/g, '').split(/\s+/)
+      let ti = 0, chunk = []
+      const flush = () => {
+        if (!chunk.length) return
+        const a = l.at + chunk[0].t - 0.04, b = l.at + chunk[chunk.length - 1].t + chunk[chunk.length - 1].d + 0.1
+        let key = -1, best = 3
+        chunk.forEach((c, i) => { const n = norm(c.disp).length; if (n > best) { best = n; key = i } })
+        const txt = chunk.map((c, i) => (i === key ? `{\\3c&H2E2ED6&\\bord17}${c.disp}{\\3c&H000000&\\bord5}` : c.disp)).join(' ')
+        subs.push({ a, b: Math.min(b, to), txt: `{\\an5\\pos(540,1330)\\fad(40,40)}${txt}` })
+        chunk = []
+      }
+      for (const w of l.words) {
+        while (ti < tokens.length && norm(tokens[ti]) !== norm(w.w) && !norm(tokens[ti]).startsWith(norm(w.w))) ti++
+        const disp = (ti < tokens.length ? tokens[ti++] : w.w).toUpperCase()
+        chunk.push({ ...w, disp })
+        const chars = chunk.reduce((s, c) => s + c.disp.length + 1, 0)
+        if (chunk.length >= 3 || chars > 16 || /[.!?…,]$/.test(disp)) flush()
+      }
+      flush()
+    }
+    subs.sort((x, y) => x.a - y.a).forEach((c, i) => {
+      const nb = i + 1 < subs.length ? Math.min(c.b, subs[i + 1].a - 0.01) : c.b
+      ev.push(`Dialogue: 0,${assTime(c.a)},${assTime(nb)},SubBox,,0,0,0,,${c.txt}`)
+    })
+    if (info.overlays) for (const o of info.overlays) ev.push(`Dialogue: 2,${assTime(o.a)},${assTime(Math.min(o.b, to))},${o.st},,0,0,0,,${o.tx}`)
+    return head + ev.join('\n') + '\n'
+  }
   for (const l of info.lines) {
     // chunks of up to 4 words / 24 chars, karaoke highlight word by word
     const words = l.words

@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import { useMemo, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
@@ -11,6 +12,7 @@ import { clock } from '../engine/clock'
 export type Look = {
   skin: string; hair: string; hairStyle: number; top: string; topDark: string; pants: string; shoes: string; accent: string
   logo?: 'pizza' | null; hardhat?: boolean; vest?: boolean; eye?: string
+  lashes?: boolean; lip?: string
 }
 
 /** Master model of Pizz — never change these values (identity of the series). */
@@ -37,7 +39,7 @@ export function lookFromSeed(seed: number): Look {
 export const WORKER_LOOK = (seed: number): Look => ({ ...lookFromSeed(seed), top: '#f08a24', topDark: '#d06f12', pants: '#3a4a63', hardhat: true, vest: true })
 
 // ============================================================ state
-export type Action = 'none' | 'wave' | 'point' | 'surprise' | 'celebrate' | 'talk' | 'hammer' | 'shrug'
+export type Action = 'none' | 'wave' | 'point' | 'surprise' | 'celebrate' | 'talk' | 'hammer' | 'shrug' | 'phone' | 'eat' | 'reach' | 'facepalm' | 'cross' | 'no'
 export type CharState = {
   x: number; y: number; z: number; ry: number
   speed: number // m/s → walk/run blend
@@ -46,6 +48,7 @@ export type CharState = {
   lookAt: THREE.Vector3 | null
   mouth: number; smile: number; brows: number // brows: -1 angry .. 0 .. 1 surprised
   visible: boolean
+  sit?: number // 0..1 seated blend
 }
 export const newState = (): CharState => ({ x: 0, y: 0, z: 0, ry: 0, speed: 0, phase: 0, action: 'none', actionT: 0, actionW: 0, lookAt: null, mouth: 0, smile: 0.6, brows: 0, visible: true })
 
@@ -90,6 +93,18 @@ function hairGeo(style: number, color: string) {
       const a = r() * Math.PI * 2, el = 0.35 + r() * 0.9
       const x = Math.cos(a) * Math.cos(el) * 0.19, y = Math.sin(el) * 0.19 + 0.02, z = Math.sin(a) * Math.cos(el) * 0.19 - 0.02
       parts.push(paint(T(blob(0.06 + r() * 0.04, 1, 0.2, i, 0.8), x, y, z), c, { jitter: 0.04 }))
+    }
+    if (style === 3) {
+      // long hair: volume on top, side curtains and a long fall down the back to the shoulders
+      parts.push(paint(T(blob(0.2, 2, 0.06, 11, 1.0), 0, 0.06, -0.06), c, { jitter: 0.03 }))
+      parts.push(paint(T(blob(0.17, 2, 0.08, 12, 2.1), 0, -0.13, -0.1), c, { jitter: 0.03 }))
+      for (const sx of [1, -1]) {
+        parts.push(paint(T(blob(0.08, 2, 0.1, 13 + sx, 2.4), sx * 0.17, -0.1, 0.0), c, { jitter: 0.03 }))
+        parts.push(paint(T(blob(0.07, 2, 0.1, 15 + sx, 1.6), sx * 0.15, -0.26, -0.04), c, { jitter: 0.03 }))
+      }
+      // side-swept fringe
+      parts.push(paint(T(blob(0.1, 1, 0.2, 17, 0.55), 0.06, 0.15, 0.13, 0.35, 0, -0.5), c))
+      parts.push(paint(T(blob(0.08, 1, 0.2, 18, 0.5), -0.09, 0.16, 0.12, 0.3, 0, 0.4), c))
     }
     if (style === 2) {
       // longer hair at the back
@@ -191,6 +206,34 @@ function actionPose(a: Action, t: number, p: Pose) {
       o.lift = -0.08
       break
     }
+    case 'phone': // phone in front of the face, looking down at it
+      o.rSh = [-1.05, -0.25, -0.15]; o.rEl = [-1.25, 0, 0]
+      o.lSh = [-0.7, 0.2, 0.2]; o.lEl = [-1.2, 0, 0]
+      o.head = [0.14, 0, 0]
+      break
+    case 'eat': { // hand to mouth, small chewing nods
+      const c = Math.sin(t * 9) * 0.04
+      o.rSh = [-1.25, -0.35, -0.1]; o.rEl = [-1.75, 0, 0]
+      o.head = [0.05 + c, 0, 0]
+      break
+    }
+    case 'reach': { // leans and reaches forward-right with the right hand
+      o.rSh = [-1.35, 0.25, 0.45]; o.rEl = [-0.15, 0, 0]
+      o.chest = [0.18, -0.25, 0.08]
+      break
+    }
+    case 'facepalm':
+      o.lSh = [-1.25, 0, -0.5]; o.lEl = [-1.95, 0, 0]
+      o.head = [0.32, 0.15, 0]; o.chest[0] = 0.12
+      break
+    case 'cross': // arms crossed, annoyed
+      o.lSh = [-0.6, 0, -0.3]; o.rSh = [-0.6, 0, 0.3]; o.lEl = [-1.9, 0, 0]; o.rEl = [-1.9, 0, 0]
+      o.head = [-0.05, 0, 0.08]
+      break
+    case 'no':
+      o.head = [0, Math.sin(t * 11) * 0.3, 0]
+      o.rSh = [-0.4, 0, -0.3]; o.rEl = [-1.2, 0, 0]
+      break
     case 'shrug':
       o.lSh = [-0.3, 0, 0.7]; o.rSh = [-0.3, 0, -0.7]; o.lEl = [-1.4, 0, 0]; o.rEl = [-1.4, 0, 0]; o.head = [0, 0, 0.18]
       break
@@ -199,7 +242,7 @@ function actionPose(a: Action, t: number, p: Pose) {
 }
 
 // ============================================================ component
-export function Character({ look, state, scale = 1, shadow = true }: { look: Look; state: CharState; scale?: number; shadow?: boolean }) {
+export function Character({ look, state, scale = 1, shadow = true, rightHand }: { look: Look; state: CharState; scale?: number; shadow?: boolean; rightHand?: ReactNode }) {
   const refs = useRef<Partial<Record<J, THREE.Group>>>({})
   const root = useRef<THREE.Group>(null!)
   const mouthOpen = useRef<THREE.Mesh>(null!)
@@ -217,7 +260,7 @@ export function Character({ look, state, scale = 1, shadow = true }: { look: Loo
     skin: mat(look.skin, { rough: 0.65 }), hair: mat('#ffffff', { vc: true, rough: 0.8 }), top: mat(look.top, { rough: 0.85 }), topD: mat(look.topDark, { rough: 0.85 }),
     pants: mat(look.pants, { rough: 0.9 }), shoes: mat(look.shoes, { rough: 0.6 }), accent: mat(look.accent, { rough: 0.6 }), sole: mat('#e9e6df', { rough: 0.7 }),
     white: mat('#ffffff', { rough: 0.3 }), iris: mat(look.eye ?? '#3b2a20', { rough: 0.3 }), pupil: mat('#111111', { rough: 0.2 }), brow: mat(new THREE.Color(look.hair).multiplyScalar(0.7).getStyle(), { rough: 0.8 }),
-    mouth: mat('#3d1418', { rough: 0.8 }), lip: mat(new THREE.Color(look.skin).multiplyScalar(0.72).getStyle(), { rough: 0.6 }), cheek: mat('#f08f86', { rough: 0.9, transparent: true, opacity: 0.35 }),
+    mouth: mat('#3d1418', { rough: 0.8 }), lip: mat(look.lip ?? new THREE.Color(look.skin).multiplyScalar(0.72).getStyle(), { rough: 0.6 }), cheek: mat('#f08f86', { rough: 0.9, transparent: true, opacity: 0.35 }),
     hat: mat('#f4c430', { rough: 0.45 }), vest: mat('#d9f24a', { rough: 0.6 }), vc: mat('#ffffff', { vc: true, rough: 0.6 }),
   }
   const r = (j: J) => (g: THREE.Group | null) => { if (g) refs.current[j] = g }
@@ -239,11 +282,21 @@ export function Character({ look, state, scale = 1, shadow = true }: { look: Loo
       out.lift = pose.lift + (ap.lift - pose.lift) * w
       pose = out
     }
+    // seated: thighs forward, shins down, hips lowered onto the seat
+    const sw = st.sit ?? 0
+    if (sw > 0) {
+      for (const [h, k] of [['lHip', 'lKn'], ['rHip', 'rKn']] as const) {
+        pose[h][0] += (-1.5 - pose[h][0]) * sw
+        pose[k][0] += (1.5 - pose[k][0]) * sw
+      }
+      pose.lFt[0] *= 1 - sw; pose.rFt[0] *= 1 - sw
+      pose.lift += (-0.36 - pose.lift) * sw
+    }
     // head look-at (yaw/pitch in local space)
     if (st.lookAt) {
       tmpV.copy(st.lookAt)
       root.current.worldToLocal(tmpV)
-      tmpV.y -= 1.55
+      tmpV.y -= 1.55 - 0.3 * (st.sit ?? 0)
       const yaw = THREE.MathUtils.clamp(Math.atan2(tmpV.x, tmpV.z), -1.1, 1.1)
       const pitch = THREE.MathUtils.clamp(-Math.atan2(tmpV.y, Math.hypot(tmpV.x, tmpV.z)), -0.7, 0.45)
       pose.neck[1] += yaw * 0.45; pose.head[1] += yaw * 0.55
@@ -359,6 +412,7 @@ export function Character({ look, state, scale = 1, shadow = true }: { look: Loo
                   <mesh material={M.skin} castShadow={C} position={[0, -0.27, 0.0]} scale={[0.9, 1.1, 0.75]}>
                     <sphereGeometry args={[0.062, 12, 10]} />
                   </mesh>
+                  {s === 'r' && rightHand && <group position={[0, -0.3, 0.05]}>{rightHand}</group>}
                   {s === 'r' && (
                     <mesh ref={finger} material={M.skin} position={[0, -0.36, 0.0]}>
                       <capsuleGeometry args={[0.017, 0.07, 3, 6]} />
@@ -414,6 +468,15 @@ export function Character({ look, state, scale = 1, shadow = true }: { look: Loo
                     </group>
                   ))}
                 </group>
+                {look.lashes && [1, -1].map((sx) => (
+                  <group key={'l' + sx} position={[sx * 0.074, 0.062, 0.2]}>
+                    {[0, 1].map((k) => (
+                      <mesh key={k} material={M.pupil} position={[sx * (0.03 + k * 0.012), -0.006 - k * 0.008, 0]} rotation={[0, 0, sx * (1.1 + k * 0.35)]}>
+                        <boxGeometry args={[0.006, 0.02, 0.006]} />
+                      </mesh>
+                    ))}
+                  </group>
+                ))}
                 {/* brows */}
                 <mesh ref={browL} material={M.brow} position={[0.075, 0.105, 0.178]} rotation={[0, 0, 0.12]}>
                   <capsuleGeometry args={[0.012, 0.06, 3, 6]} />

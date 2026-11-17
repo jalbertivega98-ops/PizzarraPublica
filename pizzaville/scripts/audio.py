@@ -99,8 +99,64 @@ def music(duration, bpm=104):
     return out[: int(SR * duration)]
 
 
+def music_comedy(duration, bpm=118):
+    """bouncy sitcom-style loop: pizzicato bass, off-beat stabs, light hat, playful plucked melody"""
+    out = np.zeros(int(SR * (duration + 2)))
+    beat = 60 / bpm
+    prog = [[41, 45, 48, 53], [43, 46, 50, 55], [36, 40, 43, 48], [41, 45, 48, 53]]  # F – Gm – C – F
+    mel = [77, 76, 74, 72, 74, 76, 77, 79, 81, 79, 77, 76, 74, 72, 74, 72]
+    t, bar, mi = 0.0, 0, 0
+    while t < duration:
+        ch = prog[bar % 4]
+        for k, n in enumerate([ch[0], ch[2] - 12, ch[0], ch[2] - 12]):
+            add(out, pluck(freq(n), beat * 0.9, 0.75), t + k * beat, 0.34)
+        for k in range(4):
+            for m in ch[1:]:
+                add(out, pluck(freq(m + 12), beat * 0.35, 0.45), t + k * beat + beat / 2, 0.07)
+            add(out, hat(0.04), t + k * beat + beat / 2, 0.05)
+        if bar % 4 in (1, 3):
+            for k in range(4):
+                add(out, pluck(freq(mel[mi % len(mel)]), beat * 0.5, 0.35), t + k * beat, 0.09)
+                mi += 1
+        t += beat * 4
+        bar += 1
+    return out[: int(SR * duration)]
+
+
 # ------------------------------------------------------------------ sfx
 def sfx(kind):
+    if kind == 'ding':
+        return bell(freq(88), 0.9) * 0.8
+    if kind == 'doorbell':
+        o = np.zeros(int(SR * 1.4)); add(o, bell(freq(79), 1.0), 0, 0.8); add(o, bell(freq(75), 1.0), 0.45, 0.8); return o
+    if kind == 'buzz':
+        t = t_(0.55); w = np.sign(np.sin(2 * np.pi * 110 * t)) + 0.5 * np.sign(np.sin(2 * np.pi * 116 * t))
+        return w * 0.35 * env(len(t), 0.01, 0.08)
+    if kind == 'paper':
+        n = int(SR * 0.5); x = rng.uniform(-1, 1, n); x = x - np.concatenate([[0], x[:-1]])
+        return x * (0.4 + 0.6 * np.abs(np.sin(np.linspace(0, 18, n)))) * env(n, 0.02, 0.2) * 0.35
+    if kind == 'boing':
+        t = t_(0.45); f = 220 + 180 * np.sin(2 * np.pi * 9 * t) * np.exp(-t * 5)
+        return np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 5) * 0.8
+    if kind == 'riser':
+        t = t_(2.0); f = 200 * 2 ** (t * 1.6)
+        return (np.sin(2 * np.pi * np.cumsum(f) / SR) * 0.3 + rng.uniform(-1, 1, len(t)) * 0.12) * (t / 2.0) ** 2
+    if kind == 'scratch':
+        t = t_(0.35); f = 900 * np.sin(np.pi * t / 0.35) ** 2 + 120
+        return (np.sin(2 * np.pi * np.cumsum(f) / SR) * 0.4 + rng.uniform(-1, 1, len(t)) * 0.35) * env(len(t), 0.005, 0.05)
+    if kind == 'munch':
+        o = np.zeros(int(SR * 0.4))
+        for k in range(3):
+            n = int(SR * 0.07); x = rng.uniform(-1, 1, n) * np.exp(-np.linspace(0, 8, n)); add(o, x, k * 0.11, 0.5)
+        return o
+    if kind == 'growl':
+        t = t_(1.3); f = 70 + 25 * np.sin(2 * np.pi * 3 * t)
+        x = np.sin(2 * np.pi * np.cumsum(f) / SR) * (1 + 0.6 * np.sin(2 * np.pi * 11 * t))
+        return x * env(len(t), 0.15, 0.4) * 0.7
+    if kind == 'hit':
+        o = kick(0.6) * 1.2; n = len(o); add(o, rng.uniform(-1, 1, n) * np.exp(-np.linspace(0, 9, n)) * 0.5, 0); return o
+    if kind == 'tick':
+        t = t_(0.05); return np.sin(2 * np.pi * 2400 * t) * np.exp(-t * 90) * 0.6
     if kind == 'whoosh':
         d = 1.2; n = int(SR * d); x = rng.uniform(-1, 1, n)
         # sweep a simple one-pole low-pass
@@ -132,7 +188,7 @@ def load_mp3(path):
 def main(cues_path, out_path):
     cues = json.load(open(cues_path))
     D = cues['duration']
-    mus = music(D)
+    mus = music_comedy(D) if cues.get('music') == 'comedy' else music(D)
     voice = np.zeros(int(SR * (D + 1)))
     for v in cues['voices']:
         add(voice, load_mp3(v['file']) * 1.0, v['at'])

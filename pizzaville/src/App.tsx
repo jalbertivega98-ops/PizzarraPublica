@@ -14,6 +14,7 @@ import { Ep001 } from './episodes/ep001'
 import { Ep002 } from './episodes/ep002'
 import { Ep003 } from './episodes/ep003'
 import { Ep004 } from './episodes/ep004'
+import { Pareja01 } from './episodes/pareja01'
 import { Town } from './scene/Town'
 import { Panel } from './ui/Panel'
 import { useStore } from './state/store'
@@ -107,9 +108,11 @@ export default function App() {
     <Canvas shadows={{ type: THREE.PCFShadowMap }} frameloop={RECORD ? 'never' : 'always'} gl={{ antialias: true, preserveDrawingBuffer: true }} dpr={1} camera={{ fov: 45, near: 0.1, far: 20000 }}>
       <Ticker />
       {EPISODE ? <EpisodeHooks /> : <DebugCam />}
-      <NatureWorld />
-      <Sign />
-      {EPISODE === 'ep000' ? (
+      {!EPISODE?.startsWith('pareja') && <NatureWorld />}
+      {!EPISODE?.startsWith('pareja') && <Sign />}
+      {EPISODE === 'pareja01' ? (
+        <Pareja01 />
+      ) : EPISODE === 'ep000' ? (
         <Ep000 />
       ) : EPISODE === 'ep004' ? (
         <Ep004 />

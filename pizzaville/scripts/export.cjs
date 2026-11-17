@@ -72,6 +72,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     const nb = i + 1 < subs.length ? Math.min(c.b, subs[i + 1].a - 0.01) : c.b
     ev.push(`Dialogue: 0,${assTime(c.a)},${assTime(nb)},Sub,,0,0,0,,${c.txt}`)
   })
+  if (info.overlays) for (const o of info.overlays) ev.push(`Dialogue: 2,${assTime(o.a)},${assTime(Math.min(o.b, to))},${o.st},,0,0,0,,${o.tx}`)
   if (ep === 'ep001') {
     const D = (a, b, st, tx) => ev.push(`Dialogue: 2,${assTime(a)},${assTime(Math.min(b, to))},${st},,0,0,0,,${tx}`)
     D(0, 2.15, 'Mid', '{\\an5\\pos(540,520)\\fad(0,150)}AYER:\\N{\\c&H004DD3FF&\\fs120}1 PERSONA')
@@ -189,7 +190,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
   // ---------------- audio
   const voices = info.lines.filter((l) => l.hasAudio).map((l) => ({ file: path.resolve(`public/voz/${ep}/${l.id}.mp3`), at: l.at - from }))
-  const cues = { duration: to - from, voices, sfx: info.sfx.map((s) => ({ ...s, at: s.at - from })) }
+  const cues = { duration: to - from, music: info.music, voices, sfx: info.sfx.map((s) => ({ ...s, at: s.at - from })) }
   fs.writeFileSync(path.join(out, 'cues.json'), JSON.stringify(cues, null, 1))
   const wav = path.join(out, 'audio.wav')
   execFileSync('python3', [path.resolve('scripts/audio.py'), path.join(out, 'cues.json'), wav], { stdio: 'inherit' })

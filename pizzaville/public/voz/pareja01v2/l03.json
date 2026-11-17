@@ -1,16 +1,16 @@
 {
  "text": "«¿Estás despierto?»",
- "voice": "gQLV6zBnMa9rDESaeDz9",
+ "voice": "qCpeKeRp8nkdJgckZbTo",
  "words": [
   {
    "w": "Estás",
-   "t": 0.128,
-   "d": 0.29
+   "t": 0.753,
+   "d": 1.3599999999999999
   },
   {
    "w": "despierto",
-   "t": 0.441,
-   "d": 0.569
+   "t": 2.113,
+   "d": 0.0
   }
  ]
 }

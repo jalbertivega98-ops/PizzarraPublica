@@ -16,6 +16,9 @@ import { Ep003 } from './episodes/ep003'
 import { Ep004 } from './episodes/ep004'
 import { Pareja01 } from './episodes/pareja01'
 import { Pareja01v2 } from './episodes/pareja01v2'
+import { Pareja02 } from './episodes/pareja02'
+import { Pareja03 } from './episodes/pareja03'
+import { Pareja04 } from './episodes/pareja04'
 import { Town } from './scene/Town'
 import { Panel } from './ui/Panel'
 import { useStore } from './state/store'
@@ -111,7 +114,13 @@ export default function App() {
       {EPISODE ? <EpisodeHooks /> : <DebugCam />}
       {!EPISODE?.startsWith('pareja') && <NatureWorld />}
       {!EPISODE?.startsWith('pareja') && <Sign />}
-      {EPISODE === 'pareja01v2' ? (
+      {EPISODE === 'pareja02' ? (
+        <Pareja02 />
+      ) : EPISODE === 'pareja03' ? (
+        <Pareja03 />
+      ) : EPISODE === 'pareja04' ? (
+        <Pareja04 />
+      ) : EPISODE === 'pareja01v2' ? (
         <Pareja01v2 />
       ) : EPISODE === 'pareja01' ? (
         <Pareja01 />

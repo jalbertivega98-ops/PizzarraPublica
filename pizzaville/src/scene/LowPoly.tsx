@@ -1,6 +1,6 @@
 // Personajes low-poly de «Cosas de pareja»: caras facetadas, ojos de punto, cejas gruesas.
 // Pose = función pura del tiempo (la elige el episodio), así cada fotograma es reproducible.
-import { useMemo, useRef } from 'react'
+import { useMemo, useRef, type ReactNode } from 'react'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 
@@ -63,7 +63,7 @@ function hairGeo(style: LPLook['hairStyle']) {
   return merged
 }
 
-export function LowPolyChar({ look, pose, position, ry = 0 }: { look: LPLook; pose: () => LPPose; position: [number, number, number]; ry?: number }) {
+export function LowPolyChar({ look, pose, position, ry = 0, hand }: { look: LPLook; pose: () => LPPose; position: [number, number, number]; ry?: number; hand?: ReactNode }) {
   const root = useRef<THREE.Group>(null!)
   const chest = useRef<THREE.Group>(null!)
   const head = useRef<THREE.Group>(null!)
@@ -110,6 +110,7 @@ export function LowPolyChar({ look, pose, position, ry = 0 }: { look: LPLook; po
             <group ref={el} position={[0, -0.27, 0]}>
               <mesh material={M.skin} position={[0, -0.12, 0]} castShadow><cylinderGeometry args={[0.06, 0.055, 0.25, 7]} /></mesh>
               <mesh material={M.skin} position={[0, -0.27, 0]} castShadow><icosahedronGeometry args={[0.068, 0]} /></mesh>
+              {s === -1 && hand && <group position={[0, -0.3, 0]}>{hand}</group>}
             </group>
           </group>
         ))}

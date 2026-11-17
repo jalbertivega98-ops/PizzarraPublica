@@ -79,7 +79,7 @@ function track(keys: [number, LPPose][], t: number, blend = 0.3): LPPose {
 }
 
 // ---------------- props
-function Clock({ text }: { text: () => string }) {
+export function Clock({ text }: { text: () => string }) {
   const { tex, cv } = useMemo(() => {
     const cv = document.createElement('canvas'); cv.width = 256; cv.height = 96
     const tex = new THREE.CanvasTexture(cv); tex.colorSpace = THREE.SRGBColorSpace
@@ -104,7 +104,7 @@ function Clock({ text }: { text: () => string }) {
   )
 }
 
-function Bedroom({ lamp }: { lamp: () => number }) {
+export function Bedroom({ lamp }: { lamp: () => number }) {
   const lampLight = useRef<THREE.PointLight>(null!)
   const shade = useRef<THREE.MeshStandardMaterial>(null!)
   const fill = useRef<THREE.HemisphereLight>(null!)

@@ -13,6 +13,7 @@ import { Ep000 } from './episodes/ep000'
 import { Ep001 } from './episodes/ep001'
 import { Ep002 } from './episodes/ep002'
 import { Ep003 } from './episodes/ep003'
+import { Ep004 } from './episodes/ep004'
 import { Town } from './scene/Town'
 import { Panel } from './ui/Panel'
 import { useStore } from './state/store'
@@ -110,6 +111,8 @@ export default function App() {
       <Sign />
       {EPISODE === 'ep000' ? (
         <Ep000 />
+      ) : EPISODE === 'ep004' ? (
+        <Ep004 />
       ) : EPISODE === 'ep003' ? (
         <Ep003 />
       ) : EPISODE === 'ep002' ? (

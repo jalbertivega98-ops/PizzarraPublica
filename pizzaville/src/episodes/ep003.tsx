@@ -46,9 +46,9 @@ const A = Object.fromEntries(EP003.script.map((l) => [l.id, l.at])) as Record<st
 const PZ = { x: 0.15, z: 5.3 }
 const BRIDGES = [-45, 20, 85]
 const EUROPE = new Set(['España', 'Bulgaria'])
-const BULLRING = { x: 70, z: 110, r: 15 }
+export const BULLRING = { x: 70, z: 110, r: 15 }
 function topOf(x: number, z: number, rx: number, rz: number) { let hi = -1e9; for (let a = 0; a < 24; a++) for (const k of [0, 0.6, 1.15]) hi = Math.max(hi, heightAt(x + Math.cos(a / 24 * 6.283) * rx * k, z + Math.sin(a / 24 * 6.283) * rz * k)); return hi }
-const STADIUM_Y = topOf(STADIUM.x, STADIUM.z, STADIUM.rx, STADIUM.rz) + 0.15
+export const STADIUM_Y = topOf(STADIUM.x, STADIUM.z, STADIUM.rx, STADIUM.rz) + 0.15
 const RING_Y = (() => { let hi = -1e9; for (let a = 0; a < 16; a++) hi = Math.max(hi, heightAt(BULLRING.x + Math.cos(a) * BULLRING.r, BULLRING.z + Math.sin(a) * BULLRING.r)); return hi })()
 
 // ---------------------------------------------------------------- layout: ep002 + new neighbours
@@ -77,7 +77,7 @@ function build() {
   const by = (n: string) => items.find((i) => i.name === n || i.key === n || (i.person && n === i.name + '@' + i.person.handle))!
   return { items, ayto, base, free, by, joaquin: by('Joaquín@joaquinzamora99') }
 }
-const LAY = build()
+export const LAY = build()
 ;(globalThis as any).__ep3 = LAY
 const ISLAND = new Set(['Marruecos', 'Líbano'])
 
@@ -394,7 +394,7 @@ export function Ep003() {
 
 // ---------------------------------------------------------------- props
 /** DJ booth, speakers, light poles and string lights in front of Joaquín's house */
-function PartySet({ lights }: { lights: React.RefObject<THREE.Group> }) {
+export function PartySet({ lights }: { lights: React.RefObject<THREE.Group> }) {
   const cols = ['#ff3d7f', '#3dd9ff', '#ffd23d', '#7dff6a', '#b06aff', '#ff8a3d']
   const poles: [number, number][] = [[7, -7], [7, 7], [17, -7], [17, 7]]
   return (
@@ -425,7 +425,7 @@ function PartySet({ lights }: { lights: React.RefObject<THREE.Group> }) {
   )
 }
 
-function BaseProps({ w, d }: { w: number; d: number }) {
+export function BaseProps({ w, d }: { w: number; d: number }) {
   return (
     <group>
       {/* sandbags and a jeep */}
@@ -440,7 +440,7 @@ function BaseProps({ w, d }: { w: number; d: number }) {
 }
 
 /** Cayetano's bullring: round sand arena with tiered white walls and red barrier */
-function Bullring() {
+export function Bullring() {
   const B = BULLRING
   const y = useMemo(() => { let hi = -1e9; for (let a = 0; a < 16; a++) hi = Math.max(hi, heightAt(B.x + Math.cos(a) * B.r, B.z + Math.sin(a) * B.r)); return hi }, [])
   return (

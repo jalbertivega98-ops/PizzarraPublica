@@ -85,6 +85,24 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     D(52.2, to, 'Big', '{\\an5\\pos(540,700)\\fad(250,0)}PIZZAVILLE')
     D(52.6, to, 'Mid', '{\\an5\\pos(540,850)\\fad(250,0)}EUROPA 37 · 25 AMÉRICA')
   }
+  if (ep === 'ep004') {
+    const D = (a, b, st, tx) => ev.push(`Dialogue: 2,${assTime(a)},${assTime(Math.min(b, to))},${st},,0,0,0,,${tx}`)
+    const POP = '\\t(0,250,\\fscx112\\fscy112)\\t(250,450,\\fscx100\\fscy100)'
+    const OUT = '\\bord8\\3c&H00201810&'
+    D(0.2, 4.3, 'Mid', `{\\an5\\pos(540,430)\\fad(0,150)${POP}}¿NUNCA HAS COMENTADO?\\N{\\c&H004DD3FF&\\fs110}¡HOY ES TU DÍA!`)
+    D(4.4, to, 'Tag', '{\\an8\\pos(540,70)\\fad(200,0)}PUENTE: 0 / 100 PIEDRAS')
+    D(6.27, 8.4, 'Big', `{\\an5\\pos(540,380)\\fad(0,150)${POP}\\fs170${OUT}\\c&H003C3CD2&}¡CRAC!`)
+    D(15.0, 19.4, 'Mid', `{\\an5\\pos(540,400)\\fad(150,150)${POP}}1 COMENTARIO = 1 PIEDRA\\N{\\c&H004DD3FF&\\fs96}¿PRIMER COMENTARIO?\\N{\\c&H004DD3FF&\\fs120}¡VALE x2!`)
+    D(23.1, 25.0, 'Tag', '{\\an8\\pos(540,200)\\fad(150,150)}EMPATE 1–1 · THIAGO CARGA LAS PIEDRAS')
+    D(40.6, 46.0, 'Mid', `{\\an5\\pos(540,400)\\fad(150,150)${POP}}7 VECINOS SIN BANDERA\\N{\\c&H004DD3FF&\\fs96}¿DE QUÉ PAÍS SOIS?`)
+    D(46.3, 50.2, 'Big', `{\\an5\\pos(540,320)\\fad(200,150)${POP}\\fs150}{\\c&H004DD3FF&}58{\\c&H00FFFFFF&} – {\\c&H00FFE07F&}40\\N{\\fs62\\c&H004DD3FF&}EUROPA {\\c&H00FFFFFF&}· {\\c&H00FFE07F&}AMÉRICA`)
+    D(50.4, 55.5, 'Mid', `{\\an5\\pos(540,360)\\fad(200,150)${POP}}COMENTA:\\N{\\fs120\\c&H004DD3FF&}EUROPA {\\c&H00FFFFFF&\\fs80}o {\\fs120\\c&H00FFE07F&}AMÉRICA`)
+    D(53.2, 55.5, 'Tag', '{\\an8\\pos(540,200)\\fad(150,150)}CADA AMIGO ETIQUETADO = +1 PIEDRA')
+    D(55.7, 58.4, 'Mid', '{\\an5\\pos(540,380)\\fad(200,150)}¿ERES NUEVO? COMENTA:\\N{\\c&H004DD3FF&}«SOY ANA DE PERÚ,\\NQUIERO UN CASTILLO»')
+    D(58.5, to, 'Big', `{\\an5\\pos(540,420)\\fad(200,0)${POP}\\fs130}¿TU CASA AQUÍ?`)
+    D(61.4, to, 'Mid', '{\\an5\\pos(540,700)\\fad(250,0)}PIZZAVILLE')
+    D(61.7, to, 'Mid', '{\\an5\\pos(540,820)\\fad(250,0)\\c&H004DD3FF&}COMENTA Y GANA TU CASA')
+  }
   if (ep === 'ep003') {
     const D = (a, b, st, tx) => ev.push(`Dialogue: 2,${assTime(a)},${assTime(Math.min(b, to))},${st},,0,0,0,,${tx}`)
     const POP = '\\t(0,250,\\fscx112\\fscy112)\\t(250,450,\\fscx100\\fscy100)'

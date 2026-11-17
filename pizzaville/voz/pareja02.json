@@ -1,0 +1,77 @@
+{
+  "episode": "pareja02",
+  "notes": "COSAS DE PAREJA ep2: «¿Qué te pasa? Nada» (sofá)",
+  "model": "eleven_v3",
+  "eleven": {
+    "stability": 0.0,
+    "similarity_boost": 0.8
+  },
+  "eleven_out": "pareja02",
+  "lines": [
+    {
+      "id": "l01",
+      "text": "Estáis en el sofá viendo una serie. Todo tranquilo.",
+      "say": "[calm, relaxed] Estáis en el sofá viendo una serie. Todo tranquilo."
+    },
+    {
+      "id": "l02",
+      "text": "Hasta que notas que lleva diez minutos sin decir nada.",
+      "say": "[suspicious] Hasta que notas... que lleva diez minutos sin decir nada."
+    },
+    {
+      "id": "l03",
+      "text": "Le preguntas qué le pasa.",
+      "say": "[cautious] Le preguntas qué le pasa."
+    },
+    {
+      "id": "l04",
+      "text": "«Nada.»",
+      "say": "[imitating girlfriend, high voice, cold and short] Nada."
+    },
+    {
+      "id": "l05",
+      "text": "Nada. Ese «nada» pesa más que tu hipoteca.",
+      "say": "[deadpan] Nada. [sighs] Ese nada pesa más que tu hipoteca."
+    },
+    {
+      "id": "l06",
+      "text": "Le preguntas si ha pasado algo.",
+      "say": "[nervous] Le preguntas si ha pasado algo."
+    },
+    {
+      "id": "l07",
+      "text": "«Que no me pasa nada. Ya está.»",
+      "say": "[imitating girlfriend, high voice, passive-aggressive] Que no me pasa nada. Ya está."
+    },
+    {
+      "id": "l08",
+      "text": "Repasas la última semana. Aniversario no es. Cumpleaños tampoco.",
+      "say": "[whispering, worried] Repasas la última semana... Aniversario no es. [panicking slightly] Cumpleaños tampoco."
+    },
+    {
+      "id": "l09",
+      "text": "«Tú sabrás lo que has hecho.»",
+      "say": "[imitating girlfriend, high voice, offended and sarcastic] Tú sabrás lo que has hecho."
+    },
+    {
+      "id": "l10",
+      "text": "No sabes lo que has hecho. Pero ya estás pidiendo perdón.",
+      "say": "[fast, panicked] No sabes lo que has hecho. [resigned] Pero ya estás pidiendo perdón."
+    },
+    {
+      "id": "l11",
+      "text": "«Ah, por cierto. Mañana viene mi madre a comer.»",
+      "say": "[imitating girlfriend, high voice, suddenly cheerful and sweet] ¡Ah, por cierto! Mañana viene mi madre a comer."
+    },
+    {
+      "id": "l12",
+      "text": "Ahí estaba.",
+      "say": "[long sigh, defeated] Ahí estaba."
+    },
+    {
+      "id": "l13",
+      "text": "Etiqueta a la que dice «nada» cuando es todo.",
+      "say": "[chuckles] Etiqueta a la que dice nada... cuando es todo."
+    }
+  ]
+}

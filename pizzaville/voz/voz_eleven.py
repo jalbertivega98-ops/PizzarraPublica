@@ -2,7 +2,7 @@
   python3 voz_eleven.py saldo                 → solo consulta: créditos que quedan y voces disponibles (no gasta nada)
   python3 voz_eleven.py ep000.json VOICE_ID   → ../public/voz/<episode>_eleven/<id>.mp3 + .json (tiempos por palabra)
 Antes de generar comprueba que el saldo alcanza para todo el guion; si no, no genera nada."""
-import base64, json, os, sys, urllib.request, urllib.error
+import base64, json, os, re, subprocess, sys, tempfile, urllib.request, urllib.error
 
 KEY = os.environ.get("ELEVENLABS_API_KEY", "").strip()
 API = "https://api.elevenlabs.io/v1"
@@ -40,26 +40,52 @@ def main():
         return
     path = sys.argv[1] if os.path.exists(sys.argv[1]) else os.path.join(os.path.dirname(os.path.abspath(__file__)), sys.argv[1])
     cfg = json.load(open(path)); candidates = sys.argv[2].split(",")
-    need = sum(len(l["text"]) for l in cfg["lines"])
+    model = cfg.get("model", MODEL)
+    say = lambda l: l.get("say", l["text"])  # "say" may carry v3 audio tags like [sighs]
+    need = sum(len(say(l)) for l in cfg["lines"])
     print(f"El guion necesita {need} caracteres")
     if left is not None and need > left: sys.exit(f"NO HAY SALDO: faltan {need - left} caracteres. No genero nada.")
     out = os.path.join(os.path.dirname(os.path.abspath(path)), "..", "public", "voz", cfg.get("eleven_out", cfg["episode"] + "_eleven"))
     os.makedirs(out, exist_ok=True)
     st = cfg.get("eleven", {"stability": 0.4, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": True})
     voice, first = None, None
+    ts = True
+    def tts(v, line, soft=False):
+        nonlocal ts
+        body = {"text": say(line), "model_id": model, "voice_settings": st}
+        if ts:
+            r = call(f"/text-to-speech/{v}/with-timestamps?output_format=mp3_44100_128", body, soft=True)
+            if r is not None: return r
+            if model != "eleven_v3": return None if soft else sys.exit("TTS falló")
+            print("sin timestamps para v3: estimo los tiempos por palabra"); ts = False
+        req = urllib.request.Request(f"{API}/text-to-speech/{v}?output_format=mp3_44100_128", data=json.dumps(body).encode(),
+                                     headers={"xi-api-key": KEY, "Content-Type": "application/json"}, method="POST")
+        try:
+            with urllib.request.urlopen(req, timeout=180) as r: b = r.read()
+        except urllib.error.HTTPError as e:
+            print(f"ElevenLabs {e.code}: {e.read().decode()[:400]}")
+            return None if soft else sys.exit("TTS falló")
+        f = tempfile.NamedTemporaryFile(suffix=".mp3", delete=False); f.write(b); f.close()
+        dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f.name], capture_output=True, text=True).stdout or 1)
+        clean = re.sub(r"\[[^\]]*\]", "", say(line)); n = max(1, len(clean))
+        chars = list(clean); t = [0.1 + (dur - 0.3) * i / n for i in range(n + 1)]
+        return {"audio_base64": base64.b64encode(b).decode(), "alignment": {"characters": chars, "character_start_times_seconds": t[:-1], "character_end_times_seconds": t[1:]}}
     for v in candidates:  # the first voice the account can actually use
-        first = call(f"/text-to-speech/{v}/with-timestamps?output_format=mp3_44100_128",
-                     {"text": cfg["lines"][0]["text"], "model_id": MODEL, "voice_settings": st}, soft=True)
+        first = tts(v, cfg["lines"][0], soft=True)
         if first is not None: voice = v; break
     if not voice: sys.exit("Ninguna voz disponible")
     print("VOZ_USADA", voice)
     for line in cfg["lines"]:
-        r = first if line is cfg["lines"][0] else call(f"/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_128",
-                 {"text": line["text"], "model_id": MODEL, "voice_settings": st})
+        r = first if line is cfg["lines"][0] else tts(voice, line)
         open(os.path.join(out, line["id"] + ".mp3"), "wb").write(base64.b64decode(r["audio_base64"]))
         a = r.get("alignment") or {}
-        words, cur, t0, t1 = [], "", None, 0
+        words, cur, t0, t1, tag = [], "", None, 0, False
         for ch, s, e in zip(a.get("characters", []), a.get("character_start_times_seconds", []), a.get("character_end_times_seconds", [])):
+            if ch == "[": tag = True
+            if tag:
+                if ch == "]": tag = False
+                if cur: words.append({"w": cur, "t": t0, "d": t1 - t0}); cur = ""
+                continue
             if ch.isalnum() or ch in "'-áéíóúüñÁÉÍÓÚÜÑ":
                 if not cur: t0 = s
                 cur += ch; t1 = e

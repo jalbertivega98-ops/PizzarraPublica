@@ -1,0 +1,72 @@
+{
+  "episode": "pareja03",
+  "notes": "COSAS DE PAREJA ep3: «¿Dónde cenamos? Me da igual» (sofá, móvil)",
+  "model": "eleven_v3",
+  "eleven": {
+    "stability": 0.0,
+    "similarity_boost": 0.8
+  },
+  "eleven_out": "pareja03",
+  "lines": [
+    {
+      "id": "l01",
+      "text": "Viernes por la noche. Le preguntas qué le apetece cenar.",
+      "say": "[tired] Viernes por la noche. Le preguntas qué le apetece cenar."
+    },
+    {
+      "id": "l02",
+      "text": "«Me da igual, lo que tú quieras.»",
+      "say": "[imitating girlfriend, high voice, carefree] Me da igual, lo que tú quieras."
+    },
+    {
+      "id": "l03",
+      "text": "Perfecto. Propones pizza.",
+      "say": "[hopeful] Perfecto. Propones pizza."
+    },
+    {
+      "id": "l04",
+      "text": "«Uf, pizza no, que la comimos el martes.»",
+      "say": "[imitating girlfriend, high voice, disgusted] Uf, pizza no, que la comimos el martes."
+    },
+    {
+      "id": "l05",
+      "text": "Vale. ¿Un japonés?",
+      "say": "[still trying] Vale. ¿Un japonés?"
+    },
+    {
+      "id": "l06",
+      "text": "«Mmm... no me apetece nada crudo.»",
+      "say": "[imitating girlfriend, high voice, unenthusiastic] Mmm... no me apetece nada crudo."
+    },
+    {
+      "id": "l07",
+      "text": "¿Hamburguesa?",
+      "say": "[getting tired] ¿Hamburguesa?"
+    },
+    {
+      "id": "l08",
+      "text": "«¿Otra vez? Siempre lo mismo contigo.»",
+      "say": "[imitating girlfriend, high voice, annoyed] ¿Otra vez? Siempre lo mismo contigo."
+    },
+    {
+      "id": "l09",
+      "text": "Cuarenta minutos después, sigues con hambre y sin ideas.",
+      "say": "[exhausted] Cuarenta minutos después... sigues con hambre y sin ideas."
+    },
+    {
+      "id": "l10",
+      "text": "«¡Ya sé! ¿Pedimos pizza?»",
+      "say": "[imitating girlfriend, high voice, excited] ¡Ya sé! ¿Pedimos pizza?"
+    },
+    {
+      "id": "l11",
+      "text": "Pizza. La del martes.",
+      "say": "[stunned, slow] Pizza. [sighs] La del martes."
+    },
+    {
+      "id": "l12",
+      "text": "Etiqueta a la que «le da igual» pero nunca le da igual.",
+      "say": "[chuckles] Etiqueta a la que le da igual... pero nunca le da igual."
+    }
+  ]
+}

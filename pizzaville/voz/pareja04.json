@@ -1,0 +1,72 @@
+{
+  "episode": "pareja04",
+  "notes": "COSAS DE PAREJA ep4: «Los pies fríos» (cama)",
+  "model": "eleven_v3",
+  "eleven": {
+    "stability": 0.0,
+    "similarity_boost": 0.8
+  },
+  "eleven_out": "pareja04",
+  "lines": [
+    {
+      "id": "l01",
+      "text": "Por fin en la cama. Calentito. Has tardado veinte minutos en coger la postura perfecta.",
+      "say": "[cozy, relaxed] Por fin en la cama. Calentito. [satisfied] Has tardado veinte minutos en coger la postura perfecta."
+    },
+    {
+      "id": "l02",
+      "text": "Y entonces lo notas. Bajo las sábanas.",
+      "say": "[suspenseful whisper] Y entonces lo notas... bajo las sábanas."
+    },
+    {
+      "id": "l03",
+      "text": "Dos cubitos de hielo. Sus pies.",
+      "say": "[shocked] Dos cubitos de hielo. [disgusted] Sus pies."
+    },
+    {
+      "id": "l04",
+      "text": "«Ay, perdona, es que tengo los pies helados.»",
+      "say": "[imitating girlfriend, high voice, sweet and innocent] Ay, perdona, es que tengo los pies helados."
+    },
+    {
+      "id": "l05",
+      "text": "Helados. Esos pies vienen de Siberia.",
+      "say": "[sarcastic] Helados. Esos pies vienen de Siberia."
+    },
+    {
+      "id": "l06",
+      "text": "«¿Me los calientas un poquito?»",
+      "say": "[imitating girlfriend, high voice, whiny and cute] ¿Me los calientas un poquito?"
+    },
+    {
+      "id": "l07",
+      "text": "Y tú, como eres un caballero, dices que sí.",
+      "say": "[resigned] Y tú, como eres un caballero... dices que sí."
+    },
+    {
+      "id": "l08",
+      "text": "Tu cuerpo pierde cinco grados en un segundo.",
+      "say": "[strained, in pain] Tu cuerpo pierde cinco grados en un segundo."
+    },
+    {
+      "id": "l09",
+      "text": "«Ay, qué gustito. Buenas noches, amor.»",
+      "say": "[imitating girlfriend, high voice, happy and sleepy] Ay, qué gustito... Buenas noches, amor."
+    },
+    {
+      "id": "l10",
+      "text": "Ella se duerme en dos minutos. Calentita.",
+      "say": "[tired] Ella se duerme en dos minutos. Calentita."
+    },
+    {
+      "id": "l11",
+      "text": "Tú te quedas despierto. Congelado. Y sin manta.",
+      "say": "[defeated, shivering] Tú te quedas despierto. Congelado. Y sin manta."
+    },
+    {
+      "id": "l12",
+      "text": "Etiqueta a la de los pies helados.",
+      "say": "[chuckles] Etiqueta a la de los pies helados."
+    }
+  ]
+}

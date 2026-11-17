@@ -3,21 +3,62 @@
   "voice": "es-ES-AlvaroNeural",
   "rate": "+10%",
   "pitch": "+8Hz",
-  "notes": "Motor ep000 v2, mismo Pizz, misma voz ElevenLabs (bloque eleven igual que ep001-003). Datos: pizzaville/episodios/ep004/vecinos.csv (107 vecinos: Europa 58, América 40, África 1, Asia 1, 7 sin país todavía). PROBLEMA: el puente grande central se ha hundido (sin heridos, en plan dibujos): Europa y América incomunicadas; los patos de Ronaldy (R. Dominicana, vive junto al río con patos y gallinas) flotan río abajo. GANCHO: barra/contador grande en pantalla todo el vídeo '🪨 PIEDRAS 0/100': cada comentario = una piedra para reconstruir el puente; 'comenta EUROPA o AMÉRICA' y la piedra va a esa orilla (dos medias barras, una por orilla). MULTA/PERDÓN quedó 1-1 (Oliver multa, Rodrigo perdón): Oliver decide que Thiago carga piedras. Destacados (recrear tal cual): museo de Fernando Alonso de Sergio (19_.sxrgio.a.s), circuito de F1 de Romeo, cine de Yeray, Adry oficial de la comisaría, Carlos y Eric Juan club de fútbol profesional, Oliver baja impuestos y hace parques para niños y ancianos. Vecinos sin bandera (Gisela, Fran, Romeo, Noel, Unax, Adry, Arturo): casas con bandera blanca con '?'. Barrido rápido de nuevos: Asier, Joel (estanco/bar), Fungueirino (garaje de tractores), Gnaro (México), Richard, Carlos, Eric Juan, Sergio, Unax (piscina con husky y bulldog), Ronaldy. NO usar: enigmia.lab, comentarios de broma (camello, asesino, drogadicto, 'q pollas haces', 'pensión de donante'), Nano/mafia. Cierre: marcador continentes, '¿Tu casa aquí?' en parcela libre, ejemplo en pantalla 'Soy Ana de Perú, quiero un castillo', 'etiqueta a alguien de tu país'.",
+  "notes": "Motor ep000 v2, mismo Pizz, misma voz ElevenLabs (bloque eleven igual que ep001-003). Datos: pizzaville/episodios/ep004/vecinos.csv (107 vecinos: Europa 58, América 40, África 1, Asia 1, 7 sin país todavía). PROBLEMA: el puente grande central se ha hundido (sin heridos, en plan dibujos): Europa y América incomunicadas; los patos de Ronaldy (R. Dominicana, vive junto al río con patos y gallinas) flotan río abajo. GANCHO: barra/contador grande en pantalla todo el vídeo '🪨 PIEDRAS 0/100': cada comentario = una piedra para reconstruir el puente; 'comenta EUROPA o AMÉRICA' y la piedra va a esa orilla (dos medias barras, una por orilla). MULTA/PERDÓN quedó 1-1 (Oliver multa, Rodrigo perdón): Oliver decide que Thiago carga piedras. Destacados (recrear tal cual): museo de Fernando Alonso de Sergio (19_.sxrgio.a.s), circuito de F1 de Romeo, cine de Yeray, Adry oficial de la comisaría, Carlos y Eric Juan club de fútbol profesional, Oliver baja impuestos y hace parques para niños y ancianos. Vecinos sin bandera (Gisela, Fran, Romeo, Noel, Unax, Adry, Arturo): casas con bandera blanca con '?'. Barrido rápido de nuevos: Asier, Joel (estanco/bar), Fungueirino (garaje de tractores), Gnaro (México), Richard, Carlos, Eric Juan, Sergio, Unax (piscina con husky y bulldog), Ronaldy. NO usar: enigmia.lab, comentarios de broma (camello, asesino, drogadicto, 'q pollas haces', 'pensión de donante'), Nano/mafia. Cierre: marcador continentes, '¿Tu casa aquí?' en parcela libre, ejemplo en pantalla 'Soy Ana de Perú, quiero un castillo', 'etiqueta a alguien de tu país'. ENFOQUE CAPTACIÓN (pedido por Joel): que venga gente nueva. En pantalla: '🆕 Primer comentario = piedra x2' y '🏷️ Cada amigo etiquetado = +1 piedra'. Cerrar sobre parcelas libres con '¿Tu casa aquí?' grande. Texto de publicación con la misma llamada.",
   "lines": [
-    { "id": "l01", "text": "¡Comenta y tu piedra hace crecer Pizzaville! Y hoy... ¡la necesitamos más que nunca!" },
-    { "id": "l02", "text": "Ciento siete vecinos... y anoche, ¡CRAC! Se ha hundido el puente grande." },
-    { "id": "l03", "text": "Europa y América, incomunicadas. ¡Y los patos de Ronaldy flotando río abajo!" },
-    { "id": "l04", "text": "Para levantarlo hacen falta cien piedras. Y cada piedra... es un comentario tuyo." },
-    { "id": "l05", "text": "La votación de la oposición quedó en empate, así que el presidente decide: ¡Thiago carga las piedras!" },
-    { "id": "l06", "text": "Mientras, el pueblo no para: Sergio abre el museo de Fernando Alonso... ¡y Romeo quiere su circuito de Fórmula 1!" },
-    { "id": "l07", "text": "Yeray monta un cine, Adry se apunta a la comisaría, y Carlos y Eric fundan un club de fútbol profesional." },
-    { "id": "l08", "text": "Y Oliver cumple: ¡baja los impuestos y hace parques para niños y abuelos!" },
-    { "id": "l09", "text": "Pero ojo: siete vecinos aún no tienen bandera. Gisela, Fran, Romeo, Noel... ¡decidnos vuestro país!" },
-    { "id": "l10", "text": "Europa lleva cincuenta y ocho, América cuarenta. ¿Qué orilla pone más piedras?" },
-    { "id": "l11", "text": "Comenta EUROPA o AMÉRICA y tu piedra va a tu orilla. ¡Con cien comentarios, el puente vuelve!" },
-    { "id": "l12", "text": "Y si eres nuevo: tu nombre, tu país y qué quieres ser. ¡Etiqueta a alguien de tu país!" }
+    {
+      "id": "l01",
+      "text": "¿Nunca has comentado? ¡Hoy es tu día! Comenta y tu piedra hace crecer Pizzaville."
+    },
+    {
+      "id": "l02",
+      "text": "Ciento siete vecinos... y anoche, ¡CRAC! Se ha hundido el puente grande."
+    },
+    {
+      "id": "l03",
+      "text": "Europa y América, incomunicadas. ¡Y los patos de Ronaldy flotando río abajo!"
+    },
+    {
+      "id": "l04",
+      "text": "Para levantarlo hacen falta cien piedras. Cada comentario es una piedra... ¡y si es tu primer comentario, vale doble!"
+    },
+    {
+      "id": "l05",
+      "text": "La votación de la oposición quedó en empate, así que el presidente decide: ¡Thiago carga las piedras!"
+    },
+    {
+      "id": "l06",
+      "text": "Mientras, el pueblo no para: Sergio abre el museo de Fernando Alonso... ¡y Romeo quiere su circuito de Fórmula 1!"
+    },
+    {
+      "id": "l07",
+      "text": "Yeray monta un cine, Adry se apunta a la comisaría, y Carlos y Eric fundan un club de fútbol profesional."
+    },
+    {
+      "id": "l08",
+      "text": "Y Oliver cumple: ¡baja los impuestos y hace parques para niños y abuelos!"
+    },
+    {
+      "id": "l09",
+      "text": "Pero ojo: siete vecinos aún no tienen bandera. Gisela, Fran, Romeo, Noel... ¡decidnos vuestro país!"
+    },
+    {
+      "id": "l10",
+      "text": "Europa lleva cincuenta y ocho, América cuarenta. ¿Qué orilla pone más piedras?"
+    },
+    {
+      "id": "l11",
+      "text": "Comenta EUROPA o AMÉRICA y tu piedra va a tu orilla. ¡Y por cada amigo que etiquetes, otra piedra más!"
+    },
+    {
+      "id": "l12",
+      "text": "¿Eres nuevo? Tu nombre, tu país y qué quieres ser... ¡y te construyo la casa en el próximo episodio!"
+    }
   ],
-  "eleven": { "stability": 0.3, "similarity_boost": 0.8, "style": 0.6, "use_speaker_boost": true },
+  "eleven": {
+    "stability": 0.3,
+    "similarity_boost": 0.8,
+    "style": 0.6,
+    "use_speaker_boost": true
+  },
   "eleven_out": "ep004"
 }

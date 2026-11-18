@@ -63,7 +63,7 @@ function hairGeo(style: LPLook['hairStyle']) {
   return merged
 }
 
-export function LowPolyChar({ look, pose, position, ry = 0, hand }: { look: LPLook; pose: () => LPPose; position: [number, number, number]; ry?: number; hand?: ReactNode }) {
+export function LowPolyChar({ look, pose, position, ry = 0, hand, topColor }: { look: LPLook; pose: () => LPPose; position: [number, number, number]; ry?: number; hand?: ReactNode; topColor?: () => string | undefined }) {
   const root = useRef<THREE.Group>(null!)
   const chest = useRef<THREE.Group>(null!)
   const head = useRef<THREE.Group>(null!)
@@ -77,6 +77,8 @@ export function LowPolyChar({ look, pose, position, ry = 0, hand }: { look: LPLo
 
   useFrame(() => {
     const p = pose()
+    const tc = topColor?.()
+    if (tc && '#' + M.top.color.getHexString() !== tc.toLowerCase()) M.top.color.set(tc)
     root.current.position.set(position[0] + p.side, position[1] - p.sink, position[2])
     root.current.rotation.y = ry
     chest.current.rotation.set(p.lean, 0, p.roll * 0.3)

@@ -196,8 +196,8 @@ export function PairEpisode({ spec }: { spec: PairSpec }) {
   return (
     <group>
       {spec.Set({ st })}
-      <LowPolyChar look={LUCIA} pose={() => poses.current.lucia} position={spec.pos.lucia} hand={spec.luciaHand} />
-      <LowPolyChar look={DANI} pose={() => poses.current.dani} position={spec.pos.dani} hand={spec.daniHand} />
+      <LowPolyChar look={LUCIA} pose={() => poses.current.lucia} position={spec.pos.lucia} hand={spec.luciaHand} topColor={() => st.luciaTop} />
+      <LowPolyChar look={DANI} pose={() => poses.current.dani} position={spec.pos.dani} hand={spec.daniHand} topColor={() => st.daniTop} />
       {spec.extras?.(st)}
     </group>
   )
@@ -213,4 +213,33 @@ export function coupleShots(hy: number, z: number): Record<string, Shot> {
     luciaTight: { p: [-0.36, hy + 0.08, z + 1.5], l: [-0.42, hy - 0.02, z], fov: 36, push: 0.08 },
     daniTight: { p: [0.36, hy + 0.08, z + 1.5], l: [0.42, hy - 0.02, z], fov: 36, push: 0.08 },
   }
+}
+
+/** Beat-driven frame: one entry per line id → Dani pose, Lucía pose, camera shot (keys at line start + offsets). */
+export type Beat = { d?: LPPose; l?: LPPose; cut?: string; dAt?: number; lAt?: number; cutAt?: number; flap?: boolean; dMid?: LPPose; lMid?: LPPose }
+export function beatFrame(order: string[], beats: Record<string, Beat>, d0: LPPose, l0: LPPose, cut0 = 'wide', blend = 0.3) {
+  return (t: number, a: (id: string) => number, l: (id: string) => Line) => {
+    const dk: [number, LPPose][] = [[0, d0]], lk: [number, LPPose][] = [[0, l0]], cuts: [number, string][] = [[0, cut0]]
+    for (const id of order) {
+      const b = beats[id]; if (!b) continue
+      const s = a(id), du = l(id).dur
+      if (b.d) dk.push([s + (b.dAt ?? 0), b.d])
+      if (b.dMid) dk.push([s + du * 0.5, b.dMid])
+      if (b.l) lk.push([s - 0.15 + (b.lAt ?? 0), b.l])
+      if (b.lMid) lk.push([s + du * 0.5, b.lMid])
+      if (b.cut) cuts.push([s - 0.1 + (b.cutAt ?? 0), b.cut])
+    }
+    const by = (x: [number, any], y: [number, any]) => x[0] - y[0]
+    dk.sort(by); lk.sort(by); cuts.sort(by)
+    const dani = track(dk, t, blend), lucia = track(lk, t, blend)
+    for (const id of order) { const b = beats[id]; if (b?.flap && t > a(id) + 0.1 && t < endOf(l(id))) dani.mouth = flap(t) }
+    return { dani, lucia, cuts }
+  }
+}
+
+/** a thing that is visible only while show() is true */
+export function Show({ show, children }: { show: () => boolean; children: ReactNode }) {
+  const g = useRef<THREE.Group>(null!)
+  useFrame(() => { g.current.visible = show() })
+  return <group ref={g}>{children}</group>
 }

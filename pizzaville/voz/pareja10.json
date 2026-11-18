@@ -60,16 +60,36 @@
     },
     {
       "id": "l11",
+      "text": "«No, de verdad, disfrútalo. Yo ya me comeré un yogur.»",
+      "say": "[imitating girlfriend, high voice, martyr, sighs] No, de verdad, disfrútalo. Yo ya me comeré un yogur."
+    },
+    {
+      "id": "l12",
+      "text": "Un yogur. Ha dicho un yogur. Esto es peor que una bronca.",
+      "say": "[stunned] Un yogur. Ha dicho un yogur. [panicked] Esto es peor que una bronca."
+    },
+    {
+      "id": "l13",
+      "text": "Le ofreces la mitad del trozo. Mordido.",
+      "say": "[desperate] Le ofreces la mitad del trozo. Mordido."
+    },
+    {
+      "id": "l14",
+      "text": "«¿Mordido? Qué asco, no.»",
+      "say": "[imitating girlfriend, high voice, disgusted] ¿Mordido? Qué asco, no."
+    },
+    {
+      "id": "l15",
       "text": "Media hora después suena el timbre.",
       "say": "[resigned] Media hora después suena el timbre."
     },
     {
-      "id": "l12",
+      "id": "l16",
       "text": "«¡He pedido otra pizza! Como tú te comiste el último trozo...»",
       "say": "[imitating girlfriend, high voice, cheerful] ¡He pedido otra pizza! Como tú te comiste el último trozo..."
     },
     {
-      "id": "l13",
+      "id": "l17",
       "text": "Etiqueta a la que está llena... hasta que te ve comiendo.",
       "say": "[chuckles] Etiqueta a la que está llena... hasta que te ve comiendo."
     }

@@ -55,21 +55,41 @@
     },
     {
       "id": "l10",
+      "text": "Opción cuatro: fingir un desmayo.",
+      "say": "[desperate] Opción cuatro: fingir un desmayo."
+    },
+    {
+      "id": "l11",
+      "text": "Lo valoras. Lo valoras en serio.",
+      "say": "[serious, slow] Lo valoras. Lo valoras en serio."
+    },
+    {
+      "id": "l12",
       "text": "«¿Mejor que el negro?»",
       "say": "[imitating girlfriend, high voice, suspicious] ¿Mejor que el negro?"
     },
     {
-      "id": "l11",
+      "id": "l13",
       "text": "El negro. ¿Qué negro? Nadie te había hablado del negro.",
       "say": "[panicked whisper] El negro. ¿Qué negro? Nadie te había hablado del negro."
     },
     {
-      "id": "l12",
+      "id": "l14",
+      "text": "Ella vuelve al probador. Con el negro. Y con un tercero que tampoco conocías.",
+      "say": "[panicked] Ella vuelve al probador. Con el negro. [whispering] Y con un tercero que tampoco conocías."
+    },
+    {
+      "id": "l15",
+      "text": "«Bueno, ¿y cuál me llevo?»",
+      "say": "[imitating girlfriend, high voice, cheerful] Bueno, ¿y cuál me llevo?"
+    },
+    {
+      "id": "l16",
       "text": "Respuestas correctas posibles: cero.",
       "say": "[defeated] Respuestas correctas posibles: cero."
     },
     {
-      "id": "l13",
+      "id": "l17",
       "text": "Etiqueta a la que te hace la pregunta trampa.",
       "say": "[chuckles] Etiqueta a la que te hace la pregunta trampa."
     }

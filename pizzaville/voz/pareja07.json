@@ -50,31 +50,51 @@
     },
     {
       "id": "l09",
+      "text": "Una romántica.",
+      "say": "[desperate] Una romántica."
+    },
+    {
+      "id": "l10",
+      "text": "«¿Esa no es la que muere el chico al final? No, que lloro.»",
+      "say": "[imitating girlfriend, high voice, sad] ¿Esa no es la que muere el chico al final? No, que lloro."
+    },
+    {
+      "id": "l11",
+      "text": "Un documental de animales.",
+      "say": "[giving up] Un documental de animales."
+    },
+    {
+      "id": "l12",
+      "text": "«¿Un documental? ¿Tienes ochenta años?»",
+      "say": "[imitating girlfriend, high voice, mocking] ¿Un documental? ¿Tienes ochenta años?"
+    },
+    {
+      "id": "l13",
       "text": "Cincuenta minutos de tráiler en tráiler. Has visto más tráilers que películas este año.",
       "say": "[tired] Cincuenta minutos de tráiler en tráiler. [sighs] Has visto más tráilers que películas este año."
     },
     {
-      "id": "l10",
+      "id": "l14",
       "text": "«¡Esta! Esta tiene buena pinta.»",
       "say": "[imitating girlfriend, high voice, excited] ¡Esta! Esta tiene buena pinta."
     },
     {
-      "id": "l11",
+      "id": "l15",
       "text": "Por fin. Le das al play.",
       "say": "[relieved] Por fin. Le das al play."
     },
     {
-      "id": "l12",
+      "id": "l16",
       "text": "Minuto diez. Está dormida.",
       "say": "[deadpan] Minuto diez. [whispering] Está dormida."
     },
     {
-      "id": "l13",
+      "id": "l17",
       "text": "«Mañana la seguimos, ¿eh? No la veas sin mí.»",
       "say": "[imitating girlfriend, high voice, sleepy] Mañana la seguimos, ¿eh? No la veas sin mí."
     },
     {
-      "id": "l14",
+      "id": "l18",
       "text": "Etiqueta a la que se duerme en todas las pelis.",
       "say": "[chuckles] Etiqueta a la que se duerme en todas las pelis."
     }

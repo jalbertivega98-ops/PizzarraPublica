@@ -50,26 +50,41 @@
     },
     {
       "id": "l09",
+      "text": "Ráfaga. Treinta fotos. Todas iguales. Todas preciosas.",
+      "say": "[fast] Ráfaga. Treinta fotos. Todas iguales. [tired] Todas preciosas."
+    },
+    {
+      "id": "l10",
+      "text": "«En esta tengo papada. En esta el pelo raro. En esta salgo gorda.»",
+      "say": "[imitating girlfriend, high voice, critical, fast] En esta tengo papada. En esta el pelo raro. En esta salgo gorda."
+    },
+    {
+      "id": "l11",
       "text": "Cuarenta y siete fotos después, te duele un músculo que no sabías que tenías.",
       "say": "[exhausted] Cuarenta y siete fotos después... te duele un músculo que no sabías que tenías."
     },
     {
-      "id": "l10",
+      "id": "l12",
       "text": "«Ninguna vale. Es que no sabes hacer fotos.»",
       "say": "[imitating girlfriend, high voice, judgemental] Ninguna vale. Es que no sabes hacer fotos."
     },
     {
-      "id": "l11",
+      "id": "l13",
       "text": "Al día siguiente la ves en Instagram.",
       "say": "[resigned] Al día siguiente la ves en Instagram."
     },
     {
-      "id": "l12",
+      "id": "l14",
       "text": "Es la primera foto. La de «salgo bizca».",
       "say": "[stunned] Es la primera foto. [incredulous] La de salgo bizca."
     },
     {
-      "id": "l13",
+      "id": "l15",
+      "text": "Con cuatro filtros. Y la frase «foto random, sin pensar».",
+      "say": "[sarcastic] Con cuatro filtros. Y la frase: foto random, sin pensar."
+    },
+    {
+      "id": "l16",
       "text": "Etiqueta a la que te hace repetir cuarenta fotos.",
       "say": "[chuckles] Etiqueta a la que te hace repetir cuarenta fotos."
     }

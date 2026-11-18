@@ -50,26 +50,46 @@
     },
     {
       "id": "l09",
+      "text": "Ella pasa por el pasillo. Silbando. Mirando al techo.",
+      "say": "[suspicious] Ella pasa por el pasillo. Silbando. Mirando al techo."
+    },
+    {
+      "id": "l10",
+      "text": "Tú vuelves. Veintiocho grados. Esto ya es Sevilla en agosto.",
+      "say": "[shocked] Tú vuelves. Veintiocho grados. [exasperated] Esto ya es Sevilla en agosto."
+    },
+    {
+      "id": "l11",
       "text": "«Amor, ¿tú has tocado la calefacción? Es que tengo un frío...»",
       "say": "[imitating girlfriend, high voice, innocent, shivering] Amor, ¿tú has tocado la calefacción? Es que tengo un frío..."
     },
     {
-      "id": "l10",
-      "text": "Frío. En una casa a veintiséis grados. Con tu sudadera puesta.",
-      "say": "[sarcastic] Frío. En una casa a veintiséis grados. Con tu sudadera puesta."
+      "id": "l12",
+      "text": "Frío. En una casa a veintiocho grados. Con tu sudadera puesta.",
+      "say": "[sarcastic] Frío. En una casa a veintiocho grados. Con tu sudadera puesta."
     },
     {
-      "id": "l11",
+      "id": "l13",
       "text": "Y dos mantas. Y calcetines de lana.",
       "say": "[deadpan] Y dos mantas. Y calcetines de lana."
     },
     {
-      "id": "l12",
+      "id": "l14",
       "text": "Tú, mientras, te abanicas con la factura del gas.",
       "say": "[defeated, sweating] Tú, mientras, te abanicas con la factura del gas."
     },
     {
-      "id": "l13",
+      "id": "l15",
+      "text": "La factura llega a final de mes. Ciento ochenta euros.",
+      "say": "[shocked] La factura llega a final de mes. Ciento ochenta euros."
+    },
+    {
+      "id": "l16",
+      "text": "«¡Uf, qué caro está el gas! Tenemos que ahorrar, ¿eh?»",
+      "say": "[imitating girlfriend, high voice, worried] ¡Uf, qué caro está el gas! Tenemos que ahorrar, ¿eh?"
+    },
+    {
+      "id": "l17",
       "text": "Etiqueta a la que tiene frío hasta en agosto.",
       "say": "[chuckles] Etiqueta a la que tiene frío hasta en agosto."
     }

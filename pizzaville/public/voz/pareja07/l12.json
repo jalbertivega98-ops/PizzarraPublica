@@ -1,0 +1,31 @@
+{
+ "text": "«¿Un documental? ¿Tienes ochenta años?»",
+ "voice": "qCpeKeRp8nkdJgckZbTo",
+ "words": [
+  {
+   "w": "Un",
+   "t": 0.929,
+   "d": 0.19999999999999996
+  },
+  {
+   "w": "documental",
+   "t": 1.409,
+   "d": 0.72
+  },
+  {
+   "w": "Tienes",
+   "t": 2.329,
+   "d": 0.544
+  },
+  {
+   "w": "ochenta",
+   "t": 2.969,
+   "d": 0.08000000000000007
+  },
+  {
+   "w": "años",
+   "t": 3.049,
+   "d": 0.0
+  }
+ ]
+}

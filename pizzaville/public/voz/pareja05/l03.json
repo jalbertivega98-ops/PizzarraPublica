@@ -1,0 +1,21 @@
+{
+ "text": "Cinco minutos. Apúntalo.",
+ "voice": "qCpeKeRp8nkdJgckZbTo",
+ "words": [
+  {
+   "w": "Cinco",
+   "t": 0.21,
+   "d": 0.11000000000000001
+  },
+  {
+   "w": "minutos",
+   "t": 0.38,
+   "d": 0.42000000000000004
+  },
+  {
+   "w": "Apúntalo",
+   "t": 0.987,
+   "d": 0.6130000000000001
+  }
+ ]
+}

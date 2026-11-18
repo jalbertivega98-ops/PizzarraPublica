@@ -1,0 +1,26 @@
+{
+ "text": "Respuestas correctas posibles: cero.",
+ "voice": "qCpeKeRp8nkdJgckZbTo",
+ "words": [
+  {
+   "w": "Respuestas",
+   "t": 0.269,
+   "d": 0.371
+  },
+  {
+   "w": "correctas",
+   "t": 0.68,
+   "d": 0.44000000000000006
+  },
+  {
+   "w": "posibles",
+   "t": 1.18,
+   "d": 0.5
+  },
+  {
+   "w": "cero",
+   "t": 2.04,
+   "d": 0.43999999999999995
+  }
+ ]
+}

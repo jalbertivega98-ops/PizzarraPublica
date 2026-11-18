@@ -1,0 +1,31 @@
+{
+ "text": "Opción cuatro: fingir un desmayo.",
+ "voice": "qCpeKeRp8nkdJgckZbTo",
+ "words": [
+  {
+   "w": "Opción",
+   "t": 0.147,
+   "d": 0.33299999999999996
+  },
+  {
+   "w": "cuatro",
+   "t": 0.526,
+   "d": 0.274
+  },
+  {
+   "w": "fingir",
+   "t": 1.36,
+   "d": 0.48
+  },
+  {
+   "w": "un",
+   "t": 1.867,
+   "d": 0.052999999999999936
+  },
+  {
+   "w": "desmayo",
+   "t": 1.96,
+   "d": 0.52
+  }
+ ]
+}

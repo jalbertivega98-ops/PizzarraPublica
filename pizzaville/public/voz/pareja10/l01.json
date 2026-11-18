@@ -1,0 +1,26 @@
+{
+ "text": "Pizza familiar. Viernes. Felicidad.",
+ "voice": "qCpeKeRp8nkdJgckZbTo",
+ "words": [
+  {
+   "w": "Pizza",
+   "t": 0.253,
+   "d": 0.067
+  },
+  {
+   "w": "familiar",
+   "t": 0.382,
+   "d": 0.498
+  },
+  {
+   "w": "Viernes",
+   "t": 1.2,
+   "d": 0.6400000000000001
+  },
+  {
+   "w": "Felicidad",
+   "t": 2.19,
+   "d": 0.6099999999999999
+  }
+ ]
+}

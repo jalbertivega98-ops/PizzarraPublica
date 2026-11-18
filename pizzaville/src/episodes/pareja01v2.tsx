@@ -192,9 +192,9 @@ export function Pareja01v2() {
   useMemo(() => { scene.background = new THREE.Color('#0d1022'); scene.fog = null }, [])
 
   const layout = () => {
-    for (let i = 0; i < lines.length; i++) lines[i].at = i === 0 ? 0.6 : lines[i - 1].at + lines[i - 1].dur + 0.25 + (GAP[lines[i].id] ?? 0)
+    for (let i = 0; i < lines.length; i++) lines[i].at = i === 0 ? 0.6 : lines[i - 1].at + lines[i - 1].dur + 0.12 + 0.55 * (GAP[lines[i].id] ?? 0)
   }
-  const duration = () => { layout(); return Math.ceil((endOf(lines[lines.length - 1]) + 2.8) * 10) / 10 }
+  const duration = () => { layout(); return Math.ceil((endOf(lines[lines.length - 1]) + 2.2) * 10) / 10 }
 
   useMemo(() => {
     const pv = (window as any).__pv

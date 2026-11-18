@@ -50,18 +50,18 @@
     },
     {
       "id": "l09",
-      "text": "Así que respiras hondo y dices: te queda increíble, amor.",
-      "say": "[deep breath] Así que respiras hondo y dices: [sweet] te queda increíble, amor."
-    },
-    {
-      "id": "l10",
       "text": "Opción cuatro: fingir un desmayo.",
       "say": "[desperate] Opción cuatro: fingir un desmayo."
     },
     {
-      "id": "l11",
+      "id": "l10",
       "text": "Lo valoras. Lo valoras en serio.",
       "say": "[serious, slow] Lo valoras. Lo valoras en serio."
+    },
+    {
+      "id": "l11",
+      "text": "Así que respiras hondo y dices: te queda increíble, amor.",
+      "say": "[deep breath] Así que respiras hondo y dices: [sweet] te queda increíble, amor."
     },
     {
       "id": "l12",

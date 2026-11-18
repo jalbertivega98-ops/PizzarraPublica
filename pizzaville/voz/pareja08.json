@@ -1,0 +1,77 @@
+{
+  "episode": "pareja08",
+  "notes": "COSAS DE PAREJA ep8 «Hazme una foto» (sofá, él con el móvil)",
+  "model": "eleven_v3",
+  "eleven": {
+    "stability": 0.0,
+    "similarity_boost": 0.8
+  },
+  "eleven_out": "pareja08",
+  "lines": [
+    {
+      "id": "l01",
+      "text": "Le dices que está guapa. Error.",
+      "say": "[tired] Le dices que está guapa. [deadpan] Error."
+    },
+    {
+      "id": "l02",
+      "text": "«¡Ay, pues hazme una foto!»",
+      "say": "[imitating girlfriend, high voice, excited] ¡Ay, pues hazme una foto!"
+    },
+    {
+      "id": "l03",
+      "text": "Una foto. Fácil. Clic.",
+      "say": "[confident] Una foto. Fácil. Clic."
+    },
+    {
+      "id": "l04",
+      "text": "«¡No, que salgo bizca!»",
+      "say": "[imitating girlfriend, high voice, horrified] ¡No, que salgo bizca!"
+    },
+    {
+      "id": "l05",
+      "text": "Otra. Clic.",
+      "say": "[patient] Otra. Clic."
+    },
+    {
+      "id": "l06",
+      "text": "«¿Desde abajo? ¿Tú estás loco?»",
+      "say": "[imitating girlfriend, high voice, annoyed] ¿Desde abajo? ¿Tú estás loco?"
+    },
+    {
+      "id": "l07",
+      "text": "Te agachas. Te subes al sofá. Contienes la respiración.",
+      "say": "[concentrating, whispering] Te agachas. Te subes al sofá. Contienes la respiración."
+    },
+    {
+      "id": "l08",
+      "text": "«Haz muchas seguidas, en ráfaga.»",
+      "say": "[imitating girlfriend, high voice, demanding] Haz muchas seguidas, en ráfaga."
+    },
+    {
+      "id": "l09",
+      "text": "Cuarenta y siete fotos después, te duele un músculo que no sabías que tenías.",
+      "say": "[exhausted] Cuarenta y siete fotos después... te duele un músculo que no sabías que tenías."
+    },
+    {
+      "id": "l10",
+      "text": "«Ninguna vale. Es que no sabes hacer fotos.»",
+      "say": "[imitating girlfriend, high voice, judgemental] Ninguna vale. Es que no sabes hacer fotos."
+    },
+    {
+      "id": "l11",
+      "text": "Al día siguiente la ves en Instagram.",
+      "say": "[resigned] Al día siguiente la ves en Instagram."
+    },
+    {
+      "id": "l12",
+      "text": "Es la primera foto. La de «salgo bizca».",
+      "say": "[stunned] Es la primera foto. [incredulous] La de salgo bizca."
+    },
+    {
+      "id": "l13",
+      "text": "Etiqueta a la que te hace repetir cuarenta fotos.",
+      "say": "[chuckles] Etiqueta a la que te hace repetir cuarenta fotos."
+    }
+  ]
+}

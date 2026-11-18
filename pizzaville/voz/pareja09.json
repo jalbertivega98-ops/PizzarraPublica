@@ -1,0 +1,77 @@
+{
+  "episode": "pareja09",
+  "notes": "COSAS DE PAREJA ep9 «¿Me queda bien?» (sofá, vestido)",
+  "model": "eleven_v3",
+  "eleven": {
+    "stability": 0.0,
+    "similarity_boost": 0.8
+  },
+  "eleven_out": "pareja09",
+  "lines": [
+    {
+      "id": "l01",
+      "text": "Hay preguntas que no tienen respuesta correcta. Y esta es la peor.",
+      "say": "[tense] Hay preguntas que no tienen respuesta correcta. [ominous] Y esta es la peor."
+    },
+    {
+      "id": "l02",
+      "text": "«¿Me queda bien este vestido?»",
+      "say": "[imitating girlfriend, high voice, hopeful] ¿Me queda bien este vestido?"
+    },
+    {
+      "id": "l03",
+      "text": "Opción uno: dices que sí.",
+      "say": "[thinking fast] Opción uno: dices que sí."
+    },
+    {
+      "id": "l04",
+      "text": "«Lo dices por decir. Ni lo has mirado.»",
+      "say": "[imitating girlfriend, high voice, suspicious] Lo dices por decir. Ni lo has mirado."
+    },
+    {
+      "id": "l05",
+      "text": "Opción dos: dices que no.",
+      "say": "[thinking fast] Opción dos: dices que no."
+    },
+    {
+      "id": "l06",
+      "text": "«¿Ah, sí? ¿Y qué es lo que me queda mal, a ver?»",
+      "say": "[imitating girlfriend, high voice, offended] ¿Ah, sí? ¿Y qué es lo que me queda mal, a ver?"
+    },
+    {
+      "id": "l07",
+      "text": "Opción tres: dices que normal.",
+      "say": "[panicked] Opción tres: dices que normal."
+    },
+    {
+      "id": "l08",
+      "text": "Nunca digas normal. Nadie ha sobrevivido a un normal.",
+      "say": "[whispering, serious] Nunca digas normal. Nadie ha sobrevivido a un normal."
+    },
+    {
+      "id": "l09",
+      "text": "Así que respiras hondo y dices: te queda increíble, amor.",
+      "say": "[deep breath] Así que respiras hondo y dices: [sweet] te queda increíble, amor."
+    },
+    {
+      "id": "l10",
+      "text": "«¿Mejor que el negro?»",
+      "say": "[imitating girlfriend, high voice, suspicious] ¿Mejor que el negro?"
+    },
+    {
+      "id": "l11",
+      "text": "El negro. ¿Qué negro? Nadie te había hablado del negro.",
+      "say": "[panicked whisper] El negro. ¿Qué negro? Nadie te había hablado del negro."
+    },
+    {
+      "id": "l12",
+      "text": "Respuestas correctas posibles: cero.",
+      "say": "[defeated] Respuestas correctas posibles: cero."
+    },
+    {
+      "id": "l13",
+      "text": "Etiqueta a la que te hace la pregunta trampa.",
+      "say": "[chuckles] Etiqueta a la que te hace la pregunta trampa."
+    }
+  ]
+}

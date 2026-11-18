@@ -1,0 +1,87 @@
+{
+  "episode": "pareja05",
+  "notes": "COSAS DE PAREJA ep5 «5 minutos y salgo» (sofá, cambios de ropa)",
+  "model": "eleven_v3",
+  "eleven": {
+    "stability": 0.0,
+    "similarity_boost": 0.8
+  },
+  "eleven_out": "pareja05",
+  "lines": [
+    {
+      "id": "l01",
+      "text": "Habéis quedado a cenar a las nueve. Son menos cuarto. Tú llevas listo desde las ocho.",
+      "say": "[tired] Habéis quedado a cenar a las nueve. Son menos cuarto. [sighs] Tú llevas listo desde las ocho."
+    },
+    {
+      "id": "l02",
+      "text": "«¡Cinco minutos y salgo!»",
+      "say": "[imitating girlfriend, high voice, rushed] ¡Cinco minutos y salgo!"
+    },
+    {
+      "id": "l03",
+      "text": "Cinco minutos. Apúntalo.",
+      "say": "[deadpan] Cinco minutos. Apúntalo."
+    },
+    {
+      "id": "l04",
+      "text": "Primer conjunto. A ti te parece perfecto.",
+      "say": "[hopeful] Primer conjunto. A ti te parece perfecto."
+    },
+    {
+      "id": "l05",
+      "text": "«Mmm... no, que me hace rara.»",
+      "say": "[imitating girlfriend, high voice, doubtful] Mmm... no, que me hace rara."
+    },
+    {
+      "id": "l06",
+      "text": "Segundo conjunto. También perfecto.",
+      "say": "[patient] Segundo conjunto. También perfecto."
+    },
+    {
+      "id": "l07",
+      "text": "«¡Es que no tengo nada que ponerme!»",
+      "say": "[imitating girlfriend, high voice, dramatic] ¡Es que no tengo nada que ponerme!"
+    },
+    {
+      "id": "l08",
+      "text": "Tiene un armario entero. Tú tienes dos cajones. Y uno es suyo.",
+      "say": "[sarcastic] Tiene un armario entero. Tú tienes dos cajones. [deadpan] Y uno es suyo."
+    },
+    {
+      "id": "l09",
+      "text": "Nueve y media. Tercer conjunto. Cuarto. Quinto.",
+      "say": "[tired, faster] Nueve y media. Tercer conjunto. Cuarto. Quinto."
+    },
+    {
+      "id": "l10",
+      "text": "«¡Ya está! Al final me pongo el primero.»",
+      "say": "[imitating girlfriend, high voice, cheerful] ¡Ya está! Al final me pongo el primero."
+    },
+    {
+      "id": "l11",
+      "text": "El primero. El de hace cuarenta y cinco minutos.",
+      "say": "[stunned, slow] El primero. [incredulous] El de hace cuarenta y cinco minutos."
+    },
+    {
+      "id": "l12",
+      "text": "Llegáis a las diez menos diez. Y adivina qué.",
+      "say": "[resigned] Llegáis a las diez menos diez. Y adivina qué."
+    },
+    {
+      "id": "l13",
+      "text": "Los demás tampoco han llegado.",
+      "say": "[defeated] Los demás tampoco han llegado."
+    },
+    {
+      "id": "l14",
+      "text": "«¿Ves? Si es que te agobias por nada.»",
+      "say": "[imitating girlfriend, high voice, smug] ¿Ves? Si es que te agobias por nada."
+    },
+    {
+      "id": "l15",
+      "text": "Etiqueta a la de los cinco minutos que son cincuenta.",
+      "say": "[chuckles] Etiqueta a la de los cinco minutos que son cincuenta."
+    }
+  ]
+}

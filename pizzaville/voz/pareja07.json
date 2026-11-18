@@ -1,0 +1,82 @@
+{
+  "episode": "pareja07",
+  "notes": "COSAS DE PAREJA ep7 «Elige tú la peli» (sofá, tele)",
+  "model": "eleven_v3",
+  "eleven": {
+    "stability": 0.0,
+    "similarity_boost": 0.8
+  },
+  "eleven_out": "pareja07",
+  "lines": [
+    {
+      "id": "l01",
+      "text": "Noche de peli. Le dices que elija ella.",
+      "say": "[relaxed] Noche de peli. Le dices que elija ella."
+    },
+    {
+      "id": "l02",
+      "text": "«No, no, elige tú, que siempre elijo yo.»",
+      "say": "[imitating girlfriend, high voice, sweet] No, no, elige tú, que siempre elijo yo."
+    },
+    {
+      "id": "l03",
+      "text": "Vale. Propones una de acción.",
+      "say": "[cautious] Vale. Propones una de acción."
+    },
+    {
+      "id": "l04",
+      "text": "«Uf, tiros no, porfa.»",
+      "say": "[imitating girlfriend, high voice, bored] Uf, tiros no, porfa."
+    },
+    {
+      "id": "l05",
+      "text": "Una comedia.",
+      "say": "[still trying] Una comedia."
+    },
+    {
+      "id": "l06",
+      "text": "«Esa ya la vi en el dos mil catorce.»",
+      "say": "[imitating girlfriend, high voice, unimpressed] Esa ya la vi en el dos mil catorce."
+    },
+    {
+      "id": "l07",
+      "text": "Una de miedo.",
+      "say": "[hopeful] Una de miedo."
+    },
+    {
+      "id": "l08",
+      "text": "«¿Quieres que no duerma en un mes?»",
+      "say": "[imitating girlfriend, high voice, scared] ¿Quieres que no duerma en un mes?"
+    },
+    {
+      "id": "l09",
+      "text": "Cincuenta minutos de tráiler en tráiler. Has visto más tráilers que películas este año.",
+      "say": "[tired] Cincuenta minutos de tráiler en tráiler. [sighs] Has visto más tráilers que películas este año."
+    },
+    {
+      "id": "l10",
+      "text": "«¡Esta! Esta tiene buena pinta.»",
+      "say": "[imitating girlfriend, high voice, excited] ¡Esta! Esta tiene buena pinta."
+    },
+    {
+      "id": "l11",
+      "text": "Por fin. Le das al play.",
+      "say": "[relieved] Por fin. Le das al play."
+    },
+    {
+      "id": "l12",
+      "text": "Minuto diez. Está dormida.",
+      "say": "[deadpan] Minuto diez. [whispering] Está dormida."
+    },
+    {
+      "id": "l13",
+      "text": "«Mañana la seguimos, ¿eh? No la veas sin mí.»",
+      "say": "[imitating girlfriend, high voice, sleepy] Mañana la seguimos, ¿eh? No la veas sin mí."
+    },
+    {
+      "id": "l14",
+      "text": "Etiqueta a la que se duerme en todas las pelis.",
+      "say": "[chuckles] Etiqueta a la que se duerme en todas las pelis."
+    }
+  ]
+}

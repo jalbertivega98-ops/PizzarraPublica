@@ -1,0 +1,77 @@
+{
+  "episode": "pareja10",
+  "notes": "COSAS DE PAREJA ep10 «El último trozo de pizza» (sofá, pizza en la mesa)",
+  "model": "eleven_v3",
+  "eleven": {
+    "stability": 0.0,
+    "similarity_boost": 0.8
+  },
+  "eleven_out": "pareja10",
+  "lines": [
+    {
+      "id": "l01",
+      "text": "Pizza familiar. Viernes. Felicidad.",
+      "say": "[happy] Pizza familiar. Viernes. Felicidad."
+    },
+    {
+      "id": "l02",
+      "text": "Queda un trozo. El último.",
+      "say": "[tense] Queda un trozo. El último."
+    },
+    {
+      "id": "l03",
+      "text": "Le preguntas si lo quiere.",
+      "say": "[polite] Le preguntas si lo quiere."
+    },
+    {
+      "id": "l04",
+      "text": "«No, no, cógelo tú, yo estoy llena.»",
+      "say": "[imitating girlfriend, high voice, casual] No, no, cógelo tú, yo estoy llena."
+    },
+    {
+      "id": "l05",
+      "text": "Estoy llena. Eso es lo que dijo.",
+      "say": "[suspicious] Estoy llena. Eso es lo que dijo."
+    },
+    {
+      "id": "l06",
+      "text": "Lo coges. Despacio. Como quien desactiva una bomba.",
+      "say": "[slow, tense] Lo coges. Despacio. Como quien desactiva una bomba."
+    },
+    {
+      "id": "l07",
+      "text": "Primer mordisco... y notas su mirada.",
+      "say": "[whispering] Primer mordisco... y notas su mirada."
+    },
+    {
+      "id": "l08",
+      "text": "Te mira como si te estuvieras comiendo a su perro.",
+      "say": "[nervous] Te mira como si te estuvieras comiendo a su perro."
+    },
+    {
+      "id": "l09",
+      "text": "«Nada, nada, cómetelo. Si yo no quería.»",
+      "say": "[imitating girlfriend, high voice, hurt, passive-aggressive] Nada, nada, cómetelo. Si yo no quería."
+    },
+    {
+      "id": "l10",
+      "text": "Ya no sabe igual. Sabe a culpa.",
+      "say": "[guilty] Ya no sabe igual. [sighs] Sabe a culpa."
+    },
+    {
+      "id": "l11",
+      "text": "Media hora después suena el timbre.",
+      "say": "[resigned] Media hora después suena el timbre."
+    },
+    {
+      "id": "l12",
+      "text": "«¡He pedido otra pizza! Como tú te comiste el último trozo...»",
+      "say": "[imitating girlfriend, high voice, cheerful] ¡He pedido otra pizza! Como tú te comiste el último trozo..."
+    },
+    {
+      "id": "l13",
+      "text": "Etiqueta a la que está llena... hasta que te ve comiendo.",
+      "say": "[chuckles] Etiqueta a la que está llena... hasta que te ve comiendo."
+    }
+  ]
+}

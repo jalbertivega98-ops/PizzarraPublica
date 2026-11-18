@@ -1,0 +1,77 @@
+{
+  "episode": "pareja06",
+  "notes": "COSAS DE PAREJA ep6 «La guerra del termostato» (sofá, termostato en la pared)",
+  "model": "eleven_v3",
+  "eleven": {
+    "stability": 0.0,
+    "similarity_boost": 0.8
+  },
+  "eleven_out": "pareja06",
+  "lines": [
+    {
+      "id": "l01",
+      "text": "Invierno. Pones la calefacción a veintiún grados. Temperatura perfecta.",
+      "say": "[calm, satisfied] Invierno. Pones la calefacción a veintiún grados. Temperatura perfecta."
+    },
+    {
+      "id": "l02",
+      "text": "Te das la vuelta un momento... y está a veinticinco.",
+      "say": "[suspicious] Te das la vuelta un momento... [surprised] y está a veinticinco."
+    },
+    {
+      "id": "l03",
+      "text": "Nadie ha dicho nada. Nadie ha visto nada.",
+      "say": "[confused, slow] Nadie ha dicho nada. Nadie ha visto nada."
+    },
+    {
+      "id": "l04",
+      "text": "La bajas a veintidós. En silencio. Como un ninja.",
+      "say": "[whispering] La bajas a veintidós. En silencio. Como un ninja."
+    },
+    {
+      "id": "l05",
+      "text": "Diez minutos después: veinticuatro.",
+      "say": "[tense] Diez minutos después: veinticuatro."
+    },
+    {
+      "id": "l06",
+      "text": "Veintiuno.",
+      "say": "[whispering, determined] Veintiuno."
+    },
+    {
+      "id": "l07",
+      "text": "Veintiséis.",
+      "say": "[whispering, alarmed] Veintiséis."
+    },
+    {
+      "id": "l08",
+      "text": "Esto ya no es una casa. Es una guerra fría. Bueno, caliente.",
+      "say": "[exasperated] Esto ya no es una casa. Es una guerra fría. [deadpan] Bueno, caliente."
+    },
+    {
+      "id": "l09",
+      "text": "«Amor, ¿tú has tocado la calefacción? Es que tengo un frío...»",
+      "say": "[imitating girlfriend, high voice, innocent, shivering] Amor, ¿tú has tocado la calefacción? Es que tengo un frío..."
+    },
+    {
+      "id": "l10",
+      "text": "Frío. En una casa a veintiséis grados. Con tu sudadera puesta.",
+      "say": "[sarcastic] Frío. En una casa a veintiséis grados. Con tu sudadera puesta."
+    },
+    {
+      "id": "l11",
+      "text": "Y dos mantas. Y calcetines de lana.",
+      "say": "[deadpan] Y dos mantas. Y calcetines de lana."
+    },
+    {
+      "id": "l12",
+      "text": "Tú, mientras, te abanicas con la factura del gas.",
+      "say": "[defeated, sweating] Tú, mientras, te abanicas con la factura del gas."
+    },
+    {
+      "id": "l13",
+      "text": "Etiqueta a la que tiene frío hasta en agosto.",
+      "say": "[chuckles] Etiqueta a la que tiene frío hasta en agosto."
+    }
+  ]
+}

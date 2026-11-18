@@ -46,7 +46,7 @@ export const Lx = {
   rush: pose({ yaw: 0.45, brows: 0.8, smile: 0.4, lean: 0.06, rSh: [1.3, -0.4], rEl: -0.6 }),
   shiver: pose({ yaw: 0.35, pitch: 0.1, brows: 0.7, browTilt: -0.8, smile: -0.4, sink: 0.04, lSh: [0.9, -0.2], lEl: -1.7, rSh: [0.9, 0.2], rEl: -1.7 }),
   whistle: pose({ yaw: -0.35, pitch: -0.3, lids: 0.1, brows: 0.5, mouth: 0.12, smile: -0.1 }),
-  sleep: pose({ roll: 0.32, pitch: 0.15, lids: 1, smile: 0.15, sink: 0.05, lean: -0.03 }),
+  sleep: pose({ roll: -0.3, pitch: 0.15, lids: 1, smile: 0.15, sink: 0.04, side: 0.1, lean: -0.03 }),
   phone: pose({ rSh: [1.5, -0.2], rEl: -1.1, pitch: 0.28, yaw: 0.05, brows: 0.1 }),
   sad: pose({ yaw: 0.45, pitch: 0.12, brows: 0.8, browTilt: -0.9, smile: -0.5, lids: 0.2 }),
   stareFood: pose({ yaw: 0.55, pitch: 0.12, lids: 0.1, brows: 0.2, browTilt: 0.3, smile: -0.25, lean: 0.07 }),

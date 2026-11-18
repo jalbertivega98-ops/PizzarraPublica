@@ -55,7 +55,7 @@ function PizzaBox({ slices, open = true }: { slices: number; open?: boolean }) {
   return (
     <group>
       <mesh position={[0, 0.02, 0]}><boxGeometry args={[0.5, 0.04, 0.5]} /><meshStandardMaterial color="#d9b88a" flatShading /></mesh>
-      {open && <mesh position={[0, 0.25, -0.25]} rotation-x={-0.25}><boxGeometry args={[0.5, 0.5, 0.01]} /><meshStandardMaterial color="#cfae80" flatShading /></mesh>}
+      {open && <mesh position={[0, 0.1, -0.47]} rotation-x={-1.15}><boxGeometry args={[0.5, 0.5, 0.01]} /><meshStandardMaterial color="#cfae80" flatShading /></mesh>}
       {Array.from({ length: slices }).map((_, i) => <group key={i} position={[0, 0.045, 0]} rotation-y={(i * Math.PI) / 4}><Slice /></group>)}
     </group>
   )
@@ -69,7 +69,7 @@ const spec: PairSpec = {
   bg: '#1a1420',
   Set: () => <LivingRoom />,
   pos: { lucia: [-0.42, 0.5, -0.35], dani: [0.42, 0.5, -0.35] },
-  shots: { ...coupleShots(1.52, -0.35), table: { p: [0.15, 1.25, 2.25], l: [0.15, 0.42, 1.2], fov: 34, push: 0.15 } },
+  shots: { ...coupleShots(1.52, -0.35), table: { p: [0.18, 1.05, 1.9], l: [0.18, 0.42, 1.18], fov: 36, push: 0.12 } },
   daniHand: null,
   frame: (t, a, l, st) => {
     const f = frame(t, a, l)
@@ -82,7 +82,7 @@ const spec: PairSpec = {
   extras: (st) => (
     <group>
       <group position={[0.18, 0.39, 1.22]}><PizzaBox slices={0} /></group>
-      <Show show={() => st.inBox}><group position={[0.18, 0.39, 1.22]}><group position={[0, 0.045, 0]}><Slice /></group></group></Show>
+      <Show show={() => st.inBox}><group position={[0.18, 0.39, 1.22]}><group position={[0, 0.045, 0]} scale={1.3}><Slice /></group></group></Show>
       <Show show={() => st.inHand}><group position={[0.55, 1.32, 0.05]} rotation={[0.9, 0.6, 0]}><Slice bite /></group></Show>
       <Show show={() => st.newPizza}><group position={[-0.25, 0.47, 1.22]}><PizzaBox slices={8} /></group></Show>
     </group>

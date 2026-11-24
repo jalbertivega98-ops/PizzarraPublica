@@ -101,6 +101,7 @@ export type Scene = {
   shots: Record<string, Shot>
 }
 export type Beat = {
+  cut2?: [number, string] // a second cut inside the line (offset s, shot)
   d?: TPose; l?: TPose; cut?: string; dAt?: number; lAt?: number; cutAt?: number; dMid?: TPose; lMid?: TPose
   flash?: string // flash colour at line start
   lines?: number // comic impact lines strength during the line
@@ -191,7 +192,7 @@ export function ToonEpisode({ spec }: { spec: ToonSpec }) {
     const a = (id: string) => L(id).at
     const sc = sceneAt(t)
     st.scene = sc.id
-    ;(scene.background as THREE.Color).set(sc.bg)
+    ;(scene.background as THREE.Color).set(st.bg ?? sc.bg)
     // poses
     const dk: [number, TPose][] = [[0, spec.d0]], lk: [number, TPose][] = [[0, spec.l0]], cuts: [number, string, number][] = [[0, spec.cut0, 1]]
     let flash: [number, string] | null = null, shake = 0, impact = 0
@@ -203,6 +204,7 @@ export function ToonEpisode({ spec }: { spec: ToonSpec }) {
       if (b.l) lk.push([s0 - 0.1 + (b.lAt ?? 0), b.l])
       if (b.lMid) lk.push([s0 + du * 0.5, b.lMid])
       if (b.cut) cuts.push([s0 - 0.1 + (b.cutAt ?? 0), b.cut, b.zoom ?? 1])
+      if (b.cut2) cuts.push([s0 + b.cut2[0], b.cut2[1], 1])
       if (b.flash && t >= s0 - 0.05 && t < s0 + 0.5) flash = [t - s0 + 0.05, b.flash]
       const inL = t >= s0 && t <= s0 + du + 0.2
       if (b.shake && inL) shake = Math.max(shake, b.shake)

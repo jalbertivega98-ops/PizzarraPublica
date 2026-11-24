@@ -40,7 +40,7 @@ Style: Mid,Lilita One,78,&H00FFFFFF,&H00FFFFFF,&H00201810,&H64000000,0,0,0,0,100
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 `
-  const ev = [], subs = []
+  const ev = [], subs = [], tags = []
   if (info.subStyle === 'box') {
     // short italic chunks, the key word on a red box (reels style)
     const norm = (x) => x.normalize('NFD').replace(/[^\p{L}\p{N}]/gu, '').toLowerCase()
@@ -52,8 +52,16 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         const a = l.at + chunk[0].t - 0.04, b = l.at + chunk[chunk.length - 1].t + chunk[chunk.length - 1].d + 0.1
         let key = -1, best = 3
         chunk.forEach((c, i) => { const n = norm(c.disp).length; if (n > best) { best = n; key = i } })
-        const txt = chunk.map((c, i) => (i === key ? `{\\3c&H2E2ED6&\\bord17}${c.disp}{\\3c&H000000&\\bord5}` : c.disp)).join(' ')
+        // toon episodes: colour by speaker (T = Dani's thoughts, D = Dani out loud, H = her)
+        const keyC = l.kind === 'T' ? '&HB0399A&' : l.kind === 'H' ? '&HA04FFF&' : l.kind === 'D' ? '&HE07D2E&' : '&H2E2ED6&'
+        const fill = l.kind === 'T' ? '{\\1c&H8CF0FF&}' : ''
+        const txt = fill + chunk.map((c, i) => (i === key ? `{\\3c${keyC}\\bord17\\1c&HFFFFFF&}${c.disp}{\\3c&H000000&\\bord5}${fill}` : c.disp)).join(' ')
         subs.push({ a, b: Math.min(b, to), txt: `{\\an5\\pos(540,1330)\\fad(40,40)}${txt}` })
+        if (l.kind) {
+          const who = l.kind === 'T' ? '💭 DANI PIENSA' : l.kind === 'H' ? 'LUCÍA' : 'DANI'
+          const c = l.kind === 'T' ? '&H8CF0FF&' : l.kind === 'H' ? '&HC08AFF&' : '&HFFB070&'
+          tags.push({ a, b: Math.min(b, to), txt: `{\\an5\\pos(540,1222)\\fs46\\1c${c}\\bord4\\fad(40,40)}${who.replace('💭 ', '')}` })
+        }
         chunk = []
       }
       for (const w of l.words) {
@@ -68,6 +76,10 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     subs.sort((x, y) => x.a - y.a).forEach((c, i) => {
       const nb = i + 1 < subs.length ? Math.min(c.b, subs[i + 1].a - 0.01) : c.b
       ev.push(`Dialogue: 0,${assTime(c.a)},${assTime(nb)},SubBox,,0,0,0,,${c.txt}`)
+    })
+    tags.sort((x, y) => x.a - y.a).forEach((c, i) => {
+      const nb = i + 1 < tags.length ? Math.min(c.b, tags[i + 1].a - 0.01) : c.b
+      ev.push(`Dialogue: 1,${assTime(c.a)},${assTime(nb)},SubBox,,0,0,0,,${c.txt}`)
     })
     if (info.overlays) for (const o of info.overlays) ev.push(`Dialogue: 2,${assTime(o.a)},${assTime(Math.min(o.b, to))},${o.st},,0,0,0,,${o.tx}`)
     return head + ev.join('\n') + '\n'

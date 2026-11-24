@@ -165,17 +165,32 @@ function drawFace(c: CanvasRenderingContext2D, f: Face, look: ToonLook, t: numbe
     for (let i = -3; i <= 3; i++) { c.beginPath(); c.moveTo(mx + i * w * 0.27, cy - h / 2 + 4 + Math.abs(i) * -3); c.lineTo(mx + i * w * 0.27, cy + h / 2 - 2 + f.smile * (10 - Math.abs(i) * 4)); c.stroke() }
   } else if (open < 0.07) {
     c.beginPath(); c.moveTo(mx - mw, my - f.smile * 22); c.quadraticCurveTo(mx, my + f.smile * 40, mx + mw, my - f.smile * 22); c.stroke()
+  } else if (f.smile < -0.2 && open > 0.4) {
+    // screaming: tall open mouth with both rows of teeth and a wobbling tongue
+    const w = mw * (0.75 + open * 0.35), h = 40 + open * 120, cy = my + 10
+    const path = () => { c.beginPath(); c.moveTo(mx - w, cy - h * 0.35); c.quadraticCurveTo(mx, cy - h * 0.6, mx + w, cy - h * 0.35); c.quadraticCurveTo(mx + w * 1.05, cy + h * 0.55, mx, cy + h * 0.6); c.quadraticCurveTo(mx - w * 1.05, cy + h * 0.55, mx - w, cy - h * 0.35); c.closePath() }
+    path(); c.fillStyle = '#4a0f1a'; c.fill()
+    c.save(); c.clip()
+    c.fillStyle = '#ff6f7d'; ellipse(c, mx + Math.sin(t * 30) * 8, cy + h * 0.45, w * 0.6, h * 0.25); c.fill()
+    c.fillStyle = '#fff'; c.fillRect(mx - w, cy - h * 0.62, 2 * w, h * 0.3); c.fillRect(mx - w, cy + h * 0.42, 2 * w, h * 0.2)
+    c.strokeStyle = ink; c.lineWidth = 4
+    for (let i = -3; i <= 3; i++) { c.beginPath(); c.moveTo(mx + i * w * 0.28, cy - h * 0.62); c.lineTo(mx + i * w * 0.28, cy - h * 0.32); c.moveTo(mx + i * w * 0.28, cy + h * 0.42); c.lineTo(mx + i * w * 0.28, cy + h * 0.62); c.stroke() }
+    c.restore()
+    c.lineWidth = 9; path(); c.stroke()
   } else {
     const h = 20 + open * 120, w = mw * (0.8 + open * 0.45)
     const top = my - f.smile * 18 - h * 0.15
-    c.beginPath(); c.moveTo(mx - w, top); c.quadraticCurveTo(mx, top + f.smile * 34, mx + w, top)
-    c.bezierCurveTo(mx + w, top + h * (0.9 + f.smile * 0.3), mx - w, top + h * (0.9 + f.smile * 0.3), mx - w, top)
-    c.closePath(); c.fillStyle = '#5a1420'; c.fill()
+    const path = () => {
+      c.beginPath(); c.moveTo(mx - w, top); c.quadraticCurveTo(mx, top + f.smile * 34, mx + w, top)
+      c.bezierCurveTo(mx + w, top + h * (0.9 + Math.max(0, f.smile) * 0.3), mx - w, top + h * (0.9 + Math.max(0, f.smile) * 0.3), mx - w, top)
+      c.closePath()
+    }
+    path(); c.fillStyle = '#5a1420'; c.fill()
     c.save(); c.clip()
-    c.fillStyle = '#ff6f7d'; ellipse(c, mx, top + h * (0.82 + f.smile * 0.2), w * 0.55, h * 0.3); c.fill()
-    c.fillStyle = '#fff'; c.fillRect(mx - w, top - 30, 2 * w, 30 + Math.min(26, h * 0.22) + f.smile * 8)
+    c.fillStyle = '#ff6f7d'; ellipse(c, mx, top + h * 0.78, w * 0.55, h * 0.28); c.fill()
+    c.fillStyle = '#fff'; c.fillRect(mx - w, top - 40, 2 * w, 40 + Math.min(18, h * 0.16) + f.smile * 10)
     c.restore()
-    c.stroke()
+    path(); c.stroke()
   }
   // tears (waterfalls when tears ~1)
   if (f.tears > 0.05) {
@@ -224,12 +239,12 @@ function Hair({ style, mat }: { style: ToonLook['style']; mat: THREE.Material })
     return (
       <group>
         {/* cap of short hair, pushed back so the face stays free */}
-        <mesh material={mat} position={[0, 0.06, -0.035]} rotation-x={-0.5} scale={[1.07, 0.95, 1.07]} castShadow>
+        <mesh material={mat} position={[0, 0.08, -0.03]} rotation-x={-0.5} scale={[1.05, 0.9, 1.06]} castShadow>
           <sphereGeometry args={[0.3, 24, 14, 0, Math.PI * 2, 0, Math.PI * 0.5]} /><Ol />
         </mesh>
-        {/* quiff */}
-        {[[-0.1, 0.27, 0.13, 0.1], [0.02, 0.3, 0.15, 0.11], [0.13, 0.27, 0.12, 0.09]].map(([x, y, z, r], i) => (
-          <mesh key={i} material={mat} position={[x, y, z]} scale={[1.2, 0.8, 1]} castShadow><sphereGeometry args={[r, 12, 8]} /><Ol /></mesh>
+        {/* spiky messy tufts */}
+        {[[-0.13, 0.25, 0.14, 0.5, 0.0, 0.35], [0.0, 0.29, 0.16, 0.7, 0, 0], [0.13, 0.26, 0.13, 0.55, 0, -0.4], [-0.2, 0.2, 0.02, 0.1, 0, 0.8], [0.21, 0.21, 0.0, 0.1, 0, -0.8], [-0.07, 0.31, -0.05, -0.2, 0, 0.3], [0.08, 0.31, -0.06, -0.25, 0, -0.3]].map(([x, y, z, rx, ry, rz], i) => (
+          <mesh key={i} material={mat} position={[x, y, z]} rotation={[rx, ry, rz]} castShadow><coneGeometry args={[0.085, 0.2, 7]} /><Ol /></mesh>
         ))}
         {/* sideburns */}
         {[-1, 1].map((s) => <mesh key={s} material={mat} position={[s * 0.285, -0.02, 0.02]} scale={[0.35, 1, 0.7]}><sphereGeometry args={[0.08, 10, 8]} /></mesh>)}
@@ -243,8 +258,8 @@ function Hair({ style, mat }: { style: ToonLook['style']; mat: THREE.Material })
       </mesh>
       {/* side curtains of hair down to the shoulders */}
       {[-1, 1].map((s) => (
-        <mesh key={s} material={mat} position={[s * 0.27, -0.12, -0.03]} rotation-z={s * 0.08} scale={[0.5, 1, 0.8]} castShadow>
-          <capsuleGeometry args={[0.1, 0.32, 4, 10]} /><Ol />
+        <mesh key={s} material={mat} position={[s * 0.25, -0.1, -0.09]} rotation-z={s * 0.08} scale={[0.4, 1, 0.75]} castShadow>
+          <capsuleGeometry args={[0.1, 0.3, 4, 10]} /><Ol />
         </mesh>
       ))}
       <mesh material={mat} position={[0, -0.1, -0.17]} scale={[1.25, 1, 0.55]} castShadow><capsuleGeometry args={[0.2, 0.3, 4, 12]} /><Ol /></mesh>
@@ -317,8 +332,8 @@ export function ToonChar({ look, pose, place, hand, lHand, visible, headProps }:
     steam.current.children.forEach((c, i) => {
       const ph = ((t * 1.6 + i * 0.27) % 1)
       const s = (i % 2 ? 1 : -1)
-      c.position.set(s * (0.3 + ph * 0.35), 0.0 + ph * 0.5, -0.02)
-      c.scale.setScalar((0.05 + ph * 0.16) * rage)
+      c.position.set(s * (0.12 + ph * 0.28) + Math.sin(t * 7 + i) * 0.03, 0.28 + ph * 0.42, 0.02 - (i % 3) * 0.05)
+      c.scale.setScalar((0.04 + ph * 0.11) * rage * (1 - ph * 0.3))
     })
   })
 

@@ -125,7 +125,7 @@ function SofaRoom({ st, morning = false }: { st: Record<string, any>; morning?: 
   }), [morning])
   return (
     <group>
-      <Lights key1={morning ? '#fff4d6' : '#c9b8ff'} amb={morning ? 1.15 : 0.7} sky={morning ? '#fff1d6' : '#8f7cc9'} k={morning ? 1.6 : 0.8} />
+      <Lights key1={morning ? '#fff4d6' : '#ffd9b8'} amb={morning ? 1.15 : 0.85} sky={morning ? '#fff1d6' : '#ffd6c2'} ground={morning ? '#40304a' : '#2a2040'} k={morning ? 1.6 : 1.0} />
       <mesh material={m.wall} position={[0, 1.7, -1.3]} receiveShadow><planeGeometry args={[9, 3.4]} /></mesh>
       <mesh material={m.floor} rotation-x={-Math.PI / 2} receiveShadow><planeGeometry args={[9, 9]} /></mesh>
       <mesh material={m.rug} rotation-x={-Math.PI / 2} position={[0, 0.005, 0.5]} receiveShadow><circleGeometry args={[1.4, 32]} /></mesh>
@@ -226,7 +226,7 @@ function Super() {
 }
 
 function Car({ st }: { st: Record<string, any> }) {
-  const m = useMemo(() => ({ body: toon('#e8423f'), seat: toon('#2b2d3a'), dash: toon('#3a3d4d'), road: toon('#4b4f5c'), line: toon('#fff6c9'), lamp: toon('#2b2d3a'), bulb: toon('#fff6c9', { emissive: new THREE.Color('#fff2a8'), emissiveIntensity: 1 }), bld: ['#6c7a99', '#8a6c99', '#5d8a8a', '#99826c'].map((c) => toon(c)), palm: toon('#1a0b2e'), sun: toon('#ffe66d', { emissive: new THREE.Color('#ffb347'), emissiveIntensity: 0.6 }), glass: toon('#bfe6ff', { transparent: true, opacity: 0.15 }) }), [])
+  const m = useMemo(() => ({ body: toon('#e8423f'), seat: toon('#2b2d3a'), dash: toon('#6b7087'), road: toon('#4b4f5c'), line: toon('#fff6c9'), lamp: toon('#2b2d3a'), bulb: toon('#fff6c9', { emissive: new THREE.Color('#fff2a8'), emissiveIntensity: 1 }), bld: ['#6c7a99', '#8a6c99', '#5d8a8a', '#99826c'].map((c) => toon(c)), palm: toon('#1a0b2e'), sun: toon('#ffe66d', { emissive: new THREE.Color('#ffb347'), emissiveIntensity: 0.6 }), glass: toon('#bfe6ff', { transparent: true, opacity: 0.15 }) }), [])
   const world = useRef<THREE.Group>(null!), miami = useRef<THREE.Group>(null!), city = useRef<THREE.Group>(null!)
   useFrame(() => {
     const sp = st.miami ? 38 : 22
@@ -270,15 +270,15 @@ function Car({ st }: { st: Record<string, any> }) {
         {[-1, 1].map((s) => <mesh key={'a' + s} material={m.body} position={[s * 0.82, 1.2, 0.5]} rotation-x={-0.45}><boxGeometry args={[0.08, 0.9, 0.08]} /><Ol w={0.008} /></mesh>)}
         <RoundedBox args={[1.72, 0.08, 1.0]} radius={0.03} smoothness={2} position={[0, 1.6, -0.1]} material={m.body}><Ol w={0.01} /></RoundedBox>
         {/* seats */}
-        {[-0.38, 0.4].map((x) => <group key={x} position={[x, 0, -0.1]}>
+        {[-0.36, 0.36].map((x) => <group key={x} position={[x, 0, -0.1]}>
           <RoundedBox args={[0.55, 0.14, 0.5]} radius={0.04} smoothness={2} position={[0, 0.42, 0]} material={m.seat}><Ol w={0.006} /></RoundedBox>
           <RoundedBox args={[0.55, 0.75, 0.14]} radius={0.05} smoothness={2} position={[0, 0.82, -0.3]} rotation-x={-0.12} material={m.seat}><Ol w={0.006} /></RoundedBox>
         </group>)}
         {/* dashboard + wheel */}
-        <RoundedBox args={[1.6, 0.22, 0.3]} radius={0.06} smoothness={2} position={[0, 0.78, 0.62]} material={m.dash}><Ol w={0.008} /></RoundedBox>
-        <group position={[0.4, 0.95, 0.42]} rotation-x={-0.95}>
-          <mesh material={m.seat}><torusGeometry args={[0.17, 0.025, 8, 24]} /><Ol w={0.005} /></mesh>
-          <mesh material={m.seat} rotation-x={Math.PI / 2}><cylinderGeometry args={[0.035, 0.035, 0.05, 10]} /></mesh>
+        <RoundedBox args={[1.6, 0.16, 0.3]} radius={0.05} smoothness={2} position={[0, 0.66, 0.7]} material={m.dash}><Ol w={0.008} /></RoundedBox>
+        <group position={[0.36, 0.84, 0.4]} rotation-x={-1.15}>
+          <mesh material={m.dash}><torusGeometry args={[0.14, 0.022, 8, 24]} /><Ol w={0.005} /></mesh>
+          <mesh material={m.dash} rotation-x={Math.PI / 2}><cylinderGeometry args={[0.035, 0.035, 0.05, 10]} /></mesh>
         </group>
       </group>
     </group>
@@ -357,37 +357,42 @@ function Bath({ st }: { st: Record<string, any> }) {
 
 // ---------------------------------------------------------------- shots (head ≈ 1.21 sitting, 1.43 standing)
 const HS = 1.2, HU = 1.42
+const X = 0.34
 const sofaShots = (z = -0.35): Record<string, Shot> => ({
-  tv: { p: [0.75, 1.5, -1.15], l: [0.1, 0.95, 2.4], fov: 42, push: 0.35 },
-  two: { p: [0, HS + 0.1, 2.0], l: [0, HS - 0.12, z], fov: 40, push: 0.25 },
-  wide: { p: [1.9, 1.75, 1.7], l: [0, 0.85, -0.3], fov: 44, push: 0.2 },
-  dani: { p: [0.25, HS + 0.05, 1.05], l: [0.42, HS - 0.06, z], fov: 34, push: 0.12 },
-  lucia: { p: [-0.25, HS + 0.05, 1.05], l: [-0.42, HS - 0.08, z], fov: 34, push: 0.12 },
-  daniTight: { p: [0.42, HS + 0.05, 0.62], l: [0.42, HS, z], fov: 30, push: 0.08 },
-  luciaTight: { p: [-0.42, HS + 0.03, 0.62], l: [-0.42, HS - 0.03, z], fov: 30, push: 0.08 },
+  tv: { p: [1.45, 1.8, -1.0], l: [0.1, 0.9, 2.4], fov: 40, push: 0.35 },
+  two: { p: [0, HS + 0.15, z + 2.9], l: [0, HS - 0.25, z], fov: 46, push: 0.3 },
+  wide: { p: [1.9, 1.75, 1.7], l: [0, 0.85, -0.3], fov: 46, push: 0.2 },
+  dani: { p: [0.05, HS + 0.08, z + 1.6], l: [X, HS - 0.1, z], fov: 42, push: 0.15 },
+  lucia: { p: [-0.05, HS + 0.08, z + 1.6], l: [-X, HS - 0.12, z], fov: 42, push: 0.15 },
+  rage: { p: [X - 0.1, HS + 0.4, z + 2.1], l: [X, HS + 0.18, z], fov: 44, push: 0.3 },
+  daniTight: { p: [X - 0.05, HS + 0.06, z + 1.3], l: [X, HS - 0.02, z], fov: 46, push: 0.2 },
+  luciaTight: { p: [-X + 0.08, HS + 0.04, z + 1.3], l: [-X, HS - 0.05, z], fov: 46, push: 0.2 },
 })
 const SH: Record<string, Record<string, Shot>> = {
   sofa: sofaShots(),
   super: {
-    wide: { p: [0.4, 1.75, 2.6], l: [-0.1, 1.05, -0.2], fov: 44, push: 0.3 },
-    two: { p: [0.05, HU + 0.05, 2.0], l: [0.05, HU - 0.15, 0], fov: 40, push: 0.2 },
-    lucia: { p: [-0.05, HU + 0.02, 1.0], l: [-0.35, HU - 0.08, 0], fov: 34, push: 0.1 },
-    daniTight: { p: [0.5, HU + 0.03, 0.72], l: [0.5, HU, 0], fov: 30, push: 0.06 },
+    wide: { p: [0.5, 1.8, 2.9], l: [-0.05, 1.0, -0.2], fov: 46, push: 0.3 },
+    two: { p: [0.05, HU + 0.1, 2.8], l: [0.05, HU - 0.3, 0], fov: 46, push: 0.25 },
+    lucia: { p: [0.15, HU + 0.05, 1.5], l: [-0.35, HU - 0.12, 0], fov: 42, push: 0.15 },
+    daniTight: { p: [0.4, HU + 0.06, 1.35], l: [0.5, HU - 0.02, 0], fov: 46, push: 0.2 },
+    rage: { p: [0.35, HU + 0.4, 2.1], l: [0.5, HU + 0.18, 0], fov: 44, push: 0.3 },
+    dani: { p: [0.3, HU + 0.1, 1.7], l: [0.5, HU - 0.1, 0], fov: 42, push: 0.2 },
   },
   car: {
-    front: { p: [0, 1.32, 2.2], l: [0, 1.1, -0.1], fov: 40, push: 0.25 },
-    dani: { p: [0.2, 1.28, 1.25], l: [0.4, HS - 0.05, -0.1], fov: 32, push: 0.1 },
-    lucia: { p: [-0.15, 1.28, 1.25], l: [-0.38, HS - 0.07, -0.1], fov: 32, push: 0.1 },
-    daniTight: { p: [0.4, 1.28, 0.85], l: [0.4, HS, -0.1], fov: 28, push: 0.06 },
+    front: { p: [0, 1.4, 2.75], l: [0, 1.0, -0.1], fov: 46, push: 0.3 },
+    dani: { p: [0.15, 1.3, 1.5], l: [0.36, HS - 0.1, -0.1], fov: 42, push: 0.15 },
+    lucia: { p: [-0.1, 1.3, 1.5], l: [-0.36, HS - 0.12, -0.1], fov: 42, push: 0.15 },
+    rage: { p: [0.28, HS + 0.12, 2.0], l: [0.36, HS + 0.14, -0.1], fov: 44, push: 0.3 },
+    daniTight: { p: [0.33, 1.3, 1.2], l: [0.36, HS, -0.1], fov: 46, push: 0.15 },
   },
   kitchen: {
-    wide: { p: [0.5, 1.6, 2.3], l: [0, 1.1, -0.4], fov: 42, push: 0.35 },
-    daniTight: { p: [0.2, HU, 0.75], l: [0.1, HU - 0.03, 0], fov: 32, push: 0.06 },
+    wide: { p: [0.55, 1.65, 2.6], l: [0, 1.05, -0.4], fov: 46, push: 0.4 },
+    daniTight: { p: [0.3, HU + 0.05, 1.3], l: [0.1, HU - 0.05, 0], fov: 46, push: 0.15 },
   },
   bath: {
-    two: { p: [0.15, 1.35, 1.9], l: [-0.2, 1.0, -0.4], fov: 42, push: 0.25 },
-    daniTight: { p: [0.05, HS + 0.05, 0.3], l: [0, HS, -0.45], fov: 32, push: 0.06 },
-    door: { p: [0.45, 1.45, 1.2], l: [-0.95, HU - 0.05, 0.3], fov: 36, push: 0.1 },
+    two: { p: [0.2, 1.4, 2.3], l: [-0.25, 0.95, -0.4], fov: 46, push: 0.3 },
+    daniTight: { p: [0.08, HS + 0.06, 0.95], l: [0, HS - 0.04, -0.45], fov: 46, push: 0.15 },
+    door: { p: [0.75, 1.5, 1.7], l: [-0.95, HU - 0.15, 0.3], fov: 40, push: 0.15 },
   },
   morning: sofaShots(),
 }
@@ -395,23 +400,23 @@ const SH: Record<string, Record<string, Shot>> = {
 // ---------------------------------------------------------------- beats
 const pad = B.pad
 const beats: ToonSpec['beats'] = {
-  l01: { cut: 'tv', d: sit({ eye: 1.2, sparkle: 1, smile: 0.6, tears: 0.25, brow: 0.6, ang: -0.5, open: 1 }, { ...pad, pitch: 0.05 }), l: sit(FX.calm, { yaw: 0.2, pitch: 0.3 }) },
+  l01: { cut: 'tv', cut2: [2.6, 'dani'], d: sit({ eye: 1.2, sparkle: 1, smile: 0.6, tears: 0.25, brow: 0.6, ang: -0.5, open: 1 }, { ...pad, pitch: 0.05 }), l: sit(FX.calm, { yaw: 0.2, pitch: 0.3 }) },
   l02: { cut: 'daniTight', zoom: 0.8, d: sit(FX.cry, { ...pad, shake: 0.6, pitch: -0.1 }), shake: 0.3 },
   l03: { cut: 'lucia', l: sit(FX.sweet, { yaw: 0.55, tilt: -0.15, lean: 0.05, roll: -0.08 }), d: sit(FX.cryOpen, { ...pad }) },
   l04: { cut: 'daniTight', zoom: 0.7, lines: 1, flash: '#ff3b30', shake: 0.6, d: sit(FX.angry, { ...pad, head: 1.15, shake: 0.5, yaw: -0.3 }), dMid: sit({ ...FX.scream, rage: 0.4 }, { ...pad, head: 1.25, shake: 0.8, yaw: -0.2 }) },
   l05: { cut: 'two', d: sit(FX.fake, { lSh: [2.7, 0.4], lEl: -0.3, rSh: [1.0, -0.3], rEl: -1.1, head: 1.05 }), l: sit(FX.joy, { yaw: 0.4, ...B.armsUp }) },
   l06: { cut: 'wide', d: stand(FX.dead, { lean: 0.3, pitch: 0.25, squash: -0.1, lSh: [0.05, 0.05], lEl: 0, rSh: [0.05, 0.05], rEl: 0 }), l: stand(FX.doubt, { ...B.hold2, yaw: -0.15, pitch: 0.25 }) },
   l07: { cut: 'lucia', l: stand({ ...FX.doubt, lx: 0.7 }, { ...B.hold2, lSh: [1.6, 0.2], lEl: -0.6, yaw: 0.55, tilt: 0.2 }), lMid: stand({ ...FX.sweet, lx: 0.7 }, { ...B.hold2, yaw: 0.55, tilt: -0.2 }) },
-  l08: { cut: 'daniTight', zoom: 0.65, lines: 1, flash: '#ffd400', shake: 0.9, d: stand({ ...FX.scream, rage: 0.6 }, { ...B.fists, head: 1.3, shake: 0.9, squash: 0.08 }) },
+  l08: { cut: 'rage', zoom: 0.65, lines: 1, flash: '#ffd400', shake: 0.9, d: stand({ ...FX.scream, rage: 0.6 }, { ...B.fists, head: 1.3, shake: 0.9, squash: 0.08 }) },
   l09: { cut: 'two', d: stand(FX.fake, { ...B.point, yaw: -0.4, head: 1.05 }), l: stand(FX.hearts, { ...B.hold2, yaw: 0.5 }) },
   l10: { cut: 'front', flash: '#ff4fa3', d: sit({ ...FX.smug, lx: 0, ang: 0.5 }, { ...B.wheel, lean: 0.12, shake: 0.2 }), l: sit(FX.calm, { yaw: 0.1, pitch: 0.2 }), shake: 0.35 },
   l11: { cut: 'lucia', l: sit(FX.suspicious, { yaw: 0.6, tilt: 0.12, ...B.hips }), d: sit(FX.focus, { ...B.wheel }) },
   l12: { cut: 'dani', d: sit({ open: 1, eye: 1.2, smile: 0.5, brow: 0.7, ang: -0.5, ly: -0.7, lx: 0.4, sweat: 1 }, { ...B.wheel, yaw: -0.25 }) },
-  l13: { cut: 'daniTight', zoom: 0.6, lines: 1, flash: '#ff2d2d', shake: 1, d: sit(FX.rage, { ...B.wheel, head: 1.4, shake: 1 }) },
+  l13: { cut: 'rage', zoom: 0.6, lines: 1, flash: '#ff2d2d', shake: 1, d: sit(FX.rage, { ...B.wheel, head: 1.4, shake: 1 }) },
   l14: { cut: 'wide', d: stand({ open: 0.45, smile: 0.2, ang: 0.35, bags: 0.7, vein: 0.5, lx: -0.6 }, { ...B.hold, yaw: -0.4, lean: 0.05 }), dMid: stand({ open: 0.5, smile: 0.5, teeth: 1, ang: 0.4, bags: 0.7, vein: 0.8 }, { ...B.hold, yaw: 0.1 }) },
   l15: { cut: 'dani', d: sit(FX.joy, { ...pad, shake: 0.4, head: 1.08 }), l: sit(FX.calm, { yaw: 0.2 }) },
   l16: { cut: 'lucia', l: sit({ ...FX.sweet, blush: 1 }, { yaw: 0.5, roll: -0.12, lean: 0.06, tilt: -0.25, lSh: [1.0, -0.6], lEl: -1.2 }), d: sit({ ...FX.joy, mouth: 0.3 }, { ...pad }), dAt: 0, lAt: 0 },
-  l17: { cut: 'daniTight', zoom: 0.6, lines: 1, flash: '#ff0000', shake: 1, d: sit({ ...FX.angry, rage: 0.8 }, { ...pad, head: 1.25, shake: 0.8 }), dMid: sit(FX.rage, { ...pad, head: 1.45, shake: 1.2, squash: 0.06 }) },
+  l17: { cut: 'rage', zoom: 0.6, lines: 1, flash: '#ff0000', shake: 1, d: sit({ ...FX.angry, rage: 0.8 }, { ...pad, head: 1.25, shake: 0.8 }), dMid: sit(FX.rage, { ...pad, head: 1.45, shake: 1.2, squash: 0.06 }) },
   l18: { cut: 'two', d: sit({ ...FX.fake, tears: 0.6, vein: 0 }, { head: 1.0, yaw: -0.3 }), l: sit(FX.hearts, { yaw: 0.45, roll: -0.12, tilt: -0.2 }) },
   l19: { cut: 'two', d: sit(FX.sneaky, { ...pad, lean: 0.12, yaw: 0.35, pitch: 0.1 }) },
   l20: { cut: 'door', l: stand(FX.sleepy, { yaw: 0.2, tilt: 0.1, ...B.hips }) },
@@ -423,13 +428,13 @@ const beats: ToonSpec['beats'] = {
 
 // ---------------------------------------------------------------- scenes
 const scenes: ToonSpec['scenes'] = [
-  { id: 'sofa', from: 'l01', bg: '#1b1230', Set: ({ st }) => <SofaRoom st={st} />, dani: { p: [0.42, 0, -0.35], ry: 0 }, lucia: { p: [-0.42, 0, -0.35], ry: 0 }, shots: SH.sofa },
+  { id: 'sofa', from: 'l01', bg: '#1b1230', Set: ({ st }) => <SofaRoom st={st} />, dani: { p: [X, 0, -0.35], ry: 0 }, lucia: { p: [-X, 0, -0.35], ry: 0 }, shots: SH.sofa },
   { id: 'super', from: 'l06', bg: '#fff3d6', Set: () => <Super />, dani: { p: [0.5, 0, 0], ry: -0.2 }, lucia: { p: [-0.35, 0, 0], ry: -0.45 }, shots: SH.super },
-  { id: 'car', from: 'l10', bg: '#8fc6ff', Set: ({ st }) => <Car st={st} />, dani: { p: [0.4, 0.02, -0.1], ry: 0 }, lucia: { p: [-0.38, 0.02, -0.1], ry: 0 }, shots: SH.car },
+  { id: 'car', from: 'l10', bg: '#8fc6ff', Set: ({ st }) => <Car st={st} />, dani: { p: [0.36, 0.02, -0.1], ry: 0 }, lucia: { p: [-0.36, 0.02, -0.1], ry: 0 }, shots: SH.car },
   { id: 'kitchen', from: 'l14', bg: '#fff3d6', Set: ({ st }) => <Kitchen st={st} />, dani: { p: [0.1, 0, 0], ry: -0.3 }, shots: SH.kitchen },
-  { id: 'sofa2', from: 'l15', bg: '#1b1230', Set: ({ st }) => <SofaRoom st={st} />, dani: { p: [0.42, 0, -0.35], ry: 0 }, lucia: { p: [-0.42, 0, -0.35], ry: 0 }, shots: SH.sofa },
+  { id: 'sofa2', from: 'l15', bg: '#1b1230', Set: ({ st }) => <SofaRoom st={st} />, dani: { p: [X, 0, -0.35], ry: 0 }, lucia: { p: [-X, 0, -0.35], ry: 0 }, shots: SH.sofa },
   { id: 'bath', from: 'l19', bg: '#10142a', Set: ({ st }) => <Bath st={st} />, dani: { p: [0, 0.0, -0.45], ry: 0 }, lucia: { p: [-0.95, 0, 0.3], ry: Math.PI / 2 }, shots: SH.bath },
-  { id: 'morning', from: 'l23', bg: '#ffe0b8', Set: ({ st }) => <SofaRoom st={st} morning />, dani: { p: [0.42, 0, -0.35], ry: 0 }, lucia: { p: [-0.42, 0, -0.35], ry: 0 }, shots: SH.morning },
+  { id: 'morning', from: 'l23', bg: '#ffe0b8', Set: ({ st }) => <SofaRoom st={st} morning />, dani: { p: [X, 0, -0.35], ry: 0 }, lucia: { p: [-X, 0, -0.35], ry: 0 }, shots: SH.morning },
 ]
 
 const spec: ToonSpec = {
@@ -452,6 +457,7 @@ const spec: ToonSpec = {
   }),
   frame: (t, a, l, st, f) => {
     st.miami = t >= a('l10') - 0.1 && t < a('l11') - 0.1
+    st.bg = st.miami ? '#ff8fb8' : undefined
     st.tv = t >= a('l18') && t < a('l19') ? 'film' : st.scene === 'morning' ? 'game' : 'start'
     st.yogs = 37 * seg(t, a('l14'), a('l14') + l('l14').dur * 0.85)
     st.door = seg(t, a('l20') - 0.4, a('l20') + 0.1)

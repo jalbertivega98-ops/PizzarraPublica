@@ -49,6 +49,10 @@ jobs:
           BIBLIOTECA: ${{ inputs.biblioteca }}
           MOTOR: ${{ inputs.motor }}
         run: |
+          case "$STORYBOARDS" in pizzaville-pruebas:*)
+            for f in ${STORYBOARDS#pizzaville-pruebas:}; do python3 ../pizzaville/voz/pruebas_voz.py $f; done
+            exit 0;;
+          esac
           case "$STORYBOARDS" in pizzaville-eleven:*)
             for f in ${STORYBOARDS#pizzaville-eleven:}; do python3 ../pizzaville/voz/voz_eleven.py $f $VOICE; done
             exit 0;;

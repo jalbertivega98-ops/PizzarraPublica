@@ -60,6 +60,10 @@ jobs:
             for f in ${STORYBOARDS#pizzaville-mono:}; do python3 ../pizzaville/voz/mono_voz.py $f; done
             exit 0;;
           esac
+          case "$STORYBOARDS" in pizzaville-voces3:*)
+            for f in ${STORYBOARDS#pizzaville-voces3:}; do python3 ../pizzaville/voz/voces3.py $f; done
+            exit 0;;
+          esac
           case "$STORYBOARDS" in pizzaville-pruebas:*)
             for f in ${STORYBOARDS#pizzaville-pruebas:}; do python3 ../pizzaville/voz/pruebas_voz.py $f; done
             exit 0;;

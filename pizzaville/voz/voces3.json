@@ -1,0 +1,590 @@
+{
+ "voces": {
+  "olivia": "3nShTcrliYQyNpVzUwha",
+  "ines": "nH81SxhcPaX89XdDlp2m",
+  "mara": "iMELG2LI8E5GYtkXgAtd",
+  "sofia": "eZxqQzb5CuYo3Kl6EXfZ",
+  "matilda": "dX2UjlDzOz7RY8kmMXZo",
+  "valeria": "SzSUM9aqTucCylaROOmf",
+  "clara": "7iHhVsmCX3pJd6SuIPjX",
+  "lauli": "gsZnHdnP18WS4pk0OHqd",
+  "jimena": "7k6n1AfTEk6nYLMpXMOM",
+  "violeta": "jQvo2VZEqNV6YXEBghzl",
+  "javi": "gQLV6zBnMa9rDESaeDz9",
+  "diego": "WsvUasyBVDfzPhE0B6jC",
+  "martin": "j1FA2WmkBpQd2hSw1caE",
+  "marco": "QdeV7TsH9psct2D4UdTk",
+  "rubensito": "xx2kHcDBInz34YT5TKkB",
+  "angel": "xVhUPkItswbrR3ZR1iTa",
+  "nil": "xuWkhjhJVDpt7iU0oRDd",
+  "david": "LG5CpCuzWTE7pUsAnHo2",
+  "rafa": "4LrktOMtQ8IXUJhTLQIX",
+  "daniel": "JraADuNecyqRJZ5XGhgO"
+ },
+ "trabajos": [
+  {
+   "id": "1_ella/ella01_olivia",
+   "tipo": "tts",
+   "voz": "olivia",
+   "texto": "¿En serio? ¿Has puesto la lavadora con mi jersey blanco? ... No, no, tranquilo. Si a mí el rosa me encanta. Mañana me lo pongo y ya está.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "1_ella/ella02_ines",
+   "tipo": "tts",
+   "voz": "ines",
+   "texto": "¿En serio? ¿Has puesto la lavadora con mi jersey blanco? ... No, no, tranquilo. Si a mí el rosa me encanta. Mañana me lo pongo y ya está.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "1_ella/ella03_mara",
+   "tipo": "tts",
+   "voz": "mara",
+   "texto": "¿En serio? ¿Has puesto la lavadora con mi jersey blanco? ... No, no, tranquilo. Si a mí el rosa me encanta. Mañana me lo pongo y ya está.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "1_ella/ella04_sofia",
+   "tipo": "tts",
+   "voz": "sofia",
+   "texto": "¿En serio? ¿Has puesto la lavadora con mi jersey blanco? ... No, no, tranquilo. Si a mí el rosa me encanta. Mañana me lo pongo y ya está.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "1_ella/ella05_matilda",
+   "tipo": "tts",
+   "voz": "matilda",
+   "texto": "¿En serio? ¿Has puesto la lavadora con mi jersey blanco? ... No, no, tranquilo. Si a mí el rosa me encanta. Mañana me lo pongo y ya está.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "1_ella/ella06_valeria",
+   "tipo": "tts",
+   "voz": "valeria",
+   "texto": "¿En serio? ¿Has puesto la lavadora con mi jersey blanco? ... No, no, tranquilo. Si a mí el rosa me encanta. Mañana me lo pongo y ya está.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "1_ella/ella07_clara",
+   "tipo": "tts",
+   "voz": "clara",
+   "texto": "¿En serio? ¿Has puesto la lavadora con mi jersey blanco? ... No, no, tranquilo. Si a mí el rosa me encanta. Mañana me lo pongo y ya está.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "1_ella/ella08_lauli",
+   "tipo": "tts",
+   "voz": "lauli",
+   "texto": "¿En serio? ¿Has puesto la lavadora con mi jersey blanco? ... No, no, tranquilo. Si a mí el rosa me encanta. Mañana me lo pongo y ya está.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "1_ella/ella09_jimena",
+   "tipo": "tts",
+   "voz": "jimena",
+   "texto": "¿En serio? ¿Has puesto la lavadora con mi jersey blanco? ... No, no, tranquilo. Si a mí el rosa me encanta. Mañana me lo pongo y ya está.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "1_ella/ella10_violeta",
+   "tipo": "tts",
+   "voz": "violeta",
+   "texto": "¿En serio? ¿Has puesto la lavadora con mi jersey blanco? ... No, no, tranquilo. Si a mí el rosa me encanta. Mañana me lo pongo y ya está.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "2_el/el01_javi",
+   "tipo": "tts",
+   "voz": "javi",
+   "texto": "A ver, yo no he dicho que no. He dicho que ahora no. Que no es lo mismo. ... Vale, sí. Es lo mismo. Pero dicho con más cariño.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "2_el/el02_diego",
+   "tipo": "tts",
+   "voz": "diego",
+   "texto": "A ver, yo no he dicho que no. He dicho que ahora no. Que no es lo mismo. ... Vale, sí. Es lo mismo. Pero dicho con más cariño.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "2_el/el03_martin",
+   "tipo": "tts",
+   "voz": "martin",
+   "texto": "A ver, yo no he dicho que no. He dicho que ahora no. Que no es lo mismo. ... Vale, sí. Es lo mismo. Pero dicho con más cariño.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "2_el/el04_marco",
+   "tipo": "tts",
+   "voz": "marco",
+   "texto": "A ver, yo no he dicho que no. He dicho que ahora no. Que no es lo mismo. ... Vale, sí. Es lo mismo. Pero dicho con más cariño.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "2_el/el05_rubensito",
+   "tipo": "tts",
+   "voz": "rubensito",
+   "texto": "A ver, yo no he dicho que no. He dicho que ahora no. Que no es lo mismo. ... Vale, sí. Es lo mismo. Pero dicho con más cariño.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "2_el/el06_angel",
+   "tipo": "tts",
+   "voz": "angel",
+   "texto": "A ver, yo no he dicho que no. He dicho que ahora no. Que no es lo mismo. ... Vale, sí. Es lo mismo. Pero dicho con más cariño.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "2_el/el07_nil",
+   "tipo": "tts",
+   "voz": "nil",
+   "texto": "A ver, yo no he dicho que no. He dicho que ahora no. Que no es lo mismo. ... Vale, sí. Es lo mismo. Pero dicho con más cariño.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "2_el/el08_david",
+   "tipo": "tts",
+   "voz": "david",
+   "texto": "A ver, yo no he dicho que no. He dicho que ahora no. Que no es lo mismo. ... Vale, sí. Es lo mismo. Pero dicho con más cariño.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "2_el/el09_rafa",
+   "tipo": "tts",
+   "voz": "rafa",
+   "texto": "A ver, yo no he dicho que no. He dicho que ahora no. Que no es lo mismo. ... Vale, sí. Es lo mismo. Pero dicho con más cariño.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "2_el/el10_daniel",
+   "tipo": "tts",
+   "voz": "daniel",
+   "texto": "A ver, yo no he dicho que no. He dicho que ahora no. Que no es lo mismo. ... Vale, sí. Es lo mismo. Pero dicho con más cariño.",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "3_interpretaciones/i1_natural_javi_sofia",
+   "tipo": "dialogo",
+   "lineas": [
+    [
+     "sofia",
+     "Oye. ¿Tú te acuerdas de lo que te dije el viernes?"
+    ],
+    [
+     "javi",
+     "... Sí."
+    ],
+    [
+     "sofia",
+     "¿El qué?"
+    ],
+    [
+     "javi",
+     "Lo del viernes."
+    ],
+    [
+     "sofia",
+     "No tienes ni idea."
+    ],
+    [
+     "javi",
+     "Ni idea, no."
+    ],
+    [
+     "sofia",
+     "Que venía mi madre a comer."
+    ],
+    [
+     "javi",
+     "... ¿Hoy?"
+    ],
+    [
+     "sofia",
+     "Hoy."
+    ],
+    [
+     "javi",
+     "Vale. ¿Y a qué hora viene?"
+    ],
+    [
+     "sofia",
+     "Está subiendo en el ascensor."
+    ],
+    [
+     "javi",
+     "... Genial."
+    ]
+   ],
+   "estabilidad": 0.5
+  },
+  {
+   "id": "3_interpretaciones/i2_ella_seca_martin_matilda",
+   "tipo": "dialogo",
+   "lineas": [
+    [
+     "matilda",
+     "Oye. ¿Tú te acuerdas de lo que te dije el viernes?"
+    ],
+    [
+     "martin",
+     "... Sí."
+    ],
+    [
+     "matilda",
+     "¿El qué?"
+    ],
+    [
+     "martin",
+     "Lo del viernes."
+    ],
+    [
+     "matilda",
+     "[flatly] No tienes ni idea."
+    ],
+    [
+     "martin",
+     "Ni idea, no."
+    ],
+    [
+     "matilda",
+     "Que venía mi madre a comer."
+    ],
+    [
+     "martin",
+     "... ¿Hoy?"
+    ],
+    [
+     "matilda",
+     "Hoy."
+    ],
+    [
+     "martin",
+     "Vale. ¿Y a qué hora viene?"
+    ],
+    [
+     "matilda",
+     "[deadpan] Está subiendo en el ascensor."
+    ],
+    [
+     "martin",
+     "[resigned] ... Genial."
+    ]
+   ],
+   "estabilidad": 0.5
+  },
+  {
+   "id": "3_interpretaciones/i3_ella_pasota_marco_valeria",
+   "tipo": "dialogo",
+   "lineas": [
+    [
+     "valeria",
+     "[casually] Oye. ¿Tú te acuerdas de lo que te dije el viernes?"
+    ],
+    [
+     "marco",
+     "... Sí."
+    ],
+    [
+     "valeria",
+     "¿El qué?"
+    ],
+    [
+     "marco",
+     "Lo del viernes."
+    ],
+    [
+     "valeria",
+     "No tienes ni idea."
+    ],
+    [
+     "marco",
+     "Ni idea, no."
+    ],
+    [
+     "valeria",
+     "Que venía mi madre a comer."
+    ],
+    [
+     "marco",
+     "... ¿Hoy?"
+    ],
+    [
+     "valeria",
+     "[indifferent] Hoy."
+    ],
+    [
+     "marco",
+     "Vale. ¿Y a qué hora viene?"
+    ],
+    [
+     "valeria",
+     "Está subiendo en el ascensor."
+    ],
+    [
+     "marco",
+     "[sighs] ... Genial."
+    ]
+   ],
+   "estabilidad": 0.5
+  },
+  {
+   "id": "3_interpretaciones/i4_el_resignado_rubensito_clara",
+   "tipo": "dialogo",
+   "lineas": [
+    [
+     "clara",
+     "Oye. ¿Tú te acuerdas de lo que te dije el viernes?"
+    ],
+    [
+     "rubensito",
+     "[hesitant] ... Sí."
+    ],
+    [
+     "clara",
+     "¿El qué?"
+    ],
+    [
+     "rubensito",
+     "Lo del viernes."
+    ],
+    [
+     "clara",
+     "No tienes ni idea."
+    ],
+    [
+     "rubensito",
+     "Ni idea, no."
+    ],
+    [
+     "clara",
+     "Que venía mi madre a comer."
+    ],
+    [
+     "rubensito",
+     "[slowly] ... ¿Hoy?"
+    ],
+    [
+     "clara",
+     "Hoy."
+    ],
+    [
+     "rubensito",
+     "Vale. ¿Y a qué hora viene?"
+    ],
+    [
+     "clara",
+     "Está subiendo en el ascensor."
+    ],
+    [
+     "rubensito",
+     "[resigned, quietly] ... Genial."
+    ]
+   ],
+   "estabilidad": 0.5
+  },
+  {
+   "id": "3_interpretaciones/i5_ella_incredula_diego_ines",
+   "tipo": "dialogo",
+   "lineas": [
+    [
+     "ines",
+     "Oye. ¿Tú te acuerdas de lo que te dije el viernes?"
+    ],
+    [
+     "diego",
+     "... Sí."
+    ],
+    [
+     "ines",
+     "[skeptical] ¿El qué?"
+    ],
+    [
+     "diego",
+     "Lo del viernes."
+    ],
+    [
+     "ines",
+     "[annoyed] No tienes ni idea."
+    ],
+    [
+     "diego",
+     "Ni idea, no."
+    ],
+    [
+     "ines",
+     "Que venía mi madre a comer."
+    ],
+    [
+     "diego",
+     "... ¿Hoy?"
+    ],
+    [
+     "ines",
+     "Hoy."
+    ],
+    [
+     "diego",
+     "[trying to sound calm] Vale. ¿Y a qué hora viene?"
+    ],
+    [
+     "ines",
+     "Está subiendo en el ascensor."
+    ],
+    [
+     "diego",
+     "... Genial."
+    ]
+   ],
+   "estabilidad": 0.5
+  },
+  {
+   "id": "4_imitacion/im1_javi_solo_puntuacion",
+   "tipo": "tts",
+   "voz": "javi",
+   "texto": "Estoy en el sofá, tranquilo. Y viene ella y me dice: «Es que tú nunca me escuuuchas, ¿eh? Nun-ca.» ... Y yo: «Perdona, ¿qué?»",
+   "estabilidad": 0.5
+  },
+  {
+   "id": "4_imitacion/im2_javi_burlon",
+   "tipo": "tts",
+   "voz": "javi",
+   "texto": "Estoy en el sofá, tranquilo. Y viene ella y me dice: [mocking tone] «Es que tú nunca me escuchas, ¿eh? Nunca.» [normal, dry] ... Y yo: «Perdona, ¿qué?»",
+   "estabilidad": 0.0
+  },
+  {
+   "id": "4_imitacion/im3_martin_burlon",
+   "tipo": "tts",
+   "voz": "martin",
+   "texto": "Estoy en el sofá, tranquilo. Y viene ella y me dice: [sarcastic, mocking her] «Es que tú nunca me escuchas, ¿eh? Nunca.» [deadpan] ... Y yo: «Perdona, ¿qué?»",
+   "estabilidad": 0.0
+  },
+  {
+   "id": "4_imitacion/im4_marco_dialogo_misma_voz",
+   "tipo": "dialogo",
+   "lineas": [
+    [
+     "marco",
+     "Estoy en el sofá, tranquilo. Y viene ella y me dice:"
+    ],
+    [
+     "marco",
+     "[mocking, exaggerated whiny tone] Es que tú nunca me escuchas, ¿eh? Nunca."
+    ],
+    [
+     "marco",
+     "[back to normal, dry] ... Y yo: Perdona, ¿qué?"
+    ]
+   ]
+  },
+  {
+   "id": "5_conversacion/conv_A_javi_sofia",
+   "tipo": "dialogo",
+   "lineas": [
+    [
+     "sofia",
+     "¿Has visto mis llaves?"
+    ],
+    [
+     "javi",
+     "Donde las dejas siempre."
+    ],
+    [
+     "sofia",
+     "Ahí no están."
+    ],
+    [
+     "javi",
+     "Pues entonces no las dejas siempre ahí."
+    ],
+    [
+     "sofia",
+     "[unamused] Muy gracioso. ... ¿Me ayudas o no?"
+    ],
+    [
+     "javi",
+     "Te ayudo. ¿Has mirado en el bolso?"
+    ],
+    [
+     "sofia",
+     "[annoyed] Sí. Obviamente he mirado en el bolso."
+    ],
+    [
+     "javi",
+     "[muttering, mocking her] «Obviamente he mirado en el bolso»..."
+    ],
+    [
+     "sofia",
+     "¿Qué has dicho?"
+    ],
+    [
+     "javi",
+     "Nada. Que qué bolso más bonito."
+    ],
+    [
+     "sofia",
+     "... [quietly] Estaban en el bolso."
+    ],
+    [
+     "javi",
+     "[sighs] Ya."
+    ]
+   ],
+   "estabilidad": 0.5
+  },
+  {
+   "id": "5_conversacion/conv_B_martin_matilda",
+   "tipo": "dialogo",
+   "lineas": [
+    [
+     "matilda",
+     "¿Has visto mis llaves?"
+    ],
+    [
+     "martin",
+     "Donde las dejas siempre."
+    ],
+    [
+     "matilda",
+     "Ahí no están."
+    ],
+    [
+     "martin",
+     "Pues entonces no las dejas siempre ahí."
+    ],
+    [
+     "matilda",
+     "[unamused] Muy gracioso. ... ¿Me ayudas o no?"
+    ],
+    [
+     "martin",
+     "Te ayudo. ¿Has mirado en el bolso?"
+    ],
+    [
+     "matilda",
+     "[annoyed] Sí. Obviamente he mirado en el bolso."
+    ],
+    [
+     "martin",
+     "[muttering, mocking her] «Obviamente he mirado en el bolso»..."
+    ],
+    [
+     "matilda",
+     "¿Qué has dicho?"
+    ],
+    [
+     "martin",
+     "Nada. Que qué bolso más bonito."
+    ],
+    [
+     "matilda",
+     "... [quietly] Estaban en el bolso."
+    ],
+    [
+     "martin",
+     "[sighs] Ya."
+    ]
+   ],
+   "estabilidad": 0.5
+  }
+ ]
+}

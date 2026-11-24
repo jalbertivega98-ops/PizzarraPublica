@@ -63,18 +63,25 @@ def main():
             out = os.path.join(OUT, c["id"] + ".mp3")
             if os.path.exists(out): say("ya existe", c["id"]); continue
             say("==", c["id"], c["motor"])
+            try: total += uno(cfg, grupo, c, out)
+            except Exception as e: say("  EXCEPCIÓN", repr(e))
+    say("TOTAL caracteres ElevenLabs:", total)
+    open(os.path.join(OUT, "informe.txt"), "a").write("\n".join(log) + "\n")
+
+def uno(cfg, grupo, c, out):
+    if True:
+        if True:
             if c["motor"] == "edge":
                 ref = "es-ES-ElviraNeural" if grupo == "masculinas" else "es-ES-AlvaroNeural"
                 asyncio.run(edge(cfg, c["voice"] if grupo == "masculinas" else ref, ref if grupo == "masculinas" else c["voice"], out))
-                say("  ok (gratis)"); continue
+                say("  ok (gratis)"); return 0
             v = c.get("voice")
             if c["motor"] == "diseno":
                 v = design(c); say("  voz diseñada:", v)
-                if not v: continue
+                if not v: return 0
             el, ella = (v, cfg["ref_ella"]) if grupo == "masculinas" else (cfg["ref_el"], v)
-            n = dialogue(cfg, el, ella, out); total += n
+            n = dialogue(cfg, el, ella, out)
             say("  ok" if n else "  FALLÓ", n, "caracteres")
-    say("TOTAL caracteres ElevenLabs (sin contar el diseño de voz):", total)
-    open(os.path.join(OUT, "informe.txt"), "a").write("\n".join(log) + "\n")
+            return n
 
 main()

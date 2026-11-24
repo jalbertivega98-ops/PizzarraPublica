@@ -1,29 +1,111 @@
 {
  "notes": "Pruebas de voz 24-11-2026 (dirección nueva de Cosas de pareja). Mismo diálogo para todas. Cada voz masculina va con la misma chica de referencia y cada voz femenina con el mismo chico de referencia, para juzgar el contraste.",
  "dialogo": [
-  {"who": "ella", "text": "Oye... ¿tú sabes qué día es hoy?", "tag": "[casual, not looking up from her phone]"},
-  {"who": "el", "text": "...Martes.", "tag": "[long pause] [flat, unsure]"},
-  {"who": "ella", "text": "Ajá. ¿Y qué más?", "tag": "[dry, patient]"},
-  {"who": "el", "text": "Martes... importante.", "tag": "[pause] [slowly, buying time]"},
-  {"who": "ella", "text": "Hoy hace un año que vivimos juntos.", "tag": "[sighs] [deadpan]"},
-  {"who": "el", "text": "Ya. Por eso digo importante.", "tag": "[calm, totally serious]"},
-  {"who": "ella", "text": "¿Ah, sí? ¿Y qué me has comprado?", "tag": "[short laugh, not buying it]"},
-  {"who": "el", "text": "...Una vida a mi lado.", "tag": "[pause] [quietly, with fake dignity]"}
+  {
+   "who": "ella",
+   "text": "Oye... ¿tú sabes qué día es hoy?",
+   "tag": "[casual, not looking up from her phone]"
+  },
+  {
+   "who": "el",
+   "text": "...Martes.",
+   "tag": "[long pause] [flat, unsure]"
+  },
+  {
+   "who": "ella",
+   "text": "Ajá. ¿Y qué más?",
+   "tag": "[dry, patient]"
+  },
+  {
+   "who": "el",
+   "text": "Martes... importante.",
+   "tag": "[pause] [slowly, buying time]"
+  },
+  {
+   "who": "ella",
+   "text": "Hoy hace un año que vivimos juntos.",
+   "tag": "[sighs] [deadpan]"
+  },
+  {
+   "who": "el",
+   "text": "Ya. Por eso digo importante.",
+   "tag": "[calm, totally serious]"
+  },
+  {
+   "who": "ella",
+   "text": "¿Ah, sí? ¿Y qué me has comprado?",
+   "tag": "[short laugh, not buying it]"
+  },
+  {
+   "who": "el",
+   "text": "...Una vida a mi lado.",
+   "tag": "[pause] [quietly, with fake dignity]"
+  }
  ],
- "ref_ella": "eZxqQzb5CuYo3Kl6EXfZ",
- "ref_el": "gQLV6zBnMa9rDESaeDz9",
+ "ref_ella": "3nShTcrliYQyNpVzUwha",
+ "ref_el": "WsvUasyBVDfzPhE0B6jC",
  "masculinas": [
-  {"id": "M1_javi", "voice": "gQLV6zBnMa9rDESaeDz9", "motor": "eleven"},
-  {"id": "M2_david", "voice": "Nh2zY9kknu6z4pZy6FhD", "motor": "eleven"},
-  {"id": "M3_osborne", "voice": "Vpv1YgvVd6CHIzOTiTt8", "motor": "eleven"},
-  {"id": "M4_disenada_nacho", "motor": "diseno", "nombre": "Nacho (Cosas de pareja)", "descripcion": "Hombre español de unos 32 años, de Madrid. Voz algo grave y un poco ronca, natural, nada de locutor. Habla bajito y despacio, tono seco, cansado y pasota, como quien ya se ha rendido pero con humor. Castellano coloquial de España. Grabación cercana, sin eco."},
-  {"id": "M5_microsoft_alvaro", "voice": "es-ES-AlvaroNeural", "motor": "edge"}
+  {
+   "id": "M1_javi",
+   "voice": "gQLV6zBnMa9rDESaeDz9",
+   "motor": "eleven",
+   "nota": "Javi - Conversational & Authentic (biblioteca)"
+  },
+  {
+   "id": "M2_diego",
+   "voice": "WsvUasyBVDfzPhE0B6jC",
+   "motor": "eleven",
+   "nota": "Diego - natural, sin tono de locutor (biblioteca)"
+  },
+  {
+   "id": "M3_gaspar",
+   "voice": "nMvZRihyU408YNgNXHuX",
+   "motor": "eleven",
+   "nota": "Gaspar - ronco, gruñón, sarcástico (biblioteca)"
+  },
+  {
+   "id": "M4_nacho_disenada",
+   "voice": "KlJZMelZH6lWLRWUVERD",
+   "motor": "eleven",
+   "nota": "Nacho - voz original diseñada para la serie"
+  },
+  {
+   "id": "M5_microsoft_alvaro",
+   "voice": "es-ES-AlvaroNeural",
+   "motor": "edge",
+   "nota": "Microsoft Álvaro (gratis, sin emociones)"
+  }
  ],
  "femeninas": [
-  {"id": "F1_sofia", "voice": "eZxqQzb5CuYo3Kl6EXfZ", "motor": "eleven"},
-  {"id": "F2_sara3", "voice": "gD1IexrzCvsXPHUuT0s3", "motor": "eleven"},
-  {"id": "F3_eva", "voice": "RgXx32WYOGrd7gFNifSf", "motor": "eleven"},
-  {"id": "F4_disenada_marta", "motor": "diseno", "nombre": "Marta (Cosas de pareja)", "descripcion": "Mujer española de unos 30 años, de Madrid. Voz natural, ni aguda ni infantil, con algo de cuerpo. Habla rápido y con mucha ironía, tranquila y segura, con risitas cortas cuando algo le hace gracia. Castellano coloquial de España. Grabación cercana, sin eco."},
-  {"id": "F5_microsoft_elvira", "voice": "es-ES-ElviraNeural", "motor": "edge"}
+  {
+   "id": "F1_olivia",
+   "voice": "3nShTcrliYQyNpVzUwha",
+   "motor": "eleven",
+   "nota": "Olivia - amigable, divertida (biblioteca)"
+  },
+  {
+   "id": "F2_ines",
+   "voice": "nH81SxhcPaX89XdDlp2m",
+   "motor": "eleven",
+   "nota": "Inés González - cercana (biblioteca)"
+  },
+  {
+   "id": "F3_mara",
+   "voice": "iMELG2LI8E5GYtkXgAtd",
+   "motor": "eleven",
+   "nota": "MaraES - mujer 30+ de Salamanca (biblioteca)"
+  },
+  {
+   "id": "F4_marta_disenada",
+   "voice": "6YCBtBilOFuPHCkeb5eQ",
+   "motor": "eleven",
+   "nota": "Marta - voz original diseñada para la serie"
+  },
+  {
+   "id": "F5_microsoft_elvira",
+   "voice": "es-ES-ElviraNeural",
+   "motor": "edge",
+   "nota": "Microsoft Elvira (gratis, sin emociones)"
+  }
  ]
 }

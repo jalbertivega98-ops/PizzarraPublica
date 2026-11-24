@@ -37,8 +37,10 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - name: Instalar edge-tts
-        run: pip install edge-tts==7.3.1
+      - name: Instalar edge-tts y ffmpeg
+        run: |
+          pip install edge-tts==7.3.1
+          command -v ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
       - name: Generar voces
         working-directory: pipeline
         env:
@@ -67,6 +69,7 @@ jobs:
             python3 tts_elevenlabs.py $STORYBOARDS ${VOICE:+--voice "$VOICE"} --motor "${MOTOR:-elevenlabs}"
           fi
       - name: Guardar las voces en el repositorio
+        if: always()
         run: |
           git add pipeline/voces_elevenlabs pizzaville/public/voz || true
           if ! git diff --cached --quiet; then

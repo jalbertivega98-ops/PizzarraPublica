@@ -1,0 +1,25 @@
+== M1_javi eleven
+  ok 417 caracteres
+== M2_diego eleven
+  ok 417 caracteres
+== M3_gaspar eleven
+  ok 417 caracteres
+== M4_nacho_disenada eleven
+  ERROR /text-to-dialogue/with-timestamps?output_format=mp3_44100_128 404: {"detail":{"type":"not_found","code":"voice_not_found","message":"A voice with voice_id 'KlJZMelZH6lWLRWUVERD' was not found.","status":"voice_not_found","request_id":"9f7a9723761152c4977919205cc64a0d"}}
+  ERROR /text-to-dialogue?output_format=mp3_44100_128 404: {"detail":{"type":"not_found","code":"voice_not_found","message":"A voice with voice_id 'KlJZMelZH6lWLRWUVERD' was not found.","status":"voice_not_found","request_id":"26c7e6e26cb83dacb97a9d5fda169fbc"}}
+  FALLÓ 0 caracteres
+== M5_microsoft_alvaro edge
+  ok (gratis)
+== F1_olivia eleven
+  ok 417 caracteres
+== F2_ines eleven
+  ok 417 caracteres
+== F3_mara eleven
+  ok 417 caracteres
+== F4_marta_disenada eleven
+  ERROR /text-to-dialogue/with-timestamps?output_format=mp3_44100_128 404: {"detail":{"type":"not_found","code":"voice_not_found","message":"A voice with voice_id '6YCBtBilOFuPHCkeb5eQ' was not found.","status":"voice_not_found","request_id":"1161824d8c7698682461b652f2be1545"}}
+  ERROR /text-to-dialogue?output_format=mp3_44100_128 404: {"detail":{"type":"not_found","code":"voice_not_found","message":"A voice with voice_id '6YCBtBilOFuPHCkeb5eQ' was not found.","status":"voice_not_found","request_id":"36d62887fe342e125a6a0e388e39cef3"}}
+  FALLÓ 0 caracteres
+== F5_microsoft_elvira edge
+  ok (gratis)
+TOTAL caracteres ElevenLabs: 2502

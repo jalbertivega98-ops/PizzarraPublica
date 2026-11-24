@@ -1,0 +1,63 @@
+== 1_ella/ella01_olivia
+  ok 137
+== 1_ella/ella02_ines
+  ok 137
+== 1_ella/ella03_mara
+  ok 137
+== 1_ella/ella04_sofia
+  ok 137
+== 1_ella/ella05_matilda
+  ok 137
+== 1_ella/ella06_valeria
+  ok 137
+== 1_ella/ella07_clara
+  ok 137
+== 1_ella/ella08_lauli
+  ok 137
+== 1_ella/ella09_jimena
+  ok 137
+== 1_ella/ella10_violeta
+  ok 137
+== 2_el/el01_javi
+  ok 126
+== 2_el/el02_diego
+  ok 126
+== 2_el/el03_martin
+  ok 126
+== 2_el/el04_marco
+  ok 126
+== 2_el/el05_rubensito
+  ok 126
+== 2_el/el06_angel
+  ok 126
+== 2_el/el07_nil
+  ok 126
+== 2_el/el08_david
+  ok 126
+== 2_el/el09_rafa
+  ok 126
+== 2_el/el10_daniel
+  ok 126
+== 3_interpretaciones/i1_natural_javi_sofia
+  ok 216
+== 3_interpretaciones/i2_ella_seca_martin_matilda
+  ok 246
+== 3_interpretaciones/i3_ella_pasota_marco_valeria
+  ok 249
+== 3_interpretaciones/i4_el_resignado_rubensito_clara
+  ok 256
+== 3_interpretaciones/i5_ella_incredula_diego_ines
+  ok 261
+== 4_imitacion/im1_javi_solo_puntuacion
+  ok 125
+== 4_imitacion/im2_javi_burlon
+  ok 151
+== 4_imitacion/im3_martin_burlon
+  ok 157
+== 4_imitacion/im4_marco_dialogo_misma_voz
+  ok 172
+== 5_conversacion/conv_A_javi_sofia
+  ok 377
+== 5_conversacion/conv_B_martin_matilda
+  ok 377
+TOTAL caracteres: 5217

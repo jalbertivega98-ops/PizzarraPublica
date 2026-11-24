@@ -52,7 +52,8 @@ def main():
     ts = True
     def tts(v, line, soft=False):
         nonlocal ts
-        body = {"text": say(line), "model_id": model, "voice_settings": st}
+        v = line.get("voice", v)  # per-line voice (e.g. her lines with a female voice)
+        body = {"text": say(line), "model_id": model, "voice_settings": {**st, **line.get("eleven", {})}}
         if ts:
             r = call(f"/text-to-speech/{v}/with-timestamps?output_format=mp3_44100_128", body, soft=True)
             if r is not None: return r
@@ -92,7 +93,7 @@ def main():
             elif cur:
                 words.append({"w": cur, "t": t0, "d": t1 - t0}); cur = ""
         if cur: words.append({"w": cur, "t": t0, "d": t1 - t0})
-        json.dump({"text": line["text"], "voice": voice, "words": words}, open(os.path.join(out, line["id"] + ".json"), "w"), ensure_ascii=False, indent=1)
+        json.dump({"text": line["text"], "voice": line.get("voice", voice), "words": words}, open(os.path.join(out, line["id"] + ".json"), "w"), ensure_ascii=False, indent=1)
         print("ok", line["id"], len(words), "palabras")
     saldo()
 

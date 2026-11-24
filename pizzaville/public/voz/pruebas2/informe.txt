@@ -1,0 +1,27 @@
+== H1_javi_natural
+  ok 375
+== H2_javi_creativo
+  ok 375
+== H3_milo
+  ok 375
+== H4_gaspar
+  ok 375
+== H5_daniel
+  ok 375
+== E1_olivia ella_1
+  ok 79
+== E1_olivia ella_2
+  ok 56
+== E2_ines ella_1
+  ok 79
+== E2_ines ella_2
+  ok 56
+== E3_mara ella_1
+  ok 79
+== E3_mara ella_2
+  ok 56
+== E4_rocio ella_1
+  ok 79
+== E4_rocio ella_2
+  ok 56
+TOTAL caracteres: 2415

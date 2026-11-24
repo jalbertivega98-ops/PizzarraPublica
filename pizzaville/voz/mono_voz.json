@@ -1,0 +1,19 @@
+{
+  "notes": "Formato «Mi novia me dice…»: ella suelta una frase, él lo vive por dentro (monólogo), ella remata. Pruebas 2026-11-24.",
+  "ella_1": "[casually, holding up a dress, half smiling] Cari… ¿me queda bien este vestido?",
+  "ella_2": "[flat, already decided, a tiny sigh] Vale. Me lo cambio.",
+  "monologo": "[thinking to himself, calm, resigned, very natural] Vale. Calma. Esto es una trampa y lo sabemos todos. [sighs] Si digo que sí: «¿Y el negro qué, me quedaba mal?». Si digo que no… duermo en el sofá hasta Semana Santa. Si digo «estás guapísima»: «Ni me has mirado». [short pause] Y si me lo pienso más de dos segundos… [pause] Ya van tres. [quietly, defeated] Me cago en todo.",
+  "el": [
+    {"id": "H1_javi_natural", "voice": "gQLV6zBnMa9rDESaeDz9", "stability": 0.5, "nota": "Javi, ajuste natural"},
+    {"id": "H2_javi_creativo", "voice": "gQLV6zBnMa9rDESaeDz9", "stability": 0.0, "nota": "Javi, ajuste creativo (más variación)"},
+    {"id": "H3_milo", "voice": "v4b4rQBhckrIsOHsrbub", "stability": 0.5, "nota": "Milo, conversacional y casual, 35-45"},
+    {"id": "H4_gaspar", "voice": "nMvZRihyU408YNgNXHuX", "stability": 0.5, "nota": "Gaspar, ronco y gruñón"},
+    {"id": "H5_daniel", "voice": "JraADuNecyqRJZ5XGhgO", "stability": 0.5, "nota": "Daniel, hombre normal, tono de podcast"}
+  ],
+  "ella": [
+    {"id": "E1_olivia", "voice": "3nShTcrliYQyNpVzUwha", "stability": 0.5},
+    {"id": "E2_ines", "voice": "nH81SxhcPaX89XdDlp2m", "stability": 0.5},
+    {"id": "E3_mara", "voice": "iMELG2LI8E5GYtkXgAtd", "stability": 0.5},
+    {"id": "E4_rocio", "voice": "ecMoe9ijZeyrNV2yVOdh", "stability": 0.5}
+  ]
+}

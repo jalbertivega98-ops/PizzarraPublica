@@ -1,0 +1,63 @@
+{
+ "voces": {
+  "martin": "j1FA2WmkBpQd2hSw1caE",
+  "ines": "nH81SxhcPaX89XdDlp2m"
+ },
+ "trabajos": [
+  {
+   "id": "5_conversacion/conv_C_martin_ines",
+   "tipo": "dialogo",
+   "lineas": [
+    [
+     "ines",
+     "¿Has visto mis llaves?"
+    ],
+    [
+     "martin",
+     "Donde las dejas siempre."
+    ],
+    [
+     "ines",
+     "Ahí no están."
+    ],
+    [
+     "martin",
+     "Pues entonces no las dejas siempre ahí."
+    ],
+    [
+     "ines",
+     "[unamused] Muy gracioso. ... ¿Me ayudas o no?"
+    ],
+    [
+     "martin",
+     "Te ayudo. ¿Has mirado en el bolso?"
+    ],
+    [
+     "ines",
+     "[annoyed] Sí. Obviamente he mirado en el bolso."
+    ],
+    [
+     "martin",
+     "[muttering, mocking her] «Obviamente he mirado en el bolso»..."
+    ],
+    [
+     "ines",
+     "¿Qué has dicho?"
+    ],
+    [
+     "martin",
+     "Nada. Que qué bolso más bonito."
+    ],
+    [
+     "ines",
+     "... [quietly] Estaban en el bolso."
+    ],
+    [
+     "martin",
+     "[sighs] Ya."
+    ]
+   ],
+   "estabilidad": 0.5
+  }
+ ]
+}

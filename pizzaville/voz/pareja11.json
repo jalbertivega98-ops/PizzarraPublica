@@ -1,0 +1,162 @@
+{
+ "episode": "pareja11",
+ "notes": "COSAS DE PAREJA ep11 prueba nuevo estilo «El GTA 6». T=pensamiento de Dani (reverb), D=Dani en voz alta, H=Lucía (voz Sofia)",
+ "model": "eleven_v3",
+ "eleven": {
+  "stability": 0.0,
+  "similarity_boost": 0.8
+ },
+ "eleven_out": "pareja11",
+ "lines": [
+  {
+   "id": "l01",
+   "kind": "T",
+   "text": "Diecinueve de noviembre. Sale el GTA seis. Trece años esperando este día. Trece.",
+   "say": "[whispering, emotional] Diecinueve de noviembre. Sale el GTA seis. Trece años esperando este día. Trece."
+  },
+  {
+   "id": "l02",
+   "kind": "T",
+   "text": "Tengo el mando en la mano. Me sudan las manos. Estoy llorando. Llorando de verdad.",
+   "say": "[overwhelmed, voice breaking, crying] Tengo el mando en la mano. Me sudan las manos. Estoy llorando. Llorando de verdad."
+  },
+  {
+   "id": "l03",
+   "kind": "H",
+   "text": "Amor... ¿me acompañas un momentito al súper?",
+   "say": "[sweet, cheerful] Amor... ¿me acompañas un momentito al súper?",
+   "voice": "eZxqQzb5CuYo3Kl6EXfZ"
+  },
+  {
+   "id": "l04",
+   "kind": "T",
+   "text": "¿Un momentito? Los momentitos de esta mujer duran más que una legislatura.",
+   "say": "[disbelief, getting angry] ¿Un momentito? Los momentitos de esta mujer duran más que una legislatura."
+  },
+  {
+   "id": "l05",
+   "kind": "D",
+   "text": "¡Claro, cariño! ¡Vamos!",
+   "say": "[forced cheerful, too enthusiastic] ¡Claro, cariño! ¡Vamos!"
+  },
+  {
+   "id": "l06",
+   "kind": "T",
+   "text": "Dos horas. Llevamos dos horas en el pasillo de los yogures.",
+   "say": "[exhausted, dramatic] Dos horas. Llevamos dos horas en el pasillo de los yogures."
+  },
+  {
+   "id": "l07",
+   "kind": "H",
+   "text": "¿Natural o griego? ¿Cuál me pega más a mí?",
+   "say": "[thoughtful, indecisive] ¿Natural o griego? ¿Cuál me pega más a mí?",
+   "voice": "eZxqQzb5CuYo3Kl6EXfZ"
+  },
+  {
+   "id": "l08",
+   "kind": "T",
+   "text": "¿Cuál te pega? ¡Es un yogur, Lucía! ¡No es un horóscopo!",
+   "say": "[exasperated, shouting] ¿Cuál te pega? ¡Es un yogur, Lucía! ¡No es un horóscopo!"
+  },
+  {
+   "id": "l09",
+   "kind": "D",
+   "text": "El griego, mi vida. Te pega muchísimo.",
+   "say": "[calm, sweet, fake smile] El griego, mi vida. Te pega muchísimo."
+  },
+  {
+   "id": "l10",
+   "kind": "T",
+   "text": "En el coche voy a toda leche. Mentalmente ya estoy en Miami huyendo de la policía.",
+   "say": "[intense, excited] En el coche voy a toda leche. Mentalmente ya estoy en Miami huyendo de la policía."
+  },
+  {
+   "id": "l11",
+   "kind": "H",
+   "text": "¿Por qué corres tanto? ¿Tienes prisa o qué?",
+   "say": "[suspicious] ¿Por qué corres tanto? ¿Tienes prisa o qué?",
+   "voice": "eZxqQzb5CuYo3Kl6EXfZ"
+  },
+  {
+   "id": "l12",
+   "kind": "D",
+   "text": "¿Prisa? ¿Yo? Qué va.",
+   "say": "[casual, innocent] ¿Prisa? ¿Yo? Qué va."
+  },
+  {
+   "id": "l13",
+   "kind": "T",
+   "text": "¡Trece años de prisa, Lucía! ¡TRECE!",
+   "say": "[furious, shouting] ¡Trece años de prisa, Lucía! ¡TRECE!"
+  },
+  {
+   "id": "l14",
+   "kind": "T",
+   "text": "En casa coloco la compra. Treinta y siete yogures griegos. Le pegan muchísimo.",
+   "say": "[sarcastic, tired] En casa coloco la compra. Treinta y siete yogures griegos. Le pegan muchísimo."
+  },
+  {
+   "id": "l15",
+   "kind": "T",
+   "text": "Por fin. Sofá. Mando. Pantalla de inicio. Le doy a jugar...",
+   "say": "[excited, trembling] Por fin. Sofá. Mando. Pantalla de inicio. Le doy a jugar..."
+  },
+  {
+   "id": "l16",
+   "kind": "H",
+   "text": "¿Vemos una peli juntitos? Así estamos un ratito.",
+   "say": "[sweet, cuddly] ¿Vemos una peli juntitos? Así estamos un ratito.",
+   "voice": "eZxqQzb5CuYo3Kl6EXfZ"
+  },
+  {
+   "id": "l17",
+   "kind": "T",
+   "text": "Un ratito. Me hierve la sangre. Me sale humo por las orejas. Estoy a un ratito de irme a vivir solo.",
+   "say": "[furious, boiling with rage] Un ratito. Me hierve la sangre. Me sale humo por las orejas. Estoy a un ratito de irme a vivir solo."
+  },
+  {
+   "id": "l18",
+   "kind": "D",
+   "text": "Claro, cariño. La que tú quieras.",
+   "say": "[sweet, defeated] Claro, cariño. La que tú quieras."
+  },
+  {
+   "id": "l19",
+   "kind": "T",
+   "text": "Tres de la mañana. Ella duerme. Yo, encerrado en el baño con la consola, como un delincuente.",
+   "say": "[whispering, sneaky] Tres de la mañana. Ella duerme. Yo, encerrado en el baño con la consola, como un delincuente."
+  },
+  {
+   "id": "l20",
+   "kind": "H",
+   "text": "¿Qué haces?",
+   "say": "[sleepy, suspicious] ¿Qué haces?",
+   "voice": "eZxqQzb5CuYo3Kl6EXfZ"
+  },
+  {
+   "id": "l21",
+   "kind": "D",
+   "text": "Nada.",
+   "say": "[nervous, fast] Nada."
+  },
+  {
+   "id": "l22",
+   "kind": "H",
+   "text": "Trae el mando. Que yo también quiero probarlo.",
+   "say": "[curious, then excited] Trae el mando. Que yo también quiero probarlo.",
+   "voice": "eZxqQzb5CuYo3Kl6EXfZ"
+  },
+  {
+   "id": "l23",
+   "kind": "T",
+   "text": "Nueve de la mañana. Lleva toda la noche jugando. Va por la misión cuarenta. Yo, por ninguna.",
+   "say": "[defeated, dramatic, tired] Nueve de la mañana. Lleva toda la noche jugando. Va por la misión cuarenta. Yo, por ninguna."
+  },
+  {
+   "id": "l24",
+   "kind": "T",
+   "text": "Etiqueta al que lleva trece años esperando... y todavía no ha jugado.",
+   "say": "[deadpan] Etiqueta al que lleva trece años esperando... y todavía no ha jugado."
+  }
+ ]
+}

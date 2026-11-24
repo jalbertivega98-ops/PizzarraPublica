@@ -51,6 +51,11 @@ jobs:
           BIBLIOTECA: ${{ inputs.biblioteca }}
           MOTOR: ${{ inputs.motor }}
         run: |
+          case "$STORYBOARDS" in descargar:*)
+            mkdir -p ../pizzaville/public/voz/descargas
+            for p in ${STORYBOARDS#descargar:}; do d="${p%%=*}"; u="${p#*=}"; case "$d" in */*|..*) continue;; esac; curl -sfL -o "../pizzaville/public/voz/descargas/$d" "$u" && echo "ok $d"; done
+            exit 0;;
+          esac
           case "$STORYBOARDS" in pizzaville-pruebas:*)
             for f in ${STORYBOARDS#pizzaville-pruebas:}; do python3 ../pizzaville/voz/pruebas_voz.py $f; done
             exit 0;;

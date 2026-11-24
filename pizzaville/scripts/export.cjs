@@ -53,7 +53,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         let key = -1, best = 3
         chunk.forEach((c, i) => { const n = norm(c.disp).length; if (n > best) { best = n; key = i } })
         // toon episodes: colour by speaker (T = Dani's thoughts, D = Dani out loud, H = her)
-        const keyC = l.kind === 'T' ? '&HB0399A&' : l.kind === 'H' ? '&HA04FFF&' : l.kind === 'D' ? '&HE07D2E&' : '&H2E2ED6&'
+        const keyC = l.kind === 'T' ? '&HB0399A&' : l.kind === 'H' ? '&HA04FFF&' : l.kind === 'D' ? '&HE07D2E&' : (info.keyColor || '&H2E2ED6&')
         const fill = l.kind === 'T' ? '{\\1c&H8CF0FF&}' : ''
         const txt = fill + chunk.map((c, i) => (i === key ? `{\\3c${keyC}\\bord17\\1c&HFFFFFF&}${c.disp}{\\3c&H000000&\\bord5}${fill}` : c.disp)).join(' ')
         subs.push({ a, b: Math.min(b, to), txt: `{\\an5\\pos(540,1330)\\fad(40,40)}${txt}` })
@@ -237,8 +237,11 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
   const voices = info.lines.filter((l) => l.hasAudio).map((l) => ({ file: path.resolve(`public/voz/${ep}/${l.id}.mp3`), at: l.at - from }))
   const cues = { duration: to - from, music: info.music, voices, sfx: info.sfx.map((s) => ({ ...s, at: s.at - from })) }
   fs.writeFileSync(path.join(out, 'cues.json'), JSON.stringify(cues, null, 1))
-  const wav = path.join(out, 'audio.wav')
-  execFileSync('python3', [path.resolve('scripts/audio.py'), path.join(out, 'cues.json'), wav], { stdio: 'inherit' })
+  let wav = path.join(out, 'audio.wav')
+  const audioOverride = opt('audio', null) // a finished dialogue track (no music, no sfx), delayed by --audio-at
+  if (audioOverride) {
+    execFileSync('ffmpeg', ['-y', '-v', 'error', '-i', path.resolve(audioOverride), '-af', `adelay=${Math.round(+opt('audio-at', 0) * 1000)}:all=1,apad`, '-t', String(to - from), '-ar', '44100', wav], { stdio: 'inherit' })
+  } else execFileSync('python3', [path.resolve('scripts/audio.py'), path.join(out, 'cues.json'), wav], { stdio: 'inherit' })
 
   // ---------------- final mux (subtitles shifted if exporting a range)
   const final = path.join(out, `${ep}.mp4`)

@@ -139,6 +139,10 @@ export type PairSpec = {
   luciaHand?: ReactNode
   daniHand?: ReactNode
   extras?: (st: Record<string, any>) => ReactNode
+  /** fixed start time per line (natural dialogue audio): skips the gap layout */
+  fixedAt?: Record<string, number>
+  /** ASS colour of the key-word box (&HBBGGRR&) */
+  keyColor?: string
 }
 
 export function PairEpisode({ spec }: { spec: PairSpec }) {
@@ -152,6 +156,7 @@ export function PairEpisode({ spec }: { spec: PairSpec }) {
   useMemo(() => { scene.background = new THREE.Color(spec.bg); scene.fog = null }, [])
 
   const layout = () => {
+    if (spec.fixedAt) { for (const l of lines) l.at = spec.fixedAt[l.id] ?? l.at; return }
     for (let i = 0; i < lines.length; i++) lines[i].at = i === 0 ? 0.6 : lines[i - 1].at + lines[i - 1].dur + 0.12 + 0.55 * (spec.gap[lines[i].id] ?? 0)
   }
   const duration = () => { layout(); return Math.ceil((endOf(lines[lines.length - 1]) + (spec.tail ?? 2.2)) * 10) / 10 }
@@ -162,7 +167,7 @@ export function PairEpisode({ spec }: { spec: PairSpec }) {
     pv.info = () => {
       layout()
       const d = duration()
-      return { id: spec.id, duration: d, music: spec.music ?? 'night', subStyle: 'box', overlays: spec.overlays(L, d), lines: lines.map((x) => ({ id: x.id, at: x.at, dur: x.dur, text: x.text, words: x.words, hasAudio: x.hasAudio })), sfx: spec.sfx(L) }
+      return { id: spec.id, duration: d, music: spec.music ?? 'night', subStyle: 'box', keyColor: spec.keyColor, overlays: spec.overlays(L, d), lines: lines.map((x) => ({ id: x.id, at: x.at, dur: x.dur, text: x.text, words: x.words, hasAudio: x.hasAudio })), sfx: spec.sfx(L) }
     }
   }, [])
 

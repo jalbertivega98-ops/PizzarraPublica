@@ -1,11 +1,11 @@
-// COSAS DE PAREJA · prueba 12 — «Las llaves». Conversación natural (Javi y Sofía, un solo audio continuo):
+// COSAS DE PAREJA · prueba 12 — «Las llaves». Conversación natural (Martín e Inés, un solo audio continuo):
 // sin música ni efectos, cortes cortos, primeros planos e insertos del bolso, una imitación sin cambiar la voz.
 import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { RoundedBox } from '@react-three/drei'
 import * as THREE from 'three'
 import { CONV } from './pareja12_data'
-import { LivingRoom, PairEpisode, coupleShots, endOf, pose, track, type PairSpec } from './pareja_kit'
+import { LivingRoom, PairEpisode, coupleShots, pose, track, type PairSpec } from './pareja_kit'
 import { clock } from '../engine/clock'
 
 const fm = (c: string, r = 0.8) => new THREE.MeshStandardMaterial({ color: c, roughness: r, flatShading: true })
@@ -94,7 +94,7 @@ const spec: PairSpec = {
       <LivingRoom tv={() => 0.6} />
       <group position={[LX + 0.02, 0.88, -0.02]} rotation={[-0.1, 0.15, 0]}>
         <Bag />
-        <RisingKeys t0={at.l11 - 1.3} />
+        <RisingKeys t0={at.l11 - 0.45} />
       </group>
     </group>
   ),
@@ -109,10 +109,10 @@ const spec: PairSpec = {
     const lucia = track([
       [0, L_.search], [a('l01') + 0.1, L_.ask], [a('l02') + 0.6, L_.search], [a('l03') - 0.1, L_.no], [a('l04') + 0.5, L_.unamused],
       [a('l06') + 0.4, L_.search], [a('l07') - 0.1, L_.obvious], [a('l08') + 0.3, L_.search], [a('l09') - 0.15, L_.sharp], [a('l10') + 0.4, L_.stare],
-      [a('l11') - 1.6, L_.find], [a('l11') - 0.6, L_.keys],
+      [a('l11') - 0.5, L_.find], [a('l11') + 0.35, L_.keys],
     ], t, 0.25)
     // rummaging in the bag while she searches
-    if ((t < a('l09') - 0.2 || (t > a('l11') - 1.6 && t < a('l11') - 0.6))) {
+    if ((t < a('l09') - 0.2 || (t > a('l11') - 0.5 && t < a('l11') + 0.35))) {
       const k = Math.sin(t * 6.1) * 0.08
       lucia.lSh = [lucia.lSh[0] + k, lucia.lSh[1]]; lucia.rSh = [lucia.rSh[0] - k, lucia.rSh[1]]
     }
@@ -121,7 +121,7 @@ const spec: PairSpec = {
       cuts: [
         [0, 'two'], [a('l02') - 0.08, 'dani'], [a('l03') - 0.08, 'lucia'], [a('l04') - 0.08, 'dani'], [a('l05') - 0.08, 'lucia'],
         [a('l06') - 0.08, 'two'], [a('l07') - 0.08, 'lucia'], [a('l07') + l('l07').dur * 0.45, 'bag'], [a('l08') - 0.1, 'daniClose'],
-        [a('l09') - 0.1, 'lucia'], [a('l10') - 0.08, 'dani'], [endOf(l('l10')) + 0.25, 'bag'], [a('l11') - 0.75, 'keys'],
+        [a('l09') - 0.1, 'lucia'], [a('l10') - 0.08, 'dani'], [a('l11') - 0.55, 'keys'],
         [a('l12') - 0.1, 'dani'],
       ],
     }

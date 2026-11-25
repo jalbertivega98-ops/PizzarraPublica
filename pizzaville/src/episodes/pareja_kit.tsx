@@ -6,7 +6,7 @@ import { RoundedBox } from '@react-three/drei'
 import * as THREE from 'three'
 import { clock, ease, seg } from '../engine/clock'
 import { useLines, type Line } from '../engine/voice'
-import { LowPolyChar, P0, mixPose, type LPLook, type LPPose } from '../scene/LowPoly'
+import { LowPolyChar, P0, mixPose, type LPLegs, type LPLook, type LPPose } from '../scene/LowPoly'
 
 export const DANI: LPLook = { skin: '#e9b48e', hair: '#1e1a1c', top: '#2f8f83', hairStyle: 'dani' }
 export const LUCIA: LPLook = { skin: '#f1c3a0', hair: '#a4482a', top: '#f08aa6', hairStyle: 'lucia' }
@@ -143,6 +143,12 @@ export type PairSpec = {
   fixedAt?: Record<string, number>
   /** ASS colour of the key-word box (&HBBGGRR&) */
   keyColor?: string
+  /** real dialogue: Dani moves his mouth on his own lines (except `quiet` = thought / muttered) and both act while talking */
+  talk?: boolean
+  quiet?: string[]
+  /** standing characters (legs) and facing angles */
+  legs?: { lucia: LPLegs; dani: LPLegs }
+  ry?: { lucia: number; dani: number }
 }
 
 export function PairEpisode({ spec }: { spec: PairSpec }) {
@@ -179,6 +185,27 @@ export function PairEpisode({ spec }: { spec: PairSpec }) {
     const lucia = f.lucia, dani = f.dani
     const m = Math.max(...spec.her.map((id) => lip(L(id), t)))
     lucia.mouth = Math.max(lucia.mouth, m)
+    if (spec.talk) {
+      // his own lines move his mouth; thoughts and muttering (quiet) don't
+      const his = lines.filter((x) => !spec.her.includes(x.id) && !spec.quiet?.includes(x.id))
+      const md = Math.max(0, ...his.map((x) => lip(x, t)))
+      dani.mouth = Math.max(dani.mouth, md)
+      // acting while talking: head beats on stressed syllables, brows up on questions, small hand moves
+      const act = (p: LPPose, ids: Line[], mv: number) => {
+        const cur = ids.find((x) => t >= x.at && t <= x.at + x.dur)
+        if (!cur) return
+        const k = Math.min(1, (t - cur.at) / 0.25) * Math.min(1, (cur.at + cur.dur - t) / 0.25)
+        p.pitch += (mv * 0.06 - 0.02) * k
+        p.yaw += Math.sin(t * 2.3 + cur.at) * 0.04 * k
+        if (/[?¿]/.test(cur.text)) p.brows += 0.25 * k
+        if (/[!¡]/.test(cur.text)) { p.brows += 0.15 * k; p.lids = Math.max(0, p.lids - 0.2 * k) }
+        p.rSh = [p.rSh[0] + 0.12 * k * Math.sin(t * 3.1 + 1), p.rSh[1]]
+      }
+      act(dani, his, md)
+      act(lucia, lines.filter((x) => spec.her.includes(x.id)), m)
+      // breathing, both
+      dani.lean += Math.sin(t * 1.7) * 0.012; lucia.lean += Math.sin(t * 1.5 + 2) * 0.012
+    }
     const blink = (off: number) => ((t + off) % 4.1) < 0.12 ? 1 : 0
     if (lucia.lids < 0.6) lucia.lids = Math.max(lucia.lids, blink(1.3))
     if (dani.lids < 0.6 && !st.noBlink) dani.lids = Math.max(dani.lids, blink(0.2))
@@ -201,8 +228,8 @@ export function PairEpisode({ spec }: { spec: PairSpec }) {
   return (
     <group>
       {spec.Set({ st })}
-      <LowPolyChar look={LUCIA} pose={() => poses.current.lucia} position={spec.pos.lucia} hand={spec.luciaHand} topColor={() => st.luciaTop} />
-      <LowPolyChar look={DANI} pose={() => poses.current.dani} position={spec.pos.dani} hand={spec.daniHand} topColor={() => st.daniTop} />
+      <LowPolyChar look={LUCIA} pose={() => poses.current.lucia} position={spec.pos.lucia} hand={spec.luciaHand} topColor={() => st.luciaTop} legs={spec.legs?.lucia} ry={spec.ry?.lucia} />
+      <LowPolyChar look={DANI} pose={() => poses.current.dani} position={spec.pos.dani} hand={spec.daniHand} topColor={() => st.daniTop} legs={spec.legs?.dani} ry={spec.ry?.dani} />
       {spec.extras?.(st)}
     </group>
   )
@@ -247,4 +274,85 @@ export function Show({ show, children }: { show: () => boolean; children: ReactN
   const g = useRef<THREE.Group>(null!)
   useFrame(() => { g.current.visible = show() })
   return <group ref={g}>{children}</group>
+}
+
+// ---------------- entrance hall (standing scenes): front door, console with key bowl + mirror, coat rack, shoe rack
+// floor at y=0, back wall at z=-1.1, door on the left (x≈-1.3), console under the mirror on the right of the door
+export function Hallway({ light }: { light?: () => number }) {
+  const lamp = useRef<THREE.PointLight>(null!)
+  useFrame(() => { lamp.current.intensity = 4.2 * (light ? light() : 1) })
+  const fm = (c: string, r = 0.85) => new THREE.MeshStandardMaterial({ color: c, roughness: r, flatShading: true })
+  const wall = fm('#d8c9a8'), wall2 = fm('#c7b48f'), wood = fm('#7a4f2e', 0.7), dark = fm('#2b2224'), door = fm('#3d5a6e', 0.6)
+  return (
+    <group>
+      <hemisphereLight args={['#fff1dc', '#3a2c26', 0.9]} />
+      <directionalLight position={[1.5, 3.2, 3]} intensity={0.9} color="#ffe9d0" castShadow shadow-mapSize={[2048, 2048]} shadow-bias={-0.0005}
+        shadow-camera-left={-3} shadow-camera-right={3} shadow-camera-top={3} shadow-camera-bottom={-3} />
+      <pointLight ref={lamp} position={[0, 2.45, 0.2]} distance={6} decay={1.5} color="#ffd9a8" />
+      <pointLight position={[0, 1.7, 2.6]} intensity={1.4} distance={6} color="#fff0e0" />
+      {/* floor, walls, skirting, ceiling lamp */}
+      <mesh rotation-x={-Math.PI / 2} material={fm('#9a6b43', 0.75)} receiveShadow><planeGeometry args={[8, 8]} /></mesh>
+      <mesh position={[0, 1.5, -1.1]} material={wall} receiveShadow><planeGeometry args={[8, 3]} /></mesh>
+      <mesh position={[2.1, 1.5, 0.5]} rotation-y={-Math.PI / 2} material={wall2} receiveShadow><planeGeometry args={[4, 3]} /></mesh>
+      <mesh position={[-2.4, 1.5, 0.5]} rotation-y={Math.PI / 2} material={wall2} receiveShadow><planeGeometry args={[4, 3]} /></mesh>
+      <mesh position={[0, 0.05, -1.09]} material={fm('#f1e9da')}><boxGeometry args={[8, 0.1, 0.02]} /></mesh>
+      <mesh position={[0, 2.62, 0.2]}><cylinderGeometry args={[0.18, 0.24, 0.16, 8]} /><meshStandardMaterial color="#fbe9c8" emissive="#ffcf8a" emissiveIntensity={1.2} flatShading /></mesh>
+      {/* rug */}
+      <mesh rotation-x={-Math.PI / 2} position={[-0.2, 0.006, 0.3]} material={fm('#8f3b3b')} receiveShadow><planeGeometry args={[1.6, 0.9]} /></mesh>
+      <mesh rotation-x={-Math.PI / 2} position={[-0.2, 0.008, 0.3]} material={fm('#c9a36b')}><ringGeometry args={[0.28, 0.34, 6]} /></mesh>
+      {/* front door with frame, handle, peephole */}
+      <group position={[-1.35, 0, -1.08]}>
+        <mesh position={[0, 1.1, 0.01]} material={fm('#efe6d6')}><boxGeometry args={[1.08, 2.3, 0.04]} /></mesh>
+        <mesh position={[0, 1.07, 0.035]} material={door} castShadow><boxGeometry args={[0.92, 2.14, 0.05]} /></mesh>
+        {[0.55, 1.45].map((y) => <mesh key={y} position={[0, y, 0.065]} material={fm('#35506a', 0.6)}><boxGeometry args={[0.66, 0.6, 0.012]} /></mesh>)}
+        <mesh position={[0.34, 1.05, 0.08]} material={fm('#d4b15a', 0.3)}><boxGeometry args={[0.04, 0.16, 0.03]} /></mesh>
+        <mesh position={[0, 1.6, 0.07]} material={dark}><circleGeometry args={[0.018, 8]} /></mesh>
+      </group>
+      {/* console table + key bowl + mirror + plant */}
+      <group position={[0.15, 0, -0.85]}>
+        <mesh position={[0, 0.82, 0]} material={wood} castShadow receiveShadow><boxGeometry args={[1.1, 0.05, 0.36]} /></mesh>
+        {[[-0.5, -0.14], [0.5, -0.14], [-0.5, 0.14], [0.5, 0.14]].map(([x, z], i) => <mesh key={i} position={[x, 0.4, z]} material={wood}><boxGeometry args={[0.04, 0.8, 0.04]} /></mesh>)}
+        <mesh position={[0, 0.5, 0]} material={wood}><boxGeometry args={[1.0, 0.03, 0.3]} /></mesh>
+        <mesh position={[0.32, 0.87, 0.02]} material={fm('#e2d6c2')}><sphereGeometry args={[0.1, 9, 4, 0, Math.PI * 2, Math.PI / 2, Math.PI / 2]} /></mesh>
+        <mesh position={[0.32, 0.872, 0.02]} rotation-x={-Math.PI / 2} material={fm('#6f645a')}><circleGeometry args={[0.085, 9]} /></mesh>
+        <group position={[0, 1.55, -0.2]}>
+          <mesh material={fm('#b08d57', 0.5)}><boxGeometry args={[0.8, 0.95, 0.04]} /></mesh>
+          <mesh position={[0, 0, 0.025]}><planeGeometry args={[0.68, 0.83]} /><meshStandardMaterial color="#a9c3cc" roughness={0.15} metalness={0.3} /></mesh>
+          <mesh position={[0.12, 0.15, 0.03]} rotation-z={0.5} material={fm('#d9e6ea', 0.1)}><planeGeometry args={[0.04, 0.5]} /></mesh>
+        </group>
+        <group position={[-0.4, 0.85, 0]}>
+          <mesh position={[0, 0.08, 0]} material={fm('#c46a4a')}><cylinderGeometry args={[0.07, 0.055, 0.16, 8]} /></mesh>
+          {[0, 1, 2, 3].map((i) => <mesh key={i} position={[Math.cos(i * 1.6) * 0.05, 0.24 + (i % 2) * 0.07, Math.sin(i * 1.6) * 0.04]} material={fm('#3f8a4f')}><icosahedronGeometry args={[0.08, 0]} /></mesh>)}
+        </group>
+      </group>
+      {/* coat rack with coats and a cap */}
+      <group position={[1.55, 0, -0.85]}>
+        <mesh position={[0, 1.6, 0.02]} material={wood}><boxGeometry args={[0.9, 0.07, 0.04]} /></mesh>
+        {[-0.3, 0, 0.3].map((x) => <mesh key={x} position={[x, 1.58, 0.07]} rotation-x={Math.PI / 2} material={dark}><cylinderGeometry args={[0.012, 0.012, 0.1, 5]} /></mesh>)}
+        <mesh position={[-0.3, 1.18, 0.1]} material={fm('#4b5d3a')} castShadow><boxGeometry args={[0.36, 0.8, 0.14]} /></mesh>
+        <mesh position={[0.02, 1.25, 0.1]} material={fm('#2e3346')} castShadow><boxGeometry args={[0.32, 0.65, 0.13]} /></mesh>
+        <mesh position={[0.3, 1.52, 0.12]} material={fm('#c84b3c')}><sphereGeometry args={[0.1, 8, 4, 0, Math.PI * 2, 0, Math.PI / 2]} /></mesh>
+        {/* shoe rack */}
+        <mesh position={[0, 0.25, 0.05]} material={wood}><boxGeometry args={[0.85, 0.04, 0.3]} /></mesh>
+        <mesh position={[0, 0.02, 0.05]} material={wood}><boxGeometry args={[0.85, 0.04, 0.3]} /></mesh>
+        {[-0.3, -0.12, 0.12, 0.3].map((x, i) => <mesh key={x} position={[x, 0.31, 0.06]} material={fm(['#e8e2d8', '#2a1d1a', '#b55d3a', '#e8e2d8'][i])}><boxGeometry args={[0.12, 0.08, 0.26]} /></mesh>)}
+      </group>
+      {/* framed picture on the right */}
+      <group position={[1.0, 1.95, -1.08]}>
+        <mesh material={dark}><boxGeometry args={[0.42, 0.32, 0.03]} /></mesh>
+        <mesh position={[0, 0, 0.02]} material={fm('#f2d7a6')}><planeGeometry args={[0.36, 0.26]} /></mesh>
+        <mesh position={[0.05, -0.03, 0.025]} material={fm('#3b7f8c')}><circleGeometry args={[0.07, 6]} /></mesh>
+      </group>
+    </group>
+  )
+}
+
+/** a mug for a hand */
+export function Mug({ color = '#e9e2d3' }: { color?: string }) {
+  return (
+    <group rotation={[0, 0, 0]}>
+      <mesh position={[0, 0, 0.05]}><cylinderGeometry args={[0.045, 0.04, 0.1, 9]} /><meshStandardMaterial color={color} roughness={0.5} flatShading /></mesh>
+      <mesh position={[0.05, 0, 0.05]} rotation-z={Math.PI / 2}><torusGeometry args={[0.025, 0.008, 5, 10]} /><meshStandardMaterial color={color} roughness={0.5} /></mesh>
+    </group>
+  )
 }

@@ -63,7 +63,9 @@ function hairGeo(style: LPLook['hairStyle']) {
   return merged
 }
 
-export function LowPolyChar({ look, pose, position, ry = 0, hand, topColor }: { look: LPLook; pose: () => LPPose; position: [number, number, number]; ry?: number; hand?: ReactNode; topColor?: () => string | undefined }) {
+export type LPLegs = { pants: string; shoes: string }
+
+export function LowPolyChar({ look, pose, position, ry = 0, hand, topColor, legs }: { look: LPLook; pose: () => LPPose; position: [number, number, number]; ry?: number; hand?: ReactNode; topColor?: () => string | undefined; legs?: LPLegs }) {
   const root = useRef<THREE.Group>(null!)
   const chest = useRef<THREE.Group>(null!)
   const head = useRef<THREE.Group>(null!)
@@ -98,8 +100,21 @@ export function LowPolyChar({ look, pose, position, ry = 0, hand, topColor }: { 
     mLine.current.rotation.z = p.smile * 0.22 // smirk
   })
 
+  const LG = useMemo(() => legs && { pants: flat(legs.pants, 0.9), shoes: flat(legs.shoes, 0.6) }, [legs])
   return (
     <group ref={root}>
+      {LG && (
+        <group>
+          {/* standing: hips + two chunky legs + shoes (root sits at hip height) */}
+          <mesh material={LG.pants} position={[0, 0.03, 0]} castShadow><cylinderGeometry args={[0.3, 0.27, 0.16, 8]} /></mesh>
+          {[0.13, -0.13].map((x) => (
+            <group key={x} position={[x, 0, 0]}>
+              <mesh material={LG.pants} position={[0, -0.28, 0]} castShadow><cylinderGeometry args={[0.115, 0.1, 0.56, 7]} /></mesh>
+              <mesh material={LG.shoes} position={[0, -0.585, 0.05]} castShadow><boxGeometry args={[0.17, 0.09, 0.3]} /></mesh>
+            </group>
+          ))}
+        </group>
+      )}
       <group ref={chest}>
         {/* torso (sits on the bed, lower body hidden under the duvet) */}
         <mesh material={M.top} position={[0, 0.32, 0]} castShadow><cylinderGeometry args={[0.24, 0.3, 0.62, 8]} /></mesh>

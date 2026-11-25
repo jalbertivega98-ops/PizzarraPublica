@@ -64,3 +64,6 @@ TOTAL caracteres: 5217
 == 5_conversacion/conv_C_martin_ines
   ok 377
 TOTAL caracteres: 377
+== 6_episodio/llaves_largo
+  ok 628
+TOTAL caracteres: 628

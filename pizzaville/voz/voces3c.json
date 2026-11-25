@@ -1,0 +1,27 @@
+{
+ "voces": {"martin": "j1FA2WmkBpQd2hSw1caE", "ines": "nH81SxhcPaX89XdDlp2m"},
+ "trabajos": [
+  {"id": "6_episodio/llaves_largo", "tipo": "dialogo", "estabilidad": 0.5,
+   "lineas": [
+    ["ines", "¿Has visto mis llaves?"],
+    ["martin", "¿Las de casa?"],
+    ["ines", "[unamused] No, las del yate. Pues claro, las de casa."],
+    ["martin", "En el cuenco."],
+    ["ines", "Ahí ya he mirado."],
+    ["martin", "[muttering under his breath] Me cago en el cuenco..."],
+    ["martin", "Venga, cierro yo, que llegamos tarde."],
+    ["ines", "Es que sin mis llaves no voy tranquila."],
+    ["martin", "Vas conmigo. Yo tengo llaves."],
+    ["ines", "Ya, pero son tuyas."],
+    ["ines", "Mi madre pregunta que si venimos ya."],
+    ["martin", "[dry] Dile que su hija ha perdido las llaves dentro de casa."],
+    ["ines", "No las he perdido. Están en algún sitio."],
+    ["martin", "[sighs] Como todo, cariño. Todo está en algún sitio."],
+    ["ines", "... [surprised, quietly] Ah. Mira."],
+    ["martin", "¿En el abrigo?"],
+    ["ines", "Es que este abrigo no me lo pongo nunca."],
+    ["martin", "Lo llevas puesto desde octubre."],
+    ["ines", "Pues por eso. Ya ni lo veo."]
+   ]}
+ ]
+}

@@ -1,0 +1,147 @@
+{
+ "voces": {
+  "martin": "j1FA2WmkBpQd2hSw1caE",
+  "ines": "nH81SxhcPaX89XdDlp2m"
+ },
+ "trabajos": [
+  {
+   "id": "7_elige_tu/elige_tu",
+   "tipo": "dialogo",
+   "estabilidad": 0.5,
+   "lineas": [
+    [
+     "martin",
+     "[deadpan] Mi novia me dice que elija yo dónde cenamos."
+    ],
+    [
+     "martin",
+     "Que hoy me toca a mí."
+    ],
+    [
+     "martin",
+     "[pause] Y me lo dice sonriendo."
+    ],
+    [
+     "ines",
+     "Elige tú, que siempre elijo yo."
+    ],
+    [
+     "martin",
+     "[dry] Siempre elige ella. En eso tiene razón."
+    ],
+    [
+     "martin",
+     "Digo el italiano de la esquina."
+    ],
+    [
+     "ines",
+     "[unimpressed] ¿Otra vez pasta?"
+    ],
+    [
+     "martin",
+     "Vale. El japonés."
+    ],
+    [
+     "ines",
+     "Ayer comí arroz."
+    ],
+    [
+     "martin",
+     "[deadpan] No comió arroz. Comió una ensalada con tres granos de arroz."
+    ],
+    [
+     "martin",
+     "Pero no digo nada."
+    ],
+    [
+     "martin",
+     "Digo hamburguesa."
+    ],
+    [
+     "martin",
+     "Me mira como si le hubiera propuesto un área de servicio."
+    ],
+    [
+     "ines",
+     "[cold] Tú verás. Lo que quieras."
+    ],
+    [
+     "martin",
+     "En mi casa, «lo que quieras» no significa lo que quieras."
+    ],
+    [
+     "martin",
+     "Significa que hay una respuesta correcta... y no me la sé."
+    ],
+    [
+     "martin",
+     "Abro el móvil. Mexicano, griego, un tailandés con la foto de un gato."
+    ],
+    [
+     "martin",
+     "Se lo enseño. No mira el móvil. Me mira a mí."
+    ],
+    [
+     "ines",
+     "¿Y a ti qué te apetece?"
+    ],
+    [
+     "martin",
+     "[sighs] A mí me apetece que esto acabe."
+    ],
+    [
+     "martin",
+     "Las cocinas cierran a las diez y media. Son menos cuarto."
+    ],
+    [
+     "martin",
+     "Me encierro en el baño y escribo al grupo: «Emergencia»."
+    ],
+    [
+     "martin",
+     "Me contestan tres audios riéndose y un «suerte, campeón»."
+    ],
+    [
+     "martin",
+     "Salgo. Ella ya tiene el abrigo puesto."
+    ],
+    [
+     "ines",
+     "[cheerful] Venga, que he reservado."
+    ],
+    [
+     "martin",
+     "¿Dónde?"
+    ],
+    [
+     "ines",
+     "En el italiano de la esquina."
+    ],
+    [
+     "martin",
+     "[pause] El italiano de la esquina."
+    ],
+    [
+     "martin",
+     "El que dije yo hace cuarenta minutos."
+    ],
+    [
+     "ines",
+     "[lightly] Es que de repente me ha apetecido."
+    ],
+    [
+     "martin",
+     "Pido pasta."
+    ],
+    [
+     "ines",
+     "[surprised] ¿Otra vez pasta?"
+    ],
+    [
+     "martin",
+     "[resigned] Otra vez pasta, joder."
+    ]
+   ]
+  }
+ ]
+}

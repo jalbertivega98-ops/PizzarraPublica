@@ -28,6 +28,7 @@ import { Pareja10 } from './episodes/pareja10'
 import { Pareja11 } from './episodes/pareja11'
 import { Pareja12 } from './episodes/pareja12'
 import { Pareja13 } from './episodes/pareja13'
+import { Pareja14 } from './episodes/pareja14'
 import { Town } from './scene/Town'
 import { Panel } from './ui/Panel'
 import { useStore } from './state/store'
@@ -123,7 +124,7 @@ export default function App() {
       {EPISODE ? <EpisodeHooks /> : <DebugCam />}
       {!EPISODE?.startsWith('pareja') && <NatureWorld />}
       {!EPISODE?.startsWith('pareja') && <Sign />}
-      {EPISODE === 'pareja13' ? <Pareja13 /> : EPISODE === 'pareja12' ? <Pareja12 /> : EPISODE === 'pareja11' ? <Pareja11 /> : EPISODE === 'pareja05' ? <Pareja05 /> : EPISODE === 'pareja06' ? <Pareja06 /> : EPISODE === 'pareja07' ? <Pareja07 /> : EPISODE === 'pareja08' ? <Pareja08 /> : EPISODE === 'pareja09' ? <Pareja09 /> : EPISODE === 'pareja10' ? <Pareja10 /> : EPISODE === 'pareja02' ? (
+      {EPISODE === 'pareja14' ? <Pareja14 /> : EPISODE === 'pareja13' ? <Pareja13 /> : EPISODE === 'pareja12' ? <Pareja12 /> : EPISODE === 'pareja11' ? <Pareja11 /> : EPISODE === 'pareja05' ? <Pareja05 /> : EPISODE === 'pareja06' ? <Pareja06 /> : EPISODE === 'pareja07' ? <Pareja07 /> : EPISODE === 'pareja08' ? <Pareja08 /> : EPISODE === 'pareja09' ? <Pareja09 /> : EPISODE === 'pareja10' ? <Pareja10 /> : EPISODE === 'pareja02' ? (
         <Pareja02 />
       ) : EPISODE === 'pareja03' ? (
         <Pareja03 />

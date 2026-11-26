@@ -67,3 +67,6 @@ TOTAL caracteres: 377
 == 6_episodio/llaves_largo
   ok 628
 TOTAL caracteres: 628
+== 7_elige_tu/elige_tu
+  ok 1227
+TOTAL caracteres: 1227

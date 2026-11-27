@@ -1,0 +1,54 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- Variante «viral»: tarjeta de mensajes estilo iPhone (modo oscuro) flotando sobre un vídeo de fondo.
+     Fondo transparente: render.cjs la superpone con ffmpeg sobre el vídeo de fondo. -->
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1080px;height:1920px;overflow:hidden;background:transparent;font-family:Inter,"Noto Color Emoji",sans-serif;color:#fff}
+  #card{position:absolute;left:60px;right:60px;top:250px;height:1060px;background:#000;border-radius:56px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.55)}
+  #status{position:absolute;left:0;right:0;top:0;height:70px;display:flex;justify-content:space-between;align-items:flex-end;padding:0 56px;font:600 32px Inter}
+  #head{position:absolute;left:0;right:0;top:70px;height:230px;text-align:center;background:rgba(28,28,30,.96);border-bottom:1px solid #2c2c2e;z-index:3}
+  #head .back{position:absolute;left:34px;top:46px;font:300 76px Inter;color:#0a84ff}
+  #head .av{width:120px;height:120px;border-radius:50%;margin:22px auto 6px;background:linear-gradient(#a3a8b3,#7b808a);display:flex;align-items:center;justify-content:center;font-size:62px}
+  #head .nm{font:500 34px Inter,"Noto Color Emoji";color:#fff}
+  #head .nm::after{content:" ›";color:#8e8e93}
+  #head .st{display:none}
+  #wall{position:absolute;left:0;right:0;top:300px;bottom:0;overflow:hidden}
+  #list{position:absolute;left:0;right:0;top:0;padding:22px 34px 30px;will-change:transform}
+  .row{display:flex;margin-bottom:8px;flex-direction:column;align-items:flex-start}
+  .row.tail{margin-top:18px}
+  .row.yo{align-items:flex-end}
+  .row.sis{align-items:center;margin:20px 0}
+  .b{position:relative;max-width:700px;padding:18px 30px;border-radius:44px;background:#262629;font:400 44px/1.28 Inter,"Noto Color Emoji";word-wrap:break-word}
+  .row.yo .b{background:#0a84ff}
+  .b .who{position:absolute;top:-38px;left:30px;font:400 28px Inter;color:#8e8e93!important;white-space:nowrap}
+  .row.tail.otro{margin-top:52px}
+  .b .meta{display:none}
+  .b.big{font-size:110px;line-height:1.1;background:transparent!important;padding:0 10px}
+  .sisb{background:transparent;color:#8e8e93;font:500 28px Inter,"Noto Color Emoji";padding:0;text-align:center;max-width:820px}
+  .fecha{color:#8e8e93}
+  .map{width:600px;height:320px;border-radius:30px;overflow:hidden;position:relative;margin:-6px -18px 8px}
+  .map svg{position:absolute;inset:0}
+  .maplbl{font:500 36px Inter,"Noto Color Emoji"}
+  .row.rx{margin-bottom:46px}
+  .rc{position:absolute;right:-26px;top:-36px;font-size:40px;line-height:1;background:#3a3a3c;border-radius:30px;padding:8px 10px;transform:scale(0);border:4px solid #000}
+  #typing{position:absolute;left:34px;display:none}
+  #typing .b{display:flex;gap:12px;align-items:center;padding:28px 32px}
+  .dot{width:18px;height:18px;border-radius:50%;background:#8e8e93}
+  #bar{display:none}
+  #hook{position:absolute;left:50px;right:50px;top:70px;text-align:center;z-index:6}
+  #hook span{display:inline-block;color:#fff;font:900 62px/1.15 Inter,"Noto Color Emoji";-webkit-text-stroke:3px #000;paint-order:stroke fill;text-shadow:0 6px 0 #000,0 0 30px rgba(0,0,0,.6)}
+  #final{position:absolute;left:60px;right:60px;top:1360px;text-align:center;opacity:0;z-index:7}
+  #final span{display:inline-block;color:#fff;font:900 66px/1.18 Inter,"Noto Color Emoji";-webkit-text-stroke:3px #000;paint-order:stroke fill;text-shadow:0 6px 0 #000}
+</style></head>
+<body>
+<div id="hook"><span></span></div>
+<div id="card">
+  <div id="status"><span id="hora">20:19</span><span>▴ ▮</span></div>
+  <div id="head"><div class="back">‹</div><div class="av"></div><div class="nm"></div><div class="st"></div></div>
+  <div id="wall"><div id="list"></div><div id="typing"><div class="b"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></div></div>
+</div>
+<div id="bar"><div id="input"><div class="t"></div></div><div id="send"><svg id="mic"></svg><svg id="plane"></svg></div></div>
+<div id="final"><span></span></div>
+<script src="chat.js"></script>
+</body></html>

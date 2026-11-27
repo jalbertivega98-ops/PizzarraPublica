@@ -3,3 +3,4 @@ __pycache__/
 pipeline/voices/*.onnx
 output/
 _work/
+chat/fondos/

@@ -22,6 +22,8 @@ jobs:
       - name: Instalar edge-tts
         run: pip install edge-tts==7.3.1
       - name: Generar voces
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         run: python3 terror/voz.py terror/guiones/*.json
       - name: Guardar las voces en la rama
         if: always()

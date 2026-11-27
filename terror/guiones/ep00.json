@@ -1,16 +1,15 @@
 {
   "ep": "ep00",
-  "voz": "es-ES-AlvaroNeural",
-  "rate": "-22%",
-  "pitch": "-14Hz",
+  "motor": "elevenlabs",
+  "voz": "pNInz6obpgDQGcFmaJgB",
+  "modelo": "eleven_multilingual_v2",
+  "ajustes": {"stability": 0.65, "similarity_boost": 0.8, "style": 0.25, "speed": 0.9, "use_speaker_boost": true},
+  "salida": "adam",
   "frases": [
-    {"id": "l1", "t": "Dicen que quien entra en esta casa... no vuelve a salir."},
-    {"id": "l2", "t": "Esta noche... vamos a comprobarlo."},
-    {"id": "l3", "t": "Entramos."},
-    {"id": "l4", "t": "Se ha cerrado... sola."},
-    {"id": "l5", "t": "¿Qué ha sido eso?"},
-    {"id": "l6", "t": "Hay alguien ahí dentro."},
-    {"id": "l7", "t": "Tú decides adónde vamos."},
-    {"id": "l8", "t": "¿Qué puerta abrimos? Uno... dos... o tres."}
+    {"id": "l1", "t": "Esta casa... lleva diez años abandonada."},
+    {"id": "l2", "t": "Desde que murió su dueña. Tenía setenta y ocho años."},
+    {"id": "l3", "t": "Esta noche... vamos a entrar."},
+    {"id": "l4", "t": "A partir de aquí... no voy solo. Vosotros me vais a guiar."},
+    {"id": "l5", "t": "¿Qué puerta abrimos?"}
   ]
 }

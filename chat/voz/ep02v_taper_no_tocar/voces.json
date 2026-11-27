@@ -1,0 +1,116 @@
+{
+ "0": {
+  "archivo": "00_ab8376a566.mp3",
+  "dur": 2.76,
+  "texto": "¿Quién se ha comido el táper de la nevera?",
+  "voz": "es-ES-ElviraNeural"
+ },
+ "1": {
+  "archivo": "01_770a825709.mp3",
+  "dur": 2.112,
+  "texto": "El que ponía NO TOCAR",
+  "voz": "es-ES-ElviraNeural"
+ },
+ "2": {
+  "archivo": "02_328949a922.mp3",
+  "dur": 1.872,
+  "texto": "Yo no he sido",
+  "voz": "es-ES-ElviraNeural"
+ },
+ "3": {
+  "archivo": "03_f020c4b77a.mp3",
+  "dur": 1.704,
+  "texto": "Yo tampoco",
+  "voz": "es-ES-XimenaNeural"
+ },
+ "4": {
+  "archivo": "04_db0ebd8d2e.mp3",
+  "dur": 2.136,
+  "texto": "Yo estoy en el trabajo",
+  "voz": "es-ES-AlvaroNeural"
+ },
+ "6": {
+  "archivo": "06_35666cce11.mp3",
+  "dur": 1.872,
+  "texto": "Teletrabajo",
+  "voz": "es-ES-AlvaroNeural"
+ },
+ "7": {
+  "archivo": "07_df2ed06c88.mp3",
+  "dur": 2.544,
+  "texto": "Los viernes no teletrabajas",
+  "voz": "es-ES-ElviraNeural"
+ },
+ "8": {
+  "archivo": "08_1079908619.mp3",
+  "dur": 2.304,
+  "texto": "Me he ofrecido voluntario",
+  "voz": "es-ES-AlvaroNeural"
+ },
+ "9": {
+  "archivo": "09_d908ff8165.mp3",
+  "dur": 2.808,
+  "texto": "Javier, ¿te has comido las lentejas?",
+  "voz": "es-ES-ElviraNeural"
+ },
+ "10": {
+  "archivo": "10_b958219f80.mp3",
+  "dur": 1.872,
+  "texto": "¿Qué lentejas?",
+  "voz": "es-ES-AlvaroNeural"
+ },
+ "11": {
+  "archivo": "11_ef05545cbe.mp3",
+  "dur": 2.568,
+  "texto": "Las del táper que ponía NO TOCAR",
+  "voz": "es-ES-ElviraNeural"
+ },
+ "12": {
+  "archivo": "12_9142abac83.mp3",
+  "dur": 3.192,
+  "texto": "Pensaba que era un táper vacío con un cartel",
+  "voz": "es-ES-AlvaroNeural"
+ },
+ "13": {
+  "archivo": "13_ff0d39885f.mp3",
+  "dur": 2.976,
+  "texto": "¿Y por qué estaba en tu mesa con una cuchara?",
+  "voz": "es-ES-XimenaNeural"
+ },
+ "14": {
+  "archivo": "14_66cbdf7cfd.mp3",
+  "dur": 2.016,
+  "texto": "Lo estaba limpiando",
+  "voz": "es-ES-AlvaroNeural"
+ },
+ "15": {
+  "archivo": "15_c67bc3caf7.mp3",
+  "dur": 1.872,
+  "texto": "Por dentro",
+  "voz": "es-ES-AlvaroNeural"
+ },
+ "17": {
+  "archivo": "17_d302fcadb0.mp3",
+  "dur": 2.712,
+  "texto": "Esas lentejas eran la cena de hoy",
+  "voz": "es-ES-ElviraNeural"
+ },
+ "18": {
+  "archivo": "18_5763d464e7.mp3",
+  "dur": 1.872,
+  "texto": "¿Y qué hay de cena?",
+  "voz": "es-ES-AlvaroNeural"
+ },
+ "19": {
+  "archivo": "19_0e184252ab.mp3",
+  "dur": 1.872,
+  "texto": "Ya no hay cena",
+  "voz": "es-ES-ElviraNeural"
+ },
+ "20": {
+  "archivo": "20_d8f697ab77.mp3",
+  "dur": 1.872,
+  "texto": "¿Pido pizza?",
+  "voz": "es-ES-AlvaroNeural"
+ }
+}

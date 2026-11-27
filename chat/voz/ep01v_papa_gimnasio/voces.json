@@ -1,0 +1,110 @@
+{
+ "0": {
+  "archivo": "00_fe3d51a65a.mp3",
+  "dur": 3.096,
+  "texto": "¿Por qué tu padre lleva 3 horas en el hospital?",
+  "voz": "es-ES-ElviraNeural"
+ },
+ "1": {
+  "archivo": "01_84bd7707d1.mp3",
+  "dur": 3.816,
+  "texto": "¿¿Qué?? Me dijo que se iba al gimnasio",
+  "voz": "es-ES-XimenaNeural"
+ },
+ "4": {
+  "archivo": "04_1da22c5b0a.mp3",
+  "dur": 2.112,
+  "texto": "Estoy en el gimnasio",
+  "voz": "es-ES-AlvaroNeural"
+ },
+ "5": {
+  "archivo": "05_690d177f28.mp3",
+  "dur": 1.872,
+  "texto": "Javier.",
+  "voz": "es-ES-ElviraNeural"
+ },
+ "6": {
+  "archivo": "06_982cae3da0.mp3",
+  "dur": 2.472,
+  "texto": "Es un gimnasio muy completo",
+  "voz": "es-ES-AlvaroNeural"
+ },
+ "7": {
+  "archivo": "07_7ae6291df2.mp3",
+  "dur": 2.112,
+  "texto": "Tiene hasta enfermeras",
+  "voz": "es-ES-AlvaroNeural"
+ },
+ "8": {
+  "archivo": "08_ec4a698bd0.mp3",
+  "dur": 1.872,
+  "texto": "PAPÁ",
+  "voz": "es-ES-XimenaNeural"
+ },
+ "9": {
+  "archivo": "09_7c865c4f84.mp3",
+  "dur": 3.504,
+  "texto": "Vale. Me he hecho un poco de daño",
+  "voz": "es-ES-AlvaroNeural"
+ },
+ "10": {
+  "archivo": "10_4b4447434b.mp3",
+  "dur": 1.872,
+  "texto": "¿Haciendo qué?",
+  "voz": "es-ES-ElviraNeural"
+ },
+ "11": {
+  "archivo": "11_b29a241a8c.mp3",
+  "dur": 1.872,
+  "texto": "Calentando",
+  "voz": "es-ES-AlvaroNeural"
+ },
+ "12": {
+  "archivo": "12_5ec58b0324.mp3",
+  "dur": 1.872,
+  "texto": "¿¿Calentando??",
+  "voz": "es-ES-XimenaNeural"
+ },
+ "13": {
+  "archivo": "13_157eb713e2.mp3",
+  "dur": 3.384,
+  "texto": "Me agaché a atarme la zapatilla y me dio un tirón",
+  "voz": "es-ES-AlvaroNeural"
+ },
+ "14": {
+  "archivo": "14_78e98ca804.mp3",
+  "dur": 3.96,
+  "texto": "Llevas 3 meses pagando ese gimnasio y era tu primer día",
+  "voz": "es-ES-ElviraNeural"
+ },
+ "15": {
+  "archivo": "15_51a3d37a0d.mp3",
+  "dur": 1.536,
+  "texto": "Segundo",
+  "voz": "es-ES-AlvaroNeural"
+ },
+ "16": {
+  "archivo": "16_ef27fdfaf8.mp3",
+  "dur": 3.024,
+  "texto": "El primero solo fui a mirar las máquinas",
+  "voz": "es-ES-AlvaroNeural"
+ },
+ "17": {
+  "archivo": "17_a06999ba78.mp3",
+  "dur": 3.864,
+  "texto": "Buenas noticias. Ya me dan el alta",
+  "voz": "es-ES-AlvaroNeural"
+ },
+ "18": {
+  "archivo": "18_d52fe3f80d.mp3",
+  "dur": 3.408,
+  "texto": "El médico dice que nada de deporte en 2 semanas",
+  "voz": "es-ES-AlvaroNeural"
+ },
+ "19": {
+  "archivo": "19_7c2f271322.mp3",
+  "dur": 2.856,
+  "texto": "Así que me he dado de baja del gimnasio",
+  "voz": "es-ES-AlvaroNeural"
+ }
+}

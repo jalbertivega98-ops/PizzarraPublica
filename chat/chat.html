@@ -1,57 +1,88 @@
 <!doctype html>
 <html><head><meta charset="utf-8">
+<!-- Motor «Historias por chat» — aspecto de app de mensajería tipo WhatsApp (modo claro) -->
 <style>
-  :root{--bg:#0d1117;--panel:#161b22;--recv:#262d38;--sent:#2f6fed;--txt:#f2f4f8;--muted:#8b95a7}
+  :root{--hdr:#008069;--wall:#efeae2;--in:#ffffff;--out:#d9fdd3;--txt:#111b21;--meta:#667781;--tick:#53bdeb}
   *{box-sizing:border-box;margin:0;padding:0}
-  html,body{width:1080px;height:1920px;overflow:hidden;background:var(--bg);font-family:Inter,"Noto Color Emoji",sans-serif;color:var(--txt)}
-  #hook{position:absolute;left:60px;right:60px;top:110px;text-align:center;z-index:5}
-  #hook span{display:inline-block;background:#ffe14d;color:#111;font:800 62px/1.18 Inter,"Noto Color Emoji";padding:18px 30px;border-radius:22px;box-shadow:0 10px 0 rgba(0,0,0,.35)}
-  #head{position:absolute;left:0;right:0;top:330px;height:140px;background:var(--panel);display:flex;align-items:center;padding:0 60px;gap:28px;border-bottom:2px solid #222a35;z-index:4}
-  #head .av{width:92px;height:92px;border-radius:50%;background:#3a4252;display:flex;align-items:center;justify-content:center;font-size:48px}
-  #head .nm{font:700 48px Inter,"Noto Color Emoji"}
-  #head .st{font:500 32px Inter;color:var(--muted);margin-top:4px;height:38px}
-  #view{position:absolute;left:0;right:0;top:470px;height:1010px;overflow:hidden}
-  #list{position:absolute;left:0;right:0;top:0;padding:30px 150px 40px 60px;will-change:transform}
-  .row{display:flex;margin-bottom:26px}
+  html,body{width:1080px;height:1920px;overflow:hidden;background:var(--wall);font-family:Roboto,Inter,"Noto Color Emoji",sans-serif;color:var(--txt)}
+  #status{position:absolute;left:0;right:0;top:0;height:150px;background:var(--hdr);color:#fff;font:600 36px Inter;display:flex;justify-content:space-between;align-items:flex-end;padding:0 50px 22px}
+  #head{position:absolute;left:0;right:0;top:150px;height:170px;background:var(--hdr);display:flex;align-items:center;padding:0 30px;gap:22px;color:#fff;z-index:4;box-shadow:0 3px 8px rgba(0,0,0,.15)}
+  #head .back{font:400 64px Inter;width:50px}
+  #head .av{width:110px;height:110px;border-radius:50%;background:#dfe5e7;display:flex;align-items:center;justify-content:center;font-size:58px;flex:none}
+  #head .info{flex:1;min-width:0}
+  #head .nm{font:600 50px Inter,"Noto Color Emoji";white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #head .st{font:400 34px Inter;opacity:.9;margin-top:6px;height:42px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #head svg{flex:none}
+  #wall{position:absolute;left:0;right:0;top:320px;height:1230px;overflow:hidden;background:var(--wall)}
+  #wall .pat{position:absolute;inset:0;opacity:.07}
+  #list{position:absolute;left:0;right:0;top:0;padding:30px 36px 30px;will-change:transform}
+  .row{display:flex;margin-bottom:10px}
+  .row.tail{margin-top:22px}
   .row.yo{justify-content:flex-end}
-  .row.sis{justify-content:center}
-  .b{max-width:720px;padding:22px 30px 24px;border-radius:38px;background:var(--recv);font:500 46px/1.28 Inter,"Noto Color Emoji";transform-origin:left bottom;word-wrap:break-word}
-  .row.yo .b{background:var(--sent);transform-origin:right bottom;border-bottom-right-radius:12px}
-  .row.otro .b{border-bottom-left-radius:12px}
-  .b .who{font:700 32px Inter;margin-bottom:6px}
-  .sisb{background:#1f2630;color:var(--muted);font:600 32px Inter,"Noto Color Emoji";padding:12px 26px;border-radius:24px}
-  .map{width:600px;height:330px;border-radius:24px;overflow:hidden;position:relative;margin-top:8px;background:#dfe6d8}
+  .row.sis{justify-content:center;margin:22px 0}
+  .b{position:relative;max-width:800px;padding:14px 26px 14px;border-radius:22px;background:var(--in);font:400 46px/1.32 Roboto,Inter,"Noto Color Emoji";box-shadow:0 2px 1.5px rgba(11,20,26,.13);word-wrap:break-word}
+  .row.yo .b{background:var(--out)}
+  .row.tail.otro .b{border-top-left-radius:0}
+  .row.tail.yo .b{border-top-right-radius:0}
+  .row.tail.otro .b::before{content:"";position:absolute;left:-20px;top:0;border-top:26px solid var(--in);border-left:22px solid transparent}
+  .row.tail.yo .b::before{content:"";position:absolute;right:-20px;top:0;border-top:26px solid var(--out);border-right:22px solid transparent}
+  .b .who{font:600 34px Inter;margin-bottom:2px}
+  .b .meta{float:right;font:400 28px Inter;color:var(--meta);margin:22px 0 -8px 22px;white-space:nowrap}
+  .b .meta .tk{color:var(--tick);font-weight:700;letter-spacing:-8px;margin-left:8px}
+  .b.big{font-size:120px;line-height:1.1;background:transparent!important;box-shadow:none}
+  .b.big::before{display:none}
+  .sisb{background:#ffeecd;color:#54656f;font:500 32px Inter,"Noto Color Emoji";padding:12px 28px;border-radius:18px;box-shadow:0 1px 1px rgba(0,0,0,.1)}
+  .fecha{background:#fff;color:#54656f}
+  .map{width:640px;height:340px;border-radius:14px;overflow:hidden;position:relative;margin:4px 0 6px}
   .map svg{position:absolute;inset:0}
-  .map .lbl{position:absolute;left:0;right:0;bottom:0;background:rgba(0,0,0,.72);font:600 32px Inter;padding:12px 20px;color:#fff}
-  #typing{position:absolute;left:60px;display:none}
-  #typing .b{display:flex;gap:14px;align-items:center;padding:30px 34px}
-  #typing .who{font:700 32px Inter;margin-right:6px}
-  .dot{width:20px;height:20px;border-radius:50%;background:#9aa4b5}
-  #input{position:absolute;left:40px;right:40px;top:1500px;height:120px;background:var(--panel);border-radius:60px;display:flex;align-items:center;padding:0 40px;font:500 44px Inter,"Noto Color Emoji";color:var(--muted);gap:20px}
+  .maplbl{font:500 38px Inter,"Noto Color Emoji";margin-top:6px}
+  #typing{position:absolute;left:36px;display:none}
+  #typing .b{display:flex;gap:12px;align-items:center;padding:28px 32px;border-top-left-radius:0}
+  .dot{width:18px;height:18px;border-radius:50%;background:#8696a0}
+  #bar{position:absolute;left:0;right:0;top:1550px;height:150px;display:flex;align-items:center;padding:0 22px;gap:16px;background:var(--wall)}
+  #input{flex:1;height:118px;background:#fff;border-radius:60px;display:flex;align-items:center;padding:0 34px;gap:20px;font:400 46px Roboto,Inter,"Noto Color Emoji";color:#8696a0;box-shadow:0 1px 1px rgba(0,0,0,.1)}
   #input .t{flex:1;white-space:nowrap;overflow:hidden}
-  #input .t span{color:var(--txt)}
-  #input .cur{display:inline-block;width:4px;height:50px;background:var(--sent);vertical-align:middle;margin-left:4px}
-  #send{width:84px;height:84px;border-radius:50%;background:#2a3140;display:flex;align-items:center;justify-content:center;font-size:44px;color:#fff;flex:none}
-  #final{position:absolute;left:60px;right:60px;top:760px;text-align:center;opacity:0;z-index:6}
-  #final span{display:inline-block;background:#fff;color:#111;font:800 64px/1.2 Inter,"Noto Color Emoji";padding:28px 36px;border-radius:30px;box-shadow:0 14px 0 rgba(0,0,0,.4)}
-  #wm{position:absolute;right:60px;top:1650px;font:700 34px Inter;color:rgba(255,255,255,.35)}
+  #input .t b{font-weight:400;color:var(--txt)}
+  #input .cur{display:inline-block;width:4px;height:54px;background:#00a884;vertical-align:middle;margin-left:3px}
+  #send{width:118px;height:118px;border-radius:50%;background:#00a884;display:flex;align-items:center;justify-content:center;flex:none}
+  #nav{position:absolute;left:0;right:0;top:1700px;bottom:0;background:var(--wall)}
+  #hook{position:absolute;left:50px;right:50px;top:360px;text-align:center;z-index:6}
+  #hook span{display:inline-block;background:#111;color:#fff;font:800 60px/1.2 Inter,"Noto Color Emoji";padding:20px 32px;border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  #final{position:absolute;left:60px;right:60px;top:760px;text-align:center;opacity:0;z-index:7}
+  #final span{display:inline-block;background:#111;color:#fff;font:800 66px/1.2 Inter,"Noto Color Emoji";padding:30px 38px;border-radius:30px;box-shadow:0 14px 40px rgba(0,0,0,.45)}
+  .row.rx{margin-bottom:52px}
+  .rc{position:absolute;left:24px;bottom:-46px;font-size:46px;line-height:1;background:#fff;border-radius:30px;padding:6px 12px;box-shadow:0 2px 4px rgba(0,0,0,.2);transform:scale(0)}
 </style></head>
 <body>
+<div id="status"><span id="hora">13:45</span><span>▾ ▴ ▮</span></div>
+<div id="head"><div class="back">←</div><div class="av"></div><div class="info"><div class="nm"></div><div class="st"></div></div>
+  <svg width="64" height="64" viewBox="0 0 24 24" fill="#fff"><path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+  <svg width="58" height="58" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+  <svg width="58" height="58" viewBox="0 0 24 24" fill="#fff"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
+</div>
+<div id="wall"><svg class="pat" width="1080" height="1230"><defs><pattern id="p" width="180" height="180" patternUnits="userSpaceOnUse">
+  <g fill="none" stroke="#000" stroke-width="3"><circle cx="30" cy="30" r="14"/><path d="M90 20 l20 20 m0 -20 l-20 20"/><rect x="130" y="80" width="30" height="22" rx="5"/><path d="M20 120 q20 -25 40 0 t40 0"/><path d="M120 150 l14 -24 l14 24z"/><circle cx="160" cy="25" r="5"/><path d="M70 85 c10 -14 30 -14 30 0 c0 14 -30 26 -30 26 c0 0 -30 -12 -30 -26 c0 -14 20 -14 30 0z" transform="scale(.6) translate(40 60)"/></g></pattern></defs><rect width="1080" height="1230" fill="url(#p)"/></svg>
+  <div id="list"></div>
+  <div id="typing"><div class="b"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></div>
+</div>
+<div id="bar"><div id="input"><span style="font-size:52px">🙂</span><div class="t"></div><span style="font-size:48px;transform:rotate(45deg)">📎</span><span style="font-size:48px">📷</span></div>
+  <div id="send"><svg id="mic" width="60" height="60" viewBox="0 0 24 24" fill="#fff"><path d="M12 15a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v7a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V22h2v-3.1A7 7 0 0 0 19 12z"/></svg><svg id="plane" width="60" height="60" viewBox="0 0 24 24" fill="#fff" style="display:none"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg></div></div>
+<div id="nav"></div>
 <div id="hook"><span></span></div>
-<div id="head"><div class="av"></div><div><div class="nm"></div><div class="st"></div></div></div>
-<div id="view"><div id="list"></div><div id="typing"><div class="b"><span class="who"></span><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></div></div>
-<div id="input"><div class="t"><span></span></div><div id="send">➤</div></div>
 <div id="final"><span></span></div>
-<div id="wm"></div>
 <script>
 const $=s=>document.querySelector(s);
 const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
 const ease=x=>{x=clamp(x,0,1);return 1-Math.pow(1-x,3)};
+const back=x=>{x=clamp(x,0,1);const c=1.70158;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
 const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
-const MAPSVG=`<svg viewBox="0 0 600 330" width="600" height="330"><rect width="600" height="330" fill="#e3e9dc"/>
-<g stroke="#fff" stroke-width="22" fill="none"><path d="M-10 90 L610 140"/><path d="M180 -10 L240 340"/><path d="M-10 260 L610 230"/><path d="M430 -10 L400 340"/></g>
-<rect x="250" y="150" width="140" height="70" rx="8" fill="#f6c8c8"/><text x="320" y="194" font-size="34" text-anchor="middle" fill="#c0392b" font-family="Inter" font-weight="800">H</text>
-<g transform="translate(320 120)"><path d="M0 0 C-26 -30 -26 -62 0 -62 C26 -62 26 -30 0 0Z" fill="#e53935"/><circle cy="-42" r="10" fill="#fff"/></g></svg>`;
+const soloEmoji=s=>/^(\p{Extended_Pictographic}|️|‍|\s){1,8}$/u.test(s);
+const MAPSVG=`<svg viewBox="0 0 640 340" width="640" height="340"><rect width="640" height="340" fill="#e8eae0"/>
+<rect x="0" y="0" width="200" height="120" fill="#cfe6c4"/><rect x="470" y="230" width="170" height="110" fill="#cfe6c4"/>
+<g stroke="#fff" stroke-width="24" fill="none"><path d="M-10 100 L650 150"/><path d="M190 -10 L250 350"/><path d="M-10 270 L650 240"/><path d="M450 -10 L420 350"/></g>
+<g stroke="#f7d774" stroke-width="12" fill="none"><path d="M-10 100 L650 150"/></g>
+<rect x="265" y="165" width="140" height="62" rx="8" fill="#f4c4c4"/><text x="335" y="207" font-size="34" text-anchor="middle" fill="#c62828" font-family="Inter" font-weight="800">H</text>
+<g transform="translate(335 145)"><path d="M0 0 C-28 -32 -28 -66 0 -66 C28 -66 28 -32 0 0Z" fill="#ea4335"/><circle cy="-44" r="11" fill="#7b1c14"/></g></svg>`;
 
 window.setup=function(G,opt){
   window.G=G; opt=opt||{};
@@ -59,52 +90,67 @@ window.setup=function(G,opt){
   $('#head .nm').textContent=G.chat;
   $('#head .av').textContent=(G.avatar||G.chat.match(/\p{Extended_Pictographic}/u)?.[0]||G.chat[0]);
   $('#final span').textContent=G.final||'';
-  $('#wm').textContent=G.marca||'';
   const yo=G.yo||'yo', L=$('#list'), P=G.personas||{};
-  const grupo=Object.keys(P).filter(k=>k!==yo).length>1 || G.grupo;
+  const otros=Object.keys(P).filter(k=>k!==yo);
+  G._grupo=otros.length>1||G.grupo;
+  let h=G.hora||'13:45'; let [hh,mm]=h.split(':').map(Number);
+  $('#hora').textContent=h;
+  if(G.fecha!==false){const r=document.createElement('div');r.className='row sis';r.innerHTML=`<div class="b sisb fecha">${G.fecha||'HOY'}</div>`;L.appendChild(r);}
+  let prev=null;
   G.mensajes.forEach((m,i)=>{
+    if(m.hora){[hh,mm]=m.hora.split(':').map(Number);}
+    const hs=String(hh).padStart(2,'0')+':'+String(mm).padStart(2,'0');
     const r=document.createElement('div');
     const tipo=m.de==='sistema'?'sis':(m.de===yo?'yo':'otro');
-    r.className='row '+tipo; r.id='m'+i;
+    const tail=tipo!=='sis'&&prev!==m.de;
+    r.className='row '+tipo+(tail?' tail':''); r.id='m'+i;
+    const meta=`<span class="meta">${hs}${tipo==='yo'?'<span class="tk">✓✓</span>':''}</span>`;
     if(tipo==='sis') r.innerHTML=`<div class="b sisb">${esc(m.texto)}</div>`;
+    else if(soloEmoji(m.texto)&&!m.tipo) r.innerHTML=`<div class="b big">${esc(m.texto)}</div>`;
     else{
-      let who=(tipo==='otro'&&grupo)?`<div class="who" style="color:${P[m.de]?.color||'#fff'}">${esc(P[m.de]?.nombre||m.de)}</div>`:'';
-      let body=m.tipo==='mapa'?`<div class="map">${MAPSVG}<div class="lbl">📍 ${esc(m.texto)}</div></div>`:esc(m.texto);
-      r.innerHTML=`<div class="b">${who}${body}</div>`;
+      let who=(tipo==='otro'&&G._grupo&&tail)?`<div class="who" style="color:${P[m.de]?.color||'#1fa855'}">${esc(P[m.de]?.nombre||m.de)}</div>`:'';
+      let body=m.tipo==='mapa'?`<div class="map">${MAPSVG}</div><div class="maplbl">📍 ${esc(m.texto)}</div>`:esc(m.texto);
+      r.innerHTML=`<div class="b">${who}${body}${meta}${m.reaccion?`<span class="rc">${m.reaccion}</span>`:''}</div>`;
+      if(m.reaccion) r.classList.add('rx');
     }
     r.style.visibility='hidden'; L.appendChild(r);
+    prev=m.de==='sistema'?null:m.de;
+    if(m.minutos) mm+=m.minutos; while(mm>=60){mm-=60;hh=(hh+1)%24;}
   });
-  // timeline
-  let t=opt.inicio??0.9; const ev=[], T=[];
+  // línea de tiempo
+  let t=opt.inicio??1.2; const ev=[], T=[];
+  const vel=G.velocidad||1;
   G.mensajes.forEach((m,i)=>{
     const n=(m.texto||'').length, p=m.pausa||0;
-    if(m.de==='sistema'){T.push({i,show:t});ev.push({t,s:'sys'});t+=1.1+p;return;}
+    if(m.de==='sistema'){T.push({i,show:t});ev.push({t,s:'sys'});t+=(1.2+p)/vel;return;}
     if(m.de===yo){
-      const d=clamp(n*0.045,0.6,2.2); T.push({i,typeA:t,typeB:t+d,show:t+d+0.15});
+      const d=clamp(n*0.05,0.5,2.2)/vel; T.push({i,typeA:t,typeB:t+d,show:t+d+0.18});
       for(let k=0;k<n;k++) ev.push({t:t+d*k/n,s:'key'});
-      t+=d+0.15; ev.push({t,s:'sent'}); t+=clamp(0.5+n*0.03,0.7,1.8)+p; return;
+      t+=d+0.18; ev.push({t,s:'sent'}); t+=(clamp(0.5+n*0.03,0.7,1.8)+p)/vel; return;
     }
-    const d=m.tipo==='mapa'?1.0:clamp(0.45+n*0.022,0.7,1.6);
+    const d=(m.tipo==='mapa'?1.0:clamp(0.4+n*0.022,0.6,1.5))/vel;
     T.push({i,dotsA:t,show:t+d,de:m.de}); t+=d; ev.push({t,s:'recv'});
-    t+=(m.tipo==='mapa'?1.8:clamp(0.6+n*0.042,0.9,3.0))+p;
+    if(m.reaccion) {T[T.length-1].react={e:m.reaccion,t:t+0.9}; ev.push({t:t+0.9,s:'sys'});}
+    t+=((m.tipo==='mapa'?1.8:clamp(0.55+n*0.04,0.8,3.0))+p)/vel;
   });
-  G._T=T; G._final=t; G.dur=t+(G.final?2.8:0.8); G.ev=ev;
-  // measure
-  G._bot=T.map(x=>{const e=$('#m'+x.i);return e.offsetTop+e.offsetHeight+26});
+  G._T=T; G._final=t; G.dur=t+(G.final?3.0:0.8); G.ev=ev;
+  G._bot=T.map(x=>{const e=$('#m'+x.i);return e.offsetTop+e.offsetHeight+10});
+  G._top0=L.firstElementChild?L.firstElementChild.offsetTop+L.firstElementChild.offsetHeight+10:30;
   return {dur:G.dur,events:ev};
 };
 
 window.draw=function(t){
-  const G=window.G,T=G._T,VH=1010,TY=110;
-  let off=0,prevOff=0,offT=-9, typing=null, inText='';
-  const target=(k,extra)=>Math.max(0,(k>=0?G._bot[k]:30)+extra-VH+20);
-  let last=-1;
+  const G=window.G,T=G._T,VH=1230,TY=120;
+  let typing=null, inText='', last=-1;
+  const target=(k,extra)=>Math.max(0,(k>=0?G._bot[k]:G._top0)+extra-VH+30);
   T.forEach((x,k)=>{
     const e=document.getElementById('m'+x.i);
     if(t>=x.show){
       last=k; e.style.visibility='visible';
-      const a=ease((t-x.show)/0.22);
-      e.firstElementChild.style.transform=`scale(${0.7+0.3*a})`; e.style.opacity=a;
+      const a=(t-x.show)/0.25;
+      e.firstElementChild.style.transform=`scale(${0.6+0.4*back(a)})`;
+      e.firstElementChild.style.transformOrigin=e.classList.contains('yo')?'right bottom':'left bottom';
+      e.style.opacity=ease(a*1.5);
     } else e.style.visibility='hidden';
     if(x.dotsA!==undefined && t>=x.dotsA && t<x.show) typing=x;
     if(x.typeA!==undefined && t>=x.typeA && t<x.show){
@@ -112,28 +158,28 @@ window.draw=function(t){
       inText=s.slice(0,n);
     }
   });
-  // scroll: compute offset target timeline
-  let cur=0; let from=0, at=-9, to=0;
+  let from=0, at=-9, to=0;
+  const valAt=(f,tt,a,now)=>f+(tt-f)*ease((now-a)/0.3);
   T.forEach((x,k)=>{
     if(x.dotsA!==undefined && t>=x.dotsA){ const tg=target(k-1,TY); if(tg!==to){from=valAt(from,to,at,x.dotsA);to=tg;at=x.dotsA;} }
     if(t>=x.show){ const tg=target(k,0); if(tg!==to){from=valAt(from,to,at,x.show);to=tg;at=x.show;} }
   });
-  function valAt(f,tt,a,now){return f+(tt-f)*ease((now-a)/0.3)}
-  cur=valAt(from,to,at,t);
+  const cur=valAt(from,to,at,t);
   $('#list').style.transform=`translateY(${-cur}px)`;
   const ty=$('#typing');
   if(typing){
-    ty.style.display='block'; const base=last>=0?G._bot[last]:30; ty.style.top=(base-cur)+'px';
-    const P=G.personas[typing.de]||{}; ty.querySelector('.who').textContent=P.nombre||'';
-    ty.querySelector('.who').style.color=P.color||'#fff';
-    ty.querySelectorAll('.dot').forEach((d,j)=>{d.style.transform=`translateY(${-10*Math.max(0,Math.sin((t*7)-j*0.9))}px)`});
+    ty.style.display='block'; const base=last>=0?G._bot[last]:G._top0; ty.style.top=(base+12-cur)+'px';
+    ty.querySelectorAll('.dot').forEach((d,j)=>{d.style.transform=`translateY(${-9*Math.max(0,Math.sin((t*7)-j*0.9))}px)`;d.style.opacity=.55+.45*Math.max(0,Math.sin((t*7)-j*0.9))});
   } else ty.style.display='none';
-  $('#head .st').textContent=typing?((G.personas[typing.de]||{}).nombre+' está escribiendo…'):'en línea';
-  const it=$('#input .t span'); it.innerHTML=inText?esc(inText.length>27?'…'+inText.slice(-26):inText)+'<i class="cur"></i>':'';
-  if(!inText) $('#input .t span').innerHTML='<span style="color:#8b95a7">Mensaje</span>';
-  $('#send').style.background=inText?'#2f6fed':'#2a3140';
+  // reacciones
+  T.forEach(x=>{ if(x.react){const e=document.querySelector('#m'+x.i+' .rc'); if(e) e.style.transform=`scale(${t>=x.react.t?back((t-x.react.t)/0.3):0})`;}});
+  const P=G.personas||{};
+  $('#head .st').textContent=typing?(G._grupo?(P[typing.de]||{}).nombre+' está escribiendo…':'escribiendo…'):(G._grupo?Object.keys(P).map(k=>P[k].nombre).join(', '):'en línea');
+  $('#input .t').innerHTML=inText?'<b>'+esc(inText.length>24?'…'+inText.slice(-23):inText)+'</b><i class="cur"></i>':'Mensaje';
+  $('#mic').style.display=inText?'none':'block'; $('#plane').style.display=inText?'block':'none';
+  const hk=$('#hook'); const ha=t<3.6?ease(t/0.3):1-ease((t-3.6)/0.4);
+  hk.style.opacity=G.hook?ha:0; hk.style.transform=`scale(${0.9+0.1*ha})`;
   const f=$('#final'); const fa=ease((t-G._final-0.3)/0.35);
-  f.style.opacity=G.final?fa:0; f.style.transform=`scale(${0.85+0.15*fa})`;
-  $('#hook').style.transform=`scale(${0.9+0.1*ease(t/0.35)})`;
+  f.style.opacity=G.final?fa:0; f.style.transform=`scale(${0.85+0.15*back((t-G._final-0.3)/0.35)})`;
 };
 </script></body></html>

@@ -1,0 +1,37 @@
+name: Voces de los vídeos de chat
+
+# Se lanza solo al subir un guion de chat con "voces": true (en cualquier rama).
+on:
+  push:
+    paths:
+      - "chat/guiones/**.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: chat-voces-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  voces:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instalar edge-tts y ffmpeg
+        run: |
+          pip install edge-tts==7.3.1
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+      - name: Generar voces
+        run: python3 chat/voces.py chat/guiones/*.json
+      - name: Guardar las voces en la rama
+        run: |
+          git add chat/voz
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Voces de chat (edge-tts)"
+            git pull --rebase -q origin "${GITHUB_REF_NAME}" || true
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi

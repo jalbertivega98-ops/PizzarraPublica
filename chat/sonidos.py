@@ -64,9 +64,15 @@ def key():    # clic de teclado de móvil: golpe seco agudo + cuerpo grave muy c
 def sys_():   # aviso de grupo: dos notas muy suaves
     return 0.5 * mix(drop(800, 880, 0.15, 0.05, 0.2), np.pad(drop(1100, 1175, 0.15, 0.05, 0.16), (int(SR * .07), 0)))
 
+import subprocess, os
+def cargar_voz(i):
+    v = ev["voces"][str(i)]
+    raw = subprocess.check_output(["ffmpeg", "-v", "error", "-i", os.path.join(ev["vozDir"], v["archivo"]), "-f", "s16le", "-ac", "1", "-ar", str(SR), "-"])
+    return np.frombuffer(raw, np.int16).astype(np.float64) / 32768 * 1.6
+
 F = {"recv": recv, "sent": sent, "key": key, "sys": sys_}
 for e in ev["events"]:
-    s = F[e["s"]](); i = int(e["t"] * SR)
+    s = cargar_voz(e["i"]) if e["s"] == "voz" else F[e["s"]](); i = int(e["t"] * SR)
     if i >= N: continue
     if e["s"] == "key": s = s * rng.uniform(0.6, 1.1)
     out[i:i + len(s)] += s[: N - i]

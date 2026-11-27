@@ -1,0 +1,127 @@
+{
+ "slug": "ep01v_papa_gimnasio",
+ "hook": "Mi madre ha mirado la ubicación de mi padre 💀",
+ "chat": "Familia 🏠",
+ "avatar": "🏠",
+ "hora": "19:42",
+ "yo": "yo",
+ "personas": {
+  "mama": {
+   "nombre": "Mamá",
+   "color": "#e5427a",
+   "voz": "es-ES-ElviraNeural"
+  },
+  "papa": {
+   "nombre": "Papá",
+   "color": "#1f7aec",
+   "voz": "es-ES-AlvaroNeural"
+  },
+  "yo": {
+   "nombre": "Tú",
+   "color": "#1fa855",
+   "voz": "es-ES-XimenaNeural"
+  }
+ },
+ "mensajes": [
+  {
+   "de": "mama",
+   "texto": "¿Por qué tu padre lleva 3 horas en el hospital?"
+  },
+  {
+   "de": "yo",
+   "texto": "¿¿Qué?? Me dijo que se iba al gimnasio"
+  },
+  {
+   "de": "mama",
+   "tipo": "mapa",
+   "texto": "Hospital General · hace 3 h"
+  },
+  {
+   "de": "sistema",
+   "texto": "Mamá añadió a Papá"
+  },
+  {
+   "de": "papa",
+   "texto": "Estoy en el gimnasio 💪"
+  },
+  {
+   "de": "mama",
+   "texto": "Javier."
+  },
+  {
+   "de": "papa",
+   "texto": "Es un gimnasio muy completo"
+  },
+  {
+   "de": "papa",
+   "texto": "Tiene hasta enfermeras",
+   "pausa": 0.6
+  },
+  {
+   "de": "yo",
+   "texto": "PAPÁ"
+  },
+  {
+   "de": "papa",
+   "texto": "Vale. Me he hecho un poco de daño"
+  },
+  {
+   "de": "mama",
+   "texto": "¿Haciendo qué?"
+  },
+  {
+   "de": "papa",
+   "texto": "Calentando",
+   "pausa": 0.8
+  },
+  {
+   "de": "yo",
+   "texto": "¿¿Calentando??"
+  },
+  {
+   "de": "papa",
+   "texto": "Me agaché a atarme la zapatilla y me dio un tirón",
+   "reaccion": "😂"
+  },
+  {
+   "de": "mama",
+   "texto": "Llevas 3 meses pagando ese gimnasio y era tu primer día"
+  },
+  {
+   "de": "papa",
+   "texto": "Segundo"
+  },
+  {
+   "de": "papa",
+   "texto": "El primero solo fui a mirar las máquinas",
+   "pausa": 0.8,
+   "minutos": 47
+  },
+  {
+   "de": "papa",
+   "texto": "Buenas noticias. Ya me dan el alta"
+  },
+  {
+   "de": "papa",
+   "texto": "El médico dice que nada de deporte en 2 semanas"
+  },
+  {
+   "de": "papa",
+   "texto": "Así que me he dado de baja del gimnasio 👍",
+   "pausa": 0.8
+  },
+  {
+   "de": "mama",
+   "texto": "🤦‍♀️"
+  },
+  {
+   "de": "sistema",
+   "texto": "Mamá eliminó a Papá",
+   "pausa": 0.6
+  }
+ ],
+ "final": "¿Tu padre también es así? 👇",
+ "estilo": "imsg",
+ "voces": true,
+ "fecha": "iMessage · Hoy 19:42"
+}

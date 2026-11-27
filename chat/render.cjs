@@ -16,9 +16,16 @@ const fondo = G => path.resolve(path.join(__dirname, 'fondos', (G.fondo || 'bola
   const IMSG = G.estilo === 'imsg';
   await page.goto('file://' + path.join(__dirname, IMSG ? 'imsg.html' : 'chat.html'));
   await page.evaluate(() => document.fonts.ready);
-  const info = await page.evaluate(g => window.setup(g), G);
+  const vozDir = path.resolve(path.join(__dirname, 'voz', G.slug || ''));
+  let voces = null;
+  if (G.voces) {
+    const vj = path.join(vozDir, 'voces.json');
+    if (!fs.existsSync(vj)) { console.error('Faltan las voces:', vj, '(se generan con GitHub Actions al subir el guion)'); process.exit(3); }
+    voces = JSON.parse(fs.readFileSync(vj, 'utf8'));
+  }
+  const info = await page.evaluate(([g, v]) => window.setup(g, { voces: v }), [G, voces]);
   console.log('duración', info.dur.toFixed(2), 's,', G.mensajes.length, 'mensajes');
-  fs.writeFileSync(path.join(outDir, 'eventos.json'), JSON.stringify({ ...info, musica: !!G.musica }));
+  fs.writeFileSync(path.join(outDir, 'eventos.json'), JSON.stringify({ ...info, musica: !!G.musica, voces, vozDir }));
   if (preview) {
     for (const t of preview) { await page.evaluate(t => window.draw(t), t); await page.screenshot({ path: path.join(outDir, `preview_${t}.png`), omitBackground: IMSG });
       if (IMSG) execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(t + 6), '-i', fondo(G), '-i', path.join(outDir, `preview_${t}.png`), '-filter_complex', BG + '[bg][1:v]overlay', '-frames:v', '1', path.join(outDir, `preview_${t}_fondo.png`)]); }

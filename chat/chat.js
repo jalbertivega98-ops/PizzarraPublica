@@ -48,18 +48,23 @@ window.setup=function(G,opt){
   // línea de tiempo
   let t=opt.inicio??1.2; const ev=[], T=[];
   const vel=G.velocidad||1;
+  const VZ=opt.voces||null;   // {i:{dur}} si el vídeo lleva voces
   G.mensajes.forEach((m,i)=>{
-    const n=(m.texto||'').length, p=m.pausa||0;
+    const n=(m.texto||'').length, p=m.pausa||0, vz=VZ&&VZ[String(i)];
     if(m.de==='sistema'){T.push({i,show:t});ev.push({t,s:'sys'});t+=(1.2+p)/vel;return;}
     if(m.de===yo){
-      const d=clamp(n*0.05,0.5,2.2)/vel; T.push({i,typeA:t,typeB:t+d,show:t+d+0.18});
+      const d=(VZ?clamp(n*0.03,0.4,1.2):clamp(n*0.05,0.5,2.2))/vel; T.push({i,typeA:t,typeB:t+d,show:t+d+0.18});
       for(let k=0;k<n;k++) ev.push({t:t+d*k/n,s:'key'});
-      t+=d+0.18; ev.push({t,s:'sent'}); t+=(clamp(0.5+n*0.03,0.7,1.8)+p)/vel; return;
+      t+=d+0.18; ev.push({t,s:'sent'});
+      if(vz){ev.push({t:t+0.12,s:'voz',i}); t+=0.12+vz.dur+0.3+p;}
+      else t+=(clamp(0.5+n*0.03,0.7,1.8)+p)/vel;
+      return;
     }
-    const d=(m.tipo==='mapa'?1.0:clamp(0.4+n*0.022,0.6,1.5))/vel;
+    const d=(m.tipo==='mapa'?1.0:(VZ?clamp(0.3+n*0.01,0.45,0.8):clamp(0.4+n*0.022,0.6,1.5)))/vel;
     T.push({i,dotsA:t,show:t+d,de:m.de}); t+=d; ev.push({t,s:'recv'});
-    if(m.reaccion) {T[T.length-1].react={e:m.reaccion,t:t+0.9}; ev.push({t:t+0.9,s:'sys'});}
-    t+=((m.tipo==='mapa'?1.8:clamp(0.55+n*0.04,0.8,3.0))+p)/vel;
+    if(m.reaccion) {T[T.length-1].react={e:m.reaccion,t:t+(vz?vz.dur*0.6:0.9)}; ev.push({t:t+(vz?vz.dur*0.6:0.9),s:'sys'});}
+    if(vz){ev.push({t:t+0.1,s:'voz',i}); t+=0.1+vz.dur+0.3+p;}
+    else t+=((m.tipo==='mapa'?1.8:clamp(0.55+n*0.04,0.8,3.0))+p)/vel;
   });
   G._T=T; G._final=t; G.dur=t+(G.final?3.0:0.8); G.ev=ev;
   G._bot=T.map(x=>{const e=$('#m'+x.i);return e.offsetTop+e.offsetHeight+10});

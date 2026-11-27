@@ -1,0 +1,135 @@
+{
+ "slug": "ep02v_taper_no_tocar",
+ "hook": "Alguien se ha comido el táper de mi madre 💀",
+ "chat": "Familia 🏠",
+ "avatar": "🏠",
+ "hora": "14:12",
+ "yo": "yo",
+ "personas": {
+  "mama": {
+   "nombre": "Mamá",
+   "color": "#e5427a",
+   "voz": "es-ES-ElviraNeural"
+  },
+  "papa": {
+   "nombre": "Papá",
+   "color": "#1f7aec",
+   "voz": "es-ES-AlvaroNeural"
+  },
+  "lucia": {
+   "nombre": "Lucía",
+   "color": "#b5651d",
+   "voz": "es-ES-ElviraNeural",
+   "pitch": "+18Hz",
+   "rate": "+16%"
+  },
+  "yo": {
+   "nombre": "Tú",
+   "color": "#1fa855",
+   "voz": "es-ES-XimenaNeural"
+  }
+ },
+ "mensajes": [
+  {
+   "de": "mama",
+   "texto": "¿Quién se ha comido el táper de la nevera?"
+  },
+  {
+   "de": "mama",
+   "texto": "El que ponía NO TOCAR"
+  },
+  {
+   "de": "lucia",
+   "texto": "Yo no he sido"
+  },
+  {
+   "de": "yo",
+   "texto": "Yo tampoco"
+  },
+  {
+   "de": "papa",
+   "texto": "Yo estoy en el trabajo"
+  },
+  {
+   "de": "mama",
+   "tipo": "mapa",
+   "texto": "Papá · Casa · ahora mismo",
+   "icono": "🏠"
+  },
+  {
+   "de": "papa",
+   "texto": "Teletrabajo"
+  },
+  {
+   "de": "mama",
+   "texto": "Los viernes no teletrabajas"
+  },
+  {
+   "de": "papa",
+   "texto": "Me he ofrecido voluntario",
+   "pausa": 0.6
+  },
+  {
+   "de": "mama",
+   "texto": "Javier, ¿te has comido las lentejas?"
+  },
+  {
+   "de": "papa",
+   "texto": "¿Qué lentejas?"
+  },
+  {
+   "de": "mama",
+   "texto": "Las del táper que ponía NO TOCAR"
+  },
+  {
+   "de": "papa",
+   "texto": "Pensaba que era un táper vacío con un cartel",
+   "reaccion": "😂"
+  },
+  {
+   "de": "yo",
+   "texto": "¿Y por qué estaba en tu mesa con una cuchara?"
+  },
+  {
+   "de": "papa",
+   "texto": "Lo estaba limpiando"
+  },
+  {
+   "de": "papa",
+   "texto": "Por dentro",
+   "pausa": 0.8
+  },
+  {
+   "de": "lucia",
+   "texto": "😂😂😂"
+  },
+  {
+   "de": "mama",
+   "texto": "Esas lentejas eran la cena de hoy"
+  },
+  {
+   "de": "papa",
+   "texto": "¿Y qué hay de cena?"
+  },
+  {
+   "de": "mama",
+   "texto": "Ya no hay cena",
+   "pausa": 0.6
+  },
+  {
+   "de": "papa",
+   "texto": "¿Pido pizza? 🍕",
+   "pausa": 0.8
+  },
+  {
+   "de": "sistema",
+   "texto": "Mamá cambió el nombre del grupo a «Familia (menos Javier)»",
+   "nuevoNombre": "Familia (menos Javier) 🏠",
+   "pausa": 0.8
+  }
+ ],
+ "final": "¿En tu casa también desaparecen los tápers? 👇",
+ "estilo": "imsg",
+ "voces": true,
+ "fecha": "iMessage · Hoy 14:12"
+}

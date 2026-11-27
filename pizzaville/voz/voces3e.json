@@ -1,0 +1,235 @@
+{
+ "voces": {
+  "martin": "j1FA2WmkBpQd2hSw1caE",
+  "ines": "nH81SxhcPaX89XdDlp2m"
+ },
+ "trabajos": [
+  {
+   "id": "8_no_quiero_nada/no_quiero_nada",
+   "tipo": "dialogo",
+   "estabilidad": 0.5,
+   "lineas": [
+    [
+     "martin",
+     "[deadpan, calm] Mi novia me dice que no quiere cenar."
+    ],
+    [
+     "martin",
+     "Que no tiene hambre."
+    ],
+    [
+     "martin",
+     "Que ha merendado fuerte."
+    ],
+    [
+     "martin",
+     "[dry] Una mandarina."
+    ],
+    [
+     "martin",
+     "Pido una hamburguesa. Para mí."
+    ],
+    [
+     "martin",
+     "Le pregunto si está segura."
+    ],
+    [
+     "ines",
+     "[casual] Que no, que no quiero nada."
+    ],
+    [
+     "martin",
+     "Vale."
+    ],
+    [
+     "martin",
+     "Treinta y cinco minutos."
+    ],
+    [
+     "martin",
+     "Llega el repartidor."
+    ],
+    [
+     "martin",
+     "Abro la bolsa."
+    ],
+    [
+     "martin",
+     "[satisfied] Huele a gloria."
+    ],
+    [
+     "martin",
+     "Ella no levanta la vista del móvil."
+    ],
+    [
+     "martin",
+     "Bien."
+    ],
+    [
+     "martin",
+     "Primera patata."
+    ],
+    [
+     "martin",
+     "Ella levanta la vista del móvil."
+    ],
+    [
+     "ines",
+     "[interested] Uy, qué buena pinta."
+    ],
+    [
+     "martin",
+     "No es una pregunta."
+    ],
+    [
+     "martin",
+     "[dry] Es un aviso."
+    ],
+    [
+     "ines",
+     "[sweetly] ¿Me das una?"
+    ],
+    [
+     "martin",
+     "Una."
+    ],
+    [
+     "martin",
+     "Le doy una."
+    ],
+    [
+     "martin",
+     "Coge dos."
+    ],
+    [
+     "martin",
+     "La más larga y la más tostada."
+    ],
+    [
+     "martin",
+     "[resigned] Las dos que había apartado."
+    ],
+    [
+     "martin",
+     "Silencio."
+    ],
+    [
+     "martin",
+     "Masticamos."
+    ],
+    [
+     "ines",
+     "Están un poco saladas."
+    ],
+    [
+     "martin",
+     "Coge otra."
+    ],
+    [
+     "martin",
+     "[dry] Para comprobarlo."
+    ],
+    [
+     "martin",
+     "Abro la hamburguesa."
+    ],
+    [
+     "martin",
+     "Doble de queso. Bacon."
+    ],
+    [
+     "martin",
+     "Ella la mira."
+    ],
+    [
+     "martin",
+     "La mira como se mira a un bebé."
+    ],
+    [
+     "ines",
+     "[sweetly] ¿Me dejas un bocadito?"
+    ],
+    [
+     "martin",
+     "Bocadito."
+    ],
+    [
+     "martin",
+     "[deadpan] En mi casa, un bocadito es la mitad."
+    ],
+    [
+     "martin",
+     "Le dejo un bocadito."
+    ],
+    [
+     "martin",
+     "Se come la mitad."
+    ],
+    [
+     "martin",
+     "[resigned] La mitad del bacon."
+    ],
+    [
+     "ines",
+     "[satisfied sigh] Uf. No puedo más, de verdad."
+    ],
+    [
+     "martin",
+     "Me quedan dos patatas."
+    ],
+    [
+     "martin",
+     "Y un pepinillo."
+    ],
+    [
+     "martin",
+     "El pepinillo no le gusta."
+    ],
+    [
+     "martin",
+     "Me lo como."
+    ],
+    [
+     "martin",
+     "Sigo con hambre."
+    ],
+    [
+     "martin",
+     "Abro la aplicación otra vez."
+    ],
+    [
+     "ines",
+     "¿Vas a pedir más?"
+    ],
+    [
+     "martin",
+     "Otra hamburguesa."
+    ],
+    [
+     "ines",
+     "[casual] Pues pídeme unas patatas."
+    ],
+    [
+     "martin",
+     "Le pregunto si está segura."
+    ],
+    [
+     "ines",
+     "Que sí. Pero solo patatas, que no quiero nada."
+    ],
+    [
+     "martin",
+     "[deadpan] No quiere nada."
+    ],
+    [
+     "martin",
+     "Nunca quiere nada."
+    ],
+    [
+     "martin",
+     "[resigned] Treinta y cinco minutos, joder."
+    ]
+   ]
+  }
+ ]
+}

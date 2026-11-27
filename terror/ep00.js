@@ -5,10 +5,14 @@ import { W, H, rng, clamp, smooth, lerp, win, noise1, TEX, makeTextures, mat, cr
 makeTextures();
 const { renderer, scene, camera, flash, fill, dust, composer, post } = createWorld();
 
-export const DUR = 20.5;
+export const SCENE_END = 22.8;
+// cámara lenta entre 11 y 12.9 s de escena para que quepa la narración
+const warp = (tv) => tv < 11 ? tv : tv < 14.1 ? 11 + (tv - 11) * (1.9 / 3.1) : tv - 1.2;
+const unwarp = (ts) => ts < 11 ? ts : ts < 12.9 ? 11 + (ts - 11) * (3.1 / 1.9) : ts + 1.2;
+export const DUR = unwarp(SCENE_END);
 // eventos de sonido (los lee sonido.py a través de timeline.json)
-export const EVENTS = [
-  { t: 0.0, s: 'viento', d: 8.5 }, { t: 0.0, s: 'drone', d: 20.5 },
+const SCENE_EVENTS = [
+  { t: 0.0, s: 'viento', d: 8.5 }, { t: 0.0, s: 'drone', d: 24 },
   { t: 0.42, s: 'trueno', v: 1.0 }, { t: 2.62, s: 'trueno', v: 0.55 },
   { t: 3.4, s: 'golpe_titulo' },
   ...[...Array(9)].map((_, i) => ({ t: 0.4 + i * 0.62, s: 'paso_tierra', v: 0.6 })),
@@ -17,12 +21,14 @@ export const EVENTS = [
   { t: 8.4, s: 'portazo' },
   { t: 9.0, s: 'paso_madera' }, { t: 9.6, s: 'paso_madera' },
   { t: 9.9, s: 'pelota', d: 1.4 },
-  { t: 11.3, s: 'paso_madera' }, { t: 11.6, s: 'toc', v: 0.9 }, { t: 11.85, s: 'toc', v: 0.9 }, { t: 12.1, s: 'toc', v: 0.9 },
+  { t: 11.3, s: 'paso_madera' }, { t: 11.45, s: 'toc', v: 0.9 }, { t: 11.62, s: 'toc', v: 0.9 }, { t: 11.79, s: 'toc', v: 0.9 },
   { t: 12.6, s: 'paso_madera' }, { t: 12.95, s: 'zumbido_linterna', d: 0.75 },
-  { t: 13.18, s: 'susto' }, { t: 13.2, s: 'latido', d: 7 },
+  { t: 13.18, s: 'susto' }, { t: 13.2, s: 'latido', d: 8.5 },
   { t: 14.8, s: 'chirrido', d: 1.4, v: 0.6 },
-  { t: 15.7, s: 'bombilla', d: 4.8 }, { t: 16.2, s: 'pop' }, { t: 16.5, s: 'pop' }, { t: 16.8, s: 'pop' }, { t: 17.3, s: 'golpe_titulo', v: 0.7 },
+  { t: 15.7, s: 'bombilla', d: 7 }, { t: 16.2, s: 'pop' }, { t: 16.5, s: 'pop' }, { t: 16.8, s: 'pop' }, { t: 17.3, s: 'golpe_titulo', v: 0.7 },
 ];
+const VOZ = [['l1', 0.5], ['l2', 4.4], ['l3', 7.3], ['l4', 8.6], ['l5', 10.65], ['l6', 12.85], ['l7', 15.1], ['l8', 18.5]];
+export const EVENTS = [...SCENE_EVENTS.map(e => ({ ...e, t: +unwarp(e.t).toFixed(3) })), ...VOZ.map(([f, t]) => ({ t, s: 'voz', f }))];
 
 // ---------------- CIELO ----------------
 const skyTex = (() => {
@@ -171,24 +177,25 @@ const KEYS = [
   { t: 13.4, p: [0, 1.9, -4.0], l: [0, 1.55, -10.5] },
   { t: 15.0, p: [0, 1.9, -4.2], l: [0, 1.5, -10.5] },
   { t: 16.3, p: [-0.05, 2.05, -0.55], l: [0, 1.25, -8.0] },
-  { t: 20.5, p: [-0.05, 2.05, -0.7], l: [0, 1.25, -8.0] },
+  { t: 22.8, p: [-0.05, 2.05, -0.8], l: [0, 1.25, -8.0] },
 ];
 
 // ---------------- OVERLAY ----------------
 const $ = (id) => document.getElementById(id);
-const TEXTS = [
-  { a: 0.5, b: 3.2, s: 'Dicen que quien entra en esta casa… <br>no vuelve a salir.' },
-  { a: 7.3, b: 9.3, s: 'Entramos.' },
-  { a: 8.45, b: 9.3, s: 'La puerta se ha cerrado sola.', replace: true },
-  { a: 10.0, b: 11.4, s: '¿Qué ha sido eso?' },
-  { a: 11.55, b: 12.8, s: 'Hay alguien ahí dentro.' },
-  { a: 13.6, b: 15.6, s: 'Tú decides adónde vamos.' },
+const TEXTS = [  // tiempo de vídeo (sincronizado con la voz)
+  { a: 0.5, b: 4.4, s: 'Dicen que quien entra en esta casa… <br>no vuelve a salir.' },
+  { a: 5.75, b: 7.15, s: 'Esta noche… vamos a comprobarlo.' },
+  { a: 7.3, b: 8.5, s: 'Entramos.' },
+  { a: 8.6, b: 10.2, s: 'Se ha cerrado… sola.' },
+  { a: 10.3, b: 11.8, s: '¿Qué ha sido eso?' },
+  { a: 12.85, b: 14.38, s: 'Hay alguien ahí dentro.' },
+  { a: 15.1, b: 17.4, s: 'Tú decides adónde vamos.' },
 ];
 function typed(s, k) { const plain = s.replace(/<br>/g, '\n'); const n = Math.floor(plain.length * clamp(k)); return plain.slice(0, n).replace(/\n/g, '<br>'); }
-function overlay(t) {
-  let cur = null; for (const x of TEXTS) if (t >= x.a && t < x.b) cur = x;
+function overlay(t, tv) {
+  let cur = null; for (const x of TEXTS) if (tv >= x.a && tv < x.b) cur = x;
   const el = $('t1');
-  if (cur) { el.innerHTML = typed(cur.s, (t - cur.a) / Math.min(1.0, (cur.b - cur.a) * 0.5)); el.style.opacity = Math.min(1, (cur.b - t) / 0.25); } else el.style.opacity = 0;
+  if (cur) { el.innerHTML = typed(cur.s, (tv - cur.a) / Math.min(1.0, (cur.b - cur.a) * 0.5)); el.style.opacity = Math.min(1, (cur.b - tv) / 0.25); } else el.style.opacity = 0;
   const ti = $('title'), k = win(t, 3.4, 3.7) * (1 - win(t, 5.3, 5.7));
   ti.style.opacity = k; ti.style.transform = `scale(${1.15 - 0.15 * smooth(win(t, 3.4, 5.6))})`;
   ti.style.filter = `blur(${(1 - win(t, 3.4, 3.6)) * 8}px)`;
@@ -218,7 +225,8 @@ function lightning(t) {
   let v = 0; for (const [a, s] of strikes) { const d = t - a; if (d >= 0 && d < 0.35) v = Math.max(v, s * Math.exp(-d * 14)); } return v;
 }
 window.DUR = DUR; window.EVENTS = EVENTS;
-window.renderAt = (t) => {
+window.renderAt = (tv) => {
+  const t = warp(tv);
   const inside = smooth(win(t, 6.6, 8.0));
   // cámara + temblor de mano + balanceo al andar
   const c = cameraAt(KEYS, t);
@@ -268,13 +276,13 @@ window.renderAt = (t) => {
   P.needsUpdate = true; dust.material.opacity = 0.25 + 0.4 * inside;
   // post
   post.uniforms.uTime.value = t;
-  const fadeIn = smooth(win(t, 0, 0.6)), fadeOut = 1 - win(t, DUR - 0.4, DUR) * 0.7;
+  const fadeIn = smooth(win(t, 0, 0.6)), fadeOut = 1 - win(t, SCENE_END - 0.4, SCENE_END) * 0.7;
   post.uniforms.uBright.value = fadeIn * fadeOut * (1 + L * 0.6);
   post.uniforms.uRed.value = (t > 13.15 && t < 13.75 ? (1 - win(t, 13.15, 13.75)) * 0.8 : 0) + (t > 17.3 ? 0.12 : 0);
   post.uniforms.uShake.value = (t > 13.15 && t < 13.5 ? 0.02 : 0) + shake * 0.15;
   post.uniforms.uAb.value = 0.0022 + (t > 13.15 && t < 13.6 ? 0.006 : 0);
   composer.render();
-  overlay(t);
+  overlay(t, tv);
   return true;
 };
 window.ready = true;

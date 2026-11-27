@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Diseño sonoro sintetizado (sin licencias) para el motor de terror.
-uso: python3 sonido.py timeline.json salida.wav
+uso: python3 sonido.py timeline.json salida.wav [carpeta_voz]
 timeline.json = {"dur": s, "events": [{"t":..,"s":"nombre","d":..,"v":..}]}"""
 import json, sys
 import numpy as np
@@ -107,9 +107,21 @@ def pop(d=0.9, v=1):
     x += np.sin(2 * np.pi * 1320 * tt) * np.exp(-tt * 9) * 0.12 + np.sin(2 * np.pi * 1975 * tt) * np.exp(-tt * 11) * 0.06
     return norm(x, 0.35) * v
 
+VOZDIR = '.'
+def voz(f='l1', d=None, v=1):
+    """Narrador terrorífico: más lento y grave, capa de susurro, saturación suave."""
+    from scipy.io import wavfile
+    sr, x = wavfile.read(f'{VOZDIR}/{f}.wav'); x = x.astype(float) / 32768
+    x = signal.resample_poly(x, 10, 9)                     # 10 % más lenta y ~2 semitonos más grave
+    x = lp(x, 6500) + lp(x, 220) * 0.8                      # cuerpo grave
+    envl = np.abs(signal.hilbert(x)); envl = lp(envl, 30)
+    whisper = bp(R.standard_normal(len(x)), 2500, 7000) * envl * 0.35
+    y = np.tanh(norm(x) * 1.3 + whisper)
+    return norm(y, 1.0) * v
+
 FX = {k: v for k, v in globals().items() if callable(v) and k in [
     'viento', 'drone', 'trueno', 'golpe_titulo', 'paso_tierra', 'paso_madera', 'chirrido', 'portazo', 'pelota', 'toc',
-    'zumbido_linterna', 'susto', 'latido', 'bombilla', 'pop']}
+    'zumbido_linterna', 'susto', 'latido', 'bombilla', 'pop', 'voz']}
 DRY_ONLY = {'drone', 'viento', 'latido', 'bombilla', 'pop', 'golpe_titulo'}
 PAN = {'toc': 0.45, 'pelota': -0.35, 'chirrido': 0.0}
 
@@ -118,9 +130,11 @@ def ir(d=2.2):
 
 def main(tl_path, out_path):
     tl = json.load(open(tl_path)); dur = tl['dur']; n = int((dur + 0.1) * SR)
-    L = np.zeros(n); Rr = np.zeros(n); wet = np.zeros(n)
+    L = np.zeros(n); Rr = np.zeros(n); wet = np.zeros(n); VL = np.zeros(n)
     for e in tl['events']:
         f = FX[e['s']]; kw = {}
+        if e['s'] == 'voz':
+            x = voz(e['f']); s = int(e['t'] * SR); x = x[:max(0, n - s)]; VL[s:s + len(x)] += x; continue
         if 'd' in e: kw['d'] = e['d']
         if 'v' in e: kw['v'] = e['v']
         x = f(**kw); s = int(e['t'] * SR); x = x[:max(0, n - s)]
@@ -129,10 +143,18 @@ def main(tl_path, out_path):
         if e['s'] not in DRY_ONLY: wet[s:s + len(x)] += x * (0.9 if e['t'] > 7 else 0.35)
     rv = signal.fftconvolve(wet, ir())[:n] * 0.5
     L += rv; Rr += np.r_[rv[240:], np.zeros(240)]
+    # la música/efectos bajan cuando habla el narrador (ducking)
+    mx = max(np.abs(L).max(), np.abs(Rr).max()) + 1e-9; L /= mx; Rr /= mx
+    ve = lp(np.abs(VL), 4); ve = np.clip(ve / (ve.max() + 1e-9) * 4, 0, 1); duck = 1 - 0.45 * ve
+    L *= duck; Rr *= duck
+    vr = signal.fftconvolve(VL, ir(1.6))[:n] * 0.35          # eco de casa vacía
+    VL = VL * 0.95 + vr
+    L += VL * 0.95; Rr += np.r_[VL[96:], np.zeros(96)] * 0.95
     st = np.stack([L, Rr], 1); st = np.tanh(st / (np.abs(st).max() + 1e-9) * 1.25) * 0.93
     fade = int(0.4 * SR); st[-fade:] *= np.linspace(1, 0, fade)[:, None]
     from scipy.io import wavfile
     wavfile.write(out_path, SR, (st * 32767).astype(np.int16)); print('ok', out_path, round(dur, 2), 's')
 
 if __name__ == '__main__':
+    if len(sys.argv) > 3: VOZDIR = sys.argv[3]
     main(sys.argv[1], sys.argv[2])

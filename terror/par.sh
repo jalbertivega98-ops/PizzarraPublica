@@ -2,7 +2,7 @@
 # par.sh <ep> <outdir> [workers] — render paralelo de fotogramas + vídeo mudo
 EP=$1; OUT=$(realpath -m $2); NW=${3:-3}; FPS=30
 mkdir -p $OUT
-DUR=$(node -e "console.log(Math.round(+require('fs').readFileSync('/dev/stdin','utf8')*$FPS))" <<< "$(grep -oP 'DUR = \K[0-9.]+' $(dirname $0)/$EP.js 2>/dev/null || echo 20.5)")
+node $(dirname $0)/render.cjs $EP --snap 0 --out $OUT > /dev/null 2>&1; DUR=$(node -e "console.log(Math.round(require('$OUT/timeline.json').dur*$FPS))")
 N=$DUR; STEP=$(( (N + NW - 1) / NW ))
 for i in $(seq 0 $((NW-1))); do node $(dirname $0)/render.cjs $EP --out $OUT --from $((i*STEP)) --to $(( (i+1)*STEP < N ? (i+1)*STEP : N )) > $OUT/w$i.log 2>&1 & done
 wait

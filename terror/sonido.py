@@ -108,10 +108,12 @@ def pop(d=0.9, v=1):
     return norm(x, 0.35) * v
 
 VOZDIR = '.'
+LENTO = True
 def voz(f='l1', d=None, v=1):
     """Narrador terrorífico: más lento y grave, capa de susurro, saturación suave."""
     from scipy.io import wavfile
     sr, x = wavfile.read(f'{VOZDIR}/{f}.wav'); x = x.astype(float) / 32768
+    if not LENTO: return norm(lp(x, 9000) + lp(x, 200) * 0.35, 1.0) * v   # voz natural (ElevenLabs): solo un poco de cuerpo
     x = signal.resample_poly(x, 10, 9)                     # 10 % más lenta y ~2 semitonos más grave
     x = lp(x, 6500) + lp(x, 220) * 0.8                      # cuerpo grave
     envl = np.abs(signal.hilbert(x)); envl = lp(envl, 30)
@@ -157,4 +159,5 @@ def main(tl_path, out_path):
 
 if __name__ == '__main__':
     if len(sys.argv) > 3: VOZDIR = sys.argv[3]
+    if '--natural' in sys.argv: LENTO = False
     main(sys.argv[1], sys.argv[2])

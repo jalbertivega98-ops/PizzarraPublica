@@ -25,9 +25,9 @@ const SCENE_EVENTS = [
   { t: 12.6, s: 'paso_madera' }, { t: 12.95, s: 'zumbido_linterna', d: 0.75 },
   { t: 13.18, s: 'susto' }, { t: 13.2, s: 'latido', d: 8.5 },
   { t: 14.8, s: 'chirrido', d: 1.4, v: 0.6 },
-  { t: 15.7, s: 'bombilla', d: 7 }, { t: 16.2, s: 'pop' }, { t: 16.5, s: 'pop' }, { t: 16.8, s: 'pop' }, { t: 17.3, s: 'golpe_titulo', v: 0.7 },
+  { t: 15.7, s: 'bombilla', d: 7 }, { t: 16.2, s: 'pop' }, { t: 16.5, s: 'pop' }, { t: 16.8, s: 'pop' }, { t: 18.4, s: 'golpe_titulo', v: 0.7 },
 ];
-const VOZ = [['l1', 0.5], ['l2', 4.4], ['l3', 7.3], ['l4', 8.6], ['l5', 10.65], ['l6', 12.85], ['l7', 15.1], ['l8', 18.5]];
+const VOZ = [['l1', 0.4], ['l2', 4.1], ['l4', 15.0], ['l5', 19.65]];  // narrador Adam (voz/ep00_adam)
 export const EVENTS = [...SCENE_EVENTS.map(e => ({ ...e, t: +unwarp(e.t).toFixed(3) })), ...VOZ.map(([f, t]) => ({ t, s: 'voz', f }))];
 
 // ---------------- CIELO ----------------
@@ -183,13 +183,9 @@ const KEYS = [
 // ---------------- OVERLAY ----------------
 const $ = (id) => document.getElementById(id);
 const TEXTS = [  // tiempo de vídeo (sincronizado con la voz)
-  { a: 0.5, b: 4.4, s: 'Dicen que quien entra en esta casa… <br>no vuelve a salir.' },
-  { a: 5.75, b: 7.15, s: 'Esta noche… vamos a comprobarlo.' },
-  { a: 7.3, b: 8.5, s: 'Entramos.' },
-  { a: 8.6, b: 10.2, s: 'Se ha cerrado… sola.' },
-  { a: 10.3, b: 11.8, s: '¿Qué ha sido eso?' },
-  { a: 12.85, b: 14.38, s: 'Hay alguien ahí dentro.' },
-  { a: 15.1, b: 17.4, s: 'Tú decides adónde vamos.' },
+  { a: 0.4, b: 4.0, s: 'Esta casa… <br>lleva diez años abandonada.' },
+  { a: 4.1, b: 8.2, s: 'Desde que murió su dueña. <br>Tenía 78 años.' },
+  { a: 15.0, b: 19.3, s: 'A partir de aquí… no voy solo. <br>Vosotros me vais a guiar.' },
 ];
 function typed(s, k) { const plain = s.replace(/<br>/g, '\n'); const n = Math.floor(plain.length * clamp(k)); return plain.slice(0, n).replace(/\n/g, '<br>'); }
 function overlay(t, tv) {
@@ -210,7 +206,7 @@ function overlay(t, tv) {
     el.style.left = ((v.x + 1) / 2 * W) + 'px'; el.style.top = ((1 - v.y) / 2 * H) + 'px';
     el.style.opacity = kk; el.style.transform = `translate(-50%,-50%) scale(${pop})`;
   });
-  const c = $('cta'), kc = win(t, 17.3, 17.6); c.style.opacity = kc; c.style.transform = `translateY(${(1 - smooth(kc)) * 60}px)`;
+  const c = $('cta'), kc = win(t, 18.4, 18.7); c.style.opacity = kc; c.style.transform = `translateY(${(1 - smooth(kc)) * 60}px)`;
 }
 
 // ---------------- FOTOGRAMA ----------------
@@ -278,7 +274,7 @@ window.renderAt = (tv) => {
   post.uniforms.uTime.value = t;
   const fadeIn = smooth(win(t, 0, 0.6)), fadeOut = 1 - win(t, SCENE_END - 0.4, SCENE_END) * 0.7;
   post.uniforms.uBright.value = fadeIn * fadeOut * (1 + L * 0.6);
-  post.uniforms.uRed.value = (t > 13.15 && t < 13.75 ? (1 - win(t, 13.15, 13.75)) * 0.8 : 0) + (t > 17.3 ? 0.12 : 0);
+  post.uniforms.uRed.value = (t > 13.15 && t < 13.75 ? (1 - win(t, 13.15, 13.75)) * 0.8 : 0) + (t > 18.4 ? 0.12 : 0);
   post.uniforms.uShake.value = (t > 13.15 && t < 13.5 ? 0.02 : 0) + shake * 0.15;
   post.uniforms.uAb.value = 0.0022 + (t > 13.15 && t < 13.6 ? 0.006 : 0);
   composer.render();

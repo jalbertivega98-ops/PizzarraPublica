@@ -1,0 +1,36 @@
+name: Voces de La Casa (terror)
+
+on:
+  push:
+    paths:
+      - "terror/guiones/**.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: terror-voces-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  voces:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instalar edge-tts
+        run: pip install edge-tts==7.3.1
+      - name: Generar voces
+        run: python3 terror/voz.py terror/guiones/*.json
+      - name: Guardar las voces en la rama
+        if: always()
+        run: |
+          git add terror/voz
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Voces de La Casa (edge-tts)"
+            git pull --rebase -q origin "${GITHUB_REF_NAME}" || true
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi

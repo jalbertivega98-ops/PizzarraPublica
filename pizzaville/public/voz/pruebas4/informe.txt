@@ -70,3 +70,6 @@ TOTAL caracteres: 628
 == 7_elige_tu/elige_tu
   ok 1227
 TOTAL caracteres: 1227
+== 8_no_quiero_nada/no_quiero_nada
+  ok 1274
+TOTAL caracteres: 1274

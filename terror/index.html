@@ -1,0 +1,38 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Creep;src:url(fonts/Creepster-Regular.ttf)}
+@font-face{font-family:Elite;src:url(fonts/SpecialElite-Regular.ttf)}
+html,body{margin:0;background:#000;overflow:hidden}
+#wrap{position:relative;width:1080px;height:1920px}
+#c{position:absolute;inset:0;width:1080px;height:1920px}
+#ov{position:absolute;inset:0;pointer-events:none;font-family:Elite;color:#e9e2d0}
+.txt{position:absolute;left:70px;right:70px;top:1260px;text-align:center;font-size:62px;line-height:1.25;text-shadow:0 0 18px #000,0 0 6px #000,0 4px 0 #000;opacity:0}
+.title{position:absolute;left:0;right:0;top:560px;text-align:center;opacity:0}
+.title h1{font-family:Creep;font-size:250px;margin:0;color:#b30d0d;letter-spacing:6px;text-shadow:0 0 30px #600,0 8px 0 #000}
+.title h2{font-size:58px;margin:10px 0 0;letter-spacing:14px;color:#ddd}
+.title h3{font-size:44px;margin:26px 0 0;color:#cfc6b0}
+.lab{position:absolute;transform:translate(-50%,-50%) scale(.6);opacity:0;text-align:center}
+.lab b{display:block;width:130px;height:130px;margin:0 auto;border-radius:50%;background:rgba(150,0,0,.85);border:5px solid #f3d9c0;font:110px/130px Creep;color:#fff;box-shadow:0 0 40px #f00}
+.lab span{display:inline-block;margin-top:12px;padding:6px 18px;background:rgba(0,0,0,.75);font-size:40px;border-radius:10px;white-space:nowrap}
+.cta{position:absolute;left:40px;right:40px;top:1340px;text-align:center;opacity:0}
+.cta .q{font-family:Creep;font-size:120px;color:#e8e0d0;line-height:1;text-shadow:0 0 30px #900,0 6px 0 #000}
+.cta .c{margin-top:26px;font-size:58px;background:#a10b0b;display:inline-block;padding:14px 34px;border-radius:16px;color:#fff;box-shadow:0 0 40px rgba(255,0,0,.5)}
+.cta .s{margin-top:22px;font-size:40px;color:#d8cfbd;text-shadow:0 0 10px #000}
+.ep{position:absolute;left:40px;top:90px;font-size:40px;color:#c9c0aa;letter-spacing:6px;opacity:0;text-shadow:0 0 10px #000}
+.rec{position:absolute;right:50px;top:90px;font:44px Elite;color:#e33;opacity:0}
+</style></head>
+<body><div id="wrap"><canvas id="c" width="1080" height="1920"></canvas>
+<div id="ov">
+  <div class="ep" id="ep">LA CASA · EP. 0</div>
+  <div class="rec" id="rec">● REC</div>
+  <div class="txt" id="t1"></div>
+  <div class="title" id="title"><h1>LA CASA</h1><h2>EPISODIO 0</h2><h3>Tú decides cada paso</h3></div>
+  <div class="lab" id="l1"><b>1</b><span>la pelota</span></div>
+  <div class="lab" id="l2"><b>2</b><span>la luz roja</span></div>
+  <div class="lab" id="l3"><b>3</b><span>el fondo</span></div>
+  <div class="cta" id="cta"><div class="q">¿QUÉ PUERTA ABRIMOS?</div><div class="c">Comenta 1, 2 o 3 👇</div><div class="s">La más votada decide el próximo episodio</div></div>
+</div></div>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+<script type="module">const ep = new URLSearchParams(location.search).get("ep") || "ep00"; import(`./${ep}.js`);</script>
+</body></html>

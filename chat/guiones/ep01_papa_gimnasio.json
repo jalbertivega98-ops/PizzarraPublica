@@ -1,0 +1,25 @@
+{
+  "slug": "ep01_papa_gimnasio",
+  "hook": "Mi madre mira la ubicación de mi padre…",
+  "chat": "Familia 🏠",
+  "yo": "yo",
+  "personas": {
+    "mama": {"nombre": "Mamá", "color": "#ff7aa8"},
+    "papa": {"nombre": "Papá", "color": "#5cc8ff"},
+    "yo": {"nombre": "Yo", "color": "#7ef0a8"}
+  },
+  "mensajes": [
+    {"de": "mama", "texto": "¿Por qué tu padre lleva 3 horas en el hospital?"},
+    {"de": "yo", "texto": "¿Qué? Me dijo que iba al gimnasio"},
+    {"de": "mama", "tipo": "mapa", "texto": "Hospital General · hace 3 h"},
+    {"de": "sistema", "texto": "Mamá ha añadido a Papá"},
+    {"de": "papa", "texto": "Estoy en el gimnasio 💪"},
+    {"de": "mama", "texto": "Javier."},
+    {"de": "papa", "texto": "Vale. Me he torcido el tobillo EN el gimnasio", "pausa": 1.6},
+    {"de": "yo", "texto": "¿Y por qué llevas 3 horas?"},
+    {"de": "papa", "texto": "Me he hecho amigo del de la camilla de al lado"},
+    {"de": "papa", "texto": "Se llama Paco"},
+    {"de": "papa", "texto": "Se viene a cenar el domingo", "pausa": 2.6}
+  ],
+  "final": "¿Tu padre también hace esto? 👇"
+}

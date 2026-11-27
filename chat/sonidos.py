@@ -21,15 +21,20 @@ def tone(f0, f1, length, d, amp):
     f = np.linspace(f0, f1, n); ph = 2 * np.pi * np.cumsum(f) / SR
     return amp * np.sin(ph) * env(n, d=d)
 
+def mix(*xs):
+    o = np.zeros(max(len(x) for x in xs))
+    for x in xs: o[:len(x)] += x
+    return o
+
 def recv():
-    return tone(880, 1320, 0.16, 0.05, 0.35) + tone(1320, 1760, 0.12, 0.03, 0.15)
+    return mix(tone(880, 1320, 0.16, 0.05, 0.35), tone(1320, 1760, 0.12, 0.03, 0.15))
 
 def sent():
     n = int(SR * 0.22)
     noise = rng.standard_normal(n) * env(n, a=0.02, d=0.06)
     # filtro paso banda casero (diferencias) para un "fsss"
     noise = np.convolve(noise, np.ones(8) / 8, mode="same") - np.convolve(noise, np.ones(40) / 40, mode="same")
-    return 0.5 * noise + tone(600, 900, 0.12, 0.04, 0.12)
+    return mix(0.5 * noise, tone(600, 900, 0.12, 0.04, 0.12))
 
 def key():
     n = int(SR * 0.03)

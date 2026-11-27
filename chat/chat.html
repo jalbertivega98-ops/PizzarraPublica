@@ -81,7 +81,7 @@ const MAPSVG=`<svg viewBox="0 0 640 340" width="640" height="340"><rect width="6
 <rect x="0" y="0" width="200" height="120" fill="#cfe6c4"/><rect x="470" y="230" width="170" height="110" fill="#cfe6c4"/>
 <g stroke="#fff" stroke-width="24" fill="none"><path d="M-10 100 L650 150"/><path d="M190 -10 L250 350"/><path d="M-10 270 L650 240"/><path d="M450 -10 L420 350"/></g>
 <g stroke="#f7d774" stroke-width="12" fill="none"><path d="M-10 100 L650 150"/></g>
-<rect x="265" y="165" width="140" height="62" rx="8" fill="#f4c4c4"/><text x="335" y="207" font-size="34" text-anchor="middle" fill="#c62828" font-family="Inter" font-weight="800">H</text>
+%%ICONO%%
 <g transform="translate(335 145)"><path d="M0 0 C-28 -32 -28 -66 0 -66 C28 -66 28 -32 0 0Z" fill="#ea4335"/><circle cy="-44" r="11" fill="#7b1c14"/></g></svg>`;
 
 window.setup=function(G,opt){
@@ -109,7 +109,7 @@ window.setup=function(G,opt){
     else if(soloEmoji(m.texto)&&!m.tipo) r.innerHTML=`<div class="b big">${esc(m.texto)}</div>`;
     else{
       let who=(tipo==='otro'&&G._grupo&&tail)?`<div class="who" style="color:${P[m.de]?.color||'#1fa855'}">${esc(P[m.de]?.nombre||m.de)}</div>`:'';
-      let body=m.tipo==='mapa'?`<div class="map">${MAPSVG}</div><div class="maplbl">📍 ${esc(m.texto)}</div>`:esc(m.texto);
+      let body=m.tipo==='mapa'?`<div class="map">${MAPSVG.replace('%%ICONO%%', m.icono? `<text x="335" y="225" font-size="64" text-anchor="middle" font-family="Noto Color Emoji">${m.icono}</text>` : '<rect x="265" y="165" width="140" height="62" rx="8" fill="#f4c4c4"/><text x="335" y="207" font-size="34" text-anchor="middle" fill="#c62828" font-family="Inter" font-weight="800">H</text>')}</div><div class="maplbl">📍 ${esc(m.texto)}</div>`:esc(m.texto);
       r.innerHTML=`<div class="b">${who}${body}${meta}${m.reaccion?`<span class="rc">${m.reaccion}</span>`:''}</div>`;
       if(m.reaccion) r.classList.add('rx');
     }
@@ -173,6 +173,7 @@ window.draw=function(t){
   } else ty.style.display='none';
   // reacciones
   T.forEach(x=>{ if(x.react){const e=document.querySelector('#m'+x.i+' .rc'); if(e) e.style.transform=`scale(${t>=x.react.t?back((t-x.react.t)/0.3):0})`;}});
+  let nm=G.chat; T.forEach(x=>{const m=G.mensajes[x.i]; if(m.nuevoNombre&&t>=x.show) nm=m.nuevoNombre;}); $('#head .nm').textContent=nm;
   const P=G.personas||{};
   $('#head .st').textContent=typing?(G._grupo?(P[typing.de]||{}).nombre+' está escribiendo…':'escribiendo…'):(G._grupo?Object.keys(P).map(k=>P[k].nombre).join(', '):'en línea');
   $('#input .t').innerHTML=inText?'<b>'+esc(inText.length>24?'…'+inText.slice(-23):inText)+'</b><i class="cur"></i>':'Mensaje';

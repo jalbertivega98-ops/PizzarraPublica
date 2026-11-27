@@ -17,5 +17,5 @@ f1 = fit(l1, 120); d.text((W / 2, 1130), l1, font=f1, fill='white', anchor='mm',
 f2 = fit(l2, 150); w = d.textlength(l2, font=f2)
 d.rectangle((W / 2 - w / 2 - 30, 1210, W / 2 + w / 2 + 30, 1390), fill=(30, 106, 138))
 d.text((W / 2, 1300), l2, font=f2, fill='white', anchor='mm', stroke_width=6, stroke_fill='black')
-fe = ImageFont.truetype(F, 54); d.text((W / 2, 1480), f'COSAS DE PAREJA · {ep}', font=fe, fill=(255, 230, 190), anchor='mm', stroke_width=5, stroke_fill='black')
+fe = ImageFont.truetype(F, 54); d.text((W / 2, 1480), (f'COSAS DE PAREJA · {ep}' if ep else 'COSAS DE PAREJA'), font=fe, fill=(255, 230, 190), anchor='mm', stroke_width=5, stroke_fill='black')
 im.save(out)

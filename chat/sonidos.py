@@ -1,7 +1,7 @@
 """Sonidos sintetizados para el motor de chat (estilo app de mensajería, sin samples con copyright).
 uso: python3 sonidos.py eventos.json salida.wav
 Eventos: recv (burbuja "plop" de mensaje recibido), sent ("pup" de enviado), key (tecla), sys (aviso).
-Música: bucle cómico de pizzicato + bajo + palmas, compuesto aquí (original), a volumen bajo.
+Música: bucle cómico opcional (solo si el guion lleva "musica": true). Por defecto, solo sonidos.
 """
 import json, sys, wave
 import numpy as np
@@ -30,22 +30,39 @@ def mix(*xs):
 def lp(x, k):
     return np.convolve(x, np.ones(k) / k, mode="same")
 
-def recv():   # "plop" de burbuja: gota que sube + segundo toque
-    a = sweep(300, 1100, 0.07, 0.03, 0.55)
-    b = sweep(700, 1500, 0.06, 0.025, 0.30)
-    o = np.zeros(int(SR * 0.2)); o[:len(a)] += a; s = int(SR * 0.075); o[s:s + len(b)] += b
-    return o
+from scipy.signal import butter, sosfilt
 
-def sent():   # "pup" corto y suave
-    return mix(sweep(500, 1300, 0.08, 0.025, 0.35), 0.15 * lp(rng.standard_normal(int(SR * .05)) * env(int(SR * .05), d=.01), 6))
+def bp(x, lo, hi, order=2):
+    return sosfilt(butter(order, [lo, hi], btype="band", fs=SR, output="sos"), x)
 
-def key():    # tecla de móvil
-    n = int(SR * 0.025)
-    c = rng.standard_normal(n) * env(n, a=0.0003, d=0.004)
-    return mix(0.30 * (c - lp(c, 10)), sweep(1800, 1500, 0.02, 0.004, 0.05))
+def drop(f0, f1, length, decay, amp):
+    """gota/burbuja: seno con subida de tono exponencial muy rápida (como el "pop" de mensajería)"""
+    n = int(SR * length); t = np.arange(n) / SR
+    f = f1 - (f1 - f0) * np.exp(-t / 0.012)
+    ph = 2 * np.pi * np.cumsum(f) / SR
+    e = np.minimum(1, t / 0.0015) * np.exp(-t / decay)
+    return amp * np.sin(ph) * e
 
-def sys_():
-    return mix(sweep(880, 880, 0.18, 0.06, 0.16), np.pad(sweep(1320, 1320, 0.2, 0.07, 0.12), (int(SR * .08), 0)))
+def recv():   # doble "pop" suave de mensaje recibido en el chat abierto
+    a = drop(520, 1150, 0.09, 0.022, 0.75)
+    b = drop(700, 1500, 0.09, 0.018, 0.45)
+    o = np.zeros(int(SR * 0.22)); o[:len(a)] += a; s = int(SR * 0.085); o[s:s + len(b)] += b
+    return bp(o, 250, 4000)
+
+def sent():   # "pop" único y corto al enviar
+    o = drop(650, 1400, 0.08, 0.016, 0.55)
+    n = int(SR * 0.03)
+    air = bp(rng.standard_normal(n), 2500, 7000) * np.exp(-np.arange(n) / SR / 0.006) * 0.12
+    return bp(mix(o, air), 250, 8000)
+
+def key():    # clic de teclado de móvil: golpe seco agudo + cuerpo grave muy corto
+    n = int(SR * 0.04); t = np.arange(n) / SR
+    click = bp(rng.standard_normal(n), 2200, 6500) * np.exp(-t / 0.0035) * 0.5
+    body = np.sin(2 * np.pi * rng.uniform(300, 360) * t) * np.exp(-t / 0.006) * 0.35
+    return click + body
+
+def sys_():   # aviso de grupo: dos notas muy suaves
+    return 0.5 * mix(drop(800, 880, 0.15, 0.05, 0.2), np.pad(drop(1100, 1175, 0.15, 0.05, 0.16), (int(SR * .07), 0)))
 
 F = {"recv": recv, "sent": sent, "key": key, "sys": sys_}
 for e in ev["events"]:
@@ -85,7 +102,7 @@ while t0 < dur:
     step += 1; t0 += e8
 t = np.arange(N) / SR
 fade = np.minimum(1, t / 0.8) * np.minimum(1, (dur - t) / 1.5)
-out = out + 0.13 * mus * fade
+out = out + (0.13 * mus * fade if ev.get('musica') else 0)
 out = out / max(1e-9, np.abs(out).max()) * 0.85
 st = np.stack([out, out], 1)
 with wave.open(sys.argv[2], "wb") as w:

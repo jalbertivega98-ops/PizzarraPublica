@@ -15,7 +15,7 @@ const fs = require('fs'), path = require('path'), { spawn, execFileSync } = requ
   await page.evaluate(() => document.fonts.ready);
   const info = await page.evaluate(g => window.setup(g), G);
   console.log('duración', info.dur.toFixed(2), 's,', G.mensajes.length, 'mensajes');
-  fs.writeFileSync(path.join(outDir, 'eventos.json'), JSON.stringify(info));
+  fs.writeFileSync(path.join(outDir, 'eventos.json'), JSON.stringify({ ...info, musica: !!G.musica }));
   if (preview) {
     for (const t of preview) { await page.evaluate(t => window.draw(t), t); await page.screenshot({ path: path.join(outDir, `preview_${t}.png`) }); }
     await browser.close(); return;

@@ -1,0 +1,46 @@
+{
+ "ep": "muestras",
+ "salida": "voces",
+ "motor": "elevenlabs",
+ "voz": "ByH5CbhcFFMB34boGJdW",
+ "modelo": "eleven_multilingual_v2",
+ "ajustes": {
+  "stability": 0.65,
+  "similarity_boost": 0.8,
+  "style": 0.25,
+  "speed": 0.9,
+  "use_speaker_boost": true
+ },
+ "frases": [
+  {
+   "id": "omar",
+   "voz": "ByH5CbhcFFMB34boGJdW",
+   "t": "Esta casa... lleva diez años abandonada. Desde que murió su dueña. Tenía setenta y ocho años."
+  },
+  {
+   "id": "crespo",
+   "voz": "zAeBiUepoAaZ4vmN3Tjb",
+   "t": "Esta casa... lleva diez años abandonada. Desde que murió su dueña. Tenía setenta y ocho años."
+  },
+  {
+   "id": "guerrero",
+   "voz": "aEztrX9wYrarEghIKIPo",
+   "t": "Esta casa... lleva diez años abandonada. Desde que murió su dueña. Tenía setenta y ocho años."
+  },
+  {
+   "id": "dario",
+   "voz": "vytE1lq6ygTd2s9rVMQT",
+   "t": "Esta casa... lleva diez años abandonada. Desde que murió su dueña. Tenía setenta y ocho años."
+  },
+  {
+   "id": "adrian",
+   "voz": "5Cz4t26dDYTfYJXKmlJ4",
+   "t": "Esta casa... lleva diez años abandonada. Desde que murió su dueña. Tenía setenta y ocho años."
+  },
+  {
+   "id": "alvaro_eleven",
+   "voz": "ozbKZapo4Cy6jU7KTHtp",
+   "t": "Esta casa... lleva diez años abandonada. Desde que murió su dueña. Tenía setenta y ocho años."
+  }
+ ]
+}

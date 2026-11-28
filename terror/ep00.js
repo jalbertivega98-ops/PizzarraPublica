@@ -27,7 +27,7 @@ const SCENE_EVENTS = [
   { t: 14.8, s: 'chirrido', d: 1.4, v: 0.6 },
   { t: 15.7, s: 'bombilla', d: 7 }, { t: 16.2, s: 'pop' }, { t: 16.5, s: 'pop' }, { t: 16.8, s: 'pop' }, { t: 18.4, s: 'golpe_titulo', v: 0.7 },
 ];
-const VOZ = [['l1', 0.4], ['l2', 4.1], ['l4', 15.0], ['l5', 19.65]];  // narrador Adam (voz/ep00_adam)
+const VOZ = [['l1', 0.4], ['l2', 4.45], ['l4', 15.0], ['l5', 19.65]];  // narrador Guerrero (voz/ep00_guerrero)
 export const EVENTS = [...SCENE_EVENTS.map(e => ({ ...e, t: +unwarp(e.t).toFixed(3) })), ...VOZ.map(([f, t]) => ({ t, s: 'voz', f }))];
 
 // ---------------- CIELO ----------------
